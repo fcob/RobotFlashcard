@@ -1,0 +1,78 @@
+<VIEW>
+	<MASKS>
+		<MASKDEF maskkey="TeachView.mask.motionmenu" textdef="userTx" permissiondef="userMenuPermission"
+		         width="572" columns="572" height="340" rows="340" top="1" bottom="1" left="1" right="1">
+		
+		        <!-- menu item 1 - logger --> 
+		        <GROUP key="motionmenu.label.group0" col="1" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.logger" file="Logger64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+						
+			<!-- menu item 2 - programm runtime --> 
+			<GROUP key="motionmenu.label.group1" col="143" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.programTimeTable" file="ClockSchedule64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 3 - tracking --> 
+			<GROUP key="motionmenu.label.group2" col="286" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gbIsTrackingStation" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.tracking" file="Tracking64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 4 - Fifo --> 
+		        <GROUP key="motionmenu.label.group3" col="429" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gbIsTrackingStation" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.trackingBody" file="Fifo64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+			
+			<!-- menu item 5 - handler tool --> 
+		        <GROUP key="motionmenu.label.group4" col="1" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot.handler.tool.bEnabled" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.handlerTool" file="HandlerTool64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 6 - handler torque check -->
+			<GROUP key="motionmenu.label.group5" col="143" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot.torqueCheck.showUserPage" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.TorqueCheck" file="TorqueCheck64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 7 - sfa -->
+			<GROUP key="motionmenu.label.group6" col="286" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot.sfaRobot" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.SFA" file="SFA64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+				
+	 		
+			<!-- menu item 8 - not used
+		        <GROUP key="motionmenu.label.group8" col="429" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               <BUTTON maskkey="TeachView.mask.logger" file="Logger64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+						
+			
+		        <GROUP key="motionmenu.label.group8" col="1" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 10 - not used
+			<GROUP key="motionmenu.label.group9" col="143" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 11 - not used
+			<GROUP key="motionmenu.label.group10" col="286" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 12 - not used
+		        <GROUP key="motionmenu.label.group11" col="429" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.DriveUtil" file="DriveUtil64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> -->
+			
+		</MASKDEF>
+	</MASKS>	
+</VIEW>

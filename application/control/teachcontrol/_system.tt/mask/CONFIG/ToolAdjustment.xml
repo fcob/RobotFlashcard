@@ -1,0 +1,99 @@
+<MASKS>
+    <MASKDEF maskkey="TeachView.mask.ToolAdjustment" textdef="userTx" permissiondef="userMenuPermission">
+       <GROUP key="ToolAdjustment.label.group" columns="100" rows="70" col="1" row="1" cspan="100" rspan="70" halign="stretch" valign="stretch">
+              <!-- tool from teachIn as referece  -->
+              <GROUP key="ToolAdjustment.label.groupRefTool" columns="25" rows="40" col="1" row="1"  cspan="25" rspan="40" halign="stretch" valign="stretch">
+                 <LABEL key="X"                                                    col="02" row="02" cspan="2"  rspan="4" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.refToolUserPage.X_mm"  enabled="false"   vartype="TT" col="05" row="02" cspan="15" rspan="4" halign="stretch" valign="stretch"/>
+                 <LABEL key="Y"                                                    col="02" row="07" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.refToolUserPage.Y_mm"  enabled="false"   vartype="TT" col="05" row="07" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="Z"                                                    col="02" row="13" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.refToolUserPage.Z_mm"  enabled="false"   vartype="TT" col="05" row="13" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="A"                                                    col="02" row="19" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.refToolUserPage.A_deg" enabled="false"   vartype="TT" col="05" row="19" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="B"                                                    col="02" row="25" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.refToolUserPage.B_deg" enabled="false"   vartype="TT" col="05" row="25" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="C"                                                    col="02" row="31" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.refToolUserPage.C_deg" enabled="false"   vartype="TT" col="05" row="31" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+              </GROUP>
+              <!-- tool from teachIn to be corrected  -->
+              <GROUP key="ToolAdjustment.label.groupCorrTool" columns="25" rows="40" col="26" row="1" cspan="25" rspan="40" halign="stretch" valign="stretch">
+                 <LABEL key="X"                                                    col="02" row="02" cspan="2"  rspan="4" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.corrToolUserPage.X_mm"  enabled="false" vartype="TT" col="05" row="02" cspan="15" rspan="4" halign="stretch" valign="stretch"/>
+                 <LABEL key="Y"                                                    col="02" row="07" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.corrToolUserPage.Y_mm"  enabled="false" vartype="TT" col="05" row="07" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="Z"                                                    col="02" row="13" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.corrToolUserPage.Z_mm"  enabled="false" vartype="TT" col="05" row="13" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="A"                                                    col="02" row="19" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.corrToolUserPage.A_deg" enabled="false" vartype="TT" col="05" row="19" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="B"                                                    col="02" row="25" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.corrToolUserPage.B_deg" enabled="false" vartype="TT" col="05" row="25" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="C"                                                    col="02" row="31" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.corrToolUserPage.C_deg" enabled="false" vartype="TT" col="05" row="31" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+              </GROUP>
+               <!-- deviation at the flange  -->
+              <GROUP key="ToolAdjustment.label.groupDiffFlange" columns="50" rows="20" col="01" row="41" cspan="50" rspan="20" halign="stretch" valign="stretch">
+                   <LABEL key="X"                                                    col="01" row="04" cspan="2"  rspan="8" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.deltaFlangeUserPage.X"  enabled="false" vartype="TT" col="03" row="04" cspan="12" rspan="8" halign="stretch" valign="stretch"/>
+                   <LABEL key="Y"                                                    col="17" row="04" cspan="2"  rspan="8" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.deltaFlangeUserPage.Y"  enabled="false" vartype="TT" col="19" row="04" cspan="13" rspan="8" halign="stretch" valign="stretch"/>                  
+                   <LABEL key="Z"                                                    col="33" row="04" cspan="2"  rspan="8" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.deltaFlangeUserPage.Z"  enabled="false" vartype="TT" col="35" row="04" cspan="15" rspan="8" halign="stretch" valign="stretch"/>
+              </GROUP>
+              <!-- values of the reference tool  -->
+              <GROUP key="ToolAdjustment.label.lab_refvalue" columns="25" rows="30" col="51" row="1" cspan="25" rspan="30" halign="stretch" valign="stretch">
+                 <LABEL key="X"                                 col="02" row="04" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.REF_VAL.X"  enabled="false"  vartype="TT" col="05" row="04" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="Y"                                 col="02" row="10" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.REF_VAL.Y"  enabled="false"  vartype="TT" col="05" row="10" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="Z"                                 col="02" row="16" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.REF_VAL.Z"  enabled="false"  vartype="TT" col="05" row="16" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+              </GROUP>
+              <!-- measured values  -->
+              <GROUP key="ToolAdjustment.label.lab_actvalue" columns="25" rows="30" col="76" row="1" cspan="25" rspan="30" halign="stretch" valign="stretch"> 
+                 <LABEL key="X"                                                 col="02" row="04" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.mess_valUserPage.X"  enabled="false" vartype="TT" col="05" row="04" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="Y"                                                 col="02" row="10" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.mess_valUserPage.Y"  enabled="false" vartype="TT" col="05" row="10" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+                 <LABEL key="Z"                                                 col="02" row="16" cspan="2"  rspan="5" halign="left"    valign="stretch"/>
+                 <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.mess_valUserPage.Z"  enabled="false" vartype="TT" col="05" row="16" cspan="15" rspan="5" halign="stretch" valign="stretch"/>
+              </GROUP>
+              <!-- deviation between reference tool and current measured tool  -->
+              <GROUP key="ToolAdjustment.label.groupDiffTcp" columns="50" rows="15" col="51" row="31" cspan="50" rspan="15" halign="stretch" valign="stretch"> 
+                   <LABEL key="X"                                                 col="01" row="04" cspan="2"  rspan="8" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.deltaTCPUserPage.X"  enabled="false" vartype="TT" col="03" row="04" cspan="13" rspan="8" halign="stretch" valign="stretch"/>
+                   <LABEL key="Y"                                                 col="17" row="04" cspan="2"  rspan="8" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.deltaTCPUserPage.Y"  enabled="false" vartype="TT" col="19" row="04" cspan="13" rspan="8" halign="stretch" valign="stretch"/>                  
+                   <LABEL key="Z"                                                 col="33" row="04" cspan="2"  rspan="8" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.RcuUserPage.UserToolMeasure.deltaTCPUserPage.Z"  enabled="false" vartype="TT" col="35" row="04" cspan="14" rspan="8" halign="stretch" valign="stretch"/> 
+              </GROUP>
+              <!-- Max deviation read from robotcontrol.cfg  -->
+              <GROUP key="ToolAdjustment.label.lab_Tolerance" columns="50" rows="15" col="51" row="46" cspan="50" rspan="15" halign="stretch" valign="stretch"> 
+                   <LABEL key="X"                                                col="01" row="04" cspan="2"  rspan="10" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.gRcuFocusedRobot.ToolMeasure.rMaxToolAdjustment_X"  enabled="false" vartype="TT" col="03" row="04" cspan="13" rspan="10" halign="stretch" valign="stretch"/>
+                   <LABEL key="Y"                                                col="17" row="04" cspan="2"  rspan="10" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.gRcuFocusedRobot.ToolMeasure.rMaxToolAdjustment_Y"  enabled="false" vartype="TT" col="19" row="04" cspan="13" rspan="10" halign="stretch" valign="stretch"/>                  
+                   <LABEL key="Z"                                                col="33" row="04" cspan="2"  rspan="10" halign="left"    valign="stretch"/>
+                   <NUMFIELD var="_system.gRcuFocusedRobot.ToolMeasure.rMaxToolAdjustment_Z"  enabled="false" vartype="TT" col="35" row="04" cspan="14" rspan="10" halign="stretch" valign="stretch"/>
+              </GROUP>
+              <!-- feedback of lightbarrier  -->
+              <LABEL key="ToolAdjustment.chkbox.lightBar"         col="05" row="63" cspan="15"  rspan="7" halign="left"    valign="stretch"/>
+              <CHECKBOX var="_system.gRcuFocusedRobot.ToolMeasure.invsensor" enabled="false"   vartype="TT" col="25" row="64" cspan="3"              halign="left"/>             
+              <!-- Tool correction finish successful  -->
+              <LABEL key="ToolAdjustment.chkbox.measOk"                  col="55" row="63" cspan="15"  rspan="7" halign="left"    valign="stretch"/>
+              <CHECKBOX var="_system.gRcuFocusedRobot.ToolMeasure.bMeasureOkUserPage" enabled="false" vartype="TT" col="75" row="64" cspan="3"              halign="left"/>
+     </GROUP>
+   </MASKDEF>
+   
+   <MENUDEF key="TeachView.mask.ToolAdjustment" textdef="userTx" imagefile="KvtMenuIcon" permissiondef="userMenuPermission">
+	<MENU>
+		<MENUITEM key="ToolAdjustment.menu.button_0"  var="_system.RcuUserPage.UserToolMeasure.ySelected[0]" vartype="TT"
+		          enablevar ="_system.RcuUserPage.UserToolMeasure.yEnabled[0]" enablevartype ="TT"/>
+		<MENUITEM key="ToolAdjustment.menu.button_1" enabled="true" var="_system.RcuUserPage.UserToolMeasure.ySelected[1]" vartype="TT"
+		          enablevar ="_system.RcuUserPage.UserToolMeasure.yEnabled[1]" enablevartype ="TT"/>
+		<MENUITEM key="ToolAdjustment.menu.button_2" enabled="false" var="_system.RcuUserPage.UserToolMeasure.ySelected[2]" vartype="TT"
+		          enablevar ="_system.RcuUserPage.UserToolMeasure.yEnabled[2]" enablevartype ="TT"/>
+	</MENU>
+   </MENUDEF>
+</MASKS>
+

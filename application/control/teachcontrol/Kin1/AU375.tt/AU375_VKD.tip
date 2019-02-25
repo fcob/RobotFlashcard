@@ -1,0 +1,28 @@
+//$Tetöfedél
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU37X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  OVERLAP( NODEC50  )
+  //
+  LIN( VKD_P1  )
+  //
+  LIN( VKD_P2  )
+  LIN( VKD_P3  )
+  SETBRUSH( GUN1 ,80 ,VKD_TP1 ,TR1  )
+  LIN( VKD_P4  )
+  IF (VKD_I = TRUE) THEN
+    GUN( GUN1 ,GunOn ,VKD_TP2 ,TR2  )
+  END_IF
+  LIN( VKD_P5  )
+  LIN( VKD_P6  )
+  IF (VKD_I = TRUE) THEN
+    GUN( GUN1 ,GunOff ,VKD_TP3 ,TR3  )
+  END_IF
+  LIN( VKD_P7  )
+  LIN( VKD_P8  )
+  //
+RDESELECT("RP12")

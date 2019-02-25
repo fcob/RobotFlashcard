@@ -1,0 +1,23 @@
+//$Teached Point from Roboter
+RSELECT("RP12")
+  //
+  SETTOOL( MESSPITZE  )
+  SETOBJECT( DEFBASENULL  )
+  //
+  LIN(P1)
+  //
+  LIN(P2)
+  //
+  LIN(P3)
+  //
+  LIN(P4)
+  //
+  LIN(P5)
+  //
+  LIN(P6)
+  //
+  LIN(P7)
+  //
+  LIN(P8)
+  //
+RDESELECT("RP12")

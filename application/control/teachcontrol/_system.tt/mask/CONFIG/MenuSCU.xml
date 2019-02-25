@@ -1,0 +1,81 @@
+<VIEW>
+	<MASKS>
+		<MASKDEF maskkey="TeachView.mask.SCUmenu" textdef="userTx" permissiondef="userMenuPermission"
+		         width="572" columns="572" height="340" rows="340" top="1" bottom="1" left="1" right="1">
+		
+		        <!-- menu item 1 - full operating panel --> 
+		        <GROUP key="SCUmenu.label.group0" col="1" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="SCU.SV_ScuControlPanel.mVisible_OP_Full" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.OP_FULL" file="ControlPanelPLC64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+						
+			<!-- menu item 2 - pnoz operating panel --> 
+			<GROUP key="SCUmenu.label.group1" col="143" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="SCU.SV_ScuControlPanel.mVisible_OP_PNOZ" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.OP_PNOZ" file="ControlPanelPNOZ64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 3 - test error --> 
+			<GROUP key="SCUmenu.label.group2" col="286" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="system.SV_sGeneralSystemCfg.mActiveSCU" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.TestError" file="TestError64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 4 - not used  
+		        <GROUP key="SCUmenu.label.group3" col="429" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system. " visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.LaserLightBar" file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> -->
+			
+			<!-- menu item 5 - ghost --> 
+		        <GROUP key="SCUmenu.label.group4" col="1" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="SCU.SV_ScuControlPanel.mVisible_Ghost" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.SCU_Ghost" file="Ghost64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 6 - inlet -->
+			<GROUP key="SCUmenu.label.group5" col="143" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="SCU.SV_ScuControlPanel.mVisible_Fifos" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.SCU_Inlet" file="Fifo64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 7 - fixpos -->
+			<GROUP key="SCUmenu.label.group6" col="286" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="SCU.SV_ScuControlPanel.mVisible_Fixpos" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.SCU_Fixpos" file="Fixpos64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+			
+			 <!--  menu item 8 - timeprog  -->
+		        <GROUP key="SCUmenu.label.group7" col="429" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="SCU.SV_ScuControlPanel.mVisible_Timeprog" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.SCU_Timeprog" file="TimeProg64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> -->			 
+			
+			 <!--
+			     menu item 9 - not used
+		        <GROUP key="SCUmenu.label.group8" col="1" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 10 - not used
+			<GROUP key="SCUmenu.label.group9" col="143" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 11 - not used
+			<GROUP key="SCUmenu.label.group10" col="286" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 12 - not used
+		        <GROUP key="SCUmenu.label.group11" col="429" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.DriveUtil" file="DriveUtil64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> -->
+			
+		</MASKDEF>
+	</MASKS>	
+</VIEW>

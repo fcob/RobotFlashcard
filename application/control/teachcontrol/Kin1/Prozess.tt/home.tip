@@ -1,0 +1,11 @@
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_200  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V500  )
+  //
+  PTP( RHOME  )
+  //
+RDESELECT("RP12")

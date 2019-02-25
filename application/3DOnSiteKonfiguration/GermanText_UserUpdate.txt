@@ -1,0 +1,363 @@
+;Userdefined language file
+;=========================
+;The syntax is the same as in the orignal language file:
+;textidentifier|text
+;The text of an identifier in this file overwrites the text with the same
+;identifier in the original language file.
+;If an identifier does not exist in the original language file the text will be added.
+;
+;--------------------------------------------------------------------------------------------------------------------------
+;   Common
+;--------------------------------------------------------------------------------------------------------------------------
+RPC_Point|Punkt
+RPC_Prog|Programm
+RPC_Proj|Projekt
+RPC_Name|Name
+PLCDOWNLOAD_MULTIK|MultiK-Download
+
+;--------------------------------------------------------------------------------------------------------------------------
+;   Reflow
+;--------------------------------------------------------------------------------------------------------------------------
+Reflow_Title|Molchparameter 
+Reflow_Column16|Molchen min Alarm 2 
+Reflow_Column17|Molchen min Warnung 2 
+Reflow_Column18|Molchen max Warnung 2
+Reflow_Column19|Molchen max Alarm 2
+Reflow_Column20|Andrücken min Alarm 2 
+Reflow_Column21|Andrücken min Warnung 2 
+Reflow_Column22|Andrücken max Warnung 2
+Reflow_Column23|Andrücken max Alarm 2
+Reflow_Column24|Molchzeit 2
+Reflow_Column25|Andrückzeit 2
+
+;--------------------------------------------------------------------------------------------------------------------------
+;   Paint Assignment
+;--------------------------------------------------------------------------------------------------------------------------
+ColorDef_SupplyGroup|Versorgungsgruppe
+ColorDef_PotTimeWarning|Topfzeit Warnung
+ColorDef_PotTimeWarninga|Topfzeit Warnung A
+ColorDef_PotTimeWarningb|Topfzeit Warnung B
+ColorDef_PotTimeAlarm|Topfzeit Alarm
+ColorDef_PotTimeAlarma|Topfzeit Alarm A
+ColorDef_PotTimeAlarmb|Topfzeit Alarm B
+ColorDef_lblSectionSelect|Auswahl
+ColorDef_LBLSECTIONSELECT1|Gemischte Farben
+ColorDef_LBLSECTIONSELECT2|Stammlacke_A
+ColorDef_LBLSECTIONSELECT3|Härter_A
+ColorDef_LBLSECTIONSELECT4|Stammlacke_B
+ColorDef_LBLSECTIONSELECT5|Härter_B
+ColorDef_Column0Header|Farb Nr.
+ColorDef_DrainRelease|Freigabe Abziehen
+ColorDef_DrainVolume|Farbmenge Abziehen
+
+;--------------------------------------------------------------------------------------------------------------------------
+;   PaintChangeAssignment
+;--------------------------------------------------------------------------------------------------------------------------
+CycleEditorRPC_Group71|Behälter entleeren
+CycleEditorRPC_Group24|Zerstäuber spülen
+CycleEditorRPC_Group24a|Zerstäuber spülen A
+CycleEditorRPC_Group24b|Zerstäuber spülen B
+CycleEditorRPC_Group23|Zerstäuber laden
+CycleEditorRPC_Group23a|Zerstäuber laden A
+CycleEditorRPC_Group23b|Zerstäuber laden B
+CycleEditorRPC_Group3_S|Stammlack spülen
+CycleEditorRPC_Group3_Sa|Stammlack spülen A
+CycleEditorRPC_Group3_Sb|Stammlack spülen B
+CycleEditorRPC_Group1_S|Stammlack laden
+CycleEditorRPC_Group1_Sa|Stammlack laden A
+CycleEditorRPC_Group1_Sb|Stammlack laden B
+CycleEditorRPC_Group3_H|Härter spülen
+CycleEditorRPC_Group3_Ha|Härter spülen A
+CycleEditorRPC_Group3_Hb|Härter spülen B
+CycleEditorRPC_Group1_H|Härter laden
+CycleEditorRPC_Group1_Ha|Härter laden A
+CycleEditorRPC_Group1_Hb|Härter laden B
+CycleEditorRPC_Group9_1|RF1 ausblasen
+CycleEditorRPC_Group9_2|RF2 ausblasen
+CycleEditorRPC_Group9_12|RF1 & RF2 ausblasen
+CycleEditorRPC_Group3_All|Roboter spülen
+CycleEditorRPC_Group3_DockingUnit|Dockingeinheit spülen
+CycleEditorRPC_Group24_POOK|Zerstäuber spülen nach PO OK
+CycleEditorRPC_Group24_PONOK|Zerstäuber spülen nach PO NOK
+CycleEditorRPC_Group3_System|System Spülen
+CycleEditorRPC_Group1_System|System Laden
+CycleEditorRPC_Group11_SLa| Farbe abziehen SLa
+CycleEditorRPC_Group11_SLb| Farbe abziehen SLb
+CycleEditorRPC_Group11_Ha| Farbe abziehen Ha
+CycleEditorRPC_Group11_Hb| Farbe abziehen Hb
+
+PCA_MaxPOVol|MaxPushVolume
+PCA_MinPOVol|MinPushVolume
+
+PCA_PaintPressure|Farbdruck
+PCA_ShortPurgeX_Count|Kurzspülen nach X Karossen
+PCA_AtomizerPurgeX_Count|Zerstäuberspülen nach X Karossen
+PCA_LongPurgeX_Count|Langspülen nach X Karossen
+PCA_AtomizerCleanX_Count|Zerstäuber reinigen nach X Karossen
+PCA_CapCleanX_Count|Luftkappe reinigen nach X Karossen
+PCA_TankDisposalX_Count|Behälter entleeren nach X Karossen
+PCA_PotTimePurge|Topfzeitspülen
+PCA_PotTimePurgea|Topfzeitspülen A
+PCA_PotTimePurgeb|Topfzeitspülen B
+
+PCA_ShortPurgeX_TP|Kurzspülen
+PCA_AtomizerPurgeX_TP|Zerstäuberspülen
+PCA_AtomizerPurgeX_TPa|Zerstäuberspülen A
+PCA_AtomizerPurgeX_TPb|Zerstäuberspülen B
+PCA_LongPurgeX_TP|Langspülen
+PCA_LongPurgeX_TPa|Langspülen A
+PCA_LongPurgeX_TPb|Langspülen B
+PCA_AtomizerCleanX_TP|Zerstäuber reinigen
+PCA_CapCleanX_TP|Luftkappe reinigen
+
+PCA_ShortPurgeTime|Kurzspülen nach x Minuten
+PCA_AtomizerPurgeTime|Zerstäuberspülen nach x Minuten
+PCA_AtomizerCleanTime|Zerstäuberreinigen nach x Minuten
+PCA_PurgeDockingUnitTime|Spülen Andockeinheit nach x Minuten
+
+PCA_lblSectionSelect|Auswahl
+PCA_LBLSECTIONSELECT1|Vorbereitung
+PCA_LBLSECTIONSELECT2|Nachbereitung
+PCA_LBLSECTIONSELECT3|Lückenspülen
+PCA_LBLSECTIONSELECT4|Zeitprogramme von SPS
+PCA_LBLSECTIONSELECT5|Topfzeit
+
+PCA_CirculationStart|Zeit Zirkulationsstart
+PCA_CirculationBreak|Zeit Zirkulationspause
+PCA_Circulation_TP|Zirkulation
+PCA_PostCirculation_TP_SM1_SM2|Zirkulationsnachbereitung
+PCA_PostCirculation_TP_Degrade|Zirkulationsnachbereitung Kolben abgewaehlt
+PCA_PostCirculation_TP_SM1|Zirkulationsnachbereitung Kolben 2 abgewaehlt
+PCA_PostCirculation_TP_SM2|Zirkulationsnachbereitung Kolben 1 abgewaehlt
+PCA_PostCirculation_TP|Zirkulationsnachbereitung
+PCA_PostCirculation_TP_Degrade|Zirkulationsnachbereitung Kolben abgewaehlt
+
+PCA_FillPistonTp_1_TP|Kolben 1 fuellen nach Applikation
+PCA_FillPistonTp_2_TP|Kolben 2 fuellen nach Applikation
+
+PCA_TpFromPlc1|Zeitprogramm 1
+PCA_TpFromPlc2|Zeitprogramm 2
+PCA_TpFromPlc3|Zeitprogramm 3
+PCA_TpFromPlc4|Zeitprogramm 4
+
+PCA_WaterChangeTime|Startzeit Wasserwechsel
+PCA_StandStillTime|Stillstandszeit Wasserwechsel
+PCA_FillWaterQuench|Wasserbad befüllen
+PCA_WaterChange|Wasserwechsel Wasserbad
+PCA_Gap_AtomizerClean|Zerstäuber reinigen Standby
+
+PCA_TankDisposal_Time|Stillstandszeit Behälter entleeren 
+
+ParamGeneral_PCA_lblSectionSelect|Varianten
+ParamGeneral_PCA_lblSectionSelect1|Spülvariante
+ParamGeneral_PCA_lblSectionSelect2|Andrückvariante
+
+;----------------------------------------------------------------------------------------------------
+;   Hose Compensation
+;----------------------------------------------------------------------------------------------------
+SecurityServer_HoseCompensationEdit|Schlauchatmungskompensation ändern
+SecurityServer_HoseCompensationSetup|Schlauchatmungskompensation konfigurieren
+HoseCompensation_Title|Schlauchatmungskompensation
+HoseCompensation_Col1|0
+HoseCompensation_Col2|100
+HoseCompensation_Col3|200
+HoseCompensation_Col4|300
+HoseCompensation_Col5|400
+HoseCompensation_Col6|500
+HoseCompensation_Col7|600
+HoseCompensation_Col8|700
+HoseCompensation_Col9|800
+HoseCompensation_Col10|900
+HoseCompensation_Line|ml/min
+
+HoseCompensation_Col1_Seal|0
+HoseCompensation_Col2_Seal|5
+HoseCompensation_Col3_Seal|10
+HoseCompensation_Col4_Seal|15
+HoseCompensation_Col5_Seal|20
+HoseCompensation_Col6_Seal|25
+HoseCompensation_Col7_Seal|30
+HoseCompensation_Col8_Seal|35
+HoseCompensation_Col9_Seal|40
+HoseCompensation_Col10_Seal|45
+HoseCompensation_Line_Seal|ml/s
+
+;--------------------------------------------------------------------------------------------------------------------------
+;   Paint Assignment on station control
+;--------------------------------------------------------------------------------------------------------------------------
+SecurityServer_PaintAssignStationControlEdit|Farbzuordnung Stationssteuerung ändern
+SecurityServer_PaintAssignStationControlSetup|Farbzuordnung Stationssteuerung konfigurieren
+PaintAssignStationControl_Title|Farbzuordnung Stationssteuerung
+PaintAssignStationControl_1Run|Erstläufer
+PaintAssignStationControl_2Run|Zweitläufer
+PaintAssignStationControl_3Run|Drittläufer
+
+;--------------------------------------------------------------------------------------------------------------------------
+;   Multi-K
+;--------------------------------------------------------------------------------------------------------------------------
+SecurityServer_MultiKEdit|Multi-K Tabelle ändern
+SecurityServer_MultiKSetup|Multi-K Tabelle konfigurieren
+MultiK_Title|Komponenten Mischungsverhältnisse
+MultiK_Component1|Komponente 1
+MultiK_Component2|Komponente 2
+MultiK_Parts|Anteil
+
+;--------------------------------------------------------------------------------------------------------------------------
+;   Overrides
+;--------------------------------------------------------------------------------------------------------------------------
+ParamGeneral_Override_lblSectionSelect|Bereich
+ParamGeneral_Override_lblSectionSelect1|Zerstäuber
+ParamGeneral_Override_lblSectionSelect2|Zone
+ParamGeneral_Override_lblSectionSelect3|Farbgruppe
+OverrideParam_LL1|Lenkluft 1
+OverrideParam_LL2|Lenkluft 2
+OverrideParam_DRZ|Drehzahl
+OverrideParam_ColumnHeader41|Prozessluft 1
+OverrideParam_ColumnHeader42|Prozessluft 2
+OverrideParam_ColumnHeader43|Prozessluft 3
+OverrideParam_ColumnHeader44|Materialmenge
+OverrideParam_ColumnHeader45|Vordruck
+OverrideParam_ColumnHeader46|Offset gelernter Vordruck
+OverrideParam_ColumnHeader47|Geschwindigkeitskompensation
+OverrideParam_ColumnHeader48|Verzoegerung Dosierer-Stop
+OverrideParam_ColumnHeader49|Verzoegerung Dosierer-Start
+
+;--------------------------------------------------------------------------------------------------------------------------
+;   erweiterte Typzuordnung
+;--------------------------------------------------------------------------------------------------------------------------
+TypeDef_ConveyorStop|ConveyorStop
+
+;----------------------------------------------------------------------------------------------------
+;   Type Volume Table
+;----------------------------------------------------------------------------------------------------
+SecurityServer_TypeVol_Edit|Farbmenge ändern
+SecurityServer_TypeVol_Setup|Farbmenge konfigurieren
+TypeVol_Title|Farbmengentabelle
+TypeVol_Option|Optionsbits
+TypeVol_Option0|geteilte Hecktuer
+TypeVol_Option1|Schiebedach
+TypeVol_Option2|Glasdach
+TypeVol_Option3|not used
+TypeVol_Option4|not used
+TypeVol_Option5|not used
+TypeVol_Option6|not used
+TypeVol_Option7|not used
+TypeVol_Option8|not used
+TypeVol_Option9|not used
+TypeVol_Option10|not used
+TypeVol_Option11|not used
+TypeVol_Option12|not used
+TypeVol_Option13|not used
+TypeVol_Option14|not used
+TypeVol_Option15|not used
+TypeVol_Option16|not used
+TypeVol_Option17|not used
+TypeVol_Option18|not used
+TypeVol_Option19|not used
+TypeVol_Option20|not used
+TypeVol_Option21|not used
+TypeVol_Option22|not used
+TypeVol_Option23|not used
+TypeVol_Option24|not used
+TypeVol_Option25|not used
+TypeVol_Option26|not used
+TypeVol_Option27|not used
+TypeVol_Option28|not used
+TypeVol_Option29|not used
+TypeVol_Option30|not used
+TypeVol_Option31|not used
+
+VariantValue|Variante
+ColorGroup1|Farbgruppe 1
+ColorGroup2|Farbgruppe 2
+ColorGroup3|Farbgruppe 3
+ColorGroup4|Farbgruppe 4
+ColorGroup5|Farbgruppe 5
+ColorGroup6|Farbgruppe 6
+ColorGroup7|Farbgruppe 7
+ColorGroup8|Farbgruppe 8
+ColorGroup9|Farbgruppe 9
+
+;----------------------------------------------------------------------------------------------------
+;   Brush
+;----------------------------------------------------------------------------------------------------
+Brush_PrePressure|Vordruck
+Brush_Pressure|Druck
+Brush_Calib|Kalibrierung
+Brush_CtrlType|Regelung
+Brush_DelayStart|Verzoegerung Dosierer Start
+Brush_DelayStop|Verzoegerung Dosierer Stop
+Brush_VelComp|Geschwindigkeitskompensation
+Brush_OffsetInitPress|Offset Vordruck
+Brush_SwirlSpeed|Swirldrehzahl
+Brush_PPA3-11|Prozessluft 1
+Brush_PPA3-12|Prozessluft 2
+Brush_PPA3-13|Prozessluft 3
+
+
+;-------------------------------------------------------------
+;   erweiterte Typzuordnung
+;-------------------------------------------------------------
+NoPaintType_Bit|Nicht applizieren
+NoPaintType_Bit0|Nie applizieren
+NoPaintType_Bit1|Nicht applizieren bei Not-Konzept
+
+;--------------------------------------------------------------------------------------------------------------------------
+;   Type Asignment Options
+;--------------------------------------------------------------------------------------------------------------------------
+
+PartsAssignment_PLCDownload|Download der Teilflächenzuordnung
+
+PartsAssignment_Form|Teilflächenzuordnung
+PartsAssignment_Robot|Flashcard
+
+
+SECURITYSERVER_PartsAssignmentEdit|Teilflächenzuordnung - Werte editieren
+SECURITYSERVER_PartsAssignmentSetup|Teilflächenzuordnung -  Werte Setup
+
+PartsAssignment_RepRob1|R11
+PartsAssignment_RepRob3|R12
+PartsAssignment_RepRob5|R13 
+PartsAssignment_RepRob7|R14
+PartsAssignment_RepRob2|R21
+PartsAssignment_RepRob4|R22
+PartsAssignment_RepRob6|R23
+PartsAssignment_RepRob8|R24
+PartsAssignment_RepRob9|R34
+PartsAssignment_RepRob10|R35
+PartsAssignment_RepRob11|R36
+
+
+PartsAssignment_Parts|Teilflächen
+PartsAssignment_Parts0|Tür Vorne Links 
+PartsAssignment_Parts1|Tür Vorne Rechts
+PartsAssignment_Parts2|Türen hinten Links 
+PartsAssignment_Parts3|Türen hinten Rechts
+PartsAssignment_Parts4|Motorhaube
+PartsAssignment_Parts5|Heckklappe
+PartsAssignment_Parts6|D-Säule Links
+PartsAssignment_Parts7|D-Säule Rechts
+PartsAssignment_Parts8|Kotflügel vorne Links
+PartsAssignment_Parts9|Kotflügel vorne Rechts
+PartsAssignment_Parts10|
+PartsAssignment_Parts11|
+PartsAssignment_Parts12|
+PartsAssignment_Parts13|
+PartsAssignment_Parts14|
+PartsAssignment_Parts15|
+PartsAssignment_Parts16|
+PartsAssignment_Parts17|
+PartsAssignment_Parts18|
+PartsAssignment_Parts19|
+PartsAssignment_Parts20|
+PartsAssignment_Parts21|Roof
+PartsAssignment_Parts22|TrunkLidExt
+PartsAssignment_Parts23|Teilfläche Reserve - Bit 24
+PartsAssignment_Parts24|Teilfläche Reserve - Bit 25
+PartsAssignment_Parts25|Teilfläche Reserve - Bit 26
+PartsAssignment_Parts26|Teilfläche Reserve - Bit 27
+PartsAssignment_Parts27|Teilfläche Reserve - Bit 28
+PartsAssignment_Parts28|Teilfläche Reserve - Bit 29
+PartsAssignment_Parts29|Teilfläche Reserve - Bit 30
+PartsAssignment_Parts30|Teilfläche Reserve - Bit 31
+PartsAssignment_Parts31|Teilfläche Reserve - Bit 32

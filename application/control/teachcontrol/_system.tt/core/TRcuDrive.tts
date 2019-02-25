@@ -1,0 +1,2232 @@
+(*-----------------------------------------------------------------------------
+*                                                                             *
+*              (c) 2003 by Dürr Systems GmbH                                  *
+*               Bietigheim-Bissingen/Germany                                  *
+*                    All rights reserved                                      *
+*                                                                             *
+*   This source is supplied under the terms of a license agreement or         *
+*   nondisclosure agreement with Dürr Systems GmbH and may not be copied or   *
+*   disclosed except in accordance with the terms of that agreement.          *
+*                                                                             *
+*   This program may not be used in a business, corporation, organization or  *
+*   any other environment without a negotiated site license.                  *
+*                                                                             *
+*------------------------------------------------------------------------------
+*  Responsible: Wth
+*------------------------------------------------------------------------------
+*  Component    : RCU
+*  Modul        : TRcuDrive.tts
+*  First Author : raml
+*  Date         : 7.02.2002
+*------------------------------------------------------------------------------
+*  Version      : 7
+*  Author       : Wth
+*  Date         : 01/08/2003
+*------------------------------------------------------------------------------
+*  Description:
+*
+*  Representation of a single servo drive
+*------------------------------------------------------------------------------
+* 19.09.04 nmr: new variables limitSwitchMinSW and limitSwitchMaxSW
+*               in consideration of SW-limitswitch
+*               Statusbit will be simulated if ioSimulated is set
+* 25.09.04 nmr: Changes caused by additions to Statusword:
+*               - new flag powerApplied
+*               - in ResetError only check Malf-Flag for changes instead of 
+*                 whole statusword
+*               - Routine CheckPower can be deleted
+*               - in CheckInReference no more parameterqueries needed
+*               - in ConsiderStateWord only PowerApplied-Flag set
+*               - DriveStateManager starts prioritized
+*               - new constant cStateWordPowerApplied
+* 05.10.04 BMA  Changes in GetDriveParameter, SetMaxTorque and 
+*               SetReducedTorque because of reduction T1 torques
+* 06.10.04 nmr: Changes in ReferenceValue
+* 10.10.04 nmr: Now in DriveEnableOperation and DriveStartUp is checked, 
+*               whether power is switched on
+* 07.11.04 nmr: Correction Flag for reaching SW-limitswitchs
+* 25.01.05 nmr: Consideration of Zero-Offsets during mastering
+* 16.02.05 nmr: Correction of Zero-Offset-calculation
+* 29.03.05 nmr: Redesign of reading Zero-Offset and saving Null-Offset and 
+*               corresponding unit in Member-Variables
+* 25.04.05 BMA: Parameters for mastering added
+* 17.06.05 sbj: Changes to configure number of axis
+* 05.07.05 kto: translated into english
+* 08.09.05 nmr: changes for Teachview 2.14, redesign of reoutine ResetErrors,
+*               if KSC_ReadParam fails it is tried a second time
+* 03.10.05 nmr: bugfix in SetTorque (problems with big parameters)
+*)
+
+(*******************************************************************************
+* members
+*)
+
+VAR
+   // state of the controller, wil be set according to stateWord, the value
+   // reflects the enumeration TDriveComStatus
+   state : DINT;
+
+   jointState : DINT;
+
+   // name of the axes
+   axesName : String32;
+
+   // IO-Handle for the drive
+   sercHdl   : DINT;   
+
+   // indicates whether controller is referenced (interface, can be a simulated
+   // state)
+   referenced : BOOL;
+
+   // indicates whether the lost reference bit is set in the state word
+   lostReference : BOOL;
+
+   // indicates whether the power-on bit is set in the state word
+   powerApplied : BOOL;
+   
+   // If mapped error will be set to TRUE upon error states. Mapping must be
+   // done externally.
+   error : MAPTO BOOL;
+
+   // indicates whether controller is in simulation mode
+   simulated : BOOL;
+
+   // indicates whether drive is simulated by the io-system
+   ioSimulated : BOOL;
+   
+   // the external mappings were successfull
+   connected : BOOL;
+
+   // type of drive (EcoDrive, IndraDrive)
+   deviceType : TRcuDriveType;
+   // type of fieldbus for the drives (Sercos2 or Sercos3)
+   busType    : TRcuDriveBus;
+
+   //firmwarename of the drivecontroller and motor type
+   sFirmware : STRING;
+   sMotorType : STRING;
+   
+   // selective references to the position value
+   actValuePos : MAPTO REAL;
+   setValuePos : MAPTO REAL;
+   
+   // Reference variables for limitswitches. Limitswitches must change from true
+   // to false when the limit is reached.
+   limitSwitchMin    : MAPTO BOOL;
+   limitSwitchMax    : MAPTO BOOL;
+   useLimitSwitchMin : BOOL;
+   useLimitSwitchMax : BOOL;
+
+   // variables indicating an active sw-limitswitch
+   limitSwitchMinSW : BOOL;
+   limitSwitchMaxSW : BOOL;
+
+   // instance identification number (for errors)
+   instId : DINT;
+
+   // value for absolute drag error observation
+   driveDragControlValue : REAL;
+   // in position lag value 
+   drivePositionLagValue : REAL;
+   // delay cycles of act-/ and setvalue
+   driveUpdateDelayCycles : INT;
+   
+   // type of the drive, only for messages
+   type : TMcuJointTyp;
+
+   // value for torque [Nm] in fullspeed mode
+   driveMaxTorque : REAL;
+
+   // value for torque [Nm] when fullspeed not allowed (T1 mode)
+   driveReducedTorque : REAL;
+   
+   // value for torque [Nm] corresponding to 100%
+   driveStallTorque : REAL;
+   
+   // value for max. torque from data sheet of the motor
+   driveMaxTorqueMotor : REAL;
+   
+   // value of the softend-max
+   driveMaxPos     : REAL;     //S-0049
+   // value of the softend-max
+   driveMinPos     : REAL;     //S-0050
+   //diffrence between Indramat softend and McRobot.cfg softend
+   diffMaxDriveCfg   : REAL;
+   diffMinDriveCfg   : REAL;
+   
+   // flag for each drivecom state
+   bDriveFlags : ARRAY[eDriveComMaxNum] OF BOOL;
+      
+   // name of input signals for mastering
+   masteringExist   : BOOL; // automatic mastering exists
+   masteringSensor1 : STRING;
+   masteringSensor2 : STRING;
+   // value for moving
+   masteringDelta : REAL;
+   // velocity for move
+   masteringVel : REAL;
+
+   // value and unit of the zero-offset S-0052
+   driveZeroOffsetConfig : REAL;
+   driveZeroOffsetConfigAuto : REAL;
+   driveZeroOffsetConfigManu : REAL;
+   driveZeroOffset : REAL;
+   driveZeroOffsetUnit : STRING;
+   
+   localCounter : DINT;
+   auxVal   : ARRAY [5] OF MAPTO REAL;
+   iDisplayWord : DINT;
+   sDisplayWord : STRING := "NC";
+   resourceName : STRING;
+   myRobot : MAPTO TRcuRobot;
+   brakeCheck   : TRcuDriveBrakeCheck;
+   
+   // offset which has to be added to the actual position to obtain the value
+   // which will be sent to the servos
+   offset : REAL; // SAVE GLOBAL; // remember referenced value
+   
+   driveS111 : REAL; // motor current at standstill
+   driveS109 : REAL; // motor peak current
+   driveP51  : REAL; // conversion factor Nm/A
+   driveP109 : DINT; // limit max torque motor
+   gearRatio : REAL;
+   masteringType  : DINT;
+   masteringDuerr : BOOL;
+   masteringKuka  : BOOL;
+   masteringPar   : BOOL;
+   iLanguage      : DINT;
+END_VAR
+
+// get the name of the drive resource
+ROUTINE InitResourceName(mykinematic : TRcuKinematic; JointIndex : DINT)
+   VAR
+      s1 : STRING;
+      s2 : STRING;
+      handle : DINT;
+   END_VAR
+   
+   myRobot := MAP(mykinematic);
+   s1 := "KINEMATIC:" + STR(gyIndexOfKinematics[myRobot.kinListInx]) + ".Joint:" + STR(PaintRobot[myRobot.kinListInx].yIndexOfJoints[JointIndex]-1);
+   CatalogGetHandleRelative(giMcKinHdl, s1, handle);
+   CatalogReadString(handle, "jointName", s2, TRUE);
+   resourceName := s2;  
+END_ROUTINE
+
+// get the name of the dosing drive resource
+ROUTINE InitDosingResourceName(mykinematic : TRcuKinematic; JointIndex : DINT) : BOOL
+  VAR
+    s1     : STRING;
+    s2     : STRING;
+    handle : DINT;
+  END_VAR
+  
+  myRobot := MAP(mykinematic);
+  s1 := "MFB.AXIS:" + STR(JointIndex);
+  IF CatalogGetHandle(s1, handle) THEN
+     IF NOT CatalogReadString(handle, "servoName", s2, TRUE) THEN
+        RETURN FALSE;
+     ELSE   
+        IF (StrFind(s2, ("PCU"+STR(gyiNrPcu[mykinematic.kinListInx]))) > 0) THEN 
+        resourceName := s2;
+              RETURN TRUE;
+        ELSE
+           RETURN FALSE;
+        END_IF;
+           END_IF;
+        END_IF;
+  RETURN FALSE;
+END_ROUTINE
+
+// Set the controller at least to state DriveSwitchedOn, in state DriveOpEnabled
+// nothing is done. If unsuccessfull failure will be set TRUE, otherwise failure
+// remains unchanged.
+ROUTINE DriveStartUp(failure : BOOL)
+   VAR
+      bStateChange : BOOL;
+   END_VAR
+
+   // bypass in simulation mode
+   IF simulated THEN
+      state := eDriveComSwitchedOn;
+      RETURN;
+   END_IF;
+
+   IF NOT powerApplied THEN
+      failure := TRUE;
+      RETURN;
+   END_IF;
+   
+   bStateChange := IS_CHANGED(state);
+   WHILE NOT bDriveFlags[eDriveComSwitchedOn] AND NOT bDriveFlags[eDriveComOpEnabled] DO
+      // Error case during start up
+      IF bDriveFlags[eDriveComNotReady] OR bDriveFlags[eDriveComQuickstopActive] OR
+         bDriveFlags[eDriveComMalfReactionActive] OR bDriveFlags[eDriveComMalf] THEN
+         //BMA
+         RcuSetMessageOnce(TRcuDrive_InfDriveComSwitchedOn, myRobot.kinListInx, 1, instId, "TRcuDrive.DriveStartUp", axesName);
+         failure := TRUE;
+         RETURN;
+      END_IF;
+      IF bDriveFlags[eDriveComSwitchOnDisabled] THEN
+         // State is Switch On Disabled
+         controlWord := gcDriveComControl_Shutdown;
+      ELSE
+         // copy actPos to setPos in state eDriveComReadyToSwitchOn
+         setValuePos := actValuePos; // @? is valid for Lenze, other controller brands?
+         // state equals eDriveComReadyToSwitchOn
+         controlWord := gcDriveComControl_SwitchOn;
+      END_IF;
+
+      IF NOT WaitStateChg(bStateChange) THEN
+         RcuSetMessageOnce(TRcuDrive_InfDriveTimeoutStChg, myRobot.kinListInx, 1, instId, "TRcuDrive.DriveStartUp", axesName);
+         failure := TRUE;
+         RETURN;
+      END_IF;
+   END_WHILE;
+END_ROUTINE
+
+
+// Set the controller from DriveSwitchOnDisabled, DriveReadyToSwitchOn and
+// DriveSwitchedOn to state DriveOpEnabled. If unsuccessfull failure is set
+// TRUE, otherwise it remains unchanged
+ROUTINE DriveEnableOperation(failure : BOOL)
+   VAR
+      bStateChange : BOOL;
+      b : BOOL;
+   END_VAR
+
+   // bypass in simulation mode
+   IF simulated THEN
+      state := eDriveComOpEnabled;
+      RETURN;
+   END_IF;
+
+   IF NOT powerApplied THEN
+      failure := TRUE;
+      RETURN;
+   END_IF;
+   
+   IF bDriveFlags[eDriveComOpEnabled] THEN
+      RETURN;
+   END_IF;
+   DriveStartUp(b);                             // try to reach state DriveSwitchedOn
+   bStateChange := IS_CHANGED(state);           // react if State is changing
+   WHILE NOT bDriveFlags[eDriveComOpEnabled] DO
+      // only from state eDriveComSwitchedOn controller operation can be enabled
+      IF NOT bDriveFlags[eDriveComSwitchedOn] THEN
+         //BMA
+         RcuSetMessageOnce(TRcuDrive_InfDriveComOpEnabled, myRobot.kinListInx, 1, instId, "TRcuDrive.DriveEnableOperation", axesName);
+         failure := TRUE;
+         RETURN;
+      ELSE
+         setValuePos := actValuePos; 
+         controlWord := gcDriveComControl_EnableOp;
+      END_IF;
+
+      IF NOT WaitStateChg(bStateChange) THEN
+         failure := TRUE;
+         RcuSetMessageOnce(TRcuDrive_ErrDriveComNOpEnabled, myRobot.kinListInx, 1, instId, "TRcuDrive.DriveEnableOperation",
+            axesName + ": Error in WaitStateChg: State = " + STR(state));
+         RETURN;
+      END_IF;
+   END_WHILE;
+END_ROUTINE
+
+
+// a.) sets the controller from state DriveOpEnabled to DriveSwitchedOn OR
+// b.) sets the controller from state DriveQuickstopActive to DriveSwitchOnDisabled
+// and Returns TRUE otherwise FALSE wil be returend. @? necessary function?
+ROUTINE DriveStop() : BOOL
+   VAR
+      bStateChange : BOOL;
+   END_VAR
+
+   // bypass in simulation mode
+   IF simulated THEN
+      IF state = eDriveComOpEnabled THEN
+         state := eDriveComSwitchedOn;
+         RETURN TRUE;
+      ELSE
+         RETURN FALSE;
+      END_IF;
+   END_IF;
+
+   bStateChange := IS_CHANGED(state);  // react if state is changing
+   IF bDriveFlags[eDriveComOpEnabled] THEN
+      // If Controller is in Operation enabled set
+      controlWord := gcDriveComControl_DisableOp;
+      IF NOT WaitStateChg(bStateChange) THEN
+         RETURN FALSE;
+      END_IF;
+      IF bDriveFlags[eDriveComSwitchedOn] THEN
+         RETURN TRUE;      // State is switched on => thats what we wanted
+      ELSE
+         RETURN FALSE;     // something else happend
+      END_IF;
+   ELSIF bDriveFlags[eDriveComQuickstopActive] THEN
+         // Controller is in state Quickstop Active then set
+         controlWord := gcDriveComControl_DisableVoltage;
+         disableAllowed := TRUE;
+      IF NOT WaitStateChg(bStateChange) THEN
+         RETURN FALSE;
+      END_IF;
+         IF bDriveFlags[eDriveComSwitchOnDisabled] THEN
+            RETURN TRUE;           // right state
+         ELSE
+            RETURN FALSE;          // state = DriveMalfReactionActive or DriveMalf or
+         END_IF;                   // initial state NOT DriveOperationEnabled
+   ELSE
+      RETURN FALSE;
+   END_IF;
+END_ROUTINE
+
+
+// if possible Quickstop brings the Controller to state DriveSwitchOnDisabled
+ROUTINE Quickstop() : BOOL
+   VAR
+   bStateChange : BOOL;
+   END_VAR
+
+   // bypass in simulation mode
+   IF simulated THEN
+      state := eDriveComSwitchOnDisabled;
+      RETURN TRUE;
+   END_IF;
+
+   bStateChange := IS_CHANGED(state);  // react if state is changing
+   WHILE NOT bDriveFlags[eDriveComSwitchOnDisabled] DO
+      IF bDriveFlags[eDriveComMalfReactionActive] OR bDriveFlags[eDriveComMalf] OR
+      bDriveFlags[eDriveComNotReady] THEN
+         RETURN FALSE;
+      ELSIF bDriveFlags[eDriveComQuickstopActive] THEN  // Quickstop is active: => Disable Voltage
+         controlWord := gcDriveComControl_DisableVoltage;
+         disableAllowed := TRUE;
+      ELSE
+         controlWord := gcDriveComControl_Quickstop;
+         disableAllowed := TRUE;
+      END_IF;
+      IF NOT WaitStateChg(bStateChange) THEN
+         RETURN FALSE;
+      END_IF;
+   END_WHILE;
+   controlWord := gcDriveComControl_DisableVoltage;
+   RETURN TRUE;
+END_ROUTINE
+
+
+// ResetError sets one Reset to the ControlWord of the Controller
+// 03.09.05 nmr: temporary use of sercos-commands until a bug when trying to 
+//               reset class1-errors in v3.00 is solved
+ROUTINE ResetError(hasError : BOOL) : BOOL
+   VAR
+      bStateWordChange : BOOL;
+   END_VAR
+
+   // bypass in simulation mode
+   IF simulated THEN
+      RETURN TRUE;
+   END_IF;
+
+   // Only if state = DriveMalf function should set a reset.
+   IF bDriveFlags[eDriveComMalf] THEN
+      bStateWordChange := IS_CHANGED(bDriveFlags[eDriveComMalf]);  // react if malf-state is changing
+      myRobot.DebugPrint(eTraceEquipment, "Resetting error " + driveName);
+      IF (controlWord AND gcDriveComControl_ResetMalf)<>0 THEN
+         RcuSetMessageOnce(TRcuDrive_InfDriveWrongContWord, myRobot.kinListInx, 1, instId, "TRcuDrive.ResetError", driveName);
+         controlWord := gcDriveComControl_DisableVoltage;
+      END_IF;
+      controlWord := gcDriveComControl_ResetMalf;      // positive edge in BIT8
+      disableAllowed := TRUE;
+      IF NOT WaitStateChg(bStateWordChange) THEN
+         hasError := TRUE;
+         RcuSetMessageOnce(TRcuDrive_ErrDriveNoReaReset, myRobot.kinListInx, 1, instId, "TRcuDrive.ResetError", driveName);
+         RETURN FALSE;
+      END_IF;
+      controlWord := gcDriveComControl_DisableVoltage;
+      IF bDriveFlags[eDriveComMalf] THEN
+         hasError := TRUE;
+         RcuSetMessageOnce(TRcuDrive_ErrResetError, myRobot.kinListInx, 1, instId, "TRcuDrive.ResetError", driveName);
+         RETURN FALSE;
+      ELSE
+         myRobot.DebugPrint(eTraceRcuDrive, driveName + " - state OK");
+      END_IF;
+   END_IF;
+   RETURN TRUE;
+END_ROUTINE
+
+
+// write pos to the setValue-structure and consider offset
+ROUTINE SetPos(CONST pos : REAL)
+
+   IF simulated THEN
+      setValuePos := pos;
+   ELSE
+      setValuePos := pos + offset;
+   END_IF;
+END_ROUTINE
+
+
+// read pos from the actValue-structure and consider offset
+ROUTINE GetPos(pos : REAL)
+
+   IF simulated THEN
+      pos := actValuePos;
+   ELSE
+      pos := actValuePos - offset;
+   END_IF;
+END_ROUTINE
+
+
+ROUTINE WriteZeroOffset() : BOOL
+   VAR
+      i                   : DINT;
+      j                   : LINT;
+      ret                 : TKSC_Status;                
+      scaling             : DINT;                       
+      factor              : DINT;                       
+      exponent            : DINT;                       
+      convFactor          : REAL;                       
+      type                : DINT;                       
+      unit                : DINT;   
+      paramValue          : DINT;
+   END_VAR
+   
+   IF simulated OR ioSimulated THEN
+      myRobot.DebugPrint(eTraceRcuDrive, "S-0052: not written for " + driveName + ": simulated axis " + STR(driveZeroOffsetConfig));
+      RETURN TRUE;
+   END_IF;
+   
+   IF sercHdl = 0 THEN
+      RcuSetMessageOnce(TRcuDrive_ErrNoAxisHandle, myRobot.kinListInx, 1, instId, "TRcuDrive.WriteZeroOffset", resourceName);
+      RETURN FALSE;
+   END_IF;
+   
+   i := 76; // position data scaling type
+   ret := RcReadSercosParameter(sercHdl, i, scaling);
+   IF ret = eKSC_Ok THEN
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0076) = " + STR(scaling));
+   ELSE
+      RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 1, instId, "TRcuDrive.WriteZeroOffset", resourceName, "S-0-0076");
+      RETURN FALSE;
+   END_IF;
+   
+   type := scaling MOD 4;
+   CASE type OF
+      0 : // no scaling
+         convFactor := 1.0;
+      1 : // linear position scaling            
+         unit := (scaling AND 16#10) MOD 16#10;
+         IF unit = 0 THEN  // [m]
+            convFactor := 1000.0;
+         ELSE // [inch]
+            convFactor := 25.4;
+         END_IF;
+         driveZeroOffsetUnit := "mm";
+         i := 77; // linear position scaling factor
+         ret := RcReadSercosParameter(sercHdl, i, factor);
+         IF ret = eKSC_Ok THEN
+             factor := WordToInt(factor);
+             myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0077) = " + STR(factor));
+         ELSE
+            RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 2, instId, "TRcuDrive.WriteZeroOffset", resourceName, "S-0-0077");
+            RETURN FALSE;
+         END_IF;
+         i := 78; // linear position scaling exponent
+         ret := RcReadSercosParameter(sercHdl, i, exponent);
+         IF ret = eKSC_Ok THEN
+             exponent := WordToInt(exponent);
+             myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0078) = " + STR(exponent));
+         ELSE
+            RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 3, instId, "TRcuDrive.WriteZeroOffset", resourceName, "S-0-0078");
+            RETURN FALSE;
+         END_IF;
+         convFactor := convFactor * factor * Expt(10, exponent);
+      2 : // rotational position resolution
+         i := 79; 
+         ret := RcReadSercosParameter(sercHdl, i, factor);
+         IF ret = eKSC_Ok THEN
+            myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0079) = " + STR(factor));
+         ELSE
+            RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 4, instId, "TRcuDrive.WriteZeroOffset", resourceName, "S-0-0079");
+            RETURN FALSE;
+         END_IF;
+         convFactor := 360.0 / factor;
+         driveZeroOffsetUnit := "grd";
+   ELSE
+      RcuSetMessageOnce(TRcuDrive_ErrUnsupportValue, myRobot.kinListInx, 1, instId, "TRcuDrive.WriteZeroOffset", resourceName,
+         "position data scaling type: " + STR(i));
+      RETURN FALSE;
+   END_CASE;
+   
+   i := 52; // reference distance 1
+   j := driveZeroOffsetConfig / convFactor;
+   IF (j > 2147483647) OR (j < -2147483647) THEN // max. possible parameter-value (4 byte value)
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0052) = " + STR(j) + " not allowed, max +/- 2147483647");
+      RETURN FALSE;
+   END_IF;
+   paramValue := j;
+   ret := RcWriteSercosParameter(sercHdl, i, paramValue);
+   IF ret = eKSC_Ok THEN
+      driveZeroOffset := paramValue * convFactor;
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0052) = " + STR(paramValue) + " written");
+   ELSE
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0052) = " + STR(paramValue) + " not written");
+      RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 1, instId, "TRcuDrive.WriteZeroOffset", resourceName, "S-0-0052");
+      RETURN FALSE;
+   END_IF;
+   
+   RETURN TRUE;
+END_ROUTINE
+
+
+// give the actual position value, offset is calculated accordingly
+ROUTINE ReferenceValue(CONST pos : REAL) : BOOL
+VAR
+   i          : DINT;
+   i2         : DINT;
+   s          : STRING; 
+   s2         : STRING;
+   ret        : TKSC_Status;
+   errorStr   : STRING;
+   paramValue : DINT;
+   newPos     : REAL;
+END_VAR
+
+   // bypass in simulation mode
+   IF simulated THEN
+      actValuePos := pos;
+      referenced := TRUE;
+      RETURN TRUE;
+   END_IF;
+   
+   IF bDriveFlags[eDriveComMalf] THEN
+      ResetError(TRUE);
+   END_IF;
+   
+   // possible after stop or quickstop
+   IF bDriveFlags[eDriveComSwitchOnDisabled] OR 
+         bDriveFlags[eDriveComReadyToSwitchOn] OR 
+         bDriveFlags[eDriveComSwitchedOn] THEN
+
+      IF sercHdl = 0 THEN
+         RcuSetMessageOnce(TRcuDrive_ErrNoAxisHandle, myRobot.kinListInx, 2, instId, "TRcuDrive.ReferenceValue", resourceName);
+      ELSE
+         i := 52; 
+         IF ReadDrive_S_Param(i, paramValue, driveZeroOffset) THEN  //zero-offset S-052
+            IF pos <> driveZeroOffset THEN
+               myRobot.DebugPrint(eTraceRcuDrive, "new reference distance: " + STR(pos) + " " + UnitName);
+               newPos := pos;
+               IF WriteDrive_S_Param(i, newPos) THEN
+                  myRobot.DebugPrint(eTraceRcuDrive, "reference distance set");
+                  ReadDrive_S_Param(i, paramValue, driveZeroOffset);         //zero-offset S-052
+               ELSE
+                  ReadDrive_S_Param(i, paramValue, driveZeroOffset);          //zero-offset S-052
+                  RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 2, instId, "TRcuDrive.ReferenceValue", driveName, "S-0-0052");
+                  RETURN FALSE;   
+               END_IF;  
+            END_IF;
+         END_IF;
+
+
+         RcReadSercosString(sercHdl, 30, sFirmware, 7);
+         s2 := StrLeft(sFirmware,1);
+         IF s2 = "F" THEN // IndraDrive
+            i2 := StrLen(sFirmware);
+            i2 := i2 - 15;
+            s2 := StrRight(sFirmware, i2);
+            s  := StrLeft(s2, 2);
+            i2 :=StrToInt(s);
+         ELSE // EcoDrive 
+            i2 := 0;
+         END_IF;
+
+         IF i2 > 4 THEN
+            i := 16#0000 + 447; //S447
+         ELSE
+            i := 16#8000 + 12;  // P12
+         END_IF;  
+         
+         ret := KSC_CommandSequence(sercHdl, i, 1000);
+         IF ret = eKSC_Ok THEN
+             RcuSetMessageOnce(TRcuDrive_InfSetCommandSuccess, myRobot.kinListInx, 1, instId, "TRcuDrive.ReferenceValue", driveName);
+         ELSE
+             CASE ret OF
+                eKSC_InvalidIdent        : errorStr := "invalid command";
+                eKSC_CmdTimeout          : errorStr := "timeout while executing command";
+                eKSC_CmdExecNotPossible  : errorStr := "execution of command not possible";
+                eKSC_Nok                 : errorStr := "other error";
+             ELSE
+                errorStr := "unknown error";
+             END_CASE;
+             RcuSetMessageOnce(TRcuDrive_SetCmdFail, myRobot.kinListInx, 1, instId, "TRcuDrive.ReferenceValue", driveName, errorStr);
+             RETURN FALSE;
+         END_IF;
+      END_IF;
+      DeclareReferenced(); // clear BIT31 in StateWord
+      
+      RETURN TRUE;
+   ELSE
+      errorStr := "SwitchOnDisabled OR ReadyToSwitchOn OR SwitchedOn";
+      RcuSetMessageOnce(TRcuDrive_ErrWrngDrState, myRobot.kinListInx, 1, instId, "TRcuDrive.ReferenceValue", driveName, errorStr);
+      RETURN FALSE;
+   END_IF;
+END_ROUTINE
+
+
+// start an automatic referencing run for the drives
+ROUTINE ReferenceSelf(CONST mode : DINT) : BOOL
+
+   RETURN FALSE;
+END_ROUTINE
+
+
+// switch between simulation modes
+ROUTINE SetSimulationMode(CONST on : BOOL) : BOOL
+   VAR
+      oldState : DINT;
+      failure : BOOL;
+   END_VAR
+
+   IF on THEN
+      IF connected THEN
+         // Send a quickstop before the drive gets to simulation mode.
+         // State change is essential when the MCU does the update
+         oldState := state;
+         Quickstop();
+         // when the MCU does the Update then simulated drives have to be in
+         // switched-on state, otherwise the MCU will reject updating
+         IF NOT gbRcuManagesDriveUpdate THEN
+            DriveStartUp(failure);
+            IF failure THEN
+               RETURN FALSE;
+            END_IF;
+         END_IF;
+         simulatedPos := actValuePos;
+         state := oldState; // state is not changed, therefore allDrivesReady does
+                            // not have to be reconsidered
+      END_IF;
+      actValuePos := MAP(simulatedPos);
+      setValuePos := MAP(simulatedPos);
+      simulated := TRUE;
+   ELSE
+      IF connected THEN
+         ConsiderStateWord(); // set drive-flags, state and referenced according to stateWord
+         actValuePos := MAP(actValue.pos);
+         setValuePos := MAP(setValue.pos);
+         simulated := FALSE;
+      ELSE
+         RETURN FALSE; // cannot leave simulation if not connected to a driver
+      END_IF;
+   END_IF;
+   RETURN TRUE;
+END_ROUTINE
+
+
+ROUTINE GetDriveParameter()
+    VAR
+      data       : DINT;
+      ident      : DINT;
+      paramValue : DINT;
+      convFactor : REAL;
+      ret        : TKSC_Status;
+    END_VAR
+    
+    IF simulated OR ioSimulated THEN
+        RETURN;
+    END_IF;
+    
+    IF sercHdl = 0 THEN
+       IF NOT DriveGetAxisHdl(resourceName,  sercHdl) THEN
+          RcuSetMessageOnce(TRcuDrive_ErrNoAxisHandle, myRobot.kinListInx, 3, instId, "TRcuDrive.GetDriveParameter", resourceName);
+          RETURN;
+       END_IF;
+    END_IF;
+    
+    ident := 111;  // S-0-0111
+    ret := RcReadSercosParameter(sercHdl, ident, data);
+    IF ret = eKSC_Ok THEN
+       driveS111 := data/1000.0;
+       myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0111) = " + STR(driveS111));
+    ELSE
+       RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 5, instId, "TRcuDrive.GetDriveParameter", axesName, "S-0-0111");
+    END_IF;
+    
+    ident := 109;  // S-0-0109
+    ret := RcReadSercosParameter(sercHdl, ident, data);
+    IF ret = eKSC_Ok THEN
+       driveS109 := data/1000.0;
+       myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0109) = " + STR(driveS109));
+    ELSE
+       RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 6, instId, "TRcuDrive.GetDriveParameter", axesName, "S-0-0109");
+    END_IF;
+    
+    ident := 92;  // S-0-0092
+    ret := RcReadSercosParameter(sercHdl, ident, data);
+    IF ret = eKSC_Ok THEN
+       myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0092) = " + STR(data));
+    END_IF;
+    
+    ident := 49;  // S-0-0049
+    IF ReadDrive_S_Param(ident, paramValue, driveMaxPos) THEN
+       myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0049) = " + STR(driveMaxPos) + UnitName);
+    END_IF;
+    
+    ident := 50;  // S-0-0050
+    IF ReadDrive_S_Param(ident, paramValue, driveMinPos) THEN
+       myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0050) = " + STR(driveMinPos) + UnitName);
+    END_IF;
+    
+    ident := 52;  // S-0-0052
+    IF NOT ReadDrive_S_Param(ident, paramValue, driveZeroOffset) THEN
+       myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0052) = " + STR(driveZeroOffset) + UnitName);
+    END_IF;    
+    
+    ident := 51 + P_ParamMask;  // P-0-0051
+    ret := RcReadSercosParameter(sercHdl, ident, data);
+    IF ret = eKSC_Ok THEN
+       driveP51 := data/100.0;
+       myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (P-0-0051) = " + STR(driveP51));
+    ELSE
+       RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 7, instId, "TRcuDrive.GetDriveParameter", axesName, "P-0-0051");
+    END_IF;
+    
+    ident := 109 + P_ParamMask;  // P-0-109
+    ret := RcReadSercosParameter(sercHdl, ident, driveP109);
+    IF ret <> eKSC_Ok THEN
+       RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 15, instId, "TRcuDrive.GetDriveParameter", axesName, "P-0-0109");
+    END_IF;
+    
+    RcGetSercosDriveType(sercHdl, deviceType);
+    RcGetSercosBusType(sercHdl, busType);
+    
+END_ROUTINE
+
+
+ROUTINE SetMaxTorque() : BOOL
+   VAR
+      torque  : LINT;
+      current : REAL;
+   END_VAR
+   
+   IF simulated OR ioSimulated THEN
+      RETURN FALSE;
+   END_IF;
+   
+   IF NOT myRobot.driveTorqueUnitNm THEN
+      IF driveMaxTorque > driveStallTorque THEN
+         IF driveS109 = driveS111 THEN
+            RcuSetMessageOnce(TRcuDrive_ErrInvValDrivCurr, myRobot.kinListInx, 1, instId, "TRcuDrive.SetMaxTorque", axesName, "S109 = S111");
+            RETURN FALSE;
+         ELSE
+            current := driveS111 + 
+                    (driveMaxTorque - driveStallTorque) *
+                    (driveS109 - driveS111) /
+                    (driveMaxTorqueMotor - driveStallTorque);
+         END_IF;
+      ELSE
+         IF driveStallTorque = 0 THEN
+            RcuSetMessageOnce(TRcuDrive_ErrInvValDrivCurr, myRobot.kinListInx, 2, instId, "TRcuDrive.SetMaxTorque", axesName, "driveStallTorque = 0");
+            RETURN FALSE;
+         ELSE
+            current := driveMaxTorque * driveS111 / driveStallTorque;
+         END_IF;
+      END_IF;
+      IF driveS111 = 0 THEN
+         RcuSetMessageOnce(TRcuDrive_ErrInvValDrivCurr, myRobot.kinListInx, 3, instId, "TRcuDrive.SetMaxTorque", axesName, "S111 = 0");
+         RETURN FALSE;
+      ELSE
+         myRobot.DebugPrint(eTraceRcuDrive, "calculated current : " + STR(current));
+         torque := LINT (current*1000/driveS111);
+         SetTorque(torque);
+      END_IF;
+   ELSE // driveTorqueUnitNm = 1
+      SetTorqueNm(LINT (driveMaxTorque/10000.0));
+   END_IF;
+   
+   RETURN TRUE;
+   
+END_ROUTINE
+
+
+ROUTINE SetReducedTorque()
+   VAR
+      torque  : LINT;
+      current : REAL;
+   END_VAR
+   
+   IF simulated OR ioSimulated THEN
+       RETURN;
+   END_IF;
+   
+   IF NOT myRobot.driveTorqueUnitNm THEN
+      IF driveReducedTorque > driveStallTorque THEN
+         IF driveS109 = driveS111 THEN
+            RcuSetMessageOnce(TRcuDrive_ErrInvValDrivCurr, myRobot.kinListInx, 4, instId, "TRcuDrive.SetReducedTorque", axesName, "S109 = S111");
+            RETURN;
+         ELSE
+            current := driveS111 + 
+                    (driveReducedTorque - driveStallTorque) *
+                    (driveS109 - driveS111) /
+                    (driveMaxTorqueMotor - driveStallTorque);
+         END_IF;
+      ELSE
+         IF driveStallTorque = 0 THEN
+            RcuSetMessageOnce(TRcuDrive_ErrInvValDrivCurr, myRobot.kinListInx, 5, instId, "TRcuDrive.SetMaxTorque", axesName, "driveStallTorque = 0");
+            RETURN;
+         ELSE
+            current := driveReducedTorque * driveS111 / driveStallTorque;
+         END_IF;
+      END_IF;
+      IF driveS111 = 0 THEN
+         RcuSetMessageOnce(TRcuDrive_ErrInvValDrivCurr, myRobot.kinListInx, 6, instId, "TRcuDrive.SetMaxTorque", axesName, "S111 = 0");
+         RETURN;
+      ELSE
+         myRobot.DebugPrint(eTraceRcuDrive, "calculated current : " + STR(current));
+         torque := LINT (current*1000/driveS111);
+         SetTorque(torque);
+      END_IF;
+   ELSE // driveTorqueUnitNm = 1
+      SetTorqueNm(LINT (driveReducedTorque/10000.0));
+   END_IF;
+   
+END_ROUTINE
+
+//---------------------------------------------------------------------------------------
+// S-092 a. P-109 have to be set up to 500% to move with closed brake
+//---------------------------------------------------------------------------------------
+ROUTINE SetGrindInTorque(bGrindIn : BOOL) : BOOL
+ VAR
+   ident    : DINT;
+   scale    : DINT;
+   value    : DINT;
+   i        : DINT;
+   ret      : TKSC_Status;
+   bReturn  : BOOL := TRUE;
+ END_VAR 
+  
+  IF bGrindIn THEN
+     //SercosII drives allow to set torque greater than max --> drives sets max torque, because of that RCU sets alwaya 500% to S92 & P109
+     //SercesIII doesn't allow this --> drives sets very small torque is this case, therefore read P109 and write it to S92
+     IF (busType = eRcuSercos2) OR (busType = eRcuUndefBus) THEN
+        //write 500% to P-109
+        ident := 109 + P_ParamMask;  
+        value := cTorqueToGrindIn;
+        ret := RcReadSercosParameter(sercHdl, ident, i, 2, 3); //Get scalling
+        IF ret = eKSC_Ok THEN
+           scale := SHR(i, 24) AND 15;
+           FOR i:=0 TO scale-1 DO
+               value := value * 10;
+           END_FOR;
+           ret := RcWriteSercosParameter(sercHdl, ident, value, 2);
+           IF ret <> eKSC_Ok THEN
+              bReturn := FALSE;
+              RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 3, instId, "TRcuDrive.SetGrindInTorque", axesName, "P-0-0109");
+           END_IF;
+        ELSE
+           bReturn := FALSE;
+           RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 13, instId, "TRcuDrive.SetGrindInTorque", axesName, "P-0-0109");
+        END_IF;
+        //write 500% to S-092
+        ident := 92;  
+        value := cTorqueToGrindIn;
+        ret := RcReadSercosParameter(sercHdl, ident, i, 2, 3); //Get scalling
+        IF ret = eKSC_Ok THEN
+           scale := SHR(i, 24) AND 15;
+           FOR i:=0 TO scale-1 DO
+               value := value * 10;
+           END_FOR;
+           ret := RcWriteSercosParameter(sercHdl, ident, value, 2);
+           IF ret <> eKSC_Ok THEN
+              RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 4, instId, "TRcuDrive.SetGrindInTorque", axesName, "S-0-0092");
+              bReturn := FALSE;
+           END_IF;
+        ELSE
+           RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 14, instId, "TRcuDrive.SetGrindInTorque", axesName, "S-0-0092");
+           bReturn := FALSE;
+        END_IF;
+        
+     ELSIF (busType = eRcuSercos3) THEN
+        // read P-109
+        ident := 109 + P_ParamMask;  
+        ret := RcReadSercosParameter(sercHdl, ident, value, 2);
+        IF ret = eKSC_Ok THEN
+           // write value of P109 to S-092
+           ident := 92;  
+           ret := RcWriteSercosParameter(sercHdl, ident, value, 2);
+           IF ret <> eKSC_Ok THEN
+              RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 5, instId, "TRcuDrive.SetGrindInTorque", axesName, "S-0-0092");
+              bReturn := FALSE;
+           END_IF;      
+        ELSE
+           RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 14, instId, "TRcuDrive.SetGrindInTorque", axesName, "P-0-0109");
+           bReturn := FALSE;
+        END_IF;
+     END_IF; 
+     
+  ELSE
+     //restore S-92 according config
+     IF myRobot.mainModeMgr.actMainModeDef.actions.fullSpeed OR (NOT myRobot.torqueReductionT1) THEN
+        SetMaxTorque();
+     ELSE
+        SetReducedTorque();
+     END_IF;
+     //P-109 is only modified when SercosII is used
+     IF (busType = eRcuSercos2) OR (busType = eRcuUndefBus) THEN
+        ident := 109 + P_ParamMask;  // write origin value to P-109
+        ret := RcWriteSercosParameter(sercHdl, ident, driveP109);
+        IF ret <> eKSC_Ok THEN
+           RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 6, instId, "TRcuDrive.SetGrindInTorque", axesName, "P-0-0109");
+           bReturn := FALSE;
+        END_IF;
+     END_IF;
+  END_IF;   
+ 
+  RETURN bReturn;
+ 
+END_ROUTINE
+
+// read the offset from the zero-position, required e.g. for referencing
+ROUTINE ReadZeroPosOffset() : REAL
+
+   IF connected THEN
+      RETURN actValue.dPosZero;
+   ELSE
+      RcuSetMessageOnce(TRcuDrive_InfDriveNotConnected, myRobot.kinListInx, 1, instId, "TRcuDrive.ReadZeroPosOffset", axesName);
+      RETURN 0.0;
+   END_IF;
+END_ROUTINE
+
+
+// read IndexPulseInterval of the axis, returns mm, degree for 1 axis revolution
+ROUTINE AxisPulseInterval() : REAL
+   VAR
+      axisHdl : DINT;
+      indexPInterval : REAL;
+   END_VAR
+
+   IF NOT(DriveGetAxisHdl(resourceName, axisHdl)) THEN
+      RcuSetMessageOnce(TRcuDrive_InfDriveNoAxisHdl, myRobot.kinListInx, 1, instId, "TRcuDrive.AxisPulseInterval", axesName);
+      RETURN 0.0;
+   END_IF;
+   IF NOT(DriveGetIndexPulseInterval(axisHdl, indexPInterval)) THEN
+      RcuSetMessageOnce(TRcuDrive_InfDriveNoIdxPulseInt, myRobot.kinListInx, 1, instId, "TRcuDrive.AxisPulseInterval", axesName);
+      RETURN 0.0;
+   END_IF;
+   RETURN indexPInterval;
+END_ROUTINE
+
+
+// activate absolute drag error observation
+ROUTINE StartDragObservationAbs(VAR_IN iDrive : DINT)
+
+   IF simulated OR ioSimulated THEN   
+      myRobot.DebugPrint(eTraceRcuConfig, "Drag error observation not started for " + resourceName + ", because its simulated");
+      RETURN;
+   END_IF;   
+   IF NOT gbRcuUseReadBackVals THEN
+      myRobot.DebugPrint(eTraceRcuConfig, "Drag error observation not started for " + resourceName + ", because ReadBackVals not configurred");
+      RETURN;
+   END_IF;
+   IF NOT DragAbsObserveData.bActive THEN
+      DragAbsObserveData.bActive := TRUE;
+      DragAbsObserveData.iDrive := iDrive;
+      START ObserveAbsoluteDragError();
+      myRobot.DebugPrint(eTraceRcuConfig, "Drag error observation started for " + resourceName);
+   END_IF;
+END_ROUTINE
+
+//activate observation stall-position is reached or left
+ROUTINE StartLagErrorObservation(VAR_IN iDrive : DINT)
+
+   IF simulated OR ioSimulated THEN   
+      myRobot.DebugPrint(eTraceRcuConfig, "Lag error observation not started for " + resourceName + ", because its simulated");
+      RETURN;
+   END_IF; 
+   IF NOT gbRcuUseReadBackVals THEN
+      myRobot.DebugPrint(eTraceRcuConfig, "Lag error observation not started for " + resourceName + ", because ReadBackVals not configurred");
+      RETURN;
+   END_IF;
+   IF NOT LagObserveData.bActive THEN
+      LagObserveData.bActive := TRUE;
+      LagObserveData.iDrive := iDrive;
+      START ObserveLagError();
+      myRobot.DebugPrint(eTraceRcuConfig, "Lag error observation started for " + resourceName);
+   END_IF;
+END_ROUTINE
+
+// handle the conditions from other functions for Drag-/ Lagobservation
+ROUTINE ManageObservations()
+ VAR
+   bChgBrakeCheck   : BOOL;
+   bChgBrakeRelease : BOOL;
+   bChgMastering    : BOOL;  
+   bChgSim          : BOOL;
+ END_VAR;
+ 
+ IF NOT (DragAbsObserveData.bActive OR LagObserveData.bActive) THEN
+    RETURN;
+ END_IF;  
+ bChgBrakeCheck   := IS_CHANGED(myRobot.brakeCheck.BrakeCheckState);
+ bChgBrakeRelease := IS_CHANGED(myRobot.bBrakeRelDevPlugged);  
+ bChgMastering    := IS_CHANGED(myRobot.masterProg.actualStatus);  
+ bChgSim          := IS_CHANGED(myRobot.allDrivesSimulated);
+ 
+ WHILE TRUE DO
+   WAIT bChgBrakeCheck OR bChgBrakeRelease OR bChgMastering OR bChgSim;
+   bChgBrakeCheck   := FALSE;
+   bChgBrakeRelease := FALSE;
+   bChgMastering    := FALSE;
+   bChgSim          := FALSE;
+   IF (myRobot.brakeCheck.BrakeCheckState = eStateCheckRunning) OR 
+      (myRobot.masterProg.actualStatus = eStateRunning) OR
+       myRobot.bBrakeRelDevPlugged OR myRobot.allDrivesSimulated THEN
+       STOP ObserveAbsoluteDragError;
+       DragAbsObserveData.bRunning := FALSE;
+       STOP ObserveLagError;
+       LagObserveData.bRunning := FALSE;
+   ELSE
+       IF DragAbsObserveData.bActive AND NOT DragAbsObserveData.bRunning THEN
+          START ObserveAbsoluteDragError();
+       END_IF;
+       IF LagObserveData.bActive AND NOT LagObserveData.bRunning THEN
+          START ObserveLagError();
+       END_IF; 
+   END_IF;
+ END_WHILE;
+ 
+END_ROUTINE
+
+// mark the drive as unreferenced
+ROUTINE DeclareUnreferenced()
+
+   referenced := FALSE;
+END_ROUTINE
+
+
+(*******************************************************************************
+* private members
+*)
+
+CONSTANT PRIVATE
+   cTransTimeout : DINT := 2000;  // timeout for transitions from one state to the other [ms]
+   cPowerOk      : DINT := 16#8000;
+   cInReference  : DINT := 16#0001;
+   cStateWordPowerApplied  : DINT := 16#01000000;
+   cStateWordFatalError    : DINT := 16#02000000;
+   cSercParamDriveState    : DINT := 135;
+   cSercCommandResetClass1 : DINT := 99;
+   cTorqueToGrindIn        : DINT := 500;  //S-092 a. P-109 have to be set up to 500%
+END_CONSTANT                               //to move with closed brake
+
+TYPE PRIVATE
+  TLagObserve : STRUCT
+    iDrive      : INT;
+    bActive     : BOOL;
+    bRunning    : BOOL;
+    bTimerRuns  : BOOL;
+    bTimeOut    : BOOL;
+    bInPos      : BOOL;
+    readBackVal : MAPTO REAL;
+    setValue    : MAPTO REAL;
+    difference  : REAL;
+    bSwoVarAdded : BOOL;
+  END_STRUCT;
+  TDragAbsObserve : STRUCT
+    iDrive       : INT;
+    bActive      : BOOL;
+    bRunning     : BOOL;
+    bSwoVarAdded : BOOL;
+  END_STRUCT;
+END_TYPE
+
+VAR PRIVATE
+   // structure with actual Servo datas
+   actValue : MAPTO TIOServoData;
+   // structure with set points of Servocontroller
+   setValue : MAPTO TIOServoData;
+   // state word of the Servocontroller, (0..11 as specified in drivecom)
+   stateWord : MAPTO DINT;
+   // control word of the Servocontroller, (0..7 as specified in drivecom)
+   controlWord : MAPTO DINT;
+       
+   // adminstrates the position in simulation mode
+   simulatedPos : REAL;
+
+   // a transition to SwitchOnDisabled is no error
+   disableAllowed : BOOL;
+
+   // distance for one revolution
+   distPerRevolution : REAL;
+
+   // the observation of the absolute drag error is active
+   DragAbsObserveData :TDragAbsObserve;
+
+   // data from observation of stall-position is reached
+   LagObserveData : TLagObserve;
+
+   driveName : STRING; // name of the servo drive as declared in equipment.ttp
+   
+   //New variables
+   bFactorRead : BOOL;     //factor already read
+   ConvFactor  : REAL;     //factor between paramvalue and drivevalue
+   UnitName    : STRING;   //unit of the drivevalue
+
+END_VAR
+
+//-----------------------------------------------------------------------------
+//  observe limitswitches and states
+//-----------------------------------------------------------------------------
+ROUTINE ObserveState() PRIVATE
+VAR
+   state : INT;
+   axisState : ARRAY [16] OF MAPTO BOOL;
+   chg : ARRAY [16] OF BOOL;
+   changed : BOOL;
+   trueValue : BOOL;
+END_VAR
+
+   trueValue := TRUE;
+   axisState[0] := MAP(simulated);
+   axisState[1] := MAP(ioSimulated);
+   axisState[2] := MAP(referenced);
+   IF IS_MAPPED(limitSwitchMax) THEN  // inv. Logik
+      axisState[3] := MAP(limitSwitchMax);
+   ELSE 
+      axisState[3] := MAP(trueValue);
+   END_IF;
+   axisState[4] := MAP(limitSwitchMaxSW);
+   IF IS_MAPPED(limitSwitchMin) THEN  // inv. Logik
+      axisState[5] := MAP(limitSwitchMin);
+   ELSE 
+      axisState[5] := MAP(trueValue);
+   END_IF;
+   axisState[6] := MAP(limitSwitchMinSW);
+   chg[0] := UPDATE(axisState[0]);
+   chg[1] := UPDATE(axisState[1]);
+   chg[2] := UPDATE(axisState[2]);
+   chg[3] := UPDATE(axisState[3]);
+   chg[4] := UPDATE(axisState[4]);
+   chg[5] := UPDATE(axisState[5]);
+   chg[6] := UPDATE(axisState[6]);
+   changed := IS_CHANGED(chg);
+   WHILE TRUE DO
+      state := 0;
+      IF axisState[0] OR axisState[1] THEN  // simulated
+         state := state + cgiMaskBit0;
+      END_IF;
+      IF axisState[2] THEN                  // referenced
+         state := state + cgiMaskBit1;
+      END_IF;
+      IF (NOT axisState[3]) OR axisState[4] THEN  // neg. limitswitch
+         state := state + cgiMaskBit2;
+      END_IF;
+      IF (NOT axisState[5]) OR axisState[6] THEN  // pos. limitswitch
+         state := state + cgiMaskBit3;
+      END_IF;
+      jointState := state;
+      WAIT changed;
+      changed := FALSE;
+   END_WHILE;
+END_ROUTINE
+
+//New
+ROUTINE ReadConvFactorUnit() : BOOL PRIVATE
+ VAR
+   parNumber   : DINT;
+   scaling     : DINT;
+   scaletype   : DINT;
+   unit        : DINT;
+   factor      : DINT;
+   exponent    : DINT;
+   ret         : TKSC_Status;
+END_VAR
+
+
+   IF simulated OR ioSimulated THEN
+      ConvFactor := 1.0;
+      UnitName   := "";
+      myRobot.DebugPrint(eTraceRcuDrive, "No parameters for position scaling - simulated axis");
+      RETURN TRUE;
+   END_IF;
+   
+   IF sercHdl = 0 THEN
+      RcuSetMessageOnce(TRcuDrive_ErrNoAxisHandle, myRobot.kinListInx, 5, instId, "TRcuDrive.ReadConvFactorUnit", resourceName);
+      RETURN FALSE;
+   END_IF;
+   
+   parNumber := 76; // position data scaling type (S-0-0076)
+   ret := RcReadSercosParameter(sercHdl, parNumber, scaling);
+   IF ret = eKSC_Ok THEN
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0076) = " + STR(scaling));
+   ELSE
+      RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 8, instId, "TRcuDrive.ReadConvFactorUnit", driveName, "S-0-0076");
+      RETURN FALSE;
+   END_IF;
+   
+   scaletype := scaling MOD 4;
+   CASE scaletype OF
+      0 : // no scaling
+         ConvFactor := 1.0;
+         RETURN TRUE;
+      1 : // linear position scaling            
+         unit := (scaling AND 16#10) MOD 16#10;
+         IF unit = 0 THEN  // [m]
+            ConvFactor := 1000.0;
+         ELSE // [inch]
+            ConvFactor := 25.4;
+         END_IF;
+         UnitName := "mm";
+         parNumber := 77; // linear position scaling factor (S-0-0077)
+         ret := RcReadSercosParameter(sercHdl, parNumber, factor);
+         IF ret = eKSC_Ok THEN
+             factor := WordToInt(factor);
+             myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0077) = " + STR(factor));
+         ELSE
+            RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 9, instId, "TRcuDrive.ReadConvFactorUnit", driveName, "S-0-0077");
+            RETURN FALSE;
+         END_IF;
+         parNumber := 78; // linear position scaling exponent
+         ret := RcReadSercosParameter(sercHdl, parNumber, exponent);
+         IF ret = eKSC_Ok THEN
+             exponent := WordToInt(exponent);
+             myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0078) = " + STR(exponent));
+         ELSE
+            RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 10, instId, "TRcuDrive.ReadConvFactorUnit", driveName, "S-0-0077");
+            RETURN FALSE;
+         END_IF;
+         ConvFactor := ConvFactor * factor * Expt(10, exponent);
+         RETURN TRUE;
+         
+      2 : // rotational position resolution
+         parNumber := 79; 
+         ret := RcReadSercosParameter(sercHdl, parNumber, factor);
+         IF ret = eKSC_Ok THEN
+            myRobot.DebugPrint(eTraceRcuDrive, " Axis " + driveName + " (S-0-0079) = " + STR(factor));
+         ELSE
+            RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 11, instId, "TRcuDrive.ReadConvFactorUnit", driveName, "S-0-0079");
+            RETURN FALSE;
+         END_IF;
+         ConvFactor := 360.0 / factor;
+         UnitName := "grd";
+         RETURN TRUE;
+         
+      ELSE
+         RcuSetMessageOnce(TRcuDrive_ErrUnsupportValue, myRobot.kinListInx, 2, instId, "TRcuDrive.ReadConvFactorUnit", driveName, STR(scaletype));
+         RETURN FALSE;
+   END_CASE;
+         
+END_ROUTINE
+
+ROUTINE ReadDrive_S_Param(CONST paramNr : DINT; paramValue : DINT; value : REAL) : BOOL
+ VAR
+   ret       : TKSC_Status;
+   sError    : STRING;
+ END_VAR   
+ 
+     IF NOT bFactorRead THEN
+        bFactorRead := ReadConvFactorUnit();
+     END_IF;  
+        
+     IF bFactorRead THEN
+        IF simulated OR ioSimulated THEN
+           paramValue := 0;
+           value      := 0.0;
+           myRobot.DebugPrint(eTraceRcuDrive, "S-0" + STR(paramNr) + " : no parameter for " + driveName + 
+                                      " - simulated axis");
+           RETURN TRUE;
+        END_IF;      
+        
+        IF sercHdl = 0 THEN
+           paramValue := 0;
+           value      := 0.0;
+           RcuSetMessageOnce(TRcuDrive_ErrNoAxisHandle, myRobot.kinListInx, 6, instId, "TRcuDrive.ReadDrive_S_Param", resourceName);
+           RETURN FALSE;
+        END_IF;
+        
+        ret := RcReadSercosParameter(sercHdl, paramNr, paramValue);
+        IF ret = eKSC_Ok THEN
+           value := paramValue * ConvFactor;
+           RETURN TRUE;
+        ELSE
+           paramValue := 0;
+           value      := 0.0;
+           sError     := "S-0-00" + STR(paramNr);
+           RcuSetMessageOnce(TRcuDrive_ErrReadParamFail, myRobot.kinListInx, 12, instId, "TRcuDrive.ReadDrive_S_Param", driveName, sError);
+           RETURN FALSE;
+        END_IF;
+           
+     ELSE
+       paramValue := 0;
+       value      := 0.0;
+       RETURN FALSE;
+     END_IF;  
+     
+END_ROUTINE
+
+ROUTINE WriteDrive_S_Param(CONST paramNr : DINT; value : REAL) : BOOL
+  VAR
+   paramValue : DINT;
+   ret        : TKSC_Status;
+   sError     : STRING;
+ END_VAR   
+ 
+     IF NOT bFactorRead THEN
+        bFactorRead := ReadConvFactorUnit();
+     END_IF;  
+        
+     IF bFactorRead THEN
+        IF simulated OR ioSimulated THEN
+           myRobot.DebugPrint(eTraceRcuDrive, "S-0" + STR(paramNr) + " : not written for " + driveName + 
+                                      " - simulated axis");
+           RETURN TRUE;
+        END_IF;      
+        
+        IF sercHdl = 0 THEN
+           RcuSetMessageOnce(TRcuDrive_ErrNoAxisHandle, myRobot.kinListInx, 7, instId, "TRcuDrive.WriteDrive_S_Param", resourceName);
+           RETURN FALSE;
+        END_IF;
+        
+        paramValue := DINT(value / ConvFactor);
+        ret := RcWriteSercosParameter(sercHdl, paramNr, paramValue);
+        IF ret = eKSC_Ok THEN
+           RETURN TRUE;
+        ELSE
+           sError := "S-0-00" + STR(paramNr);
+           RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 7, instId, "TRcuDrive.WriteDrive_S_Param", driveName, sError);
+           RETURN FALSE;
+        END_IF;
+     ELSE
+        RETURN FALSE;
+     END_IF;
+END_ROUTINE
+
+// Routine updates the variables when the state of the controller changes
+// and sets the error-flag when switching to error-states
+//
+// In parallel, the error-flag is also set when the drive loses its reference.
+ROUTINE DriveStateManager() PRIVATE
+   VAR
+      bDriveStatChange : BOOL;  // Indicator variable
+      errorState       : BOOL;
+      oldReferenced    : BOOL;
+      oldErrorState    : BOOL;
+   END_VAR
+
+   bDriveStatChange := IS_CHANGED(stateWord);
+   disableAllowed := TRUE; // no error during start-up
+   WHILE TRUE DO
+      ConsiderStateWord();
+      
+      // @? what is really necessary ?      
+      // Wth: actual version wrong!
+      // nmr: check disableAllowed also in state NotReady to prevent errors during bootup
+      errorState := bDriveFlags[eDriveComMalfReactionActive] OR
+         bDriveFlags[eDriveComMalf] 
+         OR (bDriveFlags[gcDriveComState_NotReady] AND (NOT disableAllowed))
+         OR (bDriveFlags[eDriveComSwitchOnDisabled] AND (NOT disableAllowed));
+
+      // If the servo drive gets into an error state, an error is set.                         
+      IF (errorState AND NOT oldErrorState) OR
+         (oldReferenced AND NOT referenced) THEN
+         
+         // If the servo drive belongs to a set of kinematics, the variable "error" will be mapped, 
+         // and thus the error flag can be set. However this is done by the "ApplyDrive" function,
+         // which is only called a short while after the drive state manager already starts.
+         IF IS_MAPPED(error) THEN
+            error := TRUE;
+         END_IF;
+         IF bDriveFlags[eDriveComSwitchOnDisabled] THEN
+            // adjust the controlword if the reason for the error was a not
+            // requested transition to the switchOnDisabled-state
+            controlWord := gcDriveComControl_DisableVoltage;
+//         ELSE
+            // otherwise set an error
+//            RcuSetError(instId, eRcuErrorDriveErrorLaunched, INSTANCE_NAME());
+         END_IF;
+      END_IF;
+
+      IF NOT bDriveFlags[eDriveComQuickstopActive] THEN
+         disableAllowed := FALSE;
+      END_IF;
+      oldReferenced := referenced;
+      oldErrorState := errorState;
+      
+      // Wait for new drivecom state. If the flag "simulated" is set elsewhere, the
+      // drive state manager is halted.
+      WAIT bDriveStatChange AND NOT simulated; 
+      bDriveStatChange := FALSE; // reset to react for new change in state word    
+   END_WHILE;
+END_ROUTINE
+
+
+// Routine sets all variables according to the state of the controller
+ROUTINE ConsiderStateWord() PRIVATE
+   VAR
+      i                : DINT;
+      localCopyOfState : DINT; // To prevent data contention when the state changes
+                               // while the analysis is done
+   END_VAR
+
+   localCopyOfState := stateWord;
+   lostReference := (localCopyOfState AND gcDriveComMask_Dropped_Reference) <> 0;
+
+   IF simulated OR ioSimulated THEN
+      powerApplied := TRUE;
+   ELSE
+      powerApplied := (localCopyOfState AND cStateWordPowerApplied) <> 0;
+   END_IF;
+
+   IF lostReference THEN // lostreference removes referenced flags
+      referenced := FALSE;
+   ELSE
+      referenced := TRUE;
+   END_IF;
+
+   // Updating state
+   state := 0;
+   FOR i := 0 TO eDriveComMaxNum-1 DO
+      IF (gDriveComStates[i] = (localCopyOfState AND gDriveComStateMasks[i])) THEN
+         state := i;                  //indicates new state
+      ELSE
+         bDriveFlags[i] := FALSE;     //reset of old state
+      END_IF;
+   END_FOR;
+   bDriveFlags[state] := TRUE;        //set new state
+END_ROUTINE
+
+
+// mark the drive as referenced, i.e. reset lost-reference bit in StateWord
+ROUTINE DeclareReferenced() PRIVATE
+
+   IF (controlWord AND gcDriveComMask_Dropped_Reference)<>0 THEN
+      RcuSetMessageOnce(TRcuDrive_WarDrvWrongCntrlWord, myRobot.kinListInx, 1, instId, "TRcuDrive.DeclareReferenced", axesName);
+      controlWord := controlWord AND (NOT gcDriveComMask_Dropped_Reference);
+   END_IF;
+
+   IF (stateWord AND gcDriveComMask_Dropped_Reference)<>0 THEN
+      // if BIT31 in StatusWord is set => reseting
+      controlWord := controlWord OR gcDriveComMask_Dropped_Reference;
+      WAIT NOT lostReference;
+      controlWord := controlWord AND (NOT gcDriveComMask_Dropped_Reference);
+   END_IF;  
+   referenced := TRUE;
+END_ROUTINE
+
+
+// observe the difference between set- and actvalue (in revolutions)
+ROUTINE ObserveRevolutionDragError() PRIVATE
+   VAR
+      difference : REAL;
+   END_VAR
+
+   WHILE TRUE DO
+      // routine only active in OpEnabled-state, do not rely on bDriveFlags
+      // (drive could be simulated)
+      WAIT state = eDriveComOpEnabled;
+      //WaitForIntValue(state, eDriveComOpEnabled);
+      difference := setValuePos - actValuePos;
+      difference := rAbs(difference);
+      IF difference > grRcuDriveControlFactor * distPerRevolution THEN
+         IF IS_MAPPED(error) THEN
+            error := TRUE;
+            RcuSetMessageOnce(TRcuDrive_ErrDrDrgErrLaunched, myRobot.kinListInx, 1, instId, "TRcuDrive.ObserveRevolutionDragError", axesName);
+         RETURN;
+            WAIT NOT error;
+         ELSE
+            RcuSetMessageOnce(TRcuDrive_ErrDrDrgErrLaunched, myRobot.kinListInx, 2, instId, "TRcuDrive.ObserveRevolutionDragError", axesName);
+         END_IF;
+      END_IF;
+      Sleep(myRobot.iDriveControlTime);
+   END_WHILE;
+END_ROUTINE
+
+// observe the difference between set- and actvalue (absolute values)
+//Indradrive giRcuDriveValueDelayCycles = 14 (7 * 2ticks * 4ms = 56ms)
+//EcoDrive   giRcuDriveValueDelayCycles = 21 (10 * 2ticks * 4ms = 80ms)
+ROUTINE ObserveAbsoluteDragError() PRIVATE
+   VAR
+      chg          : BOOL;
+      difference : REAL;
+      iAuxDrive    : INT;
+      s            : STRING;
+      yDelayBuffer : ARRAY [25] OF REAL;
+      i            : INT;
+      bWasActive   : BOOL;
+   END_VAR
+
+   DragAbsObserveData.bRunning := TRUE;
+   //map to readbackval - feedback from drives
+   IF NOT IS_MAPPED(actValuePos) THEN
+      RcuSetMessageOnce(TRcuDrive_ErrBackValNotMapped, myRobot.kinListInx, 1, instId, "TRcuDrive.ObserveAbsoluteDragError", resourceName, "DragErrorObservation");
+      RETURN;
+   END_IF;
+   // map set value
+   IF NOT IS_MAPPED(setValuePos) THEN
+      RcuSetMessageOnce(TRcuDrive_ErrSetValNotMapped, myRobot.kinListInx, 2, instId, "TRcuDrive.ObserveAbsoluteDragError", resourceName, "DragErrorObservation");
+      RETURN;
+   END_IF;   
+   //kemroscope variables
+(*    IF NOT DragAbsObserveData.bSwoVarAdded THEN
+      s := myRobot.kinematic.mName + "." + resourceName + ".AbsDrag.actValue";
+      SwoAddRealVariable(actValuePos, s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".AbsDrag.setValue";
+      SwoAddRealVariable(setValuePos, s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".AbsDrag.yDelayBuffer[0]";
+      SwoAddRealVariable(yDelayBuffer[0], s); 
+      s := myRobot.kinematic.mName + "." + resourceName + ".AbsDrag.yDelayBuffer[13]";
+      SwoAddRealVariable(yDelayBuffer[13], s); 
+      s := myRobot.kinematic.mName + "." + resourceName + ".AbsDrag.mVelo";
+      SwoAddRealVariable(myRobot.actJoints.mVelo[DragAbsObserveData.iDrive], s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".AbsDrag.difference";
+      SwoAddRealVariable(difference, s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".AbsDrag.index";
+      SwoAddIntVariable(i, s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".AbsDrag.wasactive";
+      SwoAddBoolVariable(bWasActive, s); 
+      DragAbsObserveData.bSwoVarAdded := TRUE;   
+   END_IF; 
+*)   
+   //wait until MCU handles drive update
+   WAIT myRobot.updateActive;
+   chg := IS_CHANGED(giRcuDriveControlCounter);
+            
+   WHILE TRUE DO
+      WAIT chg;       //wait for update from external timer
+      chg := FALSE;
+      IF (state = eDriveComOpEnabled) AND myRobot.updateActive THEN  //drive is in AF
+         IF bWasActive THEN
+            IF i = driveUpdateDelayCycles THEN
+               difference := yDelayBuffer[0] - actValuePos;
+            ELSE   
+               difference := yDelayBuffer[i] - actValuePos;
+            END_IF;
+            IF rAbs(difference) > driveDragControlValue THEN
+               RcuSetMessageOnce(TRcuDrive_ErrDrDrgErrLaunched, myRobot.kinListInx, 4, instId, "TRcuDrive.ObserveAbsoluteDragError", axesName);
+            END_IF;
+         ELSE
+            IF i = driveUpdateDelayCycles-1 THEN
+                bWasActive := TRUE;
+            END_IF;
+         END_IF;
+         IF i = driveUpdateDelayCycles THEN
+            i := 0;
+         END_IF;
+         yDelayBuffer[i] := setValuePos;
+         i := i + 1;
+      ELSE
+         bWasActive  := FALSE;
+         i           := 0;
+      END_IF;
+      
+   END_WHILE;
+      
+END_ROUTINE
+
+// observe if stall-position is reached or left
+ROUTINE ObserveLagError() PRIVATE
+ VAR
+  iAuxDrive   : INT;
+  s           : STRING;
+ END_VAR
+ 
+   LagObserveData.bRunning := TRUE;
+   // map act value
+   IF NOT IS_MAPPED(LagObserveData.readBackVal) THEN
+      //map to readbackval - feedback from drives
+      IF (LagObserveData.iDrive < myRobot.nrOfMainJoints) THEN
+         LagObserveData.readBackVal := MAP(myRobot.readBackVals.mJoints.mMainJoints.mValues[LagObserveData.iDrive]);
+      ELSE
+         iAuxDrive := LagObserveData.iDrive - myRobot.nrOfMainJoints;
+         LagObserveData.readBackVal := MAP(myRobot.readBackVals.mJoints.mAuxJoints.mValues[iAuxDrive]);
+      END_IF;
+      //mapping o.k. ?
+      IF NOT IS_MAPPED(LagObserveData.readBackVal) THEN
+         RcuSetMessageOnce(TRcuDrive_ErrBackValNotMapped, myRobot.kinListInx, 3, instId, "TRcuDrive.ObserveLagError", resourceName, "LagErrorObservation");   
+         RETURN;
+      END_IF;
+   END_IF;   
+   // map set value
+   IF NOT IS_MAPPED(LagObserveData.setValue) THEN
+      LagObserveData.setValue := MAP(myRobot.actJoints.mPos[LagObserveData.iDrive]);
+      //mapping o.k. ?
+      IF NOT IS_MAPPED(LagObserveData.setValue) THEN
+         RcuSetMessageOnce(TRcuDrive_ErrSetValNotMapped, myRobot.kinListInx, 4, instId, "TRcuDrive.ObserveLagError", resourceName, "LagErrorObservation");
+         RETURN;
+      END_IF;
+   END_IF;   
+   // kemro scope 
+   (* IF NOT LagObserveData.bSwoVarAdded THEN
+      s := myRobot.kinematic.mName + "." + resourceName + ".Lag.readBackVal";
+      SwoAddRealVariable(LagObserveData.readBackVal, s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".Lag.setValue";
+      SwoAddRealVariable(LagObserveData.setValue, s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".Lag.mVelo";
+      SwoAddRealVariable(myRobot.actJoints.mVelo[LagObserveData.iDrive], s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".Lag.bInPos";
+      SwoAddBoolVariable(LagObserveData.bInPos, s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".Lag.difference";
+      SwoAddRealVariable(LagObserveData.difference, s);
+      s := myRobot.kinematic.mName + "." + resourceName + ".Lag.updateActive";
+      SwoAddBoolVariable(myRobot.updateActive, s);
+      LagObserveData.bSwoVarAdded := TRUE;
+   END_IF; *)
+   
+   //wait until MCU handles drive update
+   WAIT myRobot.updateActive;
+   WHILE TRUE DO           
+     LagObserveData.bTimerRuns := FALSE;
+     WAIT (myRobot.actJoints.mVelo[LagObserveData.iDrive] = 0);
+      //start timer
+     IF NOT LagObserveData.bTimerRuns AND NOT LagObserveData.bInPos THEN 
+        LagObserveData.bTimeOut := FALSE;
+        SysTimerSet(myRobot.iDriveInPositionLagTime, LagObserveData.bTimeOut);
+        LagObserveData.bTimerRuns := TRUE;
+      END_IF;
+      
+     //start observation stall position reached
+     START StallPosReached();
+     //wait till MCU does not handles drive update OR robot is moving
+     WAIT (NOT myRobot.updateActive AND NOT LagObserveData.bTimerRuns) OR 
+          (myRobot.actJoints.mVelo[LagObserveData.iDrive] <> 0);
+     //stop observation stall position reached
+     STOP StallPosReached;
+     SysTimerClear(LagObserveData.bTimeOut);
+     LagObserveData.bTimeOut := FALSE;
+      
+     IF LagObserveData.bInPos THEN
+        //start observation stall position left
+        START StallPosLeft();
+        WAIT (myRobot.actJoints.mVelo[LagObserveData.iDrive] <> 0) OR
+              (NOT LagObserveData.bInPos);
+        //stop observation stall position left
+        STOP StallPosLeft;
+        LagObserveData.bInPos := FALSE;
+     END_IF;
+   END_WHILE;             
+END_ROUTINE
+
+ROUTINE StallPosReached()
+ VAR
+   chg         : BOOL;
+ END_VAR
+ 
+    chg := IS_CHANGED(giRcuDriveControlCounter);
+    WHILE TRUE DO
+      WAIT chg;
+      chg := FALSE;
+      LagObserveData.difference := LagObserveData.setValue - LagObserveData.readBackVal;
+      LagObserveData.bInPos := rAbs(LagObserveData.difference) < drivePositionLagValue;
+      //timeout and position not reached
+      IF LagObserveData.bTimeOut AND NOT LagObserveData.bInPos AND myRobot.updateActive THEN     
+         RcuSetMessageOnce(TRcuDrive_ErrStallPosNotReached, myRobot.kinListInx, 2, instId, "TRcuDrive.ObserveLagError", resourceName);
+         WAIT state = eDriveComOpEnabled;  //wait drive is in AF
+         LagObserveData.bTimeOut := FALSE;
+         SysTimerClear(LagObserveData.bTimeOut);
+         LagObserveData.bTimerRuns := FALSE;
+      ELSIF LagObserveData.bInPos THEN   // stop timer drive is in position
+         LagObserveData.bTimeOut := FALSE;
+         SysTimerClear(LagObserveData.bTimeOut);
+         LagObserveData.bTimerRuns := FALSE;
+      END_IF;  
+
+    END_WHILE;
+    
+END_ROUTINE
+
+ROUTINE StallPosLeft()
+ VAR
+   chg         : BOOL;
+ END_VAR
+
+    chg := IS_CHANGED(giRcuDriveControlCounter);
+    WHILE TRUE DO
+      WAIT chg;
+      chg := FALSE;
+      LagObserveData.difference := LagObserveData.setValue - LagObserveData.readBackVal;
+      IF (rAbs(LagObserveData.difference) > drivePositionLagValue) THEN
+         RcuSetMessageOnce(TRcuDrive_ErrStallPosLeft, myRobot.kinListInx, 2, instId, "TRcuDrive.ObserveLagError", resourceName);
+         WAIT state = eDriveComOpEnabled;   //wait drive is in AF
+         LagObserveData.bInPos := FALSE;
+      END_IF;
+   END_WHILE;
+      
+END_ROUTINE
+
+// routines for observing the limitswitches
+ROUTINE ObserveLimitSwitch(VAR_IN nr : INT; VAR_IN isMin : BOOL) PRIVATE
+ VAR
+   s       : STRING;
+   unit    : STRING[2];
+   isMain  : BOOL;
+   timeout : BOOL;
+ END_VAR
+  
+   WAIT myRobot.initRobComplete;
+   IF isMin THEN
+      IF useLimitSwitchMin THEN
+         // build string to hardware endpoint
+         IF (nr < myRobot.nrOfMainJoints) THEN
+            s := cHW_mLimitSwitchAxis[myRobot.kinListInx] + STR(nr+1) + "_1";
+         ELSE
+            IF (nr < cgiRcuMaxJoints) THEN
+               s := cHW_mLimitSwitchAxis[myRobot.kinListInx] + STR(cgiRcuMaxJoints + (nr - (myRobot.nrOfMainJoints-1))) + "_1";
+            ELSE    
+               s := cHW_mLimitSwitchAxis[myRobot.kinListInx] + STR(nr+1) + "_1"; 
+            END_IF;    
+         END_IF;
+         //connect to input for the limitswitch
+         limitSwitchMin := MAPX(s);
+         IF NOT IS_MAPPED(limitSwitchMin) THEN  
+            RcuSetMessageOnce(TRcuDrive_ErrMapLimitSwitch, myRobot.kinListInx, 1, instId, "TRcuDrive.init", s, axesName);
+            gbBootupError := TRUE;
+            RETURN;
+         ELSIF simulated OR ioSimulated THEN   
+            limitSwitchMin := FALSE;
+         END_IF;
+      ELSE
+         RETURN;
+      END_IF;
+   ELSE
+       IF useLimitSwitchMax THEN
+          // build string to hardware endpoint
+          IF (nr < myRobot.nrOfMainJoints) THEN
+             s := cHW_mLimitSwitchAxis[myRobot.kinListInx] + STR(nr+1) + "_2";
+          ELSE
+             IF (nr < cgiRcuMaxJoints) THEN
+                s := cHW_mLimitSwitchAxis[myRobot.kinListInx] + STR(cgiRcuMaxJoints + (nr - (myRobot.nrOfMainJoints-1))) + "_2";
+             ELSE    
+                s := cHW_mLimitSwitchAxis[myRobot.kinListInx] + STR(nr+1) + "_2"; 
+             END_IF;    
+          END_IF;
+          //connect to input for the limitswitch
+          limitSwitchMax := MAPX(s);
+          IF NOT IS_MAPPED(limitSwitchMax) THEN 
+             RcuSetMessageOnce(TRcuDrive_ErrMapLimitSwitch, myRobot.kinListInx, 2, instId, "TRcuDrive.init", s, axesName);
+             gbBootupError := TRUE;
+          ELSIF simulated OR ioSimulated THEN   
+             limitSwitchMax := FALSE;   
+          END_IF;
+       ELSE
+          RETURN;   
+       END_IF;
+   END_IF;
+   
+   IF (type = eMcuJointRot) THEN
+      unit := "°";
+   ELSE
+      unit := "mm";
+   END_IF;
+   isMain := nr < myRobot.nrOfMainJoints;
+      
+   WHILE TRUE DO
+      IF isMin THEN
+         WAIT limitSwitchMin;
+      ELSE   
+         WAIT limitSwitchMax;
+      END_IF;   
+      IF IS_MAPPED(myRobot.readBackVals) THEN
+         IF isMain THEN
+            s := STR(myRobot.readBackVals.mJoints.mMainJoints.mValues[nr]) + unit;
+         ELSE
+            s := STR(myRobot.readBackVals.mJoints.mAuxJoints.mValues[myRobot.readBackVals.mJoints.mMainJoints.mValidLen-nr]) + unit;
+         END_IF;
+      ELSE   
+         s := STR(myRobot.actJoints.mPos[nr]) + unit;
+      END_IF;   
+      IF isMin THEN  
+         RcuSetMessageOnce(TRcuDrive_ErrLimitSwitchNeg, myRobot.kinListInx, 1, instId, "TRcuDrive.ObserveLimitSwitch", axesName, s);
+      ELSE
+         RcuSetMessageOnce(TRcuDrive_ErrLimitSwitchPos, myRobot.kinListInx, 1, instId, "TRcuDrive.ObserveLimitSwitch", axesName, s);
+      END_IF;
+      WAIT NOT myRobot.svMotionAllowed;
+      timeout := FALSE;
+      SysTimerSet(500, timeout);
+      IF isMin THEN
+         WAIT (NOT limitSwitchMin) OR myRobot.svMotionAllowed OR timeout;
+      ELSE   
+         WAIT (NOT limitSwitchMax) OR myRobot.svMotionAllowed OR timeout;
+      END_IF;
+   END_WHILE;
+END_ROUTINE
+
+
+// Wait for a reaction in the stateword, the parameter has to be an indicator-
+// variable for the stateword. Returns TRUE when the variable was set and FALSE
+// when a timeout occured.
+ROUTINE WaitStateChg(chg : BOOL) : BOOL PRIVATE
+   VAR
+      timeout : BOOL;
+   END_VAR
+
+   SysTimerSet(cTransTimeout, timeout); // timeout for transitions
+   WAIT chg OR timeout; // waiting for new state or timeout
+   IF timeout THEN
+      // reset control word
+      controlWord := gcDriveComControl_DisableVoltage;
+      RETURN FALSE;
+   ELSE
+      chg := FALSE;
+      RETURN TRUE;
+   END_IF;
+END_ROUTINE
+
+
+// simulate the state word, usefull if shared memories are present but not
+// maintained by the IO-System
+ROUTINE SimulateStateWord() PRIVATE
+   VAR
+      bControlWordChanged : BOOL;
+   END_VAR
+
+   stateWord := gcDriveComState_SwitchOnDisabled;
+   controlWord := gcDriveComControl_Shutdown;
+   bControlWordChanged := IS_CHANGED(controlWord);
+   bControlWordChanged := TRUE;
+
+   WHILE TRUE DO
+
+      WAIT bControlWordChanged;
+      bControlWordChanged := FALSE;
+      CASE controlWord OF
+         gcDriveComControl_Shutdown:
+            stateWord := gcDriveComState_ReadyToSwitchOn;
+            myRobot.DebugPrint(eTraceRcuDrive, "STATE Ready To Switch On");
+         gcDriveComControl_SwitchOn:
+            stateWord := gcDriveComState_SwitchedOn;
+            myRobot.DebugPrint(eTraceRcuDrive, "STATE Switched On");
+         gcDriveComControl_DisableVoltage:
+            stateWord := gcDriveComState_SwitchOnDisabled;
+            myRobot.DebugPrint(eTraceRcuDrive, "STATE Switch On Disabled");
+         gcDriveComControl_Quickstop:
+            IF stateWord = gcDriveComState_OpEnabled THEN
+               stateWord := gcDriveComState_QuickstopActiv;
+               myRobot.DebugPrint(eTraceRcuDrive, "STATE Quickstop Active");
+            ELSE
+               stateWord := gcDriveComState_SwitchOnDisabled;
+               myRobot.DebugPrint(eTraceRcuDrive, "STATE Switch On Disabled ");
+            END_IF;
+
+         gcDriveComControl_EnableOp:
+            stateWord := gcDriveComState_OpEnabled;
+            myRobot.DebugPrint(eTraceRcuDrive, "STATE Operation Enabled");
+      END_CASE;
+   END_WHILE;
+END_ROUTINE
+
+
+// copy setvalues to actvalues
+ROUTINE SimulateActValue() PRIVATE
+
+   WHILE TRUE DO
+      actValue.pos := setValue.pos; // shortcircuit
+      Sleep(100);
+   END_WHILE;
+END_ROUTINE
+
+
+ROUTINE SetTorque(CONST torque0 : LINT)
+   VAR
+      ident    : DINT;
+      torque   : DINT;
+      status : TKSC_Status;
+   END_VAR
+   
+   IF simulated OR ioSimulated THEN
+      RETURN;
+   END_IF;
+   
+   IF sercHdl = 0 THEN
+      IF NOT DriveGetAxisHdl(resourceName,  sercHdl) THEN
+         RcuSetMessageOnce(TRcuDrive_ErrNoAxisHandle, myRobot.kinListInx, 4, instId, "TRcuDrive.SetTorque", resourceName);
+         RETURN;
+      END_IF;
+   END_IF;
+   
+   IF torque0 > 65535 THEN // max. possible parameter-value (2 byte value)
+      torque := 65535;
+   ELSE 
+      torque := torque0;
+   END_IF;
+   
+   ident := 92;  // S-092
+   status := KSC_WriteParam(sercHdl,ident,7,torque);
+   IF status = eKSC_Ok THEN
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0092) = " + STR(LINT(torque/10.0)) + " written");
+   ELSE // try once more
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0092) = " + STR(LINT(torque/10.0)) + " not written, try again");
+      status := KSC_WriteParam(sercHdl,ident,7,torque);
+      IF status = eKSC_Ok THEN
+         myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0092) = " + STR(LINT(torque/10.0)) + " written");
+         RcuSetMessageOnce(TRcuDrive_WarWriteParamFailed, myRobot.kinListInx, 2, instId, "TRcuDrive.SetTorque", axesName, "S-0-0092");
+      ELSE
+         RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 8, instId, "TRcuDrive.SetTorque", axesName, "S-0-0092");
+      END_IF;        
+   END_IF;        
+   
+END_ROUTINE
+
+
+ROUTINE SetTorqueNm(CONST torqueIn : LINT)
+   VAR
+      ident  : DINT;
+      torque : DINT;
+      status : TKSC_Status;
+   END_VAR
+   
+   IF simulated OR ioSimulated THEN
+      RETURN;
+   END_IF;
+   
+   IF sercHdl = 0 THEN
+      IF NOT DriveGetAxisHdl(resourceName,  sercHdl) THEN
+         RcuSetMessageOnce(TRcuDrive_ErrNoAxisHandle, myRobot.kinListInx, 8, instId, "TRcuDrive.SetTorqueNm", resourceName);
+         RETURN;
+      END_IF;
+   END_IF;
+   
+   IF torqueIn > 65535 THEN // max. possible parameter-value (2 byte value)
+      torque := 65535;
+   ELSE
+      torque := torqueIn;
+   END_IF;
+   
+   ident := 92;  // S-0-0092
+   status := KSC_WriteParam(sercHdl, ident, 7, torque);
+   
+   IF status = eKSC_Ok THEN
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0092) = " + STR(torque/100.0) + " Nm written");
+   ELSE // try once more
+      myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0092) = " + STR(torque/100.0) + " Nm not written, try again");
+      status := KSC_WriteParam(sercHdl, ident, 7, torque);
+      IF status = eKSC_Ok THEN
+         myRobot.DebugPrint(eTraceRcuDrive, " Axis " + resourceName + " (S-0-0092) = " + STR(torque/100.0) + " Nm written");
+      ELSE
+         RcuSetMessageOnce(TRcuDrive_ErrWriteParamFail, myRobot.kinListInx, 9, instId, "TRcuDrive.SetTorqueNm", axesName, "S-0-0092");
+      END_IF;
+   END_IF;
+   
+END_ROUTINE
+
+
+//Build the display-state from param S-0-0390
+ROUTINE UpdateDisplayWord()
+ VAR
+   iOldValue : DINT;
+ END_VAR
+ 
+  WHILE TRUE DO  
+    IF simulated OR ioSimulated THEN
+       sDisplayWord := "Sim";
+       iDisplayWord := 0;
+       RETURN;
+    ELSE
+       IF (IS_MAPPED(auxVal[0])) THEN
+          iDisplayWord := DINT(auxVal[0] + 0.5);
+          IF deviceType = eRcuEcoDrive THEN
+            iDisplayWord := iDisplayWord AND 16#0000FFFF;
+          ELSIF deviceType = eRcuIndraDrive THEN
+            iDisplayWord := iDisplayWord AND 16#000FFFFF;
+          ELSIF deviceType = eRcuIndraDriveCS THEN
+            iDisplayWord := iDisplayWord AND 16#000FFFFF;  
+          ELSE
+            iDisplayWord := 0;
+          END_IF;
+          IF (iDisplayWord <> iOldValue) THEN
+              sDisplayWord := RcUtils.DecToHexString(iDisplayWord);
+              iOldValue := iDisplayWord;
+          END_IF;
+       ELSE
+          sDisplayWord := "NC";
+          iDisplayWord := 0;
+          RETURN;
+       END_IF;   
+    END_IF;
+    Sleep(250);
+  END_WHILE;
+
+END_ROUTINE
+
+//set language to indramat
+ROUTINE SetLanguage(sLan : STRING[2])
+ VAR
+   ret       : TKSC_Status;
+   iLan      : DINT;
+   ident     : DINT;
+ END_VAR;
+ 
+  CASE sLan OF
+    "de": iLan := 0;
+    "en": iLan := 1;
+    "fr": iLan := 2;
+    "sp": iLan := 3;
+    "it": iLan := 4;
+  ELSE
+    iLan := 1; //default is english
+  END_CASE;
+  
+  IF (iLanguage <> iLan) THEN
+     IF (sercHdl > 0) AND NOT (simulated OR ioSimulated) THEN
+        ident := 265;       // S-0-0265
+        ret := RcWriteSercosParameter(sercHdl, ident, iLan, 3);
+        IF ret = eKSC_Ok THEN
+           iLanguage := iLan;
+        END_IF;
+     END_IF;
+  END_IF;
+END_ROUTINE
+
+(******************************************************************************
+* systemroutines
+*)
+
+ROUTINE init(nr : DINT)
+   VAR
+      i : DINT;
+      s : STRING;
+      timeout : BOOL;
+   END_VAR
+
+   type := eMcuNoJointTyp;
+
+   instId := RcuGetInstanceId();    // Get the instance identification number (for errors)   
+   driveName := resourceName;  // Get the name of the servo drive as declared in equipment.ttp
+   axesName := driveName;
+
+   // Having the name of the servo instance, it is assumed that the name of the drive 
+   // that is configured in the configuration file of the drives is identical. If this is true,
+   // there will be two registers (state word and control word) and two structures
+   // (set values and actual values) that are already created by the I/O system
+   // and that can be mapped now.
+   
+   // Wth: Make it better: at moment name in equipment.olp and in cfg-File must be the same
+   
+   // At first, this mapping is tried for the state word only.     
+   stateWord := MAPX(driveName + "_state");
+
+   // Check if mapping went right. If not give out a warning and assume that the drive shall be simulated.
+   connected := IS_MAPPED(stateWord);
+
+      // test whether name is an endpointname
+   IF IoGetDeviceHdl(driveName, sercHdl) THEN
+      // endpointname given, obtain pathname
+      IF CatalogReadInt(sercHdl, "driverMode", i , TRUE) THEN
+         ioSimulated := i = 3;
+      ELSE
+         ioSimulated := TRUE;
+      END_IF;
+   ELSE
+      ioSimulated := TRUE;
+   END_IF;
+
+   IF connected THEN
+      simulated := FALSE;
+      
+      // Do the rest of the mappings
+      controlWord := MAPX(driveName + "_control");
+      actValue := MAPX(driveName + "_actValue");
+      setValue := MAPX(driveName + "_setValue");
+      
+      // So far, only the position values of the two structures are used.
+      actValuePos := MAP(actValue.pos);
+      setValuePos := MAP(setValue.pos);
+      
+      FOR i := 0 TO 4 DO
+         auxVal[i] := MAP(actValue.aux[i]);
+      END_FOR;
+      
+      // clear bits for rising-edge signals in control word
+      controlWord := gcDriveComControl_DisableVoltage;
+            
+      IF myRobot.bRcuSimulatesDriveState THEN
+         // shared memories present, but the content has to be simulated
+         START SimulateStateWord();
+         START SimulateActValue(); // shortcircuit
+      ELSIF (myRobot.iDriveControlTime > 0) AND
+            (grRcuDriveControlFactor > 0.0) THEN
+         distPerRevolution := AxisPulseInterval();
+         distPerRevolution := rAbs(distPerRevolution);
+         START ObserveRevolutionDragError();
+      END_IF;        
+      START DriveStateManager() PRIO 1;
+   ELSE
+      // Wth: Make it better: when mapping failed and axis should not be simulated
+      // stop bootup.
+      
+      // Wth: warningtext more detailed.
+      IF (localCounter <= (myRobot.kinematic.mNrOfJoints - 1)) THEN
+         RcuSetMessageOnce(TRcuDrive_WarDriveNotMapped, myRobot.kinListInx, 1, instId, "TRcuDrive.init", axesName);
+      END_IF;
+      
+      simulated  := TRUE;
+      referenced := TRUE;
+      state := eDriveComSwitchOnDisabled;
+      actValuePos := MAP(simulatedPos);
+      setValuePos := MAP(simulatedPos);
+   END_IF;
+   
+   // Start the monitoring of the hardware limit switches
+   START ObserveLimitSwitch(nr, TRUE);
+   START ObserveLimitSwitch(nr, FALSE);
+ 
+   START ObserveState();
+   START UpdateDisplayWord();
+   s := "****************** Kin " + STR(myRobot.kinListInx) + " - Drive       " + STR(nr) + " - " + resourceName;
+   IF NOT ioSimulated THEN
+      i := 0;
+      i := StrLen(s);     
+      i := 62 - i;                                                 
+      s := myRobot.driveTool.FillStringWithBlanks(s, i);
+      RcReadSercosString(sercHdl, 30, sFirmware, 7);
+      s := s + " - " + sFirmware;
+      RcReadSercosString(sercHdl, 141, sMotorType, 7);
+   END_IF;
+   myRobot.DebugPrint(eTraceCommon, s);
+   WAIT state <> eDriveComNotReady;
+   IF NOT referenced THEN
+       SysTimerSet(10000, timeout);
+       PRINT(INSTANCE_NAME() + " " + STR(DWORD(stateWord)));
+       WAIT referenced OR timeout;
+       PRINT(" .. " + STR(DWORD(stateWord)));
+   END_IF;
+END_ROUTINE
+
+
+ROUTINE initDosingDrive(nr : DINT)
+ VAR
+  i : DINT;
+  s : STRING;
+ END_VAR
+ 
+   driveName := resourceName;
+   // test whether name is an endpointname
+   IF IoGetDeviceHdl(driveName, sercHdl) THEN
+      // endpointname given, obtain pathname
+      IF CatalogReadInt(sercHdl, "driverMode", i , TRUE) THEN
+         ioSimulated := i = 3;
+      ELSE
+         ioSimulated := TRUE;
+      END_IF;
+   ELSE
+      ioSimulated := TRUE;
+   END_IF;
+   s := "****************** Kin " + STR(myRobot.kinListInx) + " - DosingDrive " + STR(nr) + " - " + resourceName;
+   IF NOT ioSimulated THEN
+      i := 0;
+      i := StrLen(s);     
+      i := 62 - i;                                                 
+      s := myRobot.driveTool.FillStringWithBlanks(s, i);
+      RcReadSercosString(sercHdl, 30, sFirmware, 7);
+      s := s + " - " + sFirmware;
+      RcGetSercosDriveType(sercHdl, deviceType);
+      RcGetSercosBusType(sercHdl, busType);
+   END_IF;
+   myRobot.DebugPrint(eTraceCommon, s);
+
+END_ROUTINE
+
+ROUTINE DELETE()
+
+   IF connected THEN
+      controlWord := gcDriveComControl_DisableVoltage;
+   END_IF;
+END_ROUTINE
+

@@ -1,0 +1,84 @@
+<VIEW>
+	<MASKS>
+		<MASKDEF maskkey="TeachView.mask.processmenu" textdef="userTx" permissiondef="userMenuPermission"
+		         width="572" columns="572" height="340" rows="340" top="1" bottom="1" left="1" right="1">
+		
+		        <!-- menu item 1 - ChannelsOverview --> 
+		        <GROUP key="processmenu.label.group0" col="1" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="system.SV_sTeachViewMask.yMask[1].mVisible" visiblevartype="SV">
+			       <BUTTON file="Channels64x64.gif" col="26" row="4" cspan="79" rspan="79"
+			               maskchangevar="system.SV_sTeachViewMask.yMask[1].zMaskKey" maskchangevartype="SV"/>
+			</GROUP> 
+						
+			<!-- menu item 2 - WearCountersOverview --> 
+			<GROUP key="processmenu.label.group1" col="143" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="system.SV_sTeachViewMask.yMask[2].mVisible" visiblevartype="SV">
+			       <BUTTON file="WearCounter64x64.gif" col="26" row="4" cspan="79" rspan="79"
+			               maskchangevar="system.SV_sTeachViewMask.yMask[2].zMaskKey" maskchangevartype="SV"/>
+			</GROUP>
+			
+			<!-- menu item 3 - piston master --> 
+			<GROUP key="processmenu.label.group2" col="286" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="system.SV_sTeachViewMask.yMask[3].mVisible" visiblevartype="SV">
+			       <BUTTON file="PistonRef64x64.gif" col="26" row="4" cspan="79" rspan="79"
+			               maskchangevar="system.SV_sTeachViewMask.yMask[3].zMaskKey" maskchangevartype="SV"/>
+			</GROUP>
+			
+			<!-- menu item 4 - LCC -->   
+		        <GROUP key="processmenu.label.group3" col="429" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="system.SV_sTeachViewMask.yMask[4].mVisible" visiblevartype="SV">
+			       <BUTTON file="LCC64x64.gif" col="26" row="4" cspan="79" rspan="79"
+			               maskchangevar="system.SV_sTeachViewMask.yMask[4].zMaskKey" maskchangevartype="SV"/>
+			</GROUP>
+			
+			<!-- menu item 5 - gluing -->
+		        <GROUP key="processmenu.label.group4" col="1" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot.gluingRobot" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.Gluing" file="Gluing64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!--     menu item 6 - not used
+			<GROUP key="processmenu.label.group5" col="143" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="" visiblevartype="SV">
+			       <BUTTON maskkey="" file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			    menu item 7 - not used
+			<GROUP key="processmenu.label.group6" col="286" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="" visiblevartype="SV">
+			       <BUTTON maskkey="" file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+			
+			    menu item 8 - not used
+		        <GROUP key="processmenu.label.group7" col="429" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="" visiblevartype="SV">
+			       <BUTTON maskkey="" file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			    menu item 9 - not used
+		        <GROUP key="processmenu.label.group8" col="1" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="" visiblevartype="SV">
+			       <BUTTON maskkey="" file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			    menu item 10 - not used
+			<GROUP key="processmenu.label.group9" col="143" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="" visiblevartype="SV">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 11 - not used
+			<GROUP key="processmenu.label.group10" col="286" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="" visiblevartype="SV">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 12 - not used
+		        <GROUP key="processmenu.label.group11" col="429" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="" visiblevartype="SV">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> -->
+			
+		</MASKDEF>
+	</MASKS>	
+</VIEW>

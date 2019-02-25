@@ -1,0 +1,61 @@
+<VIEW>
+   <MASKDEF key="TeachView.mask.HomingRetain3" textfile="userTx" permissiondef="userMenuPermission">           
+        <GROUP key="HomingRetain3.label.group" columns="40" rows="40" col="1" row="1" halign="stretch" valign="stretch">   
+      
+           <LABEL key="HomingRetain3.label.ValAbs"  col="9"  row="2" cspan="6" halign="center"/> 
+      	   <LABEL key="HomingRetain3.label.ValRel"  col="16" row="2" cspan="6" halign="center"/> 
+      	   <LABEL key="HomingRetain3.label.CsAbs"   col="23" row="2" cspan="6" halign="center"/> 
+      	   <LABEL key="HomingRetain3.label.CsRel"   col="30" row="2" cspan="6" halign="center"/> 
+      	
+      	   <!--  Coord X -->
+      	   <LABEL key="HomingRetain3.label.CoordX" col="3" row="5" cspan="5" halign="left"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamAbsData.mPos.mValues[0]" vartype="TT" enabled="false" col="9" row="5" cspan="6" halign="stretch"/>
+           <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamRelData.mPos.mValues[0]" vartype="TT" enabled="false" col="16" row="5" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionAbs.mPos.mValues[0]"  vartype="TT" enabled="false" col="23" row="5" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionRel.mPos.mValues[0]"  vartype="TT" enabled="false" col="30" row="5" cspan="6" halign="stretch"/>
+      	   
+      	   <!--  Coord Y -->
+      	   <LABEL key="HomingRetain3.label.CoordY" col="3" row="10" cspan="5" halign="left"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamAbsData.mPos.mValues[1]" vartype="TT" enabled="false" col="9" row="10" cspan="6" halign="stretch"/>
+           <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamRelData.mPos.mValues[1]" vartype="TT" enabled="false" col="16" row="10" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionAbs.mPos.mValues[1]"  vartype="TT" enabled="false" col="23" row="10" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionRel.mPos.mValues[1]"  vartype="TT" enabled="false" col="30" row="10" cspan="6" halign="stretch"/>
+      	   
+      	   <!--  Coord Z -->
+      	   <LABEL key="HomingRetain3.label.CoordZ" col="3" row="15" cspan="5" halign="left"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamAbsData.mPos.mValues[2]" vartype="TT" enabled="false" col="9" row="15" cspan="6" halign="stretch"/>
+           <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamRelData.mPos.mValues[2]" vartype="TT" enabled="false" col="16" row="15" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionAbs.mPos.mValues[2]"  vartype="TT" enabled="false" col="23" row="15" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionRel.mPos.mValues[2]"  vartype="TT" enabled="false" col="30" row="15" cspan="6" halign="stretch"/>
+      	   
+      	   <!--  Coord A -->
+      	   <LABEL key="HomingRetain3.label.CoordA" col="3" row="20" cspan="5" halign="left"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamAbsData.mOri.mValues[0]" vartype="TT" enabled="false" col="9" row="20" cspan="6" halign="stretch"/>
+           <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamRelData.mOri.mValues[0]" vartype="TT" enabled="false" col="16" row="20" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionAbs.mOri.mValues[0]"  vartype="TT" enabled="false" col="23" row="20" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionRel.mOri.mValues[0]"  vartype="TT" enabled="false" col="30" row="20" cspan="6" halign="stretch"/>
+      	   
+      	   <!--  Coord B -->
+      	   <LABEL key="HomingRetain3.label.CoordB" col="3" row="25" cspan="5" halign="left"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamAbsData.mOri.mValues[1]" vartype="TT" enabled="false" col="9" row="25" cspan="6" halign="stretch"/>
+           <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamRelData.mOri.mValues[1]" vartype="TT" enabled="false" col="16" row="25" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionAbs.mOri.mValues[1]"  vartype="TT" enabled="false" col="23" row="25" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionRel.mOri.mValues[1]"  vartype="TT" enabled="false" col="30" row="25" cspan="6" halign="stretch"/>
+            
+            <!--  Coord C -->
+      	   <LABEL key="HomingRetain3.label.CoordC" col="3" row="30" vartype="TT" cspan="5" halign="left"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamAbsData.mOri.mValues[2]" vartype="TT" enabled="false" col="9" row="30" cspan="6" halign="stretch"/>
+           <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.CamRelData.mOri.mValues[2]" vartype="TT" enabled="false" col="16" row="30" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionAbs.mOri.mValues[2]"  vartype="TT" enabled="false" col="23" row="30" cspan="6" halign="stretch"/>
+      	   <NUMFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.VisionRel.mOri.mValues[2]"  vartype="TT" enabled="false" col="30" row="30" cspan="6" halign="stretch"/>
+      	
+      	   <!--  User-Info -->
+      	   <LABEL key="HomingRetain3.label.source" var="_system.gRcuFocusedRobot.homing.iInfoRetain3" vartype="TT"
+      	          col="9" row="35" cspan="30" halign="left"/>
+      	
+      </GROUP>
+   </MASKDEF>
+   
+      
+</VIEW>
+

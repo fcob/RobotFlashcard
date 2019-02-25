@@ -1,0 +1,2109 @@
+P1005OB7xx_07.26;;
+2050;1;Assertion mislukt: %1 regel %2
+2050;10;Int-waarde kan niet verwerkt worden '%1.%2'
+2050;11;Uint-waarde kan niet verwerkt worden '%1.%2'
+2050;12;Real-waarde kan niet verwerkt worden '%1.%2'
+2050;13;Tekenreeks-waarde kan niet verwerkt worden '%1.%2'
+2050;14;Interface kan niet verwerkt worden '%1.%2'
+2050;20;Int-waarde kan niet gelezen worden '%1.%2'
+2050;21;Uint-waarde kan niet gelezen worden '%1.%2'
+2050;22;Real-waarde kan niet gelezen worden '%1.%2'
+2050;23;Tekenreeks-waarde kan niet gelezen worden '%1.%2'
+2050;24;Interface kan niet gelezen worden: '%1.%2'
+2050;30;Int-waarde kan niet geschreven worden '%1.%2'
+2050;31;Uint-waarde kan niet geschreven worden '%1.%2'
+2050;32;Real-waarde kan niet geschreven worden '%1.%2'
+2050;33;Tekenreeks-waarde kan niet geschreven worden '%1.%2'
+2050;40;Int-waarde %1.%2 buiten het bereik [%3..%4]
+2050;41;Uint-waarde %1.%2 buiten het bereik [%3..%4]
+2050;42;Real-waarde %1.%2 buiten het bereik [%3..%4]
+2050;43;Tekenreeks-waarde %1.%2 verkeerde grootte
+2050;44;Interface-tabel %1.%2 verkeerde grootte
+2050;45;ShMemWrite-fout ontvangen van [station: %1] [nr.: %2]
+2050;46;RecvShMemWrite-fout verkeerde Handle ontvangen [Hdl: %1] [Offs: %2] [Size: %3]
+2050;1001;Uitzonderingsbehandeling start
+2050;1002;Divide Error (bp=%1, pc=%2, regs=%3)
+2050;1003;Debug Exception (bp=%1, pc=%2, regs=%3)
+2050;1004;Non Maskable Interrupt (NMI) (bp=%1, pc=%2, regs=%3)
+2050;1005;Breakpoint Exception (bp=%1, pc=%2, regs=%3)
+2050;1006;Overflow Exception (bp=%1, pc=%2, regs=%3)
+2050;1007;Bound Exception (bp=%1, pc=%2, regs=%3)
+2050;1008;Invalid Opcode Exception (bp=%1, pc=%2, regs=%3)
+2050;1009;FP NoDevice Exception (bp=%1, pc=%2, regs=%3)
+2050;1010;Double Fault Exception (bp=%1, pc=%2, regs=%3)
+2050;1011;FP Overrun Exception (bp=%1, pc=%2, regs=%3)
+2050;1012;Invalid TSS Exception (bp=%1, pc=%2, regs=%3)
+2050;1013;No Segment Exception (bp=%1, pc=%2, regs=%3)
+2050;1014;Stack Exception (bp=%1, pc=%2, regs=%3)
+2050;1015;General Protection Exception (bp=%1, pc=%2, regs=%3)
+2050;1016;Page Fault (bp=%1, pc=%2, regs=%3)
+2050;1017;Reserved Exception (bp=%1, pc=%2, regs=%3)
+2050;1018;FP Error (bp=%1, pc=%2, regs=%3)
+2050;1019;Bus Alignment Exception (bp=%1, pc=%2, regs=%3)
+2050;1020;Task Stack overloop
+2050;1021;System function called in interrupt
+2050;1022;Exception
+2110;100;Doelhardware %1 nog niet ondersteund
+2110;101;Component KBus nog niet gekoppeld
+2110;102;intLine %1 niet gedefinieerd
+2110;103;Ongeldige doelhardware %1
+2110;104;Interrupt-leiding %1 buiten het bereik
+2110;105;UOSInterrupt-identificatie %1 buiten het bereik
+2110;106;Geen Interrupt-leiding voor UOSIntID %1 gevonden
+2110;200;Openen van Event %1 mislukt, laatste fout %2
+2110;201;Sluiten van EventHandle %1 mislukt, laatste fout %2
+2110;202;Creëren van Event %1 mislukt, laatste fout %2
+2110;203;Signaleren van Event %1(%2) mislukt, laatste fout %3
+2110;300;RtAttachInterruptVector(Ex) mislukt, intLine=%1 lastError=%2
+2110;301;RtReleaseInterruptVector(Ex) mislukt, intLine=%1 handle=%2 lastError=%3
+2115;101;Toestelnr. %1 buiten het bereik
+2115;102;Functienr. %1 buiten het bereik
+2115;103;CfgSpace Offset %1 buiten het bereik
+2115;104;CfgSpace Offset %1 ongeldig alignment voor %2 bit-toegang
+2115;105;Toestel %1.%2 in slot %3 niet gevonden
+2115;106;Toestel %1.%2 in slot %3 functie %4 reeds verbonden
+2115;107;Toestel %1.%2 in slot %3 functie %4 geen intLine toegekend
+2115;108;Type toegangsbereik %1 op dat platform niet ondersteund
+2115;109;Toegangstype %1 buiten het bereik
+2115;110;Toestel %1.%2 slot %3 functie %4 toekennen van het toegangsbereik mislukt (%5)
+2115;111;Doelhardware %1 nog niet ondersteund (%2)
+2115;112;geen vrije E2-slot voor toestelnr. %1 functienr. %2
+2115;113;E2-toegang voor toestelnr. %1 functienr. %2 niet gedefinieerd
+2115;114;E2 nr. %1 timeout %2msec wachten op schrijven afgesloten afgelopen
+2115;115;E2 nr. %1 timeout %2msec wachten op FPGA SPI afgesloten afgelopen
+2115;116;E2 nr. %1 buiten het bereik
+2115;117;E2 nr. %1 nog niet geïnitialiseerd
+2115;118;E2 nr. %1 vrijgave schrijven mislukt
+2115;119;E2 nr. %1 timeout %2msec wachten op Task Lock Semaphore afgelopen
+2115;120;E2 nr. %1 timeout %2msec wachten op Hardwarelock Semaphore afgelopen
+2115;121;E2 nr. %1 vrijgave schrijven wissen mislukt
+2115;122;Toestelnr. %1 functienr. %2 E2 test mislukt
+2115;123;ongeldige hardwarenaam %1
+2115;124;ongeldig toestel-definitie-array
+2115;125;geen toestel van lijst %1 in slot %2 gevonden
+2115;126;kan auto voor toestel %1.%2 niet gebruiken, er is meer dan één toestel in het systeem voorhanden
+2115;127;kan auto voor toestellijst %1 niet gebruiken, er is meer dan één toestel in het systeem voorhanden
+2115;128;Creëren van CFGspaceImage van het toestel bij toestelnr. %1 functienr. %2 mislukt
+2115;129;Er werd geprobeerd om een ongeldige CFGspaceImage te herstellen
+2115;130;Herstellen van CFGspaceImage van het toestel bij toestelnr. %1 functienr. %2 mislukt
+2115;131;Ongeldige CFGspaceImage-Handle %1 (%2)
+2115;132;Toestel %1.%2 in steekplaats %3 functie %4 interrupt-leiding %5 is geen PCI Interrupt-leiding
+2115;200;Openen van de kernel driver %1 mislukt, laatste fout %2
+2115;201;Sluiten van de kernel driver %1 mislukt, laatste fout %2
+2115;202;Kernel driver %1(%2) IOCTL %3 mislukt, laatste fout %4
+2115;203;Creëren van Event %1 mislukt, laatste fout %2
+2115;204;Sluiten van Event %1 mislukt, laatste fout %2
+2115;300;RtSetBusDataByOffset mislukt, dev=%1 func=%2 offset=%3 result=%4 lasterror=%5
+2115;301;RtGetBusDataByOffset mislukt, dev=%1 func=%2 offset=%3 result=%4 lasterror=%5
+2115;302;RtTranslateBusAddress mislukt, busAddr %1.%2 lasterror=%3
+2115;303;RtMapMemory mislukt, physAddr %1.%2 size=%3 lasterror=%4
+2115;304;RtUnmapMemory mislukt, virtAddr %1 lasterror=%2
+2115;305;RtEnablePortIo mislukt, IOAddr %1 len=%2 lasterror=%3
+2115;306;RtDisablePortIo mislukt, IOAddr %1 len=%2 lasterror=%3
+2206;1;Component geblokkeerd
+2206;2;Pma-interface kon niet geïnstalleerd worden
+2206;3;Pma: Ernstige systeemfout %1
+2206;4;Pma: Oorzaak van reset %1
+2206;5;Pma: Fout bij de gegevensanalyse
+2208;101;Component Housekeeper niet geïnitialiseerd
+2208;102;Ongeldige Callback-functie
+2208;103;De prioriteit wordt niet ondersteund
+2208;104;Ongeldige instructie (%1)
+2208;105;Ongeldige signalering van de task
+2208;106;%1 handeling gestoord
+2208;107;Cyclustijd (%1) niet compatibel met de systeemklok
+2208;108;De task-configuratie voor de task %s werd reeds gewijzigd.
+2211;1;Statusreport geheugen %1 kan niet opgemaakt worden
+2211;2;Doelpad statusreport is gelijk aan de tijdelijke pad %1
+2211;3;Zip-archief statusreport kan niet opgemaakt worden
+2211;4;Doelpad statusreport is ongeldig
+2211;5;Pad statusreport voor tijdelijk bestand is ongeldig
+2211;6;Het opgegeven bestand bestaat reeds
+2211;7;Tijdelijke directory kan niet gecreëerd worden
+2211;101;Kan bestand %1 niet aanmaken
+2211;102;Schrijven van statusreport reeds geactiveerd
+2211;103;Statusreport werd niet geïnitialiseerd
+2211;104;Shared memory %1 kan niet gelezen worden
+2211;105;Statusreport-interface kon niet geïnstalleerd worden
+2211;106;Toegang tot statusreport-LogFile mislukt
+2211;107;Maximaal aantal statusreports bij het schrijven bereikt
+2211;108;Statusreport Write is aan de Submaster niet beschikbaar
+2212;1;Component toegevoegd (part %1): name: %2, new swVersion: %3, addr: %4, hwVersion: %5, hwRevision: %6, functionVariant: %7
+2212;2;Component toegevoegd (part %1): printNr: %2, serialNr: %3, orderNr: %4, deviceNr: %5, ibnTime: %6, runTime: %7
+2212;3;Component veranderd (part %1): name: %2, old swVersion: %3, new swVersion: %4, addr: %5, hwVersion: %6, hwRevision: %7, functionVariant: %8
+2212;4;Component veranderd (part %1): printNr: %2, serialNr: %3, orderNr: %4, deviceNr: %5, ibnTime: %6, runTime: %7
+2212;5;Component verwijderd (part %1): name: %2, old swVersion: %3, addr: %4, hwVersion: %5, hwRevision: %6, functionVariant: %7
+2212;6;Component verwijderd (part %1): printNr: %2, serialNr: %3, orderNr: %4, deviceNr: %5, ibnTime: %6, runTime: %7
+2212;7;PCB Add (part %1): name: %2, swVersion: %3, addr: %4
+2212;8;PCB Add (part %1): hwRevision: %2
+2212;9;PCB Add (part %1): funcVar: %2
+2212;10;PCB Add (part %1): printNr: %2, serialNr: %3
+2212;11;PCB Changed (part %1): name: %2, addr: %3
+2212;12;PCB Changed (part %1): old swVersion: %2, new swVersion: %3
+2212;13;PCB Changed (part %1): hwRevision: %2
+2212;14;PCB Changed (part %1): funcVar: %2
+2212;15;PCB Changed (part %1): printNr: %2, serialNr: %3
+2212;16;PCB Remove (part %1): name: %2, swVersion: %3, addr: %4
+2212;17;PCB Remove (part %1): hwRevision: %2
+2212;18;PCB Remove (part %1): funcVar: %2
+2212;19;PCB Remove (part %1): printNr: %2, serialNr: %3
+2212;20;Firmware-versie van Device '%1' komt niet overeen met de referentie
+2212;21;Fout bij het lezen van de referentie van de Device '%1'
+2212;22;Fout bij het lezen van de Firmware-versie van de Device '%1'
+2214;1;Login: %1
+2214;2;Logout: %1
+2220;1;%1: Ingevoerde configuratie '%2' niet gevonden
+2220;2;%1: Ingevoerde configuratie '%2' buiten het bereik, default %3
+2220;3;%1: Ingevoerde configuratie '%2' niet gevonden, default %3
+2220;4;%1: Ongeldige waarde voor ingevoerde configuratie '%2': %3
+2220;5;Ongeldige configuratie '%1'
+2220;6;%1: Geen eindpunten geconfigureerd
+2220;7;%1: Ongeldig toesteltype '%2' gevonden'
+2220;10;%1: Bestand niet gevonden: '%2'
+2220;11;%1: Bestand-zoekfout: '%2'
+2220;12;%1: Bestand-leesfout: '%2'
+2220;13;%1: Bestand-schrijffout: '%2'
+2220;14;%1: Bestand niet compatibel: '%2'
+2220;15;%1: Update van '%2' mislukt
+2220;16;%1: Update van '%2' mislukt (Firmware-update-type: %3 Interne foutstatus: %4)
+2220;20;%1: Buffer-overloop ('%2', '%3')
+2220;30;%1: Fout bij aanvraag van geheugen
+2220;50;%1: UOS-oproep '%2'('%3') mislukt
+2220;51;%1: Sampler-oproep '%2'(%3, %4) mislukt
+2220;52;%1: IO-Timer-oproep '%2'(%3, %4) mislukt
+2220;53;%1: IO-Update-oproep '%2'(%3, %4) mislukt
+2220;70;%1: Lezen van de low-level-driver-interface mislukt
+2220;71;%1: Verbinding met de low-level-driver via interface mislukt
+2220;72;%1: Scheiden van de low-level-driver via interface mislukt
+2220;80;%1: Te veel %2-PDO's geconfigureerd, PDO '%3' kan niet gebruikt worden
+2220;81;%1: %2-PDO '%3' reeds aangemeld
+2220;82;%1: RXPDO-%2 heeft ongeldige stations-ID '%3'
+2220;83;%1: PDO ontbreekt
+2220;84;%1: PDO verloren
+2220;85;%1: rx-pdo-%2 heeft geen bijbehorende tx-pdo-%3 bij station %4
+2220;86;%1: rx-pdo-%2 cyclustijd '%3' geen veelvoud van de tx-pdo cyclustijd '%4'
+2220;87;%1: rx-pdo-%2 heeft een andere mapping dan de tx-pdo-%3 bij station %4
+2220;100;%1: Parameter '%2' buiten het bereik (%3)
+2220;120;IO: '%1'
+2220;150;%1: Hardware niet gevonden
+2220;151;%1: Hardware reeds verbonden ('%2')
+2220;152;%1: Hardware-conflict gedetecteerd. Toestellen gebruiken hetzelfde adres: %2, %3
+2220;153;%1: Hardware reageert niet
+2220;200;%1: Kortsluiting
+2220;201;%1: Sensorbreuk
+2220;202;%1: Ongeldige gekalibreerde gegevens ('%2')
+2220;203;%1: Uitgangsspanning ontbreekt (%2)
+2220;204;%1: Kortsluiting opgelost
+2220;205;%1: Fout sensorbreuk opgelost
+2220;206;%1: Uitgangsspanning ok
+2220;207;%1: Sensorbreuk leiding %2
+2220;208;%1: Fout sensorbreuk leiding %2 opgelost
+2220;209;%1: Spoorfout
+2220;210;%1: Nulimpulsfout
+2220;250;%1: Gestopt
+2220;300;%1: Verbonden
+2220;301;%1: Gescheiden
+2220;500;IO-timer: '%1' bestaat reeds (%2, %3)
+2220;501;IO-timer: Cyclustijd van '%1' (%2us) geen veelvoud van de system-tick (%3us)
+2220;600;IO-update: Update-cyclustijd van '%1' (%2us) geen veelvoud van de system-tick (%3us)
+2220;601;IO-update: Update-cyclustijd van '%1' (%2us) geen veelvoud van de IO-update-cyclustijd (%3us)
+2220;602;IO-update: '%1' IO-update werd reeds toegevoegd
+2220;1000;IO: Creëren van de IO-timer mislukt
+2220;1001;IO: Creëren van de IO-update-tasks mislukt
+2220;1002;IO: Creëren van de IO-parameter-tasks mislukt
+2220;1003;IO: Initialisatie van het IO-root-object mislukt
+2220;1004;IO: Creëren van de IO-QuitError-tasks mislukt
+2220;1005;IO: Creëren en initialiseren van de driver mislukt
+2220;1006;IO: Oproep installatiefunctie voor '%1' mislukt
+2220;1007;%1: Klonen van de eindpunt-types '%2' niet ondersteund
+2220;1008;%1: Maximaal aantal klonen van het eindpunt-type '%2' bereikt (%3)
+2220;1009;%1: Ongeldige kloon-cyclustijd: %2ms (cyclustijd van AIs: %3ms)
+2220;1013;%1: Limit van het Shared Memory bereikt (%2)
+2220;1014;%1: Ongeldig eindpunt-type: Naam '%2', type '%3'
+2220;1015;%1: Eindpunt '%2' bestaat reeds (%3)
+2220;1016;%1: Onverwachte grootte van het Shared Memory '%2': %3 (verwacht: %4)
+2220;1017;%1: Shared Memory bestaat reeds: '%2'
+2220;1018;%1: Toestelnaam '%2' bestaat reeds (%3)
+2220;1019;%1: Eindpuntnaam '%2' (of deel) te lang
+2220;1020;%1: Initialisatie van het toestel '%2' mislukt (configuratie controleren)
+2220;1021;%1: Bereik gegevensadres (%2-%3) buiten het bereik van de procesgegevens (%4)
+2220;1022;%1: Bereik adresgegevens overlapping (start adres %2, lengte %3)
+2220;6800;ACB Callback-fout: %1
+2220;12000;%1: Geen as geconfigureerd
+2220;12001;%1: Gestopt
+2220;12002;%1: Inconsistentie vastgesteld
+2220;12003;%1: Toestel-Firmware-versie %2 kan niet bediend worden. Minstens %3 vereist.
+2220;12004;%1: Waarde '%2' is ongeldig voor ingevoerde configuratie '%3'. Default-waarde '%4' wordt gebruikt.
+2220;12005;%1: Interne fout.
+2220;12006;%1: Interne referentiesensor geconfigureerd maar externe in gebruik.
+2220;12007;%1: Geconfigureerde referentiesensor in gebruik
+2220;12008;%1: Sensorbreuk aan referentiesensor
+2220;12009;%1: Sensorbreuk aan referentiesensor opgelost
+2220;12010;%1: Externe referentiesensor geconfigureerd maar interne in gebruik.
+2220;12011;%1: Ongeldige waarde van de referentiesensor
+2220;12012;%1: Waarde van de referentiesensor is geldig
+2220;12013;%1: Ingevoerde configuratie '%2' niet gevonden. Geërfde waarde '%3' is niet toegestaan.
+2220;12014;%1: De waarde '%2' voor de ingevoerde configuratie '%3' bevindt zich buiten het geldige bereik [%4..%5].
+2220;12015;%1: Ongeldig statuswoord (0x%3) van as %2 ontvangen
+2220;12016;%1: Ongeldig gegevenstype voor ingevoerde configuratie '%2' (gevonden: '%3', verwacht: '%4'). standaardwaarde '%5' wordt gebruikt.
+2220;12017;%1: Ongeldig gegevenstype voor ingevoerde configuratie '%2' (gevonden: '%3', verwacht: '%4').
+2220;12018;%1: De waarde '%2' voor de ingevoerde configuratie '%3' bevindt zich buiten het geldige bereik [%4..%5]. standaardwaarde '%5' wordt gebruikt.
+2220;12019;%1: De waarde '%2' voor de ingevoerde configuratie '%3' is geen veelvoud van '%4'. standaardwaarde '%5' wordt gebruikt.
+2220;12020;%1: De waarde '%2' voor de ingevoerde configuratie '%3' is geen veelvoud van '%4'.
+2220;12021;%1: Geen externe referentiesensor voorhanden aan de CPU-component.
+2220;12024;%1: De tekst van de ingevoerde configuratie '%2' is te lang of te kort (min %3, max %4 tekens). standaardwaarde '%5' wordt gebruikt.
+2220;12025;%1: De tekst van de ingevoerde configuratie '%2' is te lang of te kort (min %3, max %4 tekens).
+2220;12026;%1: '%2' Waardeomzetting overschrijdt bereik (waarde: %3, factor: %4).
+2220;12027;%1: %2 assen geconfigureerd op toestel, maximaal %3 toegestaan
+2234;201;%1: Ongeldige of ontbrekende configuratie-invoer 'posUnitsToIncrements', gebruikte waarde %2
+2234;202;%1: Ongeldige bedrijfsmodus (geïnterpoleerde standaardpositie/profielpositie)
+2234;210;%1: Geen PSU geconfigureerd
+2234;211;%1: Te korte cyclustijd van %2ms (%3 CAN-stations, %4kBaud)
+2234;250;%1: Ingestelde positiewaarde overschrijding bereik (%2)
+2234;301;%1: Verlies cyclische gegevens (%2)
+2234;302;%1: Geen cyclische gegevens ontvangen (%2)
+2234;303;%1: Niet gereed (%2)
+2234;306;%1: Timeout (tijdens reset) (%2)
+2234;307;%1: Aandrijving gaat over naar DRIVECOM toestand 'Inschakeling geblokkeerd' (%2)
+2234;310;%1: Trip-fout. Foutcode: %2
+2235;201;%1: Ongeldige of ontbrekende configuratie-invoer 'posUnitsToIncrements', gebruikte waarde %2
+2235;250;%1: Ingestelde positiewaarde overschrijding bereik (%2)
+2235;251;%1: Opnieuw geen cyclische gegevens ontvangen
+2235;301;%1: Verlies cyclische gegevens (%2)
+2235;302;%1: Geen cyclische gegevens ontvangen (%2)
+2235;303;%1: Niet gereed (%2)
+2235;306;%1: Timeout opgetreden (%2)
+2235;307;%1: DRIVECOM bedrijfsmodus niet ondersteund (%2)
+2235;350;%1: Interne kort-/aardsluiting, code: %2
+2235;351;%1: Permanente overspanning, code: %2
+2235;352;%1: Toestelhardware, code: %2
+2235;353;%1: Software-reset (watchdog), code: %2
+2235;354;%1: Netoverspanning, code: %2
+2235;355;%1: Fout resolver 1, code: %2
+2235;356;%1: Ongeldige gegevens / parameters, code: %2
+2235;357;%1: Remregelaar (temperatuur), code: %2
+2235;358;%1: Extra module, code: %2
+2235;359;%1: Netonderspanning, code: %2
+2235;360;%1: Overbelasting (koppel), code: %2
+2235;361;%1: Moeilijke start, code: %2
+2235;362;%1: Fout koppel, code: %2
+2235;363;%1: Snelheidsregeling, code: %2
+2235;364;%1: Extra functiebesturing, code: %2
+2235;365;%1: Positiebesturing, code: %2
+2235;366;%1: Slipfout, code: %2
+2235;367;%1: Toestelhardware-besturing, code: %2
+2235;368;%1: Spec. snelheid (te hoog toerental), code: %2
+2236;2;%1: Schrijven van de SERCOS parameter %2 mislukt (%3, %4)
+2236;3;%1: Lezen van element %2 van de SERCOS parameter %3 mislukt (%4)
+2236;5;%1: Gegevenslengte van de geconfigureerde richtwaarden (MDT) te lang (geconfigureerd %2, maximaal %3), Default-configuratie wordt gebruikt
+2236;12;%1: Interne SERCOS communicatiefout (%2)
+2236;13;%1: Watchdog werd door SERCOS component gemeld
+2236;14;%1: Ongeldige waarde bij het lezen van een parameter: 0x%2, element %3, waarde %4
+2236;15;%1: Ongeldige gegevenslengte bij het lezen van een parameter: 0x%2, element %3, waarde %4
+2236;53;%1: Aandrijving niet bedrijfsgereed (SERCOS status aandrijving 0x%2)
+2236;55;%1: SERCOS klasse1 fout opgetreden: 0x%2 - %3
+2236;60;%1: Tijdslimiet bij de DRIVECOM-toestandsoverdracht %2
+2236;70;%1: SERCOS fase-omschakeling niet mogelijk, verkeerde toestand van de aandrijvingen
+2236;151;%1: SERCOS klasse2 waarschuwing opgetreden: 0x%2 - %3
+2236;152;%1: SERCOS hardware specifieke fout (Nr=%2, Phase=%3, %4, %5, %6)
+2236;157;%1: SERCOS communicatiefout: uitval aandrijvingstelegram in fase 4
+2236;158;%1: SERCOS communicatiefout: uitval aandrijvingstelegram in fase %2 (status %3)
+2236;163;%1: Uitvoering van de SERCOS instructie %2 mislukt (%3, %4)
+2236;164;%1: Gegevenslengte van de geconfigureerde werkelijke waarden (AT) te lang (geconfigureerd %2, maximaal %3), Default-configuratie wordt gebruikt
+2236;165;%1: Ernstige interne SERCOS fout (%2)
+2236;166;%1: Geconfigureerde parameter %2 in richtwaarden (MDT) niet overdraagbaar
+2236;167;%1: Geconfigureerde parameter %2 in werkelijke waarden (AT) niet overdraagbaar
+2236;168;%1: Ongeldige SERCOS parameter bij het omschakelen naar fase %2: %3
+2236;169;%1: Aandrijving niet gereed om in te schakelen (SERCOS status aandrijving 0x%2)
+2236;170;%1: Aandrijving niet bedrijfsgereed of niet ingeschakeld (SERCOS status aandrijving 0x%2)
+2236;171;%1: Aandrijving kan niet ingeschakeld worden, vermogen niet ingeschakeld (SERCOS status aandrijving 0x%2)
+2236;172;%1: '%2' richtwaarde overschrijding bereik (waarde: %3, factor: %4)
+2236;173;%1: Extra richtwaarde '%2' overschrijding bereik (waarde: %3, factor: %4)
+2236;174;%1: Ongeldige SERCOS cyclustijd geconfigureerd (%2 us)
+2236;175;%1: SERCOS ring niet gesloten
+2236;176;%1: Status parameterset schrijven:  aantal=%2, geschreven=%3, met fouten=%4
+2236;177;%1: Status parameterset lezen:  aantal=%2, geschreven=%3, met fouten=%4
+2236;178;%1: ignoreMessage niet ondersteund
+2236;179;%1: Toestand aandrijving kan niet gewijzigd worden. Statusreport actief.
+2236;180;%1: Dubbel SERCOS-adres op de bus gevonden
+2236;181;%: Ongeldig SERCOS-adres op de bus gevonden
+2236;182;%1: Niet-ondersteunde SERCOS-versie van een device.
+2236;183;%1: Maximaal aantal MDT-telegrammen overschreden
+2236;184;%1: Maximaal aantal AT-telegrammen overschreden
+2236;185;%1: Te veel gegevens voor bus-cyclustijd (%2  s) geconfigureerd
+2236;186;%1: Ongeldig aantal verbindingen voor SCP_FixCFG (%2 verwacht)
+2236;187;%1: Te veel verbindingen geprojecteerd (%2 toegestaan)
+2236;188;%1: Dubbele verbindings-ID %2
+2236;189;%1: Inconsistente gegevenslengte van de verbinding %2
+2236;190;%1: Inconsistente cyclustijd van de verbinding %2
+2236;191;%1: Lengte van de verbinding %2 is groter dan de maximale lengte
+2236;192;%1: Gebruikte verbinding %2 wordt niet geproduceerd.
+2237;1;%1: Toestel %2 reeds geconfigureerd
+2237;2;%1: Auto-PCI-configuratie niet mogelijk, het systeem heeft meer dan één kaart van dat type
+2237;3;%1: Slechte DLL-Lock kwaliteit (events %2, actuele status %3)
+2237;4;%1: DLL vergrendeld
+2238;1;%1: Asi-slave-toestand: %2
+2238;2;%1: Asi-slave-status ok
+2241;17100;%1: KVC telegram met ongeldige lengte ontvangen: telegramtype 0x%2, lengte %3
+2241;17101;%1: Onbekende KVC telegram ontvangen: telegramtype 0x%2, lengte %3
+2241;17102;%1: %2 status telegram(men) van het KVC handbedieningsapparaat verloren
+2241;17103;%1: Aantal door het KVC handbedieningsapparaat ondersteunde toetsen (%2) groter dan aantal door de besturing ondersteunde toetsen (%3)
+2241;17104;%1: Aantal door het KVC handbedieningsapparaat ondersteunde leds (%2) groter dan aantal door de besturing ondersteunde leds (%3)
+2242;201;%1: Positie-omrekeningsfactor (posUnitsToIncrements) ontbreekt of ongeldig - default-waarde %2 wordt gebruikt
+2242;211;%1: Geconfigureerde cyclustijd voor Post-Update te klein (RX-overdrachttijd: %2)
+2242;250;%1: Overschrijding bereik richtwaarde (%2)
+2242;251;%1: Opnieuw geen cyclische gegevens ontvangen
+2242;301;%1: Verlies cyclische gegevens (%2)
+2242;302;%1: Geen cyclische gegevens ontvangen (%2)
+2242;303;%1: Niet gereed (%2)
+2242;306;%1: Timeout (%2)
+2242;307;%1: Bedrijfsmodus niet ondersteund (%2)
+2242;350;%1: Interne kort-/aardsluiting, code: %2
+2242;351;%1: Permanente overspanning, code: %2
+2242;352;%1: Toestelhardware, code: %2
+2242;353;%1: Software-reset (watchdog), code: %2
+2242;354;%1: Netoverspanning, code: %2
+2242;355;%1: Fout resolver 1, code: %2
+2242;356;%1: Ongeldige gegevens / parameters, code: %2
+2242;357;%1: Remregelaar (temperatuur), code: %2
+2242;358;%1: Extra module, code: %2
+2242;359;%1: Netonderspanning, code: %2
+2242;360;%1: Overbelasting (koppel), code: %2
+2242;361;%1: Moeilijke start, code: %2
+2242;362;%1: Fout koppel, code: %2
+2242;363;%1: Snelheidsregeling, code: %2
+2242;364;%1: Extra functiebesturing, code: %2
+2242;365;%1: Positiebesturing, code: %2
+2242;366;%1: Slipfout, code: %2
+2242;367;%1: Toestelhardware-besturing, code: %2
+2242;368;%1: Spec. snelheid (te hoog toerental), code: %2
+2242;4000;%1: Ongeldige Baudrate: %2kB (verwacht: %3kB)
+2242;4009;%1: Verzenden van een CAN-bericht mislukt (CAN-ID:%2, extra info:%3)
+2242;4013;%1: Bus waarschuwing
+2242;4014;%1: Bus Passive
+2242;4015;%1: Bus Off
+2242;4016;%1: Geen fout
+2242;4017;%1: Toestelfout
+2242;4018;%1: Fouttoestand Bus Off beëindigd
+2242;4019;%1: Buskwaliteit slecht (Bus Passive teller: %2, Bus Warning teller %3)
+2242;4020;%1: Aanmelden Status-Callback mislukt
+2242;4025;%1: Ongeldige cyclustijd (%2ms) voor Clock-Master
+2242;4150;%1: Instellen van de Baudrate %2 Baud mislukt
+2242;4151;%1: CAN-ID %2 reeds geregistreerd
+2242;4170;%1: Ontvangstfout voor CAN-ID=%2
+2242;4171;%1: CAN-fout gegevensoverloop voor CAN-ID %2
+2242;4172;%1: Ontvangst-fifo vol - overloop ontvangstgeheugen
+2242;6051;%1: CAN-Open knoop-adres (%2) meermaals geconfigureerd (%3)
+2242;6052;%1: K-Link (virtueel) knoop-adres (%2) reeds in gebruik (%3)
+2242;6053;%1: Virtueel K-Link adres %2 buiten het geldige bereik (knoop-adres %3, PDO-nr. %4)
+2242;6100;%1: SDO (Index: 0x%2 Subindex: %3) timeout bevestiging (%4 ms)
+2242;6101;%1: SDO (Index: 0x%2 Subindex: %3) transferfout (%4 ms)
+2242;6102;%1: SDO (Index: 0x%2 Subindex: %3) ontvangbuffer te klein (verwachte grootte: %4)
+2242;6103;%1: SDO (Index: 0x%2 Subindex: %3) door de server afgebroken: 0x%4 (%5)
+2242;6120;%1: Timeout Node-Guarding-bevestiging
+2242;6121;%1: Ongeldig Node-Guarding-antwoord
+2242;6140;%1: Geen cyclische gegevens ontvangen
+2242;6141;%1: Handeling (%2) voor PDO niet mogelijk (%3)
+2242;6142;%1: PDO-cyclustijd (%2us) geen veelvoud van de CAN-cyclustijd (%3us)
+2242;6143;%1: Ongeldig PDO-nummer: %2 (geldig: 1 .. %3)
+2242;6144;%1: Synchronisatieconflict
+2242;6145;%1: PDO wordt niet ondersteund (%2)
+2242;6150;%1: Time-out RTR-bevestiging
+2242;6160;%1: Emergency-bericht van knoop %2: code: %3
+2242;6161;%1: Emergency-bericht van knoop %2: code: %3
+2242;6162;%1: Foutreset of geen fout, code: %2
+2242;6200;%1: Bootup-bericht ontvangen: (knoop-adres: %2)
+2242;6300;%1: Te veel PDO's voor actueel aantal CAN-Open-knopen: (PDO-nr.: %2, knoop: %3)
+2242;6301;%1: Te veel PDO's voor actueel aantal CAN-Open-knopen: (knoop-nr.: %2, PDO's: %3)
+2242;8000;%1: Mogelijk conflict wanneer CAN-Open en K-CAN op dezelfde bus gebruikt worden
+2242;8210;%1: Algemen fout, code: %2
+2242;8240;%1: Toestel-temperatuur, code: %2
+2242;8250;%1: Toestel-hardwarefout, code: %2
+2242;8251;%1: Toestel-hardwarefout, interne kabel onderbroken, code: %2
+2242;8280;%1: Communicatiefout, code: %2
+2242;8281;%1: Communicatiefout, code: %2
+2242;8282;%1: CAN-overloop (object verloren), code: %2
+2242;8283;%1: Toestel in passieve foutmodus, code: %2
+2242;8284;%1: Toestel niet meer in de toestand Bus Off, code: %2
+2242;8290;%1: Externe fout, code: %2
+2242;9000;%1: LSS/LMT: Configuratie toestel correct beëindigd
+2242;9001;%1: LSS/LMT: Configuratie toestel correct beëindigd, maar continu opslaan niet ondersteund
+2242;9010;%1: LSS/LMT: Toestel reageert niet, handeling %2, code %3
+2242;9020;%1: LSS/LMT: Ongeldig knoopnummer
+2242;9021;%1: LSS/LMT: Knoopnummer niet instelbaar, fout %2, specifiek %3
+2242;9024;%1: LSS/LMT: Geen toegang tot opslagmedium
+2242;9025;%1: LSS/LMT: Configuratie kan niet opgeslagen worden, fout %2, specifiek %3
+2242;9040;%1: LSS/LMT: Ongeldige configuratie-invoer, lssEnable en lmtEnable voor hetzelfde toestel
+2242;9041;%1: LSS/LMT: Ongeldige configuratie-invoer, 'lmtSerial' geen BCD - code
+2242;9042;%1: Er werd een Node Guard pakket ontvangen (Node Guarding gedeactiveerd)
+2242;9043;%1: Productnummer van het toestel (%2) komt niet overeen met het verwachte productnummer (%3)
+2242;9044;%1: Onderspanning tussenrking (foutregister: %2)
+2242;9045;%1: Overtemperatuur motor (foutregister: %2)
+2242;9046;Wissen
+2242;9047;%1: Kortsluiting eindtrap (foutregister: %2)
+2242;9048;%1: Overspanning in de tussenrking (foutregister: %2)
+2242;9049;%1: Communicatiefout CAN: Bus Off (foutregister: %2)
+2242;9050;Wissen!!!!
+2242;9051;%1: Parameter werd gelimiteerd (foutregister: %2)
+2242;9052;%1: SW-eindschakelaar bereikt (foutregister %2)
+2242;9053;%1: Fout in de firmware van de aandrijving (foutregister: %2)
+2242;9054;%1: Overspanning in de tussenrking (foutregister: %2)
+2242;9055;%1: SDO-leestoegang tot object 0x%2:0x%3 door filterregel verboden
+2242;9056;%1: SDO-schrijftoegang tot object 0x%2:0x%3 door filterregel verboden
+2243;6500;%1: Geen fout (code: %2)
+2243;6510;%1: Algemene fout op module (code: %2)
+2243;6523;%1: Kortsluiting op uitgang module (code: %2)
+2243;6533;%1: Voedingsspanning ontbreekt (code: %2)
+2243;6580;%1: Communicatiefout op module (code: %2)
+2243;6581;%1: Fout in de communicatie met module (code: %2)
+2243;6590;%1: Externe fout op module (code: %2)
+2243;6600;%1: Geen fout (code: %2)
+2243;6610;%1: Algemene fout op module (code: %2)
+2243;6620;%1: Hardwarefout op module (code: %2)
+2243;6680;%1: Communicatiefout op module (code: %2)
+2243;6681;%1: Communicatiefout op module (code: %2)
+2243;6690;%1: Externe fout op module (code: %2)
+2243;6700;%1: Geen fout (code: %2)
+2243;6701;%1: Algemene fout op module (code: %2)
+2243;6702;%1: Onderschrijding minimale stroom aan ingangszijde op module (code: %2)
+2243;6703;%1: Onderschrijding minimale stroom aan uitgangszijde op module (code: %2)
+2243;6704;%1: Communicatiefout op module (code: %2)
+2243;6705;%1: Communicatiefout op module (code: %2)
+2243;6706;%1: Externe fout op module (code: %2)
+2243;6800;%1: Geen fout (code: %2)
+2243;6801;%1: Communicatiefout op module (code: %2)
+2243;6802;%1: Kortsluiting op module (kortsluitingsmasker 0x%2)
+2243;6803;%1: Module meldt Kortsluiting opgelost
+2243;6804;%1: IO-port (%2) als ingang en als uitgang geconfigureerd, default-configuratie (ingang) gebruikt
+2245;6801;%1: Emergency: CAN-Warning-Limit overschreden
+2245;6802;%1: Emergency: CAN Bus Off
+2245;6803;%1: Emergency: Verzendbuffer overgelopen
+2245;6804;%1: Emergency: Ontvangbuffer overgelopen
+2245;6806;%1: Emergency: Ongeldige PDO-lengte (%2, verwacht: %3)
+2245;6807;%1: Emergency: SYNC-time-out
+2245;6808;%1: Emergency: Node Guarding-time-out
+2245;6809;%1: Emergency: Klembezetting veranderd
+2245;6812;%1: Emergency: Klem (%2) niet ondersteund
+2245;6814;%1: Emergency: 'EEPROM-fout'
+2245;6815;%1: Emergency: Klem-busfout: %2 (klem: %3)
+2245;6816;%1: Emergency: Klemfout (klem: %2, kanaal: %3) opgetreden
+2245;6860;%1: Emergency: Terminalfout (terminal: %2, kanaal: %3) opgelost
+2245;6880;%1: Emergency: %2 %3 %4 %5 %6 %7 %8
+2245;6881;%1: Emergency: Geen fout
+2246;1;%1: TCP-verbinding geweigerd
+2246;2;Time-out instructie (instructie=%1, time-out=%2 ms)
+2246;3;Ongeldig instructie-antwoord (instructie=%1, antwoord=%2)
+2250;1;HmiServer IO bericht deel 1: %1, UserId HostType: %2, UserId Host: %3, UserId UserName: %4, Operation: %5, Medium: %6, Message einde: %7
+2250;2;HmiServer IO bericht deel 2: %1, Groep variabelen: %2, Filename: %3, Message einde: %4
+2250;3;HmiServer IO bericht deel 3: %1, Filename: %2, Message einde: %3
+2250;4;HmiServer Opmode bericht: %1, UserId Host: %2, UserId UserName: %3, oude status: %4 , nieuwe status: %5
+2250;5;HmiServer Usermsg bericht deel 1: %1, UserId HostType: %2, UserId Host: %3, UserId UserName: %4
+2250;6;HmiServer Usermsg bericht deel 2: %1, Message: %2
+2250;7;HmiServer Varchange bericht deel 1: %1, UserId HostType: %2, UserId Host: %3, UserId UserName: %4, basistype: %5, Message einde: %6
+2250;8;HmiServer Varchange bericht deel 2: %1, oude waarde: %2, Message einde: %3
+2250;9;HmiServer Varchange bericht deel 3: %1, nieuwe waarde: %2, Message einde: %3
+2250;10;HmiServer Varchange bericht deel 4: %1, Systeem variabele: %2, Message einde: %3
+2250;11;HmiServer Varchange bericht deel 5: %1, Systeem variabele: %2, Message einde: %3
+2250;12;Configuratiefout: %1 %2
+2300;6900;%1: PWM-spanningsvoorziening ontbreekt
+2300;6901;%1: Overspanning V-as-aandrijving
+2300;6902;%1: Overspanning klep %2
+2300;6903;%1: Overloop teller incrementele sensor %2
+2300;6904;%1: Incrementele sensor %2 defect
+2300;6905;%1: Incrementen aan sensor %2 verloren
+2300;6906;%1: Besturings-PDO verloren
+2300;6907;%1: Verkeerde rij-instructie
+2300;6908;%1: Eindpositie niet bereikbaar
+2300;6909;%1: Positiesensor klep defect %2
+2300;6910;%1: Klepstroom %2 kan niet gemeten worden
+2300;6911;%1: Balk schuine stand
+2300;6912;%1: Fout gekwiteerd 0x%2
+2300;6913;%1: ASSERT-fout
+2300;6914;%1: Ernstige fout in KSX
+2300;6915;%1: Watchdog
+2300;6916;%1: CAN BusOff
+2300;6917;%1: CAN Error-passief
+2300;6918;%1: CAN Bus overloop
+2300;6919;%1: Sync-time-out
+2300;6920;%1: Fout zelftest inschakelen
+2300;6921;%1: Ongeldige kalibreringswaarde AI
+2300;6922;%1: Toerental ventilator %2 onder minimum
+2300;6923;%1: Kortsluiting aan uitgang
+2300;6924;%1: PDO %2 niet ontvangen
+2300;6925;%1: Download firmware mislukt (foutbeschrijving %2)
+2300;6926;%1: PDO %2 niet ontvangen
+2300;6927;%1: Incompatibele firmwareversie: %2
+3001;1;Assert:%1 bestand:%2 regel:%3
+3001;2;Te weinig geheugen beschikbaar
+3001;3;Initialisatie RPC-service: Geen geldige server-ID: %1
+3001;4;Registratie RPC-service: Registratie aan de Portmapper niet mogelijk voor server %1
+3001;5;RPC-Library TCP-service kan niet gecreëerd worden
+3001;6;RPC-Library returnwaarde %1 van svc_run
+3001;7;Registratie progr.:%1, vers:%2 UDP (socket %3) mislukt
+3001;8;Registratie progr.:%1, vers:%2 TCP (socket %3) mislukt
+3001;9;Geen beschikbaar servertype
+3001;10;Initialisatie RPC-service: Geen hulpbronnen voor server %1. Error %2
+3001;11;Registratie RPC-service: Geen sockets vrij voor registratie aan de Portmapper voor server %1
+3001;12;Geen beschikbaar RPCMan-ProgramNr.
+3001;2000;Component uitgeschakeld
+3110;0;Assert:%1 bestand:%2 regel:%3
+3110;1;Assert aan het kanaal:%1 CAN-ID:%2 regel:%3
+3110;100;CAN-kaart niet gereed, foutieve Powerup-ID
+3110;101;Onbekende bedrijfsmodus%1
+3110;102;Kanaal op interface reeds geïnstalleerd %1
+3110;103;Onbekend kanaal op interface deïnstalleren %1
+3110;104;Ongeldig interface-nummer %1
+3110;105;Onbekende opdracht (%1) in server-mailbox
+3110;106;Interrupt-FIFO-overloop
+3110;107;Onbekend Interrupt-type %1
+3110;108;Time-out bij DPM-service-kanaal-semaphore
+3110;109;Onverwachte bevestiging ontvangen
+3110;110;Openen van de kernel driver %1 mislukt, laatste fout %2
+3110;111;Sluiten van de kernel driver mislukt, laatste fout %1
+3110;112;CAN-kaart na reset hardware niet gereed, foutieve PCI-Vendor-ID
+3110;113;CAN-kaart na reset hardware niet gereed, foutieve Powerup-ID
+3110;114;POST (hardware)-fout RomOk=%1 RamOk=%2 EepromOk=%3 Kanaal0Geïnstalleerd=%4 Kanaal1Geïnstalleerd=%5
+3110;115;Fout bij het openen van het firmwarebestand %1, %2
+3110;116;Bestand zoekfout %1
+3110;117;Fout bij het lezen uit bestand %1
+3110;118;Firmwarebestand te klein
+3110;200;Time-out bij toegangs-semaphore voor DPM-Full-CAN-buffer
+3110;201;Buffer te klein voor ontvangen BASIC-CAN-melding (CAN-ID=%1, Lengte berichten=%2, Grootte buffer=%3)
+3110;202;Buffer te klein voor ontvangen FULL-CAN-melding (CAN-ID=%1, Lengte berichten=%2, Grootte buffer=%3)
+3110;203;Kanaal %1: Time-out bij toegangs-semaphore voor DPM-Full-CAN-buffer (berichten-buffer-nr=%2)
+3110;204;Kanaal %1: Buffer te klein voor ontvangen FULL-CAN-melding (berichten-buffer-nr=%2, grootte buffer=%3)
+3110;205;Kanaal %1: Buffer te klein voor ontvangen BASIC-CAN-melding (CAN-ID=%2, grootte buffer=%3)
+3110;300;Fout van de remote computer: Gegevensoverloop CAN-bouwsteen aan kanaal %1 (%2 meldingen verloren)
+3110;301;Fout van de remote computer: Melding (buffer-nr=%1) Time-out semaphore (kanaal=%2)
+3110;302;Fout van de remote computer: Onbekende identificatie: %1
+3110;500;CAN-kaart: PCI-bus %1 Slot %2 Aanmelding interrupt-handler %3 mislukt
+3110;501;CAN-kaart: PCI-Bus %1 Slot %2 Aanmelding bij de hardware-interrupt %3 mislukt
+3110;502;CAN-kaart: PCI-bus %1 Slot %2 Verwijderen van de interrupt-handler %3 mislukt
+3110;503;CAN-kaart: PCI-Bus %1 Slot %2 Afmelding van de hardware-interrupt %3 mislukt
+3110;504;CAN-kaart: Verbinden van het PCI-toestel (PCI-bus %1, slot %2) mislukt
+3110;505;CAN-kaart: Scheiden van het PCI-toestel (PCI-bus %1, slot %2) mislukt
+3110;10100;Time-out opdracht
+3110;10101;Time-out opdrachtsbevestiging
+3110;10102;Onbekende instructie (%1H) ontvangen
+3110;10103;Ontvangbuffer in testinstructie-opdracht te klein (%1 byte in de plaats van %2 byte)
+3110;10104;Negatief resultaat bij de bevestiging van een gedeeltelijke opdracht
+3110;10105;Service-bevestigingsbuffer te klein (instructie=%1, max. grootte buffer=%2)
+3110;10106;Overloop van Postvak IN van de server-task %1 met %2 mails
+3110;10110;Service-bevestigingsresultaat: Onbekend
+3110;10111;Service-bevestigingsresultaat: Geen geheugenruimte
+3110;10112;Service-bevestigingsresultaat: Ongeldige gegevenslengte
+3110;10113;Service-bevestigingsresultaat: Inconsistente gegevens
+3110;10114;Service-bevestigingsresultaat: Opdracht niet aangenomen
+3110;10115;Service-bevestigingsresultaat: Geen FULL-CAN-berichten-buffer meer beschikbaar
+3110;10116;Service-bevestigingsresultaat: Onbekende instructie
+3110;10117;Service-bevestigingsresultaat: Ongeldig kanaal
+3110;10118;Service-bevestigingsresultaat: Ongeldige Baudrate
+3110;10119;Service-bevestigingsresultaat: SJA1000 niet gevonden
+3110;10120;Service-bevestigingsresultaat: Ongeldig berichtentype
+3110;10121;Service-bevestigingsresultaat: Dubbel toegekende ID ontvang-CAN
+3110;10122;Service-bevestigingsresultaat: Ongeldig interrupt-type
+3110;10123;Service-bevestigingsresultaat: Ongeldig interrupt-masker
+3110;10124;Service-bevestigingsresultaat: Geen buffer gereserveerd
+3110;10125;Service-bevestigingsresultaat: POST (hardware)-fout
+3110;10127;Service-bevestigingsresultaat: Kanaal reeds geïnstalleerd
+3110;10128;Service-bevestigingsresultaat: Kanaal niet geïnstalleerd
+3110;10129;Service-bevestigingsresultaat: Onbekende instructie firmware-download-ondersteund
+3110;10130;Service-bevestigingsresultaat: Flash schrijffout
+3110;10131;Service-bevestigingsresultaat: Gedownloade firmware bevat CRC-fout
+3110;20200;Verzendbuffer berichten niet leeg
+3110;20201;Geen bericht ontvangen
+3110;20202;Statistieken werden niet gestart
+3110;20203;Kanaal %1: Verzendbuffer berichten niet leeg (berichten-buffer-nr=%2)
+3110;20204;Kanaal %1: Geen bericht ontvangen (berichten-buffer-nr=%2)
+3110;20205;Kanaal %1: Geen bericht ontvangen (BASIC_CAN)
+3110;20206;Kanaal %1: Zetten van de default-Baudrate wordt niet ondersteund door de firmware V%2.%3
+3500;10001;Te weinig geheugen - %1
+3500;10002;Te weinig geheugen - %1
+3500;10003;Te weinig geheugen - %1 %2
+3500;10004;Hervatten van de Install-task is niet mogelijk.
+3500;10010;SOM niet beschikbaar.
+3500;10105;Fout bij het openen van het bestand %1.
+3500;10201;Server kan niet op de TCP-manager aangemeld worden: %1
+3500;10202;Server kan niet van de TCP-manager afgemeld worden: %1
+3500;10203;Ongeldige service-oproep (service niet geïnstalleerd): %1
+3500;10206;Ongeldige toestelspecificatie: %1
+3500;10208;Server kan niet geactiveerd worden: %1
+3500;10210;Bij het verzenden van de RPC-client is een Mutex-fout opgetreden: %1, van %2 naar %3
+3500;10401;Installatie van de Subdevice Installtask niet mogelijk: %1
+3500;10402;Functionele eenheid %1 kan niet geïnstalleerd worden.
+3500;10403;Task %1 kan niet geïnstalleerd worden.
+3500;10406;Te weinig geheugen bij het lezen van de FU: %1
+3500;10414;Bij de installatie van Function Unit %1 zijn %2 waarschuwingen opgetreden.
+3500;10415;SUL bestand %1 bevat ongeldige of dubbele invoeren.
+3500;10417;Device %1 kan niet geïnstalleerd worden.
+3500;10418;Resource %1 kan niet geïnstalleerd worden.
+3500;10422;Element %1 niet bekend/geïnstalleerd
+3500;10423;Te weinig geheugen bij de installatie van het object %1.
+3500;10424;Te wenig geheugen bij de installatie van OBJECT: %1.
+3500;10425;SUL bestand, waarde kan niet gelezen worden: [%1] %2
+3500;10427;SUL-bestandswaarde is niet opgegeven, sleutel/attr: %1/%2
+3500;10428;SUL-bestandswaarde verkeerd opgegeven, key/attr: %1,%2
+3500;10429;Verschillende systeemnamen (applicatiepad): %1
+3500;10430;In de SUL-files werden verschillende systeemnamen gevonden.
+3500;10431;SUL-file in de applicatiepad niet gevonden %1
+3500;10432;FUL bestand in de applicatiedirectory niet gevonden %1
+3500;10433;Ongeldig SUL bestandsformaat: %1 , %2
+3500;10434;Ongeldige declaratie in bestand %1
+3500;10435;Ongeldige toestand van het object %1 bij het deïnstalleren.
+3500;10436;Waarde in het SUL-bestand is niet opgegeven, key: %1, Attr: %2
+3500;10437;Ongeldige toestand van %1. De installatie van %2 is daarom niet mogelijk.
+3500;10438;Deïnstallatie: Ongeldige toestand van object: %1 (deinstall %2)
+3500;10440;Hervatten van de Installtask is niet mogelijk: %1.
+3500;10450;Illegaal gebruik van de iterator in de installatietabel! - %1
+3500;10451;%3 <%4> niet voor %1 <%2> gedeclareerd.
+3500;10452;Geen CPU-naam voor device <%1> gedefinieerd.
+3500;10453;Voor de device werd geen applicatie gevonden.
+3500;10454;Gecreëerde UosTimer <%1> uit de catalogus wordt niet meer ondersteund. Cyclustijd in SU-bestand direct opgeven a.u.b.
+3500;10501;Te weinig geheugen bij de installatie van device <%1>
+3500;10502;Device reeds geïnstalleerd. Device: %1, nieuwe device: %2
+3500;10503;Onvolledige installatie van de applicatie.
+3500;10508;Service kan niet op de TCP-manager aangemeld worden: %1
+3500;10510;Configuratiesleutel %1 niet gevonden.
+3500;10511;Aanmelding bij het statusreport mislukt
+3500;10601;Resume van de CommandAndErrorHandling-task is niet mogelijk.
+3500;10602;Bij het verzenden aan CmdAndErrQueue is een fout opgetreden of werd de grens bereikt: %1
+3500;10704;Fout bij het creëren van de resource-events %1 (errnr: %2)
+3500;10706;Ongeldige toestand van de resource - res.: %1, verwachte toestand: %2, actuele toestand: %3
+3500;10708;Geen of ongeldige installatie van %1 <%2>
+3500;10807;Task <%1> on resource <%2> kan niet voortgezet worden.
+3500;10808;Thread kan niet voortgezet worden - task <%1> op resource <%2>
+3500;10810;Te weinig geheugen bij het creëren van de task <%1> on res.<%2>
+3500;10811;Timer voor task <%1> on res. <%2> kan niet gecreëerd worden
+3500;10814;Opschorten van de task <%1> op res. <%2> is niet mogelijk.
+3500;10815;Timer voor task <%1> on res. <%2> kan niet gestart worden
+3500;10817;Ongeldige cyclustijd voor task <%1> op resource <%2>, cyclus: %3
+3500;10818;Task <%1> op resource <%2> kan niet gewist worden.
+3500;10898;Overschrijding looptijd in task <%1> op res. <%2>, task-ref.: %3
+3500;10899;Overloop trigger: Task %1, op res. %2, task-ref.: %3
+3500;10902;Geen toegang tot bestand %1.
+3500;10903;Header kan niet gelezen worden - bestand: %1
+3500;10904;Ongeldig type of ongeldige versie in bestand: %1
+3500;10905;De FU-naam kan niet gelezen worden - bestand: %1.
+3500;10909;Codesegment kan niet gelezen worden - FU: %1.
+3500;10923;Ongeldige code-offset in bestand: %1, Offset %2 in %3
+3500;10924;Ongeldige gegevensoffset in bestand %1, offset: %2, %3
+3500;10925;Ongeldig alignment in bestand: %1, offset: %2, at %3
+3500;10926;Ressourcename(-index) kan niet gelezen worden - bestand: %1, Res.: %2
+3500;10927;Ressourcename in bestand %1 niet gevonden. Resource: %2
+3500;10928;FU reeds geïnstalleerd - bestand: %1, res.: %2
+3500;10950;De FU-naam kan niet gelezen worden - getroffen bestand: %1
+3500;10951;De resourcenaam kan niet gelezen worden - FU: %1
+3500;10952;Foutieve fileheader in FU %1
+3500;10953;Foutief bestand in FU %1
+3500;11001;Gegevens- of codesegment kan niet geïnstalleerd worden. FU: %1
+3500;11002;De initialisatietabel kan voor het gegevenssegment niet opgemaakt worden - FU: %1
+3500;11003;Initialisatietabel van het Retaingegevenssegment kan niet opgemaakt worden. FU: %1
+3500;11004;Gegevenssegment kan niet geïnitialiseerd worden - FU: %1
+3500;11005;Retaingegevenssegment kan niet geïnitialiseerd worden - FU: %1
+3500;11006;Codesegment kan niet geïnitialiseerd worden - FU: %1
+3500;11007;Aantal elementen in de Init-Table kan niet gelezen worden - FU: %1
+3500;11008;Aantal elementen in de Init-Table van het retainsegment kan niet gelezen worden - FU: %1
+3500;11009;Fout bij het initialiseren van het gegevenssegment van de FU %1
+3500;11010;Segmentlengten kunnen niet gelezen worden - FU: %1
+3500;11015;Element van de Init-Table (dataseg.) kan niet gelezen worden - FU: %1, element-nr.: %2
+3500;11017;Element van de Init-Table (retainseg.) kan niet gelezen worden - FU: %1, element-nr.: %2
+3500;11018;Adres van de Init-Table ongeldig - file: %1, offset %2, at %3
+3500;11019;Adres van de Init-tabel ongeldig - file: %1, offset %2, at %3.
+3500;11020;Returncode van RetainManager %1 voor blok %2 , grootte %3
+3500;11021;Alle FU-Retain-gegevens werden gewist (koude start).
+3500;11022;Device gestopt
+3500;11023;ErrorQuitTime overschreden.
+3500;11101;Instantie kan niet aangemaakt worden (TaskTable) - FU: %1.
+3500;11102;Aantal tasks kan niet gelezen worden (TaskTable)  - FU: %1
+3500;11103;Task-info kan niet gelezen worden (TaskTable)  - FU: %1, element-nr.: %2
+3500;11104;Task niet beschikbaar. FU: %1, task: %2
+3500;11105;Slot-info kan niet gelezen worden (TaskTable)  - FU: %1, element-nr.: %2
+3500;11106;Taskreferentieteller kan niet gelezen worden: FU: %1
+3500;11107;De referentiegegevens van een task kunnen niet gelezen worden: FU: %1, task-ref.: %2.
+3500;11109;Taskreferentie-offset kan niet gelezen worden: FU: %1, taskreferentie.: %2, offset: %3
+3500;11110;Tasknaam niet beschikbaar - FU: %1, task-ref.: %2, res.task: %3
+3500;11111;Een code-offset kan niet uit de instantielijst gelezen worden - FU: %1
+3500;11112;De instantieteller van het laadbestand kan niet gelezen worden (instantielijst) - FU: %1
+3500;11113;De instantiegegevens kunnen niet gelezen worden (instantielijst) - FU: %1, element-nr.: %2.
+3500;11114;Te weinig geheugen om de instantie aan te maken - FU: %1, type: %2, naam: %3
+3500;11118;Aantal elementen kan niet gelezen worden (SharedMemList) - FU: %1
+3500;11119;Een Shared Memory Offset kan niet gelezen worden - FU: %1, nr.: %2.
+3500;11120;Foutieve waarde bij de link van een SharedMem-Ref. - FU: %1, nr.: %2
+3500;11201;Teller van de SysVars kan niet gelezen worden - FU: %1
+3500;11202;SysVar-info kan niet gelezen worden - FU: %1, nr.: %2
+3500;11203;SysVar-info-link-adres niet beschikbaar - FU: %1, nr.: %2
+3500;11204;Systeemvariabele wordt in bestand %1 niet gereferentieerd. VarName: %2
+3500;11205;Geen referentie voor systeemvariabele in bestand: %1, naam variabele: %2
+3500;11206;Referenties voor systeemvariabelen niet gevonden.
+3500;11301;Teller van de SysEvents kan niet gelezen worden - FU: %1.
+3500;11302;SysEvent-info kan niet gelezen worden - FU: %1, nr.: %2
+3500;11303;SysEvent-link-info kan niet gelezen worden - FU: %1, nr.: %2, code-elem-nr.: %3
+3500;11304;De teller van de SysEvents kan niet gelezen worden (EventTable) - FU: %1
+3500;11305;SysEvent-info kan niet gelezen worden (EventTable) - FU: %1, nr.: %2
+3500;11306;SysEvent-Part-info kan niet gelezen worden (EventTable) - FU: %1, nr.: %2
+3500;11308;Geen referentie voor een systeemevent in bestand: %1, Eventname: %2
+3500;11401;SysAlarm-teller kan niet gelezen worden: FU: %1
+3500;11402;SysAlarm-info kan niet gelezen worden - FU: %1, nr.: %2
+3500;11403;SysAlarm-link-info kan niet gelezen worden - FU: %1, nr.: %2, Data Adr. nr.: %3
+3500;11404;Geen referentie voor een systeemalarm in FUL-bestand: %1, alarmnaam: %2
+3500;11501;Teller van de StandardFunctions kan niet gelezen worden - FU: %1.
+3500;11502;De informatie van een StandardFunction kan niet gelezen worden - FU: %1, nr.: %2
+3500;11503;Standard-Func kan niet gelezen worden - FU: %1, Func.: %2
+3500;11504;Teller van de Standard-AB's kan niet gelezen worden - FU: %1
+3500;11505;Standard-AB-info kan niet gelezen worden - FU: %1, nr.: %2
+3500;11506;Standard-Algo-info kan niet gelezen worden - FU: %1, nr.: %2, algo-nr.: %3
+3500;11507;Standard-AB- of Algo-naam kan niet gelezen worden - FU: %1, nr.: %2, Ab/Algo: %3
+3500;11508;Standard-AB-instance-count kan niet gelezen worden - FU: %1, nr.: %2
+3500;11509;Standard-AB-instance-link-addr kan niet gelezen worden - FU: %1, nr.: %2, instantie: %3
+3500;11511;Standaard-Algo niet beschikbaar - bestand: %1, offset: %2, naam: %3
+3500;11512;Ongeldig aantal algo's in bestand %1, nr. %2, FB: %3
+3500;11601;Teller van de Postupdate-algoritmen kan niet gelezen worden. FU: %1
+3500;11602;Post-Update-Element-info kan niet gelezen worden. FU: %1, nr.: %2
+3500;11603;Post-Update-info kan niet gelezen worden. FU: %1, nr.: %2, Postupdateindex: %3
+3500;11604;Post-Update-Func kan niet gelezen worden - FU: %1, SysVar: %2, ElemOffset: %3, grootte: %4
+3500;11605;Aan de Event Algo is geen task toegekend - FU: %1, Algo: %2
+3500;11606;Aan Post-Update-Algo is geen task toegekend - FU:%1, Algo:%2
+3500;11607;(Internal) Ongeldige toekenning van een event
+3500;11608;Ongeldige toekenning van een Post-Update algoritme in de FU:%1, Algo:%2
+3500;11701;Teller voor SFCheader kan niet gelezen worden. FU: %1
+3500;11702;SFC-header offset kan niet gelezen worden. FU: %1, SFC: %2
+3500;11802;Gegevens in de FU-header kunnen niet gelinkt worden. FU: %1
+3500;11803;Instanties kunnen niet gelinkt worden. FU: %1
+3500;11804;Standaard functions kunnen niet gelinkt worden. FU: %1
+3500;11805;Standaard-FB's of AB's kunnen niet gelinkt worden. FU: %1
+3500;11806;System-Vars kunnen niet gelinkt worden. FU: %1
+3500;11807;Systemevents kunnen niet gelinkt worden. FU: %1
+3500;11808;Post-Update-algoritmen kunnen niet gelinkt worden. FU: %1
+3500;11809;SFCheader kan niet gelinkt worden. FU: %1
+3500;11810;Taskreferenties kunnen niet gelinkt worden. FU: %1
+3500;11811;Eventinstanties van de event-tabel kunnen niet gelinkt worden. FU: %1
+3500;11812;Systemalarmen kunnen niet gelinkt worden. FU: %1
+3500;11813;Retain-(Shared-)Memory-References kunnen niet gelinkt werden. FU: %1
+3500;11814;De tabel met de Indices van de BuiltIn-functies kon niet geladen worden. FU: %1
+3500;12001;FUL-Loadfile kan niet geopend worden: %1
+3500;12002;De Case-sensitiviteit is verschillende gedefinieerd. FUL Loadfile %1.
+3500;12003;Fout bij het lezen van de header van het bestand %1
+3500;12005;Fout bij het lezen van de Seek tabel - FUL-laadbestand: %1
+3500;12006;Fout bij het lezen van de General Info. FUL load file %1.
+3500;12007;Fout bij het lezen van de namenlijst. Positie: %1, FUL-loadfile: %2
+3500;12009;Fout bij het lezen van de MainPositionTable in het bestand %1
+3500;20001;Te weinig geheugen om standaard bibliotheekbeheer te creëren.
+3500;20002;IEC looptijdfout: FU-ref %1, IecFout %2, Frame Off %3, Code Off %4, Fu Naam %5
+3500;20003;Oproep van een niet-gelinkte standaard-AB/FB (CREATE, DELETE, ACTIVATE, DEACTIVATE, RESET)
+3500;20004;Error-quitt-timer kan niet geïnstalleerd worden.
+3500;20005;Ongeldige task-handle in de oproep %1
+3500;20006;Oproep van %1 uit een IEC-vreemde task.
+3500;20007;De oproep van %1 is in de actuele toestand van %2 niet mogelijk
+3500;20008;Algemene fout IKB: %1 %2 %3
+3500;20009;IEC-looptijdfout: FU %1.%2[%3], IEC-fout %4, Frame-Off %5, Code-Off %6
+3500;30001;Ongeldig Codepoint-type in Resource: %1.
+3500;30002;Te weinig geheugen: Code-Point kan door de Debugger niet gezet worden. Res: %1
+3500;30003;Debugger kan niet geïnitialiseerd worden.
+3500;30004;De Debug Callback kan niet geïnstalleerd worden.
+3500;30011;Breakpoint kan niet gezet worden - Resource %1
+3500;30012;Breakpoint kan niet verwijderd worden (OsDebugRemoveBp) - Res: %1, Fu: %2, abs.pos: %3, Off: %4
+3500;30013;Te weinig geheugen - Watchvariabele kan niet gecreëerd worden - variabelengrootte: %1
+3500;30021;Device of Resource niet gevonden - Resource: %1.
+3500;40001;Onbekend SFC-elementtype - ongeldige SFC-gegevens: %1
+3500;40002;Foutieve lijst van de actieve SFC-steps in %1
+3500;40003;Ongeldig SFC elementtype in een methode: %1
+3500;40004;De SFC Interpreter is niet geïnstalleerd
+3500;40005;%1'.
+3500;40006;FU: %1.%2, %3 / Genereerdatum: %4 / MD5: %5 /
+3500;40007;Debugserver: %1 /User: %2 /Info: %3 /
+3500;40008;Resource %1, %2
+3500;40009;Exception: %1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,%16,%17,%18,%19
+3500;40010;Verkeerde byteorder in FUL-file %1.
+3500;40011;FUL bestand voor verkeerd CPU-type gecreëerd - %1
+3500;40012;FU %1 niet in OMLD.
+3500;40013;FU %1 bevat versieconflict met OMLD.
+3500;40014;Object %1 voor handeling %2 niet gevonden.
+3500;40015;Meerdere aanvragen voor object %1 voor handeling %2 ontvangen
+3500;40016;Object %1 bevat het verkeerde type voor handeling %2.
+3500;40100;Device '%1' geïnstalleerd
+3500;40101;Install Function-Unit (deel 1/2): Res: '%1' Fu: '%2' GenDate: %3.%4
+3500;40102;Install FU: MD5: %1
+3500;40103;Deïnstalleren van de FU: Res: '%1' Fu: '%2' GenDate: %3.%4
+3500;40104;Install Function-Unit: MD5: %1
+3500;40105;Fu: '%1' Verz: '%2' CodeLen: %3 DataLen: %4 RetainDataLen: %5
+3500;40106;Debug Server installeert Fu: '%1' User: '%2'
+3500;40107;Debug Server deïnstalleert Fu: '%1' User: '%2'
+3500;40108;Resource '%1' gestart.
+3500;40109;Resource '%1' gestopt.
+3500;40110;Exception (deel 1/4) / component: %1 Fout: %2 Fout-ID: %3 Soort fout: %4 Fout-Subart: %5 Res: '%6' Fu: '%7'
+3500;40111;Exception (deel 2/4) / task: '%1' met MD5: %2
+3500;40112;Exception (deel 3/4) CodeOffsets: %1, %2, %3, %4 DataOffsets: %5, %6, %7, %8
+3500;40113;Exception (deel 4/4) / Error opgetreden: Err: '%1' ErrId: %2
+3500;40115;Fout (deel 1/4): '%1' met fout-ID %2, Res: '%3', MD5: '%4'
+3500;40116;Exception (deel 2/4). Actieve task-verbinding : '%1' met Fu: '%2' TabelIdx: '%3' FramePtr: '%4'
+3500;40117;Exception (deel 3/4). Task: '%1' met FrameOffs: %2 CodeIdx1: %3 CodeOff1: %4 CodeIdx2: %5 CodeOff2: %6 CodeIdx3: %7 CodeOff3: %8
+3500;40118;Exception (deel 1/4). Fout '%1' met fout-ID %2
+3500;40550;TriggerOverflow: Task %1, Res %2
+3500;40551;Looptijdsoverschrijding in task %1 en res %2.
+3500;40552;Looptijdfout: Task %1, Res %2, FU %3, ErrId %4
+3500;40553;Exception: task %1, res %2, fu %3, excType %4
+3600;1;KEBA-standaard-FB %1 niet gelinkt
+3600;5;System-Object %1 niet verbonden, verkeerde Fu-handle
+3600;6;System-Object %1 niet verbonden, Object-Path niet gevonden
+3600;7;%1 niet geïmplementeerd
+3600;25;Bestand %1 kan niet geopend worden
+3600;34;Type %1 niet compatibel
+3600;37;Te weinig geheugen (tekst: %1, grootte %2)
+3600;64;Foutief file-type (internal: type code 1: %1, type code 2: %2, usage: %3)
+3600;68;Foutieve file-versie %1
+3600;70;Fout bij het lezen van de types (%1 fout)
+3600;77;Svl-file %1 niet geladen (%2 fout)
+3600;103;Object '%1' kan met object '%2' van het type '%3' gelinkt worden
+3600;106;Restart-Failure - niet alle types werden verwijderd
+3600;107;Restart-Failure - niet alle attributen werden verwijderd
+3600;108;System Object %1 van het type %2 niet verbonden, verkeerde TypInfo
+3600;113;CRC error in file %1
+3600;114;Initialisatiefout types niet compatibel: %1 verwacht systeemobject van het type %2 Systeemobject %3 is type %4
+3600;115;Basistype niet toegestaan (fout in Linker) %1
+3600;119;Verkeerde SysVarRefInit %1 Initialisatie met %2 is geen referentie
+3600;121;Restart-Failure - niet alle FU's werden verwijderd
+3600;122;Attribuut %1 in verschillende bestanden %2 %3 gedeclareerd
+3600;124;Types niet compatibel %1 grootte is niet %2 byte
+3600;129;Events kunnen niet over Device-grenzen verzonden worden
+3600;131;ISL-file %1 reeds geladen
+3600;132;ISL-file %1 niet geladen (%2 fout)
+3600;134;Retain File %1 kan niet gecreëerd worden
+3600;137;FU %1 van ISL-file %2 niet geladen
+3600;142;Geen verbinding met de master SOM.
+3600;143;ArrayInit ligt niet op een array
+3600;144;StructListInit element ligt op ongeldige offset
+3600;145;Foutieve initialisatie van OpenArray %1 met %2
+3600;146;(INTERNAL-Linker) Foutieve offset in Plausfunctie
+3600;147;Plausibility van een type met grootte 0
+3600;148;Incompatibele link naar Open-Array %1
+3600;149;Subtype %1 voor type %2 niet gevonden
+3600;151;Ongeldige attributen %1 van de systeemvariabele %2 genegeerd
+3600;153;Shared Memory %1/%2 reeds gebruikt Systeemvariabele fout %3
+3600;157;Type %1 heeft verkeerde type-info voor '%2'
+3600;158;Type-info kan niet geëvalueerd worden %1
+3600;159;AbsRel Unit %1 niet gevonden
+3600;161;Type van de systeemvariabele %1 niet compatibel met Endpoint grootte %2
+3600;162;Hardware Endpoint %1 is in de IO niet voorhanden
+3600;163;Type van de SV %1 incompatibel met deRetaingegevens
+3600;165;Typenaam %1 niet voorhanden
+3600;166;ISL File past niet bij Fu %1
+3600;167;Ongeldige Fast-Retain attributen %1 van de systeemvariabele %2 genegeerd
+3600;168;File niet geopend %1
+3600;169;Geen Fast Retain waarde voor %1 gevonden
+3600;173;Global-Attribut %1 niet compatibel
+3600;174;Fout bij het bepalen van de waarde van de Iec-variabele %1 van andere Device
+3600;175;Fout bij het bepalen van de waarde van de Iec-variabele %1 op de andere Device
+3600;176;Fout bij het verzenden van Response Get of Set Iec-variabele
+3600;177;Warning Hardware Endpoint %1 niet voorhanden
+3600;179;Init-grootte verschillend van grootte van type %1
+3600;180;Repeat Init op verkeerd type %1
+3600;181;Fout bij Csp-communicatie van events
+3600;183;Fout bij Csp-communicatie van alarm
+3600;184;Systeemblok %1 zonder Memory kan niet geïnitialiseerd worden
+3600;185;Fout in Csp-communicatie van lokale variabele CreateSMem bij %1
+3600;186;Fout in Csp-communicatie van lokale variabele Read bij %1
+3600;187;Fout in Csp-communicatie van lokale variabele Write bij %1
+3600;188;SVL bestand in Little-Endian-formaar verwacht
+3600;189;SVL bestand in Big-Endian-formaat verwacht
+3600;190;Case-Insensitive modus nog niet ondersteund
+3600;191;Fout in de laadfile - geen type gespecificeerd
+3600;192;Unlinked systeemvariabele %1 in Plausibility
+3600;193;Plausibility voor systeemvariabele %1 niet berekend
+3600;194;Fout %1 bij het creëren retain-segment, segment %2 niet retain
+3600;195;Eén of meerdere Hardware Endpoints in de IO niet voorhanden
+3600;196;Eén of meerdere systeemobjecten niet verbonden, Object-Path niet gevonden
+3600;197;Variabele %1 reeds voorhanden in Uos van Io-systeem
+3600;198;Simulatiemodus voor hardware-eindpunten geactiveerd (%1 eindpunten gesimuleerd)
+3600;199;Ongeldige grootte eventgegevens: %1 (alleen %2 bytes toegestaan)
+3600;200;Hardware Endpoint %1 is niet voorhanden
+3600;201;AlarmState Log alarm:%1, Class:%2, State:%3, SubId1:%4, SubId2:%5, SubId3:%6, SubId4:%7
+3600;202;Param1: %1
+3600;203;Param2: %1
+3600;204;SVL heeft foutieve CPU-type (%1 verwacht)
+3600;205;Param1: Type:%1 waarde:%2
+3600;206;Param2: Type:%1 waarde:%2
+3600;207;SV Retain-gegevens gewist (koude start)
+3600;208;Exception tijdens de uitvoering van plausibiliteitscode voor systeemvariabele %1
+3600;401;Interne melding: Syntax-Error in laadbestand! (Bestand: %1, regel: %2, beschrijving: %3)
+3600;402;Retain-segment veranderd: Tekst: %1, FU-info: %2, segment-code: %3, operatie-code: %4
+3700;1;%1 (%2/%3): Foutlimit overschreden
+3700;2;%1 (%2/%3): Fout bij het openen van bestand %4
+3700;3;%1 (%2/%3): Maximale regellengte overschreden
+3700;4;%1 (%2/%3): Te weinig geheugen (%4)
+3700;5;%1 (%2/%3): TeachTalk-bestand heeft een ongeldige naam
+3700;6;%1 (%2/%3): Maximale regellengte overschreden
+3700;11;%1 (%2/%3): Verwacht %4
+3700;12;%1 (%2/%3): Ongeldig symbool %4
+3700;13;%1 (%2/%3): Overgeslaan %4
+3700;14;%1 (%2/%3): Onverwacht bestandseinde
+3700;21;%1 (%2/%3): Onbekend symbool %4
+3700;22;%1 (%2/%3): Interne Parser-fout (Terminalsymbool)
+3700;23;%1 (%2/%3): Interne Parser-fout (geen terminalsymbool)
+3700;24;%1 (%2/%3): Interne Parser-fout (stapelonderloop)
+3700;31;%1 (%2/%3): Interne scanner-fout
+3700;32;%1 (%2/%3): Interne Parser-fout (stapeloverloop)
+3700;33;%1 (%2/%3): Wachtwoord '%4' mag slechts één keer gebruikt worden
+3700;41;%1 (%2/%3): Cyclische type-afhankelijkheid
+3700;42;%1 (%2/%3): Type niet gedefinieerd: %4
+3700;43;%1 (%2/%3): Types zijn niet compatibel
+3700;44;%1 (%2/%3): Geen type
+3700;45;%1 (%2/%3): Verkeerd type
+3700;46;%1 (%2/%3): Het programma '%4' is op die plaats niet toegestaan
+3700;47;%1 (%2/%3): Er mogen geen instanties van abstracte types gecreëerd worden
+3700;48;%1 (%2/%3): Geen structuur
+3700;49;%1 (%2/%3): Geen structiirelement
+3700;50;%1 (%2/%3): Geen array
+3700;51;%1 (%2/%3): Geen Integer
+3700;52;%1 (%2/%3): Geen routine
+3700;53;%1 (%2/%3): Ongeldig bereik
+3700;55;%1 (%2/%3): Opsommingsconstante gebruikt
+3700;56;%1 (%2/%3): Type reeds gedefinieerd: %4
+3700;57;%1 (%2/%3): Geen bouwsteen
+3700;58;%1 (%2/%3): Niet-private definitie gebruikt privaat type
+3700;59;%1 (%2/%3): Verkeerde lengte tekenreeks
+3700;60;%1 (%2/%3): Cyclische constanten-definitie
+3700;61;%1 (%2/%3): User-object verwacht
+3700;62;%1 (%2/%3): Abstracte routines moeten leeg zijn
+3700;63;%1 (%2/%3): Een abstracte routine maf alleen gedeclareerd worden in abstracte bouwstenen
+3700;64;%1 (%2/%3): De abstracte routine werd in de bouwsteen '%4' niet overschreven
+3700;65;%1 (%2/%3): Elementen van varianten mogen geen referenties bevatten
+3700;66;%1 (%2/%3): Verkeerd type (verwacht: %4)
+3700;67;%1 (%2/%3): Types van geëxporteerde variabelen mogen geen referenties bevatten
+3700;71;%1 (%2/%3): Naam niet gedefinieerd: %4
+3700;72;%1 (%2/%3): Naam reeds gedefinieerd: %4
+3700;73;%1 (%2/%3): Ongeldige naam: %4
+3700;74;%1 (%2/%3): Geen opsommingsconstante: %4
+3700;75;%1 (%2/%3): Geen sprongdoel: %4
+3700;76;%1 (%2/%3): Sprongmarkering niet gedefinieerd: %4
+3700;77;%1 (%2/%3): Ongeldige definitie van het globale bouwsteenelement
+3700;78;%1 (%2/%3): Geen toegang tot privaat bouwsteenelement
+3700;79;%1 (%2/%3): Naam te lang
+3700;80;%1 (%2/%3): Lokale naam reeds globaal gedefinieerd: %4
+3700;81;%1 (%2/%3): Geen variabele
+3700;82;%1 (%2/%3): Export mislukt, '%4' bestaat reeds
+3700;96;%1 (%2/%3): Geen programmabestand voor dit gegevensbestand gevonden
+3700;97;%1 (%2/%3): Geen SAVE of PROJECT-attribuut toegestaan
+3700;98;%1 (%2/%3): Varianten kunnen geen bouwsteenelementen met SAVE-attributen gebruiken.
+3700;99;%1 (%2/%3): Consistentiecontrole mislukt
+3700;100;%1 (%2/%3): Niet gedeclareerd als Save-variabele
+3700;101;%1 (%2/%3): Er bestaat reeds een programma met SAVE PROJECT variabelen met dezelfde naam in project %4
+3700;102;%1 (%2/%3): Geen EXPORT attribuut toegestaan
+3700;111;%1 (%2/%3): Te weinig parameters
+3700;112;%1 (%2/%3): Te veel parameters
+3700;113;%1 (%2/%3): Ongeldige parameter
+3700;114;%1 (%2/%3): Geen returnwaarde
+3700;115;%1 (%2/%3): Routine past niet bij de definitie in de basisklasse
+3700;116;%1 (%2/%3): Geen gebeurtenisroutine
+3700;117;%1 (%2/%3): Verkeerde routine
+3700;119;%1 (%2/%3): Onbenoemde routines zijn in bouwstenen niet toegestaan
+3700;120;%1 (%2/%3): Recursieve programma-oproep: %4
+3700;131;%1 (%2/%3): Index ligt buiten de grenzen
+3700;132;%1 (%2/%3): Deling door nul
+3700;133;%1 (%2/%3): Geen toekenningsdoel
+3700;134;%1 (%2/%3): Ongeldige term
+3700;135;%1 (%2/%3): Ongeldige sprong
+3700;136;%1 (%2/%3): Geen constante
+3700;138;%1 (%2/%3): Ongeldige gehele getalwaarde
+3700;139;%1 (%2/%3): Te veel routine-oproepen
+3700;140;%1 (%2/%3): Te veel variabelen
+3700;141;%1 (%2/%3): SELECT-instructie in bouwstenen niet toegestaan
+3700;142;%1 (%2/%3): Waarde buiten het bereik
+3700;143;%1 (%2/%3): Fout in de initialisatie
+3700;144;%1 (%2/%3): Niet alle pads hebben een Return-Statement
+3700;145;Schrijven op %1 %4 niet uitgevoerd - externe veranderingen van bestand
+3700;146;%1 (%2/%3): De instructie moet volledig geactiveerd of gedeactiveerd zijn
+3700;147;%1 (%2/%3): String constante te lang
+3700;148;%1 (%2/%3): CASE-geval niet bereikbaar
+3700;150;Project %1 / Pass %2
+3700;151;Project %1 / Pass %2 overgeslaan
+3700;152;%1 Bestanden overgedragen
+3700;153;%1 (%2/%3): Overloop in de interne functie '%4'
+3700;170;Gegevensbestand kan niet geschreven worden %1
+3700;171;Timer %1 bestaat niet, in de plaats daarvan met systeemcyclus verbonden.
+3700;172;De opgegeven WorkPath-directory bestaat niet: %1
+3700;173;Applicatiedirectory '_system.tt' bestaat niet of bevat geen TeachTalk bestand
+3700;174;%1 (%2/%3): Element %4 %5 wordt niet gereferentieerd
+3700;196;Onvoldoende geheugen voor project %1 (%2)
+3700;197;Projectnaam %1 wordt reeds gebruikt
+3700;198;Projectnaam %1 ongeldig
+3700;199;Project %1 bevat fouten, %2 Errors
+3700;201;%1 (%2/%3): Geen returnwaarde
+3700;202;%1 (%2/%3): Timer met negatieve tijd gezet
+3700;205;%1 (%2/%3): Bouwsteen voor SELECT-instructie kon niet gevonden worden
+3700;206;%1 (%2/%3): Fout in het applicatieprogramma - deling door nul
+3700;207;%1 (%2/%3): Geen IEC-gebeurtenis
+3700;209;%1 (%2/%3): Fout in het applicatieprogramma - index %4 ligt buiten de grens %5..%6
+3700;210;%1 (%2/%3): Fout in het applicatieprogramma - toegang tot niet-gemappede variabele %7
+3700;211;%1 (%2/%3): Geen parameter
+3700;212;%1 (%2/%3): Toegang tot verkeerde variant
+3700;213;%1 (%2/%3): Waarde buiten het bereik
+3700;214;%1 (%2/%3): Ongeldige type-omzetting
+3700;215;%1 (%2/%3): Geen geheugenruimte (%7)
+3700;216;%1 (%2/%3): Waarde buiten het bereik
+3700;218;%1 (%2/%3): Te veel variabelen
+3700;219;%1 (%2/%3): THIS nog niet gedefinieerd
+3700;220;%1 (%2/%3): Programma starten niet mogelijk, programma draait al
+3700;221;%1 (%2/%3): ANY-output-parameters van firmwarefuncties mogen geen referenties bevatten
+3700;222;%1 (%2/%3): Ongeldig gebruik van een extern gemappede functie
+3700;251;%1 (%2/%3): Tijdslimit voor uitvoering van de routine overschreden, PRIO %5
+3700;252;%1 (%2/%3): Te veel actieve routines
+3700;253;%1 (%2/%3): Tijdslimit (stmtLimit) voor uitvoering van de routine overschreden
+3700;254;%1 (%2/%3): Externe mapping mislukt : %4
+3700;255;%1 (%2/%3): Te veel tijd tussen WAIT-instructies
+3700;256;%1 (%2/%3): De vergrendeling vroegtijdig opgeheven
+3700;257;%1 (%2/%3): Routine kan niet gestopt worden aangezien ze opgeroepen werd '%4'
+3700;258;%1 (%2/%3): Updateterm werd ongeldig
+3700;259;%1 (%2/%3):  WAIT of UPDATE op Shared Memory %4 zonder geactiveerde signalisering uitgevoerd 
+3700;260;%1 (%2/%3): Tijdslimit bij instructie overschreden
+3700;261;De Interpreter overschreed de volgende cyclus
+3700;280;LoadGlobal
+3700;281;UnloadGlobal
+3700;282;LoadProject %1
+3700;283;UnloadProject %1
+3700;284;StartProgram %1
+3700;285;LoadSystem
+3700;290;Variabele %2 (type: %3) veranderd (deel %1)
+3700;291;Variabele (oude waarde: %2) veranderd (deel %1)
+3700;292;Variabele (nieuwe waarde: %2) veranderd (deel %1)
+3700;400;Te weinig geheugen voor de TeachControl-Heap
+3700;401;Client %1 (ID %2) afgemeld, te lang inactief.
+3700;402;Fout bij het extraheren van het archiefbestand %1 
+3700;403;TC User0 (part %1): stringI: %2, ParamI(h): %3, ParamI(l): %4, ParamII(h): %5, ParamII(l): %6
+3700;404;TC User0 (part %1): stringII: %2, ParamIII(h): %3, ParamIII(l): %4, ParamIV(h): %5, ParamIV(l): %6
+3700;405;TC User0 (part %1): format: %2
+3700;406;Project '%1' kan niet geactiveerd worden
+3700;407;%1 (%2/%3): Gebruik van de DEPRECATED-routine '%4 '
+4000;1;******* Versie: %1 *******
+4000;2;Incompatibele versie PCALL Header-files (%1). Minstens versie %2 vereist
+4000;10;Functie %1 nog niet geïmplementeerd.
+4000;11;Cyclustijd voor MCU-update overschreden (%1 %%)
+4000;15;Fout bij het creëren van het eindpunt '%1': %2 (%3)
+4000;16;Het aanmelden van het eindpunt-type '%1' is mislukt.
+4000;17;Ongeldig TimeStep object
+4000;18;Nummer meldingsinstantie is altijd 0.
+4000;20;ProcedureCall '%1' niet gevonden.
+4000;25;%1: Een Message Queue (%2) is overgelopen.
+4000;30;%1: Bestand: '%2' (%3) kan niet geopend worden.
+4000;31;%1: Fout bij het schrijven op bestand '%2' (%3)
+4000;32;%1: Fout bij het lezen van bestand '%2' (%3)
+4000;33;%1: Fout bij het wissen van een bestand '%2' (%3)
+4000;51;Ongeldig object (ID %1) kon niet aan de database toegevoegd worden
+4000;52;Applicatiefout: Object <%3> %2 (address: %1) kan niet in MCU database opgenomen worden
+4000;53;Functie-oproep %1 met onbestaand object <%2> (ID %3)
+4000;54;Functie-oproep %1 met verkeerd object <%2> (ID %3)
+4000;55;Object met ID <%1> is niet van het type <%2> (%3)
+4000;56;De MCU-geheugenpool van het systeem is uitgeput (%1 kB bezet)
+4000;57;De MCU-Heap van het systeem is uitgeput. (geconfigureerde grootte: %1 kB)
+4000;58;Robot stop, wegens te klein geconfigureerde MCU database. (configuratie-invoer: dataBaseSize = %1)
+4000;59;Kinematisch systeem (%1) mag niet gewist worden
+4000;70;Gebruikersfactor database reeds %1 %%
+4000;71;Reeds vrijgegeven object %1 (ID %2) wordt opnieuw gebruikt (%3)
+4000;100;Ongeldige gegevens bij transformatie %1 (ID %2)
+4000;101;Transformatie %1 (ID %2) gebruikt ongeldig update-object (adres: %3)
+4000;102;Recursieve definitie van het referentiesysteem %3 (ID %4) bij transformatie %1 (ID %2)
+4000;103;Transformatie %1 (ID %2) gebruikt een ongeldig referentiesysteem (%3)
+4000;104;Update mislukt (update obj. %3) bij transformatie %1 (ID %2)
+4000;130;Aantal hulpassen %3 (max. %4) in positie %1 (ID %2) te groot.
+4000;131;Positie %1 (ID %2) van kin. syst. %3 (ID %4) is niet compatibel met positie %5 (ID %6) van kin. syst. %7 (ID %8)
+4000;132;Positie %1 (ID %2) met %3 hulpassen is niet compatibel met pos. %4 (ID %5) met %6 hulpassen
+4000;133;Ongeldige baanpositie: Baan %1 (ID %2), bewegingsinstructie %3 (ID %4), parameter %5
+4000;134;Aantal hoofdassen (%1) van positie %2 is niet compatibel met kinematisch systeem %3 (%4 hoofdassen)
+4000;135;Aspositie %1 is toegekend aan ongeldig kinematisch systeem.
+4000;136;Aantal hoofdassen (%1) is kleiner dan het aantal handassen (%2) in positie (%3).
+4000;137;Ongeldig Joint-Offset object (ID %1) op positie %2 in database
+4000;138;Bepaling WristJoint positie %1met Joints-Offset-object of bewogen referentiesysteem niet mogelijk
+4000;159;Rij-instructie %1, parameter%2
+4000;160;Ongeldige positie %1 in rij-instructie %2 (ID %3)
+4000;161;Bewegingsinstructie %1 (ID %2) bevat ongeldig interpolatie-object
+4000;162;Ongeldige hulppositie voor cirkel in bewegingsinstructie %1 (ID %2)
+4000;163;Kan cirkel in rij-instructie (ID %2) niet berekenen.
+4000;164;Doel-mode %4 in bewegingsinstructie %1 (ID %2) niet bereikbaar (kin. syst. %5, actuele mode: %3)
+4000;165;Ongeldig oriëntatie-interpolatietype: %1
+4000;166;Geconfigureerd max. koppel voor as %1 te klein: %2. Koppelbegrenzing niet mogelijk.
+4000;167;Incompatibel oriëntatie-interpolatietype %1 in spline-rij-instructie %2 (ID %3)
+4000;168;Incompatibel tool %1 (ID %2) in spline-rij-instructie %3 (ID %4)
+4000;170;"Kinematisch systeem <%5> kan niet op baan <%4> gezet worden, verkeerde mode (%2); baanpositie vereist mode %3 - <%1>"
+4000;171;"Door de gebruiker opgegeven mode (%3) Rij-instructie %4 past niet bij de startmode (%2); Kinematisch systeem %5 - <%1>"
+4000;172;Planned cart. target mode (%2) of %6-segment %4 not reachable by kinematic %5, because mode of target position <%7> = %3 - <%1>
+4000;173;Planned cart. target mode (%2) of %6-segment %4 not reachable by kinematic %5, because mode of target position <%7> = %3 - <%1>
+4000;174;Mode van de startpositie (%3) van %6-segment %4 komt niet overeen met doelmode (%2) van het vorige segment, kinematisch systeem %5 - <%1>
+4000;175;"%2mode van de startpositie van %5-segment %3 is onbekend; Kinematic %4 - <%1>"
+4000;176;"Mode van de startpositie (%2) van segment %4 is waarschijnlijk en verschilt van de gebruikersmode (%3); Kinematisch systeem %5 - <%1>"
+4000;177;"Doelmode (%2) van segment %4 verschilt van de doelmode (%3) van de positie; Kinematisch systeem %5 - <%1>"
+4000;178;"Geen afronding wegens verschil tussen startmode afronding (%2) en doelmode (%3) van het segment %4; Kinematisch systeem %5 - <%1>"
+4000;180;PTP op bewogen object %1 (ID %2)
+4000;181;Rij-instructie bij bewogen object te kort: %1 %2 (ID %3)
+4000;182;Te grote oriëntatieverandering met betrekking tot het cirkelniveau van %1 graden (max. %2 graden) bij segment %3 (ID %4)
+4000;200;Ongeldige afrondingsgegevens: Baan %1 (ID %2), segmentpositie op baan: %3
+4000;201;Ongeldige segment-handler: Baan %1 (ID %2), segmentpositie op baan: %3
+4000;202;Ongeldige baangegevens in baan %1 (ID %2)
+4000;203;Ongeldig versnellingsprofiel in baan %1 (ID %2)
+4000;204;Nieuwe rij-instructie werd wegens verkeerde parameters niet aangenomen (ID %1) bij baan %2 (ID %3)
+4000;205;Segment-handler %1 niet in baan %2 (ID %3) gevonden
+4000;206;Parameterberekening voor beschikbare afrondingsgegevens mislukt
+4000;207;Baan met ID %1 bestaat niet.
+4000;208;McuClearPath onmogelijk. Kinematisch systeem staat nog op baan %1
+4000;209;Ongeldige ID kinematisch systeem %1 voor baan-ID %2.
+4000;210;Doelmode voor het cartesisch buitenrijden uit de handassingulariteit niet gezet (%1 (ID %2))
+4000;211;Geen macro regelnummer in de gebruikersgegevens van positie %1 opgeslagen
+4000;212;Functie op object %1 (ID: %2) eindigt niet
+4000;230;Ongeldige afrondingsgegevens %1 (ID %2)
+4000;231;Afrondingsgegevens voor niet-overlappend segment beschikbaar
+4000;232;Ontbrekend interpolatie-object voor afrondingsgegevens %1 (ID %2) Type: %3
+4000;233;Ongeldige segment-handler voor berekening afronding %1 (ID %2) Type: %3, SegHdl1: %4 SegHdl2: %5
+4000;234;Positie afronding %1 kon niet berekend worden. Bewegingsinstructie %2 (ID %3)
+4000;235;Ongeldige wachttijd %3 in afrondingsgegevens %1 (ID %2)
+4000;236;Ongeldige %3 parameter (%4) in afrondingsgegevens %1 (ID %2)
+4000;237;Ongeldig afrondingstype %1
+4000;238;Ongeldige definitietype afronding %1
+4000;260;Ongeldige dynamische gegevens %1 (ID %2), componentengroep %3
+4000;261;Ongeldig versnellingsprofiel in dynamica %1 (ID %2)
+4000;262;Ongeldig remprofiel in dynamica %1 (ID %2)
+4000;263;Dynamische gegevens %1 (ID %2): Componentengroep %3 ongeldig
+4000;264;Geprogrammeerde cart. snelheid %4 (component %3) moet groter zijn dan 0. Dynamica %1 (adr. %2) ongeldig.
+4000;265;Geprogrammeerde cart. versnelling %4 (component %3) moet groter zijn dan 0. Dynamica %1 (adr. %2) ongeldig.
+4000;266;Geprogrammeerde cart. afremming %4 (component %3) moet groter zijn dan 0. Dynamica %1 (adr. %2) ongeldig.
+4000;267;Geprogrammeerde cart. schok %4 (component %3) moet groter zijn dan 0. Dynamica %1 (adr. %2) ongeldig.
+4000;268;Profiel %1 (ID %2) bevat ongeldige gegevens
+4000;269;Kin. syst. %1 (ID %2): Verhoogde snelheid %4 bij gereduceerde dynamica (comp. %3). Waarde uit reguliere dynamica gebruikt.
+4000;270;Geprogrammeerde snelheid %5 voor as %4 (component %3) moet groter zijn dan 0. Dynamica %1 (adr. %2) ongeldig.
+4000;271;Geprogrammeerde versnelling %5 voor as %4 (component %3) moet groter zijn dan 0. Dynamica %1 (adr. %2) ongeldig.
+4000;272;Geprogrammeerde afremming %5 voor as %4 (component %3) moet groter zijn dan 0. Dynamica %1 (adr. %2) ongeldig.
+4000;273;Geprogrammeerde schok %5 voor as %4 (component %3) moet groter zijn dan 0. Dynamica %1 (adr. %2) ongeldig.
+4000;274;Asymmetrische helling %1 (type %2) wordt niet ondersteund, werd gecorrigeerd op symmetrisch.
+4000;300;Geen inverse transformatie van het kinematische systeem %1 (ID %2) beschikbaar
+4000;301;"Robot stop wegens vorige fout; Kinematisch systeem %1 (ID %2), rij-instructie %3 (ID %4), parameter %5"
+4000;302;Robot-type (%1 assen) is niet compatibel met kinematisch systeem %2 (%3 assen geconfigureerd)
+4000;303;Kinematisch systeem %1: Inverse transformatie alleen mogelijk wanneer voorwaartse transformatie = IN
+4000;304;Kinematisch systeem %1: Robot-type nodig voor het specificeren van een geschikte robot-transformatie
+4000;305;Aan het kinematisch systeem %1 is geen geldige default-dynamicarecord toegekend
+4000;306;Aan het kinematisch systeem %1 is geen geldige default-afrondingsrecord toegekend
+4000;308;Eerst McuStopInterpolator() voor kinematisch systeem <%1> oproepen
+4000;309;Ongeldige ID kinematisch systeem <%1>
+4000;310;Ongeldige component %1 voor kinematisch systeem (ID %2)
+4000;311;Waarschuwingstijd (%2 s) voor kinematisch systeem %1 groter dan ingestelde vooruitzicht-tijd (%3 s). Waarschuwingstijd op %3s gezet.
+4000;312;Voorwaartse transformatie voor kinematisch systeem '%1' (ID %2) niet ondersteund
+4000;313;Creëren van een kinematisch systeem niet mogelijk - grenswaarde snelheid <%1> voor as %2 te klein
+4000;314;Creëren van een kinematisch systeem niet mogelijk - versnellingslimit <%1> voor as %2 te klein
+4000;315;Creëren van een kinematisch systeem niet mogelijk - grenswaarde versnelling <%1> voor as %2 te klein
+4000;316;Creëren van een kinematisch systeem niet mogelijk - grenswaarde afremming-versnelling <%1> voor as %2 te klein
+4000;317;Geen Wrist-Invers-transformatie beschikbaar voor kinematisch systeem %1 (ID %2)
+4000;318;Geen voorwaartse transformatie geconfigureerd voor kinematisch systeem %1 -> gebruik dummy robot
+4000;319;%1 (as %2): Ongeldige waarde voor 'Incrementen per omwenteling' (teller: %3 Noemer: %4)
+4000;330;Vorige opdrachtinstructie nog niet verwerkt
+4000;331;Geen event-handle gespecificeerd voor opdracht <%1>
+4000;332;Minimale waarschuwingstijd voor %2 (ID %1) niet naleefbaar: %3 in de plaats van %4
+4000;333;Opdracht %2 (ID %1) heeft een ongeschikte niveauspecificatie
+4000;334;Signaalruimte %2 (ID %1) werd geactiveerd
+4000;335;Job %1 is reeds toegekend aan kinematisch systeem (%2, %3)
+4000;336;Foutieve tijdsinschatting voor job %2 (ID %1): %3 ms (geconfigureerde limit: %4 ms)
+4000;337;Foutieve tijdsinschatting voor job %2 (ID %1) door ingreep vooruitzicht-limiter: %3 ms (geconfigureerde limit: %4 ms)
+4000;338;Ongeldige segmentparameter (%1) voor de job %2
+4000;339;Trigger Job met waarschuwingstijd %2 (ID %1) is niet mogelijk zonder vooruitzicht.
+4000;340;Trigger Job met ingeschatte tijd %2 (ID %1) is niet mogelijk - Verbinding met vooruitzicht-buffer mislukt.
+4000;360;Vorige instructie werkruimte nog niet verwerkt
+4000;361;Kin. syst. %1 betreedt sperruimte %4 met grijper %5 (nr. %6) terwijl bewegingsinstructie %2 (param. %3) uitgevoerd wordt
+4000;362;Kin. syst. %1 verlaat werkruimte %4 met grijper %5 (nr. %6) terwijl bewegingsinstructie %2 (param. %3) uitgevoerd wordt
+4000;363;Toekenningsobject werkruimte %1 (ID %2) is reeds toegekend aan een kinematisch systeem
+4000;364;Toekenningsobject werkruimte %1 (ID %2) kon niet verwijderd worden van het kinematisch systeem
+4000;365;Ongeldige grootte werkruimte of sperbereik %1
+4000;366;Kin. syst. %1: Overschrijding werk-/sperbereik treedt op bij de cartesische positie [%2 %3 %4] (World.
+4000;367;De eindpositie van segment %1 ligt in de geblokkeerde ruimte %2 met grijper %3 (nr. %4) van het kinematisch systeem %5
+4000;390;Aantal gecreëerde grijperoffsets (%2) overschreden (max:%1)
+4000;400;Verkeerd asnummer %1 in servomodule van kinematisch systeem %2 tijdens proces %3
+4000;401;Kinematisch systeem %1 kon servogegevens van het Shared Memory %2 niet lezen.
+4000;402;Fout bij de toegang tot het Shared Memory (%1) van een servo, kinematisch systeem %2 (as nr. %3)
+4000;403;Applicatiefout: Ongeldige servotoestand door MCU vastgesteld, robotbeweging niet toegestaan (servostatus: %1, kinematisch systeem: %2, as: %3
+4000;404;Servo voor as '%2' kon niet verbonden worden met kinematisch systeem %1
+4000;405;Kinematisch systeem %1: Cyclustijd van de aandrijving '%2' (%3) en die van het kinematisch systeem verschillen (%4)
+4000;406;Kinematisch systeem %1: Eindpunt voor aandrijving '%2' (%3) niet gevonden
+4000;407;Kinematisch systeem %1: Aandrijving '%2' in de verkeerde positiemode (%3, verwacht: %4)
+4000;408;Kinematisch systeem %1 (as %2): Zetten van de positie niet mogelijk. Kinematisch systeem is gestart.
+4000;409;Kinematisch systeem %1 (as %2): Zetten van de positie niet mogelijk. Aandrijving in de fouttoestand.
+4000;410;Kinematisch systeem %1 (as %2): Zetten van de positie niet mogelijk. Aandrijving is niet gereferentieerd.
+4000;411;Kinematisch systeem %1 (as %2): Mastering niet mogelijk. Ongeldige afstand tussen twee nul-impulsen (%3).
+4000;412;Kinematic %1 (as %2): Mastering niet mogelijk. Ongeldige transmissieverhouding.
+4000;413;Kinematisch systeem %1 (as %2): Referentiëren met nul-impuls: As niet gemasterd.
+4000;414;Kinematisch systeem %1 (as %2): Afstand tot nul-impuls te groot.
+4000;415;Kinematisch systeem %1 (as %2): Referentiëren niet mogelijk. As hangt via transmissiematrix af van Modulo-as (as %3).
+4000;416;Kinematisch systeem %1 (as %2): Zetten van de positie niet mogelijk. Afhankelijke as niet gereferentieerd (as %3).
+4000;420;Kinematisch systeem %1 (as %2): Aandrijving meldt verlies van de referentiëring.
+4000;421;Kinematisch systeem %1: As %2: Verlies van de referentiëring.
+4000;422;Kinematic %1, Joint %2: gear ratio has changed.
+4000;423;Fout bij het verbinden op het Shared-Memory: %1 (%2)
+4000;424;180[)
+4000;425;Kinematisch systeem %1 (as %2): Herpositioneren van de aandrijving is niet mogelijk. Het kinematisch systeem is niet gereed.
+4000;427;Incompatibele interface-versie van de AXIS-PORT: %1 (expected: %2)
+4000;430;Instructie SetPathPos heeft ongeldige baanpositie (ID %1)
+4000;432;Instructie <%1> heeft ongeldige parameter <%2>: <%3>
+4000;433;Applicatiefout: MCU instructie <%3> niet toegestaan, kinematisch systeem <%1> (ID %2) nog in beweging
+4000;434;Instructie <%1> verzonden aan niet-geregistreerd kinematisch systeem <%2> (ID %3)
+4000;435;Instructie <%1>: Kinematisch systeem <%2> (ID %3) staat op baan <%4> (ID %5), niet op baan <%6> (ID %7)
+4000;436;Instructie <%1> verzonden aan ongeldig kinematisch systeem <%2> (ID %3)
+4000;437;Plaatsen van het kinematisch systeem <%1> (ID %2) op baan <%3> (ID %4) leidt tot een sprong.
+4000;438;Segment <%1> (ID %2) leidt tot een sprong in de baan <%3> (ID %4)
+4000;439;Laatste SetPathPos instructie werd nog niet afgewerkt
+4000;450;Kinematisch systeem <%1> (ID %2) nog niet READY voor instructie <%3>
+4000;451;Kinematisch systeem <%1> (ID %2) nog niet op baan voor instructie <%3>
+4000;452;Instructie SetTimeOverride aan kinematisch systeem %1 heeft ongeldige parameter %2
+4000;453;Instructie SetTimeOverrideFactor aan kinematisch systeem %1 heeft ongeldige parameter %2
+4000;454;Instructie MoveToTarget: Positie Seg. nr. %2 Param %3 voor kinematisch systeem %1 is reeds gepasseerd
+4000;455;Instructie MoveToTarget: Kinematisch systeem %1 staat op lege baan %2
+4000;460;Kinematisch systeem %1 werd niet geregistreerd bij de MCU-uitvoeringseenheid
+4000;462;Instructie %1, verzonden aan kinematisch systeem %2, is mislukt
+4000;463;Te veel bewogen referentiesystemen: %1
+4000;464;Alleen bewogen referentiesystemen kunnen geregistreerd worden
+4000;465;Aslimiter kan alleen geactiveerd worden bij een gedeactiveerde momentlimiter (KinID %1)
+4000;480;Vooruitzicht-interpolator staat achter (hoofdint.: %1 %2 Vooruitzicht: %3 %4)
+4000;481;%1-interpolatie voor kinematic %2 failed (SectionNr: %3, SectionTime: %4).
+4000;482;Tijd vooruitzicht is 0 bij %1
+4000;500;"%8 Cart. positie overschrijdt grenswaarde (%4) met %1 %%; Component: %2, Waarde: %3, Rij-instructie (%5) %6 Parameter %7"
+4000;501;"%8 Cart. oriëntatie overschrijdt grenswaarde (%4) met %1 %%; Component: %2, Waarde: %3, Rij-instructie (%5) %6 Parameter %7"
+4000;502;"%8 Aspositie overschrijdt positiegrenswaarde; Basisas: %2, Waarde: %3, Grenswaarde: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;503;"%8 Aspositie overschrijdt positiegrenswaarde; Handas: %2, Waarde: %3, Grenswaarde: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;504;"%8 Aspositie overschrijdt positiegrenswaarde; Hulpas: %2, Waarde: %3, Grenswaarde: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;505;"%8 Cart. snelheid overschrijdt grens met %1 %%, component: %2; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;506;"%8 Cart. oriëntatiesnelheid overschrijdt grens met %1 %%, component: %2; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;507; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7%
+4000;508; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7
+4000;509; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7
+4000;510;"%8 Cart. versnelling overschrijdt grens met %1 %%, component: %2; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;511;"%8 Cart. oriëntatieversnelling overschrijdt grens met %1 %%, component: %2; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;512; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7%
+4000;513; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7%
+4000;514; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7%
+4000;515;"%8 Cart. schok overschrijdt grens met %1 %%, component: %2; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;516;"%8 Cart. oriëntatieschok overschrijdt grens met %1 %%, component: %2; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;517; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7
+4000;518; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7
+4000;519; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7
+4000;520;Voorwaartse transformatie voor kinematisch systeem %1 moet geactiveerd zijn om cartesische dynamicabewaking mogelijk te maken
+4000;521;Verkeerd type werd bij UnLockAppend gebruikt: LockType(%1) - UnLockType(%2)
+4000;522;"Grenswaarde voor som van de handashoeken overschreden; actuele waarde: %1, Grenswaarde: %2, bewegingsinstructie (%3): %4, parameter: %5"
+4000;523;%7Positie van as %1 springt (nieuwe positie: %2, oude positie: %3) in rij-instructie (%4) %5, parameter %6
+4000;530;Rij-instructie %1 (%2): Snelh. met %3 %% verlaagd (d.b. %4 %% van de geprogrammeerde snelheid)
+4000;531;Aslimiter ON: %1, parameter: %2
+4000;532;Aslimiter OFF: %1, parameter: %2, MaxPosDeviation: %3, MaxOriDeviation: %4
+4000;533;Robot stop, wegens te grote baanafwijking: %1, geconfigureerde grenswaarde: %2
+4000;534;Interpolatie loopt niet verder door een interne fout
+4000;535;De ingestelde maximale slipfout (%3) voor een as (%1) werd overschreden: Slipfout %2
+4000;550;Kinematisch systeem %3 (ID %4) heeft geen Invers-transformatie voor %1 (ID %2)
+4000;551;Positie van %1 (ID %2) door kinematisch systeem %3 (ID %4) niet bereikbaar
+4000;552;Oriëntatie van %1 (ID %2) door kinematisch systeem %3 (ID %4) niet bereikbaar
+4000;553;Basisassen van kinematisch systeem %3 (ID %4) zijn bij %1 (ID %2) enkelvoudig
+4000;554;Handassen van kinematisch systeem %3 (ID %4) zijn bij %1 (ID %2) enkelvoudig
+4000;555;Kinematisch systeem %3 (ID %4) is enkelvoudig bij %1 %2
+4000;556;Kinematisch systeem %3 (ID %4) toont slechte convergentie bij %1 (ID %2)
+4000;557;Fout-bit 4 werd gezet tijdens invers-transformatie
+4000;558;Fout-bit 8 werd gezet tijdens invers-transformatie
+4000;559;Kinematisch systeem %3 (ID %4) heeft geen Invers-transformatie voor %1 (ID %2) geïmplementeerd
+4000;560;Ongeldige parameters voor invers-transformatie van %1 (ID %2) door kinematisch systeem %3 (ID %4)
+4000;571;<%1> Positie niet bereikbaar door kinematisch systeem %2 bij %3
+4000;572;<%1> Oriëntatie niet bereikbaar door kinematisch systeem %2 bij %3
+4000;573;<%1> Basisas van kinematisch systeem %2 is enkelvoudig bij %3
+4000;574;<%1> Handassen van kinematisch systeem %2 zijn enkelvoudig bij %3
+4000;575;<%1> Kinematisch systeem %2 is enkelvoudig bij %3
+4000;576;<%1> Kinematisch systeem %2 toont slechte convergentie van de interpolatie bij %3
+4000;577;<%1> Kinematisch systeem %2 toont numerieke instabiliteiten in de dynamicaberekening bij %3
+4000;578;<%1> Kinematica %2 heeft geen inverse transformatie geïmplementeerd voor %3
+4000;579;<%1> Ongeldige parameters voor inverse transformatie van kinematisch systeem %2 bij %3
+4000;600;Geconfigureerd robot-type %1 niet beschikbaar.
+4000;601;Geen kinematisch systeem in MCU-configuratiebestand opgegeven
+4000;602;Geen timer voor MCU gespecificeerd. Alle MCU-taken gestopt.
+4000;603;Kan MCU-timer <%1> niet vinden
+4000;604;Ongeldig astype <%1>
+4000;605;Geen configuratiegegevens voor as <%1> gevonden
+4000;606;Geconfigureerd frame-type <%1> niet beschikbaar.
+4000;607;Configuratie-invoeren van verborgen as ontbreken
+4000;608;In het configuratiebestand van het kinematisch systeem werd een invers-transformator zonder voorwaartse transformator geconfigureerd.
+4000;609;Geconfigureerd filter-type %1 is niet beschikbaar.
+4000;610;De opgegeven filterklasse %2 van de filter %1 komt niet overeen met het aantal filtercoëfficiënten %3.
+4000;611;De opgegeven filtercoëfficiënten overschrijden de maximaal toegestane lengte (%1).
+4000;612;Een %1-filter heeft juist %2 coëfficiënten nodig (er zijn er maar %3 beschikbaar)
+4000;613;Referentiesysteem <%1> van geconfigureerd referentiesysteem: %2 zit niet in de database
+4000;614;Geconfigureerde vooruitzicht-tijd (%1) overschrijdt de maximaal toegelaten waarde (%2)
+4000;615;Te weinig Heap-geheugen geconfigureerd voor de cyklische Logger (geconfigureerde grootte: %1). Default-grootte wordt gebruikt (%2).
+4000;616;Geconfigureerd asmode '%1' niet beschikbaar.
+4000;650;Besturingsinstructie <%1> geweigerd
+4000;651;Besturingsinstructie <%1> opgeroepen met ongeldige parameter.
+4000;652;Besturingsinstructie <%1> nog niet geïmplementeerd
+4000;653;Besturingsinstructie <%1> opgeroepen met ongeldige parameter <%2> = <%3>.
+4000;654;McuSearchDbObj() voor object-type %1 niet geïmplementeerd
+4000;655;Ongeldig frame-type: %1
+4000;656;Besturingsinstructie <%1> is niet geldig in deze versie.
+4000;670;McuReleaseDbObj: Object met ID %1 reeds vrijgegeven
+4000;671;Fout bij oproep %1
+4000;672;Poging tot oproepen van object dat niet in de database staat (adr. %1).
+4000;673;Kan MCU statusreport-bestand niet kopiëren van %1 naar %2
+4000;680;Functie-oproep <%1> met ongeldige parameter <%2> = <%3>
+4000;681;Bij de opgeroepen functie <%1> is de baan naar segment <%2> (ID: %3) ongeldig
+4000;682;Baanpositie voor herstart kan voor segment <%1> (ID: %2) niet berekend worden
+4000;683;Invoegen van SegHdlData in functie <%1> in MotionBuffer-lijst is mislukt
+4000;684;MotionBuffer instructie kon niet verwerkt worden
+4000;685;Toevoegen van segmenten van de MotionBuffer (ID: %1) aan de uitvoeringsbaan (ID: %2) is nog niet mogelijk
+4000;686;De MotionBuffer kon niet uit de ExecUnit-lijst gewist worden.
+4000;687;<%1> is niet mogelijk - %2 Bewaking zijn reeds actief (max. %3)
+4000;688;Er kunnen geen segmenten aan de MotionBuffer (ID: %1) toegevoegd worden
+4000;689;Testfunctie kan voor MotionBuffer (ID: %1) niet gestart worden
+4000;690;Toevoegen van segmenten van de MotionBuffer (ID: %1) aan de uitvoeringsbaan (ID: %2) is niet mogelijk
+4000;691;Er werd geprobeerd om een segment aan een geblokkeerde baan (ID: %1) toe te voegen
+4000;692;Uitlezen van NextSegSMemName mislukt (functie niet geactiveerd in configuratie)
+4000;693;Aantal toegestane nul-segmenten (max: %2) bij het toevoegen aan uitvoeringsbaan (ID: %1) overschreden
+4000;694;Aantal vastgelegde assen (%1) komt niet overeen met het aantal assen van het kinematisch systeem (ID: %2)
+4000;695;Verkeerd filternummer (%1). Er zijn slechts twee gestapelde asfilters waarvoor de filternummers 1 en 2 voorzien zijn
+4000;700;Interne foutmelding
+4000;701;Er werd geprobeerd om een negatief aantal assen in de robot-transformatie op te geven
+4000;702;Er werden te veel assen (%1, max. 8) in de robot-transformatie opgegeven
+4000;703;Ongeldig astype voor as %1 in robot-transformatie
+4000;704;Ongeldig aantal links in robot-transformatie
+4000;705;DH-parameter voor robot-transformatie niet geïnitialiseerd
+4000;706;Ongeldig aantal assen (%1) in asvector voor robot-transformatie
+4000;707;Ongeldig aantal regels (%1) in de Jacobi-matrix in robot-transformatie
+4000;708;Ongeldig aantal kolommen (%1) in de Jacobi-matrix in robot-transformatie
+4000;709;Ongeldige robotmode voor robot-transformatie
+4000;710;Ongeldige configuratie van de robotmode in robot-transformatie
+4000;711;Ongeldige Turn (%1) in robot-transformatie
+4000;712;Ongeldig aantal assen (%1)
+4000;713;Ongeldige D1 in DH-parameters voor EcopaintTransform
+4000;714;Ongeldige Alpha1 in DH-parameters voor EcopaintTransform
+4000;715;Ongeldige D2 in DH-parameters voor EcopaintTransform
+4000;716;Ongeldige A3 in DH-parameters voor EcopaintTransform
+4000;717;Ongeldige A4 in DH-parameters voor EcopaintTransform
+4000;718;Ongeldige A5 in DH-parameters voor EcopaintTransform
+4000;719;Ongeldige Alpha341 in DH-parameters voor EcopaintTransform
+4000;720;Ongeldig aantal assen (%1)
+4000;721;Ongeldige D%1 in DH-parameters voor Transform
+4000;722;Ongeldige A%1 in DH-parameters voor Transform
+4000;723;Ongeldige Alpha%1 in DH-parameters voor Transform
+4000;724;Ongeldige Theta%1 in DH-parameters voor Transform
+4000;725;Kon koppeling van de hulpassen niet berekenen
+4000;726;Ongeldig aantal basisassen (%1) in de overdrachtvector voor robot-transformatie
+4000;727;Ongeldig aantal handassen (%1) in de overdrachtvector voor robot-transformatie
+4000;728;Scara-robot kan met opgegeven DH-parameters niet geïdentificeerd worden
+4000;729;Robot-transformatie voor Scara-robot niet geïmplementeerd
+4000;730;Vanuit gewrichtspositie kan geen geldige TCP-positie berekend worden
+4000;731;Er is geen Semi-Scara robot beschikbaar voor de opgegeven DH-parameters
+4000;732;Bouwwijze van de SemiScara-robot is nog niet geïmplementeerd
+4000;733;Speciaal geval van Mode-wissel bij Wrist-Joint-interpolatie is in deze Kinematic niet beschikbaar.
+4000;734;Kinematic heeft minstens één redundante as.
+4000;751;Geen dynamisch robotmodel beschikbaar voor kinematisch systeem <%1>
+4000;752;Verkeerd aantal assen (%1 in de plaats van %2) opgegeven voor het dynamisch robotmodel (ID %3)
+4000;753;Massa voor as %1 mag niet negatief zijn
+4000;754;Traagheidsmoment Jxx voor as %1 mag niet negatief zijn
+4000;755;Traagheidsmoment Jyy voor as %1 mag niet negatief zijn
+4000;756;Traagheidsmoment Jzz voor as %1 mag niet negatief zijn
+4000;757;Veer-hefboomarm R voor as %1 mag niet negatief zijn
+4000;758;Veer-hefboomarm L voor as %1 mag niet negatief zijn
+4000;759;Veerstijfheid voor as %1 mag niet negatief zijn
+4000;760;Statische wrijvingscoëfficiënt voor aandrijving van as %1 mag niet negatief zijn
+4000;761;Visceuze wrijvingscoëfficiënt voor aandrijving van as %1 mag niet negatief zijn
+4000;762;Traagheid aandrijving voor aandrijving van as %1 mag niet negatief zijn
+4000;763;Overbrenging voor aandrijving van as %1 mag niet nul zijn
+4000;764;Maximaal koppel voor aandrijving van as %1 moet groter zijn dan nul
+4000;765;Verkeerd aantal assen (%2 in de plaats van %3) in Shared Memory %1
+4000;766;Traagheidsparameters van as %1 zijn fysisch inconsistent
+4000;767;Traagheidsparameters van tool %1 zijn fysisch inconsistent
+4000;768;Massa voor tool %1 mag niet negatief zijn
+4000;769;Traagheidsmoment Jxx voor tool %1 mag niet negatief zijn
+4000;770;Traagheidsmoment Jyy voor tool %1 mag niet negatief zijn
+4000;771;Traagheidsmoment Jzz voor tool %1 mag niet negatief zijn
+4000;772;Lagerkrachten kunnen slechts voor één as berekend worden (as %1 geselecteerd)
+4000;773;Positiefactor voor de aandrijving van as %1 mag niet 0 zijn
+4000;800;Tracking-parameters kunnen bij een geactiveerde tracking niet gezet worden
+4000;801;Frame-type voor trackings mag alleen in hoeken van Euler aangegeven worden
+4000;802;Opname Tracking-Logger gestart (SegNr: %1, TrsfID: %2 %3)
+4000;803;Opname Tracking-Logger gestopt (SegNr: %1, TrsfID: %2 %3)
+4000;804;Statusmelding Tracking-Logger: Samples: %1, overloop: %2, TrsfID: %3
+4000;805;Statusmelding Tracking-Logger: Bufferoverloop (geconfigureerde grootte: %1)
+4000;806;%1 schakelt Tracking-Logger in: NextSegNr: %2, TrackObj: %3
+4000;807;%1 schakelt Tracking-Logger uit: NextSegNr: %2, TrackObj: %3, Samples: %4, overloop: %5
+4000;810;Tijdfout bij Tracking-signaal
+4000;820;De som (%2) van alle FIR-filtercoëfficiënten (%1) is niet gelijk aan 1.
+4000;821;Ongeldige filtercoëfficiënt %1 = %2.
+4000;822;Ongeldige filterklasse (%1) van %2-filter
+4000;850;Aantal AreaJobs ongeldig (uitgevoerd: %1, in Starep: %2)
+4000;851;Aantal PlaneJobs ongeldig (uitgevoerd: %1, in Starep: %2)
+4000;852;Interne fout van de MCU test: Niet alle parameterjobs werden geactiveerd (werkelijk: %1, ingesteld: %2)
+4000;853;Aantal LimitJobs ongeldig (uitgevoerd: %1, in Starep: %2)
+4000;854;Job werd niet geactiveerd: %2 (ID %1) %3
+4000;900;%1.%2 Regel %3: As %4 dominant
+4000;901;%1.%2 Regel %3: %4 dominant
+4000;902;%1.%2 Regel %3: Prelimiter - %4%% van de geprogr. snelh. (SegNr %5)
+4000;903;%1.%2 Regel %3%4: Geometrie-limiter - %5%% van de geprogr. snelh. (SegNr %6)
+4000;904;%1.%2 Regel %3%4: Vooruitzicht-limiter - %5%% van de geprogr. snelh. (SegNr %6)
+4000;905;%1.%2 Regel %3%4: Hoofdloop-limiter - %5%% van de geprogr. snelh. (SegNr %6)
+4000;906;%1.%2 Regel %3%4: Aslimiter - Pos. afwijking: %5, Ori. afwijking: %6 (SegNr %7)
+4000;907;%1.%2 Regel %3%4: Kort segment - %5%% van de geprogr. snelh. (SegNr %6)
+4000;908;%1.%2 Regel %3: Volgende rij-instructie komt te laat (SegNr %4)
+4000;909;%1.%2 Regel %3%4: Spitse geometrie (vooruitzicht-limiter) - %5%% van de geprogr. snelheid (SegNr %6)
+4000;910;%1.%2 Regel %3%4: Vooruitzicht-limiter (cart. dyn.) - %5%% van geprogr. snelheid (SegNr %6)
+4000;911;%1.%2 Regel %3: Nul-segment - 0%% van de geprogr. snelheid (SegNr %4)
+4000;950;Transfer van een Motion buffer (ID: %1) onderbroken - Fout bij <McuAppendToPath>
+4000;951;<McuTerminateMotionBuffer> niet mogelijk - Transfer van Motion buffer (ID: %1) is juist actief.
+4000;970;Vooruitzicht buffer Logger status: Logger-buffer overloop. Geconfigureerde grootte: %1
+4000;971;Activering van de vooruitzicht-baansnelheidslimiter niet mogelijk omdat kinematisch systeem <%1> niet gestopt of limiter niet geconfigureerd werd.
+4000;972;Deactivering van de vooruitzicht-baansnelheidslimiter niet mogelijk, want kinematisch systeem niet gestopt.
+4000;980;Onbekende snelheid
+4000;981;Onbekende versnelling/koppel
+4000;982;Snelheid van aandrijving %1
+4000;983;Versnelling van aandrijving %1
+4000;984;Koppel van aandrijving %1
+4000;985;Cart. snelheid
+4000;986;Cart. versnelling
+4000;987;Cart. ori-snelheid
+4000;988;Cart. ori-versnelling
+4000;990;%1 overschrijdt grenswaarde, zelfs zonder baanvoortgang, bij %2
+4000;991;Aandrijving %2 overschrijdt op plaats %1 de versnellingsgrens ook zonder baanvoortgang
+4000;992;Aandrijving %2 overschrijdt op plaats %1 de koppelgrens ook zonder baanvoortgang
+4000;993;Op plaats %1 wordt de versnellingsgrens van de cartesische positie ook zonder baanvoortgang overschreden
+4000;994;Op plaats %1 wordt de versnellingsgrens van de cartesische oriëntatie ook zonder baanvoortgang overschreden
+4000;7000;Bewegingen buiten de eindschakelaars verboden
+4000;7001;Joint %1: positieve aseindpositie overschreden
+4000;7002;Joint %1: negatieve aseindpositie overschreden
+4000;7003;Positie niet bereikbaar
+4000;7004;Oriëntatie niet bereikbaar
+4000;7005;Positie is enkelvoudig
+4000;7006;Interne fout bij positieberekening
+4000;7007;Inverse transformatie niet berekenbaar
+4000;9000;Ongeldige waarden voor matrix-constructor
+4000;9001;Te weinig geheugen voor matrix-constructor
+4000;9002;Te weinig geheugen voor matrix-constructor
+4000;9003;Ongeldige index bij de toegang tot de matrix
+4000;9004;Ongeldige toekenning van matrices
+4000;9005;Ongeldige optelling van matrices
+4000;9006;Ongeldige aftrekking van matrices
+4000;9007;Ongeldige uitdrukking met matrices
+4000;9008;Ongeldige vermenigvuldiging vector/matrix
+4000;9009;Ongeldige transpositie van een niet-kwadratische matrix
+4000;9010;Inverteren van een matrix niet mogelijk (geen kwadratische matrix resp. groottebeperking)
+4000;9011;Inverteren van een matrix niet mogelijk (enkelvoudige matrix)
+4000;9900;Regel: %2 %1
+4000;9901;Regel: %2 %1
+4000;9902;Kritische fout in bestand: %1 Regel: %2
+4000;9903;Fatale fout in bestand: %1 Regel: %2
+4000;9904;Interne MCU fout: Object met ID %1 (%2) bestaat niet (%3)
+4000;9905;Object met adres %1 bestaat niet
+4000;9906;Interne MCU melding: Bestand %1, regel %2
+4000;9907;Ongeldige pointer in module %1 regel %2
+4000;9908;Interne melding: Bestand %1, regel %2
+4000;9909;Ongeldige blokkering van een database-object: %1 (ID %2)
+4000;9910;Ongeldige vrijgave van een database-object: %1 (ID %2)
+4000;9911;Vrijgave van een onbestaande leesblokkering. Object: %1 (ID %2)
+4000;9912;Vrijgave van een onbestaande schrijfblokkering. Object: %1 (ID %2)
+4000;9913;Object reeds geblokkeerd: %1 (ID %2)
+4000;9914;Blokkering van een onbestaand database-object
+4000;9915;Vrijgave van een onbestaand database-object
+4000;9950;Interne melding %1
+4000;9951;Poging om zich aan te melden bij een reeds vrijgegeven object (%1) ID %2 (%3)
+4000;9952;Poging om zich af te melden bij een ongeldig object (%4) (adr.obj2: %1, obj1: %2 %3)
+4000;9953;Ongeldig object (adr. %1) kan niet bekeken worden (%2)
+4000;9954;Wissen van een object dat nog gebruikt wordt (%1) ID: %2
+4000;9955;Cart. waarden voor %1: %2 %3 %4 %5 %6 %7
+4000;9956;Cart. waarden: %1 %2 %3 %4
+4000;9957;%1: %2
+4000;9958;Cart. waarden van %1 [ref: World]: %2 %3 %4 %5 %6 %7
+4000;9959;Cart. waarden van %1 [ref: Basis van kin. syst. %2]: %3 %4 %5 %6 %7 %8
+4000;9960;Stopvertraging in seg %1, param %2 (Ln%3) gedetecteerd (%4 updates)
+4000;9961;%1: Een PCall '%2' is mislukt (%3).
+4000;9962;StopMiss in seg %1, param %2 (Z.%3) vastgesteld (seg %4, param %5)
+4000;9963;StopUnreachable in seg %1, param %2 (Ln%3) vastgesteld (seg %4, param %5)
+4000;9964;%1 heeft %2 seconden nodig in de plaats van %3 (grenswaarde is %4 seconden)
+4000;9965;"%8 Aandrijfkoppel overschrijdt grens met %1 %%, basisas: %2; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7"
+4000;9966; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7
+4000;9967; Waarde: %3, Grens: %4, Rij-instructie (%5) %6 Parameter %7
+4001;0;Geen wachtende fout
+4001;5;Bestand: '%1', Regel: %2
+4001;10;%1: Bestand kan niet geopend worden: '%2' (%3)
+4001;13;%1: Schrijven op bestand, fout: '%2' (%3)
+4001;16;%1: Lezen van bestand, fout: '%2' (%3)
+4001;20;('%1') UOS-oproep '%2'('%3') mislukt
+4001;30;MFB database vol (aantal elementen: %1)
+4001;35;%1': Object kan bij de update niet ingevoegd worden (cyclustijd: %2 us)
+4001;40;%1': Verkeerde configuratie
+4001;41;%1': Index te groot: %2 (maximum: %3)
+4001;42;%1: Ongeldige waarde %2: %3
+4001;50;%1': Initialisatie bevat fouten
+4001;51;%1': Configuratie niet ok
+4001;55;%1': Mapping bevat fouten (%2)
+4001;56;%1: Eindpunt '%2' reeds voorhanden (%3)
+4001;57;%1': Cyclustijd voor '%2' kan niet gelezen worden door het IO-systeem
+4001;58;%1: Bepaalde cyclustijd (%3) voor '%2' is ongeldig
+4001;60;%1': Eindpunt '%2' niet gevonden
+4001;61;%1': Servo '%2' reeds door '%3' verbonden
+4001;62;%1': Verbinding met servo '%2' niet mogelijk
+4001;63;%1: Servo '%2' Verkeerde positiemode (%3, verwacht: %4)
+4001;64;%1: Servo statuswoord is niet beschikbaar (%2´)
+4001;65;%1': Verbinding met encoder '%2' niet mogelijk
+4001;90;%1': Grenswaarde dynamica zou leiden tot de overschrijding van de waarde AxisMemSize (%2). De maximale schok (grenswaarde applicatie) wordt verhoogd tot %3.
+4001;100;%1': Ongeldige reference/handle ('%2': %3)
+4001;101;%1': Ongeldig instance number ('%2:%3')
+4001;102;%1': Instructie niet toegestaan ('%2')
+4001;103;%1': Overloop van het instructiebuffer (%2)
+4001;104;%1': Ongeldige volgorde van instructie
+4001;105;Aanvraag kan op dit moment niet behandeld worden. Dienst is nog bezig met het verwerken van de vorige aanvraag.
+4001;106;Object ('%1') kan niet vrijgegeven worden. Object wordt gebruikt door %2 andere objecten.
+4001;110;%1': Integer Over(Under-)flow ('%2': %3)
+4001;111;%1': Gebroken getalwaarde te groot/te klein ('%2': %3)
+4001;119;%1': Ongeldige parameter ('%2': %3)
+4001;120;%1': Ongeldige waarde voor snelheid ('%2': %3)
+4001;121;%1': Ongeldige waarde voor versnelling ('%2': %3)
+4001;122;%1': Ongeldige waarde voor vertraging ('%2': %3)
+4001;123;%1': Ongeldige waarde voor schok ('%2': %3)
+4001;124;%1': Ongeldige waarde voor positie ('%2': %3)
+4001;125;%1': Ongeldige waarde voor richting ('%2': %3)
+4001;126;%1': Ongeldig type ('%2': %3)
+4001;127;%1': Ongeldige tijd ('%2': %3 [us])
+4001;128;%1': Ongeldige noemer ('%2': %3)
+4001;150;%1': Snelheid (%2) groter dan maximale waarde (%3). Voortzetting met maximale waarde.
+4001;151;%1': Versnelling (%2) groter dan maximale waarde (%3). Voortzetting met maximale waarde.
+4001;152;%1': Vertraging (%2) groter dan maximale waarde (%3). Voortzetting met maximale waarde.
+4001;153;%1': Schok (%2) groter dan maximale waarde (%3). Voortzetting met maximale waarde.
+4001;156;%1': Vertraging (%2) kleiner dan minimale waarde (%3). Voortzetting met maximale waarde.
+4001;200;%1': Fout van de as
+4001;201;%1': Instructie ('%2') kan wegens actuele asstatus ('%3') niet uitgevoerd worden
+4001;202;%1': Instructie kan niet uitgevoerd worden, aandrijving is niet vrijgegeven
+4001;203;%1': Servo in de toestand Fout
+4001;204;%1: Servo is niet inschakelgereed
+4001;205;%1: Encoder in de toestand Fout
+4001;210;%1': Aspositie buiten de softwaregrenzen
+4001;211;%1': As stopt wegens softwaregrenzen
+4001;220;%1': Cyclustijd (%2us) verschilt van de cyclustijd van de master-as ('%3': %4us)
+4001;221;Declaratie van '%1' als een slave van '%2' creëert een ring
+4001;301;%1': DIGCAM (%2) in de toestand Fout
+4001;302;%1': Parametreerproces actief
+4001;350;Maximaal aantal noktabellen bereikt (%1)
+4001;351;De noktabel '%1' bevat geen versie
+4001;352;De noktabel '%1' bevat een ongeldige versie (%2)
+4001;353;De noktabel '%1' bevat geen datum
+4001;354;De noktabel '%1' bevat een ongeldige datum (%2)
+4001;355;De noktabel '%1' bevat niet de invoer 'camtable:
+4001;356;De noktabel '%1' bevat niet de invoer 'crc:
+4001;357;De noktabel '%1' bevat geen CRC controlesom
+4001;358;De noktabel '%1' bevat een verkeerde CRC controlesom (%2)
+4001;359;De noktabel '%1' bevat geen waarde
+4001;360;De noktabel '%1' bevat een ongeldige invoer (%2)
+4001;361;De noktabel '%1' is niet strikt monotoon (invoer: %2)
+4001;900;%1': Parameternummer (%2) niet ondersteund
+4001;901;%1': Ongeldig type van de parameter (%2)
+4001;902;%1': Parameter (%2) alleen leesbaar
+4001;903;%1': Parameter (%2) alleen schrijfbaar
+4001;904;%1': Parameter (%2) mag tijdens de beweging niet veranderd worden. Oude waarde blijft bestaan.
+4001;905;%1': Schrijven parameter afgebroken
+4001;906;%1': Parameter (%2) mag in de ingeschakelde toestand niet veranderd worden.
+4001;909;%1': Ongeldige waarde voor parameter ('%2: %3). Voortzetting met oude waarde.
+4001;910;%1': Ongeldige waarde voor maximale snelheid (%2). Voortzetting met oude waarde.
+4001;911;%1': Ongeldige waarde voor maximale versnelling (%2). Voortzetting met oude waarde.
+4001;912;%1': Ongeldige waarde voor maximale vertraging (%2). Voortzetting met oude waarde.
+4001;913;%1': Ongeldige waarde voor maximale schok (%2). Voortzetting met oude waarde.
+4001;914;%1': Maximale versnelling (%2) zou leiden tot de overschrijding van de waarde AxisMemSize. Voortzetting met oude waarde.
+4001;915;%1': Maximale vertraging (%2) zou leiden tot de overschrijding van de waarde AxisMemSize. Voortzetting met oude waarde.
+4001;916;%1': Maximale schok (%2) zou leiden tot de overschrijding van de waarde AxisMemSize. Voortzetting met oude waarde.
+4001;1000;Ongeldig foutnummer
+4050;90;Kon simulatieproces niet starten
+4050;91;Kon RPC-verbinding met het simulatieproces niet opbouwen
+4050;92;RPC-verbindingsfout
+4050;93;RPC-verbinding met simulatieproces is niet opgebouwd
+4050;94;Configuratiebestand bestaat niet
+4050;100;Er werd geen robot gevonden met de naam %1
+4050;101;Kon simulatie-instantie voor robot %1 niet initialiseren
+4050;102;Simulatie-instantie voor robot %1 is niet geïnitialiseerd
+4050;103;MCS-simulatiemodule is niet geïnitialiseerd
+4050;104;Foutsysteem is niet geïnitialiseerd
+4050;110;Startpositie kan door de robot %1 niet bereikt worden
+4050;111;Startpositie van robot %1 ligt boven de positieve asgrenswaarde (as %2)
+4050;112;Startpositie van robot %1 ligt boven de negatieve asgrenswaarde (as %2)
+4050;113;Mode van de positie ongeldig (robot %1)
+4050;114;Robot %1 kon beweging %2 niet uitvoeren
+4050;115;Robot %1 bevindt zich in de fouttoestand en kan beweging %2 niet uitvoeren
+4050;116;Bewegingswachtrij van robot %1 is vol. Kan beweging %2 niet toevoegen.
+4050;117;Kon bewegingsmelding voor robot %1 niet lezen
+4050;118;Kon systeemmelding niet lezen
+4050;120;Frame-nummer %2 is ongeldig (robot %1)
+4050;121;Tool-nummer %2 is ongeldig (robot %1)
+4050;122;Dynamicy-nummer %2 is ongeldig (robot %1)
+4050;123;Overlap-nummer %2 is ongeldig (robot %1)
+4050;130;Frame %2 is niet gedefinieerd (robot %1)
+4050;131;Tool %2 is niet gedefinieerd (robot %1)
+4050;132;Dynamicarecord %2 is niet gedefinieerd (robot %1)
+4050;133;Afrondingsrecord %2 is niet gedefinieerd (robot %1)
+4050;140;Ongeldig hellingstype in dynamicarecord %2 (robot %1)
+4050;141;Ongeldig afrondingstype in dynamicarecord %2 (robot %1)
+4050;142;Ongeldig oriëntatie-interpolatietype in beweging %2 (robot %1)
+4050;143;Ongeldig punt-type (robot %1)
+4050;144;Ongeldige soort beweging in beweging %2 (robot %1)
+4700;1;%1(%2/%3): Interne Parser-fout (onbekend symbool) '%4
+4700;2;%1(%2/%3): Interne Parser-fout (terminalsymbool)
+4700;3;%1(%2/%3): Interne Parser-fout (geen terminalsymbool)
+4700;4;%1(%2/%3): Interne Parser-fout (stapelonderloop)
+4700;5;%1(%2/%3): Interne Parser-fout (stapeloverloop)
+4700;6;%1(%2/%3): Interne scanner-fout
+4700;10;%1(%2,%3): Overgeslaan '%4'
+4700;11;%1(%2,%3): Ongeldig symbool '%4'
+4700;12;%1(%2,%3): Verwacht '%4'
+4700;13;%1(%2,%3): Onverwacht bestandseinde
+4700;20;%1 niet gevonden
+4700;21;%1(%2,%3): Opgenomen bestand '%4' niet gevonden
+4700;22;%1(%2,%3): Overloop gebruikte nestingsdiepten (max. 10)
+4700;23;%1(%2,%3): Invoer '%4' bestaat, nieuwe waarde genegeerd
+4700;24;%1(%2,%3): Invoer '%4' bestaat, overschreven
+4700;25;%1(%2,%3): Ongeldige integerwaarde-basis (2#.., 16#..)
+4700;26;%1(%2,%3): Ongeldige integerwaarde
+4700;27;%1(%2,%3): Ongeldige realwaarde
+4700;28;%1(%2,%3): Naam '%4' te lang (max. 31 tekens)
+4700;29;%1(%2,%3): Invoer '%4' bestaat reeds in bestand '%5'
+4700;30;%1(%2,%3): Catalogusinvoer '%4' bestaat niet
+4700;31;%1(%2,%3): Pad '%4' te lang
+4700;32;%1(%2,%3): Onvolledige catalogus-pad '%4'
+5500;0;Actueel geen fout
+5500;1;ComponentDisabled
+5500;10;%1: Het opgegeven bestand '%2' (%3) kon niet gevonden resp. geopend worden
+5500;11;%1: Bij het schrijven op het opgegeven bestand '%2' is een fout opgetreden
+5500;12;%1: Bij het lezen uit het opgegeven bestand '%2' is een fout opgetreden
+6042;0;%1(%2): Time: %3.%4:%5.%6 (%7) Geen fout
+6042;1;%1(%2): Time: %3.%4:%5.%6 (%7) Uitgangskortsluiting
+6042;2;%1(%2): Time: %3.%4:%5.%6 (%7) UCE-bewaking: Uitgangskortsluiting, gedef. aansturing, gedef. transistor
+6042;3;%1(%2): Time: %3.%4:%5.%6 (%7) Aardsluiting van één of meerdere uitgangsfasen tegen aarde
+6042;4;%1(%2): Time: %3.%4:%5.%6 (%7) Rem-Chopper in AM niet bedrijfsgereed
+6042;5;%1(%2): Time: %3.%4:%5.%6 (%7) Verbinding tussen voedingsmodule en asmodule via het HW-info-systeem werd onderbroken
+6042;6;%1(%2): Time: %3.%4:%5.%6 (%7) Stroomfase ontbreekt
+6042;7;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding door VM via hardeware-info-systeem bij te hoge tussenkringspanning
+6042;8;%1(%2): Time: %3.%4:%5.%6 (%7) Niet-toegestane afwijking tussen ingesteld en werkelijk toerental
+6042;9;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;10;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;11;%1(%2): Time: %3.%4:%5.%6 (%7) Temperatuur van de AM heeft de uitschakeldrempel bereikt/overschreden
+6042;12;%1(%2): Time: %3.%4:%5.%6 (%7) Geen rem aangesloten - uitgang overbelast of te hoge klokfrequentie
+6042;13;%1(%2): Time: %3.%4:%5.%6 (%7) Remvoedingsspanning ligt buiten de tolerantie van +10/- 0 %
+6042;14;%1(%2): Time: %3.%4:%5.%6 (%7) Fout van de resolvers/resolverevaluatie
+6042;15;%1(%2): Time: %3.%4:%5.%6 (%7) 01: Compare tussen raw-position en check-counter bij Hiperface-sensor bevat fouten 02: Sensor niet gevonden in de identificatielijst 32: Sensor verzendt een interne fout
+6042;16;%1(%2): Time: %3.%4:%5.%6 (%7) Fout bij de inbedrijfstelling
+6042;17;%1(%2): Time: %3.%4:%5.%6 (%7) Interne CPU-computerfout
+6042;18;%1(%2): Time: %3.%4:%5.%6 (%7) Ongeldige toestand in de software
+6042;19;%1(%2): Time: %3.%4:%5.%6 (%7) Procesgegevens zijn niet plausibel
+6042;20;%1(%2): Time: %3.%4:%5.%6 (%7) Vastgelegde grens slipfout bij de curvenschrijfmodus werd overschreden
+6042;21;%1(%2): Time: %3.%4:%5.%6 (%7) Vastgelegde fout slipgrens bij de dubbele aandrijfmodus Engel werd overschreden
+6042;22;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;23;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;24;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;25;%1(%2): Time: %3.%4:%5.%6 (%7) Fout bij de toegang tot het niet-vluchtige parametergeheugen
+6042;26;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding over binaire ingangsklem
+6042;27;%1(%2): Time: %3.%4:%5.%6 (%7) Beide eindschakelaars kunnen aan de daarop geprogrammeerde ingangsklemmen of in het stuurwoord niet herkend worden
+6042;28;%1(%2): Time: %3.%4:%5.%6 (%7) Fout veldbus time-out
+6042;29;%1(%2): Time: %3.%4:%5.%6 (%7) Hardware-eindschakelaar bij het positioneren aangestuurd.
+6042;30;%1(%2): Time: %3.%4:%5.%6 (%7) Aandrijving kwam niet binnen de vooropgestelde vertragingstijd tot stilstand
+6042;31;%1(%2): Time: %3.%4:%5.%6 (%7) Sensor overtemperatuur (TF/TH, KTY) van de aandrijving ter bescherming van de motor is in werking getreden
+6042;32;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;33;%1(%2): Time: %3.%4:%5.%6 (%7) Voedingsmodule (VM) is nog niet of niet meer gereed
+6042;34;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;35;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;36;%1(%2): Time: %3.%4:%5.%6 (%7) Bij synchrone loop werd een vastgelegde, maximaal toegestane slipafstand overschreden
+6042;37;%1(%2): Time: %3.%4:%5.%6 (%7) Tijdsoverschrijding bij de interne watchdogtimer
+6042;38;%1(%2): Time: %3.%4:%5.%6 (%7) Fout in een technologische functie
+6042;39;%1(%2): Time: %3.%4:%5.%6 (%7) Bij de referentierit is een fout opgetreden
+6042;40;%1(%2): Time: %3.%4:%5.%6 (%7) Synchronisatie met een optiekaart kon niet correct uitgevoerd worden
+6042;41;%1(%2): Time: %3.%4:%5.%6 (%7) Fout 'Optie'.
+6042;42;%1(%2): Time: %3.%4:%5.%6 (%7) Bij de positionering werd een vastgelegde, maximaal toegestane slipafstand overschreden
+6042;43;%1(%2): Time: %3.%4:%5.%6 (%7) Tijdens de besturing via een seriële interface is een onderbreking opgetreden
+6042;44;%1(%2): Time: %3.%4:%5.%6 (%7) Omvormer werd overbelast
+6042;45;%1(%2): Time: %3.%4:%5.%6 (%7) Fout bij de initialisatie van het MDN-systeem (see Sub-Error!)
+6042;46;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;47;%1(%2): Time: %3.%4:%5.%6 (%7) De communicatie via SBUS #1 is onderbroken
+6042;48;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;49;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;50;%1(%2): Time: %3.%4:%5.%6 (%7) Fout voedingsspanning 24V.
+6042;51;%1(%2): Time: %3.%4:%5.%6 (%7) Tijdens de positionering werd een software-eindschakelaar aangestuurd
+6042;52;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;53;%1(%2): Time: %3.%4:%5.%6 (%7) Bij de controle van de programmacode van Flash in Code-Ram resp. Resolver-DSP is een CRC32-fout opgetreden
+6042;54;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;55;%1(%2): Time: %3.%4:%5.%6 (%7) FPGA-configuratiefout kan ook optreden bij inconsistentie van de Flash EEPROM sectie FPGA Data(Boot-Loader)
+6042;56;%1(%2): Time: %3.%4:%5.%6 (%7) Fout extern S- of Burst-RAM
+6042;57;%1(%2): Time: %3.%4:%5.%6 (%7) Fout TTL-encoder
+6042;58;%1(%2): Time: %3.%4:%5.%6 (%7) Fout in Sin-Cos-encoder-evaluation
+6042;59;%1(%2): Time: %3.%4:%5.%6 (%7) Fout in Hiperface-encoder-evaluation
+6042;60;%1(%2): Time: %3.%4:%5.%6 (%7) Fout bij het flashen van de DSP.
+6042;61;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;62;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;63;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;64;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;65;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;66;%1(%2): Time: %3.%4:%5.%6 (%7) Fout configuratie procesgegevens.
+6042;67;%1(%2): Time: %3.%4:%5.%6 (%7) Een Input-Pdo waarvan de time-out-tijd niet op 0 staat, dat niet offline geschakeld is en dar reeds werd ontvangen, heeft zijn time-out-tijd overschreden
+6042;68;%1(%2): Time: %3.%4:%5.%6 (%7) Fout externe synchronisatie, zie SubErr
+6042;69;%1(%2): Time: %3.%4:%5.%6 (%7) Motortemperatuur heeft de instelbare waarschuwingsdrempel overschreden
+6042;70;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding van een extern toestel (0)
+6042;71;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding van een extern toestel (1)
+6042;72;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding van een extern toestel (2)
+6042;73;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding van een extern toestel (3)
+6042;74;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding van een extern toestel (4)
+6042;75;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding van een extern toestel (5)
+6042;76;%1(%2): Time: %3.%4:%5.%6 (%7) MoviPLC - fout.
+6042;77;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;78;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;79;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;80;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;81;%1(%2): Time: %3.%4:%5.%6 (%7) Tussenkringstroom in VM heeft de maximaal toegestane grens van 260% overschreden
+6042;82;%1(%2): Time: %3.%4:%5.%6 (%7) Belasting van de VM heeft de waarschuwingsdrempel bereikt
+6042;83;%1(%2): Time: %3.%4:%5.%6 (%7) Belasting van de AM heeft de uitschakeldrempel bereikt resp. overschreden
+6042;84;%1(%2): Time: %3.%4:%5.%6 (%7) Foutmelding door VM via hardeware-info-systeem. De rem-chopper in de VM is niet bedrijfsgereed
+6042;85;%1(%2): Time: %3.%4:%5.%6 (%7) Temperatuur van de VM nadert de uitschakeldrempel
+6042;86;%1(%2): Time: %3.%4:%5.%6 (%7) Temperatuur van de VM heeft de uitschakeldrempel bereikt resp. overschreden
+6042;87;%1(%2): Time: %3.%4:%5.%6 (%7) Belasting van de in de VM ingebouwde remweerstand heeft de waarschuwingsdrempel bereikt
+6042;88;%1(%2): Time: %3.%4:%5.%6 (%7) Belasting van de in de VM ingebouwde remweerstand heeft de uitschakeldrempel bereikt resp. overschreden
+6042;89;"%1(%2): Time: %3.%4:%5.%6 (%7) Minstens één van de voedingsspanningen in de VM ontbreekt; Geen foutmelding voor de as !!"
+6042;90;%1(%2): Time: %3.%4:%5.%6 (%7) (zie foutcode VM)
+6042;91;"%1(%2): Time: %3.%4:%5.%6 (%7) 24V Elektronicavoorziening ligt onder 17V; Geen foutmelding voor de as !!"
+6042;92;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;93;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;94;%1(%2): Time: %3.%4:%5.%6 (%7) In het blok van de toestelconfiguratiegegevens is bij de controle in de reset-fase een fout opgetreden
+6042;95;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;96;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;97;%1(%2): Time: %3.%4:%5.%6 (%7) Een parameterset kon niet zonder fouten gekopieerd worden
+6042;98;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;99;%1(%2): Time: %3.%4:%5.%6 (%7) Niet bezet
+6042;200;%1: Verkeerde cyclustijd (%2ms)
+6042;201;%1: Parameter-transfer niet mogelijk (geen param-slot beschikbaar), %2
+6042;203;%1: Fout bij het lezen van de Pdo-gegevens: %2 PdoNr. %3 FoutNr.
+6042;204;%1: Fout bij het schrijven van de Pdo-gegevens (PdoNr.%2)
+6042;205;%1: Voor dit Pdo is er geen geldige handle (PdoNr.%2)
+6042;209;%1: Het aantal geconfigureerde assen overschrijdt de som van de maximaal mogelijke assen.
+6042;210;%1: De parameter '%2' ontbreekt in het config.-bestand.
+6042;212;%1: Mvl Request (%2) levert fouten op: %3
+6042;214;%1: Mvl Response (%2) levert fouten op:%3
+6042;216;%1: Configuratiefout ActValPdo: %2 PdoNr. %3 FoutNr.
+6042;217;%1: VarData geheugenoverloop (doelgeheugen van de gebruiker te klein)
+6042;218;%1: Mvl FwUpdate-Response levert fouten op:%2,%3
+6042;219;%1: Rebootfase van de aandrijving loopt in time-out: %2
+6042;220;%1: Mvl FwUpdate-Request (%2) levert fouten op: %3
+6042;221;%1: Mvl VarDataLock levert fouten op: %2
+6042;222;%1: Mvl VarDataUnLock levert fouten op: %2
+6042;223;%1: Onbekende VarData-toegang
+6042;224;%1: Mvl FwUpdate-Status levert fouten op:%2
+6042;225;%1: Ongeldige pointer in SEW-foutentabel (%2)
+6042;250;%1: Config-invoer (streefpositie of posUnitsToIncrements) (%2) leidt tot een Over(Under)-Flow
+6042;252;%1: (MovAxi) Verkeerde of ontbrekende informatie over de bedrijfsmodus Positioneren in het Config-bestand, gebruik incrementele sensor/relatief
+6042;253;%1: (MovAxi) Ontbrekende of ongeldige initiële bedrijfsmodus in het Config-bestand
+6042;259;AXIS #%1 Ongeldige ProcessServerStatus
+6042;261;%1: Config-invoer (Velocity of velUnitsToSpeed) (%2) leidt tot een Over(Under)-Flow
+6042;263;%1: Ongeldige waarde voor SetValMode:('%2)
+6042;264;%1: Mailbox Overflow (%2)
+6042;265;%1: Ongeldige ProcessStatus in VarData bewerking
+6042;267;ComponentDisabled
+6042;300;%1: (MOVIDRIVE) Ongeldig of ontbrekend knoopadres in het Config-bestand
+6042;302;%1: (MOVIDRIVE) Ongeldig S-bus-adres (%2) in het Config-bestand
+6042;303;%1: (MOVIDRIVE) Ongeldige I-pos versie (%2)
+6042;304;%1: (MOVIDRIVE) Verkeerde cyclustijd op CAN-bus (%2 ms)
+6042;305;%1: (MOVIDRIVE) Logisch adres (%2) reeds gebruikt
+6042;306;%1: (MOVIDRIVE) Parameter-transfer niet mogelijk (geen param-slot beschikbaar)
+6042;307;%1: Onbekende VarData-toegang
+6042;308;%1: Mvl VarDataLock, fout: %2
+6042;309;%1: Mvl VarDataUnLock, fout: %2
+6042;350;%1: (MOVIDRIVE) Ongeldige of ontbrekende positie-omrekeningsfactor in het Config-bestand, gebruik %2
+6042;352;%1: (MOVIDRIVE) Ontbrekende of ongeldige initiële bedrijfsmodus in het Config-bestand
+6042;353;%1: (MOVIDRIVE) SINT32 Over(Under)-Flow (%2 ms)
+6042;354;%1: (MOVIDRIVE) Cyklische telegram ging verloren (%2)
+6042;355;%1: (MOVIDRIVE) Uitval cyklische telegrammen (%2)
+6042;356;%1: (MOVIDRIVE) Ready-bit werd teruggenomen (%2)
+6042;357;%1: (MOVIDRIVE) Positieve eindschakelaar bereikt (%2)
+6042;358;%1: (MOVIDRIVE) Negatieve eindschakelaar bereikt (%2)
+6042;359;%1: (MOVIDRIVE) Time-out bij reset, beantwoordt geen CAN-messages (%2)
+6042;360;%1: (MOVIDRIVE) Time-out bij boot, werd niet bedrijfsgereed (%2)
+6042;362;%1: (MOVIDRIVE) Bit Eindtrap-vrijgegeven werd teruggenomen (%2)
+6042;363;%1: (MOVIDRIVE) Ongeldige SCom-ObjektId (%2)
+6042;364;%1: (MOVIDRIVE) Ongeldige SCom-symCode (%2)
+6042;365;%1: (MOVIDRIVE) Ongeldig SCom-type (%2)
+6042;366;%1: (MOVIDRIVE) Ongeldige SCom-objectgrootte (%2)
+6042;368;%1: Enkelvoudige transferfout parameterset-%2 (inx %3, class %4 addCode %5)
+6042;369;%1: Status parameterset-schrijven: nr=%2, wr=%3, err-high=%4, err-low=%5
+6042;370;%1: Status parameterset-lezen: nr=%2, rd=%3, err-high=%4, err-low=%5
+6042;371;%1: (MOVIDRIVE) Fout-telegram in de Silentmode(errCode:%2)
+6042;500;%1: UOS-functie-oproep '%2'('%3') mislukt
+6042;501;%1: Status parameterset schrijven: r=%2,wr=%3,err-high=%4,err-low=%5
+6042;502;%1:Status parameterset-lezen: nr=%2, rd=%3, err-high=%4, err-low=%5
+6057;109;Component gedeactiveerd
+6058;100;%1: Transactie werd niet uitgevoerd (%2)
+6058;101;%1: Wissen van de projectering mislukte met melding '%2'
+6058;102;%1: Instructie %2 met fout %3 mislukt
+6058;103;%1: Geheugenaanvraag in '%2' werd niet vervuld
+6058;104;%1: Bestand '%2' niet gevonden
+6058;105;%1: Bestand '%2' bevat fouten
+6058;106;%1: Fout bij het lezen van het bestand '%2'
+6058;107;%1: Toestelfout bij het overdragen van het bestand '%2'
+6059;101;%1: Ongeldig stationsadres. Geconfigureerd: %2, geldig: [%3..%4]
+6059;102;%1: Ongeldige lengte van de ingangsgegevens. Geconfigureerd: %2 bytes, geldig: [%3..%4] Bytes
+6059;103;%1: Ongeldige lengte van de uitgangsgegevens. Geconfigureerd: %2 bytes, geldig: [%3..%4] Bytes
+6059;104;%1: Ongeldige som van de lengtes van in- en uitgangsgegevens. Geconfigureerd: %2 bytes, geldig:[%3..%4] Bytes
+6059;105;%1: Ongeldige bewakingstijd. Geconfigureerd: %2ms, geldig: [%3..%4] ms
+6059;106;%1: Bufferlengte voor DP V1 Class1 overdracht ongeldig. Geconfigureerd: %2 bytes, geldig: 0,[4..244] Bytes
+6059;107;%1: Bufferlengte voor DP V1 Class2 overdracht ongeldig. Geconfigureerd: %2 bytes, geldig: 0,[4..244] Bytes
+6059;108;%1: Ongeldige lengte van de externe diagnosegegevens. Geconfigureerd: %2 bytes, geldig: [0..32] Bytes
+6059;109;%1: Instructie %2 met foutcode %3 afgebroken
+6059;110;%1: Externe diagnosegegevens kunnen niet gezet worden
+6059;111;%1: Externe diagnosegegevens kunnen niet teruggenomen worden
+6059;112;%1: Toestelfout %2-%3 opgetreden
+6059;113;ComponentDisabled
+6059;114;%1: Inititalisatie mislukt
+6062;1;Invoer kan niet in het protocol opgeslagen worden
+6062;2;Schrijven op Message-Queue voor protocol met type %1 mislukt
+6062;3;Protocol-Queue voor protocol met type %1 is vol
+6062;4;Protocol met  type %1 kan niet aangemeld worden bij de protocolmanager
+6062;5;Bestand kan niet gecreëerd worden %1
+6062;6;Bestand %1 kan niet beschreven worden door het ReportSystem (handle: %2, grootte elementen: %3, aantal elementen: %4) 
+6062;7;Geen geheugen beschikbaar in %1
+6062;8;Fout bij het lezen van bestand %1, handle %2, elementsize %3, elementcount %4
+6062;9;Bestand kan niet geschreven worden %1
+6062;10;Geen toegang tot bestand %1, handle %2, filepos %3
+6062;11;Invoer in protocol met type %1 kan niet geladen worden
+6062;12;Meldingsbuffer %1 kan wegens overloop niet geschreven worden
+6062;13;Ongeldige index bij toegang tot protocolbestand
+6062;14;Syntaxerror in .csv-bestand %1 op positie %2
+6062;15;Er kan geen snaphshot geopend worden
+6065;3600;%1: Driver-functie (%2) levert negatief resultaat op
+6065;3601;%1: Ongeldige lengte van de ingangsgegevens. Geconfigureerd: %3 Bytes - Van de master beschikbaar: %2 Bytes
+6065;3602;%1: De master stelt meer ingangsgegevens ter beschikking dan geconfigureerd. Geconfigureerd: %3 Bytes - Van de master beschikbaar: %2 Bytes
+6065;3603;%1: Ongeldige lengte van de uitgangsgegevens. Geconfigureerd: %3 Bytes - Door de master verwacht: %2 Bytes
+6065;3604;%1: Meer uitgangsgegevens geconfigureerd dan door de master verwacht. Geconfigureerd: %3 Bytes - Door de master verwacht: %2 Bytes
+6065;3605;%1: Fout op buskaart
+6065;3606;%1: Watchdog van PROFIBUS-slave afgelopen (op de buskaart gedetecteerd)
+6065;3607;%1: Watchdog van PROFIBUS-slave afgelopen (op de CPU gedetecteerd)
+6065;3610;%1: Update mislukt
+6065;3620;%1: Parameter werd veranderd
+6065;3621;%1: Configuratie werd veranderd
+6065;3624;%1: Onbekend event ontvangen (%2)
+6070;1;%1/%2/%3, %4: Geen geheugenplaats
+6070;10;%1, CAN-Id %2: Verzenden mislukt
+6070;11;%1, CAN-Id %2: Ontvangen mislukt
+6070;12;%1, Overloop ontvangst-fifo
+6070;13;%1, CAN-Id %2: Gegevensoverloop
+6070;14;%1: Overloop ontvangst-Queue
+6071;1;Fout bij het registreren van de servicefunctie '%3' [%1, %2]
+6071;2;Fout bij het verwijderen van een servicefunctie '%3' [%1, %2]
+6071;3;Reset wordt geactiveerd na een korte vertraging
+6071;4;Vrij te geven directory (%1) bestaat niet
+6071;5;Fout in de pad- of bestandsnaam (%1)
+6099;1;Uos-oproep %1 mislukt: %2
+6099;2;Initialisatie van %1 mislukt
+6099;3;SMemAd-configuratie-invoer %1 ontbreekt
+6099;4;SMemAd-backup-file %1 kan niet opgemaakt worden.
+6099;5;SMemAd-backup-file %1 kan niet opgemaakt worden
+6099;10;SMemAd-backup-file %1 vernietigd (code %2). Start zoals herstart.
+6099;20;Start component gereed
+6116;1;Toestel %1 niet geopend (%2)
+6116;2;Toestel %1 is reeds geopend
+6116;3;%1 (Waarde %2) wordt niet ondersteund
+6116;4;%1: fast accessMode kan niet gezet worden
+6116;5;%1: Open mislukt
+6135;1;%1: Assertion Failed: %2
+6135;2;%1: Component is disabled.
+6135;3;%1: Component is reeds geïnitialiseerd.
+6135;4;%1/%2: Er is geen vrije geheugenruimte meer voorhanden (%3).
+6135;5;%1/%2: De Uos-methode '%3(%4)' werd met fouten uitgevoerd
+6135;100;%1: De Low-Level-driverfunctie '%2(%3)' werd met fouten uitgevoerd
+6135;102;%1.AI:%2: Sensorbreuk
+6135;103;%1.AI:%2: Sensorbreuk weggevallen
+6135;104;%1: EEPROM fout (kaart niet gekalibreerd)
+6135;105;%1: Interrupt-vrijgave mislukt
+6135;106;%1: Referentie: Sensorbreuk
+6135;107;%1: Referentie: Sensorbreuk weggevallen
+6135;110;%1.TI:%2: Sensorbreuk
+6135;111;%1.TI:%2: Sensorbreuk weggevallen
+6135;112;%1: Watchdog in werking getreden
+6135;113;%1: Systick overschrijding cyclustijd
+6135;114;%1: Systeemfout
+6159;100;%1: Driver-functie (%2) levert negatief resultaat op
+6159;102;%1: Watchdog van PROFIBUS-master-toestel afgelopen
+6159;103;%1: Slave met knoopadres (%2) meermaals geconfigureerd (%3)
+6159;104;%1: Module met Id %2 meermaals geconfigureerd
+6159;105;%1: Module met Id %2 ontbreekt in de master-projectering
+6159;106;%1: Ongeldig slotnummer: %2 (geldig: 0 .. 127)
+6159;107;%1: Ongeldige %2 gegevenslengte: geconfigureerd %3 bytes, in projecteringsgegevens ingevoerd %4 bytes
+6159;108;%1: Slave in projecteringsgegevens niet gevonden
+6159;110;%1: Update mislukt
+6159;210;%1: %3 Rangschikking van module in slot %2 is ongeldig
+6159;212;%1: Gegevenstype van %2-gegevens in configuratie (type %3) en projectering (type %4) verschillend
+6159;220;%1: Slave-diagnose gegevens: slave-adres: %2
+6159;221;%1: Slave met adres %2 %3
+6159;222;%1: Module %3 heeft ongeldige %2 gegevenslengte: geconfigureerd %4 bytes, in projectieringsgegevens ingevoerd %5 bytes
+6159;223;%1: Identificatiebyte #%2 past niet bij de configuratie van module %3.
+6159;224;%1: De laatste %2 identificatiebytes zijn niet aan een module toegekend.
+6159;225;%1: Onvoldoende identificatiebytes in de projectering voorhanden
+6159;226;%1: De configuratiegegevens van module %2 ontbreken.
+6159;227;%1: Slave met adres %2 meldt alarm: (alarmtype = %3, sequentienummer = %4)
+6182;1;%1: Assertion mislukt: %2
+6182;2;%1: Component is disabled.
+6182;3;%1: Component werd reeds geïnitialiseerd.
+6182;4;%1/%2: Er is geen vrije geheugenruimte meer voorhanden (%3).
+6182;5;%1/%2: Uos-functie-oproep '%3'('%4') mislukt
+6182;6;%1: Bij het beëindigen van de client-manager werd de client '%2' gewist.
+6183;1;%1: Assertion mislukt: %2
+6183;2;%1: Component is disabled.
+6183;3;%1: Component werd reeds geïnitialiseerd.
+6183;4;%1/%2: Er is geen vrije geheugenruimte meer voorhanden (%3).
+6183;5;%1/%2: Uos-functie-oproep '%3'('%4') mislukt
+6183;6;%1: Nieuwe transportinterface kon niet geregistreerd worden (toegestaan %2).
+6183;7;%1: MsgId %2 voor S%3 C%4 kon niet geregistreerd worden.
+6195;1;Device %1 werd nog niet geopend (%2)
+6195;2;Device %1 is reeds geopend
+6195;3;Parameter %1 (value %2) wordt niet ondersteund
+6195;4;Communicatiefout %1 opgetreden tijdens %2
+6200;1;SystemServer niet verbonden
+6200;2;Motherboardmonitor niet verbonden of loopt niet
+6200;3;%1: Waarde bevindt zich opnieuw binnen de grenswaarden
+6200;4;%1: Uitval ventilator (actuele waarde: %2, uitschakeldrempel: %3 ) 
+6200;5;%1: Uitval ventilator (actuele waarde: %2, waarschuwingsdrempel: %3 )
+6200;6;%1: Fouttoestand aan de ventilator opgelost
+6200;7;%1: Uitschakeldrempel voor temperatuur bereikt (actuele waarde: %2, uitschakeldrempel: %3 ) 
+6200;8;%1: Waarschuwingsdrempel voor temperatuur bereikt (actuele waarde: %2, waarschuwingsdrempel: %3 ) 
+6200;9;%1: Toestand overtemperatuur opgelost
+6200;10;%1: Uitschakeldrempel voor spanning bereikt (actuele waarde: %2, uitschakeldrempel: %3 ) 
+6200;11;%1: Waarschuwingsdrempel voor spanning bereikt (actuele waarde: %2, waarschuwingsdrempel: %3 ) 
+6200;12;%1: Fouttoestand voor spanning opgelost
+6200;13;%1: Algemene waarschuwing bij hardwarebewaking (actuele waarde %2%3) 
+6200;14;%1: Algemene fout bij hardwarebewaking (actuele waarde %2%3) 
+6200;15;%1: Ongeldige status bij hardwarebewaking (actuele waarde %2) 
+6200;16;%1: Ongeldige status bij hardwarebewaking (actuele waarde %2) 
+6200;17;Sys7Srv: PowerManagement - Tijdsduur voor shutdown-proces is langer dan max. critical time
+6200;18;Sys7Srv: PowerManagement - Max. tijd tot shutdown is langer dan levensduur accu
+6200;19;Sys7Srv: PowerManagement - Uitval van de spanningsvoorziening - Systeem loopt op batterij
+6200;20;Sys7Srv: PowerManagement - Geen accu aangesloten
+6200;21;Sys7Srv: PowerManagement - Overtemperatuur in voeding
+6200;22;Sys7Srv: PowerManagement - Uitval ventilator bij voeding
+6200;23;Sys7Srv: PowerManagement - USV-accu moet vervangen worden
+6200;24;Sys7Srv: PowerManagement - Verbinding met de voeding onderbroken
+6200;25;Sys7Srv: PowerManagement - Ingestelde uitschakeltijd te kort om Command-files af te werken
+6200;26;Sys7Srv: PowerManagement - Spanningsvoorziening is opnieuw actief
+6200;27;Sys7Srv: System-restart ingeleid
+6200;28;Sys7Srv: PC-reboot ingeleid
+6200;29;Sys7Srv: SystemServer verbonden
+6200;30;Sys7Srv: Motherboard-monitor is verbonden
+6200;31;Sys7Srv: PowerManagement - Verbinding met de voeding of USV opgebouwd
+6200;32;Hardwarebewaking voor '%1': Bepaling minimale uitschakeldrempel > minimale waarschuwingsdrempel
+6200;33;Hardwarebewaking voor '%1': Bepaling minimale uitschakeldrempel ontbreekt 
+6200;34;Hardwarebewaking voor '%1': Bepaling maximale uitschakeldrempel < maximale waarschuwingsdrempel
+6200;35;Hardwarebewaking voor '%1': Bepaling maximale uitschakeldrempel ontbreekt 
+6200;36;Hardwarebewaking voor '%1': Bepaling tijdslimit ontbreekt
+6200;37;Hardwarebewaking voor '%1': Bepaling minimale waarschuwingsdrempel ontbreekt 
+6200;38;Hardwarebewaking voor '%1': Bepaling maximale waarschuwingsdrempel ontbreekt 
+6200;39;Sys7Srv: Accu aangesloten aan de voeding
+6200;40;Sys7Srv: De accu werd vervangen en functioneert opnieuw
+6200;41;Sys7Srv: Ventilator bij voeding functioneert opnieuw
+6200;42;Sys7Srv: Temperatuur van de voeding is opnieuw normaal
+6220;1;Er kan geen server geïnstalleerd worden op TCP-port %1
+6242;1;IRT User0 (deel %1): StringI: %2, ParamI(h): %3, ParamI(l): %4, ParamII(h): %5, ParamII(l): %6
+6242;2;IRT User0 (deel %1): StringII: %2, ParamIII(h): %3, ParamIII(l): %4, ParamIV(h): %5, ParamIV(l): %6
+6242;3;IRT User0 (deel %1): Formaat: %2
+6242;4;Algemeen probleem in IecSAlgo: %1 %2 %3
+6242;5;KMEM: Opgegeven aantal bytes kan niet gecreëerd worden (%1 bytes)
+6242;6;KMEM: Waarschuwing: IEC.Memory niet geconfigureerd ==> geen memory voor dynamische elementen gereserveerd. Heap-memory wordt gebruikt!
+6245;1;Component is geblokkeerd
+6245;2;Toestandsoverdracht mislukt
+6245;3;Functie %1 niet voorhanden
+6245;4;Ongedefinieerde systeemtoestand %1
+6245;5;Fout bij de toestandsoverdracht %1
+6245;6;Toestandsoverdracht %1 kon niet uitgevoerd worden
+6245;7;Applicatie gestart
+6245;8;Applicatie gestopt
+6245;9;Toestandsoverdracht %1 kon niet uitgevoerd worden, foutcode %2
+6252;1;%1: Ongeldige referentie-sensor (actueel externe sensor = %2)
+6252;2;%1: Ongeldige referentie-sensor opgelost (actueel externe sensor = %2)
+6252;3;%1: Referentie: Sensorbreuk
+6252;4;%1: Referentie: Sensorbreuk opgelost
+6252;5;%1: Systeemfout
+6252;6;%1: Overschrijding cyclustijd
+6252;7;%1: Te veel modules geconfigureerd (maximum %2)
+6252;8;%1: Systeemfout op analoge modules
+6252;9;%1: Foutieve configuratie van de analoge ingangen
+6252;10;%1: Foutieve configuratie van de analoge uitgangen
+6252;11;%1: KBus Power Down actief
+6252;12;%1: KBus Down actief
+6252;13;%1: Te veel modules aan KBus
+6252;14;%1: KBus Master Abort
+6252;15;%1: PDO-grenzen overschreden
+6252;16;%1: Module werd tijdens het bedrijf verwijderd
+6252;17;%1: SERR-leiding actief
+6252;18;%1: Onbekende module aan KBus
+6252;19;%1: Gebruik van temperatuursensor-type L niet mogelijk
+6252;20;%1: KBus toesteladresconflict, moduletype = %2, module-adres = %3
+6280;1;%1: rxpdo %2 Geen cyklische gegevens ontvangen
+6280;2;%1: Te veel Interrupts geconfigureerd, genegeerd: '%2'
+6280;3;%1: Te veel verschillende %2-reducties geconfigureerd
+6280;4;%1: Maximaal aantal %2pdo's (%3) overschreden
+6280;5;%1: %2. Error Code: 0x%3
+6280;6;%1: Update-reductie van %2pdo te groot (%3, max %4)
+6281;1;%1: Te veel communicatie-interfaces (%2) aangevraagd
+6281;2;%1: Initialisatie communicatie-interface %2 mislukt (grootte ingangsgegevens %3, grootte uitgangsgegevens %4)
+6281;3;%1: Communicatie-interface %2 reeds gebruikt (%3)
+6281;4;%1: Lengte van de ingangsgegevens (%2) verschilt van de configuratie (%3)
+6281;5;%1: Lengte van de uitgangsgegevens (%2) verschilt van de configuratie (%3)
+6286;1;%1: Assertion mislukt: %2
+6286;2;%1: Component is disabled.
+6286;3;%1: Component is reeds geïnitialiseerd.
+6286;4;%1/%2: Er is geen vrije geheugenruimte meer voorhanden (%3).
+6286;5;%1/%2: Uos-functie-oproep '%3'('%4') mislukt
+6294;1;%1: Component is disabled.
+6294;2;%1: Component is reeds geïnitialiseerd.
+6338;1;Fout bij de schrijftoegang op file %2 (filehandle: %1) - Geen vrij geheugen aan driver
+6338;2;Dubbel IP-adres gedetecteerd: IP: %1, name: %2, macID: %3
+6338;3;Ongeldige netwerkconfiguratieparameter: %1
+6338;4;Geheugen voor driver %1 (grootte: %2 MB) niet beschikbaar
+6338;5;Fout bij de installatie Ramdisk %1 (grootte: %2 MB)
+6338;6;SMemAdInstantie kon niet gecreëerd worden (foutcode: %1)
+6338;7;Fout bij het aanmaken van FastRetain-object
+6338;8;Fout bij het creëren van het FastRetain geheugen - foutcode: %1 %2
+6338;9;Fout bij het lezen van de Cfg-file %1 
+6338;10;Verplichte catalogusinvoer %1 werd niet geconfigureerd 
+6338;11;Systeem met gestandaardiseerde structuur bestandsbeheer gestart
+6338;12;Systeem met niet-gestandaardiseerde structuur bestandsbeheer gestart
+6338;13;Niet alle verplichte catalogusinvoeren geconfigureerd - general.cfg controleren
+6338;14;Initialisatie van de module '%1' mislukt
+6338;15;SMemAd-Backup file %1 beschadigd (foutcode: %2) - Koude start wordt uitgevoerd
+6338;16;Fout bij het creëren van de SMemAd-Backup file %1
+6338;17;Fout bij het openen/schrijven van de SMemAd-Backup file %1
+6338;18;Firmwareversie in Cfg-file
+6338;19;Fout bij het lezen van general.cfg.
+6338;20;Fout bij het openen van de seriële interface '%1' voor Logger-uitgaven
+6338;21;Ofwel system.cfg ofwel general.cfg moet voorhanden zijn
+6338;22;Systeem start op in debug-modus (modus 0x%1)
+6338;23;Fout bij het creëren van de systeem-meldingsklasse
+6338;100;Systeemklok aangepast (tijdswaarde voor aanpassing [sec]:%1 [usec]:%2 Tijdswaarde na aanpassing [sec]:%3 [usec]:%4)
+6338;102;Systeemstop ([sec]: %1, [usec]: %2)
+6338;103;Systeemstart (firmwareversie: %1 Starttijdstip [sec]: %2, [usec]: %3)
+6338;104;KNet-busreset opgetreden (watchdog: %1 Functiecode: %2 External: %3 Busbreak: %4 Busbreak1: %5)
+6338;105;CompactFlash ingevoegd (CPU-ID: %1 Device-naam: %2 Fabrikant: %3 Modelbeschrijving: %4 Serial: %5)
+6338;106;CompactFlash verwijderd (CPU-ID: %1 Device-naam: %2 Fabrikant: %3 Modelbeschrijving: %4 Serial: %5)
+6338;107;CompactFlash gedetecteerd (CPU-ID: %1 Device-naam: %2 Fabrikant: %3 Modelbeschrijving: %4 Serial: %5)
+6338;108;Grenswaarde van de CPU-temperatuur overschreden (%1 °C)
+6338;109;Configuratiefile '%1' ingelezen 
+6338;110;CMOS Batterijspanning is laag - Batterij vervangen
+6338;111;Geen CMOS Batterijspanning - Batterij vervangen
+6338;112;CPU ventilator is defect - Ventilator vervangen
+6338;113;CPU ventilatorsnelheid te laag - Ventilator vervangen
+6338;114;De verbindingsopbouw met de driver %1 is gelukt
+6338;115;De verbindingsopbouw met de printer %2 is niet gelukt (reden: %1).
+6338;116;De verbindingsopbouw met de driver %1 is niet gelukt. Status: %2 (Smb: %3, %4)
+6338;117;De verbinding met de driver %1 gescheiden
+6338;118;SmbServer is nog niet gereed om de Share-instructie uit te voeren
+6338;119;Driver/directory %1 als %2 vrijgeven, userlevel=%3, ret=%4
+6338;120;ramdisk: %1 - %2 (%3)
+6338;121;Warme start mislukt (%1)
+6338;122;CPU: %1 - SystemException: %2
+6338;123;CPU: %1 - SystemAssertion in regel %2 in module %3
+6338;124;Catalogusinvoer 'rootPath' mag niet geconfigureerd worden: Default-pad %1 wordt gebruikt.
+6338;125;Geconfigureerde catalogusinvoer 'System.applPath' wordt genegeerd: Default-pad %1 wordt gebruikt.
+6338;126;Het is niet toegestaan om twee hubs zonder stroomvoorziening achter elkaar te gebruiken
+6338;127;Usb eindtoestel heeft te veel stroom nodig
+6338;128;Te veel Usb-hubs aangesloten
+6338;129;SRamdAd geheugen geïnitialiseerd door <%1>
+6338;130;Hardwarelicentie niet gevonden
+6338;131;Licentieschema hardware wordt niet ondersteund.
+6338;132;Update van de HW licentie mislukt.
+6338;133;De Portmap Service kon niet gestart worden.
+6338;134;Systeem-FPGA is te oud
+6338;135;CPU temperatuur heeft uitschakeldrempel overschreden.  (%1 °C)
+6338;136;Lay-out toetsenbord kon niet veranderd worden.
+6338;137;CPU temperatuur opnieuw in normaal bereik
+6338;138;CPU temperatuur heeft uitschakeldrempel opnieuw onderschreden
+6338;139;Ventilator werkt opnieuw normaal
+6338;140;Geen toegang tot applPath: %1 mogelijk
+6338;141;Laden van de Kvb-file mislukt.
+6338;142;CPU: %1 - SystemAssertion in regel %2 in module %3
+6338;143;CPU: %1 - SystemException: %2
+6632;1;Er is reeds een andere applicatie met board nummer %1 verbonden.

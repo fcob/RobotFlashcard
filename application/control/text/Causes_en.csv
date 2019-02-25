@@ -1,0 +1,1340 @@
+Causes 1.09.0013
+1467;- Task interval could not be read out%CrLf%- Element running in too slow task
+1468;Cfg parameter "Simulation" has been set
+1469;- Pig in route 1 defective%CrLf%- Compressed air supply inadequate%CrLf%
+1470;Element has attempted to log in at the AB_CFG. This has refused the access, however, because%CrLf%- Maximum number of IDs exceeded %CrLf%- The startup has already ended and no registration is possible anymore%CrLf%
+1471;It was attempted to delete the indicated file. This was not possible, however.%CrLf%- File write-protected%CrLf%- System-dependent refusal of hard disk access%CrLf%
+1472;It was attempted to displace the indicated file. This was not possible, however.%CrLf%- Destination file still existing %CrLf%- Target path write-protected%CrLf%- System-dependent refusal of hard disk access%CrLf%
+1473;While converting a brush INI file, it was stated that a brush group is existing several times. Thus, a brush cannot be defined unambiguously. Causes: Error in the vision system, error during download, file was edited manually.
+1474;While converting a brush INI file, it was stated that a brush group is existing outside of the valid field in the file. Causes: Error in the vision system, error during download, file was edited manually.
+1475;While converting a brush INI file, it was stated that the indicated parameter is existing several times in the indicated group. Thus, a brush cannot be defined unambiguously. Causes: Error in the vision system, error during download. File was edited manually
+1476;While converting a brush INI, file it was stated that the indicated group is existing several times. Thus, a brush cannot be defined unambiguously. Causes: Error in the vision system, error during download, file edited manually.
+1477;While converting a brush INI file, it was stated that the indicated parameter in the indicated group has the wrong data format. Causes: Error in the vision system, error during download, file edited manually.
+1478;While converting a brush INI file, it was stated that the indicated parameter in the indicated group is missing. Causes: Error in the vision system, error during download, file edited manually.
+1479;While converting a brush INI file, it was stated that the indicated group is missing. Causes: Error in the vision system, error during download, file edited manually.
+1480;It was attempted to open and/or create the indicated files. This was not possible, however.%CrLf%- Destination file available, but write-protected%CrLf%- System-dependent refusal of hard disk access%CrLf%
+1481;Data were supposed to be written into the brush file. 0 bytes were written into the file, however. Causes: Internal error, token lost.
+1482;It was attempted to close the indicated file. This was not possible, however.%CrLf%- Destination file reserved%CrLf%- System-dependent refusal of hard disk access%CrLf%- Internal controller problem
+1483;It was attempted to create the indicated directory. This was not possible, however.%CrLf%- Target path reserved%CrLf%- System-dependent refusal of hard disk access%CrLf%- Internal error%CrLf%
+1484;It was attempted to open the indicated file. This was not possible, however.%CrLf%- Destination file not available%CrLf%- System-dependent refusal of hard disk access
+1485;Data were supposed to be read from the brush file. 0 bytes were read however. Causes: Internal error, token lost, brush file empty, invalid contents in brush file.
+1486;It was attempted to remove brush files from the dynamic memory (car body has left zone, reselection in zone). Here, an error has occurred. Thus, data consistency is not given anymore.
+1487;During control run-up, the brush files are checked depending on the parameterization. Here, an error has occurred that does not allow a reasonable operation of the installation. Data inconsistency!
+1488;It was attempted n times (refer to max.) to receive a unit from the BCU in order to read from the station FIFO (semaphore timeout). The unit was never received, however. Internal control error.
+1489;It was attempted to receive a unit from the BCU in order to read from the station FIFO (semaphore error). Here, an error occurred. Internal control error.
+1490;It was attempted to return the unit received from the BCU to the BCU (semaphore error). Here, an error occurred. Internal control error.
+1491;It was attempted to carry out an invalid operation. Control error, bug, error by debugging.
+1492;A new car body has logged in in the car body FIFO. It was attempted to load the brush data for this car body. This failed because no entry was available anymore in the brush memory. Old car bodies were possibly loaded unsuccessfully.
+1493;It was attempted to load brush files into the dynamic memory (new car body in zone, reselection in zone). Here, an error has occurred. Thus, data consistency is not given anymore.
+1494;A brush file was downloaded through the HMI. The path and/or file specification of the HMI does not match the name convention, however.
+1495;A brush file was loaded through the HMI. During the inspection, an error occurred and the brush file is invalid. It cannot be updated in the control.
+1496;A brush file was loaded through the HMI. When the target directory was created, an error occurred. Error during the access to the hard disk. Internal system error.
+1497;A brush file was loaded through the HMI. When the INI file and/or the BIN file was copied into the target directory, an error occurred. Error during the access on the hard disk. Internal system error.
+1498;The indicated brush file includes an invalid number of required values. Causes: File destroyed, edited manually, copied from a not corresponding process.
+1499;In the indicated brush file, the indicated required value is missing. Causes: File destroyed, edited manually, copied from a not corresponding process.
+1500;It was attempted to reselect a color from the hmi system. This is only permissible if the channel is purged.
+1501;It was attempted to reselect a paint. The desired paint number is invalid, however.
+1502;It was attempted to reselect a paint. This is not possible, however, because the channel is occupied by another entity (for example time program active).
+1503;It was attempted to reselect a paint. The desired valve is invalid, however.
+1504;In the cfg file, an invalid number of valves has been entered for the channel.
+1505;An invalid brush number was defaulted by the teaching program. Error in the teaching program.
+1507;It was attempted to write too many required values into the indicated table. Internal control error.
+1508;No brush file could be found for the indicated teach-in module. File does not exist. File was not loaded.
+1509;The desired brush file was not loaded into the memory yet. Loading step chain blocked or not ready yet.
+1511;At a function call, an invalid main channel group was delivered. Internal control error. 
+1512;It was attempted to reserve the indicated channel for painting. This channel is already reserved by another entity, however. Painting not possible.
+1514;Error or reading error of the configuration
+1515;Error or reading error of the configuration
+1516;Within the defaulted time, the data of the fixed position points could not be accessed.
+1517;In the ProcessBuilder, more than one position was configured for profile free/deselection position 
+1519;Internal control problem. It was attempted to determine the number of robot axes. The access to these data failed.
+1520;The program number configured in the ProcessBuilder is not valid.
+1521;Not all fixed position points that were configured are contained in the file _globalvars.
+1522;The stated point is programmed in the wrong coordinate system 
+1523;The mentioned point is not contained in the file _globalvars.%CrLf%More than one point is configured as unselect/bypass/home.%CrLf%Coordinates of the point are all "zero"%CrLf%
+1524;For the painting, the channels relevant for painting must be reserved by means of the element AB_TriggerBrush. The semaphore needed for that could not be received, however.
+1525;For painting, the channels relevant for painting must be reserved by means of the element AB_TriggerBrush. The semaphore needed for that could be fetched, during the return an error occurred, however
+1526;With the setting of the first GUNON it was attempted to reserve the channels relevant for painting. This is not possible, however, because the task planning has reported the channels as not yet "ready prepared" (PreparationDone=FALSE)
+1529;It was attempted to reference to the indicated variable with the command GET_REFTO. This failed. Causes: bug, internal control problem.
+1530;While creating the brush reference table, an internal control problem occurred. Data are inconsistent.
+1531;Pressure is too low to activate approach switch.
+1532;In automatic mode, it is attempted to access the required value directly.%CrLf%In manual mode, the required value is accessed without ManualOn or without a time program running.%CrLf%In other operating mode, the device must not be accessed.%CrLf%
+1533;It was attempted to create a dynamic memory element. Here, an error has occurred.%CrLf%Cause: bug / internal control problem%CrLf%
+1534;It was attempted to describe a dynamic memory element. Here, an error has occurred.%CrLf%Cause: bug / internal control problem%CrLf%
+1535;It was attempted to read out a dynamic memory element. Here, an error has occurred.%CrLf%Cause: bug / internal control problem
+1536;Time program contains wrong data, or paint assignment table is wrong.
+1540;With the setting of the first GUNON, it was attempted to reserve the channels relevant for painting. This is not possible, however, because the task planning has reported the channels as not yet ready prepared (start main channel=FALSE).
+1541;A SET_BRUSH was set by the teach program. The set brush cannot be written yet, however, because the necessary channels are still occupied by other processes (for example purging, loading).
+1542;When reading the indicated parameter it was found that this is saved in the wrong format.
+1543;When accessing a device relevant for painting it was found that it has a wrong data type. Allowed are BOOL, INT, DINT, REAL.
+1544;It was attempted to reselect a color that contains an invalid paint supply group.
+1545;It was attempted to reselect a color that does not contain any information on the paint supply group.
+1546;At the control startup was found that the indicated channel of the paint color changer is not member in a logical channel. This is basic requirement, however.
+1547;When the control was run up it was found that the indicated channel of the paint color changer is not a member in a paint supply group. This is basic requirement, however.
+1548;An invalid component number has been entered in the component table.
+1549;In the time program the device required values "SetQuantity" and "SetQuantityMultiK" were parameterized simultaneously. This is inadmissible.
+1550;A color was reselected. This color does not appertain to the supply group of the paint color changer, however.
+1551;A color was reselected for the overall system. This is no combination color, however, but only a component.
+1552;Teachcontrol tried to reserve a logger, but all available loggers are already assigned.
+1553;The file path is wrong or unsuccessful access to the storage medium.
+1554;It was attempted to open the indicated file. This was not possible, however.%CrLf%- Target file not available.%CrLf%- Hard disk access refused for reasons that are inherent in the system 
+1555;It was attempted to create the indicated file. This was not possible, however.%CrLf%- Target file available, but write-protected.%CrLf%- Hard disk access refused for reasons that are inherent in the system 
+1556;It was attempted to hand over the data of a tool unit to the teach pendant, this failed.%CrLf%Internal controller problem
+1557;Wrong or missing configuration entry in [RC.BypassArea] for areaTyp. Only the values 1 for work area and 2 for exclusion area are allowed.
+1558;Wrong or missing configuration entry in [RC.BypassArea] for areaShape. Only the values 0 for cuboid, 1 for cylinder and 2 for sphere are possible.
+1559;There is no configuration entry [RC.BypassArea]. A supervision of the bypass area (profile-free) with an exclusion area is therefore not possible.
+1560;There is no configuration entry [RC.Bypass.Size]. A supervision of the bypass area (profile-free) with an exclusion area is therefore not possible.
+1561;There is no configuration entry [RC.Bypass.Base]. A supervision of the bypass area (profile-free) with an exclusion area is therefore not possible.
+1562;The call of the MCU function McuCreateArea was not successful. The configured bypass area could not be created. 
+1563;The supervision of the work area/exclusion area supplies inconsistent values after the control startup.
+1564;The call of the MCU function McuCreateJob was not successful. The configured bypass area cannot be controlled.
+1565;The call of the MCU function McuApplyJobTo was not successful. The configured bypass area cannot be controlled.
+1566;The call of the MCU function McuAreaCheckPoint was not successful. The configured bypass area cannot be supervised correctly immediately after the control startup.
+1567;In the configuration no bypass area was parameterized.
+1568;Faulty entries in [RC.KINEMATIC:n.Gripper.VectorX]
+1569;The call of the MCU function McuCreateGripper was not successful. The configured bypass area cannot be monitored.
+1570;Excess temperature, lower temperature, device defective
+1571;The assigned air flow does not exist
+1574;At the control startup the devices report variables at the SWO interface (for EcoScreen Softlog and Kemro.Scope). Here, an error occurred.
+1575;At the control startup the devices report variables at the SWO interface (for EcoScreen Softlog and Kemro.Scope). The signal name is too long, however. A maximum of 32 signs are permissible.
+1576;At the control startup the devices report variables at the SWO interface (for EcoScreen Softlog and Kemro.Scope). The text for the unit is too long, however. A maximum of 32 signs are permissible.
+1577;The robot was deselected by the software and the axes did not come to a standstill within the demanded time and/or axis limiters were still active.
+1578;It was attempted to switch over the communication phase of the Sercos ring.%CrLf%This did not succeed within the demanded time.%CrLf%Sercos ring had not started yet when the control was restarted.%CrLf%All drives of the Sercos ring are simulated. 
+1579;Earthing switch could not switch, earthing switch is defective or dirty,
+1580;high tension is active.
+1581;Processbuilderfiles not compatible to each other 
+1583;During the control startup it was attempted to make a connection to the indicated Profibus master card (Connect). This failed. Causes: master unavailable, master renamed in the IoProfibusMaster.cfg, internal control problem.
+1584;The indicated Profibus slave has sent a diagnosis telegram.
+1585;When reading the status information of the Profibus master card, an error occurred (GetMasterStatus). Causes: master failed, No connection to the master, Internal control problem.
+1586;A diagnosis telegram was sent from a Profibus slave. The operating system reported this error to the diagnosis software, but the structure of the error report is wrong. Internal control problem.
+1587;A diagnosis telegram was sent from the indicated Profibus slave. When reading the telegram (GetSlaveDiag) an error occurred. Causes: Slave sent invalid telegram, master lost telegram, Internal control problem.
+1588;During control startup, the indicated Profibus slave has sent a diagnosis telegram . The initialization of the diagnosis software is not finalized, however, and the message cannot be evaluated.
+1589;A diagnosis telegram was sent by a Profibus slave. When trying to read out the error buffer an error occurred (GetError). Internal control problem.
+1590;A Profibus slave has sent a diagnosis telegram and is faulty.
+1591;In the indicated cfg file, more groups are available than allowed
+1592;In the indicated cfg file, more parameters are available than permissible
+1593;In the indicated cfg file, a parameter was found that is not assigned to a group, however 
+1597;For the Profibus master, a name must be indicated in the parameter FX760A:0/PBDP:0. This name is required in order to map to the master.
+1598;In the control configuration, no Profibus master is indicated. 
+1599;It was attempted to read the parameter type. Here, an error occurred
+1600;It was attempted to read the parameter. Here, an error occurred
+1601;Cannot read drive parameter S0-0030.%CrLf%Drive firmware version is not known to the controller.
+1602;The attempt to access to the kinematics failed, programming error or internal control problem.
+1603;In the configuration file "IoSercos.cfg" the "driverMode = 3" is selected with the mentioned drive, which means simulation.
+1604;It was attempted to read a parameter of the drive control element via Sercos, here, errors occurred.%CrLf%Defective optical waveguide or other drive error.
+1605;Robot was not moved into brake test position.%CrLf%Brake test position not configured.
+1606;Brake test was not carried out in the last 24 hours.%CrLf%Note for customers that brake test must be carried out in x hours,%CrLf%otherwise the drives will be shut down.
+1607;The brake test must be carried out after 48 hours at the latest, this has occurred.
+1608;User gave the provisional travel release at the teach pendant or at EcoScreen.
+1609;It was attempted to write a parameter to the respective drive control element via Sercos, here, errors occurred.%CrLf%Defective optical waveguide or other drive error.
+1610;At the beginning of the brake test, the concerned drive was not connected or %CrLf%was switched off during the test.
+1611;The brake test could not be ended successfully within the preset time.
+1612;At the specified axis, an error occurred in the mentioned phase of the brake test.
+1613;The ATEX brake test was carried out successfully.
+1614;Internal control error (division by zero, invalid array accesses, etc.)
+1615;When opening and/or closing the main needle with activated feedback, a feedback is expected within the indicated time. An absence and/or a delay of the message has the following causes: Main needle defective, initiator defective, main needle conglutinated, control pressure too low.
+1616;The main needle was selected or deselected and the main needle feedback was detected, was lost, however. An omitting of the message has the following causes: main needle defective, initiator defective, main needle conglutinated.
+1617;It was attempted to map the readback values of the drive, this did not succeed.%CrLf%Internal control problem or the use of the readback values is not configured.
+1618;It was attempted to map the actJointPosition of the drive, this did not succeed.
+1619;The actual value of the concerned axis has changed without a required value having been pre-set.
+1620;The concerned drives did not reach its standstill position within the preset time.
+1621;Error in the configuration or configuration file not available.
+1622;The motor or the control unit were exchanged.
+1623;At a drive, an invalid standard parameter record was activated by acknowledging the message UL.
+1624;The call of the MCU function McuCreateArea was not successful. Read error of the data from the file _globalvars.ttp or %CrLf%internal control problem.
+1625;No successful brake test was carried out in the last 48 hours.
+1626;No storage space on target volume.%CrLf%Internal control problem.
+1627;The Profibus slave is not in the data exchange status. Causes: PLC does not communicate, wrong slave address, wire breakage between PLC and EcoRPC, control is not yet ready for communication after restart. 
+1628;During control startup an attempt was made to connect to the indicated Profibus slave card (Connect). This failed. Causes: see error code
+1629;In the control configuration, no Profibus slave is indicated. 
+1630;For the Profibus slave, a name must be indicated in the parameter FX765A:0/PBDP:0/PBDPSLAVE:0. This name is required to map to the slave.
+1631;The measuring end of the function "measure in conveyor" is signalled at the vision system. To carry out this function, the conveyor must be standing still. This was not the case.
+1632;The function to measure in the conveyor was activated via the vision system. This is only allowed, however, if the conveyor is standing still.
+1635;Between WAIT_CONVEYOR and TRACKING(On) the object has moved too far
+1636;Not all inputs/outputs of the field bus slave could be mapped.%CrLf%Different designation of the hardware end points in the Kemromanager and RCU.%CrLf%Input/output was not created or several inputs/outputs in the Kemromanager.
+1637;The mentioned hardware endpoint of the field bus slave could not be mapped.%CrLf%Different designation of the hardware endpoint in the Kemro manager and RCU.%CrLf%Input was not created in the Kemro manager.
+1638;Not all inputs/outputs of the field bus slave could be mapped.%CrLf%Different designation of the hardware end points in the Kemro manager and RCU.%CrLf%one or several inputs/outputs were not created in the Kemro manager.
+1639;A brake release device was plugged in.%CrLf%With brake release device plugged in, it is not possible to connect the drives.
+1641;In the configuration, a value for the size of the supervision space in mentioned direction %CrLf%must be configured. With adjusted robot type, a supervision must occur for this coordinate.
+1642;In the configuration, a value must be configured for the auxiliary axis of the mentioned supervision space. With this robot type and existing installation site, the auxiliary axis must be supervised.
+1643;The mapping of the mentioned system variable did not succeed.%CrLf%This is needed for the communication between brake test and Ecoscreen.%CrLf%
+1644;The mentioned hardware endpoint of the field bus slave could not be mapped. Different designation of the hardware end points in the Kemro manager and RCU. Input/output was not created in the Kemro manager.  
+1645;A new fixed position was generated with the ProcessBuilder which has not been taught yet.%CrLf%Thus the coordinate system of the fixed position point is invalid and the fixed position cannot be evaluated.
+1647;The movement program cannot be continued anymore after a preceding error.
+1648;The disconnection duration for the high tension defined at commissioning is longer than the TimeOut time is
+1649;The ride to the fixed position took longer than the set TimeOut time in the time program
+1650;The call of an MCU system function failed, internal control error.
+1651;The start of the movement program occurred too late, that is the object was already too far in the booth when the program started.
+1652;The macro GET_paint position assumes that the property 'Attach as late as possible' is activated in the control. Then the flow is stopped and branch instructions executed only so late that this is still possible without a speed slump.
+1653;With the macro Get_paint position, an invalid value was entered for the parameter GreaterSmaller.
+1655;During painting, the pressure at the indicated sensor is supervised. This fell below the indicated limit. Causes for that may be missing paint supply pressure, hose break, defective paint pressure regulator or defective dosing pump.
+1656;During painting, the pressure at the indicated sensor is supervised. This exceeded the indicated limit. Defective dosing pump, blocked line or main needle may be causes for that.
+1657;Circuit breaker 4Q3 de-energized
+1658;Fuse 7F1, 7F3, 7F4, 7F5, 7F7 or 7F8 de-energized
+1659;Fuse 6F4, 6F5, 6F7 or 6F8 de-energized
+1660;Circuit breaker 6Q1 de-energized
+1661;Circuit breaker 24Q4 or 60Q2 de-energized
+1662;The macro GET assumes that the property 'Attach as late as possible' is activated in the control. Then the flow is stopped and branch instructions executed only so late that this is still possible without a speed slump.
+1663;Several functional groups of the functional group assignment table are identified as "master". This designation must be unambiguous, however.
+1664;No functional group of the functional group assignment table was identified as "master".
+1665;The internally maximally permissible number of functional groups was exceeded (array size).
+1666;When reading the INI file, an error occurred. The parameter or the section could not be found.
+1667;It was attempted to open the INI file. The file could not be found
+1668;During automatic piston mastering, the pressure in the piston has risen to more than the specified configured value. Possible causes: Valves that facilitate the drain of the medium in the piston have not been activated or do not switch 
+1669;The automatic mastering was aborted, because errors occurred while accessing the drive via Sercos
+1670;During the running sequence for automatic mastering the piston task has changed. This may be caused by errors (emergency off etc.).
+1671;After aborting the automatic piston referencing, the original value of the drive parameter S0-0092 could not be reconstructed. Either the currently read value was too small or the decimal places (weighting) of the value could not be determined
+1672;The value of the drive parameter P51 is zero. Please check parameter 
+1673;The value of the drive parameter S111 is zero. Please check parameter 
+1674;Value of S92 in the drive does not agree with configured value (AxisMaxTorque) in process.cfg.%CrLf%Possible causes: %CrLf%- Autom. piston referencing aborted and original value of the S92 could not be written back into the drive.%CrLf%
+1675;Either piston has never been referenced or an error occurred during the automatic referencing (overpressure, aborting, error while carrying out Sercos commands etc.)
+1676;It was attempted to start the time program for autom. piston referencing manually 
+1677;When starting the referencing process, the pressure in the piston may be no higher than the specified configured value.
+1678;- Timeout time set too low (2 * piston max. position in mm) approx. 440 sec.%CrLf%- No drive release%CrLf%- No power for dosing drives
+1679;Control air STL valves not correctly connected and/or compressed air supply inadequate and/or pressure switch incorrectly set 
+1680;STL valves not correctly connected
+1681;Compressed air supply inadequate and/or pressure switch incorrectly set
+1682;- Turbine defective%CrLf%- Preset speed too high%CrLf%- Time not sufficient
+1686;- Transmission error when copying via the network%CrLf%- Download directory does not exist
+1687;- The extension of the paint volume table file is not *.ini
+1688;- The format of the configuration file is faulty%CrLf%--Columns, sections, keywords wrongly written 
+1689;- No valid paint volumes were found in the paint volume table.%CrLf%  (to keep the data volumes small, only paint volumes larger than 0.0 are saved on the control. Values with the default entry -1.0 are not in the paint volume database  
+1690;Temperature too low.
+1691;Temperature too high.
+1692;When grinding in the brake, the speed of the motor must not be too high since otherwise the brake might be damaged. The speed is set in the teach program and is too high.
+1693;- Dosing piston drives against a closed system%CrLf%- Dynamics parameter of the piston movement too large%CrLf%- Sluggishness of the mechanics
+1694;The necessary minimum speed to grind in the motor blocking brake was not reached within the set time.
+1695;The call of the MCU function McuActivateArea was not successful. The configured work / exclusion area cannot be supervised.
+1696;Faulty entries in [RC.KINEMATIC:n.VirtualWall......]
+1697;Entry [RC.KINEMATIC:n.VirtualWall.Blockx] is missing in configuration
+1698;The mentioned hardware endpoint could not be mapped.%CrLf%Different designation of the hardware end points in the Kemro manager and RCU.%CrLf%Input/output was not created or several inputs/outputs in the Kemro manager.
+1699;- The initiator in the paint reservoir did not react.%CrLf%- Pressure in the ringpipe too small.%CrLf%- Paint valve does not open.%CrLf%- Initiators at the paint reservoir defective. %CrLf%- Piston in the paint reservoir does not move.
+1700;- No paint in the paint reservoir.%CrLf%- High pressure in the paint reservoir too low or not available.%CrLf%- Ringpipe pressure too low or not available.%CrLf%- Paint valve does not open correctly. 
+1701;Maximally possible make-and-break cycles reached. Component cannot be used any further.
+1702;Warning limit of the make-and-break cycles reached.
+1703;- The initiator in the isolation cylinder did not react. - When extending, the air cannot escape. - Control valves defective. - Initiators at the isolation cylinder defective, displaced.%CrLf%- Stripping device in the isolation cylinder 
+1704;A parameter that is required by all means when initializing a process axis could not be found in the catalog of the control.
+1705;For the correct calculation of the current torque of a process axis, two parameters must be available in the configuration of the control (Sercos part) with defined values.  %CrLf%- torqueUnitsToDriveValue = 10.0%CrLf%- driveType = ecodrive
+1706;The ServoName of a process axis in the mfb configuration could not be found in the control configuration (Sercos part). In both configuration files (motion.cfg and iosystem.cfg) the name must be identical.
+1707;- Missing rotation speed release%CrLf%- Missing high tension release
+1708;During the master process, the drives were switched off, the dead man switch was released %CrLf%or other drive error.
+1709;During the mastering of the specified axis, the traveling distance (mastering delta) did not suffice to detect a slope change of the sensor signal 0 -> 1.
+1710;A counter card that records the impulses from the encoder at the conveyor is used for the path recording of the objects in tracking. This card has failed and reports the error indicated under info.
+1711;The compressed air at the material pressure regulator has undershot the lower warning limit.
+1712;It was attempted to delete a dynamic storage element. Here, an error occurred. Cause: Programming error / internal control problem 
+1713;In the file "EcotalkVariables.ttp" the customer can configure the names of the transfer parameters for EcoTalk, %CrLf%the value of the mentioned parameter was changed to invalid value for this function.
+1714;For the mentioned group, a wrong task was programmed in EcoTalk.%CrLf%Not all selectable tasks are possible for every group.%CrLf%
+1715;For the mentioned command, a wrong group was programmed in EcoTalk.
+1716;The macro GET assumes that the property 'Attach as late as possible' is activated in the control. Then the flow is stopped and branch instructions executed only so late that this is still possible without a speed slump
+1717;It was attempted to change the current axis values into motor values, this did not succeed.%CrLf%Cause: Internal control problem 
+1718;While jogging, the mentioned axis reached the software end position.
+1719;The reference to the hardware end point "SERCOS" could not be made. The Sercos ring has no symbolic name or another than "SERCOS" in the configuration:%CrLf%[IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0]%CrLf%name = "SERCOS"
+1720;Statistic fifo could not be worked off.
+1721;Only a purged channel may be filled with paint, since otherwise soiling may be the result.
+1722;- The initiator in the isolation cylinder did not react.%CrLf%- During the movement, the air cannot escape.%CrLf% - Control valves defective. %CrLf%- Initiators at the isolation cylinder defective, displaced.%CrLf%- Stripping device in the isolation cylin
+1723;Interlock of a device was bridged with the required value 'OmitInterlocks'. Please be careful when using the device. Operating error may lead to a damage. 
+1724;In the cfg file, the increments/mm were entered. From these, a maximally permissible encoder jump is calculated. The calculated encoder jump is larger than the maximally permissible jump, however.
+1725;Within a control cycle, the change of the actual value of the incremental transmitter or the transmitter card is larger than the permissible change is.
+1726;Because of a failure of the incremental transmitter or the transmitter card, an inadmissible actual value resulted. The smoothing (filter) of the actual value cannot be guaranteed anymore.
+1727;Configuration of the overrides is different to the brush configuration, e.g. Paintflow instead of PaintFlow.
+1728;Override.def incomplete
+1729;The number of sections is limited control-sided.
+1730;The number of columns is limited control-sided.
+1731;Definition file was changed and the module for the "Percent Overrides" was not reloaded into 3DOnSite%CrLf%- Override.ini was not saved with 3DOnsite. 
+1732;Paint valve does not open%CrLf%- No paint connected to the paint valve%CrLf%- pressure in the FD1 or FD2 is de-energized%CrLf%- pressure in the paint supply falls below 0.1 bars
+1733;In the cfg file corresponding to the FU, a speed must be entered for the filter of the incremental transmitter. This value was selected too small, however.
+1734;When calculating the main needle response time, several times (learned time, bus run time, paint distance delay) are used as a basis. The calculated response time must not be any larger than the prewarning time and smaller than 0.
+1735;Section designation could not be read.
+1736;The main needle is activated and within the parameterized delay time, no CO2 jet was detected or the CO2 jet was interrupted too long with opened main needle (wobbling).
+1737;In spite of closed main needle, a CO2 jet was detected.
+1738;A device signal is accessed with an invalid signal address
+1739;It is attempted to determine with an invalid signal name a signal address.%CrLf%Controller is stopped due to this fatal error!
+1740;TeachControl run time timeout
+1741;The user logged in at EcoScreen does not have any authorization for the T2 mode, only instructed specialists have this authorization.
+1742;The maximum number of write-entitled users has been reached (maxLocalWriteSessions).%CrLf%- internal system problem.
+1743;The login of the mentioned user could not be carried out successfully in the given time.%CrLf%Internal control problem in the communication with TeachView.
+1744;In the user administration, no OPC master user is configured for the user level set by the vision system.
+1745;Error when attempting to log out the current user of TeachView.%CrLf%Internal control problem..
+1746;It was attempted to log in more than one user at the same time by Ecoscreen.
+1748;During the calibrating run, the indicated value was not reached. %CrLf%- Limit values for supervision not correct%CrLf%- Wear or saturation of pressure regulator%CrLf%- Material/batch change (large deviation of viscosity)
+1749;After the TimeOut, the robot is not in the demanded position.
+1751;A new object was booked. For the loading of the brushes this information is saved in a FiFo. This memory is completely full, however. Too many loading or change orders are pending and could not be worked off, because the download of a brush was possibly not ended.
+1752;A new object was ordered to be painted, but no brushes were loaded for this object. The object to be painted was not registered in the car body flow.
+1753;The size of the car body memory in front of and/or in the zone has an invalid value. Values between 1 and 50 are permissible
+1754;Hose transitions defective%CrLf%- Pig route 1 defective%CrLf%- Hose route 1 defective
+1755;Air from ringpipe has penetrated into the dosing system%CrLf%- Check pulse air valve PL1 at the paint color changer for tightness.
+1756;The BCU sent a new object to the TriggerBrush (aEvtRxNewBody) but the body ID is 0. The ID must be unequal 0, however.
+1757;The BCU sent the TriggerBrush a new object (aEvtRxNewBody) but the body ID is already in the memory. The old car body was possibly not unloaded or the BCU sends an object twice.
+1758;The BCU has sent an object for reselection to the TriggerBrush (aEvtRxBodyChanged) but the body ID is 0. The ID must be unequal 0, however.
+1759;The BCU sent an object for reselection to the TriggerBrush (aEvtRxBodyChanged) but the body ID exists several times in the memory. An old car body was possibly not unloaded.
+1760;The BCU sent an object for reselection to the TriggerBrush (aEvtRxBodyChanged) but the body ID is not loaded in the brush memory.
+1761;Visu was deactivated from the teach pendant e.g. in the user page 'Channel overview', with the check mark 'Write access. Eco Screen will be locked'.%CrLf% 
+1762;A firmware task is not appended to the set UpdTimer1.
+1763;Firmware and IEC run with different cycle times%CrLf%
+1764;Power loss%CrLf%- Pins at the counter card damaged%CrLf%- EMC
+1765;Control was stopped due to a fatal error!
+1766;Process builder configuration faulty
+1767;When processing the change of operating modes or release specification, the timeout for the complete processing was reached. This is an elementary software fault. Have software checked.
+1768;The time program can only be continued after the robot has ended its profile ride.
+1769;general.cfg does not match the FgAssignment.ini configuration
+1770;The collision detection has reacted 
+1771;For the mentioned motor vehicle type, no profile data could be loaded.
+1772;No accessible point lying ahead (conveyor value > as current conveyor value) could be found in profile.%CrLf%Presumably error in the parameterization of the profile or conveyor has exceeded maximum profile position.
+1773;The mentioned profile includes Invalid data.%CrLf%Presumably error in the parameterization of the profile or invalid file.
+1774;Internal control problem or operating error.%CrLf%While movement program was running, the car body data were deleted, presumably by executing the "ClearFifo" command.
+1775;In the mentioned profile the maximum axis speed was exceeded during the ride to mentioned point.
+1776;The collision light barrier announces that it is dirty.
+1777;Internal control problem, programming error or parameterizing error.
+1778;The reference position entered in the vision system lies beyond the end of the axis, would thus not be approachable.
+1779;The parameterization of the ionization is incomplete.
+1780;After the ionization was turned on, no feedback of the contactors occurred.
+1781;Due to a collision, the roller went into a safe position, the collision detection still announces an error, however. Presumably the collision detection was damaged or is faulty.
+1782;For the concerned axis, a target position was set outside of the traveling area.
+1783;During the path calculation, an internal control problem occurred. Called function "KCtrl" caused an error.
+1784;No profile data could be loaded for mentioned type.%CrLf% - Pitch in ghost mode too small.%CrLf%- Faulty profile file.
+1785;The safety control has detected a safety violation. 
+1786;The control system has sent a fire alarm.
+1787;The booth ventilation necessary for the system operation is faulty.
+1788;The conveyor equipment has detected a safety-relevant error.
+1789;After the drives were turned on, no feedback occurred.
+1790;After the air supply was turned on, no pressure was built up.
+1791;After the switch-on of the ionization, no feedback occurred.
+1792;The light barrier at the zone inlet was interrupted.
+1793;The light barrier at the zone outlet was interrupted
+1794;All automatic purging programs require the delivery of a purging program group or a time program name.
+1795;The parameter does not exist or parameter is of the array type.
+1796;With this parameter, the indicated subindex does not exist. The element addressed with the subindex was not configured in the SPC200 (program not available, axis not available, no start program defined for this task and so forth)
+1797;It was attempted to write a word on a double word parameter. That is not permissible.
+1798;There are no description elements.
+1799;Depending on the parameter, either the ENABLE signal (ENABLE=1) is missing, the stop signal (STOP=1) is missing or the tasks are not stopped (e.g. to write a program number).
+1800;Before the read-out an initialization must be made by loading a valid value with WinPISA, writing by means of a passenger car task or by NC program.
+1801;During activation of the program, a checksum error was found. Note: The SPC200 now also announces an error.
+1802;Error in the down phase: when turning off the system, certain system functions (power down functions) were not carried out. Possibly the supply unit is defective.
+1803;Error when supervising the supply voltage during operation, unstable supply voltage or heavily disturbed environment, possibly the supply unit is defective.
+1804;Error when supervising the storage area of the firmware (storage protection violation), heavily disturbed environment or basic device defective
+1805;Error when supervising the storage area of the application programs (storage protection violation), heavily disturbed environment or basic device defective
+1806;Error when accessing adaptation data. The data are not initialized
+1807;Measuring system in the end position or measuring system cable defective or AIF string not working anymore
+1808;Error when supervising the field bus unit (Profibus, interbus, DeviceNet, CANopen...), Field bus unit is not accessible. Slot in the base device or field bus unit defective or field bus unit not completely plugged in.
+1809;Configured assignment of a local IO area to the indicated fieldbus IO area in the SPC200 is not permissible, because the local unit itself is not available.%CrLf%OR%CrLf%the field bus IO area is already occupied. 
+1810;The AIF x found undervoltage at the load voltage. The valve goes automatically into center position, the axis is not controlled anymore.
+1811;Program number with L command is identical with number of the calling program
+1812;permissible nesting depth exceeded with L command
+1813;Direct required value specification (M10) or direct control of the valve tension (M39) active with new required value (NC command: G00, G01, G02, M10, M39)
+1814;NC command cannot be executed. Either it is not supported by the firmware or the axis specification is invalid.
+1815;Programmed input or output is not available. Input/output address or IO module not available.
+1816;The absolute preselection value (G25) in the selected register @n does not lie between the last required position or the last switching position and the new required position.
+1817;The required value specification via field bus (M10, channel 5) cannot be activated, since there is no field bus card or the used field bus card does not support this function.
+1818;Positioning timeout:%CrLf%The reference position and/or the position of the last moving task could not be reached fast enough (MC error)%CrLf%
+1819;Required position outside of the software end positions, the positioning process is not started
+1820;Inadmissible positioning task with position-dependent record relaying (G25)
+1821;demanded speed cannot be reached
+1822;Error in precalculation of the control parameters (x10, x50, x90) or timeout (x20, X60, XA0)
+1823;The system identification was aborted by a stop. The stop may have been activated by the customer or by a system error.
+1824;During system identification, no reasonable parameters were found
+1825;When restoring the original parameterization, an error occurred
+1826;When initializing the identification step, an error occurred
+1827;NC command G00 not possible, since no dynamic identification ride was carried out yet
+1828;Regulator in the SPC200 cannot be initialized
+1829;A task is already active for this axis (positioning, identification...). A new task can only be accepted after the old one was ended.
+1830;Contents of a position register are invalid
+1831;Violation of the stroke limit value (M40) at M39
+1832;System identification aborted since enable signal is missing
+1833;ID data invalid
+1834;Inadmissible positioning quality grade
+1835;Regulator is inactive, since enable signal for initial startup or after movement test is missing or the configuration is faulty.%CrLf%Only with stepping motor axis:%CrLf%-No ready-signal from axis controler%CrLf%
+1836;Command is not supported by this axis type:%CrLf%With pneumatic axes: Command reference ride (G74)%CrLf%With electrical axes: Activate analog input in mode 0 and 1 (M10), command M39%CrLf%
+1837;Reference position for this axis unknown
+1838;Violation of the software end positions with command M39
+1839;Violation of the speed limit value (M41) at M39
+1840;The indicated reference ride mode is not permissible for this axis.
+1841;The reference ride was carried out for the pneumatic axis in the mode 7. For the desired command, the mode 0, 5 or 6 is necessary, however. 
+1842;Parameter outside of the permissible area
+1843;Error in the digital required value specification via field bus.
+1844;Software end position lies outside of the possible traveling area
+1845;Mass load lies outside of the permissible area
+1846;Amplification factor inadmissible
+1847;Attenuation factor inadmissible
+1848;Filter factor inadmissible
+1849;Measuring system length invalid or measured value outside of the put cylinder length
+1850;Parameter limit violated
+1851;Measuring system type inadmissible
+1852;permissible step frequency (traveling frequency) undershot (< 80 Hz) or exceeded (> 40000 Hz)
+1853;Adaptation data faulty
+1854;Syntax error or inadmissible program number entered
+1855;When using the control panel: %CrLf%Inadmissible program number selected, program cannot be created, because already available or program cannot be opened, because not available. No free storage space.%CrLf%When using WinPISA: Progr
+1856;Inadmissible record number
+1857;No free storage space for new program
+1858;Checksum error
+1859;Error in upload/download with WinPISA
+1860;Enable signal is missing
+1861;System is stopped, 0 signal is supplied to the STOP input 
+1862;Start program not available
+1863;Command not permissible in this operating mode 
+1864;Command and/or operating function inadmissible with active NC program 
+1865;Regulator is inactive, since enable signal for initial startup is missing or configuration is faulty%CrLf%Only with stepping motor axis: no ready signal from the power activation 
+1866;The NC program contains new NC commands and extended NC syntax that is not supported by the control panel SPC200-MMI-1... (also refer to chapter NO TAG).
+1867;Movement test cannot be run, because the input ENABLE supplies 1 signal.
+1868;Valve tension cannot be changed, because the input ENABLE supplies 0 signal 
+1869;Movement test was aborted, because ENABLE supplies 0 signal.
+1870;Compatibility error between WinPISA, MMI and the operating system version of the SPC200. A program available in the SPC200 cannot be adapted with the used WinPISA.
+1871;Compatibility error between WinPISA and the operating system version of the SPC200.%CrLf% The function calibrating of the operating system version 4.82 requires at least WinPISA 4.41. %CrLf%
+1872;Too many trace variables defined. Max 10 trace variables per axis are permissible.
+1873;Trace memory reserved for other axis
+1874;Unknown trace variable defined (defined by the use of different firmware versions)
+1875;Trace not configured.
+1876;In configuration, no device is assigned to the painting
+1877;Error in operation with HashMap.
+1878;Inquiry of the functional group assignment not possible, because assignment not valid.
+1879;Routines were aborted by the occurrence of an error.
+1880;While working with a dynamic array, this error resulted.
+1881;During the operation with a file, the error resulted
+1882;When saving the learning values in a file, an error occurred.
+1883;In the comparison of the general data for the PushOut, a difference occurred between the stored data from the file and the current type data.
+1884;The device handed over could not be identified as a PushOut device.
+1885;In order to calculate the volume, the module name must be handed over to the function. This seems to be faulty.
+1886;Discrepancy in the BodyID
+1887;A dynamic structure where the values are supposed to be saved does not exist.
+1888;Fuse 7F3 or 7F4 de-energized
+1889;During the indicated write or reading access, an error has occurred.%CrLf%Faulty parameterization or transmission error.
+1890;If the value set as parameter 1 is undershot, the indicated zone reports Low alarm.%CrLf%The low alarm is not monitored with required value = 0!
+1891;If the value set as parameter 2 is exceeded, the indicated zone reports High Alarm.%CrLf%The High Alarm is also monitored if required value = 0, to safely monitor short-circuited solid state relays at the output, also when zones are switched off
+1892;The heating current monitoring for the indicated zone was released. %CrLf%Either no current flow is recognized in case of excitation or a current flow is detected, although no excitation of the zone occurred.
+1893;As soon as the actual value of a zone differs by more than the value of the required value set as parameter 3, the indicated zone reports deviation alarm (negative = falling short, positive = transgression).
+1894;The new required value of a zone differs by more than the value of the previously required value set as parameter 3.
+1895;The heating control element has detected a feeler break in the indicated zone.%CrLf%Heating or heating hose defective. Error in electric equipment. 
+1896;The heating control element has detected a thermocouple closing in the indicated zone. Heating capacity is requested, but temperature does not rise.%CrLf%Wrongly connected or short-circuited cables. Heating or heating hose defective. Error in electrics.%CrLf%D
+1897;During the internal self-optimization of the tempering device, an error occurred.
+1898;For the mentioned switch, no control is active, it does not report any zero adjustment back to the control, however.%CrLf%Wrong switching condition (signal 1, expected 0) or (signal 0, 1 expected).%CrLf%
+1899;Due to multiplication by Override, the required value for this device lies outside of the valid area.
+1900;Parameter [SOM].simulateEndpointMapping must be on 0 (deactivated) under RTX
+1901;Both mentioned inputs were set by the PLC, this is an invalid state.
+1902;The motor blocking brake was opened externally.%CrLf%With opened brake, it not is possible to connect the drives.
+1903;The macro SETTRACKINGMODE may only be used in rail tracking installations.
+1904;It was attempted to write a new car body data record into an already full input buffer
+1905;A difficult error of class 3 was issued by the firmware. Then the control must be stopped.
+1906;Rpc receives the signal for the restart from the station control while the program is running
+1907;A color in the MultK color must not consist of two identical components
+1908;An attempt is made to open a valve, although another of the mentioned valves is opened or the carriage of the linear unit is  not docked. This valve can only be opened if the other valves are closed and the linear unit 
+1909;During the docking or undocking process, a timeout error has occurred. Therefore the linear unit remained too long in a transition status.
+1910;The speed is not set on 100%. This leads to a higher paint consumption, which may result in an error during PushOut.
+1911;The set pushout volume was exceeded
+1912;During the process of the saving routine, an overflow was found in the dynamic saving element.
+1913;Internal counter for triggers is outside the range.
+1914;Named machine should be started, but another program is still running.%CrLf%Maybe body gap is too small.
+1915;Conveyor release was bridged by user with key switch on control desk.
+1916;A main needle feedback (FeedbackType in the process.cfg) was selected for which no hardware endpoint was created in the process.cfg (FeedbackSensorOn,FeedbackSensorOff at EcoGun, FeedbackSensor,FeedbackSensorFault at EcoBell) 
+1917;An error occurred during the processing of the indicated cfg file. An element has acknowledged the reading negatively.
+1918;The configured measure of the ActionPointOffset in BCU.cfg lies in front of the zone start, this is not possible in reality.%CrLf%Error in the configuration.
+1919;Controller has been restarted and a body is in zone, therefore the conveyor could not be switched on.%CrLf%Risk of collision.
+1920;Current paint position from command "WAIT_paint position" is smaller than the last, because of that it is not possible to switch the main needle automatically at this command. Option switchGunAtWaitPaintPos active. 
+1921;Function RcuResetMessage is called with an invalid message class. Only infos and warnings are permissible.
+1922;The ServoName saved in the mfb.cfg does not match any configured drive in the sercosx.cfgr
+1923;During the access to a brush required value, it was found that a wrong data type was used. INT, DINT, REAL, are allowed.
+1924;During the access to an IdleBrush required value, it was found that a wrong data type was used. INT, DINT, REAL, are allowed.
+1925;In a required value, a REAL number was used for the mentioned brush. Only INT/DINT figures are allowed.
+1926;Current axis position deviates more than configured value from the required position.
+1927;In the type assignment, no project name and/or no name of the program is defined for the corresponding type 
+1928;When calculating the valve response time, several times (configured time, bus run time, paint flying time) are used as a basis. The calculated response time may not be larger than the prewarning time and smaller than 0.
+1929;The acknowledging of messages is allowed only from the functional unit SCU
+1930;The designation of the ProfibusMaster in the file "profibusmaster.cfgr" must be unambiguous and be "name="ProfibusMaster".
+1931;The designation of the ProfibusSlave in the file "profibusslave.cfgr" must be unambiguous and be "name="ProfibusSlave".
+1932;An attempt was made to reserve the indicated channel for painting. This channel does not have the status paint, however. Painting not possible.
+1933;An attempt was made to master the specified hand axis without the complained axis standing in reference position.%CrLf%All hand axes must be mastered consecutively. Axis 4 --> 5 --> 6.
+1934;The target position for the automatic mastering results from the "current position" + "masteringdelta" from the robot configuration. This is outside of the axis end, however.
+1935;The respective drive has activated the mechanical axis limit switch.
+1936;For the blocking air, a timeout has been parameterized after this timeout has elapsed, the blocking air is switched off automatically to reduce the air consumption. %CrLf%If the parameter [BlockingAir]ActiveTime is available in the Process.cfg, the value saved there is used. If this parameter is not available, the blocking air is switched off after 60 min.
+1937;The solvent valves in the cleaning device may only be opened when the bell / gun is in the cleaning device. Otherwise, the solvent may splash into the booth in an uncontrolled way.
+1938;Sensor check failed channel 1
+1939;Sensor check failed channel 2
+1940;No absolute data were read in with RECEIVE(vision, data), before an attempt was made to read in relative data with %CrLf%RECEIVE(VISION_REL, data).
+1941;- Collision of the applicator with an object%CrLf%- cable breakdown of the collision sensors%CrLf%- Mechanical load exceeds the holding strength of the collision protection 
+1942;The parameter numberOfPoint in the macro BK_FINISH does not agree with the number of the path points and/or measurement points of the path.
+1943;The point number in the macro BK_CORR was already used.
+1944;For the Profinet slave, a name must be indicated in the parameter FX775A:0/PNIO:0/PIOSLAVE:0.
+1945;Piston change in the teach programm set, although the manual piston change is not released in the Process.cfg file.
+1946;Deselection of the indicated piston while this was in the painting status.
+1947;No piston release is available.
+1948;The parameterized minimum response time is smaller than or equal to the prewarning time. As a minimum response time, the prewarning time is set.
+1949;More painting volumes were used than were defined as learnable for the pre-pressure.
+1950;In the Process.cfg, the automatic pre-pressure learning was activated and no pressure sensor was indicated for this purpose. -> automatic pre-pressure learning off
+1951;Error in the teaching program. -> Possible error during the learning of the pre-pressure
+1952;The respective light barrier announces that it is dirty.
+1953;User information
+1954;The indicated valves must not be opened simultaneously
+1955;Painting path not opened or no release for dosing drives from PLC
+1956;Device can only be turned on after parameterized minimum rotation speed has been reached
+1957;Main needle was deselected in vision system
+1958;CO2 cooler defective
+1959;Valve lock active
+1960;Project planning error in the time program
+1961;An attempt is made to undock the linear unit without purging the interface before
+1962;Carriage not in position
+1963;Skid is supposed to be docked. That is not possible since it is not in a valid position.
+1964;Air supply failed and linear unit is supplied with paint
+1965;Operating conditions for application tower not given
+1966;- No network link%CrLf%- Vision system not started%CrLf%- robot controller not working
+1967;Parameter of the hose compensation not optimally set
+1968;Parameterized warning period has elapsed
+1969;Parameterized alarm time has elapsed
+1970;Invalid parameterization.
+1971;Project planning error in robot software.
+1972;- No more paint in the indicated special color system anymore %CrLf%- special color system was deselected in the paint mix room
+1973;Manual intervention
+1974;Axis is not referenced.
+1975;Speed required value is outside of the valid range
+1976;Pressure in the dosing piston too high
+1977;Error in time program. 'OrderRun' and 'OrderMoveVolume' are set simultaneously 
+1978;Parameter not available in the configuration file 
+1979;Error when accessing the dynamic memory.%CrLf%Internal control problem.
+1980;Strobe signals of PLC do not correspond to the conventions
+1981;Car body cannot be booked in (car body data invalid or FiFo full)
+1982;A car body cannot be found in the FiFo
+1983;FiFo is full, no further car body can be booked in
+1984;Type or color information invalid after download 
+1985;Signal reference cannot be determined
+1986;Error during the opening of a time program file (binary file)
+1988;Check sum error of the time program file (binary file)
+1989;Initialization error during system startup
+1990;Time program is not suitable for the project configuration
+1991;Time program not available
+1992;Version of the time program cannot be loaded
+1993;Time program cannot be started because a required channel is occupied
+1994;Name of the time program too long
+1995;Info file of all loaded time programs cannot be opened (possibly write-protected)
+1996;In the time program, steps are commented
+1997;In the last step of the time program, a FixposGo signal is activated and the program shall be started with the start properties 'do not reset signals at the end'
+1998;Time program parameterization error
+1999;Access error to file
+2000;Info that a time program was started by SFC
+2001;Response time of one device is larger than the prewarn time. This way, the response time of the device cannot be compensated
+2002;Paint override not defined
+2003;Override value invalid
+2004;Faulty parameterization of the paint assignment
+2005;Faulty parameterization of the color change assignment
+2006;Faulty parameterization of the multi-component table
+2007;Parameterization error of the type association
+2008;The degrade request of the station PLC was not unambiguous. The control could not be switched into the degrade mode.
+2009;The degrade request of the Station PLC was outside of the range defined in the file BCU.cfg.
+2010;A degrade request was sent to Rpc by the station PLC. In Rpc, the change into the degrade mode is not released. The parameter EnableDegradeMode in the section [DegradeMode] in the file BCU.cfg has the value false.
+2011;During the change in the degrade mode, an invalid command was recognized in the control. The change into the degrade mode was not carried out.
+2012;The requested fixed position ride cannot be started, since the number lies outside of a valid range.
+2013;The requested fixed position ride cannot be started, since the number is outside of a valid range.
+2014;An attempt was made to start a fixed position ride in manual mode at the vision system while no drive release was available for the robot drives.
+2015;An attempt was made during a motion guard sequence to start a fixed position while no drive release was available for the robot drives.
+2016;An attempt was made during a brake test sequence to start a fixed position while no drive release was available for the robot drives.
+2017;An attempt was made during a diagnosis ride to start a fixed position while no drive release was available for the robot drives.
+2018;The ghost mode requested by SCU was not fed back.
+2019;Another zone start signal was received by the station PLC, although the current skid/product carrier did not leave the zone start area yet.
+2020;A signal zone start was received by the station PLC without previous sending of car body data.
+2021;An attempt was made to start a program. The movement control has not given any feedback: Motionactive or Motionerror within a configurable time.
+2022;An attempt was made to start an profile program and the robot was not in home position and/or it did not report any home position to the BCU.
+2023;An attempt was made to command a profile program, although the robot controller is not in automatic mode.
+2024;The conveyor stop position for the current type was exceeded before the program was started. A start of the program for this car body is no more possible.
+2026;An attempt was made to start a program, although the brush files were not loaded correctly.
+2027;The change to the degrade mode is not acknowledged by the movement control. The control did not change into the degrade mode.
+2028;An attempt was made to start a profile program before the program start position has been reached.
+2029;An attempt was made to abort a program by means of the command program abortion. The permissible time was exceeded.
+2030;The station PLC received the signal convey car body, although the station mode tracking is parameterized.
+2031;The station PLC has received the signal car body in position although the station mode tracking is parameterized.
+2032;The station PLC has received the signal convey car body out, although the station mode tracking is parameterized.
+2033;Error in validity check, for the previous car body, no strobe start preparation was received
+2034;An attempt was made to insert a car body data record with an already available BodyID. Internal error.
+2035;The synchronization of the conveyor position in the zone occurred too late.
+2036;The station PLC has received a synchronization signal and no skid/product carrrier was in the area planned for that.
+2037;The station PLC has received a synchronization signal and no skid/product carrrier was in the zone.
+2038;The station PLC has received a synchronization signal, although no release was parameterized in BCU.cfg for that.
+2039;The station PLC has received a synchronization signal, although the corresponding program is already running.
+2040;The station PLC has handed over a program number which is not parameterized in the type assignment table.
+2041;The station PLC has received the type number: 0.
+2042;The station PLC has handed over a color number for which the valve number is not parameterized in the paint assignment table.
+2043;The station PLC has handed over a color number for which the color group is not parameterized in the paint assignment table.
+2044;The station PLC has received the color number: 0.
+2045;The station PLC has handed over a color number, for which the color group is not parameterized in the paint assignment table.
+2046;No external color code could be determined for the received color number in the paint assignment table.
+2047;No component number for the received color number could be determined from the multi-component table.
+2048;The station PLC has handed over a color number for which the color group is not parameterized in the paint assignment table.
+2049;The station PLC has handed over a color number for which the mixture ratio is not parameterized in the paint assignment table.
+2050;The station PLC has handed over a color number for which an inadmissible number of components was detected in the multi-component table.
+2051;For the received type number, no supply group number could be detected from the paint assignment table.
+2052;For the received color number, no supply group number could be detected in the paint assignment table.
+2053;For the received color number, an inadmissible value for the supply group number was detected in the paint assignment table.
+2054;The station PLC has sent the color number of a special color. For those colors, the valve number must be transmitted as well. The valve number does not have any valid value. The valves available for special colors are parameterized in the file BC. 
+2055;The station PLC has sent the color number of a special color. For those colors, the valve number must be transmitted as well. The valve number has the value 0.
+2056;An attempt was made to use a special color in simulation. This is not possible in the present software package.
+2057;No valid skid length could be detected from the type assignment table.
+2058;The skid/product carrier has reached the conveyor top position and the robot is not in pre-position.%CrLf%The robot's preparation is not finished yet.%CrLf%The robot's preparation is finished and the profile program was not started yet.
+2059;The skid/product carrier has reached the conveyor top position and the preparation of the robot is not finished yet.
+2060;The skid/product carrier has reached the program start position and the station PLC does not give any release to start the profile program.
+2061;The skid/product carrier has exceeded the conveyor top position. The robot was not ordered.
+2062;The profile program could not be started yet since the brush files were not correctly loaded for the current car body.
+2063;The strobe Start preparation was received from the station PLC, although this is not expected from Rpc.
+2064;The strobe Start main channel was received from the Station PLC, although this is not expected from Rpc.
+2065;An attempt was made to find and then to delete a data record in the car body memory with the aid of the BodyID.%CrLf%The data record could not be found. Internal control error.
+2066;An attempt was made to delete a data record in the car body memory with the aid of the BodyID. The BodyID %CrLf%with value 0 was handed over to the element. Internal control error.
+2067;An attempt was made to find a data record with the aid of the BodyID in the car body memory. The BodyID was available several times in this memory. Internal control error.
+2068;An attempt was made to delete a data record in the car body memory with the aid of the BodyID. The data record could not be found. 
+2069;An attempt was made to approach the fixed position InGunbox, although the robot was not in the position AboveGunbox.
+2070;An attempt was made to go directly to home position from the InGunbox position.
+2071;An attempt was made to start a fixed position ride while a car body was in the zone. In this situation, only rides into purging position and home position are possible.
+2072;An attempt was made to approach another fixed position in addition to the purging or home position. This is not possible for a body in the zone. 
+2073;An attempt was made to move from one fixed position to another fixed position without going to home position first.
+2074;An attempt was made to approach another fixed position from Abovebox. Only the fixed positions InBox and home position are possible.
+2075;An attempt was made to approach another fixed position from inbox. Only the fixed positions AboveBox and home position are possible.
+2076;An attempt was made to approach another fixed position from inbox. Only the fixed position AboveBox is possible.
+2077;An attempt was made to start a fixed position with material in T2 mode out of a time program. This is not possible for safety reasons.
+2078;After Clear Fifo, Rpc has requested a reinitializing of the car body data at the station PLC. No reinitializing was carried out.
+2079;In case of multi-component colors, no supply group number may be stated in the paint assignment table for the color code of the mixed color. This may only be entered for the components. If the supply group is also stated for the mixed color, this will lead to this error.
+2080;Initialization of the Pushout functions failed.
+2081;Due to an error, the referencing has failed.
+2082;Traveling is not possible as long as the referencing is not ended.
+2083;1)The controller has not yet been referenced.%CrLf%2)The controller has already been referenced, but there was no bus connection to the SPC200 during the run-up and thus no reference check could be carried out.
+2084;Error when reading out a PushOut learning file.
+2085;Time-out when writing on the parameter channel.
+2086;The order code is invalid.
+2087;No read access to SPC200 controller.%CrLf%- Bus system not ready.%CrLf%- Defect at controller
+2088;Invalid target position.
+2089;Time-out acknowledging moving task.
+2090; Target position not reached within the demanded time.
+2091;The position reported back does not correspond to the demanded position.
+2092;The parameter for the tolerance window is too large.
+2093;The controller does not report any operativeness within the demanded time.
+2094;Reference tables are different.
+2095;The controller is not ready.
+2096;External movement release is missing.
+2097;Referencing not finished yet.
+2098;Overflow learning memory.
+2099;Invalid valve number
+2100;No release.
+2101;Invalid axis number.
+2102;Invalid error class.
+2103;Invalid error number.
+2104;Invalid additional information.
+2105;Parameter is write-protected.
+2106;Lower or upper value limit was exceeded.
+2107;Task identification inadmissible.
+2108;The selected program is already applied in task A (B) and can therefore not be applied in task B (A).
+2109;Unknown error when accessing the passenger car. 
+2110;Internal system error or system memory error.
+2111;A pending error could not be acknowledged
+2112;Error at the first measuring system
+2113;Error at the second measuring system
+2114;Error at the first AIF.
+2115;Error at the second AIF
+2116;Error at the first CP module
+2117;Error at the second CP module
+2118;Error at the AIF line.
+2119;Defective and/or improper unit on the indicated slot.
+2120;Actual configuration not equal to required configuration.
+2121;Initialization error.
+2122;Firmware of basic device and subcontroller unit are not compatible
+2123;User program no. %3 damaged.
+2124;Position list damaged.
+2125;Configuration data damaged.
+2126;System data damaged.
+2127;Dynamic ID data damaged.
+2128;Static ID data damaged.
+2129;Faulty PROFIBUS configuration data.
+2130;Faulty INTERBUS configuration data.
+2131;Faulty CANBUS configuration data.
+2132;Reference position is invalid.
+2133;Short-circuit at E and A or undervoltage at the unit.
+2134;Short-circuit at E and A unit.
+2135;Load voltage for field units and proportional valve too low.
+2136;Error at analog input unit
+2137;Error at the V.24 interface
+2138;Error at subcontroller unit.
+2139;Error at stepping motor unit.
+2140;A CP module of an AIF string has detected undervoltage at the load voltage
+2141;Start program not available
+2142;Subprogram not available.
+2143;NC batch is not available.
+2144;Arithmetic overflow in a register.
+2145;NC batch: batch overflow.
+2146;Transformation for this required value already occurs.
+2147;The programmed required value input is not available.
+2148;Register index is invalid.
+2149;The wear counter has reached the wear limit.
+2150;The wear counter has reached the warning limit.
+2151;Collective fault
+2152;The dynamic supervision has reacted.
+2153;The starting current is too high.
+2154;The current actual value exceeds the static threshold (I stat).
+2155;Actual voltage value falls below the static threshold (U min).
+2156;The self-test has failed.
+2157;There was a time-out in the execution of the self-test.
+2158;The actual value is outside of the tolerance.
+2159;The device required value lies outside of the permissible area.
+2160;The actual value approaches the static threshold.
+2161;High tension was deselected.
+2162;Hardware fault at the CO2 sensor.
+2163;The main needle reports already - open.
+2164;The main needle reports already - closed.
+2165;The device has exceeded the maximum alarm cycle time.
+2166;The device has exceeded the minimum alarm cycle time.
+2167;The status monitoring has reacted. Pig did not arrive at the initiator.
+2168;The status monitoring has reacted. The pig did not leave the initiator.
+2169;Start monitoring addressed by the pig. Pig started too slowly.
+2170;In the parameterized time, there was no feedback that the motor is working after the motor has been switched on.
+2171;The device was turned on, but there is no feedback -on-.
+2172;The initiator announces a collision.
+2173;The indicated file could not be displaced.
+2174;Time-out during the displacement of the indicated file.
+2175;The indicated file cannot be changed since the target file already exists.
+2176;The indicated file could not be changed since not enough storage space is available in the target path.
+2177;An unknown error occurred during the displacement of the indicated file.
+2178;The handed over configuration file could not be copied.
+2179;The indicated Sercos command could not be carried out.
+2180;The indicated Sercos command could not be deleted.
+2181;Sercos command execution was not successful.
+2182;The calculated switch-on delay is outside of the permissible area.
+2183;The calculated switch-off delay is outside of the permissible area.
+2184;The compressed air at the material pressure regulator has exceeded the upper warning limit.
+2185;The compressed air supply at the material pressure regulator has undershot the lower alarm limit.
+2186;The air pressure difference between required and actual pressure at the material pressure regulator has exceeded the upper alarm limit.
+2187;The material pressure at the material pressure regulator has undershot the lower warning limit.
+2188;The material pressure at the material pressure regulator has exceeded the upper warning limit.
+2189;The material pressure at the material pressure regulator has undershot the lower alarm limit.
+2190;The material pressure difference between required and actual pressure at the material pressure regulator has exceeded the upper alarm limit.
+2191;The required value of the application pressure is beyond the parameterized range.
+2192;The temperature sensor indicated in the Process.cfg file was not found in the project.
+2194;Required/actual value difference of the material temperature faulty.
+2195;The material temperature is beyond the parameterized range.
+2196;Difference reaches set limit value.%CrLf%Variable is switched off.
+2197;One or several alarms were triggered by the tempering device.
+2198;The tempering device reports the indicated alarm.
+2199;Motor protection switch was triggered.%CrLf%Wrong rotary field or phase is missing.
+2200;Minimum level not reached.%CrLf%Filling active.
+2201;No flow and/or no stream in the tempering device (only on devices with stream monitoring).%CrLf%Blocking valve and/or ball valve supply or return closed.
+2202;Supply line temperature reaches set limit value.%CrLf%Variable is switched off.%CrLf%-> Consequence: heating turns off.
+2203;Return line temperature reaches set limit value.%CrLf%Variable is switched off.
+2204;Film temperature reaches set limit value.%CrLf%Variable is switched off.%CrLf%-> Consequence: heating turns off.
+2205;Current control sensor defective.%CrLf%External temperature sensors activated, but not connected.
+2207;During the monitoring of connecting and/or changeover command to the terminal equipment or the participant and its feedback, a time-out has occurred. Required state and actual state are not identical.
+2208;The tempering device is in manual mode. This way, the temperature cannot be controlled by the control.
+2209;The indicated fuse has failed.
+2210;Not all time programs could be loaded.
+2211;The indicated pig has left the source station during the loading of the corresponding piston.
+2212;The pressure sensor indicated in the Process.cfg file was not found in the project.
+2213;The flow sensor indicated in the Process.cfg file was not found in the project.
+2214;The demanded required value is not covered by the process and the corresponding calibrating table. %CrLf%- wrong calibrating table selected or invalid required value assigned%CrLf%- calibration not carried out or not successfully carried out
+2215;Deviation between required and actual position
+2216;All channels deactivated
+2217;Internal control problem.
+2218;Leak in the system
+2219;Flame could not be ignited within the configured time
+2220;Docking unit could not reach target position within the configured time
+2221;Atomizer defective according to message
+2222;The type of air volume regulator in the process.cfg was parameterized wrongly.
+2223;In the parameter "PressureSensorNameBehindPump" or "PressureSensorNameBeforePump" of the process.cfg, a wrong device name was configured for the pressure sensor
+2224;In the parameter "AssignedPumpName" of the process.cfg, a wrong device name was configured for the dosing pump
+2225;In the parameter "PressureRecordingDelay" of the process.cfg, an invalid value was parameterized.
+2226;In the parameter "InitialParamType" of the process.cfg an invalid value was parameterized.
+2227;- Hardware fault (wire breakage)%CrLf%- Parameterization faulty
+2228;The Profinet slave is not in the data exchange status. Causes: PLC does not communicate, wrong slave address, wire breakage between PLC and EcoRPC, control is not yet ready for communication after restart. 
+2229;Message for internal tests.
+2230;Wire break?
+2231;Short-circuit of the two contacts at the cleaning device.
+2232;The tilting mechanism is occupied by a process, e.g. purging.
+2233;The mask was turned on, but there is no feedback that the mask is turning.%CrLf%- Changed pneumatic settings%CrLf%- limit values for monitoring not correct%CrLf%- sensor for rotation monitoring defective%CrLf%- error air drive and/or
+2234;The indicated upper rotation speed limit for the mask was exceeded. %CrLf%- Changed pneumatic settings%CrLf%- limit values for monitoring not correct%CrLf%- sensor for rotation monitoring faulty%CrLf%- error air drive and/or free movement
+2235;The indicated lower rotation speed limit for the mask was undershot.%CrLf%- Changed pneumatic settings %CrLf%- limit values for monitoring not correct%CrLf%- sensor for rotation monitoring faulty%CrLf%- error air drive and/ or sluggishness
+2236;Unauthorized entering of the safety zone.
+2237;Key-operated switch for the bridging of the personnel protection was activated too long.
+2238;The dead man switch at the teach pendant was not activated for a longer time. Therefore, the safety release was withdrawn.
+2239;Key-operated switch for the bridging of the process engineering was activated too long.
+2240;An emergency off switch in the zone was activated.
+2241;Ventilation and/or washout were switched off. Therefore, the installation was transferred into a safe operating state.
+2242;The fire alarm station announces a fire alarm. Therefore, the installation was transferred into a safe operating state.
+2243;The safety PLC has detected a safety-relevant error and therefore revoked the overall release.
+2244;The teaching operation was activated (key-operated switch on T1 or T2), but no robot was selected on the teach pendant.
+2245;Power for movement drives not connected.
+2246;Power for process drives not connected.
+2247;There are no data for the object on the data check initiator.
+2248;The fixing of the car body was removed during the processing. The installation was stopped then immediately.
+2249;After the processing, the data could not be reported back to the head station (communication problem).
+2250;The conveyor is running without conveyor release. Possibly there is a programming error in the conveyor equipment control or the conveyor equipment is in manual mode.
+2251;In the teach program, macros are used which cannot be processed in the control.
+2252;Configuration error
+2253;The teaching points P1, P2 and P3 are on one line. The calculation of a level from the three points is not possible.
+2254;The mentioned point is not taught in the object coordinate system (but in axes or in world)
+2255;The teaching points P1, P2 and P3 are approximately on one line. The calculation of the level through the three points is badly conditioned.
+2256;The macro was called although the corresponding step was not selected in CONFIG3D.
+2257;The macro was called without having defined the reference values with INIT3DOBJECT before.
+2258;The macro mentioned first was called, although the macro mentioned second was not executed successfully yet.
+2259;Difference between the measurement at the reference car body and the measurement at the current car body is larger than the limit value parameterized in [RC.KINEMATIC:0.ObjMeasure].
+2260;On the programmed path, no signal comes from the distance sensor
+2261;Status message from the VMT BK system
+2262;Communication problem between control and VMT BK computer
+2263;BK_START not possible with this mode. Reserved for extensions.
+2264;Conveyor is not ready to start.
+2265;Conveyor stop with external cause (conveyor equipment release is available).
+2266;During the reselection, a time-out occurred. Possible causes: %CrLf%- Programming error in PLC%CrLf%- No acknowledgement of at least one robot controller.
+2267;There is at least one invalid data record in the data fifos. Possible cause: %CrLf%- Data record not entered into type or paint assignment table
+2268;Station cannot be started, because the high tension was not activated on the control panel (key-operated switch)
+2269;Type data could not be found in type assignment table.
+2270;Paint data could not be found in paint assignment table.
+2271;Station cannot be started, because the burner was not activated on the control panel (key-operated switch)
+2272;The special paint supply currently does not provide the desired paint color. Therefore, the data record could not completely be generated.
+2273;The ghost mode must not be started as long as there is a real car body in the zone (collision danger).
+2274;Start of the ghost mode is only possible if: %CrLf%- station is in automatic%CrLf%- station started
+2275;For the start of the ghost mode,> at least one ghost data record must be selected.
+2276;The zone inlet must not be released as long as the ghost mode is active (collision danger).
+2277;During the ghost mode, a real object was booked into the zone. This is not permissible. Possible causes: %CrLf%- Programming error in the PLC%CrLf%- programming error in the conveyor equipment control%CrLf%- Manual intervention in the conveyor equipment.
+2278;The approaching of fixed positions is only permissible in manual mode.
+2279;The desired fixed position ride is currently not possible (collision danger).
+2280;Fixed position ride not permissible, because the door openers are not in home position (collision danger).
+2281;Fixed position ride not permissible, since there is a car body in the station (collision danger).
+2282;- The communication to the robot is faulty (field bus)%CrLf%- The robot controller is stopped.
+2283;The robot controller has acknowledged the transferred data as "invalid".
+2284;The robot controller has acknowledged the transferred camera displacing values as "invalid".
+2285;While the robot drives were connected, a time-out occurred.
+2286;The high tension cannot be connected since the safety release is missing.
+2287;The maximum service life of the material is reached, the robot must be purged urgently.
+2288;The user has tried to unselect the robot outside of the deactivation area. This is not permissible, since otherwise there will be collision danger with the conveyor / other robots.
+2289;The conveyor was stopped due to the missing conveyor release of the robot.
+2290;The robot controller has found an error which makes a continuation of the application impossible.
+2291;The robot station has stopped all robots of the station due to an internal error (error class "StopStation").
+2292;The user has tried to select the robot. This is currently not possible, however, because the robot was deactivated: %CrLf%- emergency mode active%CrLf%- robot controller turned off %CrLf%- robot in maintenance box%CrLf%...
+2293;The selecting of the robot is not permissible since the other robots already have an active program.
+2294;The robot cannot carry out any fixed position ride, because the drives currently do not have any power.
+2295;The robot cannot carry out the desired fixed position ride, because this is selected /deselected.
+2296;The user has attempted to start a new fixed position ride while another one was still being active.
+2297;The station start is only possible if all robots are in home position.
+2298;The purging controller of the robot announces an error. Possible causes: %CrLf%- Loss of air supply%CrLf%- leakage at the robot / housing not closed%CrLf%- purging process active after power failure
+2299;Missing acknowledgement of the conveyor equipment signal from robot. Internal error.
+2300;The feedback of the pressure switch for the solvent valve of the atomizer cleaning device is unplausible. Therefore either the%CrLf%- high tension cannot be turned on%CrLf%- or the atomizer cleaning cannot be carried out.
+2301;The user has tried to connect the drives of the robot in the teach mode (dead man switch) while the robot is being unselected.
+2302;The statistical data reported back from the robot controller could not be related - BodyID unknown. Possibly the object had already been deleted from the memory of the PLC.
+2303;During the handover of the data to the robot controller, a time-out occurred.
+2304;The required operating mode of the robot controller does not agree with the actual operating mode - internal error.
+2305;The indicated upper flow limit was exceeded.%CrLf%- limit values for monitoring not correct%CrLf%- sensor for passage/ test cell defective%CrLf%- Material/batch change
+2307;Each ICC channel reads its color data from the color table at the control startup. The color data appertaining to an ICC channel are characterized by the supply group. The color table does not contain any entry with the supply group appertaining to the ICC channel.
+2308;Programming error or internal control problem
+2309;The drives are not turned on or any axis is not referenced.
+2310;In the teach program, the macro TORQUEMONITOR with the parameter StartLogging is called twice consecutively. Only one recording can be started.
+2311;The macro TORQUEMONITOR with the parameter StopLogging was called and before no recording with the macro TORQUEMONITOR and the parameter StartLogging was started.
+2312;The recording was started with the macro TORQUEMONITOR( StartLogging, Axis 1) for e.g. axis 1 and shall be ended with TORQUEMONITOR( StopLogging, Axis 2) for e.g. axis 2. Since the selected axes are different, the results would be saved in a wrong file.
+2313;The control could not load the result file. The data are not saved in the database.
+2314;The result file with the film thickness measured values could not be loaded by the measuring instrument. No data are stored in the database.
+2315;The control could not load the result file. No data are stored in the database.
+2316;The result file with the film thickness measured values could not be read by the measuring instrument. Here, a format problem has occurred.
+2317;The tokens for the synchronization of the measurement files in the measurement files of control and measuring instrument are different. No data are stored in the database.
+2318;In the measurement files of control and measuring instrument the number of the measurement points are different. The number of measurement points must be identical. The files do not match or an error occurred in the process.
+2319;In the EcoScreen parameter database, the color or the type is not defined or a wrong color or type code was transmitted from the master controller.
+2320;The number of measurement points in the program currently worked off does not correspond to the number of measurement points in the reference program. The number and coordinates of the measurement points are saved during the first run of the teach program in the database.
+2321;The film thickness for the indicated number of measurement points is above the upper limit value
+2322;The film thickness for the indicated number of measurement points is below the lower limit value
+2323;During the measurement, measurement errors occurred. The distance from measuring instrument to car body is too large or the speed in the teach program is too large or error in the process or error in the configuration.
+2324;Error in the process. A single measurement was started although no series of measurements was started.
+2325;Error in the teaching program. Error in the teach program. A series of measurements was started twice with ACTIVATE_PAC(OneShot).
+2326;A series of measurements is supposed to be started and the measuring instrument is not in the correct operating mode.
+2327;A series of measurements is supposed to be started, but there is no laser release from the PLC.
+2328;The number of the color group is beyond the range.
+2329;Configuration error
+2330;Too many measurement points are defined in the teach program. Internal field limits would be exceeded. Measuring data will be lost.
+2331;In the configuration, the simulation mode is activated.
+2332;For the chosen combination of type and path, there are no adjustment values. An application ride is not possible.
+2333;There are no adjustment values for the PointNo in the macro BK_CORR.
+2334;The reaching of a measurement point is signaled to the BK system by setting a bit on the interface. While this bit is being still set, the next measurement point is already supposed to be signaled.
+2335;The adjustment values of the BK system are absolutely larger than the permissible parameterized limit values.
+2336;Function reserved for extensions.
+2337;The teach program uses path points between BK_START and BK_FINISH in axis coordinates. These cannot be transmitted to the BK system as path points.
+2338;The BK system reports an error status.
+2339;The configured file name is invalid.
+2340;The configured number of steps is invalid.
+2341;The plausibility check determined that the configured value 1 is larger than 2 or identical with 2.%CrLf%This value ratio is improper.
+2342;After the regulator activation, no material flow was determined in the configurable monitoring time window. %CrLf%- Sensor for passage/ test cell faulty
+2343;During the reading of data from the indicated file, an error has appeared. %CrLf%- Token lost%CrLf%- File empty or with invalid content%CrLf%- Internal control problem
+2344;During the writing of data in the indicated file an error has appeared.%CrLf%- Token lost %CrLf%- Target file write-protected%CrLf%- Internal control problem
+2345;Absorbing receptacle is full and was not pumped down.
+2346;Faulty ignition cycle
+2347;Faulty ignition automatic
+2348;Air pressure after regulator faulty 
+2349;No valid adjustment factor
+2350;Required value air volume beyond range
+2351;Compressed air supply not ok.
+2352;FC air maximum limit value for variable reached.
+2353;MFC gas maximum limit value for variable reached.
+2354;Air conditioning plant faulty.%CrLf%Temperature error.
+2355;Gas warning device faulty.
+2356;Invalid required values
+2357;Regulator differential pressure exceeded
+2358;MFC gas regulator faulty
+2359;Error in gas pressure supply
+2360;Temperature transgression mixer
+2361;Burner/hose faulty
+2362;MFC air regulator faulty
+2363;Error in regulator parameterization. %CrLf%Internal control problem.
+2364;During the analysis and adaptation of the preceded application, a new application began.%CrLf%Data are rejected and not evaluated.
+2365;The specified subchannel was not found.
+2366;Too many subchannels were created.%CrLf%Internal control problem.
+2367;The assigned channel cluster was not found.%CrLf%Internal control problem
+2368;The indicated hardware was not found in the related subchannel.
+2369;During the application start or "flying piston splice" no prepared subchannel is available. Therefore, no (uninterruptible) application is possible.%CrLf%- Error or time-out during the preparation (filling, pressure setting)%CrLf%- Too high application volume.
+2370;The indicated subchannel cannot be reserved, since it is already occupied.
+2371;The indicated upper rotating speed limit was exceeded. %CrLf%- Limit values for monitoring not correct%CrLf%- Sensors for rotation monitoring faulty%CrLf%- Excitation error 
+2372;The indicated lower rotating speed limit was undershot. %CrLf%- Limit values for monitoring not correct%CrLf%- Sensors for rotation monitoring faulty%CrLf%- Excitation error 
+2373;The indicated required value undershoots the minimally permissible value.
+2374;In the power stage of the Swirl regulator, an error has occurred.%CrLf%The consequence of this error is a disconnection of the regulator!
+2375;In the Swirl regulator, an internal error has occurred.%CrLf%The consequence of this error is a disconnection of the regulator!
+2376;In the external tension supply, an error has occurred.%CrLf%The consequence of this error is a disconnection of the regulator! 
+2377;In the supply of the logic module (24 V) an error has occurred.%CrLf%The consequence of this error is a disconnection of the regulator!  
+2378;All HALL sensors of the Swirl are in the status 0.%CrLf%- Wire breakage at sensor lines%CrLf%- Sensor no longer correct aligned %CrLf%- Internal error
+2379;All HALL sensors of the Swirl are in the status 1.%CrLf%- Short circuit between sensor lines%CrLf%- Sensor no longer correct aligned %CrLf%- Internal error
+2380;The Swirl regulator reports a short-circuit at the indicated sensor. Sensor or inlets faulty.%CrLf%Possibly wrong sense of rotation.
+2381;The Swirl regulator reports a cable break at the indicated sensor. Sensor or inlets faulty.%CrLf%Possibly wrong sense of rotation.
+2382;The Swirl sensors were passed through in invalid sequence.
+2383;The swirl activation reported a general error.
+2384;A voltage drop was recognized in the Swirl excitation (BrownOut).
+2385;The monitoring in the Swirl excitation was triggered (WatchDog).
+2386;The overcurrent cut-off in the Swirl excitation was triggered.
+2387;The overcurrent reduction is acting. %CrLf%- Sluggishness
+2388;The viscosity does not lie outside of the indicated limit(s).%CrLf%- Limit values for monitoring correct%CrLf%- Material/batch change (large deviation of the viscosity)
+2389;No material flow during the adaptation.
+2390;The phototherm measuring device has received an unknown error code.
+2391;The stepping motor of the chopper that modulates the laser was stopped. The measuring software attempts to start the stepping motor again automatically. In most cases, this action is sufficient and the measuring instrument will measure correctly again.
+2393;The calibrating file is not available on the phototherm measuring PC in the directory c:\ps3\caldir1.
+2394;The output signal of the laser that indicates the correct emission is missing. The laser is not ready for use.
+2395;Another program blocked the file.
+2397;The reception amplitude is too small for a correct measurement result. The amplifier stage is too low or the laser is off or the film thickness is too small or cable or detector error.
+2398;Signal amplitude is too large for the amplifier (beyond range +- 15V). This leads to an incorrect measurement result. Possible causes are: Wrongly set amplifier stage, detector defective, strong light or heat source in the environment)
+2400;During the start of the measurement software, the test mode was activated. In this mode, it is not possible to turn on the laser or to carry out real measurements. The mode is used for the test of the software without measuring instrument.
+2401;Missing voltage at the power supply of the detector.
+2402;Missing voltage at the power supply B.
+2403;Missing voltage at the power supply A.
+2404;Missing voltage at the power supply of the laser.
+2405;Missing voltage at the 24V power supply of the relays.
+2406;Faulty configuration
+2407;Measuring instrument is not ready or an error is pending.
+2408;A series of measurements was stopped with the macro ACTIVATE_PAC(DISABLE), but no series of measurements was started before
+2409;Wrong or missing configuration entry in [RC.KeyPattern] for ProgStart and/or ProgStop
+2410;Only one program can be started.
+2411;Drive error cannot be acknowledged at the control.
+2412;With the mentioned drive, the difference between required and actual value is larger than the parameterized maximum value.
+2413;Problem in the communication between control and drive control element.
+2414;The mastering (reference) is not possible with this drive status.
+2415;In the configuration, the working space monitoring is activated for the jogging ([RC.KINEMATIC:0]jogPointCheckArea = 1). No Gripper points are defined, however, or no coordinate transformation is available for these kinematics.
+2416;As long as not all axes were referenced, a Cartesian traveling cannot be carried out. Jogging is only allowed in axis coordinates.
+2417;An error is pending or the drives are not turned on or any axis is not referenced.
+2418;No transformation of coordinates is available for this kinematics
+2419;In the configuration, no gripper points are defined for the working space monitoring.
+2420;Only one teach program with one kinematics can be executed. An attempt was made to start a teach program although another is still running.
+2421;In the teaching mode, the acknowledge key was released during a movement.
+2422;In the teaching mode, the acknowledge key was not pressed
+2423;Refer to error text
+2424;In automatic mode, the stop key at the teach pendant was pressed.
+2425;At the golden repos, the reversing on the path has failed.
+2426;One or several gripper points are in a blocked area or at least one gripper point does not exist anymore in the working range.
+2427;Problems with the communication to the PLC. Either no operating mode bit is set or several are set simultaneously.
+2428;The orientation interpolation Z rotation is only possible at kinematics with all 6 degrees of freedom.
+2429;The position values of a drive are outside of the limit values.
+2430;A too high value for the parameter [MC.KINEMATIC:0]orderOfAxisFilter1 has been parameterized.
+2431;Reversing is only possible on a path that had already been driven in forward direction.
+2432;The trigger point does not lie on the path segment (path between point in front of the trigger and point after the trigger) on which it is defined.
+2433;The monitoring function of the handler sensors has detected that the part was not gripped.
+2434;The monitoring function of the handler sensors has detected that the part was lost.
+2435;The monitoring function of the handler sensors has detected that the parameterized limit was exceeded.
+2436;The monitoring function of the handler sensors has detected that the parameterized limit was fallen below.
+2437;Control or hardware error.
+2438;Sensor not calibrated.
+2439;Error in the teach program.
+2440;The monitoring function of the torque monitoring has detected that the parameterized limit was exceeded.
+2441;The monitoring function of the torque monitoring has detected that the parameterized limit was fallen below.
+2442;The monitoring function of the torque monitoring has detected that the part was not caught.
+2443;A transgression of the parameterized torque was found before.
+2444;Due to multiplication by Override, the required value for this device lies outside of the valid area.
+2445;The triggers have a different sequence in the Ecotalk program than geometrically on the path segment.
+2446;The calculation of a level by the trigger point to the movement path is not possible.
+2447;A trigger was not signaled by the MCU and therefore not carried out.
+2448;For the tracking, no points must be used in world coordinates since this will end the tracking.
+2449;The trigger lies shortly in front of or behind the path segment. The switching of the trigger occurs automatically at the segment beginning and/or at the segment end.
+2450;The mentioned configuration entry is not available. Default values are used.
+2451;For this program number, there is no corresponding project/program in the type list
+2452;Problem in the communication between PLC and RC
+2453;The vision system reports this error.
+2454;Not all inputs/outputs of the field bus master could be mapped.%CrLf%Different designation of the hardware end points in the Kemro manager and RCU.%CrLf%one or several inputs/outputs were not created in the Kemro manager.
+2455;In the teach program, the command SETPROCESSCOMMAND(eVisionTrigger, ...) is used although the functionality "TriggeredPicture" in the configuration is not activated
+2457;The device has issued an unknown error code. Possibly a device with newer firmware state was installed.
+2458;The HT generator has an inadmissibly high temperature.
+2459;Defect at the HT generator, controller or a junction.
+2460;Short-circuit and/or arcing at the HT circuit.
+2461;Defect at the generator and/or short circuit in the junction.
+2462;The supply voltage value is outside of the permissible area.
+2463;Wrong entry in the Prozess.cfg
+2464;An invalid required value was set, possibly caused by an override.
+2465;Defective sensor, junction or fiber optic light cable
+2466;Supply air pressure too low
+2467;Deviation actual value - required value
+2468;Hardware defect
+2469;Signal to vision computer is still set when new triggering signal comes
+2470;SETPROCESSCOMMAND(eVisionTrigger...)  in the teach program is supposed to be executed although measurement task was not started yet.
+2471;Error in the communication between vision computer and control
+2472;Vision computer reports an error. Process cannot be continued.
+2473;Vision computer is not ready for measurement
+2474;The number of the measurement task cannot be handed over to the vision computer because an error is pending.
+2475;Measuring program on the vision computer was not started.
+2476;Vision computer reports an error or there are problems in the communication between vision computer and control
+2477;The clearance check shows that an application is not possible.
+2478;The displacing values are outside of the allowed tolerance
+2479;For this axis, no parameters were configured for the mastering.
+2480;Another project is still loaded and/or a teach program is not ended yet.
+2481;When mastering an RS robot, the axis was not positioned onto the start marking before the start of the mastering 
+2482;When mastering an RS robot the signals of the master tool are not recognized correctly.
+2483;When mastering a Durr robot, no switching signal of the master sensor is found
+2484;In the teach program, an overlap type was used in OVERLAP that is not supported. Macro OVERLAP is ignored.
+2485;In the teach program, tracking macros are used although no tracking station is configured.
+2486;The parameter [RC.KINEMATIC:0] delayRobotDrives was parameterized with an inadmissible negative value.
+2487;While the main needle was opened, the path speed dropped under the threshold set in the macro TCP_SPEED_CHECK
+2488;In the teach program the main needle is opened twice after each other.
+2489;In the teach program, the main needle is closed twice after each other.
+2490;In [MC.KINEMATIC:0]name, another robot name was entered than in the plantinfo of the process application
+2491;The macro SETTRACKINGMODE was used between TRACKING(On) and TRACKING(finished), that is during active tracking.
+2492;The light barrier was not interrupted during the programmed movement to the target. Possible causes: %CrLf%- execution of the teach program in the STEP mode%CrLf%- movement wrong or wrong sequence of the macros%CrLf%- sensor signal wrong
+2493;Parameterized permissible tolerance for the tool exceeded
+2494;Conditions for opening the indicated valve not given.
+2496;It was attempted to end the simulation mode for the device driver in the running operation.
+2497;- The connected HT generator cannot be operated at this controller.%CrLf%-  Hardware defect
+2498;The control was informed that the supply voltage of the switch cabinet is faulty.
+2499;The control was informed that the Ethernet connection is faulty.
+2500;The configured Value of the ActionPointOffset in BCU.cfg + Overhang value from typelist is before zone start, that is impossible.
+2501;Circuit breaker 3F1 has dropped.
+2502;A data record was received that does not contain any valid paint valve number. In BCU.cfg, a mode is configured that needs a paint valve number in the car body data record (parameter UsePlcColorValve). 
+2503;Application tower is not in upper end position
+2504;Invalid parameterisation.
+2505;An invalid parameter has been returned.
+2506;The point must be a fixposition.
+2507;For the mentioned car body type, the indicated measure is invalid.
+2508;- Field bus connection to the station PLC faulty%CrLf%- RPC-controller is not operational%CrLf%- PLC controller is not operational
+2509;The indicated valve was activated and the indicated initiator was not occupied after the parameterized time.
+2510;The indicated valve was not activated and the indicated initiator was not occupied in spite of that after a parameterized time.
+2511;Second conveyor should be synchronized but no car body in configured area.
+2512;Project planning error in robot software.
+2513;The preparation for the following car body has already begun.
+2514;Over temperature or over voltage.
+2515;An incorrect program has been loaded to the controller via 3DOnsite.
+2516;An error occured while docking/undocking the gauge/positionings device.
+2517;The painting release has been set to FALSE, while an object is being worked upon.%CrLf%- High tension not in tolerance range.%CrLf%- Speed (air flow) not in tolerance range or is too low.%CrLf%- Air flow not in tolerance range.%CrLf%- External release not present.
+2518;More than one clutch should be switched at a time.
+2519;The file typelist.ini is not available on the data carrier
+2520;Inadmissible switching condition from HMI interface. Allowed are 0 (= no required value from HMI), 1 (=dock), 2 (=undock), 3 (=reset required values)
+2521;The device receives more than one drive signal simultaneously (R (=dock), V (=undock), reset (=do not activate). This is not permissible.
+2523;A handler module was defined several times (SET_MODULE)
+2524;Coupling not working correctly
+2526;The PC pore detection reports a general error to the robot controller
+2527;The path regulation causes a deviation from the programmed paths that is larger than the parameterized permissible value in [RC.KINEMATIC:0.SmartRay] MaxCorrVal.
+2528;During the search ride, the sensor reports that the seam is no more in the sensor's visibility field.
+2529;When the seam check is started, the seam is already in the sensors visibility field. Maybe the seam cannot be checked completely.
+2530;When the seam check is ended, the seam xxx is still in the sensors visibility field. Maybe the seam cannot be checked completely.
+2531;The difference between the sensor values of two successive control times exceeds the parameterized limit value.
+2532;The internal monitoring of the reduced path speed in T1 mode has detected a transgression.
+2533;The Station PLC reports that the conveyor is running and Rpc does not receive any conveyor pulses.
+2534;User administration for TeachView is not completely configured in the file AAd.dat.
+2535;When checking the table status, the PLC reports more than one place as not occupied.
+2536;The hole number received from the PLC does not agree with the requested hole number.
+2537;Nozzle defective
+2538;The undocking of the tool could not be carried out
+2539;The docking of the tool could not be carried out
+2540;Configuration of HMI does not fit to the configuration of the RPC.
+2542;Not possible to delete Pushout-Learnfile in operating mode automatic.
+2543;Warning limit is lower than alarm limit when monitoring the lower limits, parameterization in file Process.cfg wrong.
+2544;Warning limit is higher than alarm limit when monitoring the upper limits, parameterization in file Process.cfg wrong.
+2545;Brake test/grinding in cannot be carried out for EX protected motors.
+2546;-Invalid entry in file: EcotalkVariables.ttp%CrLf%-Error in EcoTalk program
+2547;Error in the EcoTalk program: A new process command was transmitted before the preceding command was processed.
+2548;Miswiring or hardware defect. %CrLf%Communication fault or bus failure.
+2549;During the leakage monitoring an, error occurred.
+2550;The specified initiator is not occupied.
+2551;The EcoTalk command for the shutdown of the high tension was not carried out correctly.
+2552;The entered values are higher than parameterized.
+2553;Invalid car body data received from the PLC
+2554;The indicated leakage monitoring sensor has found a problem.
+2555;During Motion active, an attempt was made to change the body data in the zone
+2556;logical error in the PLC interface
+2557;Learning data invalid or file not available.
+2558;For the piston compensation, a discharge valve must be assigned to every piston. Error in the configuration.
+2559;ColorStopValve have only state 0(closed), 1(auto) and 2(open)
+2560;Device got set values for state auto and open at the same time. This is not possible.
+2562;The difference between the two methods of measurement (drive and bus system) is larger than the parameterized value [RC.KINEMATIC:0.ObjMeasure].
+2563;Caliper did not trigger (sensor does not switch ).%CrLf% Difference to the reference point too large. %CrLf% Difference between the methods of measurement too large.
+2564;A path run in STEP mode cannot be moved backwards.
+2565;A speed decrease above the parameterized limit value of the turbine was found. Presumably a collision has occurred.
+2566;For the indicated brush number, no required values are parameterized in the corresponding brush table.
+2567;* Motor of the roller does not turn%CrLf%* Application speed too high
+2568;Collision
+2569;Adhesive tape on upper side of roller
+2570;Z compensation of the SFA tool not in working position
+2571;End of adhesive tape
+2572;* tape break %CrLf%* adhesive tape not completely applied on body
+2573;Check parameters.
+2574;- Request to turn brush not set in time program%CrLf%- Brush blocked by something%CrLf%- Initiator detecting rotation defect%CrLf%
+2575;- time program contains error requesting swivel bail position%CrLf%- Initiator detecting position defect%CrLf%
+2576;SCU was activated by configuration or automatic Internal, however, the bus slave communication to the PLC still exists. This is an inadmissible operating state.
+2577;TrackingEndPosition is not correctly parameterized
+2578;The MCU axis position differs from the axis position of the IO systems.%CrLf%Internal erroneous control function.
+2579;The specified reference file is only necessary for drives "without" absolute encoder, therefore this file was deleted.
+2580;The values for the simulation of the air volume regulator in file Process.cfg are not available or were parameterized wrongly.
+2581;timeprogramm Load was started although LCC was moved to desired position%CrLf%
+2582;With an EcoTalk command, an attempt was made to access the mentioned system variable, this did not succeed.
+2583;Only the set specified number of system variables can be set in a project. An attempt was made, however, to set more than the specified number.
+2584;The robot was selected, the atomizer is unselected, however
+2585;In a time program the brush speed signals for slow and fast was set in same step
+2586;Robot must not be traveled as long as the rotatable bracket is not in center position,%CrLf%There is the danger of mechanical damage of the atomizer.
+2587;For the parameterized strain gauge, the value transmitted in the EcoTalk command is not valid.%CrLf% Invalid value in EcoTalk command %CrLf%Wrong parameterization of strain gauge.
+2588;In the configuration of the LCC layout (PCUx.cfg), an invalid type was used.
+2590;Leakage monitoring is deactivated
+2591;Leakage occurred
+2592;The specified initiators have the same state.
+2593;SV_Statistics.def: Check names of device, possible spelling wrong
+2594;Processbuilder: %CrLf%Check whether the device parameterized for the recording is in a logical channel. The statistics can only process devices in logical channels
+2595;SV_StatisticDef: Check parameterization of signal name, does signal exist, is spelling correct?
+2596;Macro WAIT_PROCESS_READY() in the teach program starts statistics. If this is missing, no statistical data can be recorded.
+2597;Invalid configuration [RC.KINEMATIC:x.Gripper] %CrLf% nrOfVectors = 0%CrLf%This value is inadmissible. If no grippers are defined, the controller cannot monitor any working spaces.
+2598;Switch "Internal Safety" in RCMP Cabinet activated. Automatic switch from Automatic Extern to Automatic Intern is not possible
+2599;Switch "External Safety" in RCMP Cabinet activated. Automatic switch from Automatic Intern to Automatic Extern is not possible
+2600;An external station stop was triggered by the PLC
+2601;One of the two initiator pairs reports a not unambiguous signal.%CrLf%e.g left initiator occupied, right initiator not occupied.
+2603;The preset maximum temperature at 4S1 /4S4 is exceeded.%CrLf%Cooling defective or temperature set too low
+2604;MainChannel not purged
+2605;An attempt was made to go from the fixed position BrushClean400 to another fixed position than FlushDry400 or Home
+2606;An attempt was made to go from the fixed position FlushDry400 to another fixed position than FlushDry0 or Home
+2607;An attempt was made to go from the fixed position FlushDry0 to another fixed position than Home
+2608;An attempt was made to go from the fixed position BrushClean0 to another fixed position than BrushClean400 or Home
+2609;An attempt was made to go from the fixed position InBox to another fixed position than AboveBox, BrushClean0 or Home
+2610;With the currently configured traveling path, it is not possible to evaluate the sensor signals unambiguously.
+2611;Brush file for the selected type in mode T2+process cannot be loaded
+2612;At least one measured value for one of the three traveling directions is invalid
+2613;The controller has detected conveyor pulses at the input of the counter card. The parameter Conveyorexisting in the System.cfg file is not set to "True".
+2614;- Atomizer selected %CrLf%- Pneumatics off %CrLf%- operating mode not manual %CrLf%- channel already assigned (e.g. active time program)%CrLf%- error
+2615;- Carriage/skid position during start of automatic mastering not on master position %CrLf%- too high moment occurred %CrLf%- too long movement without encountering the obstacle to be expected (e.g. because not docked)
+2616;The homing after restart cannot be carried out because the movement program cannot be continued on a circle segment.
+2617;The homing was started, although the robot does not have any automatic mode and/or the drives are not under control.
+2618;The homing was started, although the homing is not parameterized and not released.
+2619;Homing is not possible, because the bit Start Prehoming is set simultaneously by the PLC.
+2620;Homing is not possible, because Prehoming is still running.
+2621;Homing is not possible, because no teach program was interrupted.
+2622;Homing is not possible, because the preparation was not successful.
+2623;The project active before the controller was turned off cannot be loaded.
+2624;The PLC has set the bit Start Prehoming, although homing is already running.
+2625;Brake air set too low so that the braking process takes too long or speed feedback wrong.
+2626;For the supply group of the selected color there are no channels to paint available or are disabled
+2627;It is not allowed to couple while the pump is running
+2628;The specified type was not referenced.
+2629;A wrong type was specified for the kind of tolerance monitoring.
+2630;The applied volume of the specified seam is above the maximum tolerance.
+2631;The applied volume of the specified seam is below the maximum tolerance.
+2632;The specified reference file is faulty.
+2633;Error while copying the specified reference file.
+2634;The specified seam is not referenced.
+2635;While reserving the dynamic memory for the specified car body data, the specified error occurred.
+2636;While writing the reference data in the specified dynamic memory, an error occurred.
+2637;The current "Override" values do not agree with the referenced ones.
+2638;-Initiator defective %CrLf% loose contact %CrLf%
+2639;-Pump coupling defective %CrLf%- Initiator defective %CrLf%- cable connection interrupted
+2640;In the process configuration, the specified device was assigned to the pivoting bracket, during controller startup, this device was not found, however.
+2641;Function RcuResetMessage is called with an invalid message class. Only infos and warnings are permissible.
+2642;Current paintposition from command "WAIT_PAINTPOSITION" is smaller than the last, because of that it is not possible to switch the mainneedle automatically at this command. Option switchGunAtWaitPaintPos active. 
+2643;Controller has been restarted and a body is in zone, therefore the conveyor could not be switched on.%CrLf%Risk of collision.
+2644;Cooling device has an error or fuse -4Q3 dropped.
+2645;Fuse 7F1, 7F2, 7F3, 7F4, 7F5, 7F6, 7F7 or 7F8 de-energized
+2646;Circuit breaker 24Q4 or 60Q2 de-energized
+2647;In a required value, a REAL number was used for the mentioned brush. Only INT/DINT figures are allowed.
+2648;Current axis position deviates more than configured value from the required position.
+2649;Fuse 8F1, 8F2, 8F3, 8F4, 8F5, 8F6, 8F7 or 8F8 de-energized
+2651;Both mode signals from RCMP are set. It's not allowed to set more than one of these 2 signals.
+2655;Not all SV-variables could be mapped. Different naming of hardware endpoints in IEC.
+2656;The"dead man switch" was not pressed properly.
+2657;The spindle is broken
+2658;The part that is monitored by the camera system is not in its programmed position anymore.
+2661;Internal controller error
+2662;During start of a time program, it turned out that the subchannels to be used had wrong color information (e.g. color code, mixture ratio etc.).
+2663;During start of a time program, it turned out that the subchannels to be used are not prepared.
+2664;The signal 'BodyInPosition' has become inactive, while an application program is processed
+2665;The administration data of the nozzle changer are invalid.
+2666;The initiator of the nozzle change place is not assibned in spite of extended bolt.
+2667;In the teach program, an invalid main needle number was set.
+2668;One value each was set for the required value SetPosition and SetVolume. This is inadmissible!
+2669;Learncycle for extended AirFlow function just started
+2670;Intervention of the user in the teaching process of the air volume regulator.
+2671;Due to multiplication by Accuracy, the required value for this device lies outside of the valid area.
+2672;Pressure to reach the required value is lower than the taught value is
+2673;Pressure to reach the required value is higher than the taught value is
+2674;The parameter EnableContaminationCheck in the Process.cfg was set to 1, but EnableReferenceCheck is not activated or value table has invalid entries. 
+2675;Device not existing in file
+2676;Invalid reference values
+2677;ReferenceCheck activated but reference values not learned and / or invalid.
+2678;AirFlow is working in EmergencyMode
+2679;Wrong parameters in process.cfg
+2680;Writing of the learned values finished
+2681;While an object is measured, the laser release was dropped%CrLf%- Laser release from PLC is not available%CrLf%
+2682;- The device is not ready for use (e.g. hardware was not recognized) %CrLf%- During initialization, an error has occurred %CrLf%- software (EcoRPC) and firmware are incompatible
+2683;No place was found to deposit the nozzle.
+2684;No nozzle of the desired type was found.
+2685;The initiator of the place of the nozzle change station is not occupied.
+2686;The initiator of the place of the nozzle change station is still occupied.
+2687;Defective initiator or defective cabling at the indicated nozzle change place.
+2688;Valve of the nozzle change station defective.
+2689;The software on the Phototherm PC is not ready. The signal 'SoftwareReady' is missing.
+2690;The function to measure in the conveyor was activated via the vision system, %CrLf%the conveyor runs backwards, however. Therefore, the calibration procedure was aborted.
+2691;DockingUnit not purged
+2692;For the blocking air, a timeout has been parameterized after this timeout has elapsed, the blocking air is switched off automatically to reduce the air consumption. %CrLf%If the parameter [BlockingAir]ActiveTime is available in the Process.cfg, the value save
+2693;A new color was selected and the LCC was not positioned to the valve subsequently.
+2694;Controller receives no feedback, neither from docking nor from undocking switch. %CrLf%- Mechanical defect %CrLf%- signal is not transferred correctly to controller %CrLf%- Faulty bus configuration
+2695;Switch position is not permissible during this activation.
+2696;For the EthernetIP slave, a name must be indicated in the parameter FX775A:0/EIPS:0/EIPSLAVE:0.
+2697;Profinet-slave not in state "dataexchange". %CrLf%-PLC not ok%CrLf%-Wrong slaveadress%CrLf%-Physical connection between PLC and RPC not ok%CrLf%-Controller not yet ready for communication after restart
+2698;EthernetIP-slave not in state "dataexchange". %CrLf%-PLC not ok%CrLf%-Wrong slaveadress%CrLf%-Physical connection between PLC and RPC not ok%CrLf%-Controller not yet ready for communication after restart
+2699;- no or wrong valve was selected %CrLf%- paint assignment table wrong %CrLf%- CFG parameter for paint valve wrong
+2700;- During the start of the discharge no current could be measured %CrLf% (Possibly discharger defective or no high tension at the HT input available) %CrLf%- Internal inspection showed a HW fault
+2701;- The Cfg parameter "Enable" of the group "Discharge" of the high tension device is set, but the discharger cannot be activated
+2702;A device required for the execution of the command from EcoTalk is not available in the process configuration.
+2703;skid distance to small
+2704;Processbuilder project planning error 
+2705;In the EcoTalk program, SPLINE commands are used although they are not permissible on this controller.
+2706;Signal of mastering tool disturbed
+2712;TimeoutReadPW
+2713;Timeout acknowledge strobe  "write Password"
+2714;Error in movement ride while mastering automatically
+2715;Before a handler moves the part the current part position has to be deleted with the command SET_POSCODE(Delete). This ensures that other robots don't get a wrong part position while the part is moved. 
+2716;The adjustment values of the VMT system are absolutely larger than the permissible parameterized limit values.
+2717;The two positions for the tool measurement cannot be transferred into each other by a +90 degree rotation around the flange. This is the requirement for the measurement by VMT.
+2718;The VMT computer has set the bit "Measurement inaccurate".
+2719;For the learning of the P_activation, a valve for the opening of the painting path was not found.
+2720;10 seconds after the end of the measurement, not all adjustment values were transferred to the controller yet
+2722;When measuring the nozzle, the VMT system found a problem. Possible reasons:%CrLf%Wrong or missing nozzle
+2723;An attempt was made to change the status of the nozzle manually to OK. When this was done, the nozzle was not fixed.
+2724;No pressure reduction occurred before the specified main needle change.
+2725;During the pressure reduction, a gun trigger was set in the teach program.
+2726;Wrong or missing configuration entry with the specified data.
+2727;No relative measurement is configured
+2728;No Multiobject configured with the vision data.
+2729;The UPS is not supplied with 24 V anymore, that is the controller is only still buffered by the UPS.
+2730;During the adaptation, it was stated that the material properties have changed extremely as compared with the calibration. 
+2731;The signal of the PLC cannot be received anymore. Communication interrupted or PLC stopped.
+2732;The calculated offset of the bending compensation outside the limit.
+2743;Device fault (heating cartridges, sensors)
+2744;Collective fault of the conveyor drive system drive control element 
+2745;Reading of parameter VendorID or DeviceID failed.
+2746;Firmware version parameter could not be read.
+2747;Type label of device not found in firmware configuration
+2748;Error occured while firmware identification of the Sercos 3 devices.%CrLf%- Parameter could not be read because of bus fault.%CrLf%- Device with unknown type label or firmware found.
+2749;File ..\appldisk\application\control\config\S3_Firmware.cfg not existing or corrupt.
+2750;- Device is not responding.%CrLf%- Device failure.%CrLf%- Failure or error in electrical connection.
+2751;- Found device address which is not configured.%CrLf%- More device connected than configured.%CrLf%- Faulty device.
+2752;Found sercos device on bus system which is simulated in the configuration, this is not allowed.
+2753;To activate the changed settings of the device it has to be power cycled.
+2754;Errors while reading the network parameters.
+2755;Errors while writing network parameters to device.
+2756;Errors occured while activating the network parameters.
+2757;To meet the safety requirements, the tension to supply the motor holding brakes must be within defined limits (24V +/-10%).%CrLf%This voltage must be supplied to the analog input of the drive by means of a voltage divider and evaluated in the software.%CrLf%If th
+2758;The name of mentioned sercos device is not the same in process-/ and sercos configuration. This is not allowed.
+2759;To recognize Master failures secos devices need the SCP_Sync or Watchdog function. The sercos device sets it's signal levels to default value when master fault were detected. In this case the device supports the function but it's not configured.
+2760;The device is not included in the bus configuration or a wrong device name was indicated.
+2761;The parameter is not existing in the device.%CrLf%The communication to the device is interrupted.%CrLf%The device does not react to service channel accesses
+2762;-Fault in electrical connection. - Parameter P-0-0210 is not configured in the cyclic data channel (aux[3] ).
+2763;The light barrier remains interrupted during the programmed movement to the target. Possible causes:%CrLf%- Execution of the teach program in STEP mode%CrLf%- Movement wrong or wrong sequence of macros%CrLf%- Sensor signal wrong%CrLf%- Target taught wrong
+2764;Mentioned parameter has value = 0 in configuration. Only value = 1 is allowed. This parameter activates the startup of the application even the topologycheck has not detected all configured devices. 
+2765;The value of this configuration parameter doesn't fit with requested value.
+2766;The robot has deposited a not ok nozzle of the specified type in the nozzle changer.
+2767;The painting pressure monitoring on min. or max. was activated in a time program, however, the monitoring function in the Cfg editor is not released for this sensor 
+2768;In the name of the drive the name of corresponding machine has to be included.
+2769;To change the network setting of this device the sercos bus has to be switched to phase 2.
+2770;- Pressure not within the operating range (too high, too low)%CrLf%- wire break sensor signal%CrLf% switch wrongly parameterized
+2771;Monitoring function is deactivated
+2772;Master sensor defective or problem with cabling or wrong parameterization
+2773;For this axis, no automatic mastering is possible:%CrLf%- no Dürr robot%CrLf%- hand axis without sensor
+2774;- Feeding line of medium faulty. (Shut-off valve, ball valve etc. closed)%CrLf%- Parameter for minimum flow selected too large
+2776;No increase in pressure determined in speed controller when main needle is opened. Presumably no bell disk existing.
+2777;As the speed controllers support both clockwise and anti-clockwise rotating turbines, the parameters for the installed turbine type must be entered in P-0003.0.12. As there are currently only clockwise rotating turbines, it is checked whether the parameter for clockwise rotation has been entered
+2778;Monitoring in PCUx.cfg deactivated
+2779;No acknowledgement that temperature is ok%CrLf%- Heating defective%CrLf%- Temperature sensor defective%CrLf%- Wrong parameters entered for switch points at the temperature switch %CrLf%- broken wire / wiring error
+2780;The 24V power supply of the control system and UPS have failed and the buffer time of the UPS has been exceeded.
+2781;The power pack of the tempering unit has detected an error and signalled a collective error:%CrLf%- Excess temperature in the power pack%CrLf%- Missing load at output, caused by : cable break, power cable not connected, error in the switch-over for heating and cooling (contactor or relay switching) etc.%CrLf%- Error in the power pack control
+2782;The excess temperature protection is active and the tempering was shut down:%CrLf%- Thermal overload relay in the tempering unit (excess temperature)%CrLf%- Cable break to the thermal overload relay%CrLf%- Tripped fuse power supply thermal overload relay%CrLf%- Temperature sensor in tempering unit defective (result: error in the control system)%CrLf%- control system settings (controller parameters) incorrect%CrLf%- Error in power pack or in the power pack control of the tempering unit
+2783;The parameter entered for the parameter [MC.KINEMATIC:0]timeConstantOfAxisFilter1_s is too large.
+2784;Excessive deviation of the application pressure.%CrLf%- Limiting values for monitoring not correct%CrLf%- Sensor for pressure defective%CrLf%- Material / batch change
+2785;More than one degrade robot requested but configuration of robot conveyor stop position is not equal
+2786;More than one degrade robot requested but configuration of robot start position is not equal
+2787;More than one degrade robot requested but configuration of robot type is not equal
+2788;Error while reading system time (P-0-0197)
+2789;Error while writing system time (P-0-0197)
+2790;Errors occured while bootup of Sercos 3 Bussystem which stopped the bootup. Because of that the controller started reinitialisation of Sercos-Bussystem.
+2791;The syntax of the EcoTalk project is wrong and cannot be translated.
+2792;In sercosconfiguration "autoAddressing=2" is assigned. This is only for commissioning purpose (Set/actual comparision) with keStudio valid.
+2793;No Sercos III device could be determined for the so-called HW terminal point. The HW terminal point is possibly%CrLf% not integrated in the Sercos III configuration.
+2794;The cylinders of the hood catch should be moved, but not all catches are in folded position.%CrLf%The cylinders may only be moved when all catches are folded.
+2795;- Poor air supply%CrLf%- Mechanically jammed%CrLf%- Wrong approach switch acknowledgement
+2796;- Approach switch acknowledgement defective%CrLf%- Malfunction of the air supply%CrLf%- Mechanical air supply
+2797;Moving the catches is only allowed in extended state.
+2798;The movement program tried to interrogate the catch of the hood catch mentioned.%CrLf%This is not  possible as only the number mentioned is enabled.
+2799;- Error of bus device%CrLf%- General bus errors%CrLf%- Faulty approach switch signal
+2800;During automatic gauge head calibration it was determined, that the K-factor is outside the parameterized tolerance.
+2801;No feedback that suction is running, B8
+2802;The channel status of the channel specified is incorrect.
+2803;Save position is not in profile free area.
+2804;The device hardware is defective or was not correctly recognised during initialisation. The number of groups read out has an invalid value.
+2805;At least one zone in the software is not assigned to a controlling device. It is not possible to operate this (these) zone (s). The control system run-up has been stopped.
+2806;The specified number is allocated to several zones. However, this zone number must be unambiguous and may only be assigned once per controlling device. The allocation to the hardware connections is made by means of this number.
+2807;The specified zone number is not supported by the device hardware (zone not available).
+2808;Device deactivated in parameterizing file PCUx.cfg 
+2809;Failure of PartDetect signal or PartDetect window incorrectly parameterized
+2810;Position of the PartDetect approach switch or input of parameters of PartDetect window incorrect
+2812;Bus system not yet ready.%CrLf%Defect at SPC200 controller.
+2813;References for assigned pump and pressure sensors could not be set during initialization. Configuration parameters for p-control / pig-control are invalid
+2814;- Tribo air too low%CrLf%- powder doesn't flow because of wrong conveying or total air.%CrLf%- No powder in the container%CrLf%- The powder doesn't have the required electrical properties%CrLf%%CrLf%%CrLf%%CrLf%
+2815;- Tube kinked or blocked%CrLf%- Air inlet pressure too low%CrLf%- Injector not connected properly%CrLf%- Requiered value can not be reached by the system
+2816;- Gun cabel is interrupted%CrLf%- Unplugged gun during operation
+2817;- Cascade of connected gun is defective%CrLf%- Gun cable has a short circuit
+2818;- The tribo currrent has exceeded the upper limit of 12 uA. ATEX policies does not permit higher values
+2819;- The gun isn't connected properly%CrLf%- Gun cable is broken%CrLf%- The cascade in the gun is defective
+2820;- Short circuit in the gun cable%CrLf%- Short circuit in the gun%CrLf%- Gun is not connected properly
+2821;No air fow from the control device%CrLf%- Tube kinked or blocked%CrLf%- Injector is not connected%CrLf%- No compressed air supply
+2822;Mode zone-related override is enabled but the required information on the plc interface can not be assigned
+2823;Motor type differs from configured motor type.
+2824;File Measure could not be uploaded to HMI
+2825;During the measurement, measurement errors occurred. The distance from measuring instrument to car body is too large or the speed in the teach program is too large or error in the process or error in the configuration.
+2826;- Defective sensor, connection cable, fiber%CrLf%- Reflector in the atomizer is dirty
+2827;- Errors on the channels involved
+2828;A time program to load color should be started.%CrLf%The start is prevented because no valid color is selected
+2829;Referencing of color changer is active. Meanwhile, no other time program is allowed to run.
+2830;Project folder is missing
+2831;Teach program file not found
+2832;Profibus device "Anybus X-Gateway" or CANopen connection to "Wagner EPG_S2" device disturbed
+2833;- Festo I/O module was changed without power cycling device. - Configuration of I/O Module doesn't fit with hardware installtion. - Restart of local bus (CTEI) failed.
+2834;The selected time program to load the atomizer contains signals for several components (e.g stock paint and hardener). The selected color in the atomizer (main channel)  is a single component color
+2835;Properties of colors/components were changed in paint assignment table and agree not currently consistent with the data in the channels of the robot%CrLf%- Color group%CrLf%- Color number%CrLf%- Color code%CrLf%- Mix ratio
+2836;The project or program name for the specified body is empty in the body assignment table
+2837;When accessing the specified path was determined that this is not a directory but a file.
+2838;When accessing the specified path was determined that this is not a file but a directory.
+2839;The process configuration is incorrect or incomplete. This function is not available.
+2840;When accessing the settings in the specified file a read error has occurred. The controller can therefore not be properly initialized.
+2841;During initialization, the specifyed device could not be found. The controller can therefore not be properly initialized.%CrLf%- Device does not exist in the system.%CrLf%- Device name in process configuration wrong
+2842;The axes should go in control mode without load voltage supply.
+2843;At the relays of the air heating device the single phases of the power supply are monitored. An error was detected. Possible cause is defect in the heating cartridge, wiring, relays, heating device.
+2844;With the last set value a power switch on/off was triggered for the high tension device. This process is not yet complete and a new set value is already requested. That's not possible. The new set value is therefore delayed until the power on/off operation is completed.
+2845;Set value is outside the permitted range.
+2846;Modul AB_IniFile is maximum length of section and key 80 character 
+2847;Operator has bridged the bypass signal on visualisation without deselecting the regarding machine.
+2849;The PushOut mechanism compares the trigger.-/brush names with the names that have been saved in the reference file during learning. While comparing the actual trigger  an error occured
+2850;HVOn at the high tension controller is set but the controller gives no feedback signal HVOn%CrLf%Possible causes:%CrLf%- Controller is faulty%CrLf%- Fault at the controller input signals (HVOn, Ready, Interlock) or their connecting cables
+2851;HVOn at the high tension controller is not set but the controller gives feedback signal HVOn%CrLf%Possible causes:%CrLf%- Controller is faulty%CrLf%- Fault at the controller input signals (HVOn, Ready, Interlock) or their connecting cables
+2852;The conditions for an error-free resume of the application after a break are no longer given. Possible causes are interventions in the process in manual mode like switching devices or starting time programs
+2853;The specified pressure sensor still reports an overpressure in the system. This overpressure must be relieved before application the can be continued
+2854;In the process part of the robot controller, an overpressure has been detected, which prevents the activation of the dosing drive.
+2855;A EcoTalk program is using SMOOTH-path commands, but they are not available with the actual installed firmware of the robot control
+2856;Errors happened which do not allow to boot up sercos.
+2857;Ecotalk command to shut down high tension was set but process part doesn' t provide the necessary information
+2858;The EcoTalk command for reading handling tasks has been executed without switching off the high tension before. This is not allowed%CrLf%- fire hazard by high tension flashover
+2859;EcoTalk command "SET_PROCESS_STATE" was executed without using the destined handling order. This isn't allowed - fire danger caused by high tension trip
+2860;EcoTalk command "SET_PROCESS_STATE" to release high tension is executed but robot is handling mode at the moment. Command "RECEIVE_ORDER" is executed. This isn't allowed - fire danger caused by high tension trip
+2861;Request to switch off the high tension is still pending in EcoTalk program (e.g after program abort)
+2862;No feedback from high tension device  that high voltage is off%CrLf%Maybe the actual value of the high voltage is still too large
+2863;No feedback from plc, that high tension is off
+2864;The holding torque of the motor brake is not sufficient.
+2865;- The number of modules doesn't match the configuration%CrLf%- The module types found do not correspond to the configuration e.g (AI instead of AI-T)%CrLf%- The order of the modules doesn't match the configuration
+2866;The pump check sequence can only be started if the pump line is purged
+2867;The function isn't enabled in the process configuration
+2868;- The dosing pump is too worn to be able to build up the required test pressure%CrLf%- The time program for the leackage check is faulty and a leackage wasn't detected%CrLf%- Pump line wasn't correctly filled up with solvent
+2869;With the EcoTalk command "WAIT_MOTION_STATE(BodyFixation, True)" the robot is waiting until the car body is fixed. This command must be used in profile free area because of the risk of collision.
+2870;This command has to used synchronously to the main run of the teachprogram otherwise it's executed too early. The robot has not reached yet the position were the command was programmed.
+ 

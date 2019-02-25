@@ -1,0 +1,41 @@
+
+[global/CheckData]
+EnableStrobePrepare          = 0,*,0,R,0,1   ;Strobe "prepare": 0 - not available; 1 - from PLC ;Only valid for InterfacePLC = 1
+EnableStrobeStartMainChannel = 0,-,0,R,0,1   ;Strobe "start mainchannel": 0 - not available; 1 - from PLC ; Only valid for InterfacePLC = 1
+GlobalColorTab               = 0,-,1,R,0,1   ;1=central colorassign./0=local colorassign
+RobotType                    = 1,-,0,R,0,2   ;0=Paintrobot / 1=Handler / 2=EMU
+WatchingReleaseAtomizer      = 1,*,1,R,0,2   ;WatchingReleaseAtomizer: 0 - OFF; 1 - error for only first body; 2 - error for each body
+
+[global/Conveyor]
+EnableConveyorStopPosition = 0,+,1,R,0,1             ; conveyor stop position: 0 - disable; 1 - enable
+MinRunSpeed                = 3,*,500.0,R,100,12000   ;minimal Conveyor Speed in mm/min for detect conveyor running
+
+[global/Conveyorsimulation]
+Acceleration         = 3,+,30.0,R,0,200       ;Acceleration simulated Conveyor in mm/sec^2
+ConveyorSpeed        = 3,+,3000.0,R,0,12000   ;Speed simulated Conveyor in mm/min
+Deceleration         = 3,+,30.0,R,0,200       ;Deceleration simulated Conveyor in mm/sec^2
+InletTime            = 3,+,3.0,R,0,20         ;Stop and Go-Mode: Inlettime simulated Conveyor in sec
+OutletTime           = 3,+,4.0,R,0,20         ;Stop and Go-Mode: Outlettime simulated Conveyor in sec
+ReducedConveyorSpeed = 3,+,2500.0,R,0,12000   ;reduced Conveyorspeed with actice degrademode in mm/min
+TimeoutGhostMode     = 3,+,5.0,R,0,20         ;time for runtimecheck set Ghostmode to RPC in sec
+
+[global/PartDetect]
+EnablePartDetect = 0,-,0,R,0,1                  ;Part Detect: 0 - not available; 1 -  from Station PLC
+PartDetectPos    = 3,+,-1400.0,R,-10000,20000   ;PartDetect Position in mm
+PartDetectWindow = 3,+,300.0,R,0,20000          ;PartDetect Window in mm
+
+[global/ProgramStart]
+EnableProgStartPos = 0,-,0,R,0,1              ;Programstartposition: 0 - not available; 1 - available
+ProgStartPos       = 3,+,0.0,R,-10000,20000   ;Programstartposition in mm
+
+[global/StationData]
+DisableHomeStart      = 0,-,0,R,0,1              ;Start program from: 0 - only from Homepos; 1 - any position
+EnableReInitBodyData  = 0,-,1,R,0,1              ;ReInitialisation Bodydata: 0 - disabled; 1 - enabled
+RobotOffset           = 3,+,0.0,R,0,100000       ;Distance to MainRobot of station in mm
+SkidLength            = 3,+,100.0,R,0,10000      ;Skidlength in mm
+StopAndGoMode         = 0,-,1,R,0,1              ;Conveyormode: 0 - Tracking / 1 - Stop and Go
+TimeoutMotionRel      = 3,+,5.0,R,0,20           ;timeout for motion release RPC in sec
+TimeoutProgNumber     = 3,+,5.0,R,0,20           ;time for runtimecheck set programnumber to motion in sec
+TimeoutReInitBodyData = 3,+,20.0,R,0,20          ;timeout for ReInitialisation Bodydata RPC in sec
+TrackingEndPosition   = 3,+,10000.0,R,0,20000    ;Endposition Marshalling in mm
+TrackingStartPosition = 3,+,0.0,R,-10000,20000   ;Startposition Marshalling in mm

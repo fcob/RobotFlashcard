@@ -1,0 +1,29 @@
+//$Teached Point on the Body
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_0  )
+  SETOBJECT( AU37X  )
+  //
+  LIN( MP_P1  )
+  LIN( MP_P2  )
+  LIN( MP_P3  )
+  LIN( MP_P4  )
+  LIN( MP_P5_VS  )
+  LIN( MP_P6  )
+  LIN( MP_P7  )
+  LIN( MP_P8  )
+  LIN( MP_P9  )
+  LIN( MP_P10_XV  )
+  LIN( MP_P11  )
+  LIN( MP_P12  )
+  LIN( MP_P13  )
+  //
+  LIN( MP_P14  )
+  LIN( MP_P15  )
+  LIN( MP_P16_SH  )
+  LIN( MP_P17  )
+  LIN( MP_P18  )
+  LIN( MP_P19  )
+  //
+  //
+RDESELECT("RP12")

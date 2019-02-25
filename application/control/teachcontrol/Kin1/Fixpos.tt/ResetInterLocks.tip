@@ -1,0 +1,15 @@
+RSELECT("RP12")
+  //
+  //SET_BOOL_SYSTEMVAR(RCUx, "InBox", Low, NoResetAtProgEnd)
+  //SET_BOOL_SYSTEMVAR(RCUx, "AboveBox", Low, NoResetAtProgEnd)
+  SET_BOOL_SYSTEMVAR( RCUx ,"GrindInBrakePos" ,Low ,NoResetAtProgEnd  )
+  //
+  //ResetInterLocks BellCleaner_D2
+  SET_BOOL_SYSTEMVAR( RCUx ,"PreAboveBox" ,Low ,NoResetAtProgEnd  )
+  SET_BOOL_SYSTEMVAR( RCUx ,"PosAboveBox" ,Low ,NoResetAtProgEnd  )
+  SET_BOOL_SYSTEMVAR( RCUx ,"PosInBox" ,Low ,NoResetAtProgEnd  )
+  SET_BOOL_SYSTEMVAR( RCUx ,"PosGunTurn" ,Low ,NoResetAtProgEnd  )
+  SET_BOOL_SYSTEMVAR( RCUx ,"PosPurge" ,Low ,NoResetAtProgEnd  )
+  SET_BOOL_SYSTEMVAR( RCUx ,"PosLoad" ,Low ,NoResetAtProgEnd  )
+  //
+RDESELECT("RP12")

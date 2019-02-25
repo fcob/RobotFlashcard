@@ -1,0 +1,1340 @@
+Causes 1.09.0013
+1467;- A feladat idõtartamát nem lehetett kiolvasni%CrLf%- A részegység túl hosszú feladatban fut
+1468;Cfg-paraméter "szimuláció" elkészült
+1469;- Leválasztó az 1. szakaszban hibás%CrLf%- Sûrített levegõ ellátás elégtelen%CrLf%
+1470;A részegység megpróbált az AB_CFG-nél bejelentkezni. Ez azonban a hozzáférést visszautasította, mivel%CrLf%- Az azonosítók maximális számát túllépte%CrLf%- A felfutás már befejezõdött és már nincs lehetõség a bejelentkezésre
+1471;Megpróbálta a megadott fájlt törölni. Ez azonban nem volt lehetséges.%CrLf%- A fájl írásvédett%CrLf%- A merevlemez hozzáférést a rendszer visszautasította
+1472;Megpróbálta a megadott fájlt eltolni. Ez azonban nem volt lehetséges.%CrLf%- A célfájl még létezik%CrLf%- A cél elérési útvonal írásvédett%CrLf%- A merevlemez hozzáférést a rendszer visszautasította
+1473;Egy szórófej-INI fájl konvertálásánál a rendszer megállapította, hogy egy szórófej csoport többször fordul elõ. Ezáltal egy szórófej nem határozható meg egyértelmûen. Okok: Hiba a megjelenítésben, hiba letöltés közben, a fájlt manuálisan szerkesztette.
+1474;Egy szórófej-INI fájl konvertálásánál a rendszer megállapította, hogy egy szórófej csoport a fájlban az érvényes tartományon kívül fordul elõ. Okok: Hiba a megjelenítésben, hiba letöltés közben, a fájlt manuálisan szerkesztette
+1475;Egy szórófej-INI fájl konvertálásánál a rendszer megállapította, hogy a megadott paraméter a megadott csoportban többször fordul elõ. Ezáltal egy szórófej nem határozható meg egyértelmûen. Okok: Hiba a megjelenítésben, hiba letöltés közben, a fájlt manuálisan szerkesztette.
+1476;Egy szórófej-INI fájl konvertálásánál a rendszer megállapította, hogy a megadott csoport többször fordul elõ. Ezáltal egy szórófej nem határozható meg egyértelmûen. Okok: Hiba a megjelenítésben, hiba letöltés közben, a fájlt manuálisan szerkesztette.
+1477;Egy szórófej-INI fájl konvertálásánál a rendszer megállapította, hogy a megadott paraméter a megadott csoportban hibás adatformátummal rendelkezik. Okok: Hiba a megjelenítésben, hiba letöltés közben, a fájlt manuálisan szerkesztette.
+1478;Egy szórófej-INI fájl konvertálásánál a rendszer megállapította, hogy a megadott paraméter a megadott csoportban hiányzik. Okok: Hiba a megjelenítésben, hiba letöltés közben, a fájlt manuálisan szerkesztette.
+1479;Egy szórófej-INI fájl konvertálásánál a rendszer megállapította, hogy a megadott csoport hiányzik. Okok: Hiba a megjelenítésben, hiba letöltés közben, a fájlt manuálisan szerkesztette.
+1480;Megpróbálta az adott fájlt kinyitni, ill.elhelyezni. Ez azonban nem volt lehetséges.%CrLf%- A célfájl létezik, de írásvédett%CrLf%- A merevlemez hozzáférést a rendszer visszautasította
+1481;Adatokat kell írni a szórófej fájlba. Azonban 0 bájtot írt a fájlba. Okok: Belsõ hiba, token elveszett
+1482;Megpróbálta a megadott fájlt lezárni. Ez azonban nem volt lehetséges.%CrLf%- A célfájl foglalt%CrLf%- A merevlemez hozzáférést a rendszer visszautasította%CrLf%- Vezérlésen belüli probléma
+1483;Megpróbálta a megadott könyvtárat létrehozni. Ez azonban nem volt lehetséges.%CrLf%- A cél elérési út foglalt%CrLf%- A merevlemez hozzáférést a rendszer visszautasította%CrLf%- Vezérlésen belüli probléma
+1484;Megpróbálta a megadott fájlt kinyitni. Ez azonban nem volt lehetséges.%CrLf%- A fájl nem áll rendelkezésre%CrLf%- A merevlemez hozzáférést a rendszer visszautasította
+1485;Adatokat kell kiolvasni a szórófej fájlból. Azonban 0 bájtot olvasott ki. Okok: Belsõ hiba, token elveszett, szórófej fájl üres, érvénytelen a tartalom a szórófej fájlban
+1486;Megpróbált szórófej fájlokat eltávolítani a dinamikus memóriából (a karosszéria elhagyta a zónát, utólagos választás a zónában). Emellett egy hiba lépett fel. Ezzel megszûnt az adatok konzisztenciája. 
+1487;A vezérlés felfutásánál a paraméterezés után ellenõrzi a szórófej fájlt. Közben egy olyan hiba lépett fel, amely nem teszi lehetõvé a berendezés értelmes üzemeltetését. Adatok konzisztenciája!
+1488;Megpróbált n-szer (ld. a max. alatt) a BCU-ból egy egységet megkapni, hogy a FIFO állomásról olvasson (szemafor idõtúllépés). Az egység azonban semmit nem adott. Belsõ vezérlési hiba.
+1489;Megpróbált a BCU-ból egy egységet megkapni, hogy a FIFO állomásról olvasson (szemafor hiba). Emellett egy hiba lépett fel. Belsõ vezérlési hiba.
+1490;Megpróbálta a BCU-ból kapott egységet ide visszaadni (szemafor hiba). Emellett egy hiba lépett fel. Belsõ vezérlési hiba.
+1491;Megpróbált egy érvénytelen mûveletet végrehajtani. Vezérlési hiba, programozási hiba, ellenõrzési hiba.
+1492;Egy új karosszéria jelentkezett be a karosszéria FIFO-ba. Megpróbálta erre a karosszériára a szórófej adatokat betölteni. Ez nem sikerült, mert a szórófej tárolóban nem volt több hozzáférhetõ beírás. A régi karosszériát valószínûleg sikertelenül törölte.
+1493;Megpróbált szórófej fájlokat betölteni a dinamikus memóriába (új karosszéria van a zónában, utólagos választás a zónában). Emellett egy hiba lépett fel. Ezzel megszûnt az adatok konzisztenciája. 
+1494;A HMI-n keresztül letöltött egy szórófej fájlt. A HMI elérési útja és/vagy a fájl beírása nem felel meg azonban a név konvenciónak
+1495;A HMI-n keresztül letöltött egy szórófej fájlt. Az átvizsgálásnál egy hiba lépett fel és a szórófej fájl érvénytelen. A vezérlésben nem aktualizálható.
+1496;A HMI-n keresztül letöltött egy szórófej fájlt. A célkönyvtár létrehozásakor egy hiba lépett fel. Hiba a merevlemez hozzáférésénél. Belsõ rendszerhiba.
+1497;A HMI-n keresztül letöltött egy szórófej fájlt. Amikor átmásolta az INI-fájlt, ill. a BIN-fájlt a célkönyvtárba, egy hiba lépett fel. Hiba a merevlemez hozzáférésénél. Belsõ rendszerhiba.
+1498;A megadott szórófej fájlban érvénytelen számú elõírt érték van. Okok: A fájl megsérült, manuálisan szerkesztette, nem illeszkedõ folyamattal másolta.
+1499;A megadott szórófej fájlban hiányzik a megadott elõírt érték. Okok: A fájl megsérült, manuálisan szerkesztette vagy nem illeszkedõ folyamattal másolta.
+1500;Megpróbált a megjelenítõn keresztül utólag egy festéket választani. Ez csak akkor megengedett, ha a csatornát kiöblítette.
+1501;Megpróbált egy festéket utólag kiválasztani. A kívánt festékszám azonban érvénytelen.
+1502;Megpróbált egy festéket utólag kiválasztani. Erre azonban nincs lehetõség, mert a csatornát más anyag foglalja le (pl. idõprogram aktív).
+1503;Megpróbált egy festéket utólag kiválasztani. A kívánt szelep azonban érvénytelen.
+1504;A cfg-fájlban érvénytelen számú szelepet adott meg a csatornára.
+1505;A tanítóprogramból érvénytelen szórófej számot adott meg. Hiba a tanítóprogramban.
+1507;Túl sok elõírt értéket próbált beírni az adott táblázatba. Vezérlésen belüli hiba.
+1508;A megadott TeachIn modulhoz nem talált szórófej fájlt. A fájl nem létezik. A fájl nincs betöltve.
+1509;A kívánt szórófej fájlt még nem töltötte a memóriába. A betöltési lépések láncolata blokkolt vagy még nincs készen.
+1511;Egy funkció hívásánál érvénytelen fõcsatorna-csoportot adott át. Vezérlésen belüli hiba.
+1512;Megpróbálta a megadott csatornát lakkozásra lefoglalni. Ezt a csatornát azonban már egy másik anyag már lefoglalta. A lakkozás nem lehetséges.
+1514;A konfiguráció hibája vagy olvasási hiba
+1515;A konfiguráció hibája vagy olvasási hiba
+1516;Az elõre megadott idõ alatt nem érte el a rögzített pozíciójú pont adatait
+1517;A ProcessBuilder elemben egyenként több, mint egy pozíciót konfigurált a profilmentes/kiválasztási pozícióra
+1519;Vezérlésen belüli probléma. Megpróbálta a robottengelyek számát meghatározni, nem sikerült az adatokhoz hozzáférni
+1520;A ProcessBuilder elemben konfigurált programszám nem érvényes
+1521;Nem minden konfigurált rögzített pozíciójú pont található meg a _globalvars fájlban
+1522;A megnevezett pontot hibás koordinátarendszerben programozta
+1523;A megnevezett pont nem található a _globalvars változóban.%CrLf%Több mint egy pontot konfigurált unselect/bypass/home típusúnak.%CrLf%Minden pont koordinátája "nulla".
+1524;A lakkozáshoz a fontos csatornákat az AB_TriggerBrush részegységgel foglalja le. Az ehhez szükséges szemaforokat azonban nem lehetett megkapni.
+1525;A lakkozáshoz a fontos csatornákat az AB_TriggerBrush részegységgel foglalja le. Az ehhez szükséges szemaforokat meg lehetett kapni, de a visszaadásnál hiba lépett fel.
+1526;Az elsõ GUNON elhelyezésénél megpróbálta a lakkozás szempontjából fontos csatornákat lefoglalni. Erre azonban nincs lehetõség, mivel a feladattervezés a csatornákat még nem jelentette "kész elõkészített" státuszúnak (PreparationDone=HAMIS).
+1529;Megpróbálta a GET_REFTO utasítással a megadott változókat referencia értékre állítani. Ez nem sikerült. Okok: Programozási hiba, vezérlésen belüli probléma.
+1530;A szórófej táblázat létrehozásánál egy vezérlésen belüli probléma lépett fel. Az adatok nem konzisztensek.
+1531;Túl alacsony a nyomás az iniciátor vezérléséhez. 
+1532;- Auto üzemmódban megpróbálta az elõírt értéket közvetlenül megadni.%CrLf%- Kézi üzemmódban megpróbált megadni egy értéket anélkül, hogy a készüléket megjelenítésre bekapcsolta volna.%CrLf%- Más üzemmódban a készüléket nem szabad vezérelni
+1533;Megpróbált egy dinamikus tárolóelemet létrehozni. Közben hiba lépett fel.%CrLf%Ok: Programozási hiba/ vezérlésen belüli probléma.
+1534;Megpróbált egy dinamikus tárolóelemet leírni. Közben hiba lépett fel.%CrLf%Ok: Programozási hiba/ vezérlésen belüli probléma
+1535;Megpróbált egy dinamikus tárolóelemet kiolvasni. Közben hiba lépett fel.%CrLf%Ok: Programozási hiba/ vezérlésen belüli probléma
+1536;Az idõprogram hibás adatokat tartalmaz vagy hibás a festék hozzárendelési táblázat
+1540;Az elsõ GUNON elhelyezésénél megpróbálta a lakkozás szempontjából fontos csatornákat lefoglalni. Erre azonban nincs lehetõség, mivel a feladattervezés a csatornákat még nem jelentette "kész elõkészített" státuszúnak (fõcsatorna indítása=HAMIS)
+1541;A tanítóprogramból SET_BRUSH utasítást helyezett el. Az elhelyezett szórófej azonban nem írható, mert a szükséges csatornákat még más eljárások foglalják le (pl. öblítés, feltöltés).
+1542;A rendszer a megadott paraméterek olvasásánál megállapította, hogy ezek hibás formátumúak.
+1543;A rendszer egy lakkozás szempontjából fontos készülék elérésekor megállapította, hogy hibás adattípussal rendelkezik. Megengedett adattípusok: BOOL, INT, DINT, REAL.
+1544;Egy olyan festéket próbált utólag kiválasztani, amely érvénytelen festékellátás csoportot tartalmaz.
+1545;Egy olyan festéket próbált utólag kiválasztani, amely nem tartalmaz adatot a festékellátás csoporthoz.
+1546;A vezérlés felfutásakor a rendszer megállapította, hogy a festékcserélõ megadott csatornája nem tagja egy logikai csatornának. Ez azonban alapfeltétel.
+1547;A vezérlés felfutásakor a rendszer megállapította, hogy a festékcserélõ megadott csatornája nem tagja egy festékellátó csoportnak. Ez azonban alapfeltétel.
+1548;Az alkotóelem táblázatba egy érvénytelen alkotóelem számot írt be.
+1549;Az idõprogramban a "SetQuantity" és "SetQuantityMultiK" készülék elõírt értékeket egyidejûleg paraméterezte. Ez nem megengedett.
+1550;Egy festéket utólag választott ki. Ez a festék azonban nem tartozik abba az ellátási csoportba, amelyhez a festékcserélõ tartozik
+1551;Egy festéket választott ki utólag a teljes rendszer számára. Ez azonban nem festékkeverék, hanem csak egy alkotóelem.
+1552;A tanítás ellenõrzésbõl megpróbált egy naplózót lefoglalni, azonban már minden elérhetõ naplózót kiadott.
+1553;A fájl elérési útvonala hibás vagy nem sikerült hozzáférni az adathordozóhoz.
+1554;Megpróbálta a megadott fájlt kinyitni. Ez azonban nem volt lehetséges.%CrLf%- A fájl nem áll rendelkezésre%CrLf%- A merevlemez hozzáférést a rendszer visszautasította
+1555;Megpróbálta a megadott fájlt létrehozni. Ez azonban nem volt lehetséges.%CrLf%- A rendelkezésre, de írásvédett%CrLf%- A merevlemez hozzáférést a rendszer visszautasította
+1556;Megpróbálta egy szerszámegység adatait átadni a programozó kézi készüléknek, ez nem sikerült.%CrLf%Vezérlésen belüli probléma.
+1557;Hibás vagy hiányzó konfiguráció beírás az [RC.BypassArea] egységben areaTyp változónak. Csak 1 érték megengedett a munkaterületre és 2 a lezárt területre.
+1558;Hibás vagy hiányzó konfiguráció beírás az [RC.BypassArea] egységben areaShape változónak. Téglatestre csak 0, hengerre 1 és golyóra 2 érték adható.
+1559;Nincs beírva konfiguráció [RC.BypassArea]. Ezért nem lehet ellenõrizni az elkerülõ területeket (profilmentes) egy lezárt területtel.
+1560;Nincs beírva konfiguráció [RC.BypassSize]. Ezért nem lehet ellenõrizni az elkerülõ területeket (profilmentes) egy lezárt területtel.
+1561;Nincs beírva konfiguráció [RC.BypassBase]. Ezért nem lehet ellenõrizni az elkerülõ területeket (profilmentes) egy lezárt területtel.
+1562;Sikertelen volt az McuCreateArea MCU funkció hívása. A konfigurált elkerülõ terület nem hozható létre. 
+1563;A munka-/lezárt terület ellenõrzése a vezérlés felfutása után nem adott konzisztens értékeket.
+1564;Sikertelen volt az McuCreateJob MCU funkció hívása. A konfigurált elkerülõ terület nem ellenõrizhetõ.
+1565;Sikertelen volt az McuApplyJobTo MCU funkció hívása. A konfigurált elkerülõ terület nem ellenõrizhetõ.
+1566;Sikertelen volt az McuAreaCheckPoint MCU funkció hívása. A konfigurált elkerülõ terület közvetlenül a vezérlés felfutása után nem ellenõrizhetõ megfelelõen.
+1567;A konfigurációban nem paraméterezett elkerülõ területet.
+1568;Hibás beírások az [RC.KINEMATIC:n.Gripper.VectorX] egységben
+1569;Sikertelen volt az McuCreateGripper MCU funkció hívása. A konfigurált elkerülõ terület nem ellenõrizhetõ.
+1570;Túl magas-, túl alacsony hõmérséklet, készülék hiba
+1571;A hozzárendelt levegõáram nem létezik
+1574;A vezérlés felfutásakor jelentkeznek a készülék változók az SWO-interfészen (EcoScreen Softlog és Kemro.Scope). Emellett egy belsõ hiba lépett fel.
+1575;A vezérlés felfutásakor jelentkeznek a készülék változók az SWO-interfészen (EcoScreen Softlog és Kemro.Scope). Túl hosszú azonban a jelnév. Legfeljebb 32 jel megengedett.
+1576;A vezérlés felfutásakor jelentkeznek a készülék változók az SWO-interfészen (EcoScreen Softlog és Kemro.Scope). Túl hosszú azonban a szöveg az egységre. Legfeljebb 32 jel megengedett.
+1577;A robot levált a szoftverrõl és a tengelyek nem állnak le a kívánt idõ alatt,%CrLf%ill. a tengelykorlátozó még aktív.
+1578;Megpróbálta a Sercos gyûrû kommunikációs fázisát átkapcsolni. Ez nem sikerült a kívánt idõ alatt.%CrLf%A Sercos gyûrû még nem indult el a vezérlés újraindításánál.%CrLf%A Sercos gyûrû minden meghajtója szimulált.
+1579;- A földelõkapcsoló nem kapcsolt, a kapcsoló hibás vagy szennyezett, 
+1580;A nagyfeszültség aktív.
+1581;A folyamatképzõ fájlok nem kompatibilisek egymással
+1583;A vezérlés felfutásakor megpróbált összeköttetést kialakítani a megadott profibusz mesterkártyával (csatlakozás). Ez nem sikerült. Okok: A mester nem hozzáférhetõ, a mestert az IoProfibusMaster.cfg fájlban átnevezte, vezérlésen belüli probléma.
+1584;A megadott profibusz szolga egy diagnózisjelentést küldött.
+1585;Amikor státuszinformációt olvasott ki a profibusz mester kártyáról, hiba lépett fel (GetMasterStatus). Okok: Mester kiesett, nincs csatlakozás a mesterhez, vezérlésen belüli probléma.
+1586;Egy profibusz szolga egy diagnózisjelentést küldött. Az operációs rendszer jelentette ezt a hibát a diagnózis szoftvernek, a hibaüzenetnek azonban hibás a felépítése. Vezérlésen belüli probléma.
+1587;A megadott profibusz szolga egy diagnózisjelentést küldött. A (GetSlaveDiag) üzenet olvasásakor egy hiba lépett fel. Okok: A szolga érvénytelen üzenetet küldött, a mester elvesztette az üzenetet, vezérlésen belüli probléma.
+1588;A vezérlés felfutása közben megadott profibusz szolga egy diagnózisjelentést küldött. A diagnózis szoftver inicializálása mégsem fejezõdött be és a jelentés nem értékelhetõ ki.
+1589;Egy profibusz szolga egy diagnózisjelentést küldött. Amikor megpróbálta kiolvasni a hibapuffert, egy hiba lépett fel (GetError). Vezérlésen belüli probléma.
+1590;Egy profibusz szolga egy diagnózisjelentést küldött és meghibásodott.
+1591;A megadott cfg-fájlban a megengedettnél több csoport van
+1592;A megadott cfg-fájlban a megengedettnél több paraméter van
+1593;A megadott cfg-fájlban talált egy paramétert, amely azonban nincs egy csoporthoz hozzárendelve
+1597;A profibusz mester számára az FX760A:0/PBDP:0 paraméterben egy nevet kell megadni. Erre a névre a mester feltérképezéséhez van szükség.
+1598;A vezérlés konfigurációban nincs megadva profibusz mester. 
+1599;Megpróbálta a paramétertípust kiolvasni. Emellett egy hiba lépett fel
+1600;Megpróbálta a paramétert kiolvasni. Emellett egy hiba lépett fel
+1601;Nem tudja kiolvasni az S-0-0030 meghajtóparamétert.%CrLf%A meghajtó-firmware-verziót a vezérlés nem ismeri.
+1602;Nem sikerült hozzáférni a kinematikához, programhiba vagy vezérlésen belüli probléma.
+1603;Az "IoSercos.cfg" konfigurációs fájlban a megnevezett meghajtónál "driverMode = 3" értéket választott, ami szimulációt jelent.
+1604;Megpróbálta a meghajtásszabályozó készülék egy paraméterét a Sercoson át leolvasni, közben hiba lépett fel.%CrLf%Hibás fényhullám-vezetõ vagy más meghajtás hiba.
+1605;A robotot nem vitte féktesztpozícióba.%CrLf%A féktesztpozíciót nem konfigurálta.%CrLf%
+1606;Az utolsó 24 órában nem történt fékteszt.%CrLf%Útmutatás a felhasználó részére, hogy X óra után féktesztet kell végezni, %CrLf%különben a meghajtások leállnak.
+1607;A féktesztet legkésõbb 48 óra után el kell végezni, ez megtörtént.
+1608;A felhasználó a PHG-n vagy az EcoScreen-en megadta az ideiglenes eljárási engedélyt.
+1609;Megpróbálta a vonatkozó meghajtásszabályozó készülék egy paraméterét a Sercoson át beírni, %CrLf%közben hiba lépett fel.%CrLf%Hibás fényhullám-vezetõ vagy más meghajtás hiba.
+1610;A fékteszt kezdetére a vonatkozó meghajtást nem kapcsolta vagy%CrLf%teszt közben lekapcsolta.
+1611;A féktesztet a megadott idõ alatt nem lehetett sikeresen befejezni.
+1612;A megadott tengelyen hiba lépett fel a fékteszt adott fázisában.
+1613;Az ATEX-féktesztet a megadott tengelyen eredményesen végrehajtotta.
+1614;Vezérlésen belüli hiba (osztás nullával, érvénytelen mátrix hozzáférés stb.)
+1615;A fõtû aktív visszacsatolással végzett nyitásánál vagy zárásánál a rendszer a megadott idõn belül visszajelzést vár. A jelentés kimaradásának vagy késlekedésének a következõ okai lehetnek: Fõtû hibás, iniciátor hibás, fõtû ragad, vezérlõnyomás alacsony
+1616;A fõtû be és kikapcsolása megtörtént, a visszajelzést is felismerte a rendszer de elveszett. A jelentés elvesztésének a következõ okai vannak: Fõtû hibás, iniciátor hibás, fõtû ragad.
+1617;Megpróbálta a meghajtás visszaolvasott értékeit feltérképezni, ez nem sikerült.%CrLf%Vezérlésen belüli probléma vagy a visszaolvasott érték nem konfigurált.
+1618;Megpróbálta a meghajtás actJointPosition értékét feltérképezni, ez nem sikerült.%CrLf%Vezérlésen belüli probléma.
+1619;A vonatkozó tengely tényleges értéke megváltozott, anélkül, hogy az eloírt értéket megadta volna.
+1620;A vonatkozó meghajtás nem érte el a nyugalmi állapotot a megadott idõ alatt.
+1621;Hiba a konfigurációban vagy nincs konfigurációs fájl.
+1622;A motort vagy a vezérlõ részt lecserélte.%CrLf%
+1623;Egy meghajtáson az UL jelentés nyugtázásával egy érvénytelen szabványos paraméterkészletet aktivált.
+1624;Sikertelen volt az McuCreateArea MCU funkció hívása. Adatolvasási hiba a _globalvars.ttp fájlból vagy%CrLf%vezérlésen belüli probléma.
+1625;Az utóbbi 48 órában nem volt eredményes fékteszt.
+1626;Nincs memóriaterület a cél adathordozón.%CrLf%Vezérlésen belüli probléma.
+1627;A profibusz szolga nincs adatcsere státuszban. Okok: SPS nem kommunikál, hibás a szolga cím, huzalszakadás az SPS és az EcoRPC között, a vezérlés az újraindítás után még nem áll készen a kommunikációra. 
+1628;A vezérlés felfutásakor megpróbált összeköttetést kialakítani a megadott profibusz szolgakártyával (csatlakozás). Ez nem sikerült. Okok: lásd a hibakódokat
+1629;A vezérlés konfigurációban nincs megadva profibusz szolga. 
+1630;A profibusz mester számára az FX765A:0/PBDP:0/PBDPSLAVE:0 paraméterben egy nevet kell megadni. Erre a névre a szolga feltérképezéséhez van szükség.
+1631;A megjelenítésen keresztül jelzi a szállító funkció mérésének végét. A funkció elvégzéséhez a szállítót le kell állítani. Ez nem történt meg.
+1632;A megjelenítésen keresztül a szállító mérését aktiválta. Ezt azonban csak akkor teheti, ha a szállító áll.
+1635;A WAIT_CONVEYOR és TRACKING(On) között a tárgy túl messzire mozdult
+1636;Nem lehetett a feldbusz szolga összes be-kimenetét feltérképezni.%CrLf%Különbözõ a hardver végpontok megnevezése a kemromanagerben és az RCU-ban.%CrLf%A kemromanagerben egy vagy több be-/kimenetet nem hozott létre.
+1637;A feldbusz szolga megnevezett hardver végpontját nem lehetett feltérképezni.%CrLf%Különbözõ a hardver végpontok megnevezése a kemromanagerben és az RCU-ban.%CrLf%Nem hozta létre a bemenetet a kemromanagerben.
+1638;Nem lehetett a feldbusz szolga összes be- és kimenetét feltérképezni.%CrLf%Különbözõ a hardver végpontok megnevezése a kemromanagerben és az RCU-ban.%CrLf%A kemromanagerben egy vagy több be-/kimenetet nem hozott létre.
+1639;Behelyezett egy fékkioldó készüléket.%CrLf%Behelyezett fékkioldó készülékkel a meghajtást nem lehet bekapcsolni.
+1641;A konfigurációban legyen egy érték konfigurálva a megnevezett irányú ellenõrzési %CrLf%tér negyságára. A beállított robottípusnál ellenõrizze ezt a koordinátát.
+1642;A konfigurációban adjon meg egy értéket a megnevezett ellenõrzési tér segédtengelyére. Ennél a robottípusnál és a meglévõ beszerelési helynél ellenõrizze a segédtengelyt.
+1643;A megnevezett rendszerváltozó feltérképezése nem sikerült.%CrLf%Ez a fékteszt és az eco-képernyõ közötti kommunikációhoz szükséges.%CrLf%
+1644;A feldbusz szolga megnevezett hardver végpontját nem lehetett feltérképezni.%CrLf%Különbözõ a hardver végpontok megnevezése a kemromanagerben és az RCU-ban.%CrLf%Nem hozta létre a kimenetet a kemromanagerben.
+1645;A ProcessBuilder segítségével egy új,rögzített pozíciót generált, amelyet még nem tanított be.%CrLf%Ezáltal a rögzített pozíciópont koordinátarendszere érvénytelen, és a rögzített pozíció nem %CrLf%értékelhetõ.
+1647;A mozgatóprogram egy elõzetes hiba után már nem folytatható.
+1648;A nagyfeszültség IB-nél meghatározott lekapcsolási ideje nagyobb mint a TimeOut idõ
+1649;A mozgatás a rögzített pozícióba hosszabb ideig tart, mint az idõprogramban beállított TimeOut idõ
+1650;Egy MCU rendszerfunkció behívása sikertelen, vezérlésen belüli hiba.
+1651;A mozgatóprogram túl késõn indult, tehát a tárgy a program indításánál már túl sokat tartózkodik a fülkében.
+1652;A GET_PAINTPOSITION makró feltételezi, hogy a vezérlésben aktív a 'Lehetõ legkésõbbi felfüggesztés' tulajdonság. Azután az elõremenet leáll és az elágazási parancsot csak olyan késõn hajtja végre, hogy erre még éppen sebesség megtörés nélkül lehetõség legyen.
+1653;A Get_PAINTPOSITION makrónál érvénytelen értéket adott meg a GreaterSmaller paraméterre.
+1655;Lakkozásnál a nyomást a megadott érzékelõ felügyeli. Ez a megadott határ alatti értéket jelez. Ennek az oka lehet a hiányzó festékellátás-nyomás, tömlõtörés, hibás festéknyomás-szabályozó vagy hibás adagolószivattyú.
+1656;Lakkozásnál a nyomást a megadott érzékelõ felügyeli. Ez a megadott határ feletti értéket jelez. Ennek az oka lehet a hibás adagolószivattyú, az eldugult vezeték vagy fõtû.
+1657;4Q3 teljesítménykapcsoló lekapcsolt
+1658;A 7F1, 7F3, 7F4, 7F5, 7F7 vagy 7F8 biztosíték lekapcsolt
+1659;A 6F4, 6F5, 6F7 vagy 6F8 biztosíték lekapcsolt
+1660;A 6Q1 teljesítménykapcsoló lekapcsolt
+1661;A 24Q4 vagy 60Q2 teljesítménykapcsoló lekapcsolt
+1662;A GET makró feltételezi, hogy a vezérlésben aktív a 'Lehetõ legkésõbbi felfüggesztés' tulajdonság. Azután az elõremenet leáll és az elágazási parancsot csak olyan késõn hajtja végre, hogy erre még éppen sebesség megtörés nélkül lehetõség legyen.
+1663;A funkció hozzárendelés táblázat több funkciócsoportját "mesternek" jelölte. Ennek a megnevezésnek azonban egyértelmûnek kell lenni.
+1664;A funkció hozzárendelés táblázat egy funkciócsoportját sem jelölte "mesternek".
+1665;Túllépte a funkciócsoportok legnagyobb megengedett számát (Array-Size).
+1666;Az INI fájl olvasásakor egy hiba lépett fel. A paramétert vagy szekciót nem találja.
+1667;Megpróbálta az INI-fájlt kinyitni. A fájl nem található
+1668;Az automatikus dugattyú beállításnál a dugattyúban lévõ nyomás a megadott konfigurált érték fölé emelkedett. Lehetséges okok: A közeg elfolyását a hengerben lehetõvé tevõ szelepeket nem vezérli vagy nem kapcsolnak
+1669;Az automatikus beállítás megszakadt, mivel, amikor a meghajtást a sercoson keresztül elérte, hiba lépett fel
+1670;Az automatikus beállítás futó szekvenciája közben a dugattyú feladata módosult. Ezt hiba (vészleállítás stb.) hívhatja elõ.
+1671;Az automatikus dugattyú referenciamenet után az S-0-0092 meghajtóparaméter eredeti értéke nem állítható vissza. Vagy az aktuálisan beolvasott érték volt túl kicsi, vagy az érték tizedeshelyeit (súlyozást) nem lehetett megállapítani
+1672;A P51 meghajtóparaméter értéke nulla. Ellenõrizze a paramétert 
+1673;Az S111 meghajtóparaméter értéke nulla. Ellenõrizze a paramétert 
+1674;Az S92 értéke a meghajtóban nem egyezik a konfigurált (AxisMaxTorque) értékkel a process.cfg fájlban. %CrLf%Lehetséges okok: %CrLf%- Az automatikus dugattyú referenciamenet megszakadt és az S92 eredeti értékét nem lehetett visszaírni a meghajtóba.%CrLf%- Hibás érték a process.cfg fájlban
+1675;Vagy a dugattyúnak még soha nem volt referenciamenete, vagy az automatikus referenciamenet közben hiba lépett fel ( túlnyomás, megszakadás, hiba a sercos utasítás végrehajtásakor stb.)
+1676;Megpróbálta az automatikus dugattyú referenciamenethez az idõprogramot manuálisan indítani
+1677;A referenciamenet indításakor a dugattyúban a nyomás ne legyen nagyobb, mint a megadott, konfigurált érték
+1678;- Az idõtúllépés idejét túl rövidre állította ( 2 * a dugattyú max. pozíciója mm-ben) kb. 440 mp.%CrLf%- Nincs meghajtás engedélyezés%CrLf%- Nincs teljesítmény az adagoló meghajtásra
+1679;Az STL szelepek nincsenek megfelelõen csatlakoztatva, ill. elégtelen a sûrített levegõ ellátás, ill. a nyomáskapcsoló beállítása hibás
+1680;Az STL szelepek nincsenek megfelelõen csatlakoztatva
+1681;A sûrített levegõ ellátás elégtelen, ill. a nyomáskapcsoló beállítása hibás
+1682;- Hibás turbina%CrLf%- Az elõre megadott fordulatszám túl nagy%CrLf%- Nincs elegendõ idõ
+1686;- Átviteli hiba a hálózaton keresztüli másolásnál%CrLf%- Nincs letöltés könyvtár
+1687;- A festékmennyiség táblázat fájl kiterjesztése nem *.ini
+1688;- A konfigurációs fájl formátuma hibás%CrLf%--Oszlopok, szekciók, kulcsszavak beírása hibás
+1689;- Nem talált érvényes festékmennyiséget a festékmennyiség táblázatban.%CrLf% (az adatmennyiség csökkentése érdekében a vezérlés csak a 0,0 értéknél nagyobb festékmennyiséget menti). Az alapértelmezett -1,0 értékek nem szerepelnek a festékmennyiség-adatban
+1690;A hõmérséklet túlságosan alacsony.
+1691;A hõmérséklet túlságosan magas.
+1692;A fék becsiszolásánál a motor sebessége ne legyen túl nagy, különben a fék megsérülhet. A sebességet a tanítóprogramban elõre megadta és az túl nagy.
+1693;- Az adagolódugattyú egy zárt rendszerrel szemben mozog%CrLf%- A dugattyúmozgás dinamika paramétere túl nagy%CrLf%- A mechanika nehezen mozog
+1694;Az elõre megadott idõ alatt nem érte el a motortartó fék becsiszolásához szükséges legkisebb sebességet.
+1695;Sikertelen volt az McuActivateArea MCU funkció hívása. A konfigurált munka-/lezárt terület nem ellenõrizhetõ.
+1696;Hibás beírások az [RC.KINEMATIC:n.VirtualWall......] egységben
+1697;Az [RC.KINEMATIC:n.VirtualWall.Blockx] egység beírása hiányzik a konfigurációban
+1698;A megnevezett hardver végpontot nem lehetett feltérképezni.%CrLf%Különbözõ a hardver végpontok megnevezése a kemromanagerben és az RCU-ban.%CrLf%Nem hozta létre a kimenetet a kemromanagerben.
+1699;- A lakktárolóban lévõ iniciátor nem jelzett. %CrLf%- Túl alacsony a nyomás a körvezetékben.%CrLf%- Festékszelep nem nyit. %CrLf%- Hibás az iniciátor a lakktárolón.%CrLf%- Nem mozog a dugattyú a lakktárolóban. 
+1700;Nincs festék a lakktárolóban. %CrLf%- Nincs vagy nem elegendõ a nagynyomás a lakktárolóban.   %CrLf%- Nincs vagy nem elegendõ a nyomás a körvezetékben. %CrLf%- A festékszelep nem nyit megfelelõen. 
+1701;Elérte a legtöbb lehetséges kapcsolási ciklust. Az alkatrész tovább nem használható.
+1702;Elérte a kapcsolási ciklusok figyelmeztetési határát.
+1703;- A szigetelõhengerben lévõ iniciátor nem jelzett. %CrLf%- Kimenetnél a levegõt nem lehet kifújni. %CrLf%- A vezérlõszelep hibás. %CrLf%- A szigetelõhengerben lévõ iniciátorok hibásak vagy eltolódtak.%CrLf%- Lehúzó a szigetelõhengerben 
+1704;Egy olyan paraméter, amelyre egy folyamattengely inicializálásához feltétlenül szükség van, nem található a vezérlés katalógusában.
+1705;Egy folyamattengely aktuális forgatónyomatékának megfelelõ kiszámításához a vezérlés konfigurációjában (sercos rész) két paraméternek rögzített értékkel jelen kell lenni. %CrLf%- torqueUnitsToDriveValue = 10.0%CrLf%- driveType = ecodrive
+1706;Egy folyamattengely ServoName változója az mfb konfigurációban nem található a vezérlés konfigurációjában (sercos rész). A két konfigurációs fájlban (motion.cfg és iosystem.cfg) a névnek azonosnak kell lenni.
+1707;- hiányzó fordulatszám engedélyezés%CrLf%- hiányzó nagyfeszültség engedélyezés
+1708;A mester folyamat közben a meghajtások lekapcsoltak, elengedte a jóváhagyó gombot %CrLf%vagy más meghajtás hiba.
+1709;A megnevezett tengely beállítása közben az eljárás út (Masteringdelta) nem elegendõ ahhoz, hogy felismerje az érzékelõ 0 -> 1 jelváltását.
+1710;A tárgy útjának meghatározására a követés során egy számlálókártya szolgál, amely a továbbítón lévõ forgás jeladóról jövõ impulzusokat felfogja. Ez a kártya kiesett és az információban megadott hibát jelzi.
+1711;Az anyagnyomás-szabályozóban a sûrített levegõ nyomása alacsonyabb az alsó figyelmeztetési határnál.
+1712;Megpróbált egy dinamikus tárolóelemet törölni. Közben hiba lépett fel.%CrLf%Ok: Programozási hiba/ vezérlésen belüli probléma
+1713;Az "EcotalkVariables.ttp" fájlban a felhasználó konfigurálhatja a neveket az EcoTalk átadási paraméterre,%CrLf%a megnevezett paraméter értéke a funkció számára érvénytelen értékre változott.
+1714;A megnevezett csoport az EcoTalk-ban egy hibás feladatot programozott.%CrLf%Nem használható az összes kiválasztható feladat minden csoportra.%CrLf%
+1715;A megnevezett parancs az EcoTalk-ban egy hibás csoportot programozott.%CrLf%
+1716;A GET makró feltételezi, hogy a vezérlésben aktív a 'Lehetõ legkésõbbi felfüggesztés' tulajdonság. Azután az elõremenet leáll és az elágazási parancsot csak olyan késõn hajtja végre, hogy erre még éppen sebesség megtörés nélkül lehetõség legyen
+1717;Megpróbálta a motorértékek között az aktuális tengelyértéket átalakítani, ez nem sikerült.%CrLf%Ok: Vezérlésen belüli probléma
+1718;A finombeállítás során az adott tengely elérte a szoftver végállást.
+1719;Nem lehetett létrehozni a vonatkoztatást a "SERCOS" hardver végponthoz. A sercos gyûrûnek a konfigurációban nincs szimbolikus neve vagy más mint "SERCOS":%CrLf%[IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0]%CrLf%név = "SERCOS"
+1720;A Statistikfifo elemet nem lehetett feldolgozni.
+1721;Csak egy kiöblített csatornát szabad festékkel feltölteni, különben szennyezések kerülhetnek a rendszerbe.
+1722;- A szigetelõhengerben lévõ iniciátor nem jelzett. %CrLf%- Mozgás közben a levegõt nem lehet kifújni. %CrLf%- A vezérlõszelep hibás. %CrLf%- A szigetelõhengerben lévõ iniciátorok hibásak vagy eltolódtak.%CrLf%- Lehúzó a szigetelõhengerben moz
+1723;Egy készülék reteszelését az 'OmnitInterlocks' elõírt értékkel áthidalta. Legyen óvatos az alkalmazott készüléknél. A hibás kezelés károkat okozhat. 
+1724;A cfg-fájlba bevitte a növekmény/mm értéket. Ebbõl ki lehet számítani a legnagyobb megengedett kódolóugrást. A kiszámított kódolóugrás mégis nagyobb, mint a legnagyobb megengedett ugrás.
+1725;Egy vezérlési cikluson belül a növekmény jeladó vagy a jeladó-kártya tényleges értékének változása nagyobb, mint a megengedett érték.
+1726;A növekmény jeladó vagy a jeladó-kártya kiesésével nem megengedett tényleges érték alakult ki. A tényleges érték simítása (szûrése) tovább nem garantálható.
+1727;A túlvezérlés konfigurációja eltérõ a szórófej konfigurációhoz képest, pl. PaintFlow helyett Paintflow.%CrLf%
+1728;Override.def nem teljes
+1729;A szekciók száma a vezérlés oldalán korlátozott.
+1730;Az oszlopok száma a vezérlés oldalán korlátozott.
+1731;- Megváltoztatta a definíció fájlt és a "Százalékos növekedések" modulját a 3DOnSite helyen nem töltötte be újra%CrLf%- Az Override.ini fájl a 3DOnsite helyen nem mentette
+1732;- Festékszelep nem nyit%CrLf%- Nem csatlakozik festék a festékszelepre%CrLf%- Leesett a nyomás az FD1 vagy az FD2 egységben%CrLf%- A festékellátás nyomása 0,1 bar alá esett
+1733;Az FU-hoz tartozó cfg-fájlban az inkrementális jeladó szûrõje számára be kell írni egy sebességet. Ezt az értéket azonban túl kicsire választotta.
+1734;A fõtû kapcsolási idejének kiszámításánál többféle idõt (tanult idõt, busz futási idejét, lakk repülési idejét) vehet figyelembe. A kiszámított kapcsolási idõ nem lehet nagyobb, mint a "Prewanzeit" és nem lehet kisebb, mint 0.
+1735;A szekció megnevezése nem olvasható.
+1736;A fõtû vezérelt és a paraméterezett késleltetési idõn belül nem ismerte fel a CO2 sugarat, vagy a CO2 sugár nyitott fõtû mellett túl hosszú idõre megszakadt (berezgés).
+1737;A zárt fõtû ellenére a rendszer egy CO2 sugarat ismert fel.
+1738;Egy érvénytelen jelcímmel hozzáfér egy eszköz-jelhez
+1739;Megpróbált egy érvénytelen jelnévvel egy jelcímet meghatározni.%CrLf%A vezérlés emiatt a súlyos hiba miatt leállt!
+1740;TeachControl futási idõ túllépés
+1741;Az EcoScreen-en bejelentkezett felhasználónak nincs jogosultsága a T2-üzemre, ez a jogosultság csak képzett szakszemélyzetnek jár.
+1742;- Elérte a beírásra jogosult felhasználók maximális számát (maxLocalWriteSessions).%CrLf%- Rendszeren belüli probléma.
+1743;A megnevezett felhasználó bejelentkezését az adott idõben nem lehetett sikeresen végrehajtani.%CrLf%Vezérlésen belüli probléma a TeachView egységgel végzett kommunikációnál.
+1744;A felhasználókezelésben a megjelenítésre beállított BenutzerLevel nem konfigurált OPC-mester felhasználót.
+1745;Megpróbálta az aktuális felhasználót kijelentkeztetni a TeachView egységbõl, közben hibák léptek fel.%CrLf%Vezérlésen belüli probléma.
+1746;Több mint egy felhasználó próbált egyidejûleg bejelentkezni az Ecoscreen-rõl.
+1748;Kalibrálás során nem érte el a megadott értéket.%CrLf%- A felügyelet számára megadott határérték nem megfelelõ%CrLf%- Nyomásszabályozó kopása vagy telítettsége%CrLf%- Anyag-/tétel módosítás (a viszkozitás nagy eltérése)
+1749;A TimeOut lefutása után a robot nincs a kívánt pozícióban.
+1751;Egy új objektumot könyvelt. A szórófej betöltéséhez ezt az információt egy FiFo-ba helyezze. Ez a tároló azonban teljesen foglalt. Túl sok feltöltési és módosítási feladat van és ezek nem végezhetõk el, mert adott esetben egy szórófej letöltése nem fejezõdött be.
+1752;Egy új tárgy lakkozására adott megbízást, de ehhez a tárgyhoz nem töltött be szórófejet. A lakkozni kívánt tárgyat nem jelentette be a karosszéria elõremenetben.
+1753;A karosszériatároló méret értéke a zóna elõtt, ill. a zónában érvénytelen. 1 és 50 közötti értékek megengedettek
+1754;- Tömlõátmenet hibás%CrLf%- Leválasztó 1. szakasza hibás%CrLf%- Tömlõ 1.szakasza hibás
+1755;- A körvezetékbõl levegõ hatolt be az adagolórendszerbe%CrLf%- Ellenõrizze a PL1 impulzuslevegõ-szelep tömítettségét a festékcserélõnél.
+1756;A BCU a TriggerBrush egységnek egy új objektumot küldött (aEvtRxNewBody) de a Body-ID 0. Az azonosító azonban nem lehet 0.
+1757;A BCU a TriggerBrush egységnek egy új objektumot küldött (aEvtRxNewBody) de a Body-ID már szerepel a tárolóban. A régi karosszériát nem vezette ki vagy a BCU egy objektumot kétszer küldött.
+1758;A BCU a TriggerBrush egységnek egy objektumot küldött utólagos kiválasztásra (aEvtRxBodyChanged) de a Body-ID 0. Az azonosító azonban nem lehet 0.
+1759;A BCU a TriggerBrush egységnek egy objektumot küldött utólagos kiválasztásra (aEvtRxBodyChanged) de a Body-ID többször szerepel a memóriában. Esetleg egy régi karosszériát nem vezetett ki.
+1760;A BCU a TriggerBrush egységnek egy objektumot küldött utólagos kiválasztásra (aEvtRxBodyChanged) de a Body-ID-t nem töltötte be a szórófej tárolóba.
+1761;- A megjelenítés a PHG-tól pl. a 'csatornaáttekintés' felhasználói oldalon keresztül, írás hozzáférést kapott. Az Eco képernyõ %CrLf% lezár.' kikapcsol. %CrLf%
+1762;Egy firmware-feladat nincs az elõre megadott UpdTimer1 elemen.
+1763;A firmware és IEC különbözõ ciklusidõkkel fut%CrLf%
+1764;- Feszültségvesztés%CrLf%- sérült csatlakozótûk a számlálókártyán%CrLf%- EMV%CrLf% 
+1765;A vezérlése egy súlyos hiba miatt leállt!
+1766;A ProcessBuilder konfigurációja hibás
+1767;Az üzemmódváltás feldolgozása vagy az elõzetes engedélyezés során elérte a teljes feldolgozáshoz megadott idõtúllépést. Ez egy alapvetõ szoftverhiba. Ellenõrizze a szoftvert.
+1768;Az idõprogram csak akkor folytatható, ha a robot befejezte a kontúrmenetét.
+1769;A general.cfg nem illeszkedik az FgAssignment.ini konfigurációhoz
+1770;Az ütközésfelismerés kapcsolt
+1771;A megnevezett jármûtípushoz nem lehetett profiladatokat betölteni.
+1772;A profilban nem lehetett egy elõre megadott elérhetõ pontot (továbbítási érték > az aktuális továbbítási érték) találni.%CrLf%Feltehetõen hiba történt a profil paraméterezésekor vagy a továbbító túllépte a maximális profilpozíciót.
+1773;A megnevezett profilban érvénytelen adatok vannak.%CrLf%Feltehetõen hiba történt a profil paraméterezésekor vagy érvénytelen a fájl.
+1774;Vezérlésen belüli probléma vagy kezelési hiba.%CrLf%A futó továbbító program közben törölte a karosszériaadatokat, feltehetõen a "ClearFifo" parancs végrehajtásával.
+1775;A megnevezett profilban a menetnél megadott pont túllépte a maximális tengelysebességet.
+1776;Az ütközési fénysorompó jelzi, hogy szennyezett.
+1777;Vezérlésen belüli probléma, programozási- vagy paraméterezési hiba.
+1778;A megjelenítésen beírt referenciapozíció a tengely véghelyzetén kívül esik, így nem érhetõ el.
+1779;Az ionizáció paraméterezése nem teljes.
+1780;Az ionizáció bekapcsolása után a védõkapcsoló nem jelzett vissza.
+1781;Egy ütközés miatt a henger egy biztos pozícióba ment, az ütközésfelismerés azonban még mindig üzemzavart jelez. Az ütközésfelismerés feltehetõen sérült vagy hibás.
+1782;A vonatkozó tengelyre egy, a mozgási tartományán kívül esõ célpozíciót adott meg.
+1783;Pályaszámítás közben egy vezérlésen belüli probléma lépett fel. A behívott "KCtrl" funkció hibát okozott.
+1784;A megnevezett típushoz nem lehetett profiladatokat letölteni.%CrLf%- Szellemüzemnél túl kicsi az ütemtávolság.%CrLf%- Hibás profilfájl.
+1785;A biztonság vezérlése a biztonság megsértését észlelte. 
+1786;A vezetéstechnika tûzriasztást küldött.
+1787;A berendezés üzeméhez szükséges fülkeszellõztetés hibás.
+1788;A továbbítástechnika a biztonság szempontjából lényeges hibát észlelt.
+1789;A meghajtások bekapcsolása után nem volt visszajelzés.
+1790;A levegõellátás bekapcsolása után nem volt nyomásnövekedés.
+1791;Az ionizáció bekapcsolása után nem volt visszajelzés.
+1792;A zóna bemeneténél lévõ fénysorompó megszakadt.
+1793;A zóna kimeneténél lévõ fénysorompó megszakadt.
+1794;Minden automatikus öblítõprogramhoz szükség van egy öblítõprogram-csoport vagy egy idõprogram-név átadására.
+1795;A paraméter nem létezik vagy a paraméter a típus mátrixból van.
+1796;Ennél a paraméternél a megadott alindex nem létezik. Az alindex használatával címzett elemet az SPC200 -ban nem konfigurálta (a program nincs jelen, a tengely nincs jelen, nem határozott meg indítóprogramot ehhez a feladathoz stb.)
+1797;Magpróbált egy kétszavas paramétert egy szóval leírni. Ez nem megengedett.
+1798;Nincsenek íráselemek.
+1799;A paramétertõl függõen hiányzik az ENABLE-jel (ENABLE=1), a stop jel (STOP=1) vagy a feladatok nincsenek leállítva (pl. egy programszám leírásához).
+1800;A kiolvasás elõtt inicializálni kell egy érvényes WinPISA érték betöltésével, PKW-feladatonként vagy NC-programonként beírva.
+1801;A rendszer a program aktiválásánál ellenõrzõ összeg hibát állapított meg. Megjegyzés: Most az SPC200 is hibát jelez.
+1802;Hiba a kikapcsolási fázisban, a rendszer kikapcsoláskor meghatározott rendszerfunkciókat (Power-Down-funkciókat) nem hajt végre. Esetleg az ellátó részegység hibás.
+1803;Üzem közben hiba a tápfeszültség felügyeletnél, instabil tápfeszültség vagy erõsen zavart környezet, esetleg a tápegység hibás.
+1804;Hiba a firmware tárolási területének felügyeleténél (tárolásvédelem megsértése), erõsen zavart környezet vagy az alapkészülék hibás
+1805;Hiba a felhasználói program tárolási területének felügyeleténél (tárolásvédelem megsértése), erõsen zavart környezet vagy az alapkészülék hibás
+1806;Hiba az adaptációs adatok hozzáférésénél. Az adatok nem inicializáltak
+1807;Mérõrendszer a szélsõ állásban, mérõrendszer kábele hibás vagy az AIF-vonal már nem dolgozik%CrLf%
+1808;Hiba a feldbusz részegység felügyeleténél (profibusz, interbusz, DeviceNet, CANopen...), A feldbusz részegység nem kapcsolható. Az alapkészülékben vagy a feldbusz részegységben lévõ csatlakozóhely hibás vagy a feldbusz részegység nincs teljesen csatlakoztatva.
+1809;Egy helyi EA-tartomány konfigurált hozzárendelése az adott feldbusz-EA-tartományhoz az SPC200-ban nem megengedett, mivel a helyi részegység maga nincs jelen.%CrLf%VAGY%CrLf%a feldbusz- EA-tartomány már foglalt.
+1810;Az AIF x alacsony feszültséget állapított meg a terhelõ feszültségen. A szelep önállóan középállásba áll, a tengely már nem szabályozott.
+1811;Az L-parancsnál használt programszám azonos a behívni kívánt program számával
+1812;az L-parancsnál túllépte a megengedett beágyazottság mértéket
+1813;A közvetlen elõírt érték megadás (M10) vagy a szelepfeszültség közvetlen vezérlése (M39) aktív az új elõírt értéknél (NC-parancs: G00, G01, G02, M10, M39)
+1814;NC parancs nem hajtható végre. A firmware nem támogatja vagy a tengely megadás érvénytelen.
+1815;A programozott be- vagy kimenet nem áll rendelkezésre. Be-/kimeneti cím vagy EA modul nincs jelen.
+1816;Az abszolút elõválasztási érték (G25) a kiválasztott @n regiszterben nincs az utolsó elõírt értékek vagy az utolsó átkapcsolási pozíció és az új elõírt érték között.
+1817;A feldbuszon keresztül végzett elõírt érték megadás (M10, 5. csatorna) nem aktiválható, mivel nincs jelen feldbusz kártya vagy az alkalmazott feldbusz kártya ezt a funkciót nem támogatja.
+1818;Pozícionáló idõtúllépése:%CrLf%A referenciapozíció, ill. az utolsó mozgatási feladat pozíciója nem érhetõ el eléggé gyorsan (MC-hiba)
+1819;Az elõírt pozíció a szoftver végállásokon kívül van, a pozícionálási folyamat nem indul el
+1820;Nem megengedett pozícionálási feladat pozíciófüggõ készlet továbbkapcsolásnál (G25)
+1821;a kért sebesség nem érhetõ el
+1822;Hiba a szabályozási paraméter elõzetes kiszámításánál (x10, x50, x90) vagy idõtúllépés (x20, X60, XA0)%CrLf%
+1823;A rendszerazonosítást megszakította egy leállítás. A leállást a felhasználó vagy egy rendszerhiba válthatta ki.
+1824;A rendszerazonosításnál nincs értelmezhetõ paraméter
+1825;Az eredeti paraméter újbóli létrehozásakor egy hiba lépett fel
+1826;Az azonosítási lépés inicializálásánál egy hiba lépett fel
+1827;G00 NC parancsra nincs lehetõség, mivel még nem végzett dinamikus azonosítási menetet
+1828;A szabályozó az SPC200-ban nem inicializálható
+1829;Erre a tengelyre már egy feladat aktív (pozícionálás, azonosítás ...). Új feladat csak akkor indítható, miután a régi befejezõdött.
+1830;Egy pozícióregiszter tartalma érvénytelen
+1831;Löket határérték megsértése (M40) az M39-nél
+1832;A rendszerazonosítás megszakadt, mivel hiányzik az engedélyezõ jel 
+1833;Az azonosító adatok érvénytelenek
+1834;Megengedhetetlen pozícionálási minõségosztály
+1835;A szabályozó inaktív, mivel az elsõ üzembe helyezési vagy a mozgásteszt utáni engedélyezõ jel hiányzik vagy a konfiguráció hibás.%CrLf%Csak a léptetõmotor tengelynél:%CrLf%- Nincs kész-jel a teljesítményvezérléstõl%CrLf%
+1836;Ennek a tengelytípusnak a parancsát a rendszer nem támogatja:%CrLf%Pneumatikus tengelyeknél: referenciamenet parancs (G74)%CrLf%Elektromos tengelyeknél: Analóg bemenet aktiválása 0 és 1 módban (M10), M39 parancs%CrLf%
+1837;Ismeretlen a referenciapozíció erre a tengelyre
+1838;Szoftver véghelyzet megsértése az M39 parancsnál
+1839;Sebesség határérték megsértése (M41) az M39-nél
+1840;A megadott referenciamenet-mód erre a tengelyre nem megengedett.
+1841;A pneumatikus tengelyre a referenciamenetet 7-es üzemmódban végezte. A kívánt parancshoz azonban a 0, 5 vagy 6-os üzemmódra van szükség.
+1842;A paraméter a megengedett tartományon kívül van
+1843;Hiba a feldbuszon keresztül végzett digitális elõírt érték megadásnál.
+1844;A szoftver véghelyzet a lehetséges mozgatási tartományon kívül van
+1845;A tömegterhelés a megengedett tartományon kívül van
+1846;Az erõsítési tényezõ nem megengedett
+1847;A csillapítási tényezõ nem megengedett
+1848;A szûrõtényezõ nem megengedett
+1849;A mérõrendszer hossz érvénytelen vagy mért érték a beállított hengerhosszon kívül esik
+1850;A paraméterhatár sérült
+1851;A mérõrendszer típus nem megengedett
+1852;a megengedett léptetési frekvenciát (mozgatási frekvenciát) nem érte el (< 80 Hz) vagy túllépte (> 40 000 Hz)
+1853;Az adaptációs adatok hibásak
+1854;Szintaxis hiba vagy nem megengedett programszámot írt be
+1855;A kezelõmezõ használatakor:%CrLf% nem megengedett programszámot választott, a program nem hozható létre, mivel már jelen van vagy nem nyitható meg, mivel már jelen van. Nincs szabad tárolómezõ.%CrLf%A WinPISA használatánál: A program nem tölthetõ be. A hiba törlése után az SPC200 memóriája újra rendezõdik
+1856;Nem megengedett tételszám
+1857;Nincs szabad tárolóterület az új program számára
+1858;Ellenõrzõösszeg hiba
+1859;Hiba a WinPISA programmal végzett fel-/letöltésnél
+1860;Engedélyezõ jel hiányzik
+1861;A rendszer leállt, a STOP bemeneten 0-jel van  
+1862;Az indítóprogram nincs jelen
+1863;A parancs ebben az üzemmódban nem megengedett
+1864;A parancs, ill. a kezelõfunkció aktív NC-program mellett nem megengedett
+1865;A szabályozó inaktív, mivel az engedélyezõ jel az elsõ üzembe helyezéshez hiányzik vagy a konfiguráció hibás%CrLf%Csak léptetõmotor-tengelynél: Nincs kész-jel a teljesítményvezérléstõl%CrLf%
+1866;Az NC-program új NC-parancsokat és bõvített NC-szintaxist használ, amelyet az SPC200-MMI-1... kezelõmezõ nem támogat (lásd még a NO TAG fejezetet).
+1867;A mozgásteszt nem indítható, mivel a bemenet ENABLE 1-jelet ad.
+1868;A szelepfeszültség nem módosítható, mivel a bemenet ENABLE 0-jelt ad
+1869;A mozgásteszt megszakadt, mivel ENABLE 0-jel van a bemeneten.
+1870;Kompatibilitás hiba a WinPISA, MMI és az SPC200 operációs rendszer verziója között. Egy az SPC200-ban meglévõ program nem mûködtethetõ az alkalmazott WinPISA egységgel.
+1871;Kompatibilitás hiba a WinPISA és az SPC200 operációs rendszer verziója között. A 4.82 operációs rendszer kalibrálási funkciója legalább WinPISA 4.41 verziót igényel. %CrLf%
+1872;Túl sok nyomkövetõ változót definiált. Tengelyenként legfeljebb 10 nyomkövetõ változó engedélyezett.
+1873;A nyomkövetõ tároló másik tengely számára van lefoglalva
+1874;Ismeretlen nyomkövetõ változót definiált (a definiálást eltérõ firmware verzió használatával végezte)
+1875;A nyomkövetést nem konfigurálta.
+1876;A konfigurációban nem rendelt készüléket a lakkozáshoz
+1877;Hiba a HashMap egységgel végzett mûveletnél.
+1878;Nem lehet lekérdezni a funkciós csoport hozzárendelést, mivel a hozzárendelés nem érvényes.
+1879;Egy hiba fellépése miatt a rutinok megszakadtak.
+1880;Egy dinamikus mátrixszal végzett munka során jelentkezett ez a hiba.
+1881;Egy fájllal végzett mûvelet során hiba lépett fel
+1882;Amikor a megtanult értékeket egy fájlba mentette, hiba lépett fel.
+1883;Amikor összevetette az általános adatokat a PushOut számára, különbség jelentkezett a fájlból mentett adatok és az aktuális típusadatok között.
+1884;Az átadott készülék nem azonosítható, mint PushOut-készülék.
+1885;A térfogat kiszámításához a modulnevet át kell adni a funkciónak. Ez hibásnak tûnik.
+1886;Diszkrepancia a BodyID-nél
+1887;A dinamikus szerkezet, amelyet az értékekben menteni kell, nem létezik.
+1888;A 7F3 vagy 7F4 biztosíték kiesett
+1889;A megadott írás- vagy olvasás hozzáférésnél hiba lépett fel.%CrLf%Hibás paraméterezés vagy átviteli hiba.
+1890;Ha nem éri el az 1. paraméterként beállított értéket, a megadott zóna alacsony riasztást jelez.%CrLf%Az alacsony riasztást a rendszer nem felügyeli, ha az elõírt érték = 0!
+1891;Ha túllépi a 2. paraméterként beállított értéket, a megadott zóna magas riasztást jelez.%CrLf%A magas riasztást a rendszer akkor is felügyeli, ha az elõírt érték = 0, hogy a kimeneten rövidre zárt szilárdtest relét lekapcsolt zóna esetén is biztosan felügyelni lehessen!
+1892;A megadott zóna fûtõáram felügyelete kioldott.%CrLf%Vagy a vezérlés nem tapasztalt áramfolyást, vagy tapasztalt áramfolyást, pedig a rendszer nem vezérelte a zónát.
+1893;Amint egy zóna tényleges értéke a 3. paraméterben beállított értéknél jobban eltér az elõírt értéktõl, a megadott zóna eltérés riasztást jelez (negatív = nem érte el, pozitív = túllépte).
+1894;Egy zóna új elõírt értéke a 3. paraméterben beállított értéknél nagyobb mértékben tér ez az elõzõ elõírt értéktõl.
+1895;A fûtésszabályozó készülék érzékelõszakadást észlelt az adott zónában.%CrLf%A fûtés vagy a fûtõtömlõ hibás. Hiba az elektronikában.
+1896;A fûtésszabályozó-készülék érzékelõ-rövidzárat észlelt az adott zónában. Fûtésteljesítményt igényel, de a hõmérséklet nem emelkedik.%CrLf%Pólushibás, vagy rövidrezárt érzékelõ. A fûtés vagy a fûtéstömlõ hibás. Hiba az elektronikában.%CrLf%Ennek a riasztásnak a következménye a fûtés lekapcsolása!
+1897;A temperálókészülék belsõ optimalizálása közben hiba lépett fel.
+1898;A megnevezett kapcsolóra az ellenõrzés nem aktív, mégsem nulla állást jelez vissza a vezérlésnek.%CrLf%Hibás kapcsolási állapot (a jel 1, a várt érték 0) vagy (a jel 0, a várt érték 1).%CrLf%
+1899;Erre a készülékre megadott elõírt érték a túlvezérléssel szorozva kiesik az érvényes tartományból.
+1900;A [SOM].simulateEndpointMapping paraméternek RTX alatt 0-ra kell állni (nem aktív)
+1901;Mindkét megnevezett bemenetet az SPS állította be, ez érvénytelen állapot.
+1902;A motortartó fék kívülrõl nyitott.%CrLf%Nyitott fékkel a meghajtást nem lehet bekapcsolni.
+1903;A SETTRACKINGMODE makrót csak Railtracking-berendezéseken szabad használni.
+1904;Megpróbált beírni egy új karosszéria adatkészletet egy már megtelt bemeneti tárolóba
+1905;A firmware egy 3. osztályú súlyos hibát jelzett. A vezérlésnek erre le kell állni.
+1906;Az Rpc az állomás vezérlésétõl egy jelzést kapott a program újbóli elindítására, miközben a program fut
+1907;A MultK-táblázatban szereplõ festék nem tartalmazhat két azonos összetevõt
+1908;Megpróbál egy szelepet kinyitni, pedig a megnevezett szelepek közül egy másikat kinyitott vagy a lineáris egység szánját nem kapcsolta össze. Ez a szelep csak akkor nyitható ki, ha a többi szelep zárva van és a lineáris egységet összekapcsolta.
+1909;Az össze- vagy szétkapcsolás folyamata közben idõtúllépés hiba lépett fel. A lineáris egység tehát túl hosszú ideig tartózkodott egy átmeneti állapotban.
+1910;A sebesség nem áll 100%-ra. Ez nagyobb festékfelhasználással jár, amely hibát okozhat a PushOut lépésnél.
+1911;Túllépte a beállított PushOutVolumen értéket
+1912;A mentõ rutin lefolyása közben túlfutást állapított meg a dinamikus tárolóelemben.
+1913;Az indítás belsõ tárolója a megengedett tartományon kívül van.
+1914;A vonatkozó gépnek indulni kellene, de még egy másik program aktív.%CrLf%Feltehetõen túl kicsi az ütemtávolság.
+1915;A továbbítás engedélyezését a felhasználó a kulcsos kapcsolóval áthidalta.
+1916;Egy fõtû visszajelzést (visszajelzés típus a process.cfg fájlban) választott ki, amelyhez a process.cfg fájlban nem adott meg hardver végpontot (FeedbackSensorOn, FeedbackSensorOff az EcoGun-nál, FeedbackSensor, FeedbackSensorFault az EcoBell-nél)
+1917;A megadott cfg-fájl feldolgozásánál egy hiba lépett fel. Egy részegység az olvasást negatívan nyugtázta.
+1918;Az ActionPointOffset változó konfigurált értéke a BCU.cfg fájlban a zónaindítás elõtt van, ez a valóságban nem lehetséges.%CrLf%Hiba van a konfigurációban.
+1919;A vezérlést újraindította és a zónában egy karosszéria található, ezért a továbbító nem kapcsolható be, ütközésveszély.
+1920;Az aktuális PaintPosition a "WAIT_PAINTPOSITION" parancsból kisebb, mint az elõzõ, ezért nem lehet a fõtût ezzel a paranccsal automatikusan kapcsolni. A switchGunAtWaitPaintPos opció aktív.
+1921;Az RcuResetMessage funkciót egy érvénytelen jelentésosztállyal hívta be. Csak információk és figyelmeztetések engedélyezettek.
+1922;Az mfb.cfg fájlban elhelyezett ServoName nem illeszkedik a sercosx.cfgr fájlban konfigurált meghajtáshoz
+1923;Egy szórófej elõírt érték hozzáférésnél a rendszer megállapította, hogy hibás adattípust használt. Megengedett adattípusok: INT, DINT, REAL.
+1924;Egy szórófej IdleBrushsollwert érték hozzáférésnél a rendszer megállapította, hogy hibás adattípust használt. Megengedett adattípusok: INT, DINT, REAL.
+1925;A megnevezett szórófejre egy elõírt értékben egy REAL-számot használt. Csak INT/DINT-számok engedélyezettek.
+1926;Az aktuális tengelypozíció a konfigurált értéknél nagyobb mértékben tér el az elõírt pozíciótól.
+1927;A típus hozzárendelésben a megfelelõ típushoz nem határozott meg projektnevet és/vagy programnevet
+1928;A szelep kapcsolási idejének kiszámításánál többféle idõt (konfigurált idõt, busz futási idejét, lakk repülési idejét) vehet figyelembe. A kiszámított kapcsolási idõ nem lehet nagyobb, mint a "Prewanzeit" és nem lehet kisebb, mint 0.
+1929;A jelentéseket csak az SCU mûködtetõ egységrõl szabad nyugtázni
+1930;A ProfibusMaster megnevezése a "profibusmaster.cfgr" fájlban legyen egyértelmû és a név="ProfibusMaster" legyen.
+1931;A ProfibusSlave megnevezése a "profibusslave.cfgr" fájlban legyen egyértelmû és a név="ProfibusSlave" legyen.
+1932;Megpróbálta a megadott csatornát lakkozásra lefoglalni. Ebben a csatornában azonban nincs státusz festék. A lakkozás nem lehetséges.
+1933;Megpróbálta a megnevezett kéztengelyt beállítani anélkül, hogy a kifogásolt tengely referenciapozícióban állna.%CrLf%Minden következõ kéztengelyt be kell állítani. 4  -->  5   -->  6. tengely. 
+1934;Az automatikus beállítás célpozíciója az "aktuális pozíció" + "beállítási eltérés" a robotkonfigurációból. Ez azonban a tengely véghelyzetén kívül esik.
+1935;A vonatkozó meghajtás mûködtette a mechanikus tengely-végálláskapcsolót.
+1936;A tartólevegõ számára van egy idõtúllépés paraméter, ennek letelte után a tartólevegõ automatikusan lekapcsol a levegõfogyasztás csökkentése érdekében.%CrLf%Ha a Process.cfg fájlban a [BlockingAir]ActiveTime paraméter van jelen, a rendszer az ott megadott értéket használja. Ha ez a paraméter nincs jelen, a tartólevegõ 60 perc után lekapcsol.
+1937;A tisztítókészülékben lévõ hígítószelepeknek csak akkor szabad nyitva lenni ha a harang / pisztoly a tisztítókészülékben található. Különben a hígító ellenõrizetlenül a fülkébe szóródhat.
+1938;1. csatorna, érzékelõ ellenõrzés sikertelen
+1939;2. csatorna, érzékelõ ellenõrzés sikertelen
+1940;Nem olvasott be abszolút adatokat a RECEIVE(Vision, Data) használatával, mielõtt megpróbálta volna a %CrLf%RECEIVE(VISION_REL, Data) használatával a relatív adatokat beolvasni.
+1941;- Az applikátor ütközése egy szilárd tárggyal%CrLf%- Ütközésérzékelõ kábelszakadása%CrLf%- A mechanikai terhelés meghaladja az ütközésvédelem tartóerejét
+1942;A numberOfPoint paraméter a BK_FINISH makróban nem egyezik a pályapontok számával, ill. a pálya mérési pontjaival.
+1943;A BK_CORR makróban lévõ pontszámot már felhasználta.
+1944;A profibusz szolga számára az FX775A:0/PNIO:0/PIOSLAVE:0 paraméterben egy nevet kell megadni.
+1945;A tanulóprogramban dugattyúcserét állított be, azonban a Process.cfg fájlban a manuális dugattyúcsere nem engedélyezett.
+1946;A megadott dugattyú leválasztása éppen a lakkozás státuszban történt.
+1947;Nem történt dugattyú engedélyezés.
+1948;A paraméterben megadott legkisebb kapcsolási idõ kisebb, mint az elõzetes figyelmeztetés ideje. Legkisebb kapcsolási idõnek az elõzetes figyelmeztetés idejét állítja be.
+1949;Nagyobb lakkmennyiséget használt fel, mint amit az elõnyomásra meghatározott.
+1950;A Process.cfg fájlban az automatikus elõnyomás tanulást aktiválta és nem adott meg hozzá nyomásérzékelõt. -> az automatikus elõnyomás tanulást kikapcsolta
+1951;Hiba a tanítóprogramban. -> Lehetséges hiba az elõnyomás tanulásnál
+1952;A vonatkozó fénysorompó jelzi, hogy szennyezett.
+1953;Felhasználói információ
+1954;A kijelzett szelepek nem lehetnek egyszerre nyitva
+1955;A lakkozási út nincs nyitva vagy az SPS nem engedélyezte az adagoló meghajtókat
+1956;A készülék csak akkor kapcsolható be, ha elérte a paraméterben szereplõ legkisebb fordulatszámot
+1957;A fõtût a megjelenítésben leválasztotta
+1958;CO2-hûtõ hibás
+1959;A szelepreteszelés aktív
+1960;Projektálási hiba az idõprogramban
+1961;Megpróbálta a lineáris egységet leválasztani, mielõtt a csatlakozási felületet kiöblítette volna
+1962;A szán nincs megfelelõ pozícióban
+1963;A szán legyen csatlakoztatva. Nem csatlakoztatható, mivel nem érvényes pozícióban áll.
+1964;A levegõellátás kiesett és a lineáris egység festékkel van töltve
+1965;Az applikátortorony számára nem adottak az üzemelési feltételek
+1966;- Nincs hálózati csatlakozás%CrLf%- A megjelenítés nem indult el%CrLf%- A robotvezérlés nem fut
+1967;A tömlõkompenzációs paraméter beállítása nem optimális
+1968;A paraméterben szereplõ figyelmeztetési idõ letelt
+1969;A paraméterben szereplõ riasztási idõ letelt
+1970;Érvénytelen paraméterezés.
+1971;Projektálási hiba a robotszoftverben.
+1972;- Nincs már festék a megadott különleges festékrendszerben%CrLf%- A különleges festékrendszert a festékkeverõ térben leválasztotta
+1973;Kézi beavatkozás
+1974;A tengelynek nincs referencia helyzete
+1975;Az elõírt sebességérték az érvényes tartományon kívül van
+1976;Túl magas a nyomás az adagolódugattyúban
+1977;Hiba az idõprogramban. 'OrderRun' és 'OrderMoveVolume' változókat egyszerre állította be
+1978;A paraméter nincs jelen a konfigurációs fájlban
+1979;Hiba a dinamikus tárolóhoz való hozzáférésnél.%CrLf%Vezérlésen belüli probléma.
+1980;Az SPS sztroboszkóp jele nem felel meg a konvencióknak
+1981;A karosszériát nem lehet bekönyvelni (Karosszéria adatok érvénytelenek vagy a FiFo megtelt)
+1982;Nem található egy karosszéria a FiFo-ban
+1983;A FiFo megtelt, nem vihetõ be több karosszéria
+1984;A típus- és a festékinformáció letöltés után érvénytelen
+1985;A jelreferencia nem határozható meg
+1986;Hiba egy idõprogram fájl (bináris fájl) megnyitásánál 
+1988;Az idõprogram fájl (bináris fájl) ellenõrzõösszeg hibája
+1989;Inicializálási hiba a rendszerfelfutásnál
+1990;Az idõprogram nem illeszkedik a projektkonfigurációhoz
+1991;Nincs idõprogram
+1992;Az idõprogram verzió nem tölthetõ be
+1993;Az idõprogram nem indítható el, mert egy szükséges csatorna foglalt 
+1994;Az idõprogram neve túl hosszú
+1995;Az összes betöltött idõprogram információs fájlja nem nyitható meg (lehet, hogy írásvédett)
+1996;Az idõprogramban vannak megjegyzésekké alakított lépések
+1997;Az idõprogram utolsó lépésében egy FixposGo-jelet aktivált és a programot ' Jelek a végén nincsenek visszaállítva' indítási tulajdonsággal kell elindítani
+1998;Idõprogram paraméterezési hiba
+1999;Hozzáférési hiba a fájlra
+2000;Információ, hogy egy idõprogramot az SFC-bõl indított
+2001;Egy készülék kapcsolási ideje nagyobb, mint az elõzetes figyelmeztetés ideje. Ezzel a készülék kapcsolási ideje nem kompenzálható
+2002;A festékpótlás nem definiált
+2003;A túlvezérlés érték érvénytelen
+2004;A festék hozzárendelés paraméterezése hibás
+2005;A festékváltás hozzárendelés paraméterezése hibás
+2006;A több komponens táblázat paraméterezése hibás
+2007;A típus hozzárendelés hibás paramétere
+2008;Az SPS állomás lefokozási kérése nem volt egyértelmû. A vezérlést nem lehetett lefokozás üzemmódba kapcsolni.
+2009;Az SPS állomás lefokozási kérése a BCU.cfg fájlban megadott tartományon kívül van.
+2010;Egy lefokozási kérést küldött az SPS állomás az Rpc-nek. Az Rpc-ben a rendszer nem engedélyezte a lefokozott üzemmódot. Az EnableDegradeMode paraméter a [DegradeMode] szekcióban lévõ BCU.cfg fájlban hibás értékû.
+2011;A lefokozó üzemmódba való kapcsolás közben a vezérlés egy érvénytelen parancsot észlelt. Nem történt meg a váltás a lefokozó üzemmódba.
+2012;Megpróbált egy rögzített pozíciójú menetet indítani egy idõprogramból, miközben a robot meghajtásoknak nem volt mozgatási engedélye.
+2013;A kívánt rögzített pozíciójú menet nem indítható el, mivel a szám az érvényes tartományon kívül esik.
+2014;Megpróbált egy rögzített pozíciójú menetet indítani egy a kézi üzemindításban a megjelenítésen keresztül, miközben a robot meghajtásoknak nem volt mozgatási engedélye.
+2015;Megpróbált egy mozgásvédett szekvencia közben egy rögzített pozíciót indítani, miközben a robot meghajtásoknak nem volt mozgatási engedélye.
+2016;Megpróbált egy fékteszt szekvencia közben egy rögzített pozíciójú menetet indítani, miközben a robot meghajtásoknak nem volt mozgatási engedélye.
+2017;Megpróbált egy diagnózismenet közben egy rögzített pozíciójú menetet indítani, miközben a robot meghajtásoknak nem volt mozgatási engedélye.
+2018;Az SCU által igényelt szellem üzemmód nem jelentkezett vissza.
+2019;Az SPS állomástól egy új zónaindítás jelet kapott, pedig az aktuális hordozó/árutartó még nem hagyta el a zónaindítás tartományát.
+2020;Az SPS állomásról egy zónaindítás jelet kapott anélkül, hogy elõzõleg karosszériaadatot küldött volna.
+2021;Megpróbált elindítani egy programot. A mozgásvezérlés a konfigurált idõn belül nem kapott visszajelzést: Aktív mozgás vagy mozgáshiba adódott.
+2022;Megpróbált elindítani egy kontúrprogramot és a robot nem volt alaphelyzetben, ill. nem jelezte az alaphelyzetet a BCU-nak.
+2023;Megpróbált megbízni egy kontúrprogramot, pedig a robotvezérlés nem volt automatikus üzemmódban.
+2024;Túllépte az aktuális típus leállítási pozícióját mielõtt a programot elindította volna. Erre a karosszériára már nem indítható el a program.
+2026;Megpróbált elindítani egy programot, pedig a szórófej fájlok nem voltak megfelelõen betöltve.
+2027;A lefokozás üzemmódba való váltást a mozgásvezérlés nem nyugtázta. A vezérlést nem lehetett lefokozás üzemmódba váltani.
+2028;Megpróbált elindítani egy kontúrprogramot, mielõtt elérte volna az indítási pozíciót.
+2029;Megpróbált megszakítani egy programot a programmegszakítás paranccsal. Túllépte a megengedett idõt.
+2030;Az SPS állomástól egy karosszéria bevezetés jelet fogadott, pedig követés állomásüzem szerepelt a paraméterben.
+2031;Az SPS állomástól egy karosszéria pozícióban jelet fogadott, pedig követés állomásüzem szerepelt a paraméterben.
+2032;Az SPS állomástól egy karosszéria kivezetés jelet fogadott, pedig követés állomásüzem szerepelt a paraméterben.
+2033;Hiba a hihetõségvizsgálatnál, az elõzõ karosszériára nem kapott "Elõkészítés indítása" kapujelet.
+2034;Megpróbált egy karosszéria adatkészletet egy már meglévõ BodyID-vel összefûzni. Belsõ hiba.
+2035;Túl késõn történt a zónában a szállítási pozíció szinkronizálása.
+2036;Fogadott egy szinkronizáló jelet az SPS állomásról és nem volt hordozó/árutartó az erre szolgáló területen.
+2037;Fogadott egy szinkronizáló jelet az SPS állomásról és nem volt hordozó/árutartó a zónában.
+2038;Fogadott egy szinkronizáló jelet az SPS állomásról, pedig a BCU.cfg programban erre nem szerepelt engedélyezés paraméter.
+2039;Fogadott egy szinkronizáló jelet az SPS állomásról, pedig a hozzá tartozó program már fut.
+2040;Átadott az SPS állomásról egy olyan programszámot, amelyet nem paraméterezett a típus-hozzárendelés táblázatban.
+2041;A 0 típusszámot fogadta az SPS állomásról.
+2042;Átadott az SPS állomásról egy olyan festékszámot, amelyhez nem paraméterezett szelepszámot a festék-hozzárendelés táblázatban.
+2043;Átadott az SPS állomásról egy olyan festékszámot, amelyhez nem paraméterezett festékcsoportot a festék-hozzárendelés táblázatban.
+2044;A 0 festékszámot fogadta az SPS állomásról.
+2045;A fogadott típusszámra nem lehetett projektnevet találni a típus-hozzárendelés táblázatban.
+2046;A fogadott festékszámra nem lehetett külsõ festékkódot találni a festék-hozzárendelés táblázatban.
+2047;A fogadott festékszámra nem lehetett alkotóelemet meghatározni a többkomponens-táblázatból.
+2048;Átadott az SPS állomásról egy olyan festékszámot, amelyhez nem paraméterezett festékcsoportot a festék-hozzárendelés táblázatban.
+2049;Átadott az SPS állomásról egy olyan festékszámot, amelyhez nem paraméterezett keverési arányt a festék-hozzárendelés táblázatban.
+2050;Átadott az SPS állomásról egy olyan festékszámot, amelyre a többkomponens-táblázatban nem megengedett számú alkotóelemet határozott meg.
+2051;A fogadott típusszámra nem lehetett leállási pozíciót meghatározni a típus-hozzárendelés táblázatból. 
+2052;A fogadott festékszámra nem lehetett ellátási csoportszámot meghatározni a festék-hozzárendelés táblázatból. 
+2053;A fogadott festékszámra a festék-hozzárendelés táblázatból nem megengedett értéket határozott meg ellátási csoportszámként.
+2054;Egy különleges festék számát fogadta az SPS állomásról. Az ilyen festékekhez a szelepszámot külön kell átvinni. A szelepszámnak nincs érvényes értéke. A különleges festékek számára hozzáférhetõ szelepek paraméterei a BCU.cfg fájlban találhatók.
+2055;Egy különleges festék számát fogadta az SPS állomásról. Az ilyen festékekhez a szelepszámot külön kell átvinni. A szelepszám értéke 0.
+2056;Megpróbált egy különleges festéket használni a szimulációban. Erre a szoftver jelenlegi állapotában nincs lehetõség.
+2057;Nem lehetett érvényes hordozóhosszt meghatározni a típus-hozzárendelés táblázatból.
+2058;A hordozó / árutartó elérte a leállítási pozíciót és a robot nincs elõpozícióban.%CrLf%A robot elõkészítése még nem fejezõdött be.%CrLf%A robot elõkészítése befejezõdött és a kontúrprogram még nem indult el.%CrLf%
+2059;A hordozó / árutartó elérte a leállítási pozíciót és a robot elõkészítése még nem fejezõdött be.
+2060;A hordozó / árutartó elérte a programindítási pozíciót és az SPS állomás nem ad engedélyt a kontúrprogram indítására.
+2061;A hordozó / árutartó túllépte a leállítási pozíciót. A robot nem kapott feladatot. 
+2062;A kontúrprogram még nem indulhatott, mivel az aktuális karosszériához szükséges szórófej fájlok nincsenek megfelelõen betöltve.
+2063;Elõkészítés indítás kapujelet kapott az SPS állomástól, pedig ezt az Rpc-rõl nem várta.
+2064;Fõcsatorna indítás kapujelet kapott az SPS állomástól, pedig ezt az Rpc-rõl nem várta.
+2065;Megpróbált a karosszéria tárolóban a BodyID segítségével egy adatkészletet megtalálni és ezután törölni.%CrLf%Az adatkészletet nem találta. Belsõ vezérlési hiba.
+2066;Megpróbált a karosszéria tárolóban a BodyID segítségével egy adatkészletet törölni. A részegységben a BodyID-t %CrLf%0 értékkel adta át. Belsõ vezérlési hiba.
+2067;Megpróbált a karosszéria tárolóban a BodyID segítségével egy adatkészletet megtalálni. A BodyID ebben a tárolóban többször fordult elõ. Belsõ vezérlési hiba.
+2068;Megpróbált a karosszéria tárolóban a BodyID segítségével egy adatkészletet megtalálni. Az adatkészlet nem található.
+2069;Megpróbált eljutni az InGunbox rögzített pozícióba, pedig a robot nem volt UeberGunbox pozícióban
+2070;Megpróbált az InGunbox pozícióból közvetlenül alaphelyzetbe jutni.
+2071;Megpróbált elindítani egy rögzített pozíció menetet, miközben a zónában egy karosszéria van. Ebben az esetben csak öblítési pozícióba vagy alaphelyzetbe lehet jutni.
+2072;Megpróbált az öblítési pozíción vagy alaphelyzeten kívüli rögzített pozícióba kerülni. Erre nincs lehetõség, ha a zónában egy karosszéria van.
+2073;Megpróbált egy rögzített pozícióból egy másikba jutni anélkül, hogy elõbb alaphelyzetbe került volna.
+2074;Megpróbált az Abovebox pozícióból egy másik rögzített pozícióba jutni. Csak az InBox és alaphelyzet rögzített pozíciók érhetõk el.
+2075;Megpróbált az Inbox pozícióból egy másik rögzített pozícióba jutni. Csak az AboveBox és alaphelyzet rögzített pozíciók érhetõk el.
+2076;Megpróbált az Inbox pozícióból egy másik rögzített pozícióba jutni. Csak az AboveBox rögzített pozíciók érhetõk el.
+2077;Megpróbált T2 üzemmódban anyaggal egy idõprogramból egy rögzített pozíciót indítani. Ez biztonsági okokból nem lehetséges.
+2078;Az Rpc a Clear Fifo parancs után az SPS állomáson a karosszéria adatok újrainicializálását kérte. Nem történt meg az újrainicializálás. 
+2079;Többkomponensû festékeknél a festék hozzárendelés táblázatban a kevert festék kódjánál nem szabad ellátócsoport számot megadni. Ezt csak az alkotóelemeknél szabad bevinni. Ha az ellátócsoport számot kevert festéknél is megadja, az ezzel a hibával jár.
+2080;A Pushout funkciók inicializálása nem sikerült.
+2081;Emiatt a hiba miatt nem sikerült a referenciamenet.
+2082;Nincs lehetõség mozgatásra, amíg a referenciamenet nem fejezõdött be.
+2083;1)A vezérlö nem lett referenciálva.%CrLf%2)A vezérlö már referenciálva lett,de a felfutásnál nem volt Buszkapcsolat SPC200 elökészítve és nem tudodt így a referenciavizsgálat bekövetkezni.
+2084;Hiba egy PushOut-tanítási fájl kiolvasásánál.
+2085;Idõtúllépés a paramétercsatornába való beírásnál.
+2086;A rendelési kód érvénytelen.
+2087;Nincs olvasási hozzáférés a SPC200 vezérlöre.%CrLf%- Buszrendszer nem üzemkész.%CrLf%- Hiba a vezérlön.
+2088;Érvénytelen célpozíció.
+2089;Idõtúllépés, mozgatási feladat nyugtázása.
+2090;A célpozíciót nem érte el a kívánt idõ alatt.
+2091;A visszajelzett pozíció nem felel meg a kívánt pozíciónak.
+2092;A tûrésablakra megadott paraméter túl nagy.
+2093;A vezérlõ a kívánt idõn belül nem jelentette az üzemkész állapotot.
+2094;A referenciatáblázatok nem azonosak.
+2095;A vezérlõ nem áll készen.
+2096;A külsõ mozgatás engedélyezés hiányzik.
+2097;A referenciamenet még nem fejezõdött be.
+2098;Tanulási tároló túlfutása.
+2099;Érvénytelen szelepszám.
+2100;Nincs engedély.
+2101;Érvénytelen tengelyszám.
+2102;Érvénytelen hibaosztály.
+2103;Érvénytelen hibaszám.
+2104;Érvénytelen kiegészítõ információ.
+2105;A paraméter írásvédett.
+2106;Átlépte az alsó vagy a felsõ értékhatárt.
+2107;Megengedhetetlen feladat azonosító.
+2108;A kiválasztott program már az A (B) feladatban elkészült ezért nem lehet a B (A) feladatban elkészíteni.
+2109;Ismeretlen hiba, amikor a PKW-hoz nyúl.
+2110;Belsõ rendszerhiba vagy rendszertároló hiba.
+2111;Egy meglévõ hiba nem nyugtázható.
+2112;Hiba az elsõ mérõrendszeren.
+2113;Hiba a második mérõrendszeren.
+2114;Hiba az elsõ AIF egységen.
+2115;Hiba a második AIF egységen.
+2116;Hiba az elsõ CP-modulon.
+2117;Hiba a második CP-modulon.
+2118;Hiba az AIF vonalon.
+2119;Hibás, ill. nem megengedett részegység a megadott dugaszhelyen.
+2120;Tényleges konfiguráció nem egyezik az elõírt konfigurációval.
+2121;Inicializálási hiba.
+2122;Az alapkészülék és az alárendelt vezérlõ firmware programja nem kompatibilis.
+2123;A(z) %3 s. felhasználói program sérült.
+2124;A pozíciólista sérült.
+2125;A konfigurációs adatok sérültek.
+2126;A rendszeradatok sérültek.
+2127;A dinamikus azonosítás adatai sérültek.
+2128;A statikus azonosítás adatai sérültek.
+2129;Hibás PROFIBUSZ-konfigurációs adatok.
+2130;Hibás INTERBUSZ-konfigurációs adatok.
+2131;Hibás CANBUSZ-konfigurációs adatok.
+2132;A referenciapozíció érvénytelen.
+2133;Rövidzár az E és A elemen vagy alacsony feszültség a részegységen.
+2134;Rövidzár az E és A részegységen.
+2135;Kihelyezett készülékek és proporcionális szelep terhelõ feszültsége alacsony.
+2136;Hiba a részegység analóg bemenetén
+2137;Hiba a V.24 interfészen
+2138;Hiba a részegység alárendelt vezérlõjén.
+2139;Hiba a részegység léptetõmotorján.
+2140;Egy AIF vonal CP modulján a terhelõfeszültség alacsony.
+2141;Az indítóprogram nincs jelen.
+2142;Az alprogram nincs jelen.
+2143;Az NC-készlet nincs jelen.
+2144;Aritmetikai túlfutás egy regiszternél.
+2145;NC-készlet: Túlfutás.
+2146;Ez az elõírt érték már megváltozott.
+2147;A programozott elõírt érték bemenet nincs meg.
+2148;A regiszterindex érvénytelen.
+2149;A kopásszámláló elérte a kopási határt.
+2150;A kopásszámláló elérte a figyelmeztetési határt.
+2151;Összesített üzemzavar
+2152;A dinamika felügyelete jelzett.
+2153;Az indító áram túl magas.
+2154;Az áram tényleges értéke túllépi a statikai küszöböt (I-stat).
+2155;A feszültség tényleges értéke alacsonyabb a statikai küszöbnél (U-min).
+2156;Az önteszt sikertelen.
+2157;Idõtúllépés történt az önteszt végrehajtásánál.
+2158;A tényleges érték a tûréshatáron kívül van.
+2159;A készülék elõírt értéke a megengedett tartományon kívül van.
+2160;A tényleges érték közelít a statikai küszöbhöz.
+2161;A nagyfeszültséget a megjelenítõn vagy a process.cfg fájlban megszüntette.
+2162;Hardverhiba a CO2-érzékelõn.
+2163;A fõtû már -nyitott- állapotot jelez.
+2164;A fõtû már -zárt- állapotot jelez.
+2165;A készülék túllépte a maximális riasztás ciklusidõt.
+2166;A készülék nem érte el a minimális riasztás ciklusidõt.
+2167;A státuszfelügyelet jelzett. A leválasztó nem érkezett meg az iniciátorra.
+2168;A státuszfelügyelet jelzett. A leválasztó nem hagyta el az iniciátort.
+2169;A leválasztó nekifutás-felügyelete jelzett. A leválasztó túl lassan indul.
+2170;A motor bekapcsolása után paraméterben szereplõ idõ alatt nem történt visszajelzés, hogy a motor fut.
+2171;A készüléket bekapcsolta, de nincs -be- visszajelzés.
+2172;Az iniciátor ütközést jelez.
+2173;A megadott fájl nem tolható el.
+2174;Idõtúllépés a megadott fájl eltolásánál.
+2175;A megadott fájl nem tolható el, mivel a célfájl már létezik.
+2176;A megadott fájl nem tolható el, mivel a cél elérési úton nincs elég tárolóhely.
+2177;A megadott fájl eltolásakor ismeretlen hiba lépett fel.
+2178;Az átadott konfigurációs fájl nem másolható.
+2179;A megadott sercos parancs nem hajtható végre.
+2180;A megadott sercos parancs nem törölhetõ.
+2181;A sercos parancs végrehajtása nem volt eredményes.
+2182;A kiszámított bekapcsolási késleltetés a megengedett tartományon kívül van.
+2183;A kiszámított kikapcsolási késleltetés a megengedett tartományon kívül van.
+2184;Az anyagnyomás-szabályozóban a sûrített levegõ nyomása túllépte a felsõ figyelmeztetési határt.
+2185;Az anyagnyomás-szabályozóban a sûrített levegõ nyomása alacsonyabb az alsó riasztási határnál.
+2186;Az anyagnyomás szabályozóban a sûrített levegõ elõírt és tényleges nyomásának különbsége túllépte a felsõ riasztási határt.
+2187;Az anyagnyomás-szabályozóban az anyagnyomás alacsonyabb az alsó figyelmeztetési határnál.
+2188;Az anyagnyomás-szabályozóban az anyagnyomás túllépte a felsõ figyelmeztetési határt.
+2189;Az anyagnyomás-szabályozóban az anyagnyomás alacsonyabb az alsó riasztási határnál.
+2190;Az anyagnyomás szabályozóban az elõírt és tényleges anyagnyomás különbsége túllépte a felsõ riasztási határt.
+2191;Az alkalmazási nyomás elõírt értéke a paraméterben szereplõ tartományon kívül van.
+2192;A Process.cfg-fájlban megadott hõmérsékletérzékelõ a projektben nem található.
+2194;Hibás az anyaghõmérséklet elõírt és tényleges értékének különbsége.
+2195;Az anyaghõmérséklet a paraméterben szereplõ tartományon kívül van.
+2196;A különbség eléri a beállított határértéket.%CrLf%A beállító változó lekapcsol.
+2197;A temperálókészülékrõl egy vagy több riasztás érkezett.
+2198;A temperálókészülék jelzi a megadott riasztást.
+2199;A motorvédõ kapcsoló kioldott.%CrLf%Hibás forgómezõ vagy egy fázis hiányzik.
+2200;Nem érte el a legalacsonyabb szintet.%CrLf%A feltöltés aktív.
+2201;Nincs átfolyás, ill. nincs áramlás a temperálókészülékben (csak áramlásfelügyelettel rendelkezõ készülékeknél).%CrLf%Az elõre- vagy visszafolyás zárószelepe, ill. golyóscsapja lezárt.
+2202;Az elõrefolyás hõmérséklete eléri a beállított határértéket.%CrLf%A beállító változó lekapcsol.%CrLf%-> Következmény: A fûtés lekapcsol.
+2203;A visszafolyás hõmérséklete eléri a beállított határértéket.%CrLf%A beállító változó lekapcsol.
+2204;A film hõmérséklete eléri a beállított határértéket.%CrLf%A beállító változó lekapcsol.%CrLf%-> Következmény: A fûtés lekapcsol.
+2205;Az aktuális szabályozó-érzékelõ hibás.%CrLf%A külsõ hõmérsékletérzékelõ aktív, azonban nincs csatlakoztatva.
+2207;A végberendezés vagy egy résztvevõ be-, ill. átkapcsolási parancs felügyelete szerint a kapcsolás és a visszajelzés között idõtúllépés lépett fel. Az elõírt és a tényleges állapot nem azonos.
+2208;A temperálókészülék kézi üzemben muködik. Így a vezérlés nem tudja a homérsékletet szabályozni.
+2209;A megadott biztosíték kiolvadt.
+2210;Nem lehetett minden idõprogramot betölteni.
+2211;A megadott leválasztó a hozzá tartozó dugattyú betöltése közben elhagyta a forráshelyét.
+2212;A Process.cfg-fájlban megadott nyomásérzékelõ a projektben nem található.
+2213;A Process.cfg-fájlban megadott átfolyásérzékelõ a projektben nem található.
+2214;A kívánt elõírt értéket a folyamat és a hozzá tartozó kalibráló táblázat nem fedi le.%CrLf%- Hibás kalibráló táblázatot választott ki vagy érvénytelen elõírt értéket rendelt hozzá%CrLf%- A kalibrálás nem történt meg vagy nem volt sikeres
+2215;Eltérés az elõírt és a tényleges pozíció között
+2216;Minden csatorna kikapcsolt
+2217;Vezérlésen belüli probléma.
+2218;Tömítetlenség a rendszerben
+2219;A láng a konfigurált idõn belül nem gyulladt meg
+2220;A dokkolóegység nem érhette el a célpozíciót a konfigurált idõ alatt
+2221;A jelentés szerint a porlasztó hibás
+2222;A process.cfg fájlban levegõmennyiség-szabályozó típusa hibás.
+2223;A process.cfg fájl "PressureSensorNameBehindPump" vagy "PressureSensorNameBeforePump" paraméterében a nyomásérzékelõnek hibás készüléknevet konfigurált
+2224;A process.cfg fájl "AssignedPumpName" paraméterében az adagolószivattyúnak hibás készüléknevet konfigurált
+2225;A process.cfg fájl "PressureRecordingDelay" paraméterében egy érvénytelen értéket adott meg.
+2226;A process.cfg fájl "InitialParamType" paraméterében egy érvénytelen értéket adott meg.
+2227;- Hardver hiba (huzalszakadás)%CrLf%- Hibás paraméterezés
+2228;A profinet szolga nincs adatcsere státuszban. Okok: SPS nem kommunikál, hibás a szolga cím, huzalszakadás az SPS és az EcoRPC között, a vezérlés az újraindítás után még nem áll készen a kommunikációra. 
+2229;Jelentés a belsõ tesztre.
+2230;Huzalszakadás?
+2231;A tisztítókészüléken mindkét kontaktuson rövidzár van.
+2232;A billentõ mechanizmust egy folyamat foglalja le, pl. öblítés. 
+2233;A sablont bekapcsolta, de nincs visszajelzés, hogy a sablon forog.%CrLf%- Megváltozott pneumatika beállítások%CrLf%- A felügyeleti határértékek nem megfelelõk%CrLf%- A forgásfelügyelet érzékelõje hibás%CrLf%- Hibás levegõhajtás és/vagy nehezen mozgó sablon
+2234;Túllépte a sablonra megadott felsõ fordulatszám határt.%CrLf%- Megváltozott pneumatika beállítások%CrLf%- A felügyeleti határértékek nem megfelelõk%CrLf%- A forgásfelügyelet érzékelõje hibás%CrLf%- Hibás levegõhajtás és/vagy könnyen mozgó sablon
+2235;Nem érte el a sablonra megadott alsó fordulatszám határt.%CrLf%- Megváltozott pneumatika beállítások%CrLf%- A felügyeleti határértékek nem megfelelõk%CrLf%- A forgásfelügyelet érzékelõje hibás%CrLf%- Hibás levegõhajtás és/vagy nehezen mozgó sablon
+2236;Nem megengedett belépés a biztonsági területre.
+2237;Túl hosszú ideig mûködtette a belépésvédelem áthidalására szolgáló kulcsos kapcsolót.
+2238;A PHG-n lévõ biztonsági kapcsolót túl hosszú ideig mûködtette. Ezért a rendszer visszavonta a biztonsági engedélyezést.
+2239;Túl hosszú ideig mûködtette a mozgatástechnika áthidalására szolgáló kulcsos kapcsolót.
+2240;Egy vészleállító gombot mûködtetett a biztonsági tartományban.
+2241;A szellõztetést és/vagy a kimosást lekapcsolta. Ezért a berendezést egy biztonságosabb üzemi állapotba vitte.
+2242;A tûzjelzõ központ tûzriadót jelzett. Ezért a berendezést egy biztonságosabb üzemi állapotba vitte.
+2243;A biztonsági-SPS egy, a biztonság szempontjából fontos hibát talált és ezért visszavonta a teljes engedélyezést.
+2244;Aktiválta a betanító üzemet (a kulcsos kapcsolót T1 vagy T2-re kapcsolta), de nem választott ki robotot a PHG-n.
+2245;Nem kapcsolt teljesítményt a mozgatás meghajtásához.
+2246;Nem kapcsolt teljesítményt a folyamat meghajtásához.
+2247;Az adatellenõrzõ iniciátoron lévõ tárgyra nincsenek adatok.
+2248;A karosszéria rögzítése a megmunkálás során kioldódott. A berendezés erre azonnal leállt.
+2249;Az adatokat a megmunkálás után nem lehetett visszajelezni a fejállomásnak (kommunikációs hiba).
+2250;A szállító szállítási engedély nélkül fut. Lehet, hogy programhiba van a továbbítástechnika vezérlésében vagy a továbbítástechnika kézi üzemmódban van.
+2251;A tanítóprogramban olyan makrókat használ, amelyeket a vezérlésben nem lehet feldolgozni.
+2252;Konfigurációs hiba
+2253;A P1, P2 és P3 tanítási pontok egy vonalba esnek. A három pontból nem lehet egy síkot kiszámítani.
+2254;A megnevezett pontokat nem a tárgy koordinátarendszerben tanította be (hanem a tengelyekben vagy a térben)
+2255;A P1, P2 és P3 tanítási pontok körülbelül egy vonalba esnek. A három pont alapján a sík kiszámítása rosszul kondicionált.
+2256;A makrót behívta, pedig nem választotta ki a megfelelõ lépést a CONFIG3D egységben.
+2257;A makrót behívta anélkül, hogy elõtte meghatározta volna a referencia értékeket az INIT3DOBJECT egységben.
+2258;Az elõször megnevezett makrót behívta, pedig a második megnevezett makró még nem futott le eredményesen.
+2259;A referencia karosszéria és az aktuális karosszéria mérése közötti különbség nagyobb mint a [RC.KINEMATIC:0.ObjMeasure] limit értékkel paraméterezett határérték.
+2260;A programozott pályára nem jön jel a távolságérzékelõtõl
+2261;Státuszjelentés a VMT-BK-rendszertõl
+2262;Kommunikációs probléma a vezérlés és a VMT-BK-számítógép között
+2263;BK_START ezzel a móddal nem lehetséges. Bõvítésekre lefoglalva.
+2264;A továbbító nem áll készen az indulásra.
+2265;A továbbító leállása külsõ ok miatt (a továbbítástechnika engedélyezett).
+2266;Az utólagos kiválasztás közben idõtúllépés történt. Lehetséges okok:%CrLf%- Programhiba az SPS-ben%CrLf%- Nincs nyugtázás legalább egy robotvezérléstõl.
+2267;Az adat-Fifo tárolókban legalább egy érvénytelen adatkészlet van. Lehetséges ok:%CrLf%- Az adatkészletet nem vitte be a típus- vagy a festék hozzárendelés táblázatba
+2268;Az állomás nem tud elindulni, mivel a nagyfeszültséget nem aktiválta a kezelõpulton (kulcsos kapcsoló)
+2269;A típus adatok nem találhatók meg a típus hozzárendelés táblázatban.
+2270;A festék adatok nem találhatók meg a festék hozzárendelés táblázatban.
+2271;Az állomás nem tud elindulni, mivel az égõt nem aktiválta a kezelõpulton (kulcsos kapcsoló)
+2272;A különleges festék ellátás jelenleg nem készíti el a kívánt festéket. Az adatkészletet ezért nem lehet teljesen generálni.
+2273;A szellemüzem nem indítható el, amíg a zónában valódi karosszéria van (ütközésveszély).
+2274;A szellemüzem indítására csak akkor van lehetõség, ha:%CrLf%- Az állomás automatikus üzemben van%CrLf%- Az állomás elindult
+2275;A szellemüzem indításához válasszon ki legalább egy szellem-adatkészletet.
+2276;A zónabemenetet nem szabad engedélyezni, amíg a szellemüzem aktív (ütközésveszély).
+2277;Szellemüzem közben egy valódi tárgy került a zónába. Ez nem megengedett. Lehetséges okok:%CrLf%- Programozási hiba az SPS-ben%CrLf%- Programozási hiba a továbbítástechnika vezérlésében%CrLf%- Kézi beavatkozás a továbbítástechnikába.
+2278;A rögzített pozíciók elérése csak "kézi" üzemmódban megengedett.
+2279;A kívánt rögzített pozíció menet jelenleg nem lehetséges (ütközésveszély).
+2280;A rögzített pozíció menet nem megengedett, mivel az ajtónyitó nincs alaphelyzetben (ütközésveszély).
+2281;A rögzített pozíció menet nem megengedett, mivel az állomáson egy karosszéria van (ütközésveszély).
+2282;- Zavart a kommunikáció a robottal (feldbusz)%CrLf%- A robotvezérlés leállt.
+2283;A robotvezérlés az átvitt adatokat "érvénytelennek" nyugtázta.
+2284;A robotvezérlés az átvitt kamera eltolás értékeket "érvénytelennek" nyugtázta.
+2285;A robothajtás bekapcsolásakor idõtúllépés történt.
+2286;A nagyfeszültség nem kapcsolható be, mivel hiányzik a biztonsági engedélyezés.
+2287;Elérte az anyag maximális élettartamát, a robotot sürgõsen ki kell öblíteni.
+2288;A kezelõ megpróbálta a robotot a leválasztási tartományon kívül leválasztani. Ez nem megengedett, mivel ütközhet a továbbítóval / más robotokkal.
+2289;A továbbító a robot hiányzó továbbítási engedélye miatt leállt.
+2290;A robotvezérlés olyan hibát állapított meg, amely lehetetlenné teszi az applikáció folytatását.
+2291;A robotállomás egy belsõ hiba miatt az állomás összes robotját leállította (StopStation hibaosztály).
+2292;A kezelõ megpróbálta a robotot kiválasztani. Ez jelenleg nem lehetséges, mert a robot nem aktív:%CrLf%- A vészüzem aktív%CrLf%- A robotvezérlés kikapcsolt%CrLf%- A robot a karbantartó boxban van%CrLf%- ...
+2293;A robot kiválasztása nem lehetséges, mivel más robotok már aktiválták a programot.
+2294;A robot nem tud rögzített pozíció menetet elvégezni, mivel a meghajtásoknak jelenleg nincs teljesítménye.
+2295;A robot nem tudja a kívánt rögzített pozíció menetet elvégezni, mivel megszûnt a kiválasztása.
+2296;A kezelõ megpróbált egy új rögzített pozíció menetet elindítani, miközben egy másik még aktív.
+2297;Az állomás indítása csak akkor lehetséges, ha minden robot alaphelyzetben van.
+2298;A robot öblítésvezérlése hibát jelez. Lehetséges okok:%CrLf%- Sûrített levegõ ellátás kiesése%CrLf%- Szivárgás a roboton / a ház nincs lezárva%CrLf%- Aktív az öblítési folyamat feszültségkiesés után
+2299;A továbbítástechnika jelzést a robot nem nyugtázta. Belsõ hiba.
+2300;A nyomáskapcsoló visszajelzése a porlasztótisztító-készülék oldószerszelepére nem hihetõ. Ezért vagy%CrLf%- nem kapcsolja be a nagyfeszültséget%CrLf%- vagy nem végzi el a porlasztó tisztítását.
+2301;A kezelõ megpróbálta a robot meghajtásait tanító üzemben bekapcsolni (biztonsági nyomógomb) miközben a robot nincs kiválasztva.
+2302;A robotvezérléstõl visszajelzett statisztikai adatok nem rendelhetõk hozzá - BodyID ismeretlen. A tárgyat már valószínûleg kitörõlte az SPS tárolójából.
+2303;Miközben az adatokat átadta a robotvezérlésnek, idõtúllépés történt.
+2304;A robotvezérlés elõírt üzemmódja nem egyezik a tényleges üzemmódjával - belsõ hiba.
+2305;Túllépte a megadott felsõ átfolyási határt.%CrLf%- A felügyeleti határértékek nem megfelelõk%CrLf%- Hibás az átfolyás érzékelõ / mérõcella%CrLf%- Anyag-/ tételváltás
+2307;A vezérlés felfutásánál minden ICC-csatorna beolvassa a saját festékadatait a festéktáblázatból. Az egy ICC csatornához tartozó festékadatokat az ellátási csoport jelöli. A festéktáblázatban nincs beírás az ICC-csatornához tartozó ellátási csoportokkal.
+2308;Programozási hiba vagy vezérlésen belüli probléma.
+2309;A meghajtások nincsenek bekapcsolva vagy valamelyik tengelynek nincs referenciapozíciója.
+2310;A tanítóprogramban kétszer egymás után hívta a TORQUEMONITOR makrót a StartLogging paraméterrel. Csak egy feljegyzés indítható.
+2311;Behívta a TORQUEMONITOR makrót a StopLogging paraméterrel és elõtte nem indította el a feljegyzést a TORQUEMONITOR makróval és a StartLogging paramétert.
+2312;A feljegyzést elindította a TORQUEMONITOR makróval ( StartLogging, 1. tengely ) pl. az 1 tengelyre és be kell fejezni a TORQUEMONITOR makrót ( StopLogging, Axis2  ) pl. a 2 tengelyre. Mivel a kiválasztott tengelyek különbözõk, az eredményeket egy hibás fájlba mentené.
+2313;Az eredményfájlt a vezérlésrõl nem lehetett betölteni. Az adatokat nem menti az adatbázisba.
+2314;Az eredményfájl a rétegvastagság mért értékeivel nem tölthetõ be a mérõkészülékrõl. Nem ment adatokat az adatbázisba.
+2315;Az eredményfájlt a vezérlésrõl nem lehetett betölteni. Nem ment adatokat az adatbázisba.
+2316;Az eredményfájl a rétegvastagság mért értékeivel nem olvasható ki a mérõkészülékrõl. Formátum probléma lépett fel.
+2317;A mérési adatok szinkronizálására szolgáló tokenek a vezérlés és a mérõkészülék mérési adataiban különbözõk. Nem ment adatokat az adatbázisba.
+2318;A vezérlés és a mérõkészülék mérési adataiban a mérési pontok száma eltérõ. A mérési pontok számának egyformának kell lenni. A fájlok nem illeszkednek egymáshoz vagy a lefutás közben hiba lépett fel. 
+2319;Az EcoScreen paraméter adatbázisban nem definiált a festék vagy a típus, vagy hibás festék-, ill. típuskódot vitt át a vezérlésbõl. 
+2320;Az aktuálisan futó programban lévõ mérési pontok száma nem felel meg a referenciaprogramban szereplõ mérési pont számnak. A mérési pontok számát és koordinátáit a tanítóprogram elsõ futásánál menti az adatbázisban.
+2321;A megadott számú mérési pontra a rétegvastagság a felsõ határérték felett van
+2322;A megadott számú mérési pontra a rétegvastagság az alsó határérték alatt van
+2323;Mérés közben mérési hiba lépett fel. Túl nagy a távolság a mérõkészülék és a karosszéria között, túl nagy a sebesség a tanítóprogramban, hiba van a lefutásban vagy a konfigurációban. 
+2324;Hiba a lefutásban. Elindított egy egyedi mérést, pedig nem indított el mérési sort.
+2325;Hiba a tanítóprogramban. Kétszer indított egy mérési sort ACTIVATE_PAC( OneShot) egységgel.
+2326;El kell indítani egy mérési sort és a mérõkészülék nincs megfelelõ üzemmódban.
+2327;El kell indítani egy mérési sort, de nincs lézer engedély az SPS-tõl.
+2328;A festékcsoport száma a tartományon kívül esik.
+2329;Konfigurációs hiba
+2330;Túl sok mérési pontot definiált a tanítóprogramban. Belsõ mezõhatárokat túllépett. Mérési adatok elvesznek.
+2331;A konfigurációban a szimulációs üzemmód aktív.
+2332;A típus és pálya kiválasztott kombinációjára nincs korrekciós érték. Nincs lehetõség applikációs menetre.
+2333;Nincs korrekciós érték a PunktNr változóra a BK_CORR makróban.
+2334;Egy mérési pont elérését a BK-rendszeren az jelzi, hogy az interfészen egy bitet helyez el. Ha ez a bit már foglalt, akkor már a következõ mérési pontot kell jelezni.
+2335;A BK-rendszer korrekciós értékei abszolút nagyobbak, mint a megengedett paraméterezett határértékek.
+2336;A funkció bõvítésekre lefoglalt.
+2337;A tanítóprogram a BK_START és BK_FINISH közötti pályapontokat használja a tengelykoordinátákban. Ezek nem vihetõk át mint pályapontok a BK rendszerre.
+2338;A BK-rendszer egy hibastátuszt jelzett.
+2339;A konfigurált fájlnév érvénytelen.
+2340;A konfigurált lépésszám érvénytelen.
+2341;A plauzibilitásellenõrzés megállapította, hogy a konfigurált 1. érték nagyobb vagy azonos, mint a 2. érték.%CrLf%Ez az értékarány nem megengedett.
+2342;A szabályozó aktiválása után a rendszer a konfigurálható felügyeleti ablakban nem állapított meg anyagáramlást.%CrLf%- Az átfolyásérzékelõ/mérõcella hibás
+2343;Amikor a megadott fájlból adatokat olvasott, hiba lépett fel.%CrLf%- A token elveszett%CrLf%- A fájl üres vagy érvénytelen a tartalma%CrLf%- Vezérlésen belüli probléma
+2344;Amikor adatokat írt be a megadott fájlba, egy hiba lépett fel.%CrLf%- A token elveszett%CrLf%- A célfájl írásvédett%CrLf%- Vezérlésen belüli probléma
+2345;A felfogótartály tele van és a szivattyú nem mûködik.
+2346;Gyújtási ciklus üzemzavar
+2347;Gyújtásautomatika üzemzavar
+2348;Szabályozó utáni levegõnyomás üzemzavar
+2349;Nincs érvényes illesztési tényezõ
+2350;Levegõmennyiség elõírt értéke a tartományon kívül esik
+2351;Sûrített levegõ ellátás nincs rendben.
+2352;MFC levegõ legnagyobb határértékét elérte.
+2353;MFC gáz legnagyobb határértékét elérte.
+2354;Klímakészülék üzemzavar.%CrLf%Hõmérséklet hiba.
+2355;Gáz figyelmeztetõ berendezés üzemzavar.
+2356;Érvénytelen elõírt érték
+2357;Nyomáskülönbség szabályozó túllépés
+2358;MFC gázszabályozó üzemzavar
+2359;Gáznyomás ellátás hiba
+2360;Hõmérséklet túllépés a keverõben
+2361;Égõ / tömlõ üzemzavar
+2362;MFC levegõszabályozó üzemzavar
+2363;Hiba a szabályozó paraméterezésénél.%CrLf%Vezérlésen belüli probléma.
+2364;Az elõzõ applikáció elemzése és adaptációja közben megkezdõdött egy új applikáció.%CrLf%a rendszer eldobta az adatokat és nem értékelte ki.
+2365;Nem található a megadott alcsatorna.
+2366;Túl sok alcsatornát hozott létre.%CrLf%Vezérlésen belüli probléma.
+2367;A hozzárendelt csatornacsoport nem található.%CrLf%Vezérlésen belüli probléma.
+2368;A megadott hardver nem található a hozzárendelt alcsatornában.
+2369;Egy applikáció kezdetén vagy "szálló dugattyúcserénél" nincs elérhetõ elõkészített alcsatorna. Így nincs lehetõség (megszakítás nélküli) applikációra.%CrLf%- Hiba vagy idõtúllépés az elõkészítésnél (feltöltés, nyomásbeállítás)%CrLf%- Túl magas applikációs térfogat
+2370;A megadott alcsatorna nem foglalható le, mert már foglalt.
+2371;Túllépte a megadott felsõ fordulatszám határt.%CrLf%- A felügyelet határértékei nem megfelelõk%CrLf%- Hibás a fordulatszám felügyelet érzékelése%CrLf%- Vezérlési hiba
+2372;Nem érte el a megadott alsó fordulatszám határt.%CrLf%- A felügyelet határértékei nem megfelelõk%CrLf%- Hibás a fordulatszám felügyelet érzékelése%CrLf%- Vezérlési hiba
+2373;A megadott elõírt érték nem éri el a legkisebb megengedett értéket.
+2374;Az örvényszabályozó teljesítményfokozatában egy hiba lépett fel.%CrLf%A hiba következménye a szabályozó lekapcsolása!
+2375;Az örvényszabályozóban egy belsõ hiba lépett fel.%CrLf%A hiba következménye a szabályozó lekapcsolása!
+2376;A belsõ feszültségellátásban egy hiba lépett fel.%CrLf%A hiba következménye a szabályozó lekapcsolása!
+2377;A logika modul (24 V) energiaellátásában egy hiba lépett fel.%CrLf%A hiba következménye a szabályozó lekapcsolása!
+2378;Az örvény minden HALL érzékelõje 0 státuszban van.%CrLf%- Huzalszakadás az érzékelõ-vezetékekben%CrLf%- Az érzékelõrendszer nincs megfelelõen beállítva%CrLf%- Belsõ hiba
+2379;Az örvény minden HALL érzékelõje 1 státuszban van.%CrLf%- Rövidzár az érzékelõvezetékek között%CrLf%- Az érzékelõrendszer nincs megfelelõen beállítva%CrLf%- Belsõ hiba
+2380;Az örvényszabályozó rövidzárat jelzett a megadott érzékelõn. Az érzékelõ- vagy a vezetékrendszer hibás.%CrLf%Esetleg hibás a forgásirány.
+2381;Az örvényszabályozó kábelszakadást jelzett a megadott érzékelõn. Az érzékelõ- vagy a vezetékrendszer hibás.%CrLf%Esetleg hibás a forgásirány.
+2382;Az örvényérzékelõk érvénytelen sorrendben mûködnek.
+2383;A rendszer az örvényvezérlésrõl egy általános üzemzavart jelzett.
+2384;Feszültségesés történt az örvényvezérlésben (BrownOut).
+2385;Kioldott az örvényvezérlés felügyelete (WatchDog).
+2386;Kioldott az örvényvezérlés túláram lekapcsolása.
+2387;Aktív a túláram csökkentés.%CrLf%- Nehéz mozgás
+2388;A viszkozitás a megadott határokon kívül esik.%CrLf%- A felügyeleti határértékek nem megfelelõek%CrLf%- Anyag-/tétel változás (nagyon eltérõ viszkozitás)
+2389;Nincs anyagáramlás az adaptáció során.
+2390;A Phototherm-mérokészülék egy ismeretlen hibakódot fogadott.
+2391;A lézert moduláló szaggató léptetõmotorja leállt. A mérõszoftver megpróbálja a léptetõmotort automatikusan újraindítani. A legtöbb esetben ez a mûvelet elegendõ és a mérõkészülék ismét helyesen mér.
+2393;A kalibráló fájl nincs a Phototherm-méro-PC-n a c:\ps3\caldir1 könyvtárban.
+2394;Hiányzik a lézer kimenõjele, amely a megfelelõ emissziót jelzi. A lézer nem üzemkész.
+2395;Egy másik program lezárta a fájlt.
+2397;A fogadó amplitúdó túl kicsi a megfelelõ mérési eredményhez. Az erõsítõ fokozat túl alacsony, a lézer kikapcsolt, a rétegvastagság túl csekély, kábel vagy detektor hiba.
+2398;A jelamplitúdó túl nagy az erõsítõnek (a +- 15 V tartományon kívül esik). Ez nem megfelelõ mérési eredményhez vezet. Lehetséges okok: Rossz az erõsítõfokozat beállítása, a detektor hibás, erõs fény- vagy hõforrás van a közelben
+2400;A mérõszoftver indításánál a teszt üzemmódot aktiválta. Ebben az üzemmódban nem lehet a lézert bekapcsolni vagy valódi méréseket elvégezni. Az üzemmód arra szolgál, hogy a szoftvert mérõkészülék nélkül tesztelje.
+2401;A detektor energiaellátás feszültsége hiányzik.
+2402;Hiányzik a B feszültségellátás
+2403;Hiányzik az A feszültségellátás
+2404;Hiányzik a lézer feszültségellátása.
+2405;Hiányzik a relé 24 V-os feszültségellátása.
+2406;Hibás konfiguráció
+2407;A mérõkészülék nem áll készen vagy egy hiba lépett fel.
+2408;Egy mérési sort leállított az ACTIVATE_PAC(DISABLE) makró, de elõtte nem indított el mérési sort
+2409;Hibás vagy hiányzó konfiguráció beírás az [RC.KeyPattern] egységben a ProgStart, ill. ProgStop értékre
+2410;Csak egy program indítható.
+2411;Meghajtó hiba a vezérlésen keresztül nem nyugtázható.
+2412;A megnevezett meghajtónál nagyobb a különbség az elõírt és a tényleges érték között, mint a paraméterezett maximális érték. 
+2413;Probléma van a vezérlés és a meghajtásszabályozó készülék közötti kommunikációnál.
+2414;A beállításra (referenciamenetre) evvel a meghajtóstátusszal nincs lehetõség.
+2415;A konfigurációban a munkatér felügyelet finombeállítása aktív ([RC.KINEMATIC:0]jogPointCheckArea = 1). Mégsem határozott meg megfogópontokat vagy erre a kinematikára nincs koordinátatranszformáció.
+2416;Amíg az összes tengely referencia beállítása nem történt meg, nem lehet derékszögû mozgást végezni. Finombeállítás csak a tengelykoordinátákban megengedett.
+2417;Egy hiba lépett fel, a meghajtások nincsenek bekapcsolt állapotban vagy valamelyik tengely referencia beállítását nem végezte el.
+2418;Erre a kinematikára nem érhetõ el a koordinátatranszformáció
+2419;A konfigurációban nem határozott meg megfogópontokat a munkaterület-felügyelet számára.
+2420;Csak egy tanítóprogramot lehet egy kinematikával végrehajtani. Megpróbált elindítani egy tanítóprogramot, pedig egy másik még fut.
+2421;Tanító üzemben mozgás közben elengedte a jóváhagyó gombot.
+2422;Tanító üzemben nem nyomta a jóváhagyó gombot
+2423;Lásd a hibaszöveget
+2424;Automatikus üzemben megnyomta a PHG-n a stop gombot.
+2425;Arany újrapozícionálásnál a pályára való visszamenet sikertelen.
+2426;Egy vagy több megfogópont egy lezárt területen található vagy legalább egy megfogópont már nem a munkaterületen van.
+2427;Probléma van az SPS kommunikációval. Nem állította be az üzemmód bitet vagy egyszerre többet állított be.
+2428;A Z-forgatás orientáló interpolációja csak 6 szabadsági fokkal rendelkezõ kinematikánál lehetséges.
+2429;Egy meghajtó pozíció értékei a határértékeken kívül esnek.
+2430;Túl nagy értéket adott meg az [MC.KINEMATIC:0]orderOfAxisFilter1 paraméter számára.
+2431;Visszamenet csak azon a pályán történhet, ahol az elõremenet volt.
+2432;A kapcsolási pont nem azon a pályaszegmensen fekszik (a kapcsolás elõtti és a kapcsolás utáni pontok közötti pályán), amelyre definiálta.
+2433;A kezelõ érzékelõrendszer felügyelõ funkciója megállapította, hogy az alkatrészt nem fogta meg.
+2434;A kezelõ érzékelõrendszer felügyelõ funkciója megállapította, hogy az alkatrész elveszett.
+2435;A kezelõ érzékelõrendszer felügyelõ funkciója megállapította, hogy a paraméterben megadott felsõ határt túllépte.
+2436;A kezelõ érzékelõrendszer felügyelõ funkciója megállapította, hogy a paraméterben megadott alsó határt nem érte el.
+2437;Vezérlési vagy hardver hiba.
+2438;Az érzékelõ nem kalibrált.
+2439;Hiba a tanítóprogramban.
+2440;A forgatónyomaték felügyelõ funkciója megállapította, hogy a paraméterben megadott felsõ határt túllépte.
+2441;A forgatónyomaték felügyelõ funkciója megállapította, hogy a paraméterben megadott alsó határt nem érte el.
+2442;A forgatónyomaték felügyelõ funkciója megállapította, hogy az alkatrészt nem fogta meg.
+2443;A rendszer elõzõleg megállapította, hogy túllépte a paraméterben szereplõ forgatónyomatékot.
+2444;Erre a készülékre megadott elõírt érték a túlvezérléssel szorozva kiesik az érvényes tartományból.
+2445;Az indításnak az Ecotalk-programban más sorrendje van, mint a pályaszegmensen lévõ geometria.
+2446;A mozgási pályán lévõ indítási pont segítségével nem lehet egy síkot kiszámítani.
+2447;Egy indítást az MCU nem jelzett, ezért nem hajtott végre.
+2448;Követésnél nem szabad globális koordinátákkal megadott pontokat használni, mivel akkor a követés befejezõdik.
+2449;Az indítás kevéssel a pályaszegmens elõtt vagy után történik. Az indítás kapcsolása automatikusan a szegmens kezdetén vagy végén történik.
+2450;A megnevezett konfiguráció beírás nincs jelen. A rendszer az alapértelmezett értékeket használja.
+2451;Erre a programszámra a típuslistában nincs hozzá tartozó projekt/program
+2452;Probléma az SPS és RC közötti kommunikációban
+2453;A megjelenítõ rendszer jelenti ezt a hibát.
+2454;Nem lehetett a feldbusz mester összes be- és kimenetét feltérképezni.%CrLf%Különbözõ a hardver végpontok megnevezése a kemromanagerben és az RCU-ban.%CrLf%A kemromanagerben egy vagy több be-/kimenetet nem hozott létre.
+2455;A tanítóprogramban SETPROCESSCOMMAND(eVisionTrigger, ...) parancsot használja, bár a "TriggeredPicture" funkciót a konfigurációban nem aktiválta.
+2457;A készülék egy ismeretlen hibakódot adott ki. Lehet, hogy új firmware verziójú készüléket épített be.
+2458;A HS-generátor megengedhetetlenül magas hõmérsékletû.
+2459;Hibás a HS-generátor, a vezérlõ vagy az összekötõ vezeték.
+2460;Rövidzár, ill. átütés a HS-körben.
+2461;Hibás a generátor, ill. rövidzár van az összekötõ vezetékben.
+2462;A tápfeszültség értéke a megengedett tartományon kívül van.
+2463;Hibás beírás a Prozess.cfg fájlban
+2464;Egy érvénytelen elõírt értéket adott meg, amelyet valószínûleg egy túlvezérlés okozott.
+2465;Hibás érzékelõ, összekötõ vezeték vagy LWL
+2466;Táplevegõ nyomása túl alacsony
+2467;Tényleges - elõírt érték eltérése
+2468;Hardver hiba
+2469;A megjelenítõ számítógép jele még foglalt, amikor új indítójel jön
+2470;SETPROCESSCOMMAND(eVisionTrigger, ...) parancsot a tanító programban végre kell hajtani, bár a mérési feladatot még nem indította el.
+2471;Hiba a megjelenítõ számítógép és a vezérlés közötti kommunikációban
+2472;A megjelenítõ számítógép hibát jelez. A lefutás nem folytatható.
+2473;Megjelenítõ számítógép nem áll készen a mérésre
+2474;A mérési feladat száma nem adható át a megjelenítõ számítógépnek, mivel hiba lépett fel.
+2475;A megjelenítõ számítógépen nem indult el a mérõprogram.
+2476;A megjelenítõ számítógép hibát jelzett vagy probléma van a megjelenítõ számítógép és a vezérlés közötti kommunikációban
+2477;A résméret ellenõrzés azt jelzi, hogy nincs lehetõség applikációra.
+2478;Az eltolás értéke a megengedett tûrésen kívül van
+2479;Erre a tengelyre a beállításhoz nincs konfigurált paraméter.
+2480;Betöltött még egy projektet, ill. egy tanítóprogram még nem fejezõdött be.
+2481;Egy RS robot beállításánál a beállítás megkezdése elõtt a tengelyt nem pozícionálta az indító jelzésre
+2482;Egy RS robot beállításánál a mesterszerszám jelét nem megfelelõen ismerte fel.
+2483;Egy Dürr-robot beállításánál nem találta meg a mesterérzékelõ kapcsolójelét
+2484;Tanulóprogramban az OVERLAP mûveletnél olyan típust használt, amit a rendszer nem támogat. Az OVERLAP makrót nem veszi figyelembe.
+2485;A tanulóprogramban követõ makrókat használt, pedig nem konfigurált követõállomást.
+2486;Az [RC.KINEMATIC:0] delayRobotDrives paramétert egy nem megengedett negatív értékkel határozta meg.
+2487;A pályasebesség nyitott fõtû mellett a TCP_SPEED_CHECK makróban beállított küszöbérték alá esett
+2488;A tanítóprogramban a fõtût kétszer egymás után nyitja ki.
+2489;A tanítóprogramban a fõtût kétszer egymás után zárja le.
+2490;Az [MC.KINEMATIC:0]name változóba más robotnevet vitt be, mint ami az applikációs folyamat üzemi információjában van
+2491;A SETTRACKINGMODE makrót a TRACKING(On) és TRACKING(finished) között használja, tehát aktív követésnél.
+2492;A fénysorompó a célponthoz vezetõ programozott mozgásnál nem szakadt meg. Lehetséges okok:%CrLf%- A tanítóprogram végrehajtása LÉPTETÕ módban%CrLf%- Hibás mozgás vagy a makrók végrehajtása hibás sorrendben%CrLf%- Az érzékelõjel hibás
+2493;A szerszámra paraméterezett megengedett tûrést túllépte
+2494;Nem adottak a feltételek az adott szelep nyitására.
+2496;Megpróbálta a készülékhajtás szimulációs üzemmódját üzem közben befejezni.
+2497;- A csatlakoztatott HS-generátor ezen a vezérlõn nem üzemeltethetõ.%CrLf%- Hardver hiba
+2498;A vezérlés a kapcsolószekrény tápfeszültségének üzemzavarát jelzi.
+2499;A vezérlés az eternet kapcsolat üzemzavarát jelzi.
+2500;Az ActionPointOffsetváltozó a BCU.cfg fájlban + a túllógás mértéke a típus hozzárendelés táblázatból a zónaindítás elé esnek, ez a valóságban nem lehetséges. Konfigurációs hiba.
+2501;A 3F1 biztosíték kiesett.
+2502;Olyan adatkészletet fogadott, amely nem tartalmaz érvényes festékszelep számot. A BCU.cfg fájlban egy olyan üzemmódot konfigurált, amelyhez a karosszéria adatkészletben egy festékszelep szám kell (UsePlcColorValve paraméter). 
+2503;Az applikátortorony nincs a felsõ végállásban
+2504;Érvénytelen paraméterezés 
+2505;Egy nem megengedett paramétert adott át.
+2506;A pontnak egy rögzített pozíciónak kell lenni
+2507;A megnevezett karosszériatípusra a megadott méret érvénytelen.
+2508;- Zavar van az SPS állomáshoz vezetõ busz összeköttetéssel.%CrLf%- Az RPC-vezérlés nem üzemkész.%CrLf%- Az SPS-vezérlés nem üzemkész.
+2509;A megadott szelepet vezérelte és a megadott iniciátor a paraméterben szereplõ idõ után nem foglalt.
+2510;A megadott szelepet nem vezérelte és a megadott iniciátor a paraméterben szereplõ idõ után ennek ellenére még foglalt.
+2511;A második továbbítónak szinkronizáltnak kell lenni azonban nincs karosszéria a konfigurált területen.
+2512;Projektálási hiba a robotszoftverben
+2513;Már megkezdõdött az elõkészítés a következõ karosszériára
+2514;Túlmelegedés vagy túlfeszültség
+2515;Egy hibás programot töltött a 3DOnsite-ról a vezérlésre.
+2516;A sablon felhelyezésénél/leválasztásánál egy hiba lépett fel.
+2517;Az objektum megmunkálása közben kiesett a lakkozás engedélyezés (=FALSE).%CrLf%-A nagyfeszültség nincs a tûréstartományban%CrLf%- DRZ nincs a tûréstartományban (<MinDrehzahl)%CrLf%- A levegõmennyiség nincs a tûréstartományban%CrLf%- A külsõ engedélyezés nincs jelen
+2518;Több szivattyú tengelykapcsolót kell egyidejûleg kapcsolni.
+2519;A typelist.ini fájl nincs jelen az adathordozón
+2520;A HMI interfész nem megengedett kapcsolási állapotú. Megengedett állapotok 0 (= nincs elõírt érték a HNI-re), 1 (= csatlakoztatás), 2 (= leválasztás), 3 (= alaphelyzetbe állítás, elõírt érték visszaállítása)
+2521;A készülék azonos idõben több, mint egy vezérlõ jelet kap, R (= csatlakoztatás), V (= leválasztás), Reset (= nincs vezérlés). Ez nem megengedett.
+2523;Egy kezelõmodult többször definiált (SET_MODULE)
+2524;A tengelykapcsoló nem megfelelõen mûködik
+2526;A pórusfelismerõ PC általános hibát jelez a robotvezérlésnek
+2527;A pályaszabályozás olyan eltérést okoz a programozott pályától, amely nagyobb, mint a [RC.KINEMATIC:0.SmartRay] MaxCorrVal egységben paraméterezett megengedett érték.
+2528;Keresési menetnél jelezte az érzékelõ, hogy a varrat már nincs az érzékelõ látókörében.
+2529;A varratvizsgálat indításánál a varrat már az érzékelõ látókörébe került. Esetleg a varratot nem lehet teljesen megvizsgálni.
+2530;A varratvizsgálat befejezésénél az xxx varrat még az érzékelõ látókörében van. Esetleg a varratot nem lehet teljesen megvizsgálni.
+2531;Két egymást követõ vezérlési ütem érzékelõ értékei közötti különbség nagyobb, mint a paraméterekben szereplõ határérték.
+2532;T1-üzemben a csökkentett pályasebesség belsõ felügyelete túllépést állapított meg.
+2533;Az SPS állomás jelzi, hogy a továbbító mozog és az Rpc nem fogad továbbító impulzusokat.
+2534;A TeachView felhasználókezelés az AAd.dat fájlt nem teljesen konfigurálta.
+2535;Az asztalstátusz ellenõrzésénél az SPS egynél több helyet jelez nem foglaltnak.
+2536;Az SPS-rõl fogadott lyukszám nem egyezik a kívánt lyukszámmal.
+2537;Hibás fúvóka
+2538;A szerszám leválasztását nem lehetett elvégezni
+2539;A szerszám csatlakoztatását nem lehetett elvégezni
+2540;A megjelenítés konfigurációja nem egyezik az RPC konfigurációjával.
+2542;Egy Pushout-tanulófájl törlése automatikus üzemmódban nem lehetséges.
+2543;Az alsó határok felügyeleténél a figyelmeztetési határ kisebb, mint a riasztási határ, hibás a paraméterezés a Process.cfg fájlban.
+2544;A felsõ határok felügyeleténél a figyelmeztetési határ nagyobb, mint a riasztási határ, hibás a paraméterezés a Process.cfg fájlban.
+2545;A fékpróbát/-becsiszolást robbanásbiztos motorokon nem lehet elvégezni.
+2546;- Érvénytelen beírás a fájlban: EcotalkVariables.ttp%CrLf%- Hiba az EcoTalk-programban
+2547;Hiba az EcoTalk-programban: Egy új folyamatparancsot helyezett el, mielõtt az elõzõ parancsot feldolgozta volna.
+2548;Huzalozási- vagy hardver hiba.%CrLf%Kommunikációs hiba vagy a busz kiesett.
+2549;A szivárgásfelügyeletnél egy hiba lépett fel.
+2550;Nem foglalt a megadott iniciátor.
+2551;A nagyfeszültség lekapcsolásához szükséges EcoTalk-parancsot a rendszer nem megfelelõen hajtotta végre.
+2552;A megadott értékek nagyobbak, mint a paraméterben szereplõk.
+2553;Érvénytelen karosszériaadatok az SPS-tõl
+2554;A megadott szivárgásfelügyelet-érzékelõ problémát állapított meg.
+2555;Aktív mozgás közben megpróbálta a zónában lévõ karosszéria adatait megváltoztatni
+2556;Logikai hiba az SPS-interfészben 
+2557;A tanulási adatok érvénytelenek vagy a fájl nincs jelen.
+2558;A dugattyúkompenzációnál minden dugattyúhoz egy kimeneti szelepet kell rendelni. Konfigurációs hiba.
+2559;A festékleállító szelep állapotai: 0 (zárt), 1 (automatikus), 2 (nyitott).
+2560;A készülék egyszerre kap jelet automatikus és nyitott kapcsolási állapotra. Ez nem megengedett.
+2562;A két mérési mód (meghajtás és buszrendszer) közötti különbség nagyobb, mint a paraméterben szereplõ érték [RC.KINEMATIC:0.ObjMeasure] .
+2563;- A mérés gomb nem oldott ki (az érzékelõ nem kapcsol).%CrLf%- Túl nagy az eltérés a referenciaponthoz képest.%CrLf%- Túl nagy a különbség a mérési módok között.
+2564;Egy LÉPTETÕ üzemben mozgó pályát nem lehet visszafele mozgatni.
+2565;Egy fordulatszám törést állapított meg a turbina paraméterben szereplõ határértéke felett. Feltehetõen a turbina elakadt.
+2566;A megadott szórófej számra nincs elõírt érték a hozzá tartozó szórófej táblázatban.
+2567;- A görgõ motorja nem forog%CrLf%- Az applikáció sebessége túl magas
+2568;Ütközés
+2569;Ragasztószalag a görgõ felsõ részén
+2570;Az SFA szerszám Z-kiegyenlítése nincs munkaállásban
+2571;Ragasztószalag vége
+2572;- Szalagszakadás%CrLf%- A szalagot nem teljesen vitte fel a karosszériára
+2573;Paraméter ellenõrzése
+2574;- A tisztítókefe vezérlése nincs elhelyezve%CrLf%- A kefe blokkolt%CrLf%- A fordulatszám felismerés iniciátora hibás%CrLf%%CrLf%
+2575;- A fordítókengyel vezérlése az idõprogramban hibás%CrLf%- Hibás a pozíció felismerés iniciátora
+2576;Az SCU-t a konfiguráció vagy az automatika aktiválta, mégis még mindig fennáll a busz-szolga kommunikáció az SPS-hez. Ez nem megengedett üzemi állapot.
+2577;TrackingEndPosition egység paraméterezése nem megfelelõ
+2578;Az MCU tengelypozíciója eltér az IO-rendszer tengelypozíciójától.%CrLf%Vezérlésen belüli hibás viselkedés.
+2579;A megnevezett referenciafájlra csak abszolút jeladó "nélküli" meghajtásoknál van szükség, ezért ezt a fájlt a rendszer törölte.
+2580;A Process.cfg fájlban a levegõmennyiség-szabályozó szimulálására szolgáló értékek nincsenek jelen vagy hibás a paraméterezésük.
+2581;A betöltés idõprogram elindult, pedig az LCC-t még nem helyezte a megfelelõ pozícióba.
+2582;- Egy EcoTalk-paranccsal megpróbált hozzáférni a megnevezett rendszerváltozóhoz, ez nem sikerült.
+2583;Egy projektben csak a megnevezett számú rendszerváltozót lehet elhelyezni. Ennek ellenére megpróbált ennél több változót elhelyezni.
+2584;A robotot kiválasztotta, a porlasztót viszont leválasztotta
+2585;Az idõprogramban a sebesség biteket egyidejûleg lassúra és gyorsra állította
+2586;A robot nem mozgatható, amíg a fordítókengyel nincs középsõ állásban,%CrLf%fennáll a porlasztó mechanikai sérülésének veszélye.
+2587;A paraméterezett nyúlásmérõ bélyegekre az EcoTalk-parancsban átadott érték nem érvényes.%CrLf%- Érvénytelen érték az EcoTalk-parancsban%CrLf%- Hibás a nyúlásmérõ bélyeg paraméterezése.
+2588;Az LCC-elrendezés konfigurációjában (PCUx.cfg) egy érvénytelen típust használt.
+2590;A szivárgásfelügyeletet kikapcsolta
+2591;Szivárgás lépett fel
+2592;A megadott iniciátorok azonos állapotúak.
+2593;- SV_Statistics.def: Ellenõrizze a készülék nevét, esetleg a beírás módja hibás
+2594;- Processbuilder: %CrLf%Ellenõrizze, hogy a paraméterezett készülék megfogása egy logikai csatornában van-e. A statisztikát csak a logikai csatornában lévõ készülékre lehet feldolgozni
+2595;- SV_StatisticDef: Ellenõrizze a jelnevek paraméterezését, létezik a jel, megfelelõen van beírva?
+2596;A statisztika indítása a tanulóprogramban lévõ WAIT_PROCESS_READY() makró segítségével történhet. Ha ez hiányzik, a statisztikai adatok nem határozhatók meg.
+2597;Érvénytelen konfiguráció  [RC.KINEMATIC:x.Gripper] %CrLf%                                        nrOfVectors = 0%CrLf%Ez az érték megengedhetetlen, ha nem definiált megfogót, a vezérlés nem tudja a munkateret felügyelni.
+2598;Az RCMP kapcsolószekrényben a kapcsolót "Belsõ biztonság" állásba helyezte. Üzem közben ezt nem lehet átkapcsolni.
+2599;Az RCMP kapcsolószekrényben a kapcsolót "Külsõ biztonság" állásba helyezte. Üzem közben ezt nem lehet átkapcsolni.
+2600;Az SPS egy külsõ állomásleállítást kapcsolt
+2601;A két iniciátorpár egyike nem ad egyértelmû jelet.%CrLf%z.B. A bal oldali iniciátor foglalt, a jobb oldali iniciátor nem foglalt.
+2603;A 4S1 /4S4 legnagyobb megengedett hõmérsékletét túllépte.%CrLf%A hûtés hibás vagy a hõmérsékletet túl alacsonyra állította
+2604;A fõ csatornát nem öblítette
+2605;Megpróbálta a BrushClean400 rögzített pozíciót a FlushDry400 rögzített pozíciótól eltérõ helyre vagy alapállásra mozgatni
+2606;Megpróbálta a FlushDry400 rögzített pozíciót a FlushDry0 rögzített pozíciótól eltérõ helyre vagy alapállásra mozgatni
+2607;Megpróbálta a FlushDry0 rögzített pozíciót a rögzített pozíciótól eltérõ helyre vagy alapállásra mozgatni
+2608;Megpróbálta a BrushClean0 rögzített pozíciót a BrushClean400 rögzített pozíciótól eltérõ helyre vagy alapállásra mozgatni
+2609;Megpróbálta a BrushClean0 rögzített pozíciót az AboveBox rögzített pozíciótól eltérõ helyre vagy alapállásra mozgatni
+2610;Az aktuálisan konfigurált mozgási úttal nem lehet az érzékelõõjelet egyértelmûen kiértékelni.
+2611;A szórófej fájlt a kiválasztott típusra T2+folyamat üzemben nem tölthetõ be
+2612;A három mozgási irány közül legalább egy mért érték érvénytelen
+2613;A vezérlés szállítási impulzust érzékelt a számlálókártya bemenetén. A Conveyorexisting paramétert a System.cfg fájlban nem állította "igaz" értékre.
+2614;- A porlasztót kiválasztotta%CrLf%- A pneumatikát kikapcsolta%CrLf%- Az üzemmód nem KÉZI%CrLf%- A csatorna már foglalt (pl. aktív idõprogram)%CrLf%- Hiba
+2615;- A szán az automatikus beállítás indításánál nincs a beállítási pozícióban%CrLf%- túl magas nyomaték lépett fel%CrLf%- túl hosszú a mozgás anélkül, hogy a várt akadály bekövetkezne (pl. mert nincs csatlakoztatva)
+2616;Újraindítás után a rendrakás nem hajtható végre, mivel í mozgatóprogram egy körszegmensnél nem folytatható.
+2617;A rendrakás elkezdõdött, pedig a robot nincs automata üzemmódban, ill. a meghajtások nem szabályozottak.
+2618;A rendrakás elkezdõdött, pedig nincs paraméterezve és nem engedélyezett.
+2619;A rendrakásra nincs lehetõség, mivel ugyanakkor az SPS-t Bit Start alapállásba vitte.
+2620;A rendrakásra nincs lehetõség, mivel az alapállás beállítása még folyamatban van.
+2621;A rendrakásra nincs lehetõség, mivel a tanítóprogramot nem szakította meg.
+2622;A rendrakásra nincs lehetõség, mivel az elõkészítés nem volt eredményes
+2623;A vezérlés befejezése elõtt aktív program nem tölthetõ be.
+2624;Az SPS alaphelyzetet állított be, pedig a rendrakás még folyamatban van.
+2625; A féklevegõ beállítása alacsony, így a fékezési folyamat túl hosszú ideig tart vagy hibás a fordulatszám visszajelzés.
+2626;A kiválasztott festék ellátócsoportja számára nincs csatorna a lakkozáshoz vagy megszûnt a kiválasztása.
+2627;A szivattyú futása közben nem szabad átcsatlakozni
+2628;A megadott típus referencia beállítása nem történt meg.
+2629;Hibás típust adott meg a tûrésfelügyelet fajtájára.
+2630;A megadott varrat alkalmazott mennyisége a legnagyobb tûrés felett van.
+2631;A megadott varrat alkalmazott mennyisége a legkisebb tûrés alatt van.
+2632;A megadott referencia fájl hibás.
+2633;Hiba történt a megadott referencia fájl másolása közben.
+2634;A megadott varrat referencia beállítása nem történt meg.
+2635;Amikor lefoglalta a dinamikus tárolót a megadott karosszéria adatokra, az adott hiba lépett fel.
+2636;Miközben a referencia adatokat a megadott dinamikus tárolóba írta, egy hiba lépett fel.
+2637;Az aktuális "túlvezérlés" érték nem egyezik a referencia adattal.
+2638;-Iniciátor hiba%CrLf%-Laza érintkezés%CrLf%
+2639;-Hibás a szivattyú tengelykapcsolója%CrLf%-Hibás az iniciátor%CrLf%-Megszakadt a kábelcsatlakozás
+2640;A folyamat konfigurációja során az adott készüléket a fordítókengyelhez rendelte, azonban a vezérlés indítása során ezt a rendszer nem találta.
+2641;Hiba történt a flash memória adatainak elérésekor.
+2642;- Túl kevés a terhelés%CrLf%- Hibás adatkészletet választott
+2643;- Túl magas a terhelés%CrLf%- Hibás adatkészletet választott
+2644;A klímaberendezés üzemzavart jelzett vagy a -4Q3 biztosíték kiesett
+2645;A 7F1, 7F2, 7F3, 7F4, 7F5, 7F6, 7F7 vagy 7F8 biztosíték lekapcsolt
+2646;A 24Q2, 24Q4 vagy 24Q6 teljesítménykapcsoló lekapcsolt
+2647;A biztosíték kiesett
+2648;A zárt kapcsolószekrény ajtó iniciátora nem ismeri fel az ajtót
+2649;A 8F1, 8F2, 8F3, 8F4, 8F5, 8F6, 8F7 vagy 8F8 biztosíték kiesett
+2651;Egyszerre érkeztek az RCMP kezelésmód jelei. A kettõ közül csak egy adható ki.
+2655;
+2656;
+2657;
+2658;A kamerarendszerrel felügyelt alkatrész már nincs a programozott pozíciójában.
+2661;Vezérlésen belüli hiba
+2662;Egy idõprogram indításánál a vezérlés megállapította, hogy az alkalmazott alcsatornák hibás festékinformációkkal rendelkeznek. (pl. festékkód, keverési arány stb.)
+2663;Egy idõprogram indításánál a vezérlés megállapította, hogy az alkalmazott alcsatornák nincsenek elõkészítve.
+2664;A 'BodyInPosition' jel inaktív lett miközben egy alkalmazás programja futott
+2665;A fúvókacserélõ kezelés adatai érvénytelenek.
+2666;A fúvókacserélõ hely iniciátora a kitolt csap ellenére nem foglalt.
+2667;A tanítóprogramban egy érvénytelen fõtû szám szerepel.
+2668;A SetPosition és SetVolume elõírt értékére mindig egy értéket adott meg. Ez nem megengedett!
+2669;Elkezdõdött a bõvített levegõmennyiség szabályozó funkciók nyomásértékeinek betanulása
+2670;A felhasználó beavatkozott a levegõmennyiség szabályozó tanulási folyamatába.
+2671;Erre a készülékre megadott elõírt érték a pontossággal szorozva kiesik az érvényes tartományból.
+2672;Az elõírt érték eléréséhez használt nyomás kisebb, mint a betanult érték
+2673;Az elõírt érték eléréséhez használt nyomás nagyobb, mint a betanult érték
+2674;Az EnableContaminationCheck paramétert a Prozess.cfg fájlban 1 értékre állította, de az EnableReferenceCheck paramétert nem aktiválta vagy az értéktáblázat érvénytelen beírásokat tartalmaz. 
+2675;A készülék nem szerepel a fájlban
+2676;Érvénytelen referenciaértékek
+2677;A ReferenceCheck aktív de a referenciaértékeket a vezérlés nem tanulta meg és/vagy érvénytelenek. 
+2678;A levegõmennyiség szabályozó vészüzemben dolgozik.
+2679;Hibásan beállított paraméter a Process.cfg fájlban
+2680;A tanult értékek írása lezárult
+2681;Miközben egy objektumot mért, eltûnt a lézer engedélyezése (=HAMIS)
+2682;- A készülék nem üzemkész. (pl a hardver nem észlelhetõ)%CrLf%- Az inicializálás során hiba történt%CrLf%- A szoftver (EcpRPC) és a firmware nem kompatibilisek
+2683;Nincs hely a fúvókák elhelyezésére.
+2684;Nem található a kívánt fúvókatípus.
+2685;A fúvókaváltó állomás helyének iniciátora nem foglalt.
+2686;A fúvókaváltó állomás helyének iniciátora még nem foglalt.
+2687;Hibás iniciátor vagy kapcsolás a fúvókaváltó helyen.
+2688;A fúvókaváltó állomás szelepe hibás.
+2689;A Phototherm-PC szoftvere nem áll készen. A 'SoftwareReady’ jel nincs beállítva.
+2690;A megjelenítésen keresztül a szállító mérését aktiválta, %CrLf%ezért a szállító visszafelé halad. Ezért a mérési folyamat megszakadt.
+2691;A DockingUnit nincs öblítve
+2692;A tartólevegõ számára van egy idõtúllépés paraméter, ennek letelte után a tartólevegõ automatikusan lekapcsol a levegõfogyasztás csökkentése érdekében.%CrLf%Ha a Process.cfg fájlban a [BlockingAir]ActiveTime paraméter van jelen, a rendszer az ott megadott
+2693;Új szín került kiválasztásra, majd a csatlakozó LCC-je nem került a szelepre pozícionálva.
+2694;A vézérlõ nem fogadott sem kirakodási, sem pedig kirakodáskapcsoló visszajelzést.%CrLf%- Hibás mechanizmusok%CrLf%- A jel nem helyes a vezérlõn%CrLf%- Hibás buszkonfiguráció
+2695;Kapcsolóállás ebben a vezérlésben nem engedélyezett.
+2696;Az EthernetIP Slave számára az FX775A:0/EIPS:0/EIPSLAVE:0 paraméterben egy nevet kell megadni.
+2697;A profinet szolga nincs adatcsere státuszban. Okok: SPS nem kommunikál, hibás a szolga cím, huzalszakadás az SPS és az EcoRPC között, a vezérlés az újraindítás után még nem áll készen a kommunikációra. 
+2698;Az EthernetIP Slave nincs adatcsere státuszban. Okok: SPS nem kommunikál, hibás a szolga cím, huzalszakadás az SPS és az EcoRPC között, a vezérlés az újraindítás után még nem áll készen a kommunikációra. 
+2699;- nem választott ki szelepet vagy hibás szelepet választott ki%CrLf%- Hibás festékrendelési táblázat%CrLf%- CFG paraméter a festékszelephez hibás
+2700;- A kieresztés indításakor nincs mérhetõ nyomás%CrLf% (azaz a kieresztõ hibás vagy nincs a HS-bemenethez nagyfeszültség)%CrLf%- Belsõ ellenõrzés során HW-hibát eredményezett
+2701;- A Cfg paraméter „Engedélyezés” a nagyfeszültségû készülék „Kieresztõ” csoportja került beállításra, így a kieresztõ nem vezérelhetõ
+2702;Az EcoTalk parancsainak egyik nem hajtható végre a készüléken, mivel nincs folyamatkonfiguráció.
+2703;A karosszériák túl közel vannak egymáshoz
+2704;Projektálási hiba folyamatépítõ
+2705;Az EcoTalk-Programban SPLINE hiba észlelhetõ, így nem engedélyezhetõ a vezérlés.
+2706;A fõeszközök jele hibás
+2712;TimeoutReadPW
+2713;Idõtúllépés nyugtázásához „írja be a jelszót”
+2714;Hiba az automatikus szállítási pálya beállításánál
+2715;A kezelõ mozgása elõtt egy alkatrész az aktuális alkatrészpozíción SET_POSCODE(Delete) beállítással törlendõ. Ezzel biztosítható, hogy más robot nem kezdi el a folyamatot, ha hibás alkatrészpozíciót fogad.
+2716;A VMT-rendszer korrekciós értékei abszolút nagyobbak, mint a megengedett paraméterezett határértékek.
+2717;Az eszközmérés két pozíciója nem forgatható el +90 fokkal, és a karima nem ellenõrizhetõ. Ez a VMT-n keresztüli mérés elõfeltétele.
+2718;A VMT eszköz „Nem megfelelõ mérés” bitet jelenít meg.
+2719;A P_Ansteuerung tanulásához egy szelep nyílik meg a lakkozási út nem található. 
+2720;A mérés végét követõen 10 másodpercig még nincs korrekciós érték a vezérlésen.
+2722;A fúvókamérésnél a VMT-rendszerben probléma történt. Lehetséges okok:%CrLf%Helytelen vagy hibás fúvóka
+2723;Kísérletet tett a fúvóka státuszának kézirõl IO-ra állítására. Itt a fúvóka nem került megjavításra.
+2724;Nem történt nyomáscsökkenés a meghatározott HN-váltáshoz.
+2725;A nyomáscsökkenés a tanítási programban GunTriggerként került beállításra.
+2726;Hibás vagy hiányzó konfiguráció beírás a megadott fájlban.
+2727;Nincs kapcsolódó mérés konfigurálva
+2728;Nincs Multiobject a Visiongájlban konfigurálva.
+2729;Az USV 24V-os ellátása már nincs, ez azt jelenti,hogy a vezérlés már csak az USV-n keresztül tárolódik.
+2730;Az adaptáció során meg lett állapítva,hogy az anyagtulajdonságok extrémen a kalibrálással ellentétben meg lettek változtatva.
+2731;A jel a PLC-töl nem fogható tovább.Komunkáció megszakadt vagy PLC stopp-ba került.
+2732;A kiszámolt hajláskompenzáció Offset-je a rögzített határon kívül van.
+2743;Hiba a készüléken (Fütöpatronok,szenzorok)
+2744;Szalaghajtás hajtásszabályzó gyüjtöhibája
+2745;A paraméterek olvasásakor a VendorID vagy a DeviceID sikertelen.
+2746;Paramétereket a Frimware verzióban nem tudta beolvasni.
+2747;A készülék típustáblája a Frimwarekonfigurációban nem ismert.
+2748;Az S3-as készülék Firmware azonosítás során hiba lépett fel%CrLf%- Paraméter nem olvasható,alapja egy buszhibának.%CrLf%- Készülék ismeretlen típustáblával lett a Firmware-ben felismerve.
+2749;Daatei ..\appldisk\application\control\config\S3_Frimware.cfg nincs elökészítve vagy sikertelen.
+2750;A résztvevö nem válaszol.%CrLf%- A résztvevök hibában.%CrLf%- Elektromos résztvevök összeköttetése hibában vagy müködésképtelenek.
+2751;Résztvevö címzése fel lett ismerve,ami nem lett konfigurálva. %CrLf%- Van több részvevö a Buszon ami konfigurált.%CrLf%- Tönkrement résztvevö.
+2752;Sercosrésztvevö fel lett ismerve a Buszon,jóllehet ez a konfigurációban szimuláltként lett meghatározva, %CrLf%ez nem megengedhetö.
+2753;Amikor a készülék megváltoztatott beállításait átnevezzük,már egy Feszültségmentesítés a készüléken szükségtelen.
+2754;Programblokk paraméter olvasásakor hiba.
+2755;Programblokk paraméter írásakor hiba.
+2756;Programblokk paraméter aktiválásakor hiba.
+2757;A biztonsági követelmények kielégítése érdekében a motortartó fék tápfeszültségének adott határok (24 V +/-10%) között kell lenni.%CrLf%Ezt a feszültséget egy feszültségosztó a meghajtás analóg bemenetére viszi és a szoftverben kiértékeli.%CrLf%Ha a feszültség ér
+2758;Sercosrésztvevö neve különbözik a folyamatkonfiguráció és a Sercoskunfiguráció között, ez nem megengedhetö.
+2759;
+2760;A készülék nem tartalmaz buszkonfogurációt vagy egy rossz készülknév lett neki megadva.
+2761;Paraméterezés a készülékben nincs elökészítve.%CrLf%Komunikáció a készülékhez megszakadt.%CrLf%A készülék nem reagál a szervízcsatorna eléréséhez.
+2762;Hiba a feszültségelosztó összeköttetésében.%CrLf%- A paraméter P-0-0210 nem a ciklikus adatcsatornára ( aus[3] ) lett konfigurálva.
+2763;A fénykapu a programozott mozgáscélponthoz megszakadt.Lehetséges okok:%CrLf%-A tanítóprogram teljesítése STEP-módban%CrLf%- Mozgás helytelen vagy a makrók helytelen sorrendje%CrLf%- Szenzorjel rossz%CrLf%- A célpont rosszul lett betanítva.
+2764;A konfigurációban a megnevezett paraméter értéke=0, azonban az értéknek kéne lennie:1%CrLf%Ezzel a paraméterrel elindul az aplikáció,jóllehet a topológiavizsgálatban nem minden készülék lett felismerve,ezzel a diagnózisfunkció lehetséges.
+2765;A konfigurációs paraméter értéke nem felel meg a követelt értéknek.
+2766;A robotnak megadott fúvókatípus a fúvókacserénél nem jó.
+2767;A lakkozó nomás felügyelete minimumra vagy maximumra egy idöprogramban aktiválva lett, azonban a felügyeleti funkcó a Cfg-Editor-ban ez a szenzor nem engedélyezett
+2768;A hajtások készülékneveinek a hozzá tartozó gépek neveit kell tartalmaznia,ez nem az az eset.
+2769;A készülék hálózatcímcésének beállításakor a Sercosbusz a 2. fázis után kapcsol be.
+2770;Munkaterületen nincs nyomás(túl magas,túl alacsony)%CrLf%- Vezetéktörés szenzorjel%CrLf- A kapcsoló rosszul van paraméterezve.
+2771;Felügyeleti funkció deaktivált
+2772;Masterszenzor tönkrement vagy Problema a kábelezéssel vagy rossz paraméterezés.
+2773;Erre a tengelyre nem lehetséges az autómata mászterelés:%CrLf%- Nem Dürr-Robot%CrLf%- Kézi tengely szenzor nélkül.
+2774;Az eszköz megtáplálásában zavar. (Lezárószelep, Golyóscsap, etc. le van zárva)%CrLf%- A legkissebb átfolyó paraméter túl nagyra lett kiválasztva.
+2776;Nem volt nyomásnövekedés a fötü nyitásakor a fordulatszám szabályzásban megállapítva.Feltételezhetöen nincs harangtányér elökészítve.
+2777;Ekkor a fordulatszám szabályzó a bal és a jobb futó turbinákat is támogatják, a beépített turbinatípust a P-0003.0.12-ben paramérezeni kell.Ekkor csak az aktuális jobb futó turbina paramétere van vizsgálatban,hogy vajon paraméterezve lett-e
+2778;Felügyelet a PCUx.cfg-ben ki lett kapcsolva.
+2779;Nincs visszajelzés,hogy a hömérséklet rendben van-e%CrLf%- Fütés tönkrement%CrLf%- Hömérsékletszenzor tönkrement%CrLf%- Kapcsolódási pont a hömérséklet kapcsolónál rosszul van paraméterezve.%CrLf%- Vezetéktörés / Összekötési hiba
+2780;A vezérlés 24V-os ellátása és az USV kiesett és az USV pufferidöt átlépte
+2781;Hálózati részen a klímaberendezéstöl egy hibát észlelt és egy gyüjtöriasztást jelentett:%CrLf%- Túl magas hömérséklet a hálózati részen%CrLf%- hiányzó teher  a kimeneten, elöidézett okok: Kábeltörés, teljesítmény kábel nincs összekötve, hiba a fütés átkapcsolásában és hütés (Védelem- bzw. Relékapcsoló) stb.%CrLf%- Hiba a hálózati rész vezérlésében.
+2782;Túlmelegedés védelem aktív és ez a klímaberendezés lakapcsolását eredményezte:%CrLf%- Hökioldó a klímaberendezésben (Túlmelegedés)%CrLf%-Kábeltörés a hökildónál%CrLf%- Biztosíték kiesett feszültségellátás megszünt a hökioldónál%CrLf%- Hömérsékletszenzor a klímaberendezésben tönkrement (Következménye: Hiba a szabályzásban)%CrLf%-Szabályzókörbeállítások (Szabályzóparaméterek) hibásak%CrLf%-Hiba a hálózati részen vagy hiba a klímaberendezés hálózati-megvezérlésében
+2783;Túl nagy érték a paraméterezésben [MC.KINEMATIC:0]timeConstantOfAxisFilter1_S paraméterezve lett.
+2784;Túl nagy az aplikált nyomás eltérése.%CrLf%-Határérték a felügyelete nem korrekt%CrLf%-A nyomás szenzora hibás%CrLf%-Anyag-/Fokozat-Változtatás
+2785;Nem lett több alacsonyabb rendü követelés a paraméterezett kölünbözö Robot stoppozícióhoz.
+2786;Nem lett több alacsonyabb rendü követelés a paraméterezett kölünbözö Robot startpozícióhoz.
+2787;Nem lett több alacsonyabb rendü követelés a paraméterezett kölünbözö Robottípusokhoz.
+2788;Hiba az rendszeridö olvasásakor (P-0-0 197)
+2789;Hiba a rendszeridö írásakor (P-0-0197)
+2790;Sercos-Buszrendszer felfutásakor hibák léptek fel,amik a felfutást megakadályozták.%CrLf%A vezérlés ezmiatt a Sercos-buszrendszer újrainicializása megakadt.
+2791;Az Eco Talk-projekt mondattanilag nem helyes és nem lehet lefordítani.
+2792;A Sercoskonfigurációban az "autoAddressing=2" konfigurált.%CrLf%Ez csak üzembevételi céllal (adott/tényleges összehasonlítás) keStudioval megengedhetö.
+2793;A megnevezett HW-végpont nem tudta Sercos III-as készülék nélkül megállapítani.Lehetöség szerint%CrLf% a HW-végpont nem a Sercos III-as konfigurációban tartózkodik.
+2794;A tetötartó hengereket tolja el,azonban nincs miden kampó beakasztott helyzetben.%CrLf%A hengereket csak akkor szabad eltolni,ha minden kampó be van akasztva.
+2795;Hibás levegöellátás%CrLf%- Mechanikus beragadás%CrLf%- Hibás iniciátorvisszajelzés.
+2796;Iniciátor visszajelzés tönkrement%CrLf%- Hiba a levegöellátásban%CrLf%- Mechanikai hiba
+2797;A kampó mozgása csak kihúzott állapotban lehetséges.
+2798;A mozgásprogramból meg lett kísérelve a nevezett tetötartó kampójának lekérdezése.%CrLf%Ez nem lehetséges csak ha a megnevezett mennyiség engedélyezett. 
+2799;A buszrésztvevö hibája%CrLf%- Általános buszhiba.%CrLf%- Hibás iniciátorjel.
+2800;Az autómatikus méröcella kalibrálásánál megállapításara került,hogy a K-faktor a paraméterezett határértéken kívül van.
+2801;Nincs visszajelzés,hogy a leszívás megy-e, B8
+2802;A megadott csatorna státusza rossz.
+2803;Biztos pozíció feltételezhetöen nem profilszabad térben van.
+2804;A hardware-készülék tönkrement vagy az instalálás során helytelenül lett felismerve.A kiolvasott csoportok száma egy érvénytelen érték.
+2805;A software-ben legalább egy zóna szabályzó készülék nélkül lett hozzárendelve.Ez a zóna(zónák) üzeme nem lehetséges.A vezérlés felfutása stoppba ment.
+2806;A megadott szám több zónában lett megadva.Ezekne a zónaszámoknak egyértelmüeknek kell lennie és készülékenként csak egyszer lehet kiadni.Ezen keresztül következik a hozzáréndelés a Hardware-átvitelhez.
+2807;A megadott zónaszámokat a Hardware készülék nem támogatja(a zónák nem állnak rendelkezésre)
+2808;A készülék a paraméteradatokban PCUx.cfg deaktivált.
+2809;PartDetect jele kiesése vagy PartDetect ablak rosszul lett paraméterezve
+2810;PartDetect iniciátor pozíciója vagy PartDetect ablak paraméterezése nem jó.
+2812;Buszrendszer nem üzemkész.%CrLf%Hiba az SPC200-as vezérlön.
+2813;
+2814;
+2815;
+2816;
+2817;
+2818;
+2819;
+2820;
+2821;
+2822;
+2823;
+2824;
+2825;
+2826;
+2827;
+2828;
+2829;
+2830;
+2831;
+2832;
+2833;
+2834;
+2835;
+2836;
+2837;
+2838;
+2839;
+2840;
+2841;
+2842;
+2843;
+2844;
+2845;
+2846;
+2847;
+2849;
+2850;
+2851;
+2852;
+2853;
+2854;
+2855;
+2856;
+2857;
+2858;
+2859;
+2860;
+2861;
+2862;
+2863;
+2864;
+2865;
+2866;
+2867;
+2868;
+2869;
+2870;
+ 

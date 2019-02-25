@@ -1,0 +1,54 @@
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_0  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V200  )
+  //
+  PTP(RHOME)
+  //
+  //MUST BE TEACHED IN WORLD!!!
+  PTP(RBYPASS)
+  //MUST BE TEACHED IN WORLD!!!
+  PTP(RUNSELECT)
+  //
+  PTP( RHOME  )
+  //
+  PTP(RMAINTENANCE)
+  //
+  PTP( RHOME  )
+  //
+  PTP(RCLEAN)
+  //
+  PTP(RHOME)
+  //
+  PTP(RPURGE)
+  //
+  PTP( RHOME  )
+  //
+  PTP(RFLOWCHECK)
+  //
+  PTP( RHOME  )
+  //
+  PTP(RBRAKECHECK)
+  //
+  PTP( RHOME  )
+  //
+  PTP(RZERO)
+  //
+  PTP( RHOME  )
+  //
+  PTP(RCOVER)
+  //
+  PTP( RHOME  )
+  //
+  PTP(RATOMCLEAN)
+  //
+  PTP( RHOME  )
+  //
+  PTP(RATOMCHANGE)
+  //
+  PTP( RHOME  )
+  //
+RDESELECT("RP12")

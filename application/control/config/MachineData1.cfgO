@@ -1,0 +1,379 @@
+[MC.KINEMATIC:0.BaseDHParam]
+displacementAlongZ = 0
+rotationAroundZ = 0
+displacementAlongX = 0
+rotationAroundX = 0
+
+[MC.KINEMATIC:0]
+name = "RP12"
+robotTypName = "EcopaintVWrst"
+nrOfBaseJoints = 3
+nrOfWristJoints = 3
+nrOfAuxJoints = 1
+baseX = 0
+baseY = 0
+baseZ = 0
+baseA = 0
+baseB = 0
+baseC = -90
+hasGearTrafo = 1
+cop12 =  0.0
+cop34 = -0.716049
+cop35 = -1
+cop45 = 0
+hasSumOfWristJointsCheck = 1
+maxSumOfWristJoints = 540
+
+[MC.KINEMATIC:0.Joint:0]
+jointTypName = "ROT"
+jointName = "Kin1.Drive1"
+displacementAlongZ = 0
+displacementAlongX = 300
+rotationAroundZ = 0
+rotationAroundX = 90
+maxPos = 95
+minPos = -95
+maxVelo =     115
+reducedVelo = 12
+maxAcce = 460
+maxDece = 460
+maxJerk = 460000
+driveMaxTorque = 20650000
+encoderType = "absolute"
+
+[MC.KINEMATIC:0.Joint:1]
+jointTypName = "ROT"
+jointName = "Kin1.Drive2"
+displacementAlongZ = 0
+displacementAlongX = 1006.031809
+rotationAroundZ = 83.72270151
+rotationAroundX = 0
+maxPos = 60
+minPos = -100
+maxVelo =     115
+reducedVelo = 12
+maxAcce = 460
+maxDece = 460
+maxJerk = 460000
+driveMaxTorque = 41970000
+encoderType = "absolute"
+
+[MC.KINEMATIC:0.Joint:2]
+jointTypName = "ROT"
+jointName = "Kin1.Drive3"
+displacementAlongZ = 0
+displacementAlongX = 34.6
+rotationAroundZ = 6.27729849
+rotationAroundX = 90
+maxPos =       80
+minPos = -75
+maxVelo =     115
+reducedVelo = 12
+maxAcce = 460
+maxDece = 460
+maxJerk = 460000
+driveMaxTorque = 11990000
+encoderType = "absolute"
+
+[MC.KINEMATIC:0.Joint:3]
+jointTypName = "ROT"
+jointName = "Kin1.Drive4"
+displacementAlongZ = 1511
+displacementAlongX = 0
+rotationAroundZ = -90
+rotationAroundX = 35
+maxPos =      720
+minPos =     -720
+maxVelo = 540
+reducedVelo = 54
+maxAcce = 5400
+maxDece = 5400
+maxJerk = 5400000
+driveMaxTorque = 3540000
+encoderType = "absolute"
+
+[MC.KINEMATIC:0.Joint:4]
+jointTypName = "ROT"
+jointName = "Kin1.Drive5"
+displacementAlongZ = 81
+displacementAlongX = 0
+rotationAroundZ = 0
+rotationAroundX = -35
+maxPos =      720
+minPos =     -720
+maxVelo = 540
+reducedVelo = 54
+maxAcce = 5400
+maxDece = 5400
+maxJerk = 5400000
+driveMaxTorque = 3540000
+encoderType = "absolute"
+
+[MC.KINEMATIC:0.Joint:5]
+jointTypName = "ROT"
+jointName = "Kin1.Drive6"
+displacementAlongZ = 86
+displacementAlongX = 0
+rotationAroundZ = 0
+rotationAroundX = 0
+maxPos =      720
+minPos =     -720
+maxVelo = 540
+reducedVelo = 54
+maxAcce = 5400
+maxDece = 5400
+maxJerk = 5400000
+driveMaxTorque = 3540000
+encoderType = "absolute"
+
+[MC.KINEMATIC:0.Joint:6]
+jointTypName = "LIN"
+jointName = "Kin1.Drive7"
+displacementAlongZ = 0
+displacementAlongX = 0
+rotationAroundZ = 0
+rotationAroundX = 0
+maxPos = 1350
+minPos = -3457.5
+maxVelo = 1200
+reducedVelo = 240
+maxAcce =    5000
+maxDece =    5000
+maxJerk = 5000000
+driveMaxTorque = 18000000
+encoderType = "absolute"
+
+[MC.KINEMATIC:0.Joint:6]
+isInKinematicChain = 1
+preLinkFrameX =   0
+preLinkFrameY =   0
+preLinkFrameZ =   0
+preLinkFrameA = -90
+preLinkFrameB =   0
+preLinkFrameC =   0
+postLinkFrameX =  0
+postLinkFrameY =  0
+postLinkFrameZ =  0
+postLinkFrameA = 90
+postLinkFrameB =  0
+postLinkFrameC =  0
+
+[RC.KINEMATIC:0.StromagBrake]
+EnableStromag = 0
+InvertStromag = 0
+[RC.KINEMATIC:0.BrakeCheck]
+ReleaseDeviceIsUsed = 1
+ActivateATEXbrakeCheck = 1
+UseATEXtimer = 0
+OnlyATEXphase1Test = 0
+[RC.KINEMATIC:0]
+serialNr = 913095
+[RC.KINEMATIC:0.AcceRamp]
+typ = 2
+rampParam = 0.5
+rampParam2 = 0
+[RC.KINEMATIC:0.Dynamic.Joint]
+velo = 0.3
+acce = 0.6
+dece = 0.6
+jerk = 1
+[RC.KINEMATIC:0.Dynamic.Cart]
+velo = 1500
+acce = 8000
+dece = 8000
+jerk = 160000000
+[RC.KINEMATIC:0.Dynamic.Turn]
+velo = 90
+acce = 500
+dece = 500
+jerk = 1000000
+[RC.KINEMATIC:0.JogPath.Dynamic.Joint]
+velo = 0.05
+acce = 0.3
+dece = 0.3
+jerk = 1
+[RC.KINEMATIC:0.JogPath.Dynamic.Cart]
+velo = 250
+acce = 1000
+dece = 1000
+jerk = 1000000000.0
+[RC.KINEMATIC:0.JogPath.Dynamic.Turn]
+velo = 15
+acce = 300
+dece = 300
+jerk = 10000000
+
+[RC.KINEMATIC:0.Joint1]
+sercosPath = "IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.DRVSERCOS:0"
+motorMaxTorque     = 32000000
+motorStallTorque = 8000000
+driveReducedTorque = 5600000
+controlValue = 10
+dragControlValue = 2
+lagControlValue = 0.75
+S0100 = 0.8
+S0101 = 500
+S0104 = 2
+S0106 = 10
+S0107 = 3.5
+S0348 = 0
+P0004 = 500
+P0099 = 0
+P0041 = 0
+masteringAuto = 1
+masteringDelta = 5
+masteringVelocity = 0.05
+masteringS0052A = 0.337
+masteringS0052M = 0.337
+limitSwitchMin = 0
+limitSwitchMax = 0
+
+[RC.KINEMATIC:0.Joint2]
+sercosPath = "IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.DRVSERCOS:1"
+motorMaxTorque = 52500000
+motorStallTorque = 17500000
+driveReducedTorque = 26100000
+controlValue = 10
+dragControlValue = 2
+lagControlValue = 0.75
+S0100 = 3
+S0101 = 500
+S0104 = 2
+S0106 = 4.5
+S0107 = 6
+S0348 = 0
+P0004 = 500
+P0099 = 0
+P0041 = 0
+masteringAuto = 1
+masteringDelta = 5
+masteringVelocity = 0.05
+masteringS0052A = -0.02
+masteringS0052M = 0
+limitSwitchMin = 0
+limitSwitchMax = 0
+
+[RC.KINEMATIC:0.Joint3]
+sercosPath = "IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.DRVSERCOS:2"
+motorMaxTorque = 15000000
+motorStallTorque = 5000000
+driveReducedTorque = 6000000
+controlValue = 10
+dragControlValue = 2
+lagControlValue = 0.75
+S0100 = 0.8
+S0101 = 500
+S0104 = 2
+S0106 = 15
+S0107 = 5.5
+S0348 = 0
+P0004 = 500
+P0099 = 0
+P0041 = 0
+masteringAuto = 1
+masteringDelta = -5
+masteringVelocity = 0.05
+masteringS0052A = -0.02
+masteringS0052M = 0
+limitSwitchMin = 0
+limitSwitchMax = 0
+
+[RC.KINEMATIC:0.Joint4]
+sercosPath = "IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.DRVSERCOS:3"
+motorMaxTorque = 4000000
+motorStallTorque = 800000
+driveReducedTorque = 800000
+controlValue = 10
+dragControlValue = 8
+lagControlValue = 0.75
+S0100 = 0.08
+S0101 = 500
+S0104 = 2
+S0106 = 38
+S0107 = 2
+S0348 = 0
+P0004 = 500
+P0099 = 0
+P0041 = 0
+masteringAuto = 0
+masteringDelta = 0
+masteringVelocity = 0
+masteringS0052A = 27.5
+masteringS0052M = 27.5
+limitSwitchMin = 0
+limitSwitchMax = 0
+
+[RC.KINEMATIC:0.Joint5]
+sercosPath = "IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.DRVSERCOS:4"
+motorMaxTorque = 4000000
+motorStallTorque = 800000
+driveReducedTorque = 800000
+controlValue = 10
+dragControlValue = 8
+lagControlValue = 0.75
+S0100 = 0.08
+S0101 = 500
+S0104 = 2
+S0106 = 38
+S0107 = 2
+S0348 = 0
+P0004 = 500
+P0099 = 0
+P0041 = 0
+masteringAuto = 0
+masteringDelta = 0
+masteringVelocity = 0
+masteringS0052A = 0
+masteringS0052M = 0
+limitSwitchMin = 0
+limitSwitchMax = 0
+
+[RC.KINEMATIC:0.Joint6]
+sercosPath = "IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.DRVSERCOS:5"
+motorMaxTorque = 4000000
+motorStallTorque = 800000
+driveReducedTorque = 400000
+controlValue = 10
+dragControlValue = 8
+lagControlValue = 0.75
+S0100 = 0.08
+S0101 = 500
+S0104 = 2
+S0106 = 38
+S0107 = 2
+S0348 = 0
+P0004 = 500
+P0099 = 0
+P0041 = 0
+masteringAuto = 0
+masteringDelta = 0
+masteringVelocity = 0
+masteringS0052A = 0
+masteringS0052M = 0
+limitSwitchMin = 0
+limitSwitchMax = 0
+
+[RC.KINEMATIC:0.Joint7]
+sercosPath = "IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.DRVSERCOS:6"
+motorMaxTorque = 32000000
+motorStallTorque = 8000000
+driveReducedTorque = 5600000
+controlValue = 10
+dragControlValue = 40
+lagControlValue = 10
+S0100 = 0.8
+S0101 = 500
+S0104 = 2
+S0106 = 10
+S0107 = 3.5
+S0348 = 0
+P0004 = 500
+P0099 = 0
+P0041 = 0
+masteringAuto = 1
+masteringDelta = -50
+masteringVelocity = 0.05
+masteringS0052A = -227.5
+masteringS0052M = 0
+limitSwitchMin = 0
+limitSwitchMax = 0

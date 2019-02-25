@@ -1,0 +1,74 @@
+(*----------------------------------------------------------------------------*
+*   K2-System Robot Control Unit                                              *
+*                                                                             *
+*   Dürr Systems GmbH APT                                                     *
+*   Rosenstr. 39                                                              *
+*   74321 Bietigheim-Bissingen                                                *
+*   Germany                                                                   *
+*                                                                             *
+*   Copyright (C) 2005 Dürr Systems GmbH APT                                  *
+*   All rights reserved.                                                      *
+*                                                                             *
+*   Author      : Schöll                                                      *
+*   E-Mail      : Bjoern.Schoell@durr.com                                     *
+*                                                                             *
+*   Modul       : TRcuNozzleChange.tts                                        *
+*   Description : nozzle change functionality                                 *
+*-----------------------------------------------------------------------------*
+* 
+*)
+
+
+TYPE
+   TNozzleChangerPlace : STRUCT
+      iForNozzleNr : INT;
+      mValveAct    : BOOL;
+      mValveSet    : BOOL;
+      mOccupied    : BOOL;
+      mOK          : BOOL;
+      iNozzleNr    : INT;
+   END_STRUCT;
+   
+   TNozzleMainNeedle : STRUCT
+      mDoorOpened : BOOL;
+      mOccupied   : BOOL;
+      mOK         : BOOL;
+      iNozzleNr   : INT;
+   END_STRUCT;
+END_TYPE
+
+
+VAR
+   myRobot              : MAPTO TRcuRobot;
+   hasNozzleChange      : DINT;
+   hasNozzleChangeBool  : BOOL;
+   svChangerPlaces      : MAPTO ARRAY [1..20] OF TNozzleChangerPlace;
+   svMainNeedles        : MAPTO ARRAY [1..3] OF TNozzleMainNeedle;
+   svNrOfPlaces         : MAPTO INT;
+   svNozzleGun          : MAPTO INT;
+   svSetBlowAir         : MAPTO BOOL;
+   svPurgeRequired      : MAPTO BOOL;
+   svEntranceRequest    : MAPTO BOOL;
+   svAckEntranceRequest : MAPTO BOOL;
+   nextMainNeedle       : INT;
+   nextNozzleNr         : INT;
+END_VAR
+
+
+ROUTINE Init(locRobot : TRcuRobot)
+   
+   myRobot := MAP(locRobot);
+   
+   IF CatalogReadInt(myRobot.rcCatHdl, "hasNozzleChange", hasNozzleChange, TRUE) AND (hasNozzleChange=1) THEN
+      hasNozzleChangeBool := TRUE;
+      svChangerPlaces := MAPX(cSV_sChangerPlaces[myRobot.kinListInx]);
+      svMainNeedles := MAPX(cSV_sMainNeedles[myRobot.kinListInx]);
+      svNrOfPlaces := MAPX(cSV_iNrOfPlaces[myRobot.kinListInx]);
+      svNozzleGun := MAPX(cSV_iNozzleGun[myRobot.kinListInx]);
+      svSetBlowAir := MAPX(cSV_mSetBlowAir[myRobot.kinListInx]);
+      svPurgeRequired := MAPX(cSV_mPurge[myRobot.kinListInx]);
+      svEntranceRequest := MAPX(cSV_mEntranceRequest[myRobot.kinListInx]);
+      svAckEntranceRequest := MAPX(cSV_mAckEntranceRequest[myRobot.kinListInx]);
+   END_IF;
+   
+END_ROUTINE

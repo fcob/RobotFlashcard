@@ -1,0 +1,31 @@
+//$Csomagtér keret & Csomagtértetö
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU37X  )
+  //
+  ACC( A3500  )
+  VEL( V650  )
+  OVERLAP( NODEC50  )
+  //
+  LIN( P_HK1_981  )
+  SETBRUSH( GUN1 ,174 ,PO1 ,TRG1  )
+  LIN( P_HK1_98  )
+  GUN( GUN1 ,GunOn ,P30 ,TR30  )
+  LIN( P_HK1_97  )
+  LIN( P_HK1_96  )
+  LIN( P_HK1_95  )
+  LIN( P_HK1_94  )
+  LIN( P_HK1_93  )
+  LIN( P_HK1_92  )
+  LIN( P_HK1_91  )
+  LIN( P_HK1_90  )
+  LIN( P_HK1_89  )
+  GUN( GUN1 ,GunOff ,P29 ,TR29  )
+  LIN( P_HK1_88  )
+  LIN( P_HK1_87  )
+  //
+  //PTP(PO2)
+  PTP( PO3  )
+  //
+RDESELECT("RP12")

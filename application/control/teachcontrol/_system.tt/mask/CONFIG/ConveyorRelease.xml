@@ -1,0 +1,44 @@
+<VIEW>
+
+   <MASKDEF key="TeachView.mask.ConveyorRelease" textfile="userTx" permissiondef="userMenuPermission" rows="16" columns="40">                  
+      
+      <!--  Headline -->
+      <LABEL key="ConveyorRelease.label" col="15" row="2" halign="stretch" valign="stretch" rspan="1" cspan="20"/>
+   
+         
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.BA_Auto.Release"                  vartype="SV" enabled="false" col="03"   row="06" cspan="3"/>
+      <LABEL    key="BA_Auto.label"                                                          vartype="SV"                 col="06"   row="06" cspan="8"  halign="stretch"/>
+   
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_RobotAuto.Release"        vartype="SV" enabled="false" col="03"   row="08" cspan="3"/>
+      <BUTTON   key="RelRobotAuto.label" maskkey="TeachView.mask.ConveyorRelRobotAuto"                                    col="06"   row="08" cspan="9" halign="stretch"/> 
+      
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_FromBody.Release"         vartype="SV" enabled="false" col="03"   row="10" cspan="3"/>
+      <LABEL    key="RelFromBody.label"                                                      vartype="SV"                 col="06"   row="10" cspan="8"  halign="stretch"/>
+   
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.NoStopAtEndOfCar.Release"         vartype="SV" enabled="false" col="03"   row="12" cspan="3"/>
+      <LABEL    key="NoStopAtEndOfCar.label"                                                 vartype="SV"                 col="06"   row="12" cspan="8"  halign="stretch"/>
+    
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.BA_Hand.Release"                  vartype="SV" enabled="false" col="15"  row="06" cspan="3"/>
+      <LABEL    key="BA_Hand.label"                                                          vartype="SV"                 col="18"  row="06" cspan="8"   halign="stretch"/>
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_RobotHand.Release"        vartype="SV" enabled="false" col="15"  row="08" cspan="3"/>
+      <BUTTON   key="RelRobotHand.label" maskkey="TeachView.mask.ConveyorRelRobotHand"                                    col="18"  row="08" cspan="9" halign="stretch"/> 
+    
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.BA_Sleep.Release"                 vartype="SV" enabled="false" col="27"  row="06" cspan="3"/>
+      <LABEL    key="BA_Sleep.label"                                                         vartype="SV"                 col="30"  row="06" cspan="8"   halign="stretch"/>
+     
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_Teachmode.Release"        vartype="SV" enabled="false" col="27"  row="08" cspan="3"/>
+      <BUTTON   key="RelTeachmode.label" maskkey="TeachView.mask.ConveyorRelTeachmode"                                    col="30"  row="08" cspan="9" halign="stretch"/> 
+      
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRelease.Release"              vartype="SV" enabled="false" col="18"  row="15" cspan="3"/>
+      <LABEL    key="ConvRelease.label"                                                      vartype="SV"                 col="21"  row="15" cspan="15"  halign="stretch"/>
+               
+   
+   </MASKDEF>
+      
+   
+</VIEW>

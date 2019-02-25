@@ -1,0 +1,2320 @@
+P1005OB7xx_07.42b;;
+2050;1;Tvrdenie zlyhalo: %1 riadok %2
+2050;10;Int hodnota nemôe by zaknihovaná '%1.%2'
+2050;11;Uint hodnota nemôe by zaknihovaná '%1.%2'
+2050;12;Reálna hodnota nemôe by zaknihovaná '%1.%2'
+2050;13;Hodnota reazca znakov nemôe by zaknihovaná '%1.%2'
+2050;14;Rozhranie nemôe by zaknihovaná '%1.%2'
+2050;20;Int hodnota nemôe by naèítaná '%1.%2'
+2050;21;Uint hodnota nemôe by naèítaná '%1.%2'
+2050;22;Reálna hodnota nemôe by naèítaná '%1.%2'
+2050;23;Hodnota reazca znakov nemôe by naèítaná '%1.%2'
+2050;24;Rozhranie nemôe by naèítané: '%1.%2'
+2050;30;Int hodnota nemôe by zapísaná '%1.%2'
+2050;31;Uint hodnota nemôe by zapísaná '%1.%2'
+2050;32;Reálna hodnota nemôe by zapísaná '%1.%2'
+2050;33;Hodnota reazca znakov nemôe by zapísaná '%1.%2'
+2050;40;Int hodnota %1.%2 mimo oblasti [%3..%4]
+2050;41;Uint hodnota %1.%2 mimo oblasti [%3..%4]
+2050;42;Reálna hodnota %1.%2 mimo oblasti [%3..%4]
+2050;43;Hodnota reazca znakov %1.%2 chyba ve¾kosti
+2050;44;Tabu¾ka rozhraní %1.%2 chyba ve¾kosti
+2050;45;Chyba ShMemWrite zachytená zo [Stanice: %1] [È.: %2]
+2050;46;Chyba RecvShMemWrite zachytenı nesprávny Handle [Hdl: %1] [Offs: %2] [Size: %3]
+2050;1001;Osobitné zaobchádzanie štart
+2050;1002;Divide Error (bp=%1, pc=%2, regs=%3)
+2050;1003;Debug Exception (bp=%1, pc=%2, regs=%3)
+2050;1004;Non Maskable Interrupt (NMI) (bp=%1, pc=%2, regs=%3)
+2050;1005;Breakpoint Exception (bp=%1, pc=%2, regs=%3)
+2050;1006;Overflow Exception (bp=%1, pc=%2, regs=%3)
+2050;1007;Bound Exception (bp=%1, pc=%2, regs=%3)
+2050;1008;Invalid Opcode Exception (bp=%1, pc=%2, regs=%3)
+2050;1009;FP NoDevice Exception (bp=%1, pc=%2, regs=%3)
+2050;1010;Double Fault Exception (bp=%1, pc=%2, regs=%3)
+2050;1011;FP Overrun Exception (bp=%1, pc=%2, regs=%3)
+2050;1012;Invalid TSS Exception (bp=%1, pc=%2, regs=%3)
+2050;1013;No Segment Exception (bp=%1, pc=%2, regs=%3)
+2050;1014;Stack Exception (bp=%1, pc=%2, regs=%3)
+2050;1015;General Protection Exception (bp=%1, pc=%2, regs=%3)
+2050;1016;Page Fault (bp=%1, pc=%2, regs=%3)
+2050;1017;Reserved Exception (bp=%1, pc=%2, regs=%3)
+2050;1018;FP Error (bp=%1, pc=%2, regs=%3)
+2050;1019;Bus Alignment Exception (bp=%1, pc=%2, regs=%3)
+2050;1020;Prebehnutie Task Stack
+2050;1021;System function called in interrupt
+2050;1022;Exception
+2110;100;Cie¾ovı hardvér %1 ešte nie je podporovanı
+2110;101;Komponent KBus ešte nie je prepojenı
+2110;102;intLine %1 nie je definovanı
+2110;103;neplatnı cie¾ovı hardvér %1
+2110;104;Vedenie prerušenia %1 mimo oblas
+2110;105;UOS oznaèenie prerušenia %1 mimo oblas
+2110;106;nenájdené iadne vedenie prerušenia pre UOSIntID %1
+2110;200;Otvorenie Event %1 zlyhalo, posledná chyba %2
+2110;201;Zatvorenie EventHandle %1 zlyhalo, posledná chyba %2
+2110;202;Vytvorenie Event %1 zlyhalo, posledná chyba %2
+2110;203;Signalizovanie Event %1(%2)  zlyhalo, posledná chyba %3
+2110;300;RtAttachInterruptVector(Ex) zlyhal, intLine=%1 lastError=%2
+2110;301;RtReleaseInterruptVector(Ex) zlyhal, intLine=%1 handle=%2 lastError=%3
+2115;101;È. prístroja %1 mimo oblas
+2115;102;È. funkcie %1 mimo oblas
+2115;103;CfgSpace Offset %1 mimo oblas
+2115;104;CfgSpace Offset %1 neplatnı Alignment pre %2 prístup Bit
+2115;105;Prístroj %1.%2 v slote %3 nebol nájdenı
+2115;106;Prístroj %1.%2 v slote %3 funkcia %4 u spojené
+2115;107;Prístroj %1.%2 v slote %3 funkcia %4 nebola pridelená iadna intLine
+2115;108;Typ prístupovej oblasti %1 nie je podporovanı na tejto platforme
+2115;109;Typ prístupu %1 mimo oblas
+2115;110;Prístroj %1.%2 slot %3 funkcia %4 pridelenie oblasti prístupu zlyhalo (%5)
+2115;111;Cie¾ovı hardvér %1 ešte nie je podporovanı (%2)
+2115;112;nie je vo¾nı iaden slot E2 pre è. prístroja %1 È. funkcie %2
+2115;113;Prístup E2 pre è. prístroja %1 È. funkcie %2 nie je definované
+2115;114;È. E2 %1 Timeout %2msek èaka na proces zápisu ukonèenı vypršanı
+2115;115;È. E2 %1 Timeout %2msek èaka na FPGA SPI ukonèenı vypršanı
+2115;116;È. E2 %1 mimo oblas
+2115;117;È. E2 %1 ešte nebolo inicializované
+2115;118;È. E2 %1 zlyhalo stanovenie uvo¾nenia zápisu
+2115;119;È. E2 %1 Timeout %2msek èaka na Task Lock Semaphore vypršanı
+2115;120;È. E2 %1 Timeout %2msek èaka na Hardwarelock Semaphore vypršanı
+2115;121;È. E2 %1 zlyhalo vymazanie uvo¾nenia zápisu
+2115;122;È. prístroja %1 È. funkcie %2 E2 Test zlyhal
+2115;123;neplatnı identifikátor hardvéru %1
+2115;124;neplatnı Array definícií prístroja
+2115;125;Nebol nájdenı iaden prístroj zo zoznamu %1 v slote %2
+2115;126;Pre prístroj sa nedá poui auto %1.%2, v systéme je viac ako jeden prístroj
+2115;127;Auto sa nedá poui pre zoznam prístrojov %1.%2, v systéme je viac ako jeden prístroj
+2115;128;Vytvorenie CFGspaceImage prístroja pri è. prístroja. %1 È. funkcie %2 zlyhalo
+2115;129;Bol uskutoènenı pokus, obnovi neplatnı CFGspaceImage
+2115;130;Obnovenie CFGspaceImage prístroja pri è. prístroja. %1 È. funkcie %2 zlyhalo
+2115;131;neplatnı CFGspaceImage-Handle %1 (%2)
+2115;132;Prístroj %1.%2 v zásuvnom mieste %3 funkcia %4 vedenie prerušenia %5 nie je iadne PCI vedenie prerušenia
+2115;200;Otvorenie ovládaèa kernelu %1 zlyhalo, posledná chyba %2
+2115;201;Otvorenie ovládaèa kernelu %1 zlyhalo, posledná chyba %2
+2115;202;Kerneldriver %1(%2) IOCTL %3 zlyhal, posledná chyba %4
+2115;203;Vytvorenie Event %1 zlyhalo, posledná chyba %2
+2115;204;Zatvorenie Event %1 zlyhalo, posledná chyba %2
+2115;300;RtSetBusDataByOffset zlyhal, dev=%1 func=%2 offset=%3 result=%4 lasterror=%5
+2115;301;RtGetBusDataByOffset zlyhal, dev=%1 func=%2 offset=%3 result=%4 lasterror=%5
+2115;302;RtTranslateBusAddress zlyhal, busAddr %1.%2 lasterror=%3
+2115;303;RtMapMemory zlyhal, physAddr %1.%2 size=%3 lasterror=%4
+2115;304;RtUnmapMemory zlyhal, virtAddr %1 lasterror=%2
+2115;305;RtEnablePortIo zlyhal, IOAddr %1 len=%2 lasterror=%3
+2115;306;RtDisablePortIo zlyhal, IOAddr %1 len=%2 lasterror=%3
+2206;1;Komponent zablokovanı
+2206;2;Pma-Interface nemohol by nainštalovanı
+2206;3;Pma: aká systémová chyba %1
+2206;4;Pma: Príèina pre reset %1
+2206;5;Pma: Chyba pri analıze údajov
+2208;101;Komponent Housekeeper nie je inicializovanı
+2208;102;Neplatná funkcia Callback
+2208;103;Priorita nie je podporovaná
+2208;104;Neplatnı povel (%1)
+2208;105;neplatná signalizácia úloh
+2208;106;%1 chybná akcia
+2208;107;Doba cyklu (%1) nie je kompatibilná s takto systému
+2208;108;Konfigurácia úloh pre úlohu %s u bola zmenená.
+2211;1;Report stavu pamäte %1 nemohol by vytvorenı
+2211;2;Report stavu cie¾ovej cesty je rovnakı ako doèasná cesta %1
+2211;3;Archív zip reportu stavu nemohol by vytvorenı
+2211;4;Report stavu cie¾ovej cesty  je neplatnı
+2211;5;Report stavu cesty pre doèasnı súbor je neplatnı
+2211;6;Uvedenı súbor u existuje
+2211;7;Doèasnı prieèinok nemôe by vytvorenı
+2211;101;Súbor %1 nebol vytvorenı
+2211;102;Zápis reportu stavu u bol aktivovanı
+2211;103;Report stavu nebol inicializovanı
+2211;104;Shared memory %1 nemôe by naèítaná
+2211;105;Interface report stavu nemohol by nainštalovanı
+2211;106;Prístup na LogFile reportu stavu zlyhal
+2211;107;Bol dosiahnutı maximálny poèet reportov stavu pri zápise
+2211;108;Report stavu write na submaster nie je k dispozícii
+2212;1;Stavebná skupina pridaná (part %1): názov: %2, new swVersion: %3, adr: %4, hwVersion: %5, hwRevision: %6, functionVariant: %7
+2212;2;Stavebná skupina pridaná (part %1): printNr: %2, serialNr: %3, orderNr: %4, deviceNr: %5, ibnTime: %6, runTime: %7
+2212;3;Stavebná skupina zmenená (part %1): názov: %2, old swVersion: %3, new swVersion: %4, adr: %5, hwVersion: %6, hwRevision: %7, functionVariant: %8
+2212;4;Stavebná skupina zmenená (part %1): printNr: %2, serialNr: %3, orderNr: %4, deviceNr: %5, ibnTime: %6, runTime: %7
+2212;5;Stavebná skupina odstránená (part %1): názov: %2, old swVersion: %3, adr: %4, hwVersion: %5, hwRevision: %6, functionVariant: %7
+2212;6;Stavebná skupina odstránená (part %1): printNr: %2, serialNr: %3, orderNr: %4, deviceNr: %5, ibnTime: %6, runTime: %7
+2212;7;PCB Add (part %1): názov: %2, swVersion: %3, adr: %4
+2212;8;PCB Add (part %1): hwRevision: %2
+2212;9;PCB Add (part %1): funcVar: %2
+2212;10;PCB Add (part %1): printNr: %2, serialNr: %3
+2212;11;PCB Changed (part %1): názov: %2, adr: %3
+2212;12;PCB Changed (part %1): old swVersion: %2, new swVersion: %3
+2212;13;PCB Changed (part %1): hwRevision: %2
+2212;14;PCB Changed (part %1): funcVar: %2
+2212;15;PCB Changed (part %1): printNr: %2, serialNr: %3
+2212;16;PCB Remove (part %1): názov: %2, swVersion: %3, adr: %4
+2212;17;PCB Remove (part %1): hwRevision: %2
+2212;18;PCB Remove (part %1): funcVar: %2
+2212;19;PCB Remove (part %1): printNr: %2, serialNr: %3
+2212;20;Verzia firmvéru zariadenia '%1' nezodpovedá referencii
+2212;21;Chyba pri naèítaní referencie zariadenia '%1'
+2212;22;Chyba pri naèítaní verzie firmvéru zariadenia '%1'
+2214;1;Login: %1
+2214;2;Logout: %1
+2218;100;vyvolanie prihlásenia v komponente housekeeper zlyhalo 
+2218;101;vyvolanie odhlásenia od komponentu housekeeper zlyhalo 
+2218;102;otvorenie súboru %1 zlyhalo
+2218;103;zatvorenie súboru %1 zlyhalo
+2218;104;zapisovanie súboru %1 zlyhalo
+2218;105;naèítanie UOS pozmeòovacieho poradia zlyhalo, expected %1 bytes, read %2 bytes
+2218;106;Handle %1 zmeneného katalógového záznamu je neplatnı
+2218;107;typ %3 zmeneného katalógového prvku %1 (handle=%2) nie je podporovanı
+2218;108;Chyba pri naèítaní absolútnej cesty katalógu.Handle katalógu %1
+2218;109;vyvolanie spustenia v komponente housekeeper zlyhalo
+2218;110;vyvolanie zastavenia housekeeper callbacks zlyhalo
+2218;111;vyvolanie naèítania pozmeòovacieo poradia UOSCatalog zlyhalo
+2218;112;prieèinok %1 nemohol by vytvorenı
+2218;113;pri naèítaní súboru retain %1 došlo k chybe
+2218;114;Header súboru retain je neplatnı, neplatnı prvok %1
+2218;115;pri naèítaní katalógového údaju z retainfile došlo k chybe, dôvod %1
+2218;116;Neplatnı Handle pre %1 poradie hlásenia 
+2218;1000;došlo k %1 prebehnutiam v pozmeòovacom poradí UOS
+2220;1;%1: konfiguraènı záznam '%2' nebol nájdenı
+2220;2;%1: konfiguraènı záznam '%2' mimo oblas, Default %3
+2220;3;%1: konfiguraènı záznam '%2' nebol nájdenı, Default %3
+2220;4;%1: Neplatná hodnota pre konfiguraènı záznam '%2': %3
+2220;5;Neplatná konfigurácia '%1'
+2220;6;%1: Nie sú konfigurované iadne koncové body
+2220;7;%1: neplatnı typ pristroja '%2' nájdenı'
+2220;10;%1: Súbor sa nenašiel:| '%2'
+2220;11;%1: Chyba v h¾adaní súboru: '%2'
+2220;12;%1: Chyba v èítaní súboru: '%2'
+2220;13;%1: Chyba v zápise súboru: '%2'
+2220;14;%1: Súbor je nekompatibilnı: '%2'
+2220;15;%1: Aktualizácia '%2' zlyhala
+2220;16;%1: Aktualizácia '%2' zlyhala (Typ aktualizácie firmvéru: %3 Internı chybovı stav: %4)
+2220;20;%1: Prebehnutie zásobníka ('%2', '%3')
+2220;30;%1: Chyba pri poiadavke z pamäte
+2220;50;%1: Vyvolanie UOS '%2'('%3') zlyhalo
+2220;51;%1: Vyvolanie Sampler '%2'(%3, %4) zlyhalo
+2220;52;%1: Vyvolanie IO-Timer '%2'(%3, %4) zlyhalo
+2220;53;%1: Vyvolanie IO-Aktualizácie '%2'(%3, %4) zlyhalo
+2220;70;%1: Èítanie ovládaèa Low-Level-Interface zlyhalo
+2220;71;%1: Spojenie k ovládaèu Low-Level cez interface zlyhalo
+2220;72;%1: Oddelenie od ovládaèa Low-Level cez interface zlyhalo
+2220;80;%1: Prive¾a konfigurovanıch %2-PDOs, PDO '%3' sa nedá pouíva
+2220;81;%1: %2-PDO '%3' u prihlásené
+2220;82;%1: RXPDO-%2 má neplatné Stations-ID '%3'
+2220;83;%1: chıba PDO
+2220;84;%1: PDO stratené
+2220;85;%1: rx-pdo-%2 nemá iadne príslušné tx-pdo-%3 pri stanici %4
+2220;86;%1: rx-pdo-%2 doba cyklu '%3' niè viacnásobné od doby cyklu tx-pdo '%4'
+2220;87;%1: rx-pdo-%2 sa mapovaním odlišuje od tx-pdo-%3 pri stanici %4
+2220;100;%1: Parameter '%2' mimo oblas (%3)
+2220;120;IO: '%1'
+2220;150;%1: Hardvér nebol nájdenı
+2220;151;%1: Hardvér je u spojenı ('%2')
+2220;152;%1: Konflikt hardvéru rozpoznanı. Prístroje pouívajú rovnakú adresu: %2, %3
+2220;153;%1: Hardvér nereaguje
+2220;200;%1: Skrat
+2220;201;%1: Zlomenie snímaèa
+2220;202;%1: Neplatne kalibrované údaje ('%2')
+2220;203;%1: Chıba vıstupné napätie (%2)
+2220;204;%1: Skrat odstránenı
+2220;205;%1: Zlomenie snímaèa odstránené
+2220;206;%1: Vıstupné napätie je o.k.
+2220;207;%1: Vedenie zlomenia snímaèa %2
+2220;208;%1: Chyba zlomenia snímaèa vedenie %2 odstránené
+2220;209;%1: Chyba stopy
+2220;210;%1: Chyba nulového impulzu
+2220;250;%1: Zastavené
+2220;300;%1: Spojené
+2220;301;%1: Oddelené
+2220;500;IO-Timer: '%1' u existuje (%2, %3)
+2220;501;IO-Timer: Doba cyklu od '%1' (%2us) niè viacnásobné sytémového tiku (%3us)
+2220;600;IO-aktualizácia: Aktualizácia doby cyklu od '%1' (%2us) niè viacnásobné sytémového tiku (%3us)
+2220;601;IO-aktualizácia: Aktualizácia doby cyklu od '%1' (%2us) niè viacnásobné doby cyklu IO-aktualizácie (%3us)
+2220;602;IO-aktualizácia: '%1' u bola pridaná IO-aktualizácia
+2220;1000;IO: Privedenie IO-Timer zlyhalo
+2220;1001;IO: Privedenie IO-Update-Tasks zlyhalo
+2220;1002;IO: Privedenie IO-Parameter-Tasks zlyhalo
+2220;1003;IO: Inicializácia IO-Root objektu zlyhala
+2220;1004;IO: Privedenie IO-QuitError-Tasks zlyhalo
+2220;1005;IO: Privedenie a inicializácia ovládaèa zlyhali
+2220;1006;IO: Vyvolanie funkcie inštalácie pre '%1' zlyhalo
+2220;1007;%1: Klonovanie typov koncovıch bodov '%2' nie je podporované
+2220;1008;%1: Maximálny poèet klonov typu koncového bodu '%2' dosiahnutı (%3)
+2220;1009;%1: Neplatnı èas cyklu klonovania: %2ms (Èas cyklu Als: %3ms)
+2220;1013;%1: Dosiahnutı limit Shared Memory (%2)
+2220;1014;%1: Neplatnı typ koncovového bodu: Identifikátor '%2', typ '%3'
+2220;1015;%1: Koncovı bod '%2' u existuje (%3)
+2220;1016;%1: Neèakaná ve¾kos Shared Memory '%2': %3 (oèakávaná: %4)
+2220;1017;%1: Shared Memory  u existuje: '%2'
+2220;1018;%1: Názov prístroja '%2' u existuje (%3)
+2220;1019;%1: Názov koncového bodu '%2' (alebo èas) príliš dlhı
+2220;1020;%1: Inicializácia prístroja '%2' zlyhala (skontrolova konfiguráciu)
+2220;1021;%1: Oblas adresovania údajov (%2-%3) mimo oblas procesnıch údajov (%4)
+2220;1022;%1: Pretínanie oblasti adresovania údajov (Poèiatoèná adresa %2, dåka %3)
+2220;6800;Chyba ACB Callback: %1
+2220;12000;%1: Nie sú konfigurované iadne osi
+2220;12001;%1: zastavené
+2220;12002;%1: Zistená inkonzistencia
+2220;12003;%1: Verzia firmvéru prístroja %2 nemôe by ovládaná. Minimálne %3 nevyhnutné.
+2220;12004;%1: Hodnota '%2' je neplatná pre konfiguraènı záznam '%3'. Pouíva sa '%4' štandardná hodnota.
+2220;12005;%1: Interná chyba.
+2220;12006;%1: Internı referenènı senzor je konfigurovanı ale pouíva sa externı.
+2220;12007;%1: Pouíva sa konfigurovanı referenènı senzor
+2220;12008;%1: Zlomenie snímaèa na referenènom senzore
+2220;12009;%1: Zlomenie snímaèa na referenènom senzore odstránené
+2220;12010;%1: Externı referenènı senzor je konfigurovanı ale pouíva sa internı.
+2220;12011;%1: Neplatná hodnota referenèného senzora
+2220;12012;%1: Hodnota referenèného senzora je platná
+2220;12013;%1: konfiguraènı záznam '%2' nebol nájdenı. Zdedená hodnota '%3' nie je prípustná.
+2220;12014;%1: Hodnota '%2' pre konfiguraènı záznam '%3' sa nachádza mimo platnú oblas [%4..%5].
+2220;12015;%1: Neplatnı vıraz stavu (0x%3) prijatı od osi %2
+2220;12016;%1: Neplatnı typ údajov pre konfiguraènı záznam '%2'(Nájdenı: '%3', Oèakávanı: '%4'). Pouíva sa '%5' štandardná hodnota.
+2220;12017;%1: Neplatnı typ údajov pre konfiguraènı záznam '%2'(Nájdenı: '%3', Oèakávanı: '%4').
+2220;12018;%1: Hodnota '%2' pre konfiguraènı záznam '%3' sa nachádza mimo platnú oblas [%4..%5]. Pouíva sa '%5' štandardná hodnota.
+2220;12019;%1: Hodnota '%2' pre konfiguraènı záznam '%3' nie je niè viacnásobné z '%4'. Pouíva sa '%5' štandardná hodnota.
+2220;12020;%1: Hodnota '%2' pre konfiguraènı záznam '%3' nie je niè viacnásobné z '%4'.
+2220;12021;%1: iadny externı referenènı senzor nie je prítomnı na stavebnej skupine CPU.
+2220;12024;%1: Text konfiguraèného záznamu '%2' je príliš dlhı alebo príliš krátky (min %3, max %4 poèet znakov). Pouíva sa '%5' štandardná hodnota.
+2220;12025;%1: Text konfiguraèného záznamu '%2' je príliš dlhı alebo príliš krátky (min %3, max %4 poèet znakov).
+2220;12026;%1: '%2' Zmena hodnoty prekraèuje oblas (Hodnota: %3, Faktor: %4).
+2220;12027;%1: %2 Osi konfigurované na prístroj, maximálne povolené %3
+2220;12028;%1: Force %2 zap
+2220;12029;%1: Force %2 vyp
+2220;12030;%1: Force %2 doèasná premenná
+2234;201;%1: Neplatrnı alebo chıbajúci konfiguraènı záznam 'posUnitsToIncrements', pouitá hodnota %2
+2234;202;%1: Neplatnı prevádzkovı reim (interpolované urèenie polohy/poloha profilu)
+2234;210;%1: Nie sú konfigurované iadne PSU
+2234;211;%1: Príliš krátky èas cyklu %2ms (%3 Stanice CAN, %4kBaud)
+2234;250;%1: Poadovaná hodnota polohy prekroèenie oblasti (%2)
+2234;301;%1: Strata cyklickıch údajov (%2)
+2234;302;%1: neboli prijaté iadne cyklické údaje (%2)
+2234;303;%1: nepripravené (%2)
+2234;306;%1: Timeout (poèas vynulovania) (%2)
+2234;307;%1: Pohon sa zmení v DRIVECOM stav 'Blokovanie zapnutia' (%2)
+2234;310;%1: Chyba Trip. Kód poruchy: %2
+2235;201;%1: Neplatrnı alebo chıbajúci konfiguraènı záznam 'posUnitsToIncrements', pouitá hodnota %2
+2235;250;%1: Poadovaná hodnota polohy prekroèenie oblasti (%2)
+2235;251;%1: opakovane neboli prijaté iadne cyklické údaje
+2235;301;%1: Strata cyklickıch údajov (%2)
+2235;302;%1: neboli prijaté iadne cyklické údaje (%2)
+2235;303;%1: nepripravené (%2)
+2235;306;%1: Nastal timeout (%2)
+2235;307;%1: DRIVECOM prevádzkovı reim nie je podporovanı (%2)
+2235;350;%1: internı skrat/zemnenie, Code: %2
+2235;351;%1: Stály nadprúd, Code: %2
+2235;352;%1: Hardvér prístroja, Code: %2
+2235;353;%1: Vynulovanie softvéru (Watchdog), Code: %2
+2235;354;%1: Sieové prepätie, Code: %2
+2235;355;%1: Chyba Resolver 1, Code: %2
+2235;356;%1: Neplatné údaje/parametre, Code: %2
+2235;357;%1: Regulátor bàzd (teplota), Code: %2
+2235;358;%1: Prídavnı modul, Code: %2
+2235;359;%1: Sieové podpätie, Code: %2
+2235;360;%1: Preaenie (krútiaci moment), Code: %2
+2235;361;%1: akı nábeh, Code: %2
+2235;362;%1: Chyba krútiaceho momentu, Code: %2
+2235;363;%1: Regulácia rıchlosti, Code: %2
+2235;364;%1: Riadenie prídavnıch funkcií, Code: %2
+2235;365;%1: Riadenie polôh, Code: %2
+2235;366;%1: Vleèná chyba, Code: %2
+2235;367;%1: Riadenie hardvéru prístroja, Code: %2
+2235;368;%1: Špec. rıchlos (zvıšenı krútiaci moment), Code: %2
+2236;2;%1: Zápis parametrov SERCOS %2 zlyhal (%3, %4).
+2236;3;%1: Èítanie prvkov %2 parametrov SERCOS %3 zlyhalo (%4).
+2236;5;%1: Dåka údajov konfigurovanıch poadovanıch hodnôt (MDT) je pridlhá (konfigurované %2, maximálne %3), pouíva sa štandardná konfigurácia.
+2236;12;%1: Interná chyba komunikácie SERCOS (%2).
+2236;13;%1: Watchdog bol hlásenı stavebnou skupinou SERCOS.
+2236;14;%1: Neplatná hodnota pri èítaní parametra: 0x%2, prvok %3, hodnota %4.
+2236;15;%1: Neplatná dåka údajov pri èítaní parametra: 0x%2, prvok %3, dåka %4.
+2236;53;%1: Pohon nie je pripravenı na prevádzku (SERCOS stav pohonu 0x%2).
+2236;55;%1: SERCOS nastala chyba triedy 1: 0x%2 - %3.
+2236;60;%1: Èasovı limit pri prechode stavu DRIVECOM %2.
+2236;70;%1: SERCOS Prepínanie fáz nie je moné, nesprávny stav pohonov.
+2236;151;%1: SERCOS nastala vıstraha triedy2: 0x%2 - %3.
+2236;152;%1: Hardvérovo špecifická chyba SERCOS (è=%2, fáza=%3, %4, %5, %6).
+2236;157;%1: Chyba komunikácie SERCOS: Vıpadok telegramu pohonov vo fáze 4.
+2236;158;%1: Chyba komunikácie SERCOS: Vıpadok telegramu pohonov vo fáze %2 (Stav %3).
+2236;163;%1: Vykonanie povelu SERCOS %2 zlyhalo (%3, %4).
+2236;164;%1: Dåka údajov konfigurovanıch skutoènıch hodnôt (AT) je pridlhá (konfigurované %2, maximálne %3), pouíva sa štandardná konfigurácia.
+2236;165;%1: Závaná interná chyba SERCOS (%2).
+2236;166;%1: Konfigurovanı parameter %2 v poadovanıch hodnotách (MDT) nie je prenosnı.
+2236;167;%1: Konfigurovanı parameter %2 v skutoènıch hodnotách (AT) nie je prenosnı.
+2236;168;%1: Neplatnı parameter SERCOS pri prepnutí vo fáze %2: %3.
+2236;169;%1: Pohon nie je pripravenı na zapnutie (SERCOS stav pohonu 0x%2).
+2236;170;%1: Pohon nie je pripravenı na prevádzku alebo nie je zapnutı (SERCOS stav pohonu 0x%2).
+2236;171;%1: Pohon sa nedá zapnú, vıkon nie je pripojenı (SERCOS stav pohonu 0x%2).
+2236;172;%1: '%2' Poadovaná hodnota prekraèuje oblas (Hodnota: %3, Faktor: %4).
+2236;173;%1: Prídavná poadovaná hodnota '%2' prekraèuje oblas (Hodnota: %3, Faktor: %4).
+2236;174;%1: Konfigurované neplatné doby cyklov SERCOS (%2 us).
+2236;175;%1: Krúok SERCOS nie je uzavretı.
+2236;176;%1: Zapísa stav sady parametrov:  Poèet=%2, zapísané=%3, chybné=%4.
+2236;177;%1: Naèíta stav sady parametrov:  Poèet=%2, naèítané=%3, chybné=%4.
+2236;178;%1: ignoreMessage nie je podporovaná.
+2236;179;%1: Stav pohonu nemôe by ïalej sprostredkovanı. Aktívny report stavu.
+2236;180;%1: Nájdená dvojitá adresa SERCOS na rozhraní.
+2236;181;%: Nájdená neplatná adresa SERCOS na rozhraní.
+2236;182;%1: Nepodporovaná verzia SERCOS zariadenia.
+2236;183;%1: Prekroèenı maximálny poèet telegramov MDT.
+2236;184;%1: Prekroèenı maximálny poèet telegramov AT.
+2236;185;%1: Konfigurovanıch prive¾a údajov pre doby cyklov rozhrania (%2  s).
+2236;186;%1: Neplatnı poèet spojení SCP_FixCFG (%2 oèakávané).
+2236;187;%1: Prive¾a spojení projektovanıch (%2 povolené).
+2236;188;%1: Dvojité èíslo spojení %2.
+2236;189;%1: Nekonzistentná dåka údajov spojenia %2.
+2236;190;%1: Nekonzistentná doba cyklu spojenia %2.
+2236;191;%1: Dåka spojenia %2 je väèšia ako maximálna dåka.
+2236;192;%1: Konzumované spojenie %2 nie je produkované.
+2236;193;%1: Nie sú projektované iadne %2-spojenia v projektovacom súbore.
+2236;194;%1: Chyba pri pridelení %2-spojenia (èíslo spojenia = %3).
+2236;195;%1: Projektovaná dåka údajov %2 spojenia %3 nesúhlasí s oèakávanou hodnotou %4.
+2236;196;%1: Projektovaná dåka %2 premennej pre IDN %3 nesúhlasí s oèakávanou hodnotou %4.
+2236;197;%1: Projektovanı offset %2 premennej pre IDN %3 nesúhlasí s oèakávanou hodnotou %4.
+2236;198;%1: Premenná %2 v obraze procesu sa nepouíva kvôli konfiguraènému záznamu.
+2236;199;%1: Nepodporovaná hodnota %2 pre záznam %3 v projektovacom súbore.
+2236;200;%1: Nekonzistencia v projektovacom súbore.
+2236;201;%1: Projektovací súbor '%2' nebol nájdenı.
+2236;202;%1: Neplatná vıstavba projektovacieho súboru (Chyba syntaxe XML).
+2236;203;%1: Neplatná hodnota '%2' pre XML uzol '%3' v projektovacom súbore.
+2236;204;%1: Potrebnı XML uzol '%2' chıba v projektovacom súbore.
+2236;205;%1: Povinnı XML uzol '%2' v projektovacom súbore je prázdny.
+2236;206;%1: Pre IDN %2  nebola nájdená iadna premenná v projektovacom súbore.
+2236;207;%1: Prístroj nebol nájdenı v projektovacom súbore (adresa=%2).
+2236;208;%1: Hodnota konfiguraèného záznamu '%2' odporuje jednej alebo viacerım hodnotám v projektovacom súbore.
+2236;209;%1: Nie sú podporovaní viacerí uívatelia pre jedno spojenie (èíslo spojenia = %2).
+2236;210;%1: Chyba pri akcii parametrov (IDN = '%2', akcia = '%3', kód poruchy = %4, stav poruchy = %5, prekroèenie èasu = %6).
+2236;211;%1: Value '%2' for parameter '%3' does not match expected value '%4'.
+2236;212;%1: Hodnota pre parameter %2 nezodpovedá oèakávanej hodnote.
+2236;213;%1: Bit platnosti prístroja pri prechode do fázy %2 je u zadanı.
+2236;214;%1: Bit platnosti prístroja pri prechode do fázy %2 nie je zadanı.
+2236;215;%1: Chyba pri prístupe parametra ovládaèa vo fáze %2
+2236;216;%1: Vıstupy nie sú aktivované.
+2236;217;%1: Vstupné hodnoty nie sú platné.
+2236;218;%1: Chyba I/O: Text = %2, štandard SERCOS = %3, class = %4, èíslo diagnózy = %5
+2236;219;%1: Chyba I/O zmazaná
+2236;220;%1: Vıstraha I/O: Text = %2, štandard SERCOS = %3, class = %4, èíslo diagnózy = %5
+2236;221;%1: Vıstraha I/O odpadla
+2236;222;%1: Informácia I/O: Text = %2, štandard SERCOS = %3, class = %4, èíslo diagnózy = %5
+2236;223;%1: Zmena topológie rozhrania z '%2' na '%3'
+2236;224;%1: Zlomenie krúku medzi %2 a %3
+2236;225;%1: Nekonzistentná dåka údajov spojenia %2 (oèakávané %3, konfigurované %4).
+2236;226;%1: Nájdená dvojitá adresa SERCOS (%2) na rozhraní.
+2236;227;%: Nájdená neplatná adresa SERCOS (%2) na rozhraní.
+2236;228;%1: Chyba pri zadávaní adresy: Poèet prístrojov nemohol by urèenı
+2236;229;%1: Chyba pri zadávaní adresy: Informácia o prístrojoch nemohla by urèená
+2236;230;%1: Zadávanie adresy kvôli konfiguraènej chybe na zariadení %2 nie je moné
+2236;231;%1: Chıbajúci XML uzol '%2' chıba v projektovacom súbore
+2236;232;%1: Chyba pri zadávaní adresy: Informácia o prístrojoch nemohla by urèená
+2236;233;%1: Chyba pri zadávaní adresy: Elektronickı typovı štítok (%2, %3) nie je projektovanı
+2236;234;%1: Chyba pri zadávaní adresy: Poradie slave je rozdielne
+2236;235;%1: Nepodporovaná ve¾kos %2 IDN %3 v cyklickıch údajoch
+2236;236;%1: Fehler beim Parameterzugriff des Treibers in Phase %2 bei IDN %3
+2236;237;%1: Fehler bei Adressvergabe für vendorCode %2 und vendorDeviceID %3 (Typenschild von %4)
+2236;238;%1: Berechnete Telegrammlaufzeit zu gering
+2237;1;%1: Prístroj %2 je u konfigurovanı
+2237;2;%1: Konfigurácia Auto-PCI nie je moná, v systéme sa nachádza viac ako jedna karta tohto typu
+2237;3;%1: Zlá kvalita DLL-Lock (udalosti %2, aktuálny stav %3)
+2237;4;%1: DLL zasunú
+2238;1;%1: Stav Asi-Slave: %2
+2238;2;%1: Stav Asi-Slave OK
+2241;17100;%1: Obdranı telegram KVC s neplatnou dåkou: Typ telegramu 0x%2, dåka %3
+2241;17101;%1: Obdranı neznámy telegram KVC : Typ telegramu 0x%2, dåka %3
+2241;17102;%1: %2 Stratenı stav telegramu(ov) z KVC ruènı obsluhovací prístroj
+2241;17103;%1: Poèet klávesov podporovanıch KVC ruènım obsluhovacím prístrojom (%2) väèší ako poèet klávesov podporovanıch riadením (%3)
+2241;17104;%1: Poèet LED diód podporovanıch KVC ruènım obsluhovacím prístrojom (%2) väèší ako poèet LED diód podporovanıch riadením (%3)
+2242;201;%1: Faktor prepoèítavania polôh (posUnitsToIncrements) chıba alebo je neplatnı - pouíva sa štandardná hodnota %2
+2242;211;%1: konfigurovaná doba cyklu pre Post-Update je príliš malá (RX-èas transferu: %2)
+2242;250;%1: Poadovaná hodnota prekroèenie oblasti (%2)
+2242;251;%1: opakovane neboli prijaté iadne cyklické údaje
+2242;301;%1: Strata cyklickıch údajov (%2)
+2242;302;%1: neboli prijaté iadne cyklické údaje (%2)
+2242;303;%1: nepripravené (%2)
+2242;306;%1: Timeout (%2)
+2242;307;%1: Prevádzkovı reim nie je podporovanı (%2)
+2242;350;%1: internı skrat/zemnenie, Code: %2
+2242;351;%1: Stály nadprúd, Code: %2
+2242;352;%1: Hardvér prístroja, Code: %2
+2242;353;%1: Vynulovanie softvéru (Watchdog), Code: %2
+2242;354;%1: Sieové prepätie, Code: %2
+2242;355;%1: Chyba Resolver 1, Code: %2
+2242;356;%1: Neplatné údaje/parametre, Code: %2
+2242;357;%1: Regulátor bàzd (teplota), Code: %2
+2242;358;%1: Prídavnı modul, Code: %2
+2242;359;%1: Sieové podpätie, Code: %2
+2242;360;%1: Preaenie (krútiaci moment), Code: %2
+2242;361;%1: akı nábeh, Code: %2
+2242;362;%1: Chyba krútiaceho momentu, Code: %2
+2242;363;%1: Regulácia rıchlosti, Code: %2
+2242;364;%1: Riadenie prídavnıch funkcií, Code: %2
+2242;365;%1: Riadenie polôh, Code: %2
+2242;366;%1: Vleèná chyba, Code: %2
+2242;367;%1: Riadenie hardvéru prístroja, Code: %2
+2242;368;%1: Špec. rıchlos (zvıšenı krútiaci moment), Code: %2
+2242;4000;%1: Neplatná prenosová rıchlos: %2kB (oèakávané: %3kB)
+2242;4009;%1: Zasielanie správy CAN zlyhalo (CAN-Id:%2, prídavná informácia:%3)
+2242;4013;%1: Vıstraha rozhrania
+2242;4014;%1: Rozhranie pasívne
+2242;4015;%1: Rozhranie Off
+2242;4016;%1: iadna chyba
+2242;4017;%1: Chyba prístroja
+2242;4018;%1: Chybovı stav ukonèené rozhranie Off
+2242;4019;%1: Zlá kvalita rozhrania (Poèítadlo rozhranie pasívne: %2, Poèítadlo vıstrahy rozhrania %3)
+2242;4020;%1: Prihlásenie Status-Callback zlyhalo
+2242;4025;%1: Neplatná doba cyklu (%2ms) pre Clock-Master
+2242;4150;%1: Nastavenie prenosovej rıchlosti %2 Baud zlyhal
+2242;4151;%1: CAN-Id %2 u registrované
+2242;4170;%1: Chyba príjmu pre CAN-Id=%2
+2242;4171;%1: Chyba CAN preteèenie údajov pre CAN-Id %2
+2242;4172;%1: Prijímajúca Fifo je plná - Preteèenie prijímajúcej pamäte
+2242;6051;%1: CAN-Open adresa uzla (%2) viacnásobne konfigurovaná (%3)
+2242;6052;%1: K-Link (virtuálna) adresa uzla (%2) sa u pouíva (%3)
+2242;6053;%1: Virtuálna adresa K-Link %2 mimo platnú oblas (Adresa uzla %3, PDO-è. %4)
+2242;6100;%1: SDO (Index: 0x%2 Subindex: %3) Potvrdenie timeout (%4 ms)
+2242;6101;%1: SDO (Index: 0x%2 Subindex: %3) Chyba prenosu (%4 ms)
+2242;6102;%1: SDO (Index: 0x%2 Subindex: %3) Ve¾kos prijímajúceho zásobníka je príliš malá (oèakávaná ve¾kos: %4)
+2242;6103;%1: SDO (Index: 0x%2 Subindex: %3) prerušené serverom: 0x%4 (%5)
+2242;6120;%1: Potvrdenie Timeout Node-Guarding
+2242;6121;%1: Neplatná odpoveï Node-Guarding
+2242;6122;%1: Timeout Heartbeat
+2242;6140;%1: neboli prijaté iadne cyklické údaje
+2242;6141;%1: Akcia (%2) pre PDO nie je moná (%3)
+2242;6142;%1: Doba cyklu PDO (%2us) niè viacnásobné doby cyklu CAN (%3us)
+2242;6143;%1: Neplatné èíslo PDO: %2 (platné: 1 .. %3)
+2242;6144;%1: Konflikt synchronizácie
+2242;6145;%1 PDO nie je podporované (%2)
+2242;6150;%1: Potvrdenie Timeout RTR
+2242;6160;%1: Núdzová správa z uzla %2: Code: %3
+2242;6161;%1: Núdzová správa z uzla %2: Code: %3
+2242;6162;%1: Reset chyby alebo iadna chyba, Code: %2
+2242;6200;%1: Správa Bootup obdraná: (Adresa uzla: %2)
+2242;6300;%1: Prive¾a PDO pre aktuálny poèet uzlov CAN-Open: (PDO-è.: %2, Uzol: %3)
+2242;6301;%1: Prive¾a PDO pre aktuálny poèet uzlov CAN-Open: (Uzol-è.: %2, PDO: %3)
+2242;8000;%1: Monı konflikt, keï sú CAN-Open a K-CAN prevádzkované na rovnakom rozhraní
+2242;8210;%1: Všeobecná chyba, Code: %2
+2242;8240;%1: Teplota prístroja, Code: %2
+2242;8250;%1: Chyba hardvéru prístroja, Code: %2
+2242;8251;%1: Chyba hardvéru prístroja, prerušenı vnútornı kábel, Code: %2
+2242;8280;%1: Komunikaèná chyba, Code: %2
+2242;8281;%1: Komunikaèná chyba, Code: %2
+2242;8282;%1: Preteèenie CAN (stratenı objekt), Code: %2
+2242;8283;%1: Prístroj v pasívnom chybovom reime, Code: %2
+2242;8284;%1: Prístroj u nie je v stave rozhranie Off, Code: %2
+2242;8290;%1: Externá chyba, Code: %2
+2242;9000;%1: LSS/LMT: Prístroj úspešne konfigurovanı
+2242;9001;%1: LSS/LMT: Prístroj úspešne konfigurovanı, ale permanentná pamä nie je podporovaná
+2242;9010;%1: LSS/LMT: Prístroj nie je detekovate¾nı, Akcia %2, Code %3
+2242;9020;%1: LSS/LMT: Neplatné èíslo uzla
+2242;9021;%1: LSS/LMT: Èíslo uzla sa nedá nastavi, Chyba %2, špecifická %3
+2242;9024;%1: LSS/LMT: iaden prístup na pamäové médium
+2242;9025;%1: LSS/LMT: Konfigurácia sa nedá uloi, Chyba %2, špecifická %3
+2242;9040;%1: LSS/LMT: Neplatnı konfiguraènı záznam, lssEnable a lmtEnable pre rovnakı prístroj
+2242;9041;%1: LSS/LMT: Neplatnı konfiguraènı záznam, 'lmtSerial' iaden BCD - Code
+2242;9042;%1: Balík Node Guard bol prijatı (Node Guarding deaktivovanı)
+2242;9043;%1: Produktové èíslo prístroja (%2) nesúhlasí s oèakávanım produktovım èíslom (%3)
+2242;9044;%1: Podpätie medziokruhu (Register chıb: %2)
+2242;9045;%1: Prehriatie motora (Register chıb: %2)
+2242;9046;Vymaza
+2242;9047;%1: Skrat koncovı stupeò (Register chıb: %2)
+2242;9048;%1: Prepätie v medziokruhu (Register chıb: %2)
+2242;9049;%1: Komunikaèná chyba CAN: Rozhranie Off (Register chıb: %2)
+2242;9050;Vymaza!!!!
+2242;9051;%1: Parameter bol limitovanı (Register chıb: %2)
+2242;9052;%1: Dosiahnutı koncovı spínaè SW (Register chıb %2)
+2242;9053;%1: Chyba vo firmvéri pohonu (Register chıb: %2)
+2242;9054;%1: Prepätie v medziokruhu (Register chıb: %2)
+2242;9055;%1: Èítajúci prístup SDO na objekt 0x%2:0x%3 zakázanı regulátorom filtra
+2242;9056;%1: Zapisujúci prístup SDO na objekt 0x%2:0x%3 zakázanı regulátorom filtra
+2243;6500;%1: iadna chyba (Code: %2)
+2243;6510;%1: Všeobecná chyba na module (Code: %2)
+2243;6523;%1: Skrat na vıstupe modulu (Code: %2)
+2243;6533;%1: Chıba napájacie napätie (Code: %2)
+2243;6580;%1: Komunikaèná chyba na module (Code: %2)
+2243;6581;%1: Chyba v komunikácii s modulom (Code: %2)
+2243;6590;%1: Externá chyba na module (Code: %2)
+2243;6600;%1: iadna chyba (Code: %2)
+2243;6610;%1: Všeobecná chyba na module (Code: %2)
+2243;6620;%1: Hardvérová chyba na module (Code: %2)
+2243;6680;%1: Komunikaèná chyba na module (Code: %2)
+2243;6681;%1: Komunikaèná chyba na module (Code: %2)
+2243;6690;%1: Externá chyba na module (Code: %2)
+2243;6700;%1: iadna chyba (Code: %2)
+2243;6701;%1: Všeobecná chyba na module (Code: %2)
+2243;6702;%1: Pokles minimálneho prúdu zo strany vstupu na module (Code: %2)
+2243;6703;%1: Pokles minimálneho prúdu zo strany vıstupu na module (Code: %2)
+2243;6704;%1: Komunikaèná chyba na module (Code: %2)
+2243;6705;%1: Komunikaèná chyba na module (Code: %2)
+2243;6706;%1: Externá chyba na module (Code: %2)
+2243;6800;%1: iadna chyba (Code: %2)
+2243;6801;%1: Komunikaèná chyba na module (Code: %2)
+2243;6802;%1: Skrat na module (maska skratu 0x%2)
+2243;6803;%1: Modul hlási odstránenie skratu
+2243;6804;%1: IO-Port (%2) konfigurovanı ako vstup a ako vıstup, pouitá štandardná konfigurácia (vstup)
+2245;6801;%1: Núdzová situácia: Prekroèenı limit CAN-Warning
+2245;6802;%1: Núdzová situácia: CAN rozhranie Off
+2245;6803;%1: Núdzová situácia: Vysielací zásobník pretiekol
+2245;6804;%1: Núdzová situácia: Prijímací zásobník pretiekol
+2245;6806;%1: Núdzová situácia: Neplatná dåka PDO(%2, oèakávaná: %3)
+2245;6807;%1: Núdzová situácia: SYNC-Timeout
+2245;6808;%1: Núdzová situácia: Node Guarding-Timeout
+2245;6809;%1: Núdzová situácia: Zmenené osadenie svoriek
+2245;6812;%1: Núdzová situácia: Svorka (%2) nie je podporovaná
+2245;6814;%1: Núdzová situácia: 'Chyba EEPROM'
+2245;6815;%1: Núdzová situácia: Chyba svoriek rozhrania: %2 (Svorka: %3)
+2245;6816;%1: Núdzová situácia: Chyba svoriek (Svorka: %2, Kanál: %3) nastal
+2245;6860;%1: Núdzová situácia: Chyba terminálu (Terminál: %2, Kanál: %3) odstránená
+2245;6880;%1: Núdzová situácia: %2 %3 %4 %5 %6 %7 %8
+2245;6881;%1: Núdzová situácia: iadna chyba
+2246;1;%1: Spojenie TCP zamietnuté
+2246;2;Timeout príkaz (Príkaz=%1, Timeout=%2 ms)
+2246;3;Neplatná odpoveï príkazu (Príkaz=%1, Odpoveï=%2)
+2250;1;HMS IO hlásenie èas %1, HostTyp: %2, Host: %3, Meno uívate¾a: %4, Operácia: %5, Médium: %6, Koniec hlásenia: %7
+2250;2;HMS IO hlásenie èas %1, Skupina premennıch: %2, Názov súboru: %3, Koniec hlásenia: %4
+2250;3;HMS IO hlásenie èas %1, Názov súboru: %2, Koniec hlásenia: %3
+2250;4;HmiServer správa operaèného reimu: %1, Host: %2, Meno uívate¾a: %3, starı stav: %4, novı stav: %5
+2250;5;HMS uívate¾ské hlásenie èas %1, HostTyp: %2, Host: %3, Meno uívate¾a: %4
+2250;6;HMS uívate¾ské hlásenie èas %1, hlásenie: %2
+2250;7;HMS IO hlásenie zmeny premennıch èas %1, HostTyp: %2, Host: %3, UserName: %4, základnı typ: %5, Koniec hlásenia: %6
+2250;8;HMS IO hlásenie zmeny premennıch èas %1, stará hodnota: %2, Koniec hlásenia: %3
+2250;9;HMS IO hlásenie zmeny premennıch èas %1, nová hodnota: %2, Èas hlásenia: %3
+2250;10;HMS IO hlásenie zmeny premennıch èas %1, systémová premenná: %2, Koniec hlásenia: %3
+2250;11;HMS IO hlásenie zmeny premennıch èas %1, systémová premenná: %2, Koniec hlásenia: %3
+2250;12;Chyba konfigurácie: %1 %2
+2250;13;VarSvr Variablen-Änderungs-Meldung, HostType: %1, Host: %2, UserName: %3, Basistyp: %4
+2250;14;VarSvr Variablen-Änderungs-Meldung alter Wert: %1
+2250;15;VarSvr Variablen-Änderungs-Meldung Teil , neuer Wert: %1
+2250;16;VarSvr Variablen-Änderungs-Meldung, System Variable: %1, Meldungsende: %2
+2250;17;VarSvr Variablen-Änderungs-Meldung, System Variable: %1, Meldungsende: %2
+2300;6900;%1: Chıba napájanie napätím PWM
+2300;6901;%1: Nadprúd pohon V-osí
+2300;6902;%1: Nadprúd ventil %2
+2300;6903;%1: Preteèenie poèítadla prírastkovı senzor %2
+2300;6904;%1: Prírastkovı senzor %2 pokazenı
+2300;6905;%1: Prírastkovı senzor %2 stratenı
+2300;6906;%1: Riadiace PDO stratené
+2300;6907;%1: Nesprávny príkaz pojazdu
+2300;6908;%1: Koncová poloha nie je dosiahnute¾ná
+2300;6909;%1: Polohovací senzor ventil pokazenı %2 
+2300;6910;%1: Prúd ventilov %2 sa nedá odmera
+2300;6911;%1: Kríové postavenie rarmena
+2300;6912;%1: Chyba potvrdená 0x%2
+2300;6913;%1: Chyba ASSERT
+2300;6914;%1: aká chyba v KSX
+2300;6915;%1: Watchdog
+2300;6916;%1: CAN rozhranieOff
+2300;6917;%1: CAN Error-pasívny
+2300;6918;%1: CAN rozhranie preteèenie
+2300;6919;%1: Sync-Timeout
+2300;6920;%1: Chyba samostatného testu zapínania
+2300;6921;%1: Neplatná hodnota kalbrácie AI
+2300;6922;%1: Otáèky ventilátora %2 pod minimom
+2300;6923;%1: Skrat na vıstupe
+2300;6924;%1: PDO %2 nebolo prijaté
+2300;6925;%1: Prevzatie firmvéru zlyhalo (Popis chyby %2)
+2300;6926;%1: PDO %2 nebolo prijaté
+2300;6927;%1: Nekompatibilná verzia firmvéru: %2
+3001;1;Assert:%1 Súbor:%2 Riadok:%3
+3001;2;Nedostatok pamäte k dispozícii
+3001;3;Inicializácia RPC-Service: iadne platné ID serveru: %1
+3001;4;Registrácia RPC-Service: Registrácia na mapovaní portov nie je pre server moná %1
+3001;5;RPC-Library TCP-Service nemôu by vytvorené
+3001;6;Vratná hodnota RPC-Library %1 z svc_run
+3001;7;Registrácia Prog:%1, Verz:%2 UDP (zdierka %3) zlyhala
+3001;8;Registrácia Prog:%1, Verz:%2 TCP (zdierka %3) zlyhala
+3001;9;iadny typ servera k dispozícii
+3001;10;Inicializácia RPC-Service: iadne zdroje pre Server %1. Error %2
+3001;11;Registrácia RPC-Service: iadne vo¾né zdierky pre registráciu na mapovaní portov pre server %1
+3001;12;nie sú k dispozícii iadne RPCMan-Program è.
+3001;2000;Komponent vypnutı
+3110;0;Assert:%1 Súbor:%2 Riadok:%3
+3110;1;Assert na kanáli:%1 CAN-Id:%2 Riadok:%3
+3110;100;Karta CAN nie je pripravená, nesprávne Powerup-ID
+3110;101;Neznámy prevádzkovı reim%1 
+3110;102;Kanál na rozhraní je u nainštalovanı %1
+3110;103;Deinštalova neznámy kanál na rozhraní %1
+3110;104;Neplatné èíslo rozhrania %1
+3110;105;Neznáma úloha (%1) v mailboxe servera
+3110;106;Preteèenie Interrupt-FIFO
+3110;107;Neznámy typ interrupt %1
+3110;108;Timeout pri semafóre kanálu DPM-Service
+3110;109;Prijaté neoèakávané potvrdenie
+3110;110;Otvorenie ovládaèa kernelu %1 zlyhalo, posledná chyba %2
+3110;111;Zatvorenie ovládaèa kernelu zlyhalo, posledná chyba %1
+3110;112;Karta CAN nie je po hardvérovom resete pripravená, nesprávne PCI-Vendor-ID
+3110;113;Karta CAN nie je po hardvérovom resete pripravená, nesprávne Powerup-Id
+3110;114;POST (hardvérová) chyba RomOk=%1 RamOk=%2 EepromOk=%3 Kanál0 nainštalovanı=%4 Kanál1 nainštalovanı=%5
+3110;115;Chyba pri otvorení súboru s firmvérom %1, %2
+3110;116;Chyba v h¾adaní súboru %1
+3110;117;Chyba pri èítaní zo súboru %1
+3110;118;Súbor s firmvérom je príliš malı
+3110;200;Timeout pri prístupovom semafore pre zásobník DPM-Full-CAN
+3110;201;Zásobník príliš malı pre prijaté hlásenie BASIC-CAN (CAN-Id=%1, dåka správ=%2, ve¾kos zásobníka=%3)
+3110;202;Zásobník príliš malı pre prijaté hlásenie FULL-CAN (CAN-Id=%1, dåka správ=%2, ve¾kos zásobníka=%3)
+3110;203;Kanál %1: Timeout pri prístupovom semafore pre zásobník DPM-Full-CAN (Zásobník správ è.=%2)
+3110;204;Kanál %1: Zásobník príliš malı pre prijaté hlásenie FULL-CAN (Zásobník správ è.=%2, ve¾kos zásobníka=%3)
+3110;205;Kanál %1: Zásobník príliš malı pre prijaté hlásenie BASIC-CAN (CAN-Id=%2, ve¾kos zásobníka=%3)
+3110;300;Chyba vzdialeného poèítaèa: Preteèenie údajov stavebného prvku CAN na kanál %1 (%2 hlásenie stratené)
+3110;301;Chyba vzdialeného poèítaèa: Hlásenie (È. zásobníka=%1) Timeout semafóra (Kanál=%2)
+3110;302;Chyba vzdialeného poèítaèa: Neznáme oznaèenie: %1
+3110;500;Karta CAN: PCI-Bus %1 Slot %2 Prihlásenie ovládaèa interrupt %3 zlyhali
+3110;501;Karta CAN: PCI-Bus %1 Slot %2 Prihlásenie pri hardvéri interrupt %3 zlyhali
+3110;502;Karta CAN: PCI-Bus %1 Slot %2 Odstránenie ovládaèa interrupt %3 zlyhali
+3110;503;Karta CAN: PCI-Bus %1 Slot %2 Odhlásenie z hardvéru interrupt %3 zlyhali
+3110;504;Karta CAN: Spojenie prístroja PCI (PCI-Bus %1, Slot %2) zlyhalo
+3110;505;Karta CAN: Oddelenie prístroja PCI (PCI-Bus %1, Slot %2) zlyhalo
+3110;10100;Úloha Timeout
+3110;10101;Potvrdenie úlohy Timeout
+3110;10102;Prijatı neznámy príkaz (%1H)
+3110;10103;Prijímajúci zásobník je v úlohe testovacieho príkazu  príliš malı (%1 Byte namiesto %2 Byte)
+3110;10104;Negatívny vısledok pri potvrdení èiastkovej úlohy
+3110;10105;Zásobník potvrdenia servisu je príliš malı (príkaz=%1, max. ve¾kos zásobníka=%2)
+3110;10106;Preteèenie v prijímajúcom mailboxe Server-Task %1 s %2 mailami
+3110;10110;Vısledok potvrdenia servisu: Neznámy
+3110;10111;Vısledok potvrdenia servisu: iadne pamäové miesto
+3110;10112;Vısledok potvrdenia servisu: Neplatná dåka údajov
+3110;10113;Vısledok potvrdenia servisu: Nekonzistentné údaje
+3110;10114;Vısledok potvrdenia servisu: Úloha nebola prijatá
+3110;10115;Vısledok potvrdenia servisu: Nie sú k dispozícii iadne zásobníky správ FULL-CAN
+3110;10116;Vısledok potvrdenia servisu: Neznámy príkaz
+3110;10117;Vısledok potvrdenia servisu: Neplatnı kanál
+3110;10118;Vısledok potvrdenia servisu: Neplatná prenosová rıchlos
+3110;10119;Vısledok potvrdenia servisu: SJA1000 nebolo nájdené
+3110;10120;Vısledok potvrdenia servisu: Neplatnı typ správ
+3110;10121;Vısledok potvrdenia servisu: Dvojnásobné zadané prijímajúce CAN-Id
+3110;10122;Vısledok potvrdenia servisu: Neplatnı typ interrupt
+3110;10123;Vısledok potvrdenia servisu: Neplatná maska interrupt
+3110;10124;Vısledok potvrdenia servisu: Nebol rezervovanı iaden zásobník
+3110;10125;Vısledok potvrdenia servisu: POST (hardvérová) chyba
+3110;10127;Vısledok potvrdenia servisu: Kanál u bol nainštalovanı
+3110;10128;Vısledok potvrdenia servisu: Kanál nebol nainštalovanı
+3110;10129;Vısledok potvrdenia servisu: Neznámy príkaz podporované preberanie firmvéru
+3110;10130;Vısledok potvrdenia servisu: Chyba zápisu flash
+3110;10131;Vısledok potvrdenia servisu: Prevzatı firmvér obsahuje chyby CRC
+3110;20200;Zásobník posielania správ nie je prázdny
+3110;20201;Nebola prijatá iadna správa
+3110;20202;Štatistika nebola spustená
+3110;20203;Kanál %1: Zásobník posielania správ nie je prázdny (È. zásobníka správ=%2)
+3110;20204;Kanál %1: Nebola prijatá iadna správa (È. zásobníka správ=%2)
+3110;20205;Kanál %1: Nebola prijatá iadna správa (BASIC-CAN)
+3110;20206;Kanál %1: Stanovenie štandardnej prenosovej rıchlosti nie je firmvérom V%2.%3 podporované
+3500;10001;Nedostatok pamäte - %1
+3500;10002;Nedostatok pamäte - %1
+3500;10003;Nedostatok pamäte - %1 %2
+3500;10004;Obnovenie inštalaènıch úloh nie je moné.
+3500;10010;SOM nie je k dispozícii.
+3500;10105;Chyba pri otváraní súboru %1.
+3500;10201;Server sa nemôe prihlási pri TCP-Manager: %1
+3500;10202;Server sa nemôe odhlási pri TCP-Manager: %1
+3500;10203;Neplatné vyvolanie servisu (Servis nie je nainštalovanı): %1
+3500;10206;Neplatná špecifikácia prístroja: %1
+3500;10208;Server nemôe by aktivovanı: %1
+3500;10210;Pri zasielaní RPC-Client nastala chyba Mutex: %1, z %2 na %3
+3500;10401;Inštalácia Subdevice Installtask nie je moná: %1
+3500;10402;Funkèná jednotka %1 nemôe by nainštalovaná.
+3500;10403;Task %1 nemôe by nainštalovanı.
+3500;10406;Nedostatok pamäti pri èítaní FU: %1
+3500;10414;Pri inštalácii Function Unit %1 došlo k %2 varovaniam.
+3500;10415;Súbor SUL %1 obsahuje neplatné alebo dvojité záznamy.
+3500;10417;Zariadenie %1 nemôe by nainštalované.
+3500;10418;Resource %1 nemôe by nainštalovaná.
+3500;10422;Prvok %1 nie je známy/nainštalovanı
+3500;10423;Nedostatok pamäte pri inštalácii objektu %1.
+3500;10424;Nedostatok pamäte pri inštalácii OBJECT: %1.
+3500;10425;Súbor SUL, hodnota nemôe by naèítaná: [%1] %2
+3500;10427;Hodnota súboru SUL nie je deklarovaná, k¾úè/atr: %1/%2
+3500;10428;Hodnota súboru SUL nesprávne deklarovaná, Key/Attr: %1,%2
+3500;10429;Rozdielne systémové názvy (Cesta aplikácie): %1
+3500;10430;V súboroch SUL boli nájdené rôzne systémové názvy.
+3500;10431;SUL-File nebol nájdenı v ceste aplikácie %1
+3500;10432;Súbor FUL nebol nájdenı v prieèinku aplikácie %1
+3500;10433;Neplatnı formát súboru SUL: %1 , %2
+3500;10434;Neplatná deklarácia v súbore %1
+3500;10435;Neplatnı stav objektu %1 pri deinštalácii.
+3500;10436;Hodnota v súbore SUL nie je deklarovaná, Key: %1, Attr: %2
+3500;10437;Neplatnı stav %1. Inštalácia %2 preto nie je moná.
+3500;10438;Deinštalácia: neplatnı stav objektu: %1 (deinstall %2)
+3500;10440;Obnovenie inštalaènıch úloh nie je moné: %1.
+3500;10450;Nelegálne pouitie iterátora v inštalaènej tabu¾ke! - %1
+3500;10451;%3 <%4> nie je deklarované pre %1 <%2>.
+3500;10452;iaden názov CPU pre zariadenie <%1> nie je definovanı.
+3500;10453;Pre zariadenie nebola nájdená iadna aplikácia.
+3500;10454;Zaloenı UosTimer <%1> z katalógu u nie je viac podporovanı. Prosíme priamo uvies dobu cyklu v súbore SU.
+3500;10501;Nedostatok pamäte pri inštalácii zariadenia <%1>
+3500;10502;Zariadenie je u nainštalované. Zariadenie: %1, nové zariadenie: %2
+3500;10503;Neúplná inštalácia aplikácie.
+3500;10508;Servis sa nemôe prihlási pri TCP-Manager: %1
+3500;10510;Konfiguraènı k¾úè %1 nenájdenı.
+3500;10511;Prihlásenie pri reporte stavu zlyhalo
+3500;10601;Zhrnutie úloh CommandAndErrorHandling nie je moné.
+3500;10602;Pri odosielaní do CmdAndErrQueue došlo k chybe alebo bola dosiahnutá hranica: %1
+3500;10704;Chyba pri vytváraní resource-events %1 (err è: %2)
+3500;10706;Neplatnı stav Resource - Res.: %1, oèakávanı stav: %2, aktuálny stav: %3
+3500;10708;iadna alebo neplatná inštalácia %1 <%2>
+3500;10807;Task <%1> on resource <%2> nemôe pokraèova.
+3500;10808;Thread nemôe pokraèova - Task <%1> na Resource <%2>
+3500;10810;Nedostatok pamäte pri vytváraní Task <%1> on res.<%2>
+3500;10811;Èasovaè pre Task <%1> on res. <%2> nemôe by vytvorenı.
+3500;10814;Odloenie Task <%1> na Res. <%2> nie je moné.
+3500;10815;Èasovaè pre Task <%1> on res. <%2> nemôe by spustenı.
+3500;10817;Neplatná doba cyklu pre Task <%1> na Resource <%2>, Cyklus: %3
+3500;10818;Task <%1> na Resource <%2> nemôe by vymazanı.
+3500;10898;Porušenie doby chodu v Task <%1> na Res. <%2>, Task-ref.: %3
+3500;10899;Preteèenie spúšaèa: Task %1, na Res. %2, Task-ref.: %3
+3500;10902;iaden prístup na súbor %1.
+3500;10903;Header sa nedá naèíta - súbor: %1
+3500;10904;Neplatnı typ alebo verzia súboru: %1
+3500;10905;Názov FU sa nedá naèíta - súbor: %1.
+3500;10909;Kódovı segment sa nedá naèíta - FU: %1.
+3500;10923;Neplatnı Codeoffset v súbore: %1, Offset %2 v %3
+3500;10924;Neplatnı offset údajov v súbore %1, offset: %2, %3
+3500;10925;Neplatnı alignment v súbore: %1, offset: %2, at %3
+3500;10926;Ressourcename(-index) sa nedá naèíta - súbor: %1, Res.: %2
+3500;10927;Ressourcename v súbore %1 nenájdenı. Resorce: %2
+3500;10928;FU u nainštalovanı - súbor: %1, res.: %2
+3500;10950;Názov FU sa nedá naèíta - príslušnı súbor: %1
+3500;10951;Ressourcename sa nedá naèíta - FU: %1
+3500;10952;Chybnı fileheader v FU %1
+3500;10953;Chybnı súbor v FU %1
+3500;11001;Údajovı alebo kódovı segment nemôe by nainštalovanı. FU: %1
+3500;11002;Inicializaèná tabu¾ka pre údajovı segment nemôe by vytvorená - FU: %1
+3500;11003;Inicializaèná tabu¾ka pre údajovı segment retain nemôe by vytvorená. FU: %1
+3500;11004;Údajovı segment sa nedá inicializova - FU: %1
+3500;11005;Údajovı segment retain sa nedá inicializova - FU: %1
+3500;11006;Kódovı segment sa nedá inicializova - FU: %1
+3500;11007;Poèet prvkov v inic. tabu¾ke sa nedá naèíta - FU: %1
+3500;11008;Poèet prvkov v inic. tabu¾ke segmentu retain sa nedá naèíta - FU: %1
+3500;11009;Chyba pri inicializácii údajového segmentu FU %1
+3500;11010;Dåky segmentov sa nedajú naèíta - FU: %1
+3500;11015;Prvky inic. tabu¾ky (údajovı seg.) sa nedajú naèíta - FU: %1, è. prvku: %2
+3500;11017;Prvky inic. tabu¾ky (retain seg.) sa nedajú naèíta - FU: %1, è. prvku: %2
+3500;11018;Adresa Inic. tabu¾ky je neplatná - file: %1, offset %2 v %3
+3500;11019;Adresa Inic. tabu¾ky je neplatná - file: %1, offset %2 v %3.
+3500;11020;Returncode z RetainManager %1 pre blok %2 , ve¾kos %3
+3500;11021;Všetky údaje FU-Retain boli vymazané (studenı štart).
+3500;11022;Zariadenie zastavené
+3500;11023;ErrorQuitTime prekroèenı.
+3500;11101;Inštancia nemôe by zaloená (TaskTable) - FU: %1.
+3500;11102;Poèet úloh sa nedá naèíta (TaskTable) - FU: %1
+3500;11103;Informácia o úlohách sa nedá naèíta (TaskTable) - FU: %1, è. prvku: %2
+3500;11104;Úloha nie je k dispozícii. FU: %1, Úloha: %2
+3500;11105;Informácia o slote sa nedá naèíta (TaskTable) - FU: %1, È. prvku: %2
+3500;11106;Referenèné poèítadlo úloh sa nedá naèíta. FU: %1
+3500;11107;Referenèná informácia úlohy sa nedá naèíta. FU: %1, Ref. úloha: %2.
+3500;11109;Referenènı offset úloh sa nedá naèíta. FU: %1, Ref. úlohy: %2, Offset: %3
+3500;11110;Názov úlohy nie je k dispozícii - FU: %1, Ref. úloha: %2, res.úloha: %3
+3500;11111;Kódovı offset sa nedá naèíta zo zoznamu inštancie - FU: %1
+3500;11112;Poèítadlo inštancie plniaceho súboru sa nedá naèíta (zoznam inštancie) - FU: %1
+3500;11113;Informácia inštancie sa nedá naèíta (zoznam inštancie) - FU: %1, è. prvku: %2.
+3500;11114;Nedostatok pamäte na zaloenie inštancie - FU: %1, Typ: %2, Meno: %3
+3500;11118;Poèet prvkov sa nedá naèíta (SharedMemList) - FU: %1
+3500;11119;Shared Memory Offset sa nedá naèíta - FU: %1, [È.: %2.
+3500;11120;Nesprávna hodnota pri prepojení SharedMem-Ref. - FU: %1, [È.: %2
+3500;11201;Poèítadlo SysVars sa nedá naèíta - FU: %1
+3500;11202;Informácia SysVar sa nedá naèíta - FU: %1, [È.: %2
+3500;11203;SysVar-Info-Link-Address nie je k dispozícii - FU: %1, [È.: %2
+3500;11204;Systémová premenná sa nemá referenciu v súbore %1. VarName: %2
+3500;11205;iadna referencia pre systémovú premennú v súbore: %1, Názov premennej: %2
+3500;11206;Referencie pre systémové premenné nenájdené.
+3500;11301;Poèítadlo SysEvents sa nedá naèíta - FU: %1.
+3500;11302;Informácia SysEvents sa nedá naèíta - FU: %1, [È.: %2
+3500;11303;SysEvent-Link-Info sa nedá naèíta - FU: %1, [È.: %2, è. kódu prvku: %3
+3500;11304;Poèítadlo SysEvents sa nedá naèíta (EventTable) - FU: %1
+3500;11305;SysEvent-Info sa nedá naèíta (EventTable) - FU: %1, [È.: %2
+3500;11306;SysEvent-Part-Info sa nedá naèíta (EventTable) - FU: %1, [È.: %2
+3500;11308;iadna referencia pre systemevent v súbore: %1, Eventname: %2
+3500;11401;Poèítadlo SysAlarm sa nedá naèíta. FU: %1
+3500;11402;SysAlarm-Info sa nedá naèíta - FU: %1, [È.: %2
+3500;11403;SysAlarm-Link-Info sa nedá naèíta - FU: %1, [È.: %2, Data Adr. Nr.: %3
+3500;11404;iadna referencia pre systemalarm v súbore FUL: %1, Alarmname: %2
+3500;11501;Poèítadlo StandardFunctions sa nedá naèíta - FU: %1.
+3500;11502;Informácia StandardFunction  sa nedá naèíta - FU: %1, [È.: %2
+3500;11503;Standard-Func sa nedá naèíta - FU: %1, Func.: %2
+3500;11504;Poèítadlo Standard-ABs sa nedá naèíta - FU: %1
+3500;11505;Standard-AB-Info sa nedá naèíta - FU: %1, [È.: %2
+3500;11506;Standard-Algo-Info sa nedá naèíta - FU: %1, [È.: %2, algo-Nr.: %3
+3500;11507;Standard-Ab- alebo Algo-Name sa nedá naèíta - FU: %1, [È.: %2, Ab/Algo: %3
+3500;11508;Standard-AB-Instance-count sa nedá naèíta - FU: %1, [È.: %2
+3500;11509;Standard-AB-Instance-Link-Addr sa nedá naèíta - FU: %1, [È.: %2, Inštancia: %3
+3500;11511;Standard-Algo nie je k dispozícii - súbor: %1, Offset: %2, Meno: %3
+3500;11512;Neplatnı poèet Algos v súbore %1, è. %2, FB: %3
+3500;11601;Poèítadlo Postupdate-Algoritmov sa nedá naèíta. FU: %1
+3500;11602;Post-Update-Element-Info sa nedá naèíta. FU: %1, [È.: %2
+3500;11603;Post-Update-Element-Info sa nedá naèíta. FU: %1, [È.: %2, Postupdateindex: %3
+3500;11604;Post-Update-Func sa nedá zaloi - FU: %1, SysVar: %2, ElemOffset: %3, ve¾kos: %4
+3500;11605;Event Algo nemá pridelenú iadnu úlohu - Fu: %1, Algo: %2
+3500;11606;Post-Update-Algo nemá pridelenú iadnu úlohu - FU:%1, Algo:%2
+3500;11607;(Interne) neplatné pridelenie udalosti
+3500;11608;Neplatné pridelenie Post-Update Algoritmu v FU:%1, Algo:%2
+3500;11701;Poèítadlo pre SFCheader sa nedá naèíta. FU: %1
+3500;11702;SFC-Header Offset sa nedá naèíta. FU: %1, SFC: %2
+3500;11802;Údaje v FU-Header nemôu by prepojené. FU: %1
+3500;11803;Inštancie nemôu by prepojené. FU: %1
+3500;11804;Standard-Functions nemôu by prepojené. FU: %1
+3500;11805;Standard-FBs alebo ABs nemôu by prepojené. FU: %1
+3500;11806;Standard-Vars nemôu by prepojené. FU: %1
+3500;11807;Systemevents nemôu by prepojené. FU: %1
+3500;11808;Post-Update-Algoritmy nemôu by prepojené. FU: %1
+3500;11809;SFCheader nemôe by prepojenı. FU: %1
+3500;11810;Referencie úloh nemôu by prepojené. FU: %1
+3500;11811;Inštancie udalostí tabu¾ky udalostí nemôu by prepojené. FU: %1
+3500;11812;Systémové alarmy nemôu by prepojené. FU: %1
+3500;11813;Retain-(Shared-)Memory-References nemôu by prepojené. FU: %1
+3500;11814;Tabu¾ka s indíciami funkcií BuiltIn sa nedala nahra. FU: %1
+3500;12001;FUL-Loadfile nemohol by otvorenı: %1
+3500;12002;Citlivos na ve¾kos je definovaná rozliène. FUL Loadfile %1.
+3500;12003;Chyba pri naèítaní hlavièky súboru %1
+3500;12005;Chyba pri naèítaní tabu¾ky Seek - plniaceho súboru FUL: %1
+3500;12006;Chyba pri naèítaní General Info. FUL load file %1.
+3500;12007;Chyba pri naèítaní zoznamu mien. Pozícia: %1, FUL-Loadfile: %2
+3500;12009;Chyba pri naèítaní MainPositionTable v súbore %1
+3500;20001;Nedostatok pamäte na zaloenie štandardnej správy kniníc.
+3500;20002;IEC chyba doby chodu: FU-ref %1, IecChyba %2, Frame Off %3, Code Off %4, Fu Name %5
+3500;20003;Vyvolanie neprepojeného štandardu AB/FB (CREATE, DELETE, ACTIVATE, DEACTIVATE, RESET)
+3500;20004;Error-quitt-timer sa nedá nainštalova.
+3500;20005;Neplatnı Task-Handle vo vyvolaní %1
+3500;20006;Vyvolanie %1 z IEC-cudzej úlohy.
+3500;20007;Vyvolanie %1 nie je v aktuálnom stave %2 moné
+3500;20008;Všeobecná chyba IKB: %1 %2 %3
+3500;20009;IEC chyba doby chodu: FU %1.%2[%3], IEC-Chyba %4, Frame-Off %5, Code-Off %6
+3500;30001;Neplatnı typ Codepoint v Resource: %1.
+3500;30002;Nedostatok pamäte: Code-Point nemôe by aktivovanı cez debugger. Res: %1
+3500;30003;Debugger nemôe by inicializovanı.
+3500;30004;Debug Callback sa nedá nainštalova.
+3500;30011;Breakpoint nemôe by aktivovanı - Resource %1
+3500;30012;Breakpoint nemôe by odstránenı (OsDebugRemoveBp) - Res: %1, Fu: %2, ods.Poz: %3, Off: %4
+3500;30013;Nedostatok pamäte - premenná watch nemôe by zaloená - Ve¾kos premennej: %1
+3500;30021;Device alebo Resource nenájdené - Resource: %1.
+3500;40001;Neznámy typ prvku SFC - neplatné údaje SFC: %1
+3500;40002;Chybnı zoznam aktívnych SFC-Steps in %1
+3500;40003;Neplatnı typ prvku SFC v metóde: %1
+3500;40004;SFC Interpreter nie je nainštalovanı
+3500;40005;%1'.
+3500;40006;FU: %1.%2, %3 / Dátum generovania: %4 / MD5: %5 /
+3500;40007;Debugserver: %1 /User: %2 /Info: %3 /
+3500;40008;Resource %1, %2
+3500;40009;Exception: %1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,%16,%17,%18,%19
+3500;40010;Chybnı byteorder vo FUL-File %1.
+3500;40011;Súbor FUL vytvorenı pre chybnı typ CPU - %1
+3500;40012;FU %1 nie je obsiahnutı v OMLD.
+3500;40013;FU %1 obsahuje konflikt verzií s OMLD.
+3500;40014;Objekt %1 pre akciu %2 nenájdenı.
+3500;40015;Prijaté viacnásobné poiadavky pre Objekt %1 pre Akciu %2
+3500;40016;Objekt %1 obsahuje nesprávnı typ pre Akciu %2.
+3500;40100;Device '%1' nainštalovanı
+3500;40101;Install Function-Unit (Èas 1/2): Res: '%1' Fu: '%2' GenDate: %3.%4
+3500;40102;Install FU: MD5: %1
+3500;40103;Deinštalovanie FU: Res: '%1' Fu: '%2' GenDate: %3.%4
+3500;40104;Install Function-Unit: MD5: %1
+3500;40105;Fu: '%1' Verz: '%2' CodeLen: %3 DataLen: %4 RetainDataLen: %5
+3500;40106;Debug Server nainštalovanı Fu: '%1' User: '%2'
+3500;40107;Debug Server deinštalovanı Fu: '%1' User: '%2'
+3500;40108;Resource '%1' spustené.
+3500;40109;Resource '%1' zastavené.
+3500;40110;Exception (Teil 1/4) / komponent: %1 Chyba: %2 Chyba-ID: %3 Chyba-druh: %4 Chyba-Poddruh: %5 Res: '%6' Fu: '%7'
+3500;40111;Exception (Èas 2/4) / Úloha: '%1' s MD5: %2
+3500;40112;Exception (Èas 3/4) CodeOffsets: %1, %2, %3, %4 DataOffsets: %5, %6, %7, %8
+3500;40113;Exception (Teil 4/4) / vyskytol sa Error: Err: '%1' ErrId: %2
+3500;40115;Chyba (Teil 1/4): '%1' s ID chyby %2, Res: '%3', MD5: '%4'
+3500;40116;Exception (Èas 2/4). Aktívne spojenie úlohy: '%1' s Fu: '%2' Idx tabu¾ky: '%3' FramePtr: '%4'
+3500;40117;Exception (Èas 3/4). Úloha: '%1' s FrameOffs: %2 CodeIdx1: %3 CodeOff1: %4 CodeIdx2: %5 CodeOff2: %6 CodeIdx3: %7 CodeOff3: %8
+3500;40118;Exception (Èas 1/4). Chyba '%1' s ID chyby %2
+3500;40550;TriggerOverflow: Task %1, Res %2
+3500;40551;Prekroèenie doby chodu v úlohe %1 a res %2.
+3500;40552;Chyba doby chodu: Task %1, Res %2, FU %3, ErrId %4
+3500;40553;Exception: task %1, res %2, fu %3, excType %4
+3600;1;KEBA-Standard-FB %1 nie je prepojené
+3600;5;System-Object %1 nie je spojené, nesprávne Fu-Handle
+3600;6;System-Object %1 nie je spojené, Object-Path nebol nájdenı
+3600;7;%1 nebolo implementované
+3600;25;Súbor %1 sa nedá otvori
+3600;34;Typ %1 nie je kompatibilnı
+3600;37;Nedostatok pamäte  (Text: %1, ve¾kos %2)
+3600;64;chybnı typ File (internı: type code 1: %1, type code 2: %2, usage: %3)
+3600;68;nesprávna verzia File %1
+3600;70;Chyba pri naèítaní typov (%1 chyba)
+3600;77;Svl-File %1 nie je nahratı (%2 Chyba)
+3600;103;Object '%1' môe by prepojenı s Object '%2' typu '%3'
+3600;106;Restart-Failure - nie sú odstránené všetky typy
+3600;107;Restart-Failure - nie sú odstránené všetky atribúty
+3600;108;System Object %1 typu %2 nie sú spojené, nesprávne TypInfo
+3600;113;CRC error in file %1
+3600;114;Chyba typov inicializácie nie je kompatibilná: %1 oèakávanı systémovı objekt typu %2 systémovı objekt %3 je typ %4
+3600;115;Základnı typ nie je povolenı (Chyba v linkeri) %1
+3600;119;Nesprávna SysVarRefInit %1 inicializácia s %2 je bez referencie
+3600;121;Restart-Failure - nie sú odstránené všetky FUs
+3600;122;Atribút %1 deklarovanı v rozdielnych súboroch %2 %3
+3600;124;Typy nie sú kompatibilné %1 ve¾kos nie je %2 Byte
+3600;129;Events nemôu by zasielané cez hranice prístroja
+3600;131;ISL-File %1 u nahraté
+3600;132;ISL-File %1 nie je nahratı (%2 Chyba)
+3600;134;Retain File %1 nemôe by vytvorenı
+3600;137;FU %1 z ISL-File %2 nie je nahratı
+3600;142;iadne spojenie s Master SOM.
+3600;143;ArrayInit neleí na jednom Array
+3600;144;StructListInit prvok leí na neplatnom Offset
+3600;145;Nesprávna inicializácia OpenArray %1 s %2
+3600;146;(INTERNAL-Linker) Nesprávny Offset vo funkcii plaus
+3600;147;Plausibility typu s ve¾kosou 0
+3600;148;Nekompatibilnı link na Open-Array %1
+3600;149;Subtype %1 pre Type %2 nenájdenı
+3600;151;neplatné atribúty %1 systémovıch premennıch %2 ignorované
+3600;153;Shared Memory %1/%2 sa u pouíva chyba systémovej premennej %3
+3600;157;Typ %1 má nesprávne Typinfo pre '%2'
+3600;158;Typinfo nemôe by vyhodnotené %1
+3600;159;AbsRel Unit %1 nenájdená
+3600;161;Typ systémovej premennej %1 nie je kompatibilnı s ve¾kosou Endpoint %2
+3600;162;Hardware Endpoint %1 nie je obsiahnutá v IO
+3600;163;Typ SV %1 nekompatibilné k údajom retain
+3600;165;Názov typu %1 nie je k dispozícii
+3600;166;ISL File sa nehodí k Fu %1
+3600;167;neplatné atribúty Fast-Retain %1 systémovıch premennıch %2 ignorované
+3600;168;File nie je otvorenı %1
+3600;169;nenájdenı iadna hodnota Fast Retain pre %1
+3600;173;Global-Attribut %1 nie je kompatibilnı
+3600;174;Chyba pri zisovaní hodnoty premennej Iec %1 z iného zariadenia
+3600;175;Chyba pri zisovaní hodnoty premennej Iec %1 na inom zariadení
+3600;176;Chyba pri zasielaní premennıch Response Get alebo Set Iec
+3600;177;Warning Hardware Endpoint %1 nie je k dispozícii
+3600;179;Init-ve¾kos sa nerovná ve¾kosti typu %1
+3600;180;Repeat Init na nesprávnom type %1
+3600;181;Chyba pri Csp-komunikácii udalostí
+3600;183;Chyba v Csp-komunikácii alarmu
+3600;184;System-Block %1 bez Memory nemôe by inicializovanı
+3600;185;Chyba v Csp-komunikácii lokálnych premennıch CreateSMem pri %1
+3600;186;Chyba v Csp-komunikácii lokálnych premennıch Read pri %1
+3600;187;Chyba v Csp-komunikácii lokálnych premennıch Variable Write pri %1
+3600;188;Súbor SVL oèakávanı v Little-Endian-Format
+3600;189;Súbor SVL oèakávanı v Big-Endian-Format
+3600;190;Reimy necitlivé na ve¾kos nie sú podporované
+3600;191;Chyba v plniacom súbore - iaden typ nebol špecifickı
+3600;192;Neprepojené systémové premenné %1 v plausibilite
+3600;193;Plausibilita pre systémovú premennú %1 nebola spoèítaná 
+3600;194;Chyba %1 pri zaloené retain segmentu, Segment %2 nie je retain
+3600;195;Jeden alebo viaceré Hardware Endpoints nie sú obsiahnuté v IO
+3600;196;Jeden alebo viaceré systémové objekty nie sú spojené, Object-Path nenájdenı
+3600;197;Premenná %1 obsiahnutá u v Uos z Io-System
+3600;198;Simulaènı reim pre hardvérové koncové body je aktivovanı (%1 simulované koncové body)
+3600;199;Neplatná ve¾kos údajov udalostí: %1 (povolené iba %2 Bytes)
+3600;200;Hardware Endpoint %1 nie je obsiahnutı
+3600;201;AlarmState Log Alarm:%1, Class:%2, State:%3, SubId1:%4, SubId2:%5, SubId3:%6, SubId4:%7
+3600;202;Param1: %1
+3600;203;Param2: %1
+3600;204;SVL má nesprávny typ CPU(%1 oèakávané)
+3600;205;Param1: Typ:%1 Hodnota:%2
+3600;206;Param2: Typ:%1 Hodnota:%2
+3600;207;vymazané SV údaje retain (studenı štart)
+3600;208;Exception poèas vykonávania plausibility code pre systémovú premennú%1
+3600;401;Interné hlásenie: Error syntaxe v plniacom súbore! (Súbor: %1, Riadok: %2, Popis: %3)
+3600;402;zmenenı segment retain: Text: %1, FU-Info: %2, Segment-Code: %3, Operations-Code: %4
+3600;403;Hardvérovı koncovı bod SV %1 bol deklarovanı ako RETAIN alebo FAST RETAIN
+3600;404;"Súbor retain %1 FU %2 je znièenı; prvı znièenı názov SV: %3"
+3600;405;Poškodenı súbor retain %1 nájdenı v FU %2. Údaje retain znovu inicializované.
+3700;1;%1 (%2/%3): Prekroèenı limit chıb
+3700;2;%1 (%2/%3): Chyba pri otváraní súboru %4
+3700;3;%1 (%2/%3): Prekroèená maximálna dåka riadku
+3700;4;%1 (%2/%3): Nedostatok pamäte (%4)
+3700;5;%1 (%2/%3): Súbor TeachTalk má neplatnı názov
+3700;6;%1 (%2/%3): Prekroèená maximálny poèet riadkov
+3700;11;%1 (%2/%3): Oèakávané %4
+3700;12;%1 (%2/%3): Neplatnı symbol %4
+3700;13;%1 (%2/%3): Preskoèenı %4
+3700;14;%1 (%2/%3): Neoèakávanı koniec súboru %4
+3700;21;%1 (%2/%3): Neznámy symbol %4
+3700;22;%1 (%2/%3): Interná chyba parser (terminálovı symbol)
+3700;23;%1 (%2/%3): Interná chyba parser (iadny terminálovı symbol)
+3700;24;%1 (%2/%3): Interná chyba parser (podteèenie stohu)
+3700;31;%1 (%2/%3): Interná chyba scanner
+3700;32;%1 (%2/%3): Interná chyba parser (preteèenie stohu)
+3700;33;%1 (%2/%3): K¾úèové slovo '%4' môe by pouité iba raz
+3700;41;%1 (%2/%3): Cyklická závislos typov
+3700;42;%1 (%2/%3): Typ nie je definovanı: %4
+3700;43;%1 (%2/%3): Typy nie sú kompatibilné
+3700;44;%1 (%2/%3): iadny typ
+3700;45;%1 (%2/%3): Nesprávny typ
+3700;46;%1 (%2/%3): Program '%4' nie je na tomto miestom povolenı
+3700;47;%1 (%2/%3): Nemôu by zaloené iadne inštancie abstraktnıch typov
+3700;48;%1 (%2/%3): iadna štruktúra
+3700;49;%1 (%2/%3): iadne prvky štruktúry
+3700;50;%1 (%2/%3): iadny array
+3700;51;%1 (%2/%3): iadny integer
+3700;52;%1 (%2/%3): iadna rutina
+3700;53;%1 (%2/%3): Neplatná oblas
+3700;55;%1 (%2/%3): Konštanta vıpoètu sa u pouíva
+3700;56;%1 (%2/%3): Typ je u definovanı: %4
+3700;57;%1 (%2/%3): iadny stavebnı prvok
+3700;58;%1 (%2/%3): Nie privátna definícia pouíva privátny typ
+3700;59;%1 (%2/%3): Nesprávny dåka reazca znakov
+3700;60;%1 (%2/%3): Cyklická definícia konštánt
+3700;61;%1 (%2/%3): Oèakávanı user-object
+3700;62;%1 (%2/%3): Abstraktná rutina musí by prázdna
+3700;63;%1 (%2/%3): Abstraktná rutina smie by deklarovaná iba v abstraktnıch stavebnıch prvkoch
+3700;64;%1 (%2/%3): Abstraktná rutina nebola v stavebnom prvku '%4' prepísaná
+3700;65;%1 (%2/%3): Prvky variantov nesmú obsahova iadne rerferencie
+3700;66;%1 (%2/%3): Nesprávny typ (oèakávanı: %4)
+3700;67;%1 (%2/%3): Typy exportovanıch premennıch nesmú obsahova iadne referencie
+3700;71;%1 (%2/%3): Názov nie je definovanı: %4
+3700;72;%1 (%2/%3): Názov je u definovanı: %4
+3700;73;%1 (%2/%3): Neplatnı identifikátor: %4
+3700;74;%1 (%2/%3): iadna konštanta vıpoètu: %4
+3700;75;%1 (%2/%3): iadny cie¾ skoku: %4
+3700;76;%1 (%2/%3): Znaèka skoku nie je definovaná: %4
+3700;77;%1 (%2/%3): Neplatná definícia globálneho stavebného prvku
+3700;78;%1 (%2/%3): iadny prístup na privátny stavebnı prvok
+3700;79;%1 (%2/%3): Pridlhı názov
+3700;80;%1 (%2/%3): Lokálny názov je u globálne definovanı: %4
+3700;81;%1 (%2/%3): iadna premenná
+3700;82;%1 (%2/%3): Export zlyhal, '%4' u existuje
+3700;96;%1 (%2/%3): iadny súbor programu nebol nájdenı pre tento súbor údajov
+3700;97;%1 (%2/%3): Nie je prípustnı iaden atribút SAVE alebo PROJECT
+3700;98;%1 (%2/%3): Varianty nemôu pouíva iadne stavebné prvky s atribútmi SAVE.
+3700;99;%1 (%2/%3): Kontrola konzistencia zlyhala
+3700;100;%1 (%2/%3): Nebola deklarovaná ako premenná save
+3700;101;%1 (%2/%3): Program s premennımi SAVE PROJECT s rovnakım názvom u existuje v projekte %4
+3700;102;%1 (%2/%3): Nie je povolenı EXPORT atribút
+3700;111;%1 (%2/%3): Nedostatok parametrov
+3700;112;%1 (%2/%3): Prive¾a parametrov
+3700;113;%1 (%2/%3): Neplatnı parameter
+3700;114;%1 (%2/%3): iadna vratná hodnota
+3700;115;%1 (%2/%3): Routina sa nezhoduje s definíciou v základnej triede
+3700;116;%1 (%2/%3): iadna rutina udalostí
+3700;117;%1 (%2/%3): Nesprávna rutina
+3700;119;%1 (%2/%3): Nepomenované rutiny nie sú v stavebnıch prvkoch prípustné
+3700;120;%1 (%2/%3): Rekurzívne vyvolanie programu: %4
+3700;131;%1 (%2/%3): Index sa nachádza mimo hraníc
+3700;132;%1 (%2/%3): Delenie nulou
+3700;133;%1 (%2/%3): iadny priraïovací cie¾
+3700;134;%1 (%2/%3): Neplatnı prejav
+3700;135;%1 (%2/%3): Neplatnı skok
+3700;136;%1 (%2/%3): iadna konštanta
+3700;138;%1 (%2/%3): Neplatná celoèíselná hodnota
+3700;139;%1 (%2/%3): Prive¾a vyvolaní rutiny
+3700;140;%1 (%2/%3): Prive¾a premennıch
+3700;141;%1 (%2/%3): Príkaz SELECT nie je prípustnı v stavebnıch prvkoch
+3700;142;%1 (%2/%3): Hodnota mimo oblas
+3700;143;%1 (%2/%3): Chyba v inicializácii
+3700;144;%1 (%2/%3): Nie všetky cesty majú Return-Statement
+3700;145;Zápis na %1 %4 nie je vykonanı - externé zmeny súborov
+3700;146;%1 (%2/%3): Pokyn musí by kompletne aktivovanı alebo deaktivovanı
+3700;147;%1 (%2/%3): Konštanta string je pridlhá
+3700;148;%1 (%2/%3): Prípad CASE nie je dosiahnute¾nı
+3700;150;Projekt %1 / Pas %2
+3700;151;Projekt %1 / Pas %2 preskoèenı
+3700;152;%1 Súbory preloené
+3700;153;%1 (%2/%3): Preteèenie v internej funkcii '%4'
+3700;170;Súbor údajov nemôe by zapísanı %1
+3700;171;Èasovaè %1 neexistuje, namiesto toho spojenı so systémovım cyklom.
+3700;172;Uvedenı prieèinok WorkPath neexistuje: %1
+3700;173;Prieèinok aplikácie '_system.tt' neexistuje alebo neobsahuje iadny súbor TeachTalk
+3700;174;%1 (%2/%3): Prvok %4 %5 sa nereferencuje
+3700;196;Nedostatok pamäte pre Project %1 (%2)
+3700;197;Názov projektu %1 sa u pouíva
+3700;198;Názov projektu %1 je neplatnı
+3700;199;Projekt %1 chybnı, %2 Errors
+3700;201;%1 (%2/%3): iadna vratná hodnota
+3700;202;%1 (%2/%3): Èasovaè nastavenı s negatívnym èasom
+3700;205;%1 (%2/%3): Stavebnı prvok pre príkaz SELECT nemohol by nájdenı
+3700;206;%1 (%2/%3): Chyba v programe aplikácie - delenie nulou
+3700;207;%1 (%2/%3): iadna udalos IEC
+3700;209;%1 (%2/%3): Chyba v programe aplikácie - Index %4 sa nachádza mimo hranice %5..%6
+3700;210;%1 (%2/%3): Chyba v programe aplikácie - prístup na nenamapovanú premennú %7
+3700;211;%1 (%2/%3): iadny parameter
+3700;212;%1 (%2/%3): Prístup na nesprávnu rutinu
+3700;213;%1 (%2/%3): Hodnota mimo oblas
+3700;214;%1 (%2/%3): Neplatná premena typu
+3700;215;%1 (%2/%3): iadne pamäové miesto (%7)
+3700;216;%1 (%2/%3): Hodnota mimo oblas
+3700;218;%1 (%2/%3): prive¾a premennıch
+3700;219;%1 (%2/%3): THIS ešte nie je definované
+3700;220;%1 (%2/%3): Spustenie programu nie je moné, keïe program u beí
+3700;221;%1 (%2/%3): ANY-output-Parameter funkcií firmvéru nesmú obsahova iadne referencie
+3700;222;%1 (%2/%3): naplatné pouitie externe namapovanej funkcie
+3700;251;%1 (%2/%3): Èasovı limit pre vykonanie rutiny bol prekroèenı, PRIO %5
+3700;252;%1 (%2/%3): Prive¾a aktívnych rutín
+3700;253;%1 (%2/%3): Èasovı limit (stmtLimit) pre vykonanie rutiny bol prekroèenı
+3700;254;%1 (%2/%3): Externé mapovanie zlyhalo : %4
+3700;255;%1 (%2/%3): Prive¾a èasu medzi pokynmi WAIT
+3700;256;%1 (%2/%3): Blokovanie bolo predèasne zrušené
+3700;257;%1 (%2/%3): Rutina sa nedá zastavi keïe bola vyvolaná '%4'
+3700;258;%1 (%2/%3): Prejav aktualizácie bol neplatnı
+3700;259;%1 (%2/%3):  WAIT alebo UPDATE na Shared Memory %4 vykonané bez aktivovanej signalizácie 
+3700;260;%1 (%2/%3): Prekroèená èasovı limit pri pokyne
+3700;261;Interpreter porušil nasledovnı cyklus
+3700;280;LoadGlobal
+3700;281;UnloadGlobal
+3700;282;LoadProject %1
+3700;283;UnloadProject %1
+3700;284;StartProgram %1
+3700;285;LoadSystem
+3700;290;Premenná %2 (Typ: %3) zmenená (èas %1)
+3700;291;Premenná (stará hodnota: %2) zmenená (èas %1)
+3700;292;Premenná (nová hodnota: %2) zmenená (èas %1)
+3700;400;Nedostatok pamäte pre TeachControl-Heap
+3700;401;Klient %1 (ID %2) odhlásenı, keïe bol pridlho neaktívny.
+3700;402;Chyba pri extrahovaní súboru archívu %1 
+3700;403;TC User0 (part %1): stringI: %2, ParamI(h): %3, ParamI(l): %4, ParamII(h): %5, ParamII(l): %6
+3700;404;TC User0 (part %1): stringII: %2, ParamIII(h): %3, ParamIII(l): %4, ParamIV(h): %5, ParamIV(l): %6
+3700;405;TC User0 (part %1): format: %2
+3700;406;Projekt '%1' nemôe by aktivovanı
+3700;407;%1 (%2/%3): Pouitie rutiny DEPRECATED '%4 '
+3700;408;%1 (%2/%3): Prvok '%4' prekrıva inı prvok s rovnakım názvom
+4000;1;******* Verzia: %1 *******
+4000;2;Inkompatible Version PCALL Header-Files (%1). Minimálne potrebná verzia %2
+4000;10;Funkcia %1 ešte nebola implementovaná.
+4000;11;Doba cyklu pre MCU-Update prekroèená (%1 %%)
+4000;15;Chyba pri zriadení koncového bodu '%1': %2 (%3)
+4000;16;Prihlásenie typu koncového bodu '%1' zlyhalo.
+4000;17;Neplatnı objekt TimeStep
+4000;18;Èíslo hlásiacej inštancie je vdy 0.
+4000;20;ProcedureCall '%1' nenájdenı.
+4000;25;%1: Message Queue (%2) pretiekla.
+4000;30;%1: Súbor: '%2' (%3) sa nedá otvori.
+4000;31;%1: Chyba pri zapisovaní do súboru '%2' (%3)
+4000;32;%1: Chyba pri zapisovaní do súboru '%2' (%3)
+4000;33;%1: Chyba pri mazaní súboru '%2' (%3)
+4000;51;Neplatnı objekt (ID %1) nemohol by pridanı do databázy
+4000;52;Chyba aplikácie: Objekt <%3> %2 (adresa: %1) nemôe by prijatı do databázy MCU
+4000;53;Vyvolanie funkcie %1 s neexistujúcim objektom <%2> (ID %3)
+4000;54;Vyvolanie funkcie %1 s nesprávnym objektom <%2> (ID %3)
+4000;55;Objekt s ID <%1> nie je typu <%2> (%3)
+4000;56;Pamäovı súbor MCU systému je vyèerpanı (obsadenı %1 kB)
+4000;57;MCU-Heap systému je vyèerpanı. (konfigurovaná ve¾kos: %1 kB)
+4000;58;Zastavenie Robota, kvôli nedostatoène konfigurovanej databáze MCU. (Konfiguraènı záznam: dataBaseSize = %1)
+4000;59;Kinematika (%1) nesmie by vymazaná
+4000;70;Faktor vyuitia databázy je u %1 %%
+4000;71;U uvo¾nenı objekt %1 (ID %2) sa opä pouíva (%3)
+4000;100;Neplatné údaje pri transformácii %1 (ID %2)
+4000;101;Transformácia %1 (ID %2) pouíva neplatnı objekt aktualizácie (adresa: %3)
+4000;102;Rekurzívna definícia referenèného systému %3 (ID %4) pri transformácii %1 (ID %2)
+4000;103;Transformácia %1 (ID %2) pouíva neplatnı referenènı systém (%3 )
+4000;104;Aktualizácia zlyhala (Obj. aktualizácie %3) pri transformácii %1 (ID %2)
+4000;130;Poèet pomocnıch osí %3 (max. %4) v pozícii %1 (ID %2) je prive¾kı.
+4000;131;Poloha %1 (ID %2) kin. %3 (ID %4) nie je kompatibilná s polohou %5 (ID %6) kin. %7 (ID %8) 
+4000;132;Poloha %1 (ID %2) s %3 pomocnımi osami nie je kompatibilná s pol. %4 (ID %5) s %6 pomocnımi osami
+4000;133;Neplatná poloha dráhy: Dráha %1 (ID %2), príkaz pohybu %3 (ID %4), parameter %5
+4000;134;Poèet hlavnıch osí (%1) polohy %2 nie je kompatibilnı s kinematikou %3 (%4 hlavné osi)
+4000;135;Poloha osí %1 je priradená neplatnej kinematike.
+4000;136;Poèet hlavnıch osí (%1) je niší ako poèet ruènıch osí (%2) v polohe (%3).
+4000;137;Neplatnı objekt Joint-Offset (ID %1) v polohe %2 v databáze
+4000;138;Predloha polohy WristJoint %1s objektom Joints-Offset alebo pohnutého rerferenèného systému nie je moná
+4000;159;Chyba farby %1, Parameter%2
+4000;160;Neplatná poloha %1 v príkaze pojazdu %2 (ID %3).
+4000;161;Príkaz pohybu %1 (ID %2) obsahuje neplatnı objekt interpolácie
+4000;162;Neplatná pomocná poloha pre okruh v príkaze pohybu %1 (ID %2)
+4000;163;Nemôem prepoèíta okruh v príkaze pojazdu (ID %2).
+4000;164;Cie¾ovı reim %4 v príkaze pohybu %1 (ID %2) nie je dosiahnute¾nı (kin. %5, aktuálny reim: %3)
+4000;165;Neplatnı typ interpolácie orientácie: %1
+4000;166;Konfigurovanı max. krútiaci moment pre os %1 je príliš malı: %2. Obmedzenie krútiaceho momentu nie je moné.
+4000;167;Nekompatibilnı typ interpolácie orientácie %1 v príkaze pojazdu spline %2 (ID %3)
+4000;168;Nekompatibilnı nástroj %1 (ID %2) v príkaze pojazdu spline %3 (ID %4)
+4000;169;Kruhovı segment nemôe by vytvorenı, lebo by bol premennı
+4000;170;"Kinematika <%5> nemôe by poloenı na dráhu <%4>, nesprávny reim (%2); poloha dráhy potrebuje reim %3 - <%1>"
+4000;171;"Uívate¾om zadané reimy (%3) príkaz pojazdu <%4> nesúhlasí s reimom spustenia (%2); kinematika <%5> - <%1>"
+4000;172;"Kart. Cie¾ovı reim (%2) %6príkaz pojazdu <%4> nesúhlasí so skutoènım cie¾ovım reimom (%3)%7; kinematika <%5> - <%1>"
+4000;173;"Cie¾ovı reim Wrist-Joint (%2) %6príkaz pojazdu <%4> nesúhlasí so skutoènım cie¾ovım reimom (%3)%7; kinematika <%5> - <%1>"
+4000;174;"Reim spúšacej polohy (%3) %6príkaz pojazdu <%4> sa nezhoduje s cie¾ovım reimom (%2) predchádzajúceho segmentu; kinematika <%5> - <%1>."
+4000;175;"%2Reim spúšacej polohy %5príkazu pojazdu <%3> je neznámy; Kinematic <%4> - <%1>."
+4000;176;"Reim spúšacej polohy (%2) príkazu pojazdu <%4> nesúhlasí s uívate¾skım reimom (%3); kinematika <%5> - <%1>."
+4000;177;"Cie¾ovı reim uívate¾a (%2) príkazu pojazdu <%4> nesúhlasí so skutoènım cie¾ovım reimom (%3) polohy; kinematika <%5> - <%1>"
+4000;178;"iadne prešmykovanie kvôli rozdielu medzi reimom spustenia prešmykovania (%2) a cie¾ovım reimom (%3) prikazu pojazdu <%4>; kinematike <%5> - <%1>"
+4000;179;"Reim spúšacej polohy (%2) príkazu pojazdu <%4> nesúhlasí s uívate¾skım reimom (%3); kinematika <%5> - <%1>."
+4000;180;PTP na pohnutom objekte %1 (ID %2)
+4000;181;Príkaz pojazdu pri pohnutom objekte je príliš krátky: %1 %2 (ID %3)
+4000;182;Prive¾ká zmena orientácie vo vzahu k rovine okruhu %1 stupeò (max. %2 stupeò) pri segmente %3 (ID %4)
+4000;183;Nekompatibilnı externı nástroj %1 v príkaze pojazdu %2
+4000;200;Neplatné údaje prešmyku: Dráha %1 (ID %2), Poloha segmentu na dráhe: %3
+4000;201;Neplatnı ovládaè segmentu: Dráha %1 (ID %2), Poloha segmentu na dráhe: %3
+4000;202;Neplatné údaje dráhy %1 (ID %2)
+4000;203;Neplatnı profil zrıchlenia na dráhe %1 (ID %2)
+4000;204;Novı príkaz pojazdu nebol prijatı kvôli nesprávnym parametrom (ID %1) pri dráhe %2 (ID %3)
+4000;205;Segment ovládaèa %1 nebol nájdenı v dráhe %2 (ID %3)
+4000;206;Prepoèítanie parametrov pre pripravené údaje prešmyku zlyhalo
+4000;207;Dráha s ID %1 neexistuje.
+4000;208;McuClearPath nie je monı. Kinematika je ešte na dráhe %1
+4000;209;Neplatná kinematika ID %1 pre ID dráhy %2.
+4000;210;Cie¾ovı reim ku karteziánskemu vıjazdu zo singularity ruènıch osí nie je stanovenı (%1 (ID %2))
+4000;211;iadne makro èíslo riadka uloené v uívate¾skıch údajoch polohy %1
+4000;212;Funkcia na objekte %1 (ID: %2) neterminuje
+4000;230;Neplatné údaje prešmyku %1 (ID %2)
+4000;231;Údaje prešmyku pre prekrıvajúci sa segment sú pripravené
+4000;232;Chıbajúci objekt interpolácie pre údaje prešmyku %1 (ID %2) typ: %3
+4000;233;Neplatnı ovládaè segmentu pre prepoèet prešmyku  %1 (ID %2) typ: %3, SegHdl1: %4 SegHdl2: %5
+4000;234;Poloha prešmyku %1 nemohla by prepoèítaná. Príkaz pohybu %2 (ID %3)
+4000;235;Neplatná èakacia doba %3 v údajoch prešmyku %1 (ID %2)
+4000;236;Neplatnı %3. parameter (%4) v údajoch prešmyku %1 (ID %2)
+4000;237;Neplatnı typ prešmyku %1
+4000;238;Neplatnı typ definície prešmyku %1
+4000;260;Neplatné údaje dynamiky %1 (ID %2), skupina komponentov %3
+4000;261;Neplatnı profil zrıchlenia v dynamike %1 (ID %2)
+4000;262;Neplatnı profil brzdenia v dynamike %1 (ID %2)
+4000;263;Údaje dynamiky %1 (ID %2): Skupina komponentov %3 je neplatná
+4000;264;Prograrmovaná kart. Rıchlos %4 (komponent %3) musí by väèší ako 0. Dynamika %1 (Adr. %2) neplatná.
+4000;265;Prograrmovaná kart. Zrıchlenie %4 (komponent %3) musí by väèší ako 0. Dynamika %1 (Adr. %2) neplatná.
+4000;266;Prograrmovaná kart. Zabrzdenie %4 (komponent %3) musí by väèší ako 0. Dynamika %1 (Adr. %2) neplatná.
+4000;267;Prograrmovaná kart. Trhnutie %4 (komponent %3) musí by väèší ako 0. Dynamika %1 (Adr. %2) neplatná.
+4000;268;Profil %1 (ID %2) obsahuje neplatné údaje
+4000;269;Kin. %1 (ID %2): Zvıšená rıchlos %4 pri redukovanej dynamike (Komp. %3). Pouitá hodnota z regulárnej dynamiky.
+4000;270;Programovaná rıchlos %5 pre os %4 (komponent %3) musí by väèšia ako 0. Dynamika %1 (Adr. %2) neplatná.
+4000;271;Programované zrıchlenie %5 pre os %4 (komponent %3) musí by väèšie ako 0. Dynamika %1 (Adr. %2) neplatná.
+4000;272;Programované brzdenie %5 pre os %4 (komponent %3) musí by väèšie ako 0. Dynamika %1 (Adr. %2) neplatná.
+4000;273;Programované trhnutie %5 pre os %4 (komponent %3) musí by väèšie ako 0. Dynamika %1 (Adr. %2) neplatná.
+4000;274;Asymetrická rampa %1 (typ %2) nie je podporovaná, bola korigovaná na symetrickú.
+4000;300;Nie je k dispozícii iadna inverzná transformácia kinematiky %1 (ID %2)
+4000;301;"Zastavenie robota kvôli predchádzajúcej chybe; kinematika %1 (ID %2), príkaz pojazdu%3 (ID %4), parameter %5"
+4000;302;Typ robota (%1 osi) nie je kompatibilnı s kinematikou %2 (%3 osi konfigurované)
+4000;303;Kinematika %1: Inverzná transformácia je moná iba, ak transformácia v smere vpred = ZAP
+4000;304;Kinematika %1: Typ robota je potrebnı k špecifikácii vhodnej transformácii robota
+4000;305;Kinematike %1 nie je pridelená iadna platná štandardná dynamická sada 
+4000;306;Kinematike %1 nie je pridelená iadna platná štandardná sada prešmyku
+4000;308;Najprv vyvola McuStopInterpolator() pre kinematiku <%1>
+4000;309;Neplatné ID kinematiky <%1>
+4000;310;Neplatnı komponent %1 pre kinematiku %2 (ID %3)
+4000;311;Doba predvıstrahy (%2 s) pre kinematiku %1 väèšiu ako nastavená doba predbeného poh¾adu (%3 s). Doba predvıstrahy stanovená na %3s.
+4000;312;Transformácia v smere vpred pre kinematiku '%1' (ID %2) nie je podporovaná
+4000;313;Zriadenie kinematiky nie je moné - hranièná hodnota rıchlosti <%1> pre os %2 je primalá
+4000;314;Zriadenie kinematiky nie je moné - limit zrıchlenia <%1> pre os %2 je primalı
+4000;315;Zriadenie kinematiky nie je moné - hranièná hodnota zrıchlenia <%1> pre os %2 je primalá
+4000;316;Zriadenie kinematiky nie je moné - hranièná hodnota brzdenia-zrıchlenia <%1> pre os %2 je primalá
+4000;317;Nie je k dispozícii iadna wrist inverzná transformácia pre kinematiku %1 (ID %2)
+4000;318;Nie je konfigurované iadne trafo v smere vpred pre kinematiku %1 -> poui dummy robota
+4000;319;%1 (os %2): Neplatná hodnota pre 'prírastky na otáèku' (poèítadlo: %3 Menovate¾: %4)
+4000;330;Predchádzajúci príkaz úlohy ešte nebol spracovanı
+4000;331;iaden Event-Handle nebol špecifikovanı pre úlohu <%1>
+4000;332;Minimálna doba predvıstrahy %2 (ID %1) nie je dodrate¾ná: %3 namiesto toho %4
+4000;333;úloha %2 (ID %1) obsahuje nevhodnú špecifikáciu roviny
+4000;334;Signálny priestor %2 (ID %1) bol vyvolanı
+4000;335;Job %1 je u pridelenı kinematike (%2, %3)
+4000;336;Chybná èasová prognóza pre job %2 (ID %1): %3 ms (konfigurovanı limit: %4 ms)
+4000;337;Chybná èasová prognóza pre job %2 (ID %1) kvôli : limitujúcemu zásahu poh¾adu do budúcna: %3 ms (konfigurovanı limit: %4 ms)
+4000;338;Neplatnı parameter segmentu (%1) pre job %2
+4000;339;Trigger Job s dobou predvıstrahy %2 (ID %1) nie je moná bez predbeného poh¾adu.
+4000;340;Trigger Job s dobou predpovede %2 (ID %1) nie je monı - spojenie so zásobníkom s náh¾adom zlyhalo.
+4000;341;Neplatná vzdialenos (%1) v job-e %2
+4000;342;Vzdialenos %1 job-u %2 je pridlhá pre segment %3
+4000;343;Vzdialenı job %1 nie je povolenı na pohybe PTP %2
+4000;344;Vzdialenı job %1 nemôe by aktivovanı pre kinematiku %2
+4000;360;Predchádzajúci príkaz pracovného priestoru ešte nebol spracovanı
+4000;361;Kin. %1 vstupuje do blokovacieho priestoru %4 s chápadlom %5 (è. %6) zatia¾ èo sa vykonáva príkazu pohybu %2 (param. %3) 
+4000;362;Kin. %1 opúša pracovnı priestor %4 s chápadlom %5 (è. %6) zatia¾ èo sa vykonáva príkazu pohybu %2 (param. %3) 
+4000;363;Priraïovací objekt pracovného priestoru %1 (ID %2) je u priradenı kinematike
+4000;364;Priraïovací objekt pracovného priestoru %1 (ID %2) nemohol by odstránenı z kinematiky
+4000;365;Neplatná ve¾kos pracovného priestoru alebo blokovacia oblas %1
+4000;366;Kin. %1: Porušenie pracovného alebo blokovacieho priestoru vystupuje pri karteziánskej polohe [%2 %3 %4] (prostredie).
+4000;367;Koncová poloha segmentu %1 leí v blokovacom priestore %2 s chápadlom %3 (è. %4) kinematiky %5
+4000;368;Koncová poloha segmentu %1 neleí v pracovnom priestore s chápadlom %2 (è. %3) kinematiky %4
+4000;390;Prekroèi poèet zaloenıch offsetov chápadiel (%2) (max:%1)
+4000;400;Nesprávne èíslo osí %1 v Servo module kinematiky %2 zatia¾ èo proces %3
+4000;401;kinematiky %1 nemohol èíta údaje serva zo shared memory %2.
+4000;402;Chyba pri prístupe na shared memory (%1) serva, kinematika %2 (os è. %3)
+4000;403;Chyba aplikácie: Zistenı neplatnı stav serva MCU, pohyb robota nie je povolenı (Stav serva: %1, kinematika: %2, os: %3
+4000;404;Servo pre os '%2' nemohlo by spojené s kinematikou %1
+4000;405;Kinematika %1: Doba cyklu pohonu '%2' (%3) sa odlišuje od tej kinematiky (%4)
+4000;406;Kinematika %1: Koncovı bod pre pohon '%2' (%3) nenájdenı
+4000;407;Kinematika %1: Pohon '%2' v nesprávnom reime polohy (%3, oèakávaná: %4)
+4000;408;kinematika %1 (os %2): Aktivovanie polohy nie je moné. Kinematika je spustená.
+4000;409;kinematika %1 (os %2): Aktivovanie polohy nie je moné. Pohon v chybovom stave.
+4000;410;kinematika %1 (os %2): Aktivovanie polohy nie je moné. Pohon nie je referencovanı.
+4000;411;kinematika %1 (os %2): Hlavné nastavenie nie je moné. Neplatnı odstup medzi dvoma nulovımi impulzmi (%3).
+4000;412;kinematika %1 (os %2): Hlavné nastavenie nie je moné. Neplatné preloenie prevodovky.
+4000;413;kinematika %1 (os %2): Referencovanie s nulovım impulzom: Os sa nestala hlavnou.
+4000;414;kinematika %1 (os %2): Odstup k nulovému impulzu je príliš ve¾kı.
+4000;415;kinematika %1 (os %2): Referencovanie nie je moné. Os nad maticou prevodovky závisí od osi Modulo (os %3).
+4000;416;kinematika %1 (os %2): Aktivovanie polohy nie je moné. Závislá os nereferencuje (os %3).
+4000;417;kinematika %1 (os %2): Hlavné nastavenie nie je moné. Pohon je Modulo Drive.
+4000;420;kinematika %1 (os %2): Pohon hlási stratu referencovania.
+4000;421;Kinematika %1: Os %2: Strata referencovania.
+4000;422;Kinematic %1, Joint %2: gear ratio has changed.
+4000;423;Chyba pri pripájaní na shared-memory: %1 (%2)
+4000;424;"Kinematika %1: Neplatná perióda polohy pohonu '%2' ([%3;%4[, expected: [-180;180[)"
+4000;425;kinematika %1 (os %2): Prepolohovanie pohonu nie je moné. Kinematika nie je pripravená.
+4000;427;Nekompatibilná verzia rozhrania AXIS-PORT: %1 (expected: %2)
+4000;430;Príkaz SetPathPos má neplatnú polohu dráhy (ID %1)
+4000;432;Príkaz <%1> má neplatnı parameter <%2>: <%3>
+4000;433;Chyba aplikácie: Príkaz MCU <%3> nie je povolenı, lebo kinematika <%1> (ID %2) je ešte v pohybe
+4000;434;Príkaz <%1> odoslanı na neregistrovanú kinematiku <%2> (ID %3)
+4000;435;Príkaz <%1>: Kinematika <%2> (ID %3) stojí na dráhe <%4> (ID %5), nie na dráhe <%6> (ID %7)
+4000;436;Príkaz <%1> odoslanı na neplatnú kinematiku <%2> (ID %3)
+4000;437;Nasadenie kinematiky <%1> (ID %2) na dráhu <%3> (ID %4) vedie k skoku.
+4000;438;Segment <%1> (ID %2) vedie k skoku v dráhe <%3> (ID %4)
+4000;439;Poslednı príkaz SetPathPos nebol ešte spracovanı
+4000;450;Kinematika <%1> (ID %2) ešte nie je READY pre príkaz <%3>
+4000;451;Kinematika <%1> (ID %2) ešte nie je na dráhe pre príkaz <%3>
+4000;452;Príkaz SetTimeOverride na kinematike %1 má neplatnı parameter %2
+4000;453;Príkaz SetTimeOverrideFactor na kinematike %1 má neplatnı parameter %2
+4000;454;Príkaz MoveToTarget: Poloha seg. è. %2 param %3 prer kinematiku %1 u prebehla
+4000;455;Príkaz MoveToTarget: Kinematika %1 stojí na prázdnej dráhe %2
+4000;460;Kinematika %1 nebola registrovaná pri vykonávacej jednotke MCU
+4000;462;Príkaz %1, odoslanı na kinematiku %2, zlyhal
+4000;463;Prive¾a pohnutıch vzanıch sústav: %1
+4000;464;Iba pohnuté vzané sústavy môu by registrované
+4000;465;Limiter jednotlivej osi môe by aktivovanı iba pri deaktivovanom momentovom limiteri (KinID %1)
+4000;480;Interpolator predbeného poh¾adu mešká (Hlavnı int.: %1 %2 Predbenı poh¾ad: %3 %4)
+4000;481;%1-Interpolation for kinematic %2 failed (SectionNr: %3, SectionTime: %4).
+4000;482;Predbenı poh¾ad je 0 pri %1
+4000;483;Chyba pri Slave Kinematic %1 
+4000;484;Funkcia %1 nie je s predbenım poh¾adom k dispozícii.
+4000;485;Predchádzajúci príkaz Assign/Remove-Slave Befehl ešte nie je ukonèenı.
+4000;486;Definícia dráhy pre kinematiku %1 pouíva samotnú kinematiku ako vzanú sústavu.
+4000;500;"%8 kart. Poloha prekraèuje hraniènú hodnotu (%4) o %1 %%; komponent: %2, hodnota: %3, Príkaz pojazdu (%5) %6 parameter %7"
+4000;501;"%8 kart. Orientácia prekraèuje hraniènú hodnotu (%4) o %1 %%; komponent: %2, hodnota: %3, Príkaz pojazdu (%5) %6 parameter %7"
+4000;502;"%8 Poloha osi prekraèuje hraniènú hodnotu polohy; základná os: %2, hodnota: %3, hranièná hodnota: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;503;"%8 Poloha osi prekraèuje hraniènú hodnotu polohy; ruèná os: %2, hodnota: %3, hranièná hodnota: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;504;"%8 Poloha osi prekraèuje hraniènú hodnotu polohy; pomocná os: %2, hodnota: %3, hranièná hodnota: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;505;"%8 kart. Rıchlos prekraèuje hranicu o %1 %%, komponent: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;506;"%8 kart. Orientaèná rıchlos prekraèuje hranicu o %1 %%, komponent: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;507;"%8 osová rıchlos prekraèuje hranicu o %1 %%, základná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7%"
+4000;508;"%8 osová rıchlos prekraèuje hranicu o %1 %%, ruèná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;509;"%8 osová rıchlos prekraèuje hranicu o %1 %%, pomocná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;510;"%8 kart. Zrıchlenie prekraèuje hranicu o %1 %%, komponent: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;511;"%8 kart. Orientaèné zrıchlenie prekraèuje hranicu o %1 %%, komponent: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;512;"%8 osové zrıchlenie prekraèuje hranicu o %1 %%, základná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7%"
+4000;513;"%8 osové zrıchlenie prekraèuje hranicu o %1 %%, ruèná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7%"
+4000;514;"%8 osové zrıchlenie prekraèuje hranicu o %1 %%, pomocná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7%"
+4000;515;"%8 kart. Trhnutie prekraèuje hranicu o %1 %%, komponent: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;516;"%8 kart. Orientaèné trhnutie prekraèuje hranicu o %1 %%, komponent: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;517;"%8 osové trhnutie prekraèuje hranicu o %1 %%, základná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;518;"%8 osové trhnutie prekraèuje hranicu o %1 %%, ruèná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;519;"%8 osové trhnutie prekraèuje hranicu o %1 %%, pomocná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;520;Transformácia v smere vpred pre kinematiku %1 musí by aktivovaná, aby umonila karteziánsku kontrolu dynamiky
+4000;521;Nesprávny typ bol pouitı pri UnLockAppend: LockType(%1) - UnLockType(%2)
+4000;522;"Hranièná hodnota pre sumu der uhla ruènej osi bola prekroèená; aktuálna hodnota: %1, hranièná hodnota: %2, príkaz pohybu (%3): %4, parameter: %5"
+4000;523;%7Poloha pred osou %1 skáèe (nová poloha: %2, stará poloha: %3, v príkaze pojazdu (%4) %5, parameter %6
+4000;530;Príkaz pojazdu %1 (%2): Rıch. o %3 %% redukovaná (t.z. %4 %% programovanej rıchlosti)
+4000;531;Limiter jednotlivej osi ON: %1, parameter: %2
+4000;532;Limiter jednotlivej osi OFF: %1, parameter: %2, MaxPosDeviation: %3, MaxOriDeviation: %4
+4000;533;Zastavenie robota, kvôli prive¾kej odchılke dráhy: %1, Konfigurovaná hranièná hodnota: %2
+4000;534;Interpolácia nepokraèuje kvôli internej chybe
+4000;535;Nastavená maximálna vleèná chyba (%3) pre jednu os (%1) bola prekroèená: Vleèná chyba %2
+4000;536;Die Endposition von Segment %1 überschreitet das Positionslimit von Achse %2 um %3 %% (Achsposition: %4, Grenze: %5) von Kinematik %6
+4000;537;Die Achsposition von Kinematik %1 konnte für die Endposition von Segment %2 nicht berechnet werden
+4000;550;Kinematika %3 (ID %4) nemá iadnu inverznú transformáciu pre %1 (ID %2)
+4000;551;Poloha od %1 (ID %2) cez kinematiku %3 (ID %4) nie je dosiahnute¾ná
+4000;552;Orientácia od %1 (ID %2) cez kinematiku %3 (ID %4) nie je dosiahnute¾ná
+4000;553;Základné osi kinematiky %3 (ID %4) sú pri %1 (ID %2) singulárne
+4000;554;Ruèné osi kinematiky %3 (ID %4) sú pri %1 (ID %2) singulárne
+4000;555;Kinematika %3 (ID %4) je singulárna pri %1 %2
+4000;556;Kinematika %3 (ID %4) ukazuje zlú konvergenciu pri %1 (ID %2)
+4000;557;Bit chyby 4 bol aktivovanı poèas inverznej transformácie
+4000;558;Bit chyby 8 bol aktivovanı poèas inverznej transformácie
+4000;559;Kinematika %3 (ID %4) nemá implementovanú iadnu inverznú transformáciu pre %1 (ID %2)
+4000;560;Neplatné parametre pre inverznú transformáciu %1 (ID %2) cez kinematiku %3 (ID %4)
+4000;561;Neplatnı nástroj pre spätnú transformáciu %1 (ID %2) cez kinematiku %3 (ID %4)
+4000;571;Poloha nie je dosiahnute¾ná z kinematiky %2%1 pri %3
+4000;572;Orientácia nie je dosiahnute¾ná z kinematiky %2%1 pri %3
+4000;573;Základná os kinematiky %2%1 je singulárna pri %3
+4000;574;Ruèné osi kinematiky %2%1 sú singulárne pri %3
+4000;575;Kinematika %2%1 je singulárna pri %3
+4000;576;Kinematika %2%1 ukazuje konvergenciu interpolácie pri %3
+4000;577;Kinematika %2%1 ukazuje numerické nestability v prepoèítavaní dynamiky pri %3
+4000;578;Kinematika %2%1 nemá implementovanú inverznú transformáciu pre %3
+4000;579;Neplatné parametre pre inverznú transformáciu kinematiky %2%1 pri %3
+4000;580;Ungültiges Tool für Kinematik %2%1 bei %3
+4000;600;Konfigurovanı typ robota %1 nie je k dispozícii.
+4000;601;iadna kinematika nie je uvedená v súbore konfigurácie MCU
+4000;602;iadny èasovaè pre MCU nebol špecifikovanı. Všetky úlohy MCU nastavené.
+4000;603;MCU èasovaè <%1> sa nedá nájs
+4000;604;Neplatnı typ osi <%1>
+4000;605;Neboli nájdené iadne konfiguraèné údaje pre os <%1>
+4000;606;Konfigurovanı frame-typ <%1> nie je k dispozícii
+4000;607;Konfiguraèné záznamy skrytej osi chıbajú
+4000;608;V súbore konfigurácie kinematiky bolo konfigurované inverzné trafo bez trafa v smere vpred.
+4000;609;Konfigurovanı typ filtra %1 nie je k dispozícii.
+4000;610;Uvedené poradie filtrov %2 filtra %1 nesúhlasí s poètom koeficientov filtrov %3.
+4000;611;Uvedené koeficienty filtrov prekraèujú maximálnu prípustnú dåku (%1).
+4000;612;Jeden %1 filter potrebuje presne %2 koeficientov (k dispozícii sú iba %3)
+4000;613;Vzaná sústava <%1> z konfigurovanej vzanej sústavy: %2 nie je v databáze
+4000;614;Konfigurovaná doba predbeného poh¾adu (%1) prekraèuje maximálne prípustné (%2)
+4000;615;Prive¾a pamäte Heap konfigurovanej prer cyklickı logger (konfigurovaná ve¾kos: %1). Bude pouitá štandardná ve¾kos (%2).
+4000;616;Konfigurovanı reim osi '%1' nie je k dispozícii.
+4000;617;Konfigurovaná doba cyklu =%1 je neplatná pre MotionTimer.
+4000;618;Neplatná konfigurácia externého reazenia osi <%1>
+4000;619;Konfigurovanı typ podávaèa '%1' nie je podporovanı.
+4000;620;Konfigurovaná matica prevodovky nie je invertovate¾ná.
+4000;650;Riadiaci príkaz <%1> zamietnutı
+4000;651;Riadiaci príkaz <%1> vyvolanı s neplatnım parametrom.
+4000;652;Riadiaci príkaz <%1> ešte nebol implementovanı
+4000;653;Riadiaci príkaz <%1> odvolanı s neplatnım parametrom <%2> = <%3> 
+4000;654;McuSearchDbObj() pre typ objektu %1 nebol implementovanı
+4000;655;Neplatnı Frame-Typ: %1
+4000;656;Riadiaci príkaz <%1> nie je platnı v tejto verzii.
+4000;657;"Neplatná InitPathPos"" <%1> - kinematika <%2> nebola ešte uloená na dráhu <%3>."""
+4000;670;McuReleaseDbObj: Objekt s ID %1 u bol uvo¾nenı
+4000;671;Chyba pri vyvolaní %1
+4000;672;Vyskúšané vyvolanie objektu, ktorı nie je obsiahnutı v databáze (Adr. %1).
+4000;673;Nedá sa kopírova súbor reportu stavu MCU z %1 do %2 
+4000;680;Vyvolanie funkcie <%1> odvolanı s neplatnım parametrom <%2> = <%3> 
+4000;681;Pri vyvolanej funkcii <%1> je dráha k segmentu <%2> (ID: %3) neplatná
+4000;682;Poloha dráhy nemôe by pre opätovnı nábeh segmentu <%1> (ID: %2) prepoèítaná
+4000;683;Vkladanie SegHdlData do funkcie <%1> v zozname MotionBuffer zlyhalo
+4000;684;Príkaz MotionBuffer nemohol by spracovanı
+4000;685;Pripojenie segmentu MotionBuffer (ID: %1) na vykonávaciu dráhu (ID: %2) nie je moné
+4000;686;MotionBuffer nemohol by vymazanı zo zoznamu ExecUnit.
+4000;687;<%1> nie je moné - %2 kontroly sú u aktívne (max. %3)
+4000;688;Na MotionBuffer nemohli by iadne segmenty (ID: %1) pripojené
+4000;689;Kontrolná funkcia pre MotionBuffer (ID: %1) nemôe by spustená
+4000;690;Pripojenie segmentu MotionBuffer (ID: %1) na vykonávaciu dráhu (ID: %2) nie je moné
+4000;691;Bolo vyskúšané, pripoji jeden segment na zamrznutú dráhu (ID: %1)
+4000;692;Naèítanie NextSegSMemName zlyhalo (Funkcionalita v konfigurácii nebola aktivovaná)
+4000;693;Poèet povolenıch nulovıch segmentov (Max: %2) pri pripojení na vykonávaciu dráhu (ID: %1) bol prekroèenı
+4000;694;Poèet zadanıch osí (%1) nesúhlasí s poètom osí kinematiky (ID: %2)
+4000;695;Nesprávne èíslo filtra (%1). Existujú len dva kaskádovité filtre osí, pre ktoré sú urèené èísla 1 a 2.
+4000;700;Interné chybové hlásenie
+4000;701;Bolo vyskúšané, uvies negatívny poèet osí v transformácii robotov
+4000;702;Bolo uvedenıch prive¾a osí (%1, max. 8) v transformácii robotov
+4000;703;Neplatnı typ osi pre os %1 v transformácii robotov
+4000;704;Neplatnı poèet prepojení v transformácii robotov
+4000;705;Parameter DH pre transformáciu robotov nebola inicializovaná
+4000;706;Neplatnı poèet osí (%1) v osovom vektore pre transformáciu robotov
+4000;707;Neplatnı poèet riadkov (%1) matice Jacobi v transformácii robotov
+4000;708;Neplatnı poèet medzier (%1) matice Jacobi v transformácii robotov
+4000;709;Neplatnı reim robota v transformácii robotov
+4000;710;Neplatná konfigurácia reimu robota v transformácii robotov
+4000;711;Neplatné otoèenie (%1) v transformácii robotov
+4000;712;Neplatnı poèet osí (%1)
+4000;713;Neplatné D1 parametroch DH pre EcopaintTransform
+4000;714;Neplatná Alpha1 v parametroch DH pre EcopaintTransform
+4000;715;Neplatná D2 v parametroch DH pre EcopaintTransform
+4000;716;Neplatná A3 v parametroch DH pre EcopaintTransform
+4000;717;Neplatná A4 v parametroch DH pre EcopaintTransform
+4000;718;Neplatná A5 v parametroch DH pre EcopaintTransform
+4000;719;Neplatná Alpha34 v parametroch DH pre EcopaintTransform
+4000;720;Neplatnı poèet osí (%1)
+4000;721;Neplatné D%1 v parametroch DH pre Transform
+4000;722;Neplatné A%1 v parametroch DH pre Transform
+4000;723;Neplatné Alpha %1 v parametroch DH pre Transform
+4000;724;Neplatné Theta %1 v parametroch DH pre Transform
+4000;725;Nebolo moné prepoèíta reazenie pomocnıch osí
+4000;726;Neplatnı poèet základnıch osí (%1) v odovzdávacom vektore pre transformáciu robotov
+4000;727;Neplatnı poèet ruènıch osí (%1) v odovzdávacom vektore pre transformáciu robotov
+4000;728;Robot Scara nemôe by s uvedenım parametrom DH identifikovanı
+4000;729;Transformácia robotov pre robota Scara nebola implementovaná
+4000;730;Z postavenia kåbov nemôe by vypoèítaná iadna platná poloha TCP
+4000;731;Nie je k dispozícii iaden Semi-Scara robot k uvedenému parametru DH
+4000;732;Druh vıstavby Semi-Scara robota ešte nie je implementovanı
+4000;733;Zvláštny prípad zmeny reimu pri interpolácii wrist-joint nie je v tejto kinematike k dispozícii.
+4000;734;Kinematika má minimálne jednu redundantnú os.
+4000;751;Nie je k dispozícii iaden dynamickı model robota pre kinematiku <%1> 
+4000;752;Uvedenı nesprávny poèet osí (%1 namiesto %2) pre dynamickı mode robota (ID %3)
+4000;753;Mnostvo pre os %1 nesmie by negatívne
+4000;754;Moment zotrvaènosti Jxx pre os %1 nesmie by negatívny
+4000;755;Moment zotrvaènosti Jyy pre os %1 nesmie by negatívny
+4000;756;Moment zotrvaènosti Jzz pre os %1 nesmie by negatívny
+4000;757;Rameno páky s pruinou R pre os %1 nesmie by negatívne
+4000;758;Rameno páky s pruinou L pre os %1 nesmie by negatívne
+4000;759;Tuhos pruiny pre os %1 nesmie by negatívna
+4000;760;Statickı koeficient trenia pre pohon osi %1 nesmie by negatívny
+4000;761;Viskózny koeficient trenia pre pohon osi %1 nesmie by negatívny
+4000;762;Zotrvaènos pohonu pre pohon osi %1 nesmie by negatívna
+4000;763;Preloenie pre pohon osi %1 nesmie by nulové
+4000;764;Maximálny krútiaci moment pre pohon osi %1 musí by väèší ako nula
+4000;765;Nesprávny poèet osí (%2 namiesto %3) v shared memory %1
+4000;766;Parametre zotrvaènosti osi %1 sú fyzikálne nekonzistentné (%2-smer)
+4000;767;Parametre zotrvaènosti nástroja %1 sú fyzikálne nekonzistentné (%2-smer)
+4000;768;Mnostvo pre nástroj %1 nesmie by negatívne
+4000;769;Moment zotrvaènosti Jxx pre nástroj %1 nesmie by negatívny
+4000;770;Moment zotrvaènosti Jyy pre nástroj %1 nesmie by negatívny
+4000;771;Moment zotrvaènosti Jzz pre nástroj %1 nesmie by negatívny
+4000;772;Loiskové sily môu by vypoèítané iba pre jednu os (os %1 zvolená)
+4000;773;Faktor polohy pre pohon osi %1 nesmie by 0
+4000;800;Parametre tracking nemôu by zadávané ak je tracking aktivované
+4000;801;Frame-Typ pre tracking môe by udávanı iba v eulerovıch uhloch
+4000;802;Záznam tracking-logger bol spustenı (Seg. è: %1, TrsfID: %2 %3)
+4000;803;Záznam tracking-logger bol zastavenı (Seg. è: %1, TrsfID: %2 %3)
+4000;804;Hlásenie stavu tracking-logger: Samples: %1, preteèenie: %2, TrsfID: %3
+4000;805;Hlásenie stavu tracking-logger: Preteèenie bufferu (Konfigurovaná ve¾kos: %1)
+4000;806;%1 zapína tracking-logger: NextSegNr: %2, TrackObj: %3
+4000;807;%1 vypína tracking-logger: NextSegNr: %2, TrackObj: %3, Samples: %4, preteèenie: %5
+4000;810;Èasová chyba pri signále tracking
+4000;820;Suma (%2) všetkıch koeficientov filtrov FIR (%1) sa nerovná 1.
+4000;821;Neplatnı koeficient filtra %1 = %2.
+4000;822;Neplatné poradie filtrov (%1) od %2 filtrov
+4000;850;Poèet AreaJobs je neplatnı (vykonané: %1, obsiahnuté v Starep: %2)
+4000;851;Poèet PlaneJobs je neplatnı (vykonané: %1, obsiahnuté v Starep: %2)
+4000;852;Interná chyba testu MCU: Nie všetky Parameterjobs boli vyvolané(poadované: %1, skutoèné: %2)
+4000;853;Poèet LimitJobs je neplatnı (vykonané: %1, obsiahnuté v Starep: %2)
+4000;854;Job nebol vyvolanı: %2 (ID %1) %3
+4000;900;%1.%2 Riadok %3: Os %4 dominantná
+4000;901;%1.%2 Riadok %3: %4 dominantnı
+4000;902;%1.%2 Riadok %3: Prelimiter - %4%% prog. rıchl. (Seg è. %5)
+4000;903;%1.%2 Riadok %3%4: Limiter geometrie - %5%% prog. rıchl. (Seg è. %6)
+4000;904;%1.%2 Riadok %3%4: Limiter predbeného poh¾adu - %5%% prog. rıchl. (Seg è. %6)
+4000;905;%1.%2 Riadok %3%4: Limiter hlavného chodu - %5%% prog. rıchl. (Seg è. %6)
+4000;906;%1.%2 Riadok %3%4: Limiter jednotlivej osi - odchılka pol.: %5, Ori. Odchılka: %6 (Seg è. %7)
+4000;907;%1.%2 Riadok %3%4: Krátky segment - %5%% prog. rıchl. (Seg è. %6)
+4000;908;%1.%2 Riadok %3: Nasledujúci príkaz pojazdu prichádza príliš neskoro (Seg è. %4)
+4000;909;%1.%2 Riadok %3%4: Hrot geometrie (limiter predbeného poh¾adu) - %5%% prog. rıchlosti (Seg è. %6)
+4000;910;%1.%2 Riadok %3%4: Limiter predbeného poh¾adu (kart. dyn.) - %5%% prog. rıchlosti (Seg è. %6)
+4000;911;%1.%2 Riadok %3: Nulovı segment - 0%% prog. rıchlosti (Seg è. %4)
+4000;950;Transfer zásobníka Motion (ID: %1) prerušené - chyba pri <McuAppendToPath>
+4000;951;<McuTerminateMotionBuffer> nie je moné - transfer zásobníka Motion (ID: %1) je práve aktívny.
+4000;970;Stav loggera zásobníka predbeného poh¾adu: Preteèenie loggera zásobníka. Konfigurovaná ve¾kos: %1
+4000;971;Aktivovanie limitera rıchlosti dráhy predbeného poh¾adu nie je moné lebo kinematika <%1> nebola zastavená alebo limiter nebol konfigurovanı.
+4000;972;Deaktivovanie limitera rıchlosti dráhy predbeného poh¾adu nie je moné lebo kinematika nebola zastavená.
+4000;980;neznáma rıchlos
+4000;981;neznáme zrıchlenie/moment
+4000;982;rıchlos pohonu %1
+4000;983;zrıchlenie pohonu %1
+4000;984;moment pohonu %1
+4000;985;kart. Rıchlos
+4000;986;kart. Zrıchlenie
+4000;987;kart. Ori. rıchlos
+4000;988;kart. Ori. zrıchlenie
+4000;990;%1 prekraèuje hraniènú hodnotu, aj bez pokroku dráhy, pri %2
+4000;991;Pohon %2 prekraèuje na mieste %1 hranica zrıchlenia aj bez pokroku dráhy
+4000;992;Pohon %2 prekraèuje na mieste %1 hranica momentu aj bez pokroku dráhy
+4000;993;Na tomto mieste %1 je prekroèená hranica  zrıchlenia karteziánskej polohy aj bez pokroku dráhy
+4000;994;Na tomto mieste %1 je prekroèená hranica  zrıchlenia karteziánskej orientácie aj bez pokroku dráhy
+4000;7000;Pohyb mimo koncového spínaèa je zakázanı
+4000;7001;Joint %1: pozitívna koncová poloha osí prekroèená
+4000;7002;Joint %1: negatívna koncová poloha osí prekroèená
+4000;7003;Poloha nebola dosiahnutá
+4000;7004;Orientácia nebola dosiahnutá
+4000;7005;Poloha je singulárna
+4000;7006;interná chyba pri vıpoète polohy
+4000;7007;Inverzná transformácia sa nedá vypoèíta
+4000;9000;neplatné hodnoty pre konštruktor matice
+4000;9001;nedostatok pamäte pre konštruktor matice
+4000;9002;nedostatok pamäte pre konštruktor matice
+4000;9003;neplatnı index pri prístupe na maticu
+4000;9004;neplatné pridelenie matíc
+4000;9005;neplatné pridávanie matíc
+4000;9006;neplatné odoberanie matíc
+4000;9007;neplatnı prejav matíc
+4000;9008;neplatné násobenie vektorov/matíc
+4000;9009;neplatné transponovanie nekvadratickej matice
+4000;9010;Invertovanie matice nie je moné (iadna kvadratická matica príp. obmedzenia ve¾kosti)
+4000;9011;Invertieren einer Matrix nicht möglich (singulárna matica)
+4000;9900;Riadok: %2 %1
+4000;9901;Riadok: %2 %1
+4000;9902;Kritická chyba v súbore: %1 Riadok: %2
+4000;9903;Fatálna chyba v súbore: %1 Riadok: %2
+4000;9904;Interná chyba MCU: Objekt s ID %1 (%2) neexistuje (%3)
+4000;9905;Objekt s adresou %1 neexistuje.
+4000;9906;Interné hlásenie MCU: Súbor %1, riadok %2
+4000;9907;neplatnı ukazovate¾ modulu %1 riadok %2
+4000;9908;Interné hlásenie: Súbor %1, riadok %2
+4000;9909;neplatné blokovanie dátového objektu: %1 (ID %2)
+4000;9910;neplatné uvo¾nenie dátového objektu: %1 (ID %2)
+4000;9911;Uvo¾nenie neexistujúceho blokovania èítania. Objekt: %1 (ID %2)
+4000;9912;Uvo¾nenie neexistujúceho blokovania zápisu. Objekt: %1 (ID %2)
+4000;9913;Objekt je u zablokovanı: %1 (ID %2)
+4000;9914;Blokovanie neexistujúceho dátového objektu
+4000;9915;Uvo¾nenie neexistujúceho dátového objektu
+4000;9950;interné hlásenie %1
+4000;9951;Pokus, odhlási sa od u uvo¾neného objektu (%1) ID %2 (%3)
+4000;9952;Pokus, odhlási sa od neplatného objektu (%4) (Adr.obj2: %1, obj1: %2 %3)
+4000;9953;Neplatnı objekt (Adr. %1) sa nedá pozorova (%2)
+4000;9954;Vymazanie objektu, ktorı sa ešte pouíva (%1) ID: %2
+4000;9955;Kart. Hodnoty pre %1: %2 %3 %4 %5 %6 %7
+4000;9956;Kart. Hodnoty: %1 %2 %3 %4
+4000;9957;%1: %2
+4000;9958;Kart. Hodnoty z %1 [Ref: Prostredie]: %2 %3 %4 %5 %6 %7
+4000;9959;Kart. Hodnoty z %1 [Ref: Základ kin. %2]: %3 %4 %5 %6 %7 %8
+4000;9960;Zastavenie oneskorenia v seg %1, param %2 (Ln%3) detekuje (%4 updates)
+4000;9961;%1: PCall '%2' zlyhal (%3).
+4000;9962;StopMiss v seg %1, param %2 (Z.%3) zistené (seg %4, param %5)
+4000;9963;StopUnreachable v seg %1, param %2 (Ln%3) zistené (seg %4, param %5)
+4000;9964;%1 potrebuje %2 sekundy na mieste %3 (hranièná hodnota %4 sekúnd)
+4000;9965;"%8 moment pohonu prekraèuje hranicu o %1 %%, základná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;9966;" %8 moment pohonu prekraèuje hranicu o %1 %%, ruèná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;9967;"%8 moment pohonu prekraèuje hranicu o %1 %%, pomocná os: %2; hodnota: %3, hranica: %4, Príkaz pojazdu (%5) %6, parameter %7"
+4000;9968;%3ms chyby predpovede pre Job %2 (ID %1) sú následok singularity.
+4000;9969;Interpolácia pre kinematiku %2%1 zlyhala na mieste %3
+4000;9970;Kvôli singularite sa vykonáva na mieste %3 StopJoints namiesto StopMove (kinematika %2%1)
+4000;9971;Reakèná sila %2 prekraèuje hraniènú hodnotu na mieste %1 aj bez pokroku dráhy
+4000;9972;Pohon %2 prekraèuje na mieste %1 hranicu rıchlosti aj bez pokroku dráhy
+4000;9973;Na tomto mieste %1 je prekroèená hranica rıchlosti karteziánskej polohy aj bez pokroku dráhy
+4000;9974;Na tomto mieste %1 je prekroèená hranica rıchlosti karteziánskej orientácie aj bez pokroku dráhy
+4000;9975;Kinematik %1 (Joint %2): Antriebs-Schleppfehler %3 übersteigt Grenzwert (%4).
+4001;0;iadna aktuálna chyba
+4001;5;Súbor: '%1', Riadok: %2
+4001;10;%1: Súbor sa nedá otvori: '%2' (%3)
+4001;13;%1: Zápis do súboru, chyba: '%2' (%3)
+4001;16;%1: Èítanie súboru, chyba: '%2' (%3)
+4001;20;('%1') Vyvolanie UOS '%2'('%3') zlyhalo
+4001;30;Databáza MFB je plná (poèet prvkov: %1)
+4001;35;%1': Objekt sa pri aktualizácii nemôe by vloenı (doba cyklu: %2 us)
+4001;40;%1': nesprávna konfigurácia
+4001;41;%1': Index je prive¾kı: %2 (maximum: %3)
+4001;42;%1: Neplatná hodnota %2: %3
+4001;50;%1': chybná inicializácia
+4001;51;%1': Konfigurácia nie je OK
+4001;55;%1': chybnı mapping (%2)
+4001;56;%1: Koncovı bod '%2' u existuje (%3)
+4001;57;%1': Doba cyklu pre '%2' nemôe by IO-systémom naèítaná
+4001;58;%1: Zistená doba cyklu (%3) pre '%2' je neplatná
+4001;60;%1: koncovı bod '%2' nebol nájdenı
+4001;61;%1': Servo '%2' je u prostredníctvom '%3' spojené
+4001;62;%1': Spojenie k servu '%2' nie je moné
+4001;63;%1: Servo '%2' nesprávny reim polohy (%3, oèakávaná: %4)
+4001;64;%1: Servo vıraz stavu nie je k dispozícii (%2´)
+4001;65;%1': Spojenie k enkóderu '%2' nie je moné
+4001;90;%1': Hranièná hodnota dynamiky by viedla k prekroèeniu hodnoty AxisMemSize (%2). Maximálne trhnutie (hranièná hodnota aplikácie) sa zvıši na %3.
+4001;100;%1': neplatná referencia/handle ('%2': %3)
+4001;101;%1': neplatné instance number ('%2:%3')
+4001;102;%1': Príkaz nie je prípustnı ('%2')
+4001;103;%1': Preteèenie zásobníka príkazov (%2)
+4001;104;%1': Neplatnı sled príkazov
+4001;105;Poiadavka nemôe by teraz spracovaná. Sluba je ešte zaneprázdnená predchádzajúcou poiadavkou.
+4001;106;Objekt ('%1') nemôe by uvo¾nenı. Objekt je %2 pouívanı ïalšími objektmi.
+4001;110;%1': Integer Over(Under-)flow ('%2': %3)
+4001;111;%1': Hodnota s pohyblivou desatinnou èiarkou je prive¾ká/primalá ('%2': %3)
+4001;119;%1': neplatnı parameter ('%2': %3)
+4001;120;%1': neplatná hodnota pre rıchlos ('%2': %3)
+4001;121;%1': neplatná hodnota pre zrıchlenie ('%2': %3)
+4001;122;%1': neplatná hodnota pre oneskorenie ('%2': %3)
+4001;123;%1': neplatná hodnota pre trhnutie ('%2': %3)
+4001;124;%1': neplatná hodnota pre polohu ('%2': %3)
+4001;125;%1': neplatná hodnota pre smer ('%2': %3)
+4001;126;%1': neplatnı typ ('%2': %3)
+4001;127;%1': neplatnı èas ('%2': %3 [us])
+4001;128;%1': neplatnı menovate¾ ('%2': %3)
+4001;150;%1': Rıchlos (%2) väèšia ako maximálna hodnota (%3). Pokraèovanie s maximálnou hodnotou.
+4001;151;%1': Zrıchlenie (%2) väèšie ako maximálna hodnota (%3). Pokraèovanie s maximálnou hodnotou.
+4001;152;%1': Oneskorenie (%2) väèšie ako maximálna hodnota (%3). Pokraèovanie s maximálnou hodnotou.
+4001;153;%1': Trrhnutie (%2) väèšie ako maximálna hodnota (%3). Pokraèovanie s maximálnou hodnotou.
+4001;156;%1': Oneskorenie (%2) menšie ako minimálna hodnota (%3). Pokraèovanie s maximálnou hodnotou.
+4001;200;%1': Chyba osi
+4001;201;%1': Príkaz ('%2') nemôe by vykonanı kvôli aktuálnemu stavu osi ('%3')
+4001;202;%1': Príkaz nemôe by vykonanı, pohon nie je uvo¾nenı
+4001;203;%1': Servo v stavovej chybe
+4001;204;%1: Servo nie je pripravené na zapnutie
+4001;205;%1: Enkóder v stavovej chybe
+4001;210;%1': Poloha osi mimo softvérovıch hraníc
+4001;211;%1': Os sa zastaví kvôli softvérovım hraniciam
+4001;220;%1': Doba cyklu (%2us) je odlišná od doby cyklu hlavnej osi ('%3': %4us)
+4001;221;Deklarácia od '%1' keï Slave z '%2' vytvorí krúok
+4001;301;%1': DIGCAM (%2) v stavovej chybe
+4001;302;%1': Proces parametrizovania je aktívny
+4001;350;Maximálny poèet vaèkovıch tabuliek bol dosiahnutı (%1)
+4001;351;Vaèková tabu¾ka '%1' neobsahuje iadne oznaèenie verzie
+4001;352;Vaèková tabu¾ka '%1' obsahuje neplatné oznaèenie verzie (%2)
+4001;353;Vaèková tabu¾ka '%1' neobsahuje iadne oznaèenie dátumu.
+4001;354;Vaèková tabu¾ka '%1' obsahuje neplatné oznaèenie dátumu (%2)
+4001;355;Vaèková tabu¾ka '%1' neobsahuje záznam 'camtable:'
+4001;356;Vaèková tabu¾ka '%1' neobsahuje záznam 'crc:'
+4001;357;Vaèková tabu¾ka '%1' neobsahuje iadnu kontrolnú sumu CRC
+4001;358;Vaèková tabu¾ka '%1' obsahuje nesprávnu kontrolnú sumu CRC (%2)
+4001;359;Vaèková tabu¾ka '%1' neobsahuje iadnu hodnotu
+4001;360;Vaèková tabu¾ka '%1' obsahuje neplatnı záznam (%2)
+4001;361;Vaèková tabu¾ka '%1' nie je striktne monotónna (záznam: %2)
+4001;900;%1: Èíslo parametra (%2) nie je podporované
+4001;901;%1': Neplatnı typ parametra (%2)
+4001;902;%1': Parameter (%2) iba èitate¾nı
+4001;903;%1': Parameter (%2) iba zapisovate¾nı
+4001;904;%1': Parameter (%2) nesmie by poèas pohybu zmenenı. Stará hodnota zostáva rovnaká.
+4001;905;%1': Zápis parametrov prerušenı
+4001;906;%1': Parameter (%2) nesmie by zmenenı v zapnutom stave
+4001;909;%1': neplatná hodnota pre parameter ('%2': %3). Pokraèovanie so starou hodnotou.
+4001;910;%1': neplatná hodnota pre maximálnu rıchlos (%2). Pokraèovanie so starou hodnotou.
+4001;911;%1': neplatná hodnota pre maximálne zrıchlenie (%2). Pokraèovanie so starou hodnotou.
+4001;912;%1': neplatná hodnota pre maximálne oneskorenie (%2). Pokraèovanie so starou hodnotou.
+4001;913;%1': neplatná hodnota pre maximálne trhnutie (%2). Pokraèovanie so starou hodnotou.
+4001;914;%1': Maximálne zrıchlenie (%2) by viedlo k prekroèeniu hodnoty AxisMemSize. Pokraèovanie so starou hodnotou.
+4001;915;%1': Maximálne oneskorenie (%2) by viedlo k prekroèeniu hodnoty AxisMemSize. Pokraèovanie so starou hodnotou.
+4001;916;%1': Maximálne trhnutie (%2) by viedlo k prekroèeniu hodnoty AxisMemSize. Pokraèovanie so starou hodnotou.
+4001;1000;neplatné èíslo chyby
+4050;90;Nebolo moné spusti proces simulácie
+4050;91;Nebolo moné vytvori spojenie RPC k procesu simulácie
+4050;92;Chyba spojenia RPC
+4050;93;Spojenie RPC s procesom simulácie nebolo vytvorené
+4050;94;Konfiguraènı súbor neexistuje
+4050;100;Robot s menom %1 nebol nájdenı
+4050;101;Nebolo moné inicializova inštanciu simulácie pre robota %1
+4050;102;Inštancia simulácie pre robota %1 nebola inicializovaná
+4050;103;Modul simulácie MCS nebol inicializovanı
+4050;104;Chybovı systém nebol incializovanı
+4050;110;Spúšacia poloha nemohla by robotom %1 dosiahnutá
+4050;111;Spúšacia poloha robota %1 sa nachádza nad pozitívnou hraniènou hodnotou osi (os %2)
+4050;112;Spúšacia poloha robota %1 sa nachádza nad negatívnou hraniènou hodnotou osi (os %2)
+4050;113;Reim polohy je neplatnı (robot %1)
+4050;114;Robot %1 nemohol vykona pohyb %2
+4050;115;Robot %1 sa nachádza v chybovom stave a nemôe vykona pohyb %2
+4050;116;Fronta pohybov robota %1 je plná. Nemôem prida pohyb %2.
+4050;117;Nebolo moné naèíta hlásenie pohybu robota %1
+4050;118;Nebolo moné naèíta systémové hlásenie
+4050;120;Èíslo frame %2 je neplatné (robot %1)
+4050;121;Èíslo nástroja %2 je neplatné (robot %1)
+4050;122;Èíslo dynamiky %2 je neplatné (robot %1)
+4050;123;Èíslo overlap %2 je neplatné (robot %1)
+4050;130;Frame %2 nie je definovanı (robot %1)
+4050;131;Nástroj %2 nie je definovanı (robot %1)
+4050;132;Dátovı záznam dynamiky %2 nie je definovanı (robot %1)
+4050;133;Dátovı záznam prešmyku %2 nie je definovanı (robot %1)
+4050;140;Neplatnı typ rampy v dátovom zázname dynamiky %2 (robot %1)
+4050;141;Neplatnı typ prešmyku v dátovom zázname dynamiky %2 (robot %1)
+4050;142;Neplatnı typ orientácie-interpolácie v pohybe %2 (robot %1)
+4050;143;Neplatnı typ bodu (robot %1)
+4050;144;Neplatnı druh pohybu v pohybe %2 (robot %1)
+4700;1;%1(%2/%3): interná chyba parser (neznámy symbol)'%4'
+4700;2;%1(%2/%3): interná chyba parser (terminálovı symbol)
+4700;3;%1(%2/%3): Interná chyba parser (iadny terminálovı symbol)
+4700;4;%1(%2/%3): interná chyba parser (podteèenie stohu)
+4700;5;%1(%2/%3): interná chyba parser (preteèenie stohu)
+4700;6;%1(%2/%3): interná chyba scanner
+4700;10;%1(%2/%3): preskoèenı '%4'
+4700;11;%1(%2/%3): neplatnı symbol '%4'
+4700;12;%1(%2/%3): oèakávané '%4'
+4700;13;%1(%2/%3): neoèakávanı koniec súboru
+4700;20;%1 nebol nájdenı
+4700;21;%1(%2,%3): vloenı súbor '%4' nebol nájdenı
+4700;22;%1(%2,%3): preteèenie vkladacích håbok (max. 10)
+4700;23;%1(%2,%3): Záznam '%4' existuje, nová hodnota ignorovaná
+4700;24;%1(%2,%3): Záznam '%4' existuje, prepísanı
+4700;25;%1(%2,%3): neplatnı základ hodnoty integer (2#.., 16#..)
+4700;26;%1(%2/%3): neplatná hodnota integer
+4700;27;%1 (%2/%3): neplatná reálna hodnota
+4700;28;%1(%2,%3): názov '%4' je pridlhı (max. 31 znakov)
+4700;29;%1(%2,%3): záznam '%4' u existuje v súbore '%5'
+4700;30;%1(%2,%3): záznam katalógu '%4' neexistuje
+4700;31;%1(%2,%3): cesta '%4' je pridlhá
+4700;32;%1(%2,%3): Neúplná cesta katalógu '%4'
+5500;0;Aktuálne iadna chyba
+5500;1;ComponentDisabled
+5500;10;%1: Uvedenı súbor '%2' (%3) nebol nájdenı príp. otvorenı
+5500;11;%1: Pri zápise do uvedeného súboru '%2' došlo k chybe
+5500;12;%1: Pri èítaní z uvedeného súboru '%2' došlo k chybe
+6024;1;%1: Spojenie USB k panelu OP750 bolo prerušené. Je potrebnı reboot.
+6042;0;%1(%2): Time: %3.%4:%5.%6 (%7) iadna chyba
+6042;1;%1(%2): Time: %3.%4:%5.%6 (%7) Vıstupnı skrat
+6042;2;%1(%2): Time: %3.%4:%5.%6 (%7) Kontrola UCE: Vıstupnı skrat, def. Riadenie, def. Tranzistor
+6042;3;%1(%2): Time: %3.%4:%5.%6 (%7) Uzemnenie jednej alebo viacerıch vıstupnıch fáz
+6042;4;%1(%2): Time: %3.%4:%5.%6 (%7) Brzdnı-Chopper nie je v AM prevádzkyschopnı
+6042;5;%1(%2): Time: %3.%4:%5.%6 (%7) Spojenie medzi zásobovacím modulom a modulom osi prostredníctvom HW-Info-System bolo prerušené
+6042;6;%1(%2): Time: %3.%4:%5.%6 (%7) Chıba sieová fáza
+6042;7;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie prostredníctvom VM cez Hardeware-Info-System pri privysokom medziokruhovom napätí
+6042;8;%1(%2): Time: %3.%4:%5.%6 (%7) Neprípustná odchılka medzi poadovanımi a skutoènımi otáèkami
+6042;9;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;10;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;11;%1(%2): Time: %3.%4:%5.%6 (%7) Teplota AM dosiahla/prekroèila vypínací prah
+6042;12;%1(%2): Time: %3.%4:%5.%6 (%7) iadna brzda nie je pripojená - vıstup je preaenı alebo má privysokú taktovaciu frekvenciu
+6042;13;%1(%2): Time: %3.%4:%5.%6 (%7) Napájacie napätie bàzd leí mimo tolerancie od +10/- 0 %
+6042;14;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba resolvera/vyhodnotenie resolvera
+6042;15;%1(%2): Time: %3.%4:%5.%6 (%7) 01: Compare medzi raw-position a check-counter pri vysielaèi Hiperface je chybné 02: Vysielaè nebol nájdenı v identifikaènom zozname 32: Vysielaè vysiela internú chybu
+6042;16;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba pri prevzatí do prevádzky
+6042;17;%1(%2): Time: %3.%4:%5.%6 (%7) Interná chyba CPU poèítaèa
+6042;18;%1(%2): Time: %3.%4:%5.%6 (%7) Neplatnı stav v softvéri
+6042;19;%1(%2): Time: %3.%4:%5.%6 (%7) Procesné údaje nie sú zrete¾né
+6042;20;%1(%2): Time: %3.%4:%5.%6 (%7) Urèená hranica vleènej chyby pri reime zápisu krivky bola prekroèená
+6042;21;%1(%2): Time: %3.%4:%5.%6 (%7) Urèená hranica vleènej chyby pri reime dvojitého pohonu Engel bola prekroèená
+6042;22;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;23;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;24;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;25;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba pri prístupe na permanentnú pamä parametra
+6042;26;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie o binárnej vstupnej svorke
+6042;27;%1(%2): Time: %3.%4:%5.%6 (%7) Obidva koncové spínaèe nemôu by rozpoznané na ich naprogramovanıch vstupnıch svorkách alebo v riadiacom slove
+6042;28;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba Feldbus Timeout
+6042;29;%1(%2): Time: %3.%4:%5.%6 (%7) Nabehnutı hardvérovı koncovı spínaè pri polohovaní.
+6042;30;%1(%2): Time: %3.%4:%5.%6 (%7) Pohon sa nezastavil poèas urèenej doby oneskorenia
+6042;31;%1(%2): Time: %3.%4:%5.%6 (%7) Senzor prehriatia (TF/TH, KTY) pohonu na ochranu motora zareagoval
+6042;32;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;33;%1(%2): Time: %3.%4:%5.%6 (%7) Napájací modul (VM) ešte alebo u nie je pripravenı
+6042;34;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;35;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;36;%1(%2): Time: %3.%4:%5.%6 (%7) Pri synchrónnom chode bol prekroèenı urèenı, maximálny prípustnı vleènı odstup.
+6042;37;%1(%2): Time: %3.%4:%5.%6 (%7) Prekroèenie èasu pri internom poèítaèovom èasovaèi watchdog
+6042;38;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba vo funkcii technológie
+6042;39;%1(%2): Time: %3.%4:%5.%6 (%7) Pri referenènej jazde došlo k chybe
+6042;40;%1(%2): Time: %3.%4:%5.%6 (%7) Synchronizácia s kartou nemohla by riadne vykonaná
+6042;41;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba 'Monos'.
+6042;42;%1(%2): Time: %3.%4:%5.%6 (%7) Pri polohovaní bol prekroèenı urèenı, maximálny prípustnı vleènı odstup.
+6042;43;%1(%2): Time: %3.%4:%5.%6 (%7) Poèas riadenia cez sériové rozhranie došlo k prerušeniu
+6042;44;%1(%2): Time: %3.%4:%5.%6 (%7) Meniè bol preaenı
+6042;45;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba pri inicializácii systému MDN (see Sub-Error!)
+6042;46;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;47;%1(%2): Time: %3.%4:%5.%6 (%7) Komunikácia prostredníctvom SBUS #1 je prerušená
+6042;48;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;49;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;50;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba napájacieho napätia 24V.
+6042;51;%1(%2): Time: %3.%4:%5.%6 (%7) Poèas polohovania nabehol koncovı spínaè softvéru
+6042;52;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;53;%1(%2): Time: %3.%4:%5.%6 (%7) Pri kontrole kódu programu z flash v kóde Ram príp. Resolver-DSP došlo k chybe CRC32
+6042;54;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;55;%1(%2): Time: %3.%4:%5.%6 (%7) Konfiguraèná chyba FPGA, sa môe vyskytnú aj pri nekonzistentnosti vo Flash EEPROM sekcia FPGA Data(Boot-Loader)
+6042;56;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba externá S- alebo Burst-RAM
+6042;57;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba enkódera TTL
+6042;58;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba v Sin-Cos-Encoder-Evaluation
+6042;59;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba v Hiperface-Encoder Evaluation
+6042;60;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba pri flashovaní DSP.
+6042;61;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;62;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;63;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;64;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;65;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;66;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba dátovej konfigurácie procesu.
+6042;67;%1(%2): Time: %3.%4:%5.%6 (%7) Input-Pdo, ktorého doba timeout nie je na 0, ktoré nie je prepnuté do offline a bolo u raz prijaté, u prekroèilo svoju dobu timeout
+6042;68;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba externá synchronizácia, pozri SubErr
+6042;69;%1(%2): Time: %3.%4:%5.%6 (%7) Teplota motora prekroèila nastavite¾nı prah predvıstrahy
+6042;70;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie externého zariadenia (0)
+6042;71;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie externého zariadenia (1)
+6042;72;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie externého zariadenia (2)
+6042;73;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie externého zariadenia (3)
+6042;74;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie externého zariadenia (4)
+6042;75;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie externého zariadenia (5)
+6042;76;%1(%2): Time: %3.%4:%5.%6 (%7) Chyba MoviPLC.
+6042;77;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;78;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;79;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;80;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;81;%1(%2): Time: %3.%4:%5.%6 (%7) Prúd medziokruhu vo VM prekroèil maximálnu prípustnú hranicu 260%
+6042;82;%1(%2): Time: %3.%4:%5.%6 (%7) Vyaenie VM dosiahlo prah predvıstrahy
+6042;83;%1(%2): Time: %3.%4:%5.%6 (%7) Vyaenie VM dosiahlo príp. presiahlo vypínací prah
+6042;84;%1(%2): Time: %3.%4:%5.%6 (%7) Chybové hlásenie prostredníctvom VM o Hardeware-Info-System. Brzdnı-Chopper vo VM nie je prevádzkyschopnı
+6042;85;%1(%2): Time: %3.%4:%5.%6 (%7) Teplota VM sa blíi vypínaciemu prahu
+6042;86;%1(%2): Time: %3.%4:%5.%6 (%7) Teplota VM dosiahla príp. presiahla vypínací prah
+6042;87;%1(%2): Time: %3.%4:%5.%6 (%7) Vyaenie brzdného odporu zabudovaného vo VM dosiahlo prah predvıstrahy
+6042;88;%1(%2): Time: %3.%4:%5.%6 (%7) Vyaenie brzdného odporu zabudovaného vo VM dosiahlo príp. presiahlo vypínací prah
+6042;89;"%1(%2): Time: %3.%4:%5.%6 (%7) Minimálne jedno z napájacích napätí vo VM chıba; iadne chybové hlásenie pre os !!"
+6042;90;%1(%2): Time: %3.%4:%5.%6 (%7) (pozri chybové hlásenie VM)
+6042;91;"%1(%2): Time: %3.%4:%5.%6 (%7) 24V napájanie je pod 17V; iadne chybové hlásenie pre os !!"
+6042;92;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;93;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;94;%1(%2): Time: %3.%4:%5.%6 (%7) V bloku konfiguraènıch údajov prístroja došlo pri kontrole vo fáze reset k chybe
+6042;95;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;96;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;97;%1(%2): Time: %3.%4:%5.%6 (%7) Sada parametrov nemohla by bezchybne skopírovaná
+6042;98;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;99;%1(%2): Time: %3.%4:%5.%6 (%7) Nie je pripojené
+6042;200;%1: Nesprávna doba cyklu(%2ms)
+6042;201;%1: Parameter transferu nie je monı (nie je k dispozícii iaden Param-Slot), %2
+6042;203;%1: Chyba pri naèítaní údajov pdo: %2 È. Pdo. %3 chyba è.
+6042;204;%1: Chyba pri zapísaní údajov pdo (Pdo è.%2)
+6042;205;%1:Pre toto pdo neexistuje iaden platnı handle (Pdo è.%2)
+6042;209;%1: Poèet konfigurovanıch osí prekraèuje sumu maximálnych monıch osí.
+6042;210;%1: Parameter '%2' chıba v konfig. súbore.
+6042;212;%1: Mvl Request (%2) udáva chybu: %3
+6042;214;%1: Mvl Request (%2) udáva chybu:%3
+6042;216;%1: Chyba konfigurácie ActValPdo: %2 È. Pdo. %3 chyba è.
+6042;217;%1: VarData preteèenie pamäte (Cie¾ová pamä uívate¾a je primalá)
+6042;218;%1: Mvl FwUpdate-Response udáva chybu:%2,%3
+6042;219;%1: Fáza reboot pohonu prechádza do timeout: %2
+6042;220;%1: Mvl FwUpdate-Request (%2) udáva chybu: %3
+6042;221;%1: Mvl VarDataLock udáva chybu: %2
+6042;222;%1: Mvl VarDataUnLock udáva chybu: %2
+6042;223;%1: Neznámy prístup VarData
+6042;224;%1: Mvl FwUpdate-Status udáva chybu:%2
+6042;225;%1: Neplatnı ukazovate¾ v chybovej tabu¾ke SEW (%2)
+6042;250;%1: Konfiguraènı záznam (Poadovaná poloha posUnitsToIncrements) (%2) vedie k Over(Under)-Flow
+6042;252;%1: (MovAxi) Nesprávna alebo chıbajúca informácia k polohe prevádzkového reimu v súbore Config, poui inkrementálny vysielaè/relatívne
+6042;253;%1: (MovAxi) Chıbajúci alebo neplatnı iniciálny prevádzkovı reim v súbore Config
+6042;259;AXIS #%1 neplatnı ProcessServerStatus
+6042;261;%1: Konfiguraènı záznam (Velocity alebo velUnitsToSpeed) (%2) vedie k Over(Under)-Flow
+6042;263;%1: Neplatná hodnota SetValMode:(%2)
+6042;264;%1: Mailbox Overflow (%2)
+6042;265;%1: Neplatnı ProcessStatus v spracovaní VarData
+6042;267;ComponentDisabled
+6042;300;%1: (MOVIDRIVE) Neplatná alebo chıbajúca uzlová adresa v súbore Config
+6042;302;%1: (MOVIDRIVE) Neplatná adresa S-Bus (%2) v súbore Config
+6042;303;%1: (MOVIDRIVE) Neplatná verzia I-Pos (%2)
+6042;304;%1: (MOVIDRIVE) nesprávna doba cyklu CAN-Bus (%2 ms)
+6042;305;%1: (MOVIDRIVE) Logická adresa (%2) sa u pouíva
+6042;306;%1: (MOVIDRIVE) Parameter transferu nie je monı (nie je k dispozícii iaden Param-Slot)
+6042;307;%1: Neznámy prístup VarData
+6042;308;%1: Mvl VarDataLock, chyba: %2
+6042;309;%1: Mvl VarDataUnLock, chyba: %2
+6042;350;%1: (MOVIDRIVE) Neplatnı alebo chıbajúci faktor prepoèítavania polohy v súbore Config, poui %2
+6042;352;%1: (MOVIDRIVE) Chıbajúci alebo neplatnı iniciálny prevádzkovı reim v súbore Config
+6042;353;%1: (MOVIDRIVE) SINT32 Over(Under)-Flow (%2 ms)
+6042;354;%1: (MOVIDRIVE) Cyklickı telegram sa stratil (%2)
+6042;355;%1: (MOVIDRIVE) Vıpadok cyklickıch telegramov (%2)
+6042;356;%1: (MOVIDRIVE) Ready-Bit bol vzatı spä (%2)
+6042;357;%1: (MOVIDRIVE) Pozitívny koncovı spínaè dosiahnutı (%2)
+6042;358;%1: (MOVIDRIVE) Negatívny koncovı spínaè dosiahnutı (%2)
+6042;359;%1: (MOVIDRIVE) Time-Out pri resete, neodpovedá na iadne CAN-Messages (%2)
+6042;360;%1: (MOVIDRIVE) Time-Out pri boot-e, nebol prevádzkyschopnı (%2)
+6042;362;%1: (MOVIDRIVE) Uvo¾nenı Bit koncového stupòa bol vzatı spä (%2)
+6042;363;%1: (MOVIDRIVE) Neplatné Id objektu SCom (%2)
+6042;364;%1: (MOVIDRIVE) Neplatnı SCom-symCode (%2)
+6042;365;%1: (MOVIDRIVE) Neplatnı typ SCom (%2)
+6042;366;%1: (MOVIDRIVE) Neplatná ve¾kos objektu SCom (%2)
+6042;368;%1: Chyba jednotlivého transferu sady parametrov %2 (inx %3, class %4 addCode %5)
+6042;369;%1: Zapísa stav sady parametrov: nr=%2, wr=%3, err-high=%4, err-low=%5
+6042;370;%1: Naèíta stav sady parametrov: nr=%2, rd=%3, err-high=%4, err-low=%5
+6042;371;%1: (MOVIDRIVE) Chybovı telegram v Silentmode(errCode:%2)
+6042;500;%1: Vyvolanie funkcie UOS '%2'('%3') zlyhalo
+6042;501;%1: Zapísa stav sady parametrov: r=%2,wr=%3,err-high=%4,err-low=%5
+6042;502;%1: Naèíta stav sady parametrov: nr=%2, rd=%3, err-high=%4, err-low=%5
+6057;109;Komponent deaktivovanı
+6058;100;%1: Transakcia nebola vykonaná (%2)
+6058;101;%1: Vymazanie projektovania zlyhalo s hlásením '%2'
+6058;102;%1: Príkaz %2 s chybou %3 zlyhal
+6058;103;%1: Poiadavka pamäte v '%2' nebola splnená
+6058;104;%1: Súbor '%2' sa nenašiel
+6058;105;%1: Súbor '%2' je chybnı
+6058;106;%1: Chyba pri èítaní súboru '%2'
+6058;107;%1: Chyba prístroja pri prenose súboru '%2'
+6059;101;%1: Neplatná adresa stanice. Konfigurovaná: %2, platné: [%3..%4]
+6059;102;%1: Dåka vstupnıch údajov je neplatná. Konfigurovaná: %2 Bytes, platné: [%3..%4] Bytes
+6059;103;%1: Dåka vıstupnıch údajov je neplatná. Konfigurovaná: %2 Bytes, platné: [%3..%4] Bytes
+6059;104;%1: Suma dåok vstupnıch a vıstupnıch údajov je neplatná. Konfigurované: %2 Bytes, platné:[%3..%4] Bytes
+6059;105;%1: Neplatnı kontrolnı èas: Konfigurované: %2ms, platné: [%3..%4] ms
+6059;106;%1: Dåka zásobníka pre DP V1 Class1 neplatnı prenos. Konfigurované: %2 Bytes, platné: 0,[4..244] Bytes
+6059;107;%1: Dåka zásobníka pre DP V1 Class2 neplatnı prenos. Konfigurované: %2 Bytes, platné: 0,[4..244] Bytes
+6059;108;%1: Dåka externıch diagnostickıch údajov je neplatná. Konfigurované: %2 Bytes, platné: [0..32] Bytes
+6059;109;%1: Príkaz %2 s chybovım kódom %3 prerušenı
+6059;110;%1: Externé diagnostické údaje nemohli by aktivované
+6059;111;%1: Externé diagnostické údaje nemohli by vzaté spä
+6059;112;%1: Došlo k chybe prístroja %2-%3
+6059;113;ComponentDisabled
+6059;114;%1: Inicializácia zlyhala
+6062;1;Záznam nemôe by uloenı do protokolu
+6062;2;Zápis do Message-Queue pre protokol s typom %1 zlyhal
+6062;3;Queue protokolu pre protokol s typom %1 je plná
+6062;4;Protokol s typom %1 nemôe by prihlásenı v systéme hlásení
+6062;5;Súbor sa nedá zaloi %1
+6062;6;Súbor %1 nemôe by systémom hlásení opísanı (Handle: %2, Ve¾kos prvku: %3, Poèet prvkov: %4) 
+6062;7;pamä nie je k dispozícii v %1
+6062;8;Chyba pri èítaní súboru %1, handle %2, elementsize %3, elementcount %4
+6062;9;Súbor nemôe by zapísanı %1
+6062;10;iaden prístup na súbor %1, handle %2, poloha súboru %3
+6062;11;Záznam v protokole s typom %1 nemôe by nahratı
+6062;12;Zásobník hlásení %1 nemôe by kvôli preteèeniu zapísanı
+6062;13;Neplatnı index pri prístupe na súbor protokolu
+6062;14;Syntaxerror v súbore .csv %1 na polohe %2
+6062;15;iaden snapshot nemôe by otvorenı
+6062;16;Ïalšie %1 hlásenia sú platné (potom boli %2 hlásenia na základe preteèenia zásobníka stratené)
+6065;3600;%1: Funkcia ovládaèa (%2) dodáva negatívny vısledok
+6065;3601;%1: Neplatná dåka vstupnıch údajov. Konfigurované: %3 Bytes - od Master sú k dispozícii: %2 Bytes
+6065;3602;%1: Master dá k dispozícii viac vstupnıch údajov ako bolo konfigurované. Konfigurované: %3 Bytes - od Master sú k dispozícii: %2 Bytes
+6065;3603;%1: Neplatná dåka vıstupnıch údajov. Konfigurované: %3 Bytes - oèakávané od Master: %2 Bytes
+6065;3604;%1: Viac konfigurovanıch vıstupnıch údajov ako oèakávané od Master. Konfigurované: %3 Bytes - oèakávané od Master: %2 Bytes
+6065;3605;%1: Chyba na karte zbernice
+6065;3606;%1: Watchdog z PROFIBUS-Slave vypršal (rozpoznanı na karte zbernice)
+6065;3607;%1: Watchdog z PROFIBUS-Slave vypršal (rozpoznanı na CPU)
+6065;3610;%1: Aktualizácia zlyhala
+6065;3620;%1: Parameter bol zmenenı
+6065;3621;%1: Konfigurácia bola zmenená
+6065;3624;%1: Bol prijatı neznámy event (%2)
+6070;1;%1/%2/%3, %4: iadne pamäové miesto
+6070;10;%1, CAN-Id %2: Odosielanie zlyhalo
+6070;11;%1, CAN-Id %2: Prijímanie zlyhalo
+6070;12;%1, Preteèenie prijímajúceho Fifo
+6070;13;%1, CAN-Id %2: Preteèenie údajov
+6070;14;%1, Preteèenie prijímajúcej queue
+6071;1;Chyba pri registrácii servisnej funkcie '%3' [%1, %2]
+6071;2;Chyba pri vyvesení servisnej funkcie '%3' [%1, %2]
+6071;3;Reset sa spustí po krátkom oneskorení
+6071;4;Prieèinok na uvo¾nenie (%1) neexistuje
+6071;5;Chyba v ceste alebo v názve súboru (%1)
+6099;1;Vyvolanie Uos %1 zlyhalo: %2
+6099;2;Inicializácia %1 zlyhala
+6099;3;Konfiguraènı záznam SMemAd %1 chıba
+6099;4;SMemAd-backup-file %1 nemôe by zaloenı.
+6099;5;SMemAd-backup-file %1 nemôe by zaloenı
+6099;10;SMemAd-backup-file %1 znièenı (Code %2). Spúša sa ako novı štart.
+6099;20;Komponent úplne rozbehnutı
+6116;1;Prístroj %1 nie je otvorenı (%2)
+6116;2;Prístroj %1 je u otvorenı
+6116;3;%1 (Hodnota %2) nie je podporovaná
+6116;4;%1: fast accessMode nemôe by aktivovanı
+6116;5;%1: Open zlyhalo
+6135;1;%1: Assertion Failed: %2
+6135;2;%1: Komponent je blokovanı (disabled).
+6135;3;%1: Komponent je u inicializovanı.
+6135;4;%1/%2: U nie je vo¾né iadne pamäové miesto (%3).
+6135;5;%1/%2: Uos-Methode '%3(%4)' bola vykonaná s chybami
+6135;100;%1: Funkcia ovládaèa Low-Level '%2(%3)' bola vykonaná s chybami
+6135;102;%1.AI:%2: Zlomenie snímaèa
+6135;103;%1.AI:%2: Zlomenie snímaèa odpadlo
+6135;104;%1: Chyba EEPROM (karta nie je kalibrovaná)
+6135;105;%1: Uvo¾nenie interrupt zlyhalo
+6135;106;%1: Referencia: Zlomenie snímaèa
+6135;107;%1: Referencia: Zlomenie snímaèa odpadlo
+6135;110;%1.TI:%2: Zlomenie snímaèa
+6135;111;%1.TI:%2: Zlomenie snímaèa odpadlo
+6135;112;%1: Watchdog vyvolal
+6135;113;%1: Porušenie doby cyklu Systick
+6135;114;%1: Systémová chyba
+6135;115;%1: Chyba Watchdog na KBus
+6135;116;%1: KBus-Watchdog nebol aktivovanı
+6159;100;%1: Funkcia ovládaèa (%2) dodáva negatívny vısledok
+6159;102;%1: Watchdog prístroja PROFIBUS-Master uplynul
+6159;103;%1: Slave s adresou uzla (%2) viacnásobne konfigurovaná (%3)
+6159;104;%1: Modul s Id %2 viacnásobne konfigurovanı
+6159;105;%1: Modul s Id %2 chıba v projektovaní master
+6159;106;%1: Neplatné èíslo slotu: %2 (platné: 0 .. 127)
+6159;107;%1: Neplatná %2 dåka údajov: konfigurovaná %3 Bytes, zaznamenaná v údajoch projektovania %4 Bytes
+6159;108;%1: Slave v údajoch projektovania nebol nájdenı
+6159;110;%1: Aktualizácia zlyhala
+6159;210;%1: %3 Usporiadanie modulu v slote %2 je neplatné
+6159;212;%1: Dátovı typ %2-údajov v konfigurácii (typ %3) a projektovaní (typ %4) je rozliènı
+6159;220;%1: Údaje diagnózy slave: Adresa slave: %2
+6159;221;%1: Slave s adresou %2 %3
+6159;222;%1: Modul %3 má neplatnú %2 dåku údajov: konfigurované %4 Bytes, zaznamenané v údajoch projektovania %5 Bytes
+6159;223;%1: Byte oznaèenia #%2 nesúhlasí s konfiguráciou modulu %3.
+6159;224;%1: Posledné %2 bytes oznaèenia nie sú priradené iadnemu modulu.
+6159;225;%1: Nedostatok bytes oznaèenia obsiahnutıch v projektovaní
+6159;226;%1: Konfiguraèné údaje modulu %2 chıbajú.
+6159;227;%1: Slave s adresou %2 hlási alarm: (typ alarmu = %3, èíslo sekvencie = %4)
+6182;1;%1: Assertion zlyhala: %2
+6182;2;%1: Komponent je blokovanı (disabled).
+6182;3;%1: Komponent u bol inicializovanı.
+6182;4;%1/%2: U nie je vo¾né iadne pamäové miesto (%3).
+6182;5;%1/%2: Vyvolanie funkcie UOS '%3(%4)' zlyhalo.
+6182;6;%1: Pri ukonèení Client-Manager-a bol Client '%2' vymazanı.
+6183;1;%1: Assertion zlyhala: %2
+6183;2;%1: Komponent je blokovanı (disabled).
+6183;3;%1: Komponent u bol inicializovanı.
+6183;4;%1/%2: U nie je vo¾né iadne pamäové miesto (%3).
+6183;5;%1/%2: Vyvolanie funkcie UOS '%3(%4)' zlyhalo.
+6183;6;%1: Novı Transport Interface nemohol by registrovanı (povolené %2).
+6183;7;%1: MsgId %2 pre S%3 C%4 nemohol by registrovanı.
+6195;1;Zariadenie %1 ešte nebolo otvorené (%2)
+6195;2;Zariadenie %1 je u otvorené
+6195;3;Parameter %1 (value %2) nie je podporovanı
+6195;4;Nastala chyba komunikácie %1 poèas %2
+6200;1;SystemServer nie je spojenı
+6200;2;Motherboardmonitor nie je zapojenı alebo nefunguje
+6200;3;%1: Hodnota je opä v rámci hraniènej hodnoty
+6200;4;%1: Vıpadok ventilátora (Aktuálna hodnota: %2, Vypínací prah: %3 ) 
+6200;5;%1: Vıpadok ventilátora (Aktuálna hodnota: %2, Prah vıstrahy: %3 )
+6200;6;%1: Chybovı stav na ventilátore odstránenı
+6200;7;%1: Vypínací prah pre teplotu bol dosiahnutı (Aktuálna hodnota: %2, Vypínací prah: %3 ) 
+6200;8;%1: Prah vıstrahy pre teplotu bol dosiahnutı (Aktuálna hodnota: %2, Prah vıstrahy: %3 ) 
+6200;9;%1: Stav prehriatia bol odstránenı
+6200;10;%1: Vypínací prah pre napätie bol dosiahnutı (Aktuálna hodnota: %2, Vypínací prah: %3 ) 
+6200;11;%1: Prah vıstrahy pre napätie bol dosiahnutı (Aktuálna hodnota: %2, Prah vıstrahy: %3 ) 
+6200;12;%1: Chybovı stav pre napätie bol odstránenı
+6200;13;%1: Všeobecná vıstraha pri kontrole hardvéru (Aktuálna hodnota %2%3) 
+6200;14;%1: Všeobecná chyba pri kontrole hardvéru (Aktuálna hodnota %2%3) 
+6200;15;%1: Neplatnı stav pri kontrole hardvéru (Aktuálna hodnota %2%3) 
+6200;16;%1: Neplatnı stav pri kontrole hardvéru (Aktuálna hodnota %2%3) 
+6200;17;Sys7Srv: PowerManagement - Trvanie procesu Shutdown je dlhšie ako max. critical time
+6200;18;Sys7Srv: PowerManagement - Max. doba do Shutdown je dlhšia ako vıdr batérie
+6200;19;Sys7Srv: PowerManagement - Vıpadok napäového napájania - systém beí na batériu
+6200;20;Sys7Srv: PowerManagement - Batéria nie je pripojená
+6200;21;Sys7Srv: PowerManagement - Prehriatie sieového zdroja
+6200;22;Sys7Srv: PowerManagement - Vıpadok ventilátora na sieovom zdroji
+6200;23;Sys7Srv: PowerManagement - Batéria USV by mala by vymenená
+6200;24;Sys7Srv: PowerManagement - Spojenie so sieovım zdrojom bolo prerušené
+6200;25;Sys7Srv: PowerManagement - Nastavená doba vypnutia prikrátka na spracovanie Command- Files
+6200;26;Sys7Srv: PowerManagement - Napäové napájanie je opä aktívne
+6200;27;Sys7Srv: Reštart systému bol spustenı
+6200;28;Sys7Srv: PC-reboot bol spustenı
+6200;29;Sys7Srv: SystemServer bol zapojenı
+6200;30;Sys7Srv: Motherboard-Monitor je zapojenı
+6200;31;Sys7Srv: PowerManagement - Spojenie so sieovım zdrojom alebo s USV bolo vytvorené
+6200;32;Kontrola hardvéru pre '%1': Zadanie minimálneho vypínacieho prahu > minimálneho prahu vıstrahy
+6200;33;Kontrola hardvéru pre '%1': Zadanie minimálneho vypínacieho prahu chıba
+6200;34;Kontrola hardvéru pre '%1': Zadanie maximálneho vypínacieho prahu < maximálneho prahu vıstrahy
+6200;35;Kontrola hardvéru pre '%1': Zadanie maximálneho vypínacieho prahu chıba
+6200;36;Kontrola hardvéru pre '%1': Zadanie èasového limitu chıba
+6200;37;Kontrola hardvéru pre '%1': Zadanie minimálneho prahu vıstrahy chıba
+6200;38;Kontrola hardvéru pre '%1': Zadanie maximálneho prahu vıstrahy chıba
+6200;39;Sys7Srv: Batéria pripojená k sieovému zdroju
+6200;40;Sys7Srv: Batéria bola vymenená a opä funguje
+6200;41;Sys7Srv: Ventilátor pri sieovom zdroji opä funguje
+6200;42;Sys7Srv: Teplota sieového zdroja je opä normálna
+6220;1;iaden server nie je inštalovate¾nı na porte TCP %1
+6242;1;IRT User0 (èas %1): StringI: %2, ParamI(h): %3, ParamI(l): %4, ParamII(h): %5, ParamII(l): %6
+6242;2;IRT User0 (èas %1): StringII: %2, ParamIII(h): %3, ParamIII(l): %4, ParamIV(h): %5, ParamIV(l): %6
+6242;3;IRT User0 (èas %1): Formát: %2
+6242;4;Všeobecnı problém v IecSAlgo: %1 %2 %3
+6242;5;KMEM: Uvedenı poèet Bytes nemôe by zaloenı (%1 Bytes)
+6242;6;KMEM: Vıstraha: IEC.Memory nie je konfigurovaná ==> iadna Memory nie je rezervovaná pre dynamické prvky. Pouíva sa Heap-Memory!
+6245;1;Komponent je blokovanı
+6245;2;Prechod stavu zlyhal
+6245;3;Funkcia %1 nie je k dispozícii
+6245;4;Nedefinovanı systémovı stav %1
+6245;5;Chyba pri prechode stavu %1
+6245;6;Prechod stavu %1 nemohol by vykonanı
+6245;7;Aplikácia spustená
+6245;8;Aplikácia zastavená
+6245;9;Prechod stavu %1 nemohol by vykonanı, chybovı kód %2
+6252;1;%1: Neplatnı referenènı senzor (aktuálne externı senzor = %2)
+6252;2;%1: Neplatnı referenènı senzor odstránenı (aktuálne externı senzor = %2)
+6252;3;%1: Referencia: Zlomenie snímaèa
+6252;4;%1: Referencia: Zlomenie snímaèa odstránené
+6252;5;%1: Systémová chyba
+6252;6;%1: Porušenie doby cyklu
+6252;7;%1: Konfigurovanıch prive¾a modulov (maximum %2)
+6252;8;%1: Systémová chyba analógovıch modulov
+6252;9;%1: Chybná konfigurácia analógovıch vstupov
+6252;10;%1: Chybná konfigurácia analógovıch vıstupov
+6252;11;%1: KBus Power Down aktívny
+6252;12;%1: KBus Down aktívny
+6252;13;%1: Prive¾a modulov na KBus
+6252;14;%1: KBus Master Abort
+6252;15;%1: Hranica PDO prekroèená
+6252;16;%1: Modul bol odstránenı poèas prevádzky
+6252;17;%1: Vedenie SERR aktívne
+6252;18;%1: Neznámy modul na KBus
+6252;19;%1: Pouitie senzora teploty typu L nie je moné
+6252;20;%1: KBus konflikt adresy prístroja, typ modulu = %2, adresa modulu = %3
+6252;21;%1: Watchdog-Fehler
+6252;22;%1: KBUS-Fehler
+6280;1;%1: rxpdo %2 neboli prijaté iadne cyklické údaje
+6280;2;%1: konfigurovanıch, ignorovanıch prive¾a interruptov: '%2'
+6280;3;%1: konfigurovanıch prive¾a rozliènıch %2-redukcií
+6280;4;%1: prekroèenı maximálny poèet %2pdo's (%3)
+6280;5;%1: %2. Error Code: 0x%3
+6280;6;%1: prive¾ká redukcia aktualizácie %2pdo (%3, max %4)
+6281;1;%1: poadované prive¾a komunikaènıch rozhraní (%2) 
+6281;2;%1: Inicializácia komunikaèného rozhrania %2 zlyhalo (ve¾kos vstupnıch údajov %3, ve¾kos vıstupnıch údajov %4)
+6281;3;%1: Komunikaèné rozhranie %2 sa u pouíva (%3)
+6281;4;%1: Dåka vstupnıch údajov (%2) odlišná pod¾a konfigurácie (%3)
+6281;5;%1: Dåka vıstupnıch údajov (%2) odlišná pod¾a konfigurácie (%3)
+6286;1;%1: Assertion zlyhala: %2
+6286;2;%1: Komponent je blokovanı (disabled).
+6286;3;%1: Komponent je u inicializovanı.
+6286;4;%1/%2: U nie je vo¾né iadne pamäové miesto (%3).
+6286;5;%1/%2: Vyvolanie funkcie UOS '%3(%4)' zlyhalo.
+6294;1;%1: Komponent je blokovanı (disabled).
+6294;2;%1: Komponent je u inicializovanı.
+6338;1;Chyba pri prístupe zápisu na File %2 (Filehandle: %1) - iadna vo¾ná pamä mechaniky
+6338;2;Dvojitá adresa IP detekovaná: IP: %1, meno: %2, macID: %3
+6338;3;Neplatnı parameter sieovej konfigurácie: %1
+6338;4;Pamä pre mechaniku %1 (ve¾kos: %2 MB) nie je k dispozícii
+6338;5;Chyba pri inštalácii ramdisku %1 (ve¾kos: %2 MB)
+6338;6;Inštancia SMemAd nemohla by vytvorená (chybovı kód: %1)
+6338;7;Chyba pri zaloení objektu FastRetain
+6338;8;Chyba pri zaloení pamäte FastRetain - chybovı kód: %1 %2
+6338;9;Chyba pri èítaní Cfg-File %1 
+6338;10;Povinnı katalógovı záznam %1 nebol konfigurovanı 
+6338;11;Spustenı systém so štandardizovanou štruktúrou ukladania súborov
+6338;12;Spustenı systém bez štandardizovanej štruktúry ukladania súborov
+6338;13;Nie všetky povinné katalógové záznamy sú konfigurované - skontrolova general.cfg
+6338;14;Inicializácia modulu '%1' zlyhala
+6338;15;SMemAd-Backup File %1 poškodenı (Chybovı kód: %2) - vykoná sa studenı štart
+6338;16;Chyba pri zaloení SMemAd-Backup File %1
+6338;17;Chyba pri otvorení/zápise SMemAd-Backup File %1
+6338;18;Verzia firmvéru obsiahnutá v Cfg-File
+6338;19;Chyba pri èítaní general.cfg
+6338;20;Chyba pri otváraní sériového rozhrania '%1' pre vıstupy loggera
+6338;21;Musí existova buï system.cfg alebo general.cfg
+6338;22;Systém naštartuje v reime Debug (reim 0x%1)
+6338;23;Chyba pri vytvorení systémovej triedy hlásenia
+6338;100;Prestavenı systémovı èas (èasovı údaj pred zmenou [sec]:%1 [usec]:%2 èasovı údaj po zmene [sec]:%3 [usec]:%4)
+6338;102;Zastavenie systému ([sec]: %1, [usec]: %2)
+6338;103;Spustenie systému (Verzia firmvéru: %1 Štartovací bod [sec]: %2, [usec]: %3)
+6338;104;Nastal reset KNet-Bus (Watchdog: %1 Funkènı Code: %2 Externı: %3 Busbreak: %4 Busbreak1: %5)
+6338;105;Vloenı CompactFlash (CPU-ID: %1 Názov zariadenia: %2 Vırobca: %3 Popis modelu: %4 Sériové èíslo: %5)
+6338;106;Odstránenı CompactFlash (CPU-ID: %1 Názov zariadenia: %2 Vırobca: %3 Popis modelu: %4 Sériové èíslo: %5)
+6338;107;Rozpoznanı CompactFlash (CPU-ID: %1 Názov zariadenia: %2 Vırobca: %3 Popis modelu: %4 Sériové èíslo: %5)
+6338;108;Hranièná hodnota teploty CPU prekroèená (%1 °C)
+6338;109;Naèítanı konfiguraènı súbor '%1' 
+6338;110;Napätie batérie CMOS je nízke - vymeni batériu
+6338;111;iadne napätie batérie CMOS - vymeni batériu
+6338;112;Ventilátor CPU je pokazenı - vymeni ventilátor
+6338;113;Ventilátor CPU má príliš nízku rıchlos - vymeni ventilátor
+6338;114;Vytvorenie spojenia s mechanikou %1 bolo úspešné
+6338;115;Vytvorenie spojenia s tlaèiaròou %2 bolo úspešné (dôvod: %1).
+6338;116;Vytvorenie spojenia s mechanikou %1 nebolo úspešné. Stav: %2 (Smb: %3, %4)
+6338;117;Spojenie s mechanikou %1 prerušené
+6338;118;SmbServer ešte nie je pripravenı na vykonanie príkazu Share
+6338;119;Mechanika/prieèinok %1 ako %2 uvo¾nené, userlevel=%3, ret=%4
+6338;120;ramdisk: %1 - %2 (%3)
+6338;121;Teplı štart zlyhal (%1)
+6338;122;CPU: %1 - SystemException: %2
+6338;123;CPU: %1 - SystemAssertion v riadku %2 v module %3
+6338;124;Katalógovı záznam 'rootPath' nesmie by konfigurovanı: Pouíva sa štandardná cesta %1
+6338;125;konfigurovanı katalógovı záznam 'System.applPath' je ignorovanı: Pouíva sa štandardná cesta %1
+6338;126;Nie je povolené prevádzkova 2 huby za sebou bez napájania prúdom
+6338;127;Koncové zariadenie Usb potrebuje ve¾a prúdu
+6338;128;Je pripojenıch prive¾a Usb hubov
+6338;129;Pamä SRamdAd inicializovaná od <%1>
+6338;130;Nebola nájdená hardvérová licencia
+6338;131;Hardvérová licenèná schéma nie je podporovaná.
+6338;132;Aktualizácia hardvérovej licencie zlyhala.
+6338;133;Portmap Service nemohol by spustenı.
+6338;134;Systém-FPGA je príliš starı
+6338;135;Teplota CPU prekroèila vypínací prah.  (%1 °C)
+6338;136;Vzh¾ad klávesnice nemohol by zmenenı.
+6338;137;Teplota CPU je opä normálna
+6338;138;Teplota CPU opä nedosiahla vypínací prah
+6338;139;Ventilátor pracuje opä normálne
+6338;140;iaden prístup na applPath: %1 monı
+6338;141;Nahranie súboru Kvb zlyhalo.
+6338;142;CPU: %1 - SystemAssertion v riadku %2 v module %3
+6338;143;CPU: %1 - SystemException: %2
+6338;144;V poslednom prechode došlo k vınimke.
+6338;145;Cesta aplikácie nie je k dispozícii: %1
+6632;1;Iná aplikácia je je u spojená s doskou èíslo %1.
+6632;2;HlDgSrv: Napojenie na port TCP-Servera %1 zlyhalo (errorCode = %2)
+6653;1;%1: Súbor Sercos3-FPGA '%2' nemohol by otvorenı
+6653;2;%1: Aktualizácia Sercos3-FPGA zlyhala (chybovı kód %2)
+6653;3;%1: Pokus naplni podporované Sercos3-FPGA
+6653;4;%1: Aktualizácia Sercos3-FPGA bola úspešná
+6653;5;%1: Riadenie vypnú a opä spusti (Sercos3-FPGA aktualizova)
+6653;6;%1: Riadenie opä spusti (Sercos3-FPGA aktualizova)
+6681;1;eDrvFx760_dummy
+6795;2;%1: Zápis parametrov SERCOS %2 zlyhal (%3, %4)
+6795;3;%1: Èítanie prvkov %2 parametrov SERCOS %3 zlyhalo (%4)
+6795;53;%1: Pohon nie je pripravenı na prevádzku (SERCOS stav pohonu 0x%2)
+6795;55;%1: SERCOS nastala chyba triedy 1: 0x%2 - %3
+6795;60;%1: Èasovı limit pri prechode stavu DRIVECOM %2
+6795;70;%1: SERCOS Prepínanie fáz nie je moné, nesprávny stav pohonov
+6795;151;%1: SERCOS nastala vıstraha triedy2: 0x%2 - %3
+6795;163;%1: Vykonanie povelu SERCOS %2 zlyhalo (%3, %4)
+6795;168;%1: Neplatnı parameter SERCOS pri prepnutí vo fáze %2: %3
+6795;169;%1: Pohon nie je pripravenı na zapnutie (SERCOS stav pohonu 0x%2)
+6795;170;%1: Pohon nie je pripravenı na prevádzku alebo nie je zapnutı (SERCOS stav pohonu 0x%2)
+6795;171;%1: Pohon sa nedá zapnú, vıkon nie je pripojenı (SERCOS stav pohonu 0x%2)
+6795;176;%1: Zapísa stav sady parametrov:  Poèet=%2, zapísané=%3, chybné=%4
+6795;177;%1: Naèíta stav sady parametrov:  Poèet=%2, naèítané=%3, chybné=%4
+6795;178;%1: ignoreMessage nie je podporovaná
+6795;179;%1: Stav pohonu nemôe by ïalej sprostredkovanı. Aktívny report stavu.
+6795;180;%1: Neplatnı parameter SERCOS po zápise sady parametrov %2
+6795;181;%1: Ausführung des SERCOS Benutzer-Kommandos %2 fehlgeschlagen (%3)
+6795;182;%1: Ausführung des SERCOS Benutzer-Kommandos %2 fehlgeschlagen (Kommandofehlercode ueberschrieben)
+6795;183;%1: Ausführung des SERCOS Benutzer-Kommandos %2 fehlgeschlagen (unbekannter Kommandofehlercode %3)
+6873;1;Program RPC %1 nemôe by registrovanı
+6878;0;Inicializácia systému
+6878;1;Inicializácia interruptu
+6878;2;H¾ada spojenia PCI
+6878;3;H¾ada spojenia KNet 
+6878;4;Nainštalova sytémové sluby
+6878;5;Systém je prevádzkyschopnı
+6878;6;Vykoná sa funkcia aktualizácie - nevypína
+6878;7;Aktualizácia ukonèená
+6878;8;Prebieha backup - nevypína!
+6878;9;Funkcia Backup je OK
+6878;10;Funkcia Backup zlyhala
+6878;11;Prebieha obnovenie stavu - nevypína
+6878;12;Funkcia Restore bola úspešná
+6878;13;Funkcia Restore zlyhala
+6878;14;Prekroèenie doby chodu pri spustení IO systému
+6878;15;IO konfigurácia submaster nie je k dispozícii
+6878;101;Chyba pri nahrávaní èasu chodu systému IEC
+6878;102;Chyba pri nahrávaní Svl Files
+6878;103;Chyba pri nahrávaní aplikácie IEC 
+6878;104;Chyba pri nahrávaní isl Files
+6878;105;Chyba pri spustení aplikácie IEC 
+6878;106;Chyba pri zastavení aplikácie IEC 
+6878;107;Chyba pri vybíjaní súborov isl
+6878;108;Chyba pri deinštalácii aplikácie IEC
+6878;109;Chyba pri vybíjaní súborov svl
+6878;110;rezervované, ale práve nepouívané
+6878;111;rezervované, ale práve nepouívané
+6878;112;Aplikácia IEC nebola správne nainštalovaná
+6878;113;rezervované, ale práve nepouívané
+6878;114;nemôe by vyhodnotené, keïe SysSm ešte nebeí
+6878;201;rezervované, ale práve nepouívané
+6878;202;rezervované, ale práve nepouívané
+6878;203;TC nahrávanie zlyhalo
+6878;204;Spustenie TC zlyhalo
+6878;205;Zastavenie TC zlyhalo
+6878;206;Vybíjanie TC zlyhalo
+6878;207;Nové spustenie TC zlyhalo
+6878;208;Prerušenie TC zlyhalo
+6878;256;Nedošlo k iadnej chybe
+6878;301;Server HMI nemohol by spustenı
+6878;302;Server HMI nemohol by zastavenı
+6878;303;KVB nemohol by spustenı
+6878;304;KVB nemohol by zastavenı
+6878;305;ešte otvorenı
+6878;401;Chyba pri spustení IO systému
+6878;402;IO systém nemohol by aktivovanı
+6878;403;Zmena stavu IO zlyhala
+6878;404;IO systém nemohol by správne zastavenı
+6878;501;Chyba pri zápise reportu stavu
+6878;502;Inicializácia dátovej pamäte retain zlyhala
+6878;503;Aktualizácia firmvéru zlyhala
+6878;601;rezervované, ale práve nepouívané
+6878;602;rezervované, ale práve nepouívané
+6878;603;rezervované, ale práve nepouívané
+6878;604;rezervované, ale práve nepouívané
+6878;605;ešte otvorenı
+6878;701;Chyby hlásení triedy 3 pretrvávajú
+6878;901;iadna alebo neplatná licenèná informácia
+6878;902;Neplatná verzia licencie
+6878;903;Chıbajúca alebo neplatná licencia komponentov
+6927;1;%1: Station Name '%2' priradené (trvalé = %3).
+6927;2;%1: Station Type '%2' priradené (trvalé = %3).
+6927;3;%1: Adresa IP %2/%3 priradené (Gateway = %4, trvalé = %5).
+6927;4;%1: PROFINET-IO nie je pripojené.
+6927;5;%1: PROFINET-IO je pripojené.
+6927;6;%1: Watchdog Timeout.
+6927;7;%1: Spätné nastavenie na vırobné nastavenia.

@@ -1,0 +1,22 @@
+[Creation]
+; time format dd.mm.yyyy / hh.mm
+date=03.08.2017 
+time=09:37
+
+[Checksums]
+BCU1_ful=5d 45 68 0c f2 9f c3 68 e5 7b 4c 86 aa f1 20 1c 
+BCU1_svl=c9 08 2a f6 ed 02 26 6a 9e 8a 32 4b 1a 58 5e 9e 
+PCU1_ful=c3 07 ae 52 99 a0 59 d6 c4 5f 0a 69 07 9e c4 4c 
+PCU1_svl=02 9e 6e 76 12 e5 f5 a3 3d fd 94 a8 68 7e 2d 4b 
+RCU1_ful=ca e1 c6 e1 21 08 15 50 61 6e e9 67 33 7a f8 70 
+RCU1_svl=7c 17 8e 21 f8 34 16 0b 66 92 18 d1 3a e8 83 35 
+SCU_ful=a6 f7 5a 99 4d 26 09 ef a4 49 1c 55 e5 b9 82 1b 
+SCU_svl=fd a9 ee 40 46 15 0f b4 59 88 25 b0 fe 65 71 04 
+system_ful=f9 a1 17 21 56 78 e6 b8 d8 7a d7 91 b1 0f 70 8c 
+system_svl=52 d1 5f 07 06 86 64 d4 72 00 3e 72 41 1e f1 f4 
+global=13 6e 1b 26 4f 24 bc 39 62 01 f2 c6 19 64 bb ea 
+
+[GENERAL]
+BuiltWithSetup=6.32C
+[LIBRARY]
+LibVersion=04.01A

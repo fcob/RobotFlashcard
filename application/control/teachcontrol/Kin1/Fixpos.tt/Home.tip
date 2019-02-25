@@ -1,0 +1,86 @@
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_0  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V50  )
+  OVERLAP( NODEC5  )
+  //
+  IF GET_BOOL_SYSTEMVAR( RCUx ,"GrindInBrakePos", High) THEN
+    GOTO  Lab_GrindInPos
+    //********************************************************************************************
+    //BellCleaner_D2 section
+    //********************************************************************************************
+  ELSIF GET_BOOL_SYSTEMVAR(RCUx, "PosInBox", High) THEN
+    GOTO  Lab_InBox
+  ELSIF GET_BOOL_SYSTEMVAR(RCUx, "PosGunTurn", High) THEN
+    GOTO  Lab_GunTurnCleanerD
+  ELSIF GET_BOOL_SYSTEMVAR(RCUx, "PosAboveBox", High) THEN
+    GOTO  Lab_AboveBox
+    // ELSIF GET_BOOL_SYSTEMVAR(RCUx, "PreAboveBox", High) THEN
+    // GOTO Lab_PreAboveBox
+  ELSIF GET_BOOL_SYSTEMVAR(RCUx, "PosPurge", High) THEN
+    GOTO  Lab_AboveBox
+    // ELSIF GET_BOOL_SYSTEMVAR(RCUx, "PosLoad", High) THEN
+    // GOTO Lab_AboveBox
+  ELSE 
+    GOTO  Lab_Home
+  END_IF
+  //
+  //movement to HOME realised by LABEL
+  //
+  LABEL  Lab_InBox
+  VEL( V200  )
+  LIN( RINBOX  )
+CALL ResetInterLocks()
+SET_BOOL_SYSTEMVAR( RCUx ,"PosInBox" ,High ,NoResetAtProgEnd  )
+GOTO  Lab_AboveBox
+//
+LABEL  Lab_GunTurnCleanerD
+VEL( V200  )
+//LIN( RGUNTURN )
+CALL ResetInterLocks()
+SET_BOOL_SYSTEMVAR( RCUx ,"PosGunTurn" ,High ,NoResetAtProgEnd  )
+GOTO  Lab_AboveBox
+//
+LABEL  Lab_AboveBox
+VEL( V200  )
+LIN( RABOVEBOX  )
+CALL ResetInterLocks()
+SET_BOOL_SYSTEMVAR( RCUx ,"PosAboveBox" ,High ,NoResetAtProgEnd  )
+GOTO  Lab_PreAboveBox
+//
+LABEL  Lab_PreAboveBox
+VEL( V200  )
+//**************************************************************************************************
+//ONLY necessary if Robot leaves Bypass Area
+//during movement to HOME Position
+//PTP( RPREABOVEBOX )
+//CALL ResetInterLocks()
+GOTO  Lab_Home
+//**************************************************************************************************
+//
+LABEL  Lab_GrindInPos
+VEL( V200  )
+PTP( RZERO  )
+CALL ResetInterLocks()
+GOTO  Lab_Home
+//
+LABEL  Lab_Home
+ACC( A3500  )
+VEL( V200  )
+OVERLAP( FINE_0  )
+PTP(RHOME)
+//
+CALL ResetInterLocks()
+//
+//
+//Ruecksetzen Kollisionsverriegelungen
+SET( Collision1 ,Low  )
+SET( Collision2 ,Low  )
+SET( Collision3 ,Low  )
+SET( Collision4 ,Low  )
+SET( Collision5 ,Low  )
+//
+RDESELECT("RP12")

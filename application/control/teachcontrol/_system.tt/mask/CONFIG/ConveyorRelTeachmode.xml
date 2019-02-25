@@ -1,0 +1,21 @@
+<VIEW>
+
+   <MASKDEF key="TeachView.mask.ConveyorRelTeachmode" textfile="userTx" permissiondef="userMenuPermission" rows="16" columns="40">                  
+      
+      <!--  Headline -->
+      <LABEL key="ConveyorRelTeachmode.label" col="15" row="2" halign="stretch" valign="stretch" rspan="1" cspan="20"/>
+   
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.RCModeT1.Release"              vartype="SV" enabled="false" col="12"   row="06" cspan="3"/>
+      <LABEL    key="RCModeT1.label"                                                      vartype="SV"                 col="15"   row="06" cspan="6"  halign="stretch"/> 
+            
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.RCModeT2.Release"              vartype="SV" enabled="false" col="21"   row="06" cspan="3"/>
+      <LABEL    key="RCModeT2.label"                                                      vartype="SV"                 col="24"   row="06" cspan="6"  halign="stretch"/>
+       
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_Teachmode.Release"     vartype="SV" enabled="false" col="18"  row="15" cspan="3"/>
+      <LABEL    key="RelTeachmode.label"                                                  vartype="SV"                 col="21"  row="15" cspan="15"  halign="stretch"/>
+         
+   
+   </MASKDEF>
+       
+</VIEW>

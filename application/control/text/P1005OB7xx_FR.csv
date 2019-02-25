@@ -1,0 +1,2320 @@
+P1005OB7xx_07.42b;;
+2050;1;affirmation a échoué : %1 Ligne %2
+2050;10;Valeur Int impossible à comptabiliser '%1.%2'
+2050;11;Valeur Uint impossible à comptabiliser '%1.%2'
+2050;12;Valeur réelle impossible à comptabiliser '%1.%2'
+2050;13;Valeur chaîne de caractères impossible à comptabiliser '%1.%2'
+2050;14;Interface impossible à comptabiliser '%1.%2'
+2050;20;Valeur Int impossible à lire '%1.%2'
+2050;21;Valeur Uint impossible à lire '%1.%2'
+2050;22;Valeur réelle impossible à lire '%1.%2'
+2050;23;Valeur chaîne de caractères impossible à lire '%1.%2'
+2050;24;Interface impossible à lire : '%1.%2'
+2050;30;Valeur Int impossible à écrire '%1.%2'
+2050;31;Valeur Uint impossible à écrire '%1.%2'
+2050;32;Valeur réelle impossible à écrire '%1.%2'
+2050;33;Valeur chaîne de caractères impossible à écrire '%1.%2'
+2050;40;Valeur Int %1.%2 hors plage [%3..%4]
+2050;41;Valeur Uint %1.%2 hors plage [%3..%4]
+2050;42;Valeur réelle %1.%2 hors plage [%3..%4]
+2050;43;Valeur chaîne de caractères %1.%2 erreur de grandeur
+2050;44;Tableau interface %1.%2 erreur de grandeur
+2050;45;Erreur ShMemWrite reçue de [station : %1] [n° : %2]
+2050;46;Erreur RecvShMemWrite handle incorrect reçu [Hdl : %1] [Offs : %2] [Size : %3]
+2050;1001;Traitement exceptionnel départ
+2050;1002;Divide Error (bp=%1, pc=%2, regs=%3)
+2050;1003;Debug exception (bp=%1, pc=%2, regs=%3)
+2050;1004;Non Maskable Interrupt (NMI) (bp=%1, pc=%2, regs=%3)
+2050;1005;Breakpoint exception (bp=%1, pc=%2, regs=%3)
+2050;1006;Overflow exception (bp=%1, pc=%2, regs=%3)
+2050;1007;Bound exception (bp=%1, pc=%2, regs=%3)
+2050;1008;Invalid Opcode exception (bp=%1, pc=%2, regs=%3)
+2050;1009;FP Noappareil exception (bp=%1, pc=%2, regs=%3)
+2050;1010;Double Fault exception (bp=%1, pc=%2, regs=%3)
+2050;1011;FP Overrun exception (bp=%1, pc=%2, regs=%3)
+2050;1012;Invalid TSS exception (bp=%1, pc=%2, regs=%3)
+2050;1013;No Segment exception (bp=%1, pc=%2, regs=%3)
+2050;1014;Stack exception (bp=%1, pc=%2, regs=%3)
+2050;1015;General Protection exception (bp=%1, pc=%2, regs=%3)
+2050;1016;Page Fault (bp=%1, pc=%2, regs=%3)
+2050;1017;Reserved exception (bp=%1, pc=%2, regs=%3)
+2050;1018;FP Error (bp=%1, pc=%2, regs=%3)
+2050;1019;Bus Alignment exception (bp=%1, pc=%2, regs=%3)
+2050;1020;Trop-plein Task Stack
+2050;1021;Fonction système appelée dans interrupt
+2050;1022;Exception
+2110;100;Cible matériel %1 pas encore soutenue
+2110;101;Composante bus K pas encore reliée
+2110;102;intLine %1 pas défini
+2110;103;Cible matériel pas valable %1
+2110;104;Câble Interrupt %1 hors plage
+2110;105;Code interrupt UOS %1 hors plage
+2110;106;Pas de câble interrupt trouvé pour UOSIntID %1
+2110;200;Échec de l'ouverture de l'événement %1, dernier défaut %2
+2110;201;Fermeture de EventHandle %1 a échoué, dernier défaut %2
+2110;202;Génération de l'événement %1 a échoué, dernier défaut %2
+2110;203;Signalisation de l'événement %1(%2) a échoué, dernier défaut%3
+2110;300;RtAttachInterruptVector(Ex) a échoué, intLine=%1 lastError=%2
+2110;301;RtReleaseInterruptVector(Ex) a échoué, intLine=%1 handle=%2 lastError=%3
+2115;101;N° appareil %1 hors plage
+2115;102;N° fonction %1 hors plage
+2115;103;CfgSpace Offset %1 hors plage
+2115;104;CfgSpace Offset %1 alignement invalide pour %2 accès bit
+2115;105;Appareil %1.%2 non trouvé dans slot %3
+2115;106;Appareil %1.%2 dans slot %3 fonction %4 déjà relié
+2115;107;Appareil %1.%2 dans slot %3 fonction %4 sans intLine affectée
+2115;108;Type de zone d'accès %1 pas assisté sur cette plateforme
+2115;109;Type d'accès %1 hors plage
+2115;110;Appareil %1.%2 Slot %3 fonction %4 affectation de la zone d'affectation a échoué (%5)
+2115;111;Cible matériel %1 pas encore soutenu (%2)
+2115;112;Pas de slot E2 lible pour numéro d'appareil %1 n° fonction %2
+2115;113;Accès E2 pour numéro d'appareil %1 n° fonction %2 pas défini
+2115;114;E2 n° %1 timeout %2msec écoulées pour l'attente de la fin de l'écriture
+2115;115;E2 n° %1 timeout %2msec écoulées pour l'attente de FPGA SPI
+2115;116;E2 n° %1 hors plage
+2115;117;E2 n° %1 pas encore initialisé
+2115;118;E2 n° %1 placement d'autorisation écriture a échoué
+2115;119;E2 n° %1 timeout %2msec écoulées pour l'attente de Task Lock Semaphore
+2115;120;E2 n° %1 timeout %2msec écoulées pour l'attente de Hardwarelock Semaphore
+2115;121;E2 n° %1 effacement d'autorisation écriture a échoué
+2115;122;N° appareil %1 n° fonction %2 E2 Test a échoué
+2115;123;Désignation matériel pas valable %1
+2115;124;Array invalide pour définition appareil
+2115;125;Pas d'appareil de liste %1 trouvé dans le slot %2
+2115;126;Impossible d'utiliser auto pour appareil %1.%2 car plus d'un appareil dans le système
+2115;127;Impossible d'utiliser auto pour liste appareil %1, car plus d'un appareil dans le système
+2115;128;Génération de CFGspaceImage de l'appareil n° %1 n° fonction %2 a échoué
+2115;129;Tentative de restauter une CFGspaceImage invalide
+2115;130;La restauration de CFGspaceImage de l'appareil n° %1 n° fonction %2 a échoué
+2115;131;Handle invalide pour CFGspaceImage %1 (%2)
+2115;132;L'appareil %1.%2 dans l'emplacement %3 fonction %4 câble interrupt %5 n'est pas un câble interrupt de PCI
+2115;200;Échec de l'ouverture du pilote Kernel %1, dernier défaut %2
+2115;201;Échec de la fermeture du pilote Kernel %1, dernier défaut %2
+2115;202;Écher du pilote Kernel %1(%2) IOCTL %3, dernier défaut %4
+2115;203;Génération de l'événement %1 a échoué, dernier défaut %2
+2115;204;Échec de fermeture d'evénement %1, dernier défaut %2
+2115;300;RtSetBusDataByOffset a échoué, dev=%1 func=%2 offset=%3 result=%4 lasterror=%5
+2115;301;RtGetBusDataByOffset a échoué, dev=%1 func=%2 offset=%3 result=%4 lasterror=%5
+2115;302;RtTranslateBusAddress a échoué, busAddr %1.%2 lasterror=%3
+2115;303;RtMapMemory a échoué, physAddr %1.%2 size=%3 lasterror=%4
+2115;304;RtUnmapMemory a échoué, virtAddr %1 lasterror=%2
+2115;305;RtEnablePortIo a échoué, IOAddr %1 len=%2 lasterror=%3
+2115;306;RtDisablePortIo a échoué, IOAddr %1 len=%2 lasterror=%3
+2206;1;Composante bloquée
+2206;2;Impossible d'installer interface Pma
+2206;3;Pma : grave erreur de système %1
+2206;4;Pma : cause de remise à zéro %1
+2206;5;Pma : erreur lors de l'analyse des données
+2208;101;Composante Housekeeper pas initialisée
+2208;102;Fonction Callback pas valable
+2208;103;Priorité pas soutenue
+2208;104;Ordre invalide (%1)
+2208;105;Signalisation pas valable de la tâche
+2208;106;%1 Action défaillante
+2208;107;Durée de cycle (%1) incompatible avec cadence système
+2208;108;Configuration de tâche déjà modifiée pour Task %s.
+2211;1;Rapport état mémoire %1 impossible à générer
+2211;2;Rapport état chemin cible identique au chemin temporaire %1
+2211;3;Rapport état archive zip impossible à générer
+2211;4;Rapport état chemin cible invalide
+2211;5;Rapport état chemin invalide pour fichier temporaire
+2211;6;Le fichier indiqué existe déjà
+2211;7;Répertoire temporaire impossible à générer
+2211;101;Impossible d'établir fichier %1
+2211;102;Écriture du rapport état déjà activée
+2211;103;Rapport état pas initialisé
+2211;104;Shared memory %1 impossible à lire
+2211;105;Impossible d'installer interface rapport d'état
+2211;106;Échec d'accès au fichier log du rapport d'état
+2211;107;Nombre maxi de rapports état atteint lors de l'écriture
+2211;108;Rapport d'état Write pas disponible sur le submaster
+2212;1;Module ajouté (part %1) : Nom  : %2, nouvelle version de logiciel : %3, addr : %4, version matériel : %5, révision matériel : %6, variante fonction : %7 impossible à affecter
+2212;2;Module ajouté (part %1) : printNr : %2, serialNr : %3, orderNr : %4, appareilNr : %5, temps MES : %6, runTime : %7 impossible à affecter
+2212;3;Module modifié (part %1) : Nom  : %2, ancienne version de logiciel : %3, nouvelle version de logiciel : %4, addr : %5, version matériel : %6, révision matériel : %7, variante fonction : %8 impossible à affecter
+2212;4;Module modifié (part %1) : printNr : %2, serialNr : %3, orderNr : %4, appareilNr : %5, temps MES : %6, runTime : %7 impossible à affecter
+2212;5;Module retiré (part %1) : Nom  : %2, ancienne version de logiciel : %3, addr : %4, version matériel : %5, révision matériel : %6, variante fonction : %7 impossible à affecter
+2212;6;Module retiré (part %1) : printNr : %2, serialNr : %3, orderNr : %4, appareilNr : %5, temps MES : %6, runTime : %7 impossible à affecter
+2212;7;PCB Add (part %1) : Nom  : %2, version logiciel : %3, addr : %4 impossible à affecter
+2212;8;PCB Add (part %1) : révision matériel : %2
+2212;9;PCB Add (part %1) : Var.fonct. : %2
+2212;10;PCB Add (part %1) : printNr : %2, serialNr : %3
+2212;11;PCB Changed (part %1) : Nom  : %2, addr : %3
+2212;12;PCB Changed (part %1) : ancienne version de logiciel : %2, nouvelle version de logiciel : %3
+2212;13;PCB Changed (part %1) : révision matériel : %2
+2212;14;PCB Changed (part %1) : Var.fonct. : %2
+2212;15;PCB Changed (part %1) : printNr : %2, serialNr : %3
+2212;16;PCB Remove (part %1) : Nom  : %2, version logiciel : %3, addr : %4 impossible à affecter
+2212;17;PCB Remove (part %1) : révision matériel : %2
+2212;18;PCB Remove (part %1) : Var.fonct. : %2
+2212;19;PCB Remove (part %1) : printNr : %2, serialNr : %3
+2212;20;La version de logiciel résident de l'appareil '%1' ne correspond pas à la référence
+2212;21;Erreur lors de la lecture de la référence appareil '%1'
+2212;22;Erreur lors de la lecture de la version de logiciel résident de l'appareils '%1'
+2214;1;Se connecter : %1
+2214;2;Se déconnecter : %1
+2218;100;Échec de l'appel de connexion dans composant Housekeeper 
+2218;101;Échec de l'appel de déconnexion du composant Housekeeper 
+2218;102;Échec d'ouverture du fichier %1
+2218;103;Échec de fermeture du fichier %1
+2218;104;Échec d'écriture du fichier %1
+2218;105;Échec à lecteur de file modification UOS, attendus %1 octets, lus %2 octets
+2218;106;Handle %1 de l'inscription modifiée du catalogue invalide
+2218;107;du type %3 de l'élément de catalogue modifié %1 (handle=%2) pas soutenu
+2218;108;Erreur à la lecture du chemin absolu du catalogue handle catalogue %1
+2218;109;Échec de l'appel de démarrage du composant Housekeeper
+2218;110;Échec de l'appel d'arrêt de callback Housekeeper
+2218;111;Échec de l'appel de lecture file modification catalogue UOS
+2218;112;Impossible d'établir le répertoire %1
+2218;113;Erreur à la lecture du fichier Retain %1
+2218;114;Entête fichier Retain invalide, élément %1 invalide
+2218;115;Erreur à la lecture d'une valeur de catalogue du fichier Retain, raison %1
+2218;116;Handle invalide pour file message %1 
+2218;1000;%1 trop-pleins dans file modification UOS
+2220;1;%1  : inscription confiiguration '%2' non trouvée
+2220;2;%1  : inscription confiiguration '%2' hors plage, défaut %3
+2220;3;%1  : inscription confiiguration '%2' non trouvée, défaut %3
+2220;4;%1  : valeur invalide pour inscription confiiguration '%2' : %3
+2220;5;configuration pas valable '%1'
+2220;6;%1  : pas de point final configuré
+2220;7;%1  : type d'appareil invalide '%2' trouvé'
+2220;10;%1  : fichier non trouvé : '%2'
+2220;11;%1  : erreur de recherche fichier : '%2'
+2220;12;%1  : erreur de lecture fichier : '%2'
+2220;13;%1  : erreur d'écriture fichier : '%2'
+2220;14;%1  : fichier incompatible : '%2'
+2220;15;%1  : Update de '%2' a échoué
+2220;16;%1  : échec de l'actualisation de '%2' (actualisation de logiciel résident type : %3 état d'erreur interne : %4)
+2220;20;%1  : trop-plein tampon ('%2', '%3')
+2220;30;%1  : erreur lors de la demande de mémoire
+2220;50;%1  : appel UOS '%2'('%3') a échoué
+2220;51;%1  : appel Sampler '%2'(%3, %4) a échoué
+2220;52;%1  : appel IO-Timer '%2'(%3, %4) a échoué
+2220;53;%1  : appel update IO '%2'(%3, %4) a échoué
+2220;70;%1  : écher de lecture du pilote interface Low-Level
+2220;71;%1  : Connexion au pilote Low-Level via interface a échoué
+2220;72;%1  : Séparation du pilote Low-Level via interface a échoué
+2220;80;%1  : Trop de PDO %2 configuré, PDO '%3' impossible à utiliser
+2220;81;%1  : %2-PDO '%3' déjà enregistré
+2220;82;%1  : RXPDO-%2 a un ID station pas valable '%3'
+2220;83;%1  : PDO manque
+2220;84;%1  : PDO perdu
+2220;85;%1  : rx-pdo-%2 n'a pas de tx-pdo correspondant-%3 pour la station %4
+2220;86;%1  : rx-pdo-%2 durée de cycle '%3' n'est pas un multiple de la durée de cycle de tx-pdo '%4'
+2220;87;%1  : rx-pdo-%2 diffère au niveau du mapping de tx-pdo-%3 sur la station %4
+2220;100;%1  : paramètre '%2' hors plage (%3)
+2220;120;IO : '%1'
+2220;150;%1  : matériel non trouvé
+2220;151;%1  : matériel déjà relié ('%2')
+2220;152;%1  : conflt matériel détecté. Les appareils utilisent la même adresse : %2, %3
+2220;153;%1  : matériel sans réaction
+2220;200;%1  : court-circuit
+2220;201;%1  : rupture capteur
+2220;202;%1  : données calibrées pas valables ('%2')
+2220;203;%1  : tension sortie absente (%2)
+2220;204;%1  : court-circuit éliminé
+2220;205;%1  : erreur rupture de sonde éliminée
+2220;206;%1  : tension sortie o.k.
+2220;207;%1  : rupture de sonde câble %2
+2220;208;%1  : erreur de rupture de capteur câble %2 éliminée
+2220;209;%1  : erreur de voie
+2220;210;%1  : erreur impulsion zéro
+2220;250;%1  : arrêtée
+2220;300;%1  : connecté
+2220;301;%1  : déconnecté
+2220;500;Timer IO : '%1' existe déjà (%2, %3)
+2220;501;Timer IO : durée de cycle de '%1' (%2us) n'est pas un multiple du Tick de système (%3us)
+2220;600;Update IO : durée de cycle d'actualisation de '%1' (%2us) n'est pas un multiple du Tick de système (%3us)
+2220;601;Update IO : durée de cycle d'actualisation de '%1' (%2us) n'est pas un multiple de la durée de cycle d'actualisation IO (%3us)
+2220;602;Update IO : '%1' a déjà reçu l'actualisation IO
+2220;1000;IO : génération du timer IO a échoué
+2220;1001;IO : génération dela tâche actualisation IO a échoué
+2220;1002;IO : génération de la tâche paramètre IO a échoué
+2220;1003;IO : initialisation de l'objet Root IO a échoué
+2220;1004;IO : génération de la tâche IO-QuitError a échoué
+2220;1005;IO : génération et initialisation des pilotes ont échoué
+2220;1006;IO : appel de la fonction installation pour '%1' a échoué
+2220;1007;%1  : clonage des types de point final '%2' pas soutenu
+2220;1008;%1  : nombre maxi de clones du type point final '%2' atteint (%3)
+2220;1009;%1  : durée de cycle de clnage pas valable : %2 ms (durée de cycle : %3 ms)
+2220;1013;%1  : Limite de Shared Memory atteinte (%2)
+2220;1014;%1  : type de point final pas valable : désignation '%2', type '%3'
+2220;1015;%1  : point final '%2' existe déjà (%3)
+2220;1016;%1  : taille inattendue de Shared Memory '%2' : %3 (attendu : %4)
+2220;1017;%1  : Shared Memory existe déjà : '%2'
+2220;1018;%1  : nom appareil '%2' existe déjà (%3)
+2220;1019;%1  : nom du point final '%2' (ou pièce) trop long
+2220;1020;%1  : Initialisation des appareils '%2' a échoué (vérifier configuration)
+2220;1021;%1  : zone d'adresse de données (%2-%3) hors plage de la zone de données du processus (%4)
+2220;1022;%1  : chevauchement zone d'adresse de données (début adresse %2, longueur %3)
+2220;6800;Erreur Callback ACB : %1
+2220;12000;%1  : pas d'axe configuré
+2220;12001;%1  : arrêté
+2220;12002;%1  : incohérence constatée
+2220;12003;%1  : version de logiciel résident d'appareil %2 impossible à commander. Au moins %3 nécessaires.
+2220;12004;%1  : valeur '%2' invalide  pour inscription confiiguration '%3'. Valeur par défaut '%4' utilisée.
+2220;12005;%1  : erreur interne.
+2220;12006;%1  : capteur référentiel interne configuré mais externe utilisé.
+2220;12007;%1  : capteur référentiel configuré utiilisé
+2220;12008;%1  : rupture capteur sur le capteur référentiel
+2220;12009;%1  : rupture capteur éliminée sur le capteur référentiel
+2220;12010;%1  : capteur référentiel externe configuré mais interne utilisé.
+2220;12011;%1  : valeur invalide du capteur référentiel
+2220;12012;%1  : valeur du capteur référentiel valable
+2220;12013;%1  : inscription confiiguration '%2' non trouvée valeur transmetteur '%3' pas autorisée.
+2220;12014;%1  : Valeur '%2' pour l'inscription confiiguration '%3' hors plage valable [%4..%5].
+2220;12015;%1  : mot état invalide (0x%3) reçu de l'axe %2
+2220;12016;%1  : type de donnée pas valable pour inscription confiiguration '%2' (trouvé : '%3', attendu : '%4'). Valeur standard '%5' est utilisée.
+2220;12017;%1  : type de donnée pas valable pour inscription confiiguration '%2' (trouvé : '%3', attendu : '%4').
+2220;12018;%1  : Valeur '%2' pour l'inscription confiiguration '%3' hors plage valable [%4..%5]. Valeur standard '%5' est utilisée.
+2220;12019;%1  : La valeur '%2' pour l'inscription confiiguration '%3' n'est pas un multiple de '%4'. Valeur standard '%5' est utilisée.
+2220;12020;%1  : La valeur '%2' pour l'inscription confiiguration '%3' n'est pas un multiple de '%4'.
+2220;12021;%1  : pas de capteur référentiel externe présent sur le module CPU.
+2220;12024;%1  : Le texte de l'inscription confiiguration '%2' est trop long ou trop court (mini %3, maxi %4 caractères). Valeur standard '%5' est utilisée.
+2220;12025;%1  : Le texte de l'inscription confiiguration '%2' est trop long ou trop court (mini %3, maxi %4 caractères).
+2220;12026;%1  : '%2' conversion valeur dépasse plage (valeur : %3, facteur : %4).
+2220;12027;%1  : %2 axes configurés sur l'appareil, maxi permis %3
+2220;12028;%1  : Force %2 marche
+2220;12029;%1  : Force %2 arrêt
+2220;12030;%1  : Force %2 variable temporaire
+2234;201;%1  : inscription configuration pas valable ou manquante 'posUnitsToIncrements', valeur utilisée %2
+2234;202;%1  : mode pas valable (consigne position/position profil interpolée)
+2234;210;%1  : pas de PSU configurée
+2234;211;%1  : durée de cycle trop courte de %2ms (%3 stations CAN, %4kBaud)
+2234;250;%1  : valeur de consigne position dépassement de plage (%2)
+2234;301;%1  : perte des données cycliques (%2)
+2234;302;%1  : pas de données cycliques reçues (%2)
+2234;303;%1  : pas prêt (%2)
+2234;306;%1  : timeout (pendant la remise à zéro) (%2)
+2234;307;%1  : entraînement passe dans DRIVECO à l'état 'blocage enclenchement' (%2)
+2234;310;%1  : erreur Trip. code erreur : %2
+2235;201;%1  : inscription configuration pas valable ou manquante 'posUnitsToIncrements', valeur utilisée %2
+2235;250;%1  : valeur de consigne position dépassement de plage (%2)
+2235;251;%1  : de nouveau pas de données cycliques reçues
+2235;301;%1  : perte des données cycliques (%2)
+2235;302;%1  : pas de données cycliques reçues (%2)
+2235;303;%1  : pas prêt (%2)
+2235;306;%1  : timeout survenu (%2)
+2235;307;%1  : mode DRIVECOM pas assisté (%2)
+2235;350;%1  : court-cicuit interne, code : %2
+2235;351;%1  : surintensité de courant permanente, code : %2
+2235;352;%1  : matériel appareil, code : %2
+2235;353;%1  : remise à zéro du logiciel (chien de garde), code : %2
+2235;354;%1  : surtension réseau, code : %2
+2235;355;%1  : erreur résolveur 1, code : %2
+2235;356;%1  : données/paramètres pas valables, code : %2
+2235;357;%1  : régulateur de frein (température), code : %2
+2235;358;%1  : module supplémentaire, code : %2
+2235;359;%1  : sous-tension réseau, code : %2
+2235;360;%1  : surcharge (couple rotation), code : %2
+2235;361;%1  : démarrage difficile, code : %2
+2235;362;%1  : erreur de couple, code : %2
+2235;363;%1  : régulation de vitesse, code : %2
+2235;364;%1  : commande fonction supplémentaire, code : %2
+2235;365;%1  : commande position, code : %2
+2235;366;%1  : erreur traînée, code : %2
+2235;367;%1  : commande matériel appareils, code : %2
+2235;368;%1  : vitesse spéc. (surrégime), code : %2
+2236;2;%1  : écriture du paramètre SERCOS %2 a échoué (%3, %4)
+2236;3;%1  : lecture de l'élément %2 du paramètre SERCOS %3 a échoué (%4)
+2236;5;%1  : longueur des valeurs de consigne configurées (MDT) trop longue (configurée %2, maxi %3), configuration par défaut utilisée
+2236;12;%1  : erreur de communication interne SERCOS (%2)
+2236;13;%1  : chien de garde signalé par module SERCOS
+2236;14;%1  : valeur invalide lors de la lecture d'un paramètre : 0x%2, élément %3, valeur %4
+2236;15;%1  : longueur de donnée pas valable lors de la lecture d'un paramètre : 0x%2, élément %3, longueur %4
+2236;53;%1  : entraînement pas prêt (état entraînement SERCOS 0x%2)
+2236;55;%1  : erreur SERCOS classe 1 : 0x%2 - %3
+2236;60;%1  : limite de temps lors de transfert d'état DRIVECOM %2
+2236;70;%1  : Commutation de phase SERCOS impossible, état incorrect des entraînements
+2236;151;%1  : SERCOS classe 2, avertissement : 0x%2 - %3
+2236;152;%1  : SERCOS, erreur spécifique au matériel (n°=%2, phase=%3, %4, %5, %6)
+2236;157;%1  : erreur de communication SERCOS : panne télégramme entraînement dans phase 4
+2236;158;%1  : erreur de communication SERCOS : panne télégramme entraînement dans phase %2 (état %3)
+2236;163;%1  : exécution de l'ordre SERCOS %2 a échoué (%3, %4)
+2236;164;%1  : longueur des valeurs réelles configurées (AT) trop longue (configurée %2, maxi %3), configuration par défaut utilisée
+2236;165;%1  : très grave erreur interne SERCOS (%2)
+2236;166;%1  : paramètre configuré %2 dans valeurs de consigne (MDT) pas transférable
+2236;167;%1  : paramètre configuré  %2 dans valeurs réelles (AT) pas transférable
+2236;168;%1  : paramètre SERCOS pas valable lors de la commutation dans la phase %2 : %3
+2236;169;%1  : entraînement pas prêt à enclencher (état entraînement SERCOS 0x%2)
+2236;170;%1  : entraînement pas opérationnel ou pas enclenché (état entraînement SERCOS 0x%2)
+2236;171;%1  : entraînement impossible à enclencher, puissance pas activée (état entraînement SERCOS 0x%2)
+2236;172;%1  : '%2' consigne dépassement de plage (valeur : %3, facteur : %4)
+2236;173;%1  : consigne supplémentaire '%2' dépassement de plage (valeur : %3, facteur : %4)
+2236;174;%1  : durée de cycle SERCOS configurée pas valable (%2 us)
+2236;175;%1  : cercle SERCOS pas fermé
+2236;176;%1  : état jeu paramètres écriture :  nombre=%2, écrit=%3, erroné=%4
+2236;177;%1  : état jeu paramètres lire :  nombre=%2, lu=%3, erroné=%4
+2236;178;%1  : message ignorer pas assisté
+2236;179;%1  : état entraînement impossible à activer. Rapport état actif.
+2236;180;%1  : double adresse SERCOS trouvée sur le bus
+2236;181;% : adresse SERCOS pas valable trouvée sur le bus.
+2236;182;%1  : version SERCOS d'un appareil pas soutenue.
+2236;183;%1  : nombre maxi de télégrammes MDT dépassé
+2236;184;%1  : nombre maxi de télégrammes AT dépassé
+2236;185;%1  : trop de données configurées pour durée de cycle du bus (%2  s)
+2236;186;%1  : nombre de connexions pas valable pour SCP_FixCFG (%2 attendu)
+2236;187;%1  : trop de connexions projetées (%2 permis)
+2236;188;%1  : double id connexions %2
+2236;189;%1  : longueur incohérente des données de la connexion %2
+2236;190;%1  : durée incohérente de cycle de la connexion %2
+2236;191;%1  : longueur de la connexion %2 supérieure à la longueur maxi
+2236;192;%1  : connexion consommée %2 pas produite.
+2236;193;%1: pas de connexion %2 projetée dans le fichier de projection.
+2236;194;%1: Erreur lors de l'ajout d'une connexion %2 (numéro de liaison = %3).
+2236;195;%1: Longueur de données projetée %2 de la connexion %3 ne correspondant pas à la valeur %4 attendue.
+2236;196;%1: Longueur projetée %2 de la variable pour IDN %3 ne correspondant pas à la valeur %4 attentue.
+2236;197;%1: Offset projeté Offset %2 de la variable pour IDN %3 ne correspondant pas à la valeur %4 attendue.
+2236;198;%1: Variable %2 pas utilisée dans l'image processus à cause de l'inscription configuration %3.
+2236;199;%1: Valeur %2 pas assistée pour l'inscription %3 dans le fichier de projection.
+2236;200;%1: Incohérence dans le fichier de projection.
+2236;201;%1: Fichier de projection '%2' pas trouvé.
+2236;202;%1: Configuration non valable du fichier de projection (erreur de syntaxe XML).
+2236;203;%1: Valeur pas valable '%2' pour noeud XML '%3' dans fichier projection.
+2236;204;%1: Noeuc XML nécessaire '%2' manque dans fichier projection.
+2236;205;%1: Noeud XML obligatoire '%2' vide dans fichier projection.
+2236;206;%1: Aucune variable trouvée dans le fichier de projection pour IDN %2.
+2236;207;%1: Appareil pas trouvé dans fichier de projection (adresse=%2).
+2236;208;%1: Valeur inscription configuration '%2' incohérente avec une ou plusieurs valeurs dans le fichier de projection.
+2236;209;%1: Plusieurs consommateurs pas assistés pour une connexion (numéro de connexion = %2).
+2236;210;%1: Ereur action paramètre (IDN = '%2', action = '%3', code erreur = %4, statut erreur = %5, dépassement temps = %6).
+2236;211;%1: Value '%2' for parameter '%3' does not match expected value '%4'.
+2236;212;%1: Valeur pour paramètre %2 ne correspond pas à valeur attendue.
+2236;213;%1: Bit de validité de l'appareil déjà placé lors du passage à la phase %2.
+2236;214;%1:  Bit de validité de l'appareil pas placé lors du passage à la phase %2..
+2236;215;%1: Erreur d'accès au paramètre du pilote dans la phase %2
+2236;216;%1: Sorties pas activées.
+2236;217;%1: Valeurs d'entrée pas valables.
+2236;218;%1: Erreur I/O  Text = %2, SERCOS standard = %3, classe = %4, numéro diagnostic = %5
+2236;219;%1: Erreur I/O effacée
+2236;220;%1: Avertissement I/O Texte = %2, SERCOS standard = %3, classe = %4, numéro diagnostic = %5
+2236;221;%1: Avertissement I/O supprimé
+2236;222;%1: I/O Info: Textw = %2, SERCOS standard = %3, classw = %4, numéro diagnostic = %5
+2236;223;%1: Modification de la topologie du bus de '%2' à '%3'
+2236;224;%1: Rupture cercle entre %2 et %3
+2236;225;%1: Ilongueur incohérence des données de la connexion %2 (escompté %3, configuré %4).
+2236;226;%1: Doucle adresse SERCOS (%2) trouvée sur le bus.
+2236;227;%: Adresse SERCOS pas valable trouvée sur le bus (%2).
+2236;228;%1: Erreur d'affectation adresse :impossible de déterminer le nombre d'appareils
+2236;229;%1: Erreur d'affectation adresse : impossible de déterminer l'information appareil
+2236;230;%1: Affectation adresse impossible à cause d'erreur configuration de device %2
+2236;231;%1: Absence du noeud XML '%2' dans le fichier de projection
+2236;232;%1: Erreur d'affectation adresse : impossible de déterminer l'information appareil
+2236;233;%1: Erreur d'affectation adresse : plaquette signalétique électronique (%2, %3) pas projetée
+2236;234;%1: Erreur d'affectation adresse : ordre esclaves different
+2236;235;%1: Dimension pas assistée %2 de IDN %3 dans les données cycliques
+2236;236;%1  : erreur lors de l'accès aux paramètres du pilote en phase %2 pour IDN %3
+2236;237;%1  : erreur lors de l'affectation d'adresse pour vendorCode %2 et vendorDeviceID %3 (plaquette signalétique de %4)
+2236;238;%1  : durée de marche du télégramme calculée trop faible
+2237;1;%1  : appareil %2 déjà configuré
+2237;2;%1  : configuration auto PCI impossible car plus d'une carte de ce type dans le système
+2237;3;%1  : mauvaise qualité DLL-Lock (événements %2, état actuel %3)
+2237;4;%1  : DLL encliqueté
+2238;1;%1  : état esclave Asi : %2
+2238;2;%1  : état esclave Asi OK
+2241;17100;%1  : télégramme KVC reçu avec longueur invalide : type de télégramme 0x%2, longueur %3
+2241;17101;%1  : télégramme KVC inconnu reçu : type de télégramme 0x%2, longueur %3
+2241;17102;%1  : %2 état télégramme(s) perdu par appareil manuel KVC
+2241;17103;%1  : nombre de touches soutenu par l'appareil manuel KVC (%2) supérieur au nombre de touches soutenu par la commande (%3)
+2241;17104;%1  : nombre de diodes soutenu par l'appareil manuel KVC (%2) supérieur au nombre de diodes soutenu par la commande (%3)
+2242;201;%1  : facteur conversion position (posUnitsToIncrements) manque ou invalide - valeur par défaut %2 utilisée
+2242;211;%1  : durée de cycle configurée pour Post-Update trop petite (durée de transfert RX : %2)
+2242;250;%1  : valeur de consigne position dépassement de plage (%2)
+2242;251;%1  : de nouveau pas de données cycliques reçues
+2242;301;%1  : perte des données cycliques (%2)
+2242;302;%1  : pas de données cycliques reçues (%2)
+2242;303;%1  : pas prêt (%2)
+2242;306;%1  : timeout (%2)
+2242;307;%1  : mode pas assisté (%2)
+2242;350;%1  : court-cicuit interne, code : %2
+2242;351;%1  : surintensité de courant permanente, code : %2
+2242;352;%1  : matériel appareil, code : %2
+2242;353;%1  : remise à zéro du logiciel (chien de garde), code : %2
+2242;354;%1  : surtension réseau, code : %2
+2242;355;%1  : erreur résolveur 1, code : %2
+2242;356;%1  : données/paramètres pas valables, code : %2
+2242;357;%1  : régulateur de frein (température), code : %2
+2242;358;%1  : module supplémentaire, code : %2
+2242;359;%1  : sous-tension réseau, code : %2
+2242;360;%1  : surcharge (couple rotation), code : %2
+2242;361;%1  : démarrage difficile, code : %2
+2242;362;%1  : erreur de couple, code : %2
+2242;363;%1  : régulation de vitesse, code : %2
+2242;364;%1  : commande fonction supplémentaire, code : %2
+2242;365;%1  : commande position, code : %2
+2242;366;%1  : erreur traînée, code : %2
+2242;367;%1  : commande matériel appareils, code : %2
+2242;368;%1  : vitesse spéc. (surrégime), code : %2
+2242;4000;%1  : vitesse Baud pas valable : %2kB (attendu : %3kB)
+2242;4009;%1  : échec de l'envoi d'un message CAN (ID CAN :%2, info supplémentaire :%3)
+2242;4013;%1  : avertissement bus
+2242;4014;%1  : bus passif
+2242;4015;%1  : Bus Off
+2242;4016;%1  : pas d'erreur
+2242;4017;%1  : erreur appareil
+2242;4018;%1  : état erreur bus Off terminé
+2242;4019;%1  : mauvais qualité de bus (compteur passif bus : %2, compteur avertissement bus %3)
+2242;4020;%1  : demande état-Callback a échoué
+2242;4025;%1  : durée de cycle pas valable (%2ms) pour Clock-Master
+2242;4150;%1  : réglage de la vitesse Baud %2 Baud a échoué
+2242;4151;%1  : id CAN %2 déjà enregistré
+2242;4170;%1  : erreur de réception pour id CAN=%2
+2242;4171;%1  : erreur CAN trop-plein de données pour ID CAN %2
+2242;4172;%1  : fifo réception pleine - trop-plein mémoire de réception
+2242;6051;%1  : CAN-Open, adresse noeud (%2) plusieurs fois configurée (%3)
+2242;6052;%1  : lien K adresse noeud (virtuelle) (%2) déjà utilisée (%3)
+2242;6053;%1  : adresse virtuelle lien K %2 hors plage valable (adresse noeud %3, n° PDO %4)
+2242;6100;%1  : SDO (Index : 0x%2 Subindex : %3)confirmation timeout (%4 ms)
+2242;6101;%1  : SDO (Index : 0x%2 Subindex : %3) erreur de transfert (%4 ms)
+2242;6102;%1  : SDO (Index : 0x%2 Subindex : %3) taille du tampon réception trop faible (taille attendue : %4)
+2242;6103;%1  : SDO (Index : 0x%2 Subindex : %3) interrompu par le serveur : 0x%4 (%5)
+2242;6120;%1  : confirmation timeout Node-Guarding
+2242;6121;%1  : réponse Node-Guarding pas valable
+2242;6122;%1  : temps mort bit de vie
+2242;6140;%1  : pas de données cycliques reçues
+2242;6141;%1  : action (%2) impossible pour PDO (%3)
+2242;6142;%1  : durée de cycle de PDO (%2us) n'est pas un multiple de la durée de cycle CAN (%3us)
+2242;6143;%1  : numéro PDO pas valable : %2 (valable : 1 .. %3)
+2242;6144;%1  : conflit synchronisation
+2242;6145;%1  : PDO pas assisté (%2)
+2242;6150;%1  : confirmation timeout RTR
+2242;6160;%1  : message d'urgence de noeud %2 : Code  : %3
+2242;6161;%1  : message d'urgence de noeud %2 : Code  : %3
+2242;6162;%1  : reset erreur ou pas d'erreur, code : %2
+2242;6200;%1  : message Bootup reçu : (adresse noeud : %2)
+2242;6300;%1  : trop de PDO pour nombre actuel de noeuds CAN-Open : (n° PDO : %2, noeud : %3)
+2242;6301;%1  : trop de PDO pour nombre actuel de noeuds CAN-Open : (noeud-n° : %2, PDO : %3)
+2242;8000;%1  : conflit possible si CAN-Open et CAN K sont exploités sur le même bus
+2242;8210;%1  : erreur générale, code : %2
+2242;8240;%1  : température appareil, code : %2
+2242;8250;%1  : erreur matériel appareils, code : %2
+2242;8251;%1  : erreur matériel appareils, câble interne interrompu, code : %2
+2242;8280;%1  : erreur de communication, code : %2
+2242;8281;%1  : erreur de communication, code : %2
+2242;8282;%1  : trop-plein CAN (objet perdu), code : %2
+2242;8283;%1  : appareil en mode passif erreur, code : %2
+2242;8284;%1  : appareil plus à l'état Bus Off, Code : %2
+2242;8290;%1  : erreur externe, code : %2
+2242;9000;%1  : LSS/LMT : configuration appareil réussie
+2242;9001;%1  : LSS/LMT : appareil bien configuré, mais mise en mémoire permanente pas soutenue
+2242;9010;%1  : LSS/LMT : appareil sans réaction, action %2, code %3
+2242;9020;%1  : LSS/LMT : numéro de noeud pas valable
+2242;9021;%1  : LSS/LMT : numéro de noeud pas réglable, erreur %2, spécifique %3
+2242;9024;%1  : LSS/LMT : pas d'accès au moyen mémoire
+2242;9025;%1  : LSS/LMT : configuration pas enregistrable, erreur %2, spécifique %3
+2242;9040;%1  : LSS/LMT : inscription configuration pas valable, lssEnable et lmtEnable pour le même appareil
+2242;9041;%1  : LSS/LMT : inscription confiiguration pas valable, 'lmtSerial' pas code BCD
+2242;9042;%1  : Paquet Node Guard reçu (Node Guarding désactivé)
+2242;9043;%1  : Numéro de produit de l'appareil (%2) ne correspond pas avec numéro de produit attendu (%3)
+2242;9044;%1  : sous-tension circuit intermédiaire (registre erreurs : %2)
+2242;9045;%1  : surchauffe moteur (registre erreurs : %2)
+2242;9046;Effacer
+2242;9047;%1  : court-circuit étage final (registre erreurs : %2)
+2242;9048;%1  : surtension dans circuit intermédiaire (registre erreurs : %2)
+2242;9049;%1  : erreur communications CAN : Bus Off (registre erreurs : %2)
+2242;9050;Effacer !!!!
+2242;9051;%1  : paramètre limité (registre erreurs : %2)
+2242;9052;%1  : fin de course logiciel atteint (registre erreurs %2)
+2242;9053;%1  : erreur dans logiciel résident des entraînements (registre erreurs : %2)
+2242;9054;%1  : surtension dans circuit intermédiaire (registre erreurs : %2)
+2242;9055;%1  : Accès lecture SDO à objet 0x%2 :0x%3 interdit par filtre
+2242;9056;%1  : Accès écriture SDO à objet 0x%2 :0x%3 interdit par filtre
+2243;6500;%1  : pas d'erreur (code : %2)
+2243;6510;%1  : erreur générale sur module (code : %2)
+2243;6523;%1  : court-circuit sur sortie module (code : %2)
+2243;6533;%1  : absence de tension d'alimentation (code : %2)
+2243;6580;%1  : erreur de communication sur module (code : %2)
+2243;6581;%1  : Erreur dans communication avec module (code : %2)
+2243;6590;%1  : erreur externe sur module (code : %2)
+2243;6600;%1  : pas d'erreur (code : %2)
+2243;6610;%1  : erreur générale sur module (code : %2)
+2243;6620;%1  : erreur de matériel sur module (code : %2)
+2243;6680;%1  : erreur de communication sur module (code : %2)
+2243;6681;%1  : erreur de communication sur module (code : %2)
+2243;6690;%1  : erreur externe sur module (code : %2)
+2243;6700;%1  : pas d'erreur (code : %2)
+2243;6701;%1  : erreur générale sur module (code : %2)
+2243;6702;%1  : courant mini côté entrée pas atteint sur module (code : %2)
+2243;6703;%1  : courant mini côté sortie pas atteint sur module (code : %2)
+2243;6704;%1  : erreur de communication sur module (code : %2)
+2243;6705;%1  : erreur de communication sur module (code : %2)
+2243;6706;%1  : erreur externe sur module (code : %2)
+2243;6800;%1  : pas d'erreur (code : %2)
+2243;6801;%1  : erreur de communication sur module (code : %2)
+2243;6802;%1  : court-circuit sur module (masque court-circuit 0x%2)
+2243;6803;%1  : module signale élimination du court-circuit
+2243;6804;%1  : Port IO (%2) configuré en tant qu'entrée et sortie,configuration par défaut (entrée) utilisée
+2245;6801;%1  : Emergency : CAN-Warning-Limit dépassée
+2245;6802;%1  : Emergency : CAN Bus Off
+2245;6803;%1  : Emergency : tampon envoi a débordé
+2245;6804;%1  : Emergency : tampon réception a débordé
+2245;6806;%1  : Emergency : longueur PDO pas valable (%2, attendu : %3)
+2245;6807;%1  : Emergency : SYNC-timeout
+2245;6808;%1  : Emergency : Node Guarding-timeout
+2245;6809;%1  : Emergency : affectation bornes modifiée
+2245;6812;%1  : Emergency : borne (%2) pas soutenue
+2245;6814;%1  : Emergency : 'erreur EEPROM'
+2245;6815;%1  : Emergency : erreur de bus borne : %2 (borne : %3)
+2245;6816;%1  : Emergency : erreur de borne (borne : %2, canal : %3) survenue
+2245;6860;%1  : Emergency : erreur terminal (terminal : %2, canal : %3) éliminée
+2245;6880;%1  : Emergency : %2 %3 %4 %5 %6 %7 %8
+2245;6881;%1  : Emergency : pas d'erreur
+2246;1;%1  : connexion TCP refusée
+2246;2;Timeout ordre (ordre=%1, timeout=%2 ms)
+2246;3;Réponse pas valable à l'ordre (ordre=%1, réponse=%2)
+2250;1;serveur HMI IO message pièce 1 : %1, UserId HostType : %2, UserId Host : %3, UserId UserName : %4, Operation : %5, Medium : %6, Fin du message : %7 impossible à affecter
+2250;2;serveur HMI IO message pièce 2 : %1, groupe variables : %2, Fichiername : %3, fin du message : %4 impossible à affecter
+2250;3;serveur HMI IO message pièce 3 : %1, Fichiername : %2, fin du message : %3
+2250;4;serveur HMI Opmode message : %1, UserId Host : %2, UserId UserName : %3, ancien état : %4 , nouvel état : %5 impossible à affecter
+2250;5;serveur HMI Usermsg message pièce 1 : %1, UserId HostType : %2, UserId Host : %3, UserId UserName : %4 impossible à affecter
+2250;6;serveur HMI Usermsg message pièce 2 : %1, message : %2
+2250;7;serveur HMI Varchange message pièce 1 : %1, UserId HostType : %2, UserId Host : %3, UserId UserName : %4, type de base : %5 , fin du message : %6 impossible à affecter
+2250;8;serveur HMI Varchange message pièce 2 : %1, ancienne valeur : %2, fin du message : %3
+2250;9;serveur HMI Varchange message pièce 3 : %1, nouvelle valeur : %2, fin du message : %3
+2250;10;serveur HMI Varchange message pièce 4 : %1, variable système : %2, fin du message : %3
+2250;11;serveur HMI Varchange message pièce 5 : %1, variable système : %2, fin du message : %3
+2250;12;Erreur de configurations : %1  %2
+2250;13;VarSvr message modification variables, HostType : %1, Host : %2, UserName : %3, type de base : %4 impossible à affecter
+2250;14;VarSvr message modification variables, ancienne valeur : %1
+2250;15;VarSvr message modification variables, nvlle valeur : %1
+2250;16;VarSvr message modification variables, variable système : %1, fin du message : %2
+2250;17;VarSvr message modification variables, variable système : %1, fin du message : %2
+2300;6900;%1  : absence alimentation tension PWM
+2300;6901;%1  : Surintensité de courant entraînement axe V
+2300;6902;%1  : Surintensité de courant soupape %2
+2300;6903;%1  : trop-plein compteur capteur incrémentiel %2
+2300;6904;%1  : capteur incrémentiel %2 défaillant
+2300;6905;%1  : incréments perdus sur capteur %2
+2300;6906;%1  : PDO pilote perdu
+2300;6907;%1  : ordre de marche incorrect
+2300;6908;%1  : position finale pas accessible
+2300;6909;%1  : capteur position soupape défaillant %2
+2300;6910;%1  : impossible de mesurer courant soupape %2
+2300;6911;%1  : position oblique barre
+2300;6912;%1  : Erreur validée 0x%2
+2300;6913;%1  : erreur affirm.
+2300;6914;%1  : grave erreur dans KSX
+2300;6915;%1  : chien de garde
+2300;6916;%1  : CAN BusOff
+2300;6917;%1  : CAN Error-Passiv
+2300;6918;%1  : CAN Bus, trop-plein
+2300;6919;%1  : Sync-timeout
+2300;6920;%1  : erreur auto-test enclenchement
+2300;6921;%1  : valeur AI calibrée pas valable
+2300;6922;%1  : vitesse ventilateur %2 inférieure à minimum
+2300;6923;%1  : court-circuit sur sortie
+2300;6924;%1  : PDO %2 pas reçu
+2300;6925;%1  : écher du téléchargement du logiciel résident (description erreur %2)
+2300;6926;%1  : PDO %2 pas reçu
+2300;6927;%1  : version logiciel résident incompatible : %2
+3001;1;Affirm. :%1 fichier :%2 Ligne :%3
+3001;2;Mémoire insuffisante
+3001;3;Initialisation RPC-Service : pas d'ID serveur valable : %1
+3001;4;Enregistrement RPC-Service : enregistrement impossible sur Portmapper pour serveur %1
+3001;5;RPC-Library TCP-Service impossible à générer
+3001;6;RPC-Library valeur retournée %1 de svc_run
+3001;7;Enregistrement prog :%1, vers :%2 UDP (socket %3) a échoué
+3001;8;Enregistrement prog :%1, vers :%2 TCP (socket %3) a échoué
+3001;9;Pas de type serveur disponible
+3001;10;Initialisation RPC-Service : pas de ressources pour serveur %1. Error %2
+3001;11;Enregistrement RPC-Service : pas de prise libre pour enregistrement sur Portmapper pour serveur %1
+3001;12;pas de n° programme RPCMan disponible
+3001;2000;Composante coupée
+3110;0;Affirm. :%1 fichier :%2 Ligne :%3
+3110;1;Affirm. sur canal :%1 ID CAN :%2 Ligne :%3
+3110;100;Carte CAN pas prête, ID Powerup incorrect
+3110;101;Mode inconnu %1
+3110;102;Canal déjà installé sur interface %1
+3110;103;Désinstallé canal inconnu sur interface %1
+3110;104;Numéro interface pas valable %1
+3110;105;Ordre inconnu (%1) dans messagerie serveur
+3110;106;Trop-plein Interrupt-FIFO
+3110;107;Type interrupt inconnu %1
+3110;108;Timeout pour sémaphore canal service DPM
+3110;109;Confirmation inattendue reçue
+3110;110;Échec de l'ouverture du pilote Kernel %1, dernier défaut %2
+3110;111;Échec de la fermeture du pilote Kernel, dernier défaut %1
+3110;112;Carte CAN pas prête après remise à zéro matériel, ID PCI-Vendor incorrecte
+3110;113;Carte CAN pas prête après remise à zéro matériel, ID Powerup incorrecte
+3110;114;POST (matériel) erreur RomOk=%1 RamOk=%2 EepromOk=%3 Canal0Installé=%4 Canal1Installé=%5
+3110;115;Erreur lors de l'ouverture du fichier logiciel résident %1, %2
+3110;116;Erreur de recherche fichier %1
+3110;117;Erreur lors de la lecture à partir du fichier %1
+3110;118;Fichier logiciel résident trop petit
+3110;200;Timeout sémaphore accès pour tampon DPM-Full-CAN
+3110;201;Tampon trop petit pour message BASIC-CAN reçu (ID CAN=%1, longueur message=%2, taille tampon=%3)
+3110;202;Tampon trop petit pour message FULL-CAN reçu (ID CAN=%1, longueur message=%2, taille tampon=%3)
+3110;203;Canal %1 : Timout sémaphore accès pour tampon DPM-Full-CAN (tampon messages n°=%2)
+3110;204;Canal %1 : tampon trop petit pour message FULL-CAN reçu (tampon messages n°=%2, taille tampon=%3)
+3110;205;Canal %1 : tampon trop petit pour message BASIC-CAN reçu (tampon messages n°=%2, taille tampon=%3)
+3110;300;Erreur de l'ordinateur à distance : trop-plein de données du module CAN sur canal %1 (%2 messages perdus)
+3110;301;Erreur de l'ordinateur à distance : message (tampon n°=%1) timeout sémaphore (canal=%2)
+3110;302;Erreur de l'ordinateur à distance : code inconnu : %1
+3110;500;Carte CAN : Bus PCI %1 Slot %2 connexion handle interrupt %3 a échoué
+3110;501;Carte CAN : Bus PCI %1 Slot %2 connexion avec interrupt matériel %3 a échoué
+3110;502;Carte CAN : Bus PCI %1 Slot %2 retrait du handle interrupt-Handler %3 a échoué
+3110;503;Carte CAN : Bus PCI %1 Slot %2 déconnexion avec interrupt matériel %3 a échoué
+3110;504;Carte CAN : connexion de l'appareil PCI (Bus PCI %1, Slot %2) a échoué
+3110;505;Carte CAN : séparation de l'appareil PCI (Bus PCI %1, Slot %2) a échoué
+3110;10100;Timeout ordre
+3110;10101;Timeout confirmation ordre
+3110;10102;Ordre inconnu (%1H) reçu
+3110;10103;Tampon de réception trop petit dans ordre test (%1 octet au lieu de %2 octet)
+3110;10104;Résultat négatif lors de la confirmation d'un ordre de pièce
+3110;10105;Tampon de confirmation service trop petit (ordre=%1, taille maxi du tampon=%2)
+3110;10106;Trop-plein dans la messagerie de réception de Server-Task %1 avec %2 mails
+3110;10110;Résultat de confirmation service : inconnu
+3110;10111;Résultat de confirmation service : pas de place en mémoire
+3110;10112;Résultat de confirmation service : longueur de données pas valable
+3110;10113;Résultat de confirmation service : données incohérentes
+3110;10114;Résultat de confirmation service : ordre pas accepté
+3110;10115;Résultat de confirmation service : Plus de tampon de message FULL-CAN disponible
+3110;10116;Résultat de confirmation service : ordre inconnu
+3110;10117;Résultat de confirmation service : canal pas valable
+3110;10118;Résultat de confirmation service : vitesse Baud pas valable
+3110;10119;Résultat de confirmation service : SJA1000 non trouvé
+3110;10120;Résultat de confirmation service : type de message pas valable
+3110;10121;Résultat de confirmation service : ID CAN réception affecté en double
+3110;10122;Résultat de confirmation service : type interrupt pas valable
+3110;10123;Résultat de confirmation service : masque interrupt pas valable
+3110;10124;Résultat de confirmation service : pas de tampon réservé
+3110;10125;Résultat de confirmation service : erreur POST (matériel)
+3110;10127;Résultat de confirmation service : canal déjà installiert
+3110;10128;Résultat de confirmation service : canal pas installé
+3110;10129;Résultat de confirmation service : ordre inconnu soutien téléchargement logiciel résident
+3110;10130;Résultat de confirmation service : erreur d'écrite Flash
+3110;10131;Résultat de confirmation service : logiciel résident téléchargé contient erreur CRC
+3110;20200;Tampon d'envoi messages pas vide
+3110;20201;Pas de message reçu
+3110;20202;Statistique pas lancée
+3110;20203;Canal %1 : tampon envoi messages pas vide (tampon messages n°=%2)
+3110;20204;Canal %1 : pas de message reçu (tampon messages n°=%2)
+3110;20205;Canal %1 : pas de message reçu (BASIC-CAN)
+3110;20206;Canal %1 : placement de vitesse Baud par défaut pas soutenu par logiciel résident V%2.%3
+3500;10001;Mémoire insuffisante - %1
+3500;10002;Mémoire insuffisante - %1
+3500;10003;Mémoire insuffisante - %1 %2
+3500;10004;Impossible de reprendre la tâche d'installation.
+3500;10010;SOM pas disponible.
+3500;10105;Erreur lors de l'ouverture du fichier %1
+3500;10201;Le serveur ne peut pas être enregistré par le gestionnaire TCP : %1
+3500;10202;Le serveur ne peut pas être déconnecté par le gestionnaire TCP : %1
+3500;10203;Appel service pas valable (service pas installé) : %1
+3500;10206;Spécification appareil pas valable : %1
+3500;10208;Serveur impossible à activer : %1
+3500;10210;Erreur Mutex lors de l'envoi du client RPC : %1, de %2 vers %3
+3500;10401;Installation impossible de Subdevice Installtask : %1
+3500;10402;Unité fonction %1 impossible à installer.
+3500;10403;Task %1 impossible à installer.
+3500;10406;Mémoire insuffisante lors de la lecture de FU : %1
+3500;10414;%2 Avertissements lors de l'installation de l'unité de fonction %1.
+3500;10415;Fichier SUL %1 contient des inscriptions pas valables ou en double.
+3500;10417;Appareil %1 impossible à installer.
+3500;10418;Ressource %1 impossible à installer.
+3500;10422;Élément %1 pas connu/installé
+3500;10423;Mémoire insuffisante lors de l'installation de l'objet %1.
+3500;10424;Mémoire insuffisante lors de l'installation de OBJET : %1.
+3500;10425;Fichier SUL, valeur impossible à lire : [%1] %2
+3500;10427;Valeur fichier SUL pas déclarée, clé/attr : %1/%2
+3500;10428;Valeur fichier SUL mal déclarée, Key/Attr : %1, %2
+3500;10429;Noms de systèmes différents (chemin application) : %1
+3500;10430;Noms différents de systèmes trouvés dans les fichiers SUL.
+3500;10431;Fichier SUL non trouvé dans le chemin d'application %1
+3500;10432;Fichier SUL non trouvé dans le répertoire d'application %1
+3500;10433;Format fichier SUL invalide : %1 , %2
+3500;10434;Déclaration pas valable dans fichier %1
+3500;10435;État pas valable de l'objet %1 lors de la désinstallation.
+3500;10436;Valeur pas déclarée dans le fichier SUL, Key : %1, Attr : %2
+3500;10437;État pas valable de %1. Installation de %2 donc impossible.
+3500;10438;Désinstallation : état pas valable de l'objet : %1 (désinstall %2)
+3500;10440;Impossible de reprendre la tâche d'installation. %1.
+3500;10450;Utilisation illégale de l'étérateur dans le tableau d'installation ! - %1
+3500;10451;%3 <%4> pas déclaré pour %1 <%2>.
+3500;10452;Pas de nom CPU défini pour l'appareil <%1>.
+3500;10453;Pas d'application trouvée pour l'appareil.
+3500;10454;UosTimer <%1> du catalogie n'est plus soutenu. Indiquer la durée de cycle directement dans le fichier SU.
+3500;10501;Mémoire insuffisante lors de l'installation de l'appareil <%1>
+3500;10502;Appareil déjà installé. appareil : %1, nouvel appareil : %2
+3500;10503;Installation incomplète de l'application.
+3500;10508;Le service ne peut pas être enregistré par le gestionnaire TCP : %1
+3500;10510;Code configuration %1 non trouvé.
+3500;10511;Échec de l'enregistrement lors du rapport d'état
+3500;10601;Résumé impossible de la tâche CommandAndErrorHandling.
+3500;10602;Erreur lors de l'envoir à CmdAndErrQueue ou bien limite atteinte : %1
+3500;10704;Erreur à l'établissement des événements ressource %1 (n° erreur : %2)
+3500;10706;État pas valable der ressource - Res. : %1, état attendu : %2, état actuel : %3
+3500;10708;Installation absence ou non valide de %1 <%2>
+3500;10807;Task <%1> on resource <%2> impossible à poursuivre.
+3500;10808;Thread impossible à poursuivre - Task <%1> sur ressource <%2>
+3500;10810;Mémoire insuffisante lors de la génération de la tâche <%1> sur res.<%2>
+3500;10811;Timer pour tâche <%1> sur res. <%2> impossible à générer
+3500;10814;Suspension de la tâche <%1> sur res. <%2> impossible.
+3500;10815;Timer pour tâche <%1> sur res. <%2> impossible à démarrer
+3500;10817;Durée de cycle pas valable pour Task <%1> sur ressource <%2>, cycle : %3
+3500;10818;Task <%1> sur ressource <%2> impossible à effacer.
+3500;10898;Violation de la durée de marche dans Task <%1> sur res. <%2>, Task-ref. : %3
+3500;10899;Trop-plein déclencheur : tâche %1, sur res. %2, Task-ref. : %3
+3500;10902;Pas d'accès au fichier %1.
+3500;10903;Header impossible à lire - fichier : %1
+3500;10904;Type ou version pas valable dans fichier : %1
+3500;10905;Nom FU impossible à lire - fichier : %1.
+3500;10909;Segment code impossible à lire - FU : %1.
+3500;10923;Offset code pas valable dans fichier : %1, Offset %2 dans %3
+3500;10924;Offset données pas valable dans fichier %1, offset : %2, %3
+3500;10925;Alignement invalide dans fichier : %1, offset : %2, à %3
+3500;10926;Nom (index) ressources impossible à lire - fichier : %1, res. : %2
+3500;10927;Nom ressource non trouvé dans fichier %1. Ressource : %2
+3500;10928;FU déjà installé - fichier : %1, res. : %2
+3500;10950;Nom Fu impossible à lire - fichier concerné : %1
+3500;10951;Nom ressource impossible à lire - FU : %1
+3500;10952;Header fichier erroné dans FU %1
+3500;10953;Fichier erroné dans FU %1
+3500;11001;Segment données ou code impossible à installer. FU : %1
+3500;11002;Impossible d'établir le tableau d'initialisation pour le segment de données - FU : %1
+3500;11003;Impossible d'établir le tableau d'initialisation du segment Retain. FU : %1
+3500;11004;Segment données impossible à initialiser - FU : %1
+3500;11005;Segment données Retain impossible à initialiser - FU : %1
+3500;11006;Segment code impossible à initialiser - FU : %1
+3500;11007;Nombre d'élémente dans tableau Init impossible à lire - FU : %1
+3500;11008;Nombre d'élémente dans tableau Init du segment Retain impossible à lire - FU : %1
+3500;11009;Erreur d'initialisation du segment de données de FU %1
+3500;11010;Les longueurs de segment ne peuvent pas être lues - FU : %1
+3500;11015;Élément du tableau Init (Dataseg.) impossible à lire - FU : %1, n° élément : %2
+3500;11017;Élément du tableau Init (Retainseg.) impossible à lire - FU : %1, n° élément : %2
+3500;11018;Adresse du tableau Init invalide - Fichier : %1, offset %2, à %3
+3500;11019;Adresse du tableau Init invalide - Fichier : %1, offset %2, à %3.
+3500;11020;Returncode de RetainManager %1 pour bloc %2 , taille %3
+3500;11021;Toutes les données FU-Retain ont été effacées (démarrage à froid).
+3500;11022;Appareil stoppé
+3500;11023;Temps ErrorQuit dépassé.
+3500;11101;Instanz impossible à générer (TaskTable) - FU : %1.
+3500;11102;Nombre de tâches impossible à lire (TaskTable) - FU : %1
+3500;11103;Task-Info impossible à lire (TaskTable) - FU : %1, n° élément : %2
+3500;11104;Task pas disponible. FU : %1, Task : %2
+3500;11105;Slot-Info impossible à lire (TaskTable) - FU : %1, n° élément : %2
+3500;11106;Compteur référence de tâche impossible à lire. FU : %1
+3500;11107;Information de référence d'une tâche impossible à lire. FU : %1, réf.Task : %2.
+3500;11109;Offset référence de tâche impossible à lire. FU : %1, référence Task : %2, Offset : %3
+3500;11110;Nom de tâche pas disponible - FU : %1, réf.Task : %2, res.task : %3
+3500;11111;Offset code impossible à à partir de la liste d'instances - FU : %1
+3500;11112;Impossible de lire le compteur d'instances du fichier de chargement (liste instances) - FU : %1
+3500;11113;Impossible de lire l'informatin d'instance (liste d'instances) - FU : %1, n° élément : %2.
+3500;11114;Mémoire insuffisante pour générer instance - FU : %1, Type : %2, Nom : %3
+3500;11118;Nombre d'éléments impossible à lire (SharedMemList) - FU : %1
+3500;11119;Un Shared Memory Offset est impossible à lire - FU : %1, n° : %2.
+3500;11120;Valeur erronée pour le lien d'une SharedMem-Ref. - FU : %1, n° : %2
+3500;11201;Compteur des SysVars impossible à lire - FU : %1
+3500;11202;Info SysVar impossible à lire - FU : %1, n° : %2
+3500;11203;SysVar-Info-Link-Address pas disponible - FU : %1, n° : %2
+3500;11204;Variable système pas référencée dans fichier %1. nom Var. : %2
+3500;11205;Pas de référence pour variable système dans fichier : %1, nom variable : %2
+3500;11206;Références non trouvée pour variables système.
+3500;11301;Impossible de lire le compteur de SysEvents - FU : %1.
+3500;11302;Info SysEvent impossible à lire - FU : %1, n° : %2
+3500;11303;SysEvent-Link-Info impossible à lire - FU : %1, n° : %2, code-elem-n° : %3
+3500;11304;Impossible de lire le compteur de SysEvents (EventTable) - FU : %1
+3500;11305;SysEvent-Info impossible à lire (EventTable) - FU : %1, n° : %2
+3500;11306;SysEvent-Part-Info impossible à lire (EventTable) - FU : %1, n° : %2
+3500;11308;Pas de référence pour un événement de système dans le fichier : %1, nom événement : %2
+3500;11401;SysAlarm compteur impossible à lire. FU : %1
+3500;11402;SysAlarm-Info impossible à lire - FU : %1, n° : %2
+3500;11403;SysAlarm-Link-Info impossible à lire - FU : %1, n° : %2, Data Adr. n° : %3
+3500;11404;Pas de référence pour une alarme système dans fichier FUL : %1, nom alarme : %2
+3500;11501;Impossible de lire le compteur de StandardFunctions - FU : %1.
+3500;11502;Impossible de lire l'information d'une StandardFunction - FU : %1, n° : %2
+3500;11503;Standard-Func impossible à lire - FU : %1, Fonc. : %2
+3500;11504;Impossible de lire le compteur de Standard-ABs - FU : %1
+3500;11505;Impossible de lire Standard-AB-Info - FU : %1, n° : %2
+3500;11506;Standard-Algo-Info impossible à lire - FU : %1, n° : %2, algo-n° : %3
+3500;11507;Standard-Ab- ou Algo-Name impossible à lire - FU : %1, n° : %2, Ab/Algo : %3
+3500;11508;Standard-AB-Instance-count impossible à lire - FU : %1, n° : %2
+3500;11509;Standard-AB-Instance-Link-Addr impossible à lire - FU : %1, n° : %2, instance : %3
+3500;11511;Standard-Algo pas disponible - fichier : %1, Offset : %2, Nom : %3
+3500;11512;Nombre d'algos pas valable dans fichier %1, n° %2, FB : %3
+3500;11601;Impossible de lire algorithme Postupdate. FU : %1
+3500;11602;Post-Update-Element-Info impossible à lire. FU : %1, n° : %2
+3500;11603;Post-Update-Info impossible à lire. FU : %1, n° : %2, indix fichier Postup : %3
+3500;11604;Post-Update-Func impossible à générer - FU : %1, SysVar : %2, ElemOffset : %3, taille : %4 impossible à affecter
+3500;11605;Event Algo pas affecté à une tâche - Fu : %1, Algo : %2
+3500;11606;Post-Update-Algo pas affecté à une tâche - FU :%1, Algo :%2
+3500;11607;(Interne) affectation pas valable d'un événement
+3500;11608;Affectation pas valavle d'un Post-Update-Algo dans FU :%1, Algo :%2
+3500;11701;Compteur pour SFCheader impossible à lire. FU : %1
+3500;11702;SFC-Header Offset impossible à lire. FU : %1, SFC : %2
+3500;11802;Impossible de relier les données dans FU-Header. FU : %1
+3500;11803;Impossible de relier les instances. FU : %1
+3500;11804;Impossible de relier les Standard-Functions. FU : %1
+3500;11805;Impossible de relier les Standard-FBs ou ABs. FU : %1
+3500;11806;Impossible de relier les variables du système. FU : %1
+3500;11807;Impossible de relier les événements du système. FU : %1
+3500;11808;Impossible de relier les algorithmes Post-Update. FU : %1
+3500;11809;Impossible de relier SFCheader. FU : %1
+3500;11810;Impossible de relier les références de tâches. FU : %1
+3500;11811;Impossible de relier les instances d'événement du tableau d'événements. FU : %1
+3500;11812;Impossible de relier les alarmes du système. FU : %1
+3500;11813;Impossible de relier les références Retain-(Shared-)Memory. FU : %1
+3500;11814;Impossible de charger le tableau avec les indices des fonctions BuiltIn. FU : %1
+3500;12001;Impossible d'ouvrir le fichier FUL-Load : %1
+3500;12002;La sensibilité est différemment définie. fichier FUL-load %1.
+3500;12003;Erreur lors de la lecture du Header du fichier %1
+3500;12005;Erreur lors de la lecture du tableau Seek Tabelle - fichier de chargement FUL : %1
+3500;12006;Erreur lors de la lecture de l'info générale. FUL load Fichier %1.
+3500;12007;Erreur lors de la lecture de la liste de noms. Position : %1, fichier FUL-load : %2
+3500;12009;Erreur lors de la lecture de MainPositionTable dans le fichier %1
+3500;20001;Mémoire insuffisante pour générer gestion bibliothère standard.
+3500;20002;IEC erreur de durée de marche : FU-ref %1, IecErreur %2, Frame Off %3, Code Off %4, Fu Name %5
+3500;20003;Appel d'un AB/FB standard pas relié (CREATE, DELETE, ACTIVATE, DEACTIVATE, RESET)
+3500;20004;Error-quitt-Timer impossible à installer.
+3500;20005;iTask-Handle invalide dans l'appel %1
+3500;20006;Appel de %1 à partir d'une tâche IEC étrangère.
+3500;20007;Appel de %1 impossible à l'état actuel de %2
+3500;20008;Erreur générale IKB : %1 %2 %3
+3500;20009;IEC erreur de durée de marche : FU %1.%2[%3], IEC-Erreur %4, Frame-Off %5, Code-Off %6
+3500;30001;Type de point code pas valable dans ressource : %1.
+3500;30002;Mémoire insuffisante : Impossible à debugger de placer Code-Point. Res : %1
+3500;30003;Debugger impossible à initialiser.
+3500;30004;Debug Callback impossible à installer.
+3500;30011;Breakpoint impossible à placer - Ressource %1
+3500;30012;Breakpoint impossible à supprimer (OsDebugRemoveBp) - Res : %1, Fu : %2, abs.Pos : %3, Off : %4 impossible à affecter
+3500;30013;Mémoire insuffisante - Watchvariable impossible à générer - taille variable : %1
+3500;30021;Appareil ou ressource non trouvé - Ressource : %1.
+3500;40001;Type d'élément SFC inconnu - données SFC pas valable : %1
+3500;40002;Liste erronée des séquences actives SFC dans %1
+3500;40003;Type d'élément SFC pas valable dans une méthode : %1
+3500;40004;SFC Interpreter pas installé
+3500;40005;'%1'.
+3500;40006;FU : %1.%2, %3 / donnée de génération : %4 / MD5 : %5 /
+3500;40007;Debugserver : %1 /User : %2 /Info : %3 /
+3500;40008;Ressource %1, %2
+3500;40009;Exception : %1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,%16,%17,%18,%19
+3500;40010;Ordre octets erroné dans fichier FUL %1.
+3500;40011;Fichier FUL établie pour type de CPU incorrect - %1
+3500;40012;FU %1 pas contenu dans OMLD.
+3500;40013;FU %1 contient conflit de version avec OMLD.
+3500;40014;Objet %1 pour action %2 non trouvé.
+3500;40015;Plusieurs demandes reçues pour objet %1 pour action %2
+3500;40016;Objet %1 contient type erroné pour action %2.
+3500;40100;Appareil '%1' installé
+3500;40101;Install Function-Unit (pièce 1/2) : Res : '%1' Fu : '%2' GenDate : %3.%4
+3500;40102;Install FU : MD5 : %1
+3500;40103;Désinstaller FU : Res : '%1' Fu : '%2' GenDate : %3.%4
+3500;40104;Install Function-Unit : MD5 : %1
+3500;40105;FU : '%1' Vers : '%2' CodeLen : %3 DataLen : %4 RetainDataLen : %5 impossible à affecter
+3500;40106;Debug Server installe Fu : '%1' User : '%2'
+3500;40107;Debug Server désinstalle Fu : '%1' User : '%2'
+3500;40108;Ressource '%1' démarrée.
+3500;40109;Ressource '%1' stoppée.
+3500;40110;Exception (pièce 1/4) / composante : %1 Erreur : %2 Erreur, ID : %3 Erreur, type : %4 Erreur, sous-type : %5 Res : '%6' Fu : '%7'
+3500;40111;Exception (pièce 2/4) / Task : '%1' avec MD5 : %2
+3500;40112;Exception (pièce 3/4) CodeOffsets : %1, %2, %3, %4 DataOffsets : %5, %6, %7, %8
+3500;40113;Exception (pièce 4/4) / erreur : ERR : '%1' ErrId : %2
+3500;40115;Erreur (pièce 1/4) : '%1' avec ID erreur-ID %2, Res : '%3', MD5 : '%4'
+3500;40116;Exception (pièce 2/4). connexion tasl active : '%1' avec Fu : '%2' Idx tableau : '%3' FramePtr : '%4'
+3500;40117;Exception (pièce 3/4). Task : '%1' avec FrameOffs : %2 CodeIdx1 : %3 CodeOff1 : %4 CodeIdx2 : %5 CodeOff2 : %6 CodeIdx3 : %7 CodeOff3 : %8 impossible à affecter
+3500;40118;Exception (pièce 1/4). Erreur '%1' avec erreur ID %2
+3500;40550;TriggerOverflow : Task %1, Res %2
+3500;40551;Dépassement de temps dans Task %1 et res %2.
+3500;40552;Erreur de durée de marche : Task %1, Res %2, FU %3, ErrId %4
+3500;40553;Exception : task %1, res %2, fu %3, excType %4
+3600;1;FB standard KEBA %1 pas relié
+3600;5;Objet système %1 pas relié, Fu-Handle erroné
+3600;6;Objet système %1 pas relié, chemin objet non trouvé
+3600;7;%1 pas implementé
+3600;25;Fichier %1 impossible à ouvrir
+3600;34;Type %1 pas compatible
+3600;37;Mémoire insuffisante (texte : %1, taille %2)
+3600;64;Type de fichier erroné (interne : type code 1 : %1, type code 2 : %2, usage : %3)
+3600;68;Version de fichier erronée %1
+3600;70;Erreur lors de la lecture des types (%1 erreur)
+3600;77;Fichier Svl %1 pas chargé (%2 Erreur)
+3600;103;Impossible de relier objet '%1' avec objet '%2' du type '%3'
+3600;106;Restart-Failure - pas tous les types supprimés
+3600;107;Restart-Failure - pas tous les attributs supprimés
+3600;108;Objet système %1 du type %2 pas relié, info type erronée
+3600;113;CRC error dans Fichier %1
+3600;114;Erreur d'initialisation, types pas compatibles : %1 objet système attendu du type %2 objet système %3 est de type %4
+3600;115;Type de bas pas autorisé (erreur dans lien) %1
+3600;119;SysVarRefInit erroné %1 initialisation avec %2 n'est pas une référence
+3600;121;Restart-Failure - pas tous les FU supprimés
+3600;122;Attribut %1 déclaré dans divers fichiers %2 %3
+3600;124;Types pas compatibles %1 taille n'est pas %2 octets
+3600;129;Impossible d'envoyer les événements au-delà des limites de l'appareil
+3600;131;Fichier ISL %1 déjà chargé
+3600;132;Fichier ISL %1 pas chargé (%2 Erreur)
+3600;134;Retain Fichier %1 impossible à générer
+3600;137;FU %1 du fichier ISL %2 pas chargé
+3600;142;Pas de connexion avec le maître SOM.
+3600;143;ArrayInit n'est pas sur un Array
+3600;144;Élément StructListInit sur offset invalide
+3600;145;Initialisation erronée de OpenArray %1 avec %2
+3600;146;(lien INTERNE) Offset erroné dans Plausfonction
+3600;147;Plausibilité d'un type avec taille 0
+3600;148;Lien incompatible sur Open-Array %1
+3600;149;Subtype %1 pour type %2 non trouvé
+3600;151;Attribut pas valable %1 de variable système %2 ignoré
+3600;153;Shared Memory %1/%2 erreur de variable système déjà utilisée %3
+3600;157;Type %1 a info de type erroné pour '%2'
+3600;158;Info du type impossible à analyser %1
+3600;159;AbsRel Unit %1 non trouvée
+3600;161;Type de variable système %1 pas compatible avec taille Endpoint %2
+3600;162;Hardware Endpoint %1 pas présent dans IO
+3600;163;Type de SV %1 incompatible avec données Retain
+3600;165;Nom de type %1 pas présent
+3600;166;Fichier ISL pas adapté à Fu %1
+3600;167;Attribut Fast-Retain pas valable %1 de variable système %2 ignoré
+3600;168;Fichier pas ouvert %1
+3600;169;Pas de valeur Fast Retain trouvée pour %1
+3600;173;Global-Attribut %1 pas compatible
+3600;174;Erreur lors de la détermination de la valeur de la variable %1 d'un autre appareil
+3600;175;Erreur lors de la détermination de la valeur de la variable %1 sur un autre appareil
+3600;176;Erreur lors de l'envoi de la variable Response Get ou Set Iec
+3600;177;Avertissement Hardware Endpoint % pas présent
+3600;179;Taille de Init différente de la taille du type %1
+3600;180;Repeat Init sur type erroné %1
+3600;181;Erreur lors de la communication Csp de Events
+3600;183;Erreur dans communication Csp d'alarme
+3600;184;Bloc système %1 impossible à initialiser sans mémoire
+3600;185;Erreur dans communication Csp de variable locale CreateSMem pour %1
+3600;186;Erreur dans communication Csp de variable locale Read pour %1
+3600;187;Erreur dans communication Csp de variable locale Write pour %1
+3600;188;Fichier SVL attendu en format Little-Endian
+3600;189;Fichier SVL attendu en format Big-Endian
+3600;190;Mode Case-Insensitive pas encore soutenu
+3600;191;Erreur dans fichier chargé - pas de type spécifié
+3600;192;Variable système pas reliée %1 dans plausibilité
+3600;193;Plausibilité pas calculée pour variable système %1
+3600;194;Erreur %1 lors de la génération du segment retain, segment %2 pas retain
+3600;195;Un ou plusieurs points finaux du matériel pas présents dans IO
+3600;196;Un ou plusieurs objets du système pas reliés, chemin objet non trouvé
+3600;197;Variable %1 déjà présente dans Uos du système IO
+3600;198;Mode simulation activé pour points finaux matériel (%1 points finaux simulés)
+3600;199;Taille données événement pas valable : %1 (seulement %2 octets permis)
+3600;200;Point final matériel %1 pas présent
+3600;201;AlarmState Log Alarm :%1, Class :%2, State :%3, SubId1 :%4, SubId2 :%5, SubId3 :%6, SubId4 :%7
+3600;202;Param1 : %1
+3600;203;Param2 : %1
+3600;204;SVL a type de CPU erroné (%1 attendu)
+3600;205;Param1 : Type :%1 Valeur :%2
+3600;206;Param2 : Type :%1 Valeur :%2
+3600;207;Données SV Retain effacées (démarrage à froid)
+3600;208;Exception pendant l'exécution du code de plausibilité pour variable système %1
+3600;401;Message interne : Erreur de syntaxe dans fichier de chargement ! (fichier : %1, Ligne  : %2, description : %3)
+3600;402;Segment Retain modifié : Texte : %1, info FU : %2, code segment : %3, code opération : %4 impossible à affecter
+3600;403;Point final matériel SV %1 a été déclaré RETAIN ou FAST RETAIN
+3600;404;"Fichier Retain %1 de var.fréq. %2 détruit ; premier nom SV détruit %3"
+3600;405;corruption fichier Retain %1 détectée dans var.fréq. %2. Données Retain réinitialisées.
+3700;1;%1 (%2/%3) : limite erreur dépassé
+3700;2;%1 (%2/%3) : Erreur lors de l'ouverture du fichier %4
+3700;3;%1 (%2/%3) : longueur de ligne maxi dépassée
+3700;4;%1 (%2/%3) : mémoire insuffisante (%4)
+3700;5;%1 (%2/%3) : Fichier TeachTalk a un nom invalide
+3700;6;%1 (%2/%3) : nombre de lignes maxi dépassée
+3700;11;%1 (%2/%3) : Attendu %4
+3700;12;%1 (%2/%3) : symbole invalide %4
+3700;13;%1 (%2/%3) : sauté %4
+3700;14;%1 (%2/%3) : fin inattendue de fichier
+3700;21;%1 (%2/%3) : symbole inconnu %4
+3700;22;%1 (%2/%3) : erreur interne (symbole terminal)
+3700;23;%1 (%2/%3) : erreur interne (pas de symbole terminal)
+3700;24;%1 (%2/%3) : erreur interne (dépassement de capacité négatif de pile)
+3700;31;%1 (%2/%3) : erreur scanner interne
+3700;32;%1 (%2/%3) : erreur interne (trop-plein pile)
+3700;33;%1 (%2/%3) : le mot-clé '%4' ne doit être utilisé qu'une seule fois
+3700;41;%1 (%2/%3) : dépendance de type cyclique
+3700;42;%1 (%2/%3) : type pas défini : %4 impossible à affecter
+3700;43;%1 (%2/%3) : Types pas compatibles
+3700;44;%1 (%2/%3) : pas de type
+3700;45;%1 (%2/%3) : type erroné
+3700;46;%1 (%2/%3) : à cet endroit, le programme '%4' n'est pas permis
+3700;47;%1 (%2/%3) : interdiction de générer des instances de types abstraits
+3700;48;%1 (%2/%3) : pas de structure
+3700;49;%1 (%2/%3) : pas d'élément de structure
+3700;50;%1 (%2/%3) : pas de Array
+3700;51;%1 (%2/%3) : pas de Integer
+3700;52;%1 (%2/%3) : pas de routine
+3700;53;%1 (%2/%3) : plage pas valable
+3700;55;%1 (%2/%3) : constante de décompte déjà utilisée
+3700;56;%1 (%2/%3) : type déjà défini : %4 impossible à affecter
+3700;57;%1 (%2/%3) : pas de module
+3700;58;%1 (%2/%3) : définition non privée utilisant type privé
+3700;59;%1 (%2/%3) : longueur de chaîne de caractères incorrecte
+3700;60;%1 (%2/%3) : définition de constante cyclique incorrecte
+3700;61;%1 (%2/%3) : User-objet attendu
+3700;62;%1 (%2/%3) : les routines abstraites doivent être vides
+3700;63;%1 (%2/%3) : une routine abstraite ne doit être déclarée que dans des modules abstraits
+3700;64;%1 (%2/%3) : La routine abstraite n'a pas été écrasée dans le module '%4'
+3700;65;%1 (%2/%3) : les éléments de variantes ne doivent pas contenir de références
+3700;66;%1 (%2/%3) : type erroné (attendu : %4)
+3700;67;%1 (%2/%3) : les tyes de variables exportées ne doivent pas contenir de références
+3700;71;%1 (%2/%3) : nom pas défini : %4 impossible à affecter
+3700;72;%1 (%2/%3) : nom déjà défini : %4 impossible à affecter
+3700;73;%1 (%2/%3) : désignation pas valable : %4 impossible à affecter
+3700;74;%1 (%2/%3) : pas de constante de décompte : %4 impossible à affecter
+3700;75;%1 (%2/%3) : pas de cible saut : %4 impossible à affecter
+3700;76;%1 (%2/%3) : repère de saut pas défini : %4 impossible à affecter
+3700;77;%1 (%2/%3) : définition pas valable de l'élément module gobal
+3700;78;%1 (%2/%3) : pas d'accès à l'élément module privé
+3700;79;%1 (%2/%3) : nom trop long
+3700;80;%1 (%2/%3) : nom local déjà globalement défini : %4 impossible à affecter
+3700;81;%1 (%2/%3) : pas de variable
+3700;82;%1 (%2/%3) : export a échoué, '%4' existe déjà
+3700;96;%1 (%2/%3) : pas de fichier programme trouvé pour ce fichier de données
+3700;97;%1 (%2/%3) : pas d'attribut SAVE ou PROJECT autorisé
+3700;98;%1 (%2/%3) : les variantes ne peuvent pas utiliser d'éléments module avec attributs SAVE.
+3700;99;%1 (%2/%3) : le contrôle de consistance a échoué
+3700;100;%1 (%2/%3) : pas déclaré comme variable Save
+3700;101;%1 (%2/%3) : Programme avec variables SAVE PROJECT portant le même nom existe déjà dans le projet %4
+3700;102;%1 (%2/%3) : pas d'attribut EXPORT autorisé
+3700;111;%1 (%2/%3) : trop peu de paramètres
+3700;112;%1 (%2/%3) : trop de paramètres
+3700;113;%1 (%2/%3) : paramètre invalide
+3700;114;%1 (%2/%3) : pas de valeur retournée
+3700;115;%1 (%2/%3) : routine pas adaptée à la définition dans la classe de base
+3700;116;%1 (%2/%3) : pas de routine d'événement
+3700;117;%1 (%2/%3) : routine incorrecte
+3700;119;%1 (%2/%3) : routines renommées pas autorisées dans les modules
+3700;120;%1 (%2/%3) : appel de programme récursif : %4 impossible à affecter
+3700;131;%1 (%2/%3) : Index liegt außerhalb der limiten
+3700;132;%1 (%2/%3) : division par zéro
+3700;133;%1 (%2/%3) : pas de cible d'affectation
+3700;134;%1 (%2/%3) : pas d'imprimé valable
+3700;135;%1 (%2/%3) : pas de saut valable
+3700;136;%1 (%2/%3) : pas de constante
+3700;138;%1 (%2/%3) : pas de valeur entière valable
+3700;139;%1 (%2/%3) : trop d'appels de routine
+3700;140;%1 (%2/%3) : trop de variables
+3700;141;%1 (%2/%3) : ordre SELECT pas autorisé dans modules
+3700;142;%1 (%2/%3) : Valeur hors plage
+3700;143;%1 (%2/%3) : erreur dans l'initialisation
+3700;144;%1 (%2/%3) : pas tous les chemins un un statement de retour
+3700;145;Écriture pas exécurée sur %1 %4 - modifications externes du fichier
+3700;146;%1 (%2/%3) : l'instruction doit être complètement activée ou désactivée
+3700;147;%1 (%2/%3) : chaîne constante trop longue
+3700;148;%1 (%2/%3) : cas CASE pas accessible
+3700;150;Projet %1 / passe %2
+3700;151;Projet %1 / passe %2 sauté
+3700;152;%1 Fichiers traduits
+3700;153;%1 (%2/%3) : trop-plein dans la fonction interne '%4'
+3700;170;Fichier de données impossible à écrire %1
+3700;171;Timer %1 n'existe pas, relié à la place avec cycle système.
+3700;172;Le répertoire WorkPath indiqué n'existe pas : %1
+3700;173;Le répertoire d'application '_système.tt' n'existe pas ou ne contient aucun fichier TeachTalk
+3700;174;%1 (%2/%3) : Élément %4 %5 pas référencé
+3700;196;Mémoire insuffisante pour projet %1 (%2)
+3700;197;Nom de projet %1 déjà utilisé
+3700;198;Nom de projet %1 invalide
+3700;199;Projet %1 erroné, %2 erreurs
+3700;201;%1 (%2/%3) : pas de valeur retournée
+3700;202;%1 (%2/%3) : Timer placé avec temps négatif
+3700;205;%1 (%2/%3) : Impossible de trouver module pour ordre SELECT
+3700;206;%1 (%2/%3) : Erreur dans le programme d'application - division par zéro
+3700;207;%1 (%2/%3) : pas d'événement IEC
+3700;209;%1 (%2/%3) : Erreur dans programme d'application - Index %4 hors limite %5..%6
+3700;210;%1 (%2/%3) : Erreur dans programme d'application - accès à variable pas mappée %7
+3700;211;%1 (%2/%3) : pas de paramètre
+3700;212;%1 (%2/%3) : accès à variante erronée
+3700;213;%1 (%2/%3) : Valeur hors plage
+3700;214;%1 (%2/%3) : conversion de type pas valable
+3700;215;%1 (%2/%3) : pas de place en mémoire (%7)
+3700;216;%1 (%2/%3) : Valeur hors plage
+3700;218;%1 (%2/%3) : trop de variables
+3700;219;%1 (%2/%3) : THIS pas encore défini
+3700;220;%1 (%2/%3) : Impossible de démarrer le programme car il est déjà en cours
+3700;221;%1 (%2/%3) : les paramètres ANY-output de la fonction logiciel résident ne doivent pas contenir de références
+3700;222;%1 (%2/%3) : utilisation pas valable d'une fonction mapping externe
+3700;251;%1 (%2/%3) : limite de temps dépassée pour exécution de la routine, PRIO %5
+3700;252;%1 (%2/%3) : trop de routines activées
+3700;253;%1 (%2/%3) : limite de temps (stmtLimit) dépassée pour exécution routine
+3700;254;%1 (%2/%3) : échec mapping externe  : %4 impossible à affecter
+3700;255;%1 (%2/%3) : trop de temps entre les instructions WAIT
+3700;256;%1 (%2/%3) : verrouillage enlevé prématurément
+3700;257;%1 (%2/%3) : Routine impossible à stopper car elle a été appelée '%4'
+3700;258;%1 (%2/%3) : impression Update invalide
+3700;259;%1 (%2/%3) :  WAIT ou UPDATE sur Shared Memory %4 exécuté sans signalisation activée 
+3700;260;%1 (%2/%3) : limite de temps dépassée pour instruction
+3700;261;L'interpreteur a violé le cycle suivant
+3700;280;LoadGlobal
+3700;281;UnloadGlobal
+3700;282;LoadProject %1
+3700;283;UnloadProject %1
+3700;284;StartProgram %1
+3700;285;LoadSystem
+3700;290;Variable %2 (Type : %3) modifié (pièce %1)
+3700;291;Variable (ancienne valeur : %2) modifiée (pièce %1)
+3700;292;Variable (nouvelle valeur : %2) modifiée (pièce %1)
+3700;400;mémoire insuffisante pour TeachControl-Heap
+3700;401;Client %1 (ID %2) déconnecté car trop longtemps inactif.
+3700;402;Erreur lors de l'extraction du fichier archive %1 
+3700;403;TC User0 (part %1) : stringI : %2, ParamI(h) : %3, ParamI(l) : %4, ParamII(h) : %5, ParamII(l) : %6 impossible à affecter
+3700;404;TC User0 (part %1) : stringII : %2, ParamIII(h) : %3, ParamIII(l) : %4, ParamIV(h) : %5, ParamIV(l) : %6 impossible à affecter
+3700;405;TC User0 (part %1) : format : %2
+3700;406;Projet '%1' impossible à activer
+3700;407;%1 (%2/%3) : Utilisation de la routine DEPRECATED '%4 '
+3700;408;%1 (%2/%3): l'élément '%4' masque un autre élément portant le même nom
+4000;1;******* Version : %1 *******
+4000;2;Version PCALL fichiers Header incompatible (%1). au moins version %2 nécessaire
+4000;10;Fonction %1 pas encore implémentée.
+4000;11;Durée de cycle dépassée pour MCU-Update (%1 %%)
+4000;15;Erreur lors de la génération du point final '%1' : %2 (%3)
+4000;16;Échec de la connexion du type de point final '%1'.
+4000;17;Objet TimeStep invalide
+4000;18;Numéro d'instance est toujours 0.
+4000;20;ProcedureCall '%1' non trouvé.
+4000;25;%1  : dépassement d'un Message Queue (%2).
+4000;30;%1  : Fichier : '%2' (%3) impossible à ouvrir.
+4000;31;%1  : Erreur lors de l'écriture sur fichier '%2' (%3)
+4000;32;%1  : Erreur lors de la lecture de fichier '%2' (%3)
+4000;33;%1  : erreur lors de l'effacement d'un fichier '%2' (%3)
+4000;51;Objet invalide (ID %1) n'a pas pu être ajouté à la base de données
+4000;52;Erreur d'application : Objet <%3> %2 (adresse : %1) impossible à saisir dans la base de données MCU
+4000;53;Appel fonction %1 avec pas objet inexistant <%2> (ID %3)
+4000;54;Appel fonction %1 avec objet erroné <%2> (ID %3)
+4000;55;Objet avec ID <%1> pas du type <%2> (%3)
+4000;56;Pool mémoire MCU du système épuisée (%1 Ko occupé)
+4000;57;MCU-Heap du système épuisée. (taille configurée : %1 kB)
+4000;58;Arrêt robot à cause de configuration trop faible de la base de données MCU. (inscription confiiguration : dataBaseSize = %1)
+4000;59;Interdiction d'effacer la cinématique (%1)
+4000;70;Facteur d'utilisation banque de données déjà %1 %%
+4000;71;Objet déjà autorisé %1 (ID %2) est de nouveau utilisé (%3)
+4000;100;Données pas valables pour transformation %1 (ID %2)
+4000;101;Transformation %1 (ID %2) utilise actualisation invalide d'objet (adresse : %3)
+4000;102;Définition récursive du système de référence %3 (ID %4) lors de la transformation %1 (ID %2)
+4000;103;La transformation %1 (ID %2) utilise un système de référence invalide (%3 )
+4000;104;Update a échoué (Update Obj. %3) lors de transformation %1 (ID %2)
+4000;130;Nombre d'axes auxiliaires %3 (maxi %4) trop grand dans position %1 (ID %2).
+4000;131;Position %1 (ID %2) de cin. %3 (ID %4) pas compatible avec position %5 (ID %6) de cin. %7 (ID %8)
+4000;132;Position %1 (ID %2) avec %3 axes auxiliaires pas compatible avec pos. %4 (ID %5) avec %6 axes auxiliaires
+4000;133;Position trajectoire pas valable : Trajectoire %1 (ID %2), ordre de mouvement %3 (ID %4), paramètre %5
+4000;134;Nombre d'axes principaux (%1) de position %2 pas compatible avec cinématique %3 (%4 axes principaux)
+4000;135;Position axes %1 affectée à cinématique invalide.
+4000;136;Nombre d'axes principaux (%1) inférieur au nombre d'axes manuels (%2) dans position (%3).
+4000;137;Objet Joint-Offset invalide (ID %1) sur position %2 dans base de données
+4000;138;Consigne position WristJoint impossible %1avec objet Joints-Offset ou système de référence en mouvement
+4000;159;Ordre de marche %1, paramètre%2
+4000;160;Position pas valable %1 dans ordre de marche %2 (ID %3).
+4000;161;Ordre de mouvement %1 (ID %2) contient objet d'interpolation invalide
+4000;162;Position auxiliaire pas valable pour circuit dans ordre de mouvement %1 (ID %2)
+4000;163;Impossible de calculer le circuit dans l'ordre de marche (ID %2).
+4000;164;Mode cible %4 pas accessible dans ordre de mouvement %1 (ID %2) (cin. %5, mode actuel : %3)
+4000;165;Type d'interpolation d'orientation pas valable : %1
+4000;166;Couple maxi configurées pour axe %1 trop faible : %2. Limitation du couple impossible.
+4000;167;Type d'interpolation d'orientation incompatible %1 dans ordre de marche Spline %2 (ID %3)
+4000;168;Outil incompatible %1 (ID %2) dans ordre de marche Spline %3 (ID %4)
+4000;169;Impossible de générer segment circulaire car il serait variable
+4000;170;"Cinématique <%5> impossible à placer sur trajectoire <%4>, mode erroné (%2); Position trajectoire nécessite mode%3 - <%1>"
+4000;171;"Le mode consigné par l'utilisateur (%3) ordre de marche %4 ne va pas avec le mode départ (%2) ; cinématique %5 - <%1>"
+4000;172;Planned cart. target mode (%2) of %6-segment %4 not reachable by kinematic %5, because mode of target position <%7> = %3 - <%1>
+4000;173;Planned WJ target mode (%2) of %6-segment %4 not reachable by kinematic %5, because mode of target position <%7> = %3 - <%1>
+4000;174;Mode position de départ (%3) de  %6 segment %4 ne correspond pas au mode cible (%2) du segment précédent, cinématique %5 - <%1>
+4000;175;"%2Mode position de départ de %5 segment %3 inconnu ; cinématique %4 - <%1>"
+4000;176;"Mode position de départ (%2) de segment %4 est ""vraissemblable"" et différent du mode utilisé (%3) ; cinématique %5 - <%1>"
+4000;177;"Mode cible (%2) de segment %4 différent de mode cible (%3) position ; cinématique %5 - <%1>"
+4000;178;"Pas de chevauchement à cause de différence entre début chevauchement (%2) et mode cible (%3) du segment %4 ; cinématique %5 - <%1>"
+4000;179;"Mode de pos.départ (%2) pas compativle avec mode cible (%3) de l'ordre de marche <%4>; cinématique <%5> - <%1>."
+4000;180;PTP sur objet en mouvement %1 (ID %2)
+4000;181;Ordre de marche trop court pour objet en mouvement : %1 %2 (ID %3)
+4000;182;Modification trop grande de l'orientation par rapport au plan du cercle de %1 degré (maxi %2 degré) pour segment %3 (ID %4)
+4000;183;Outil externe incompatible %1 dans ordre de marche %2
+4000;200;Données chevauchement pas valables : trajectoire %1 (ID %2), position segment sur trajectoire : %3
+4000;201;Handle segment pas valable : trajectoire %1 (ID %2), position segment sur trajectoire : %3
+4000;202;Données trajectoire pas valables dans trajectoire %1 (ID %2)
+4000;203;Profil accélération invalide dans trajectoire %1 (ID %2)
+4000;204;Nouvel ordre de marche pas accepté à cause de paramètre erroné (ID %1) pour trajectoire %2 (ID %3)
+4000;205;Handle segment pas trouvé %1 dans trajectoire %2 (ID %3)
+4000;206;Échec du calcul paramètres pour données chevauchement
+4000;207;Trajectoire avec ID %1 n'existe pas.
+4000;208;McuClearPath impossible. Cinématique encore sur trajectoire %1
+4000;209;Cinématique ID %1 pas valable pour ID trajectoire %2.
+4000;210;Mode cible pas placé pour sortie axe manuel (%1 (ID %2))
+4000;211;Pas de macro numéro de ligne enregistré dans données utilisateurs de position %1
+4000;212;Fonction sur objet %1 (ID : %2) pas adaptée
+4000;230;Données chevauchement pas valables %1 (ID %2)
+4000;231;Données chevauchement disponibles pour segment pas chevauchant
+4000;232;Absence objet interpolation pour données chevauchement %1 (ID %2) type : %3
+4000;233;Handle segment pas valable pour calcul chevauchement %1 (ID %2) type : %3, SegHdl1 : %4 SegHdl2 : %5 impossible à affecter
+4000;234;Impossible de calculer position chevauchement %1. Ordre de mouvement %2 (ID %3)
+4000;235;Temps d'attente pas valablet %3 dans données chevauchement %1 (ID %2)
+4000;236;Paramètre pas valable %3. (%4) dans données chevauchement %1 (ID %2)
+4000;237;Type de chevauchement pas valable %1
+4000;238;Type de définition chevauchement pas valable %1
+4000;260;Données dynamiques pas valables %1 (ID %2), groupe composants %3
+4000;261;Profil accélération invalide dans dynamique %1 (ID %2)
+4000;262;Profil de freinage invalide dans dynamique %1 (ID %2)
+4000;263;Données dynamiques %1 (ID %2) : groupe composantes %3 invalide
+4000;264;Vitesse cart. programmée %4 (composante %3) doit être supérieure à 0. dynamique %1 (Addr. %2) invalide.
+4000;265;Vitesse cart. programmée %4 (composante %3) doit être supérieure à 0. dynamique %1 (Addr. %2) invalide.
+4000;266;Vitesse cart. programmée %4 (composante %3) doit être supérieure à 0. dynamique %1 (Addr. %2) invalide.
+4000;267;Suraccélération cart. programmée %4 (composante %3) doit être supérieure à 0. dynamique %1 (Addr. %2) invalide.
+4000;268;Profil %1 (ID %2) ne contient pas de données valables
+4000;269;Cin. %1 (ID %2) : Vitesse excessive %4 pour dynamique réduite (comp. %3). Utiliser valeur de dynamique régulière
+4000;270;Vitesse programmée %5 pour axe %4 (composante %3) doit être supérieure à 0. dynamique %1 (Addr. %2) invalide.
+4000;271;Accélération programmée %5 pour axe %4 (composante %3) doit être supérieure à 0. dynamique %1 (Addr. %2) invalide.
+4000;272;Freinage programmé %5 pour axe %4 (composante %3) doit être supérieur à 0. dynamique %1 (Addr. %2) invalide.
+4000;273;Suraccélération programmée %5 pour axe %4 (composante %3) doit être supérieure à 0. dynamique %1 (Addr. %2) invalide.
+4000;274;Rampe asymétrique %1 (type %2) pas soutenue, corrigée en symétrique.
+4000;300;Pas de transformation inverse disponible pour la cinématique %1 (ID %2)
+4000;301;"Arrêt robot à cause d'erreur antérieure ; Cinématique %1 (ID %2), ordre de marche %3 (ID %4), paramètre %5"
+4000;302;Type de robot (%1 axen) pas compatible avec cinématique %2 (%3 axes configurés)
+4000;303;Cinématique %1 : Transformation inverse seulement possible si transformation en avant = MARCHE
+4000;304;Cinématique %1 : type de robot nécessaire pour spécifier une transformation appropriée de robot
+4000;305;Pas de jeu dynamique par défaut valable affecté à la cinématique %1
+4000;306;Pas de jeu de chevauchement par défaut valable affecté à la cinématique %1
+4000;308;Appeler d'abord McuStopInterpolator() pour cinématique <%1>
+4000;309;ID cinématique pas valable <%1>
+4000;310;Composante pas valable %1 pour cinématique %2 (ID %3)
+4000;311;Temps de préavertissement (%2 s) pour cinématique %1 supérieur au temps de prévue réglé (%3 s). Durée de préavertissement placée sur %3s.
+4000;312;Transformation en avant pour cinématique '%1' (ID %2) pas soutenue
+4000;313;Génération impossible d'une cinématique - Valeur limite de vitesse <%1> trop faible pour axe %2
+4000;314;Génération impossible d'une cinématique - limite accélération <%1> pour axe %2 trop petite
+4000;315;Génération impossible d'une cinématique - limite accélération <%1> pour axe %2 trop petite
+4000;316;Génération impossible d'une cinématique - limite freinage-accélération <%1> pour axe %2 trop petite
+4000;317;Pas de transformation Wrist inverse disponible pour la cinématique %1 (ID %2)
+4000;318;Pas de transformateur marche avant configuré pour cinématique %1 -> robot dummy utilisé
+4000;319;%1 (axe %2) : valeur invalide pour 'incréments par rotation' (compteur : %3 dénominateur : %4)
+4000;330;Ordre précédent pas encore traité
+4000;331;Pas d'Event-Handle spécifié pour ordre <%1>
+4000;332;Temps de préavertissement minimum ne peut pas être respecté pour %2 (ID %1) : %3 au lieu de %4
+4000;333;Spécification de niveau non appropriée pour l'application %2 (ID %1)
+4000;334;Signal %2 (ID %1) déclenché
+4000;335;Job %1 déjà affecté à cinématique (%2, %3)
+4000;336;Prévision de temps erronée pour job %2 (ID %1) : %3 ms (limite configurée : %4 ms)
+4000;337;Prévision de temps erronée pour job %2 (ID %1) à cause d'intervention du limiteur de prévue : %3 ms (limite configurée : %4 ms)
+4000;338;Segment paramètre pas valable (%1) pour le job %2
+4000;339;Déclencheur job avec temps de préavertissement %2 (ID %1) impossible sans prévue.
+4000;340;Déclencheur job avec temps de préavertissement %2 (ID %1) impossible - échec de connexion avec tampon prévue.
+4000;341;Distance non valable (%1) dans job %2
+4000;342;Distance %1 du job %2 trop longue pou le segment %3
+4000;343;Distance jjob %1 interdite sur mouvement PTP %2
+4000;344;Impossible de placer distance job %1 pour cinématique %2
+4000;360;Ordre de compartiment de travail précédent pas encore traité
+4000;361;Cin. %1 entre dans l'espace bloqué %4 avec griffe %5 (n° %6) pendant ordre de mouvement %2 (Param. %3) exécuté
+4000;362;Cin. %1 quitte compartiment de travail %4 avec griffe %5 (n° %6) pendant ordre de mouvement %2 (Param. %3) exécuté
+4000;363;Objet affecté au compartiment de travail %1 (ID %2) déjà affecté à une cinématique
+4000;364;Impossible d'enlever de la cinématique l'objet affecté au compartiment de travail %1 (ID %2)
+4000;365;Dimension espace de travail pas valable ou zone interdite %1
+4000;366;Cin. %1  : violation de l'espace de travail ou de l'espace interdit lors de la position cartésienne [%2 %3 %4] sur (mondet).
+4000;367;Position finale du segment %1 dans zone interdite %2 avec griffe %3 (n° %4) de la cinématique %5
+4000;368;Position finale du segment %1 pas dans zone travail avec griffe %2  (n° %3) de la cinématique %4
+4000;390;Nombre d'offsets griffe généré (%2) dépassé (maxi:%1)
+4000;400;Numéro d'axe erroné %1 dans module servo de cinématique %2 pendant l'opération %3
+4000;401;Impossible à la cinématique %1 de lire les données servo de Shared Memory %2.
+4000;402;Erreur d'accès à la Shared Memory (%1) d'un servo, cinématique %2 (axe n° %3)
+4000;403;Erreur d'application : état servo pas valable constaté par MCU, mouvement robot non autorisé (état servo : %1, Cinématique : %2, axe : %3
+4000;404;Impossible de relier servo pour axe '%2' avec la cinématique %1
+4000;405;Cinématique %1 : durée de cycle des entraînements '%2' (%3) différente de celle de la cinématique (%4)
+4000;406;Cinématique %1 : point final pour entraînement '%2' (%3) non trouvé
+4000;407;Cinématique %1 : entraînement '%2' en mode position incorrect (%3, attendu : %4)
+4000;408;Cinématique %1 (axe %2) : placement impossible de la position. Cinématique démarrée.
+4000;409;Cinématique %1 (axe %2) : placement impossible de la position. entraînement pendant erreu.
+4000;410;Cinématique %1 (axe %2) : placement impossible de la position. entraînement pas référencé.
+4000;411;Cinématique %1 (axe %2) : référenciation impossible. écart pas valable entre deux impulsions zéro (%3).
+4000;412;Cinématique %1 (axe %2) : référenciation impossible. démultiplication pas valable.
+4000;413;Cinématique %1 (axe %2) : référenciation avec impulsion zéro : axe pas référencé.
+4000;414;Cinématique %1 (axe %2) : écart trop grand par rapport à impulsion zéro.
+4000;415;Cinématique %1 (axe %2) : Référenciation impossible. axe en retard par rapport à la matrice du module axe (axe %3).
+4000;416;Cinématique %1 (axe %2) : placement impossible de la position. axe dépendant pas référencé (axe %3).
+4000;417;Cinématique %1 (axe %2):impossible à référencer. Entraînement est un Modulo Drive.
+4000;420;Cinématique %1 (axe %2) : entraînement signale perte de référenciation.
+4000;421;Cinématique %1 : axe %2 : perte de référenciation.
+4000;422;Cinématique %1, Joint %2 : gear ratio has changed.
+4000;423;Erreur de connexion avec Shared-Memory : %1 (%2)
+4000;424;"Cinématique %1 : période de position de l'entraînement '%2' pas valable ([%3;%4[, attendu : [-180;180[)"
+4000;425;Cinématique %1 (axe %2) : Repositionnement de l'entraînement impossible. Cinématique pas prête.
+4000;427;Version interface incompatible de AXIS-PORT : %1 (attendu : %2)
+4000;430;Ordre SetPathPos n'a pas de position de trajectoire valable (ID %1)
+4000;432;Ordre <%1> a des paramètres invalides <%2> : <%3>
+4000;433;Erreur d'application : ordre MCU <%3> pas autorisé car cinématique <%1> (ID %2) encore en mouvement
+4000;434;Ordre <%1> envoyé à cinématique pas enregistrée <%2> (ID %3)
+4000;435;Ordre <%1> : Cinématique <%2> (ID %3) sur trajectoire <%4> (ID %5), et non sur trajectoire <%6> (ID %7)
+4000;436;Ordre <%1> envoyé à cinématique pas evalable <%2> (ID %3)
+4000;437;Mise en place de la cinématique <%1> (ID %2) su trajectoire <%3> (ID %4) provoque un saut.
+4000;438;Segment <%1> (ID %2) provoque un saut trop important dans la trajectoire <%3> (ID %4)
+4000;439;Dernier ordre SetPathPos pas traité
+4000;450;Cinématique <%1> (ID %2) pas encore READY pour ordre <%3>
+4000;451;Cinématique <%1> (ID %2) pas sur trajectoire pour ordre <%3>
+4000;452;L'ordre SetTimeOverride à la cinématique %1 a un paramètre invalide %2
+4000;453;L'ordre SetTimeOverrideFactor à la cinématique %1 a un paramètre invalide %2
+4000;454;Ordre MoveToTarget : Position Seg. n° %2 param %3 pour cinématique %1 déjà passé
+4000;455;Ordre MoveToTarget : Cinématique %1 sur trajectoire vide %2
+4000;460;Cinématique %1 pas enregistrée dans l'unité d'exécution MCU
+4000;462;Échec de l'ordre %1, envoyé à la cinématique %2
+4000;463;Trop de systèmes de référence en mouvement : %1
+4000;464;Seuls des systèmes de référence en mouvement peuvent être enregistrés
+4000;465;Activation du limiteur d'axe individuel seulement possible si limiteur de couple est désactivé (CinID %1)
+4000;480;Retard de l'interpolateur de prévue (int. princ. : %1 %2 prévue : %3 %4)
+4000;481;%1-Interpolation for kinematic %2 failed (SectionNr : %3, SectionTime : %4).
+4000;482;Durée de prévue 0 pourbei %1
+4000;483;Erreur pour cinématique esclave %1 
+4000;484;Fonction %1 pas disponible avec prévue.
+4000;485;Ordre provisoire Assign/Remove esclave pas encore terminé.
+4000;486;Définition trajectoire pour cinématique %1 utilisée par cinématique en tant que système de référence.
+4000;500;"%8 Vitesse cart. dépasse valeur limite (%4) de %1 %%; composante : %2, Valeur : %3, ordre de marche (%5) %6 paramètre %7"
+4000;501;"%8 Vitesse cart. dépasse valeur limite (%4) de %1 %%; composante : %2, Valeur : %3, ordre de marche (%5) %6 paramètre %7"
+4000;502;"%8 Position d'axe dépasse valeur limite de position ; axe de base : %2, Valeur : %3, Valeur limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;503;"%8 Position d'axe dépasse valeur limite de position ; axe manuel : %2, Valeur : %3, Valeur limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;504;"%8 Position d'axe dépasse valeur limite de position ; axe auxiliaire : %2, Valeur : %3, Valeur limite : %4, ordre de marche(%5) %6, paramètre %7"
+4000;505;"%8 Vitesse cart. dépasse limite de %1 %%, composante : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;506;"%8 Vitesse cart. dépasse limite de %1 %%, composante : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;507;"%8 Vitesse axe dépasse limite de %1 %%, axe de base : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7%"
+4000;508;"%8 Vitesse axe dépasse limite de %1 %%, axe manuel : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;509;"%8 Vitesse axe entraînement dépasse limite de %1 %%, axe auxiliaire : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;510;"%8 Vitesse cart. dépasse limite de %1 %%, composante : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;511;"%8 Vitesse cart. dépasse limite de %1 %%, composante : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;512;"%8 Accélération axe dépasse limite de %1 %%, axe de base : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7%"
+4000;513;"%8 Accélération axe dépasse limite de %1 %%, axe manuel : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7%"
+4000;514;"%8 Accélération axe dépasse limite de %1 %%, axe auxiliaire : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7%"
+4000;515;"%8 Vitesse cart. dépasse limite de %1 %%, composante : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;516;"%8 Vitesse cart. dépasse limite de %1 %%, composante : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;517;"%8 Suraccélération axe dépasse limite de %1 %%, axe de base : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;518;"%8 Suraccélération axe dépasse limite de %1 %%, axe manuel : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;519;"%8 Suraccélération axe dépasse limite de %1 %%, axe auxiliaire : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;520;Transformation marche avant pour cinématique %1 doit être activée pour permettre surveillance dynamique cartésienne
+4000;521;Type erroné utilisé pour UnLockAppend : LockType(%1) - UnLockType(%2)
+4000;522;"Valeur limite dépassée pour somme des angles d'axe manuel ; valeur actuelle : %1, Valeur limite : %2, ordre de mouvement (%3) : %4, paramètre : %5 impossible à affecter"
+4000;523;%7Position de l'axe %1 saute (nouvelle position : %2, ancienne position : %3) dans ordre de marche (%4) %5, paramètre %6
+4000;530;Ordre de marche %1 (%2) : vitesse réduire de %3 %% (c'est-à.dire %4 %% de la vitesse programmée)
+4000;531;Limiteur axe individuel ON : %1, paramètre : %2
+4000;532;Limiteur axe individuel OFF : %1, paramètre : %2, MaxPosDeviation : %3, MaxOriDeviation : %4 impossible à affecter
+4000;533;Arrêt du robot à cause de divergence trop importante de la trajectoire : %1, valeur limite configurée : %2
+4000;534;Pas de poursuite de l'interpolation à cause d'une erreur interne
+4000;535;Erreur traînée maxi réglée (%3) pour un axe (%1) a été dépassée : erreur traînée %2
+4000;536;Position finale du segment %1 dépasse limite position de l'axe %2 de %3 %% (position axe : %4, limite : %5) de cinématique %6
+4000;537;Impossible de calculer position axe de cinématique %1 pour position finale de segment %2
+4000;550;Cinématique %3 (ID %4) n'a pas de transformation inverse pour %1 (ID %2)
+4000;551;Position de %1 (ID %2) pas accessible par cinématique %3 (ID %4)
+4000;552;Orientation de %1 (ID %2) pas accessible par cinématique %3 (ID %4)
+4000;553;Axes de base de cinématique %3 (ID %4) singuliers pour %1 (ID %2)
+4000;554;Axes manuels de cinématique %3 (ID %4) singuliers pour %1 (ID %2)
+4000;555;Cinématique %3 (ID %4) singulière pour %1 %2
+4000;556;Cinématique %3 (ID %4) a une mauvaise convergence à %1 (ID %2)
+4000;557;Bit d'erreur 4 placé pendant transformation inverse
+4000;558;Bit d'erreur 8 placé pendant transformation inverse
+4000;559;Cinématique %3 (ID %4) n'a pas de transformation inverse implémentée pour %1 (ID %2)
+4000;560;Paramètre invalide pour transformation inverse de %1 (ID %2) par la cinématique %3 (ID %4)
+4000;561;Outil invalide pour transformation inverse de %1 (ID %2) par la cinématique %3 (ID %4)
+4000;571;<%1> Position pas accessible de cinématique %2 bei %3
+4000;572;<%1> Orientierung pas accessible de cinématique %2 bei %3
+4000;573;<%1> Axe de base de cinématique %2 singulier pour %3
+4000;574;<%1> Axes manuels de cinématique %2 singuliers pour %3
+4000;575;<%1> Cinématique %2 singulière pour %3
+4000;576;<%1> Cinématique %2 a une mauvaise convergence lors de l'interpolation de %3
+4000;577;<%1> Cinématique %2 a des instabilités numériques dans le calcul dynamique à %3
+4000;578;<%1> Cinématique %2 n'a pas de transformation inverse implémentée pour %3
+4000;579;<%1> Paramètre invalide pour transformation inverse de cinématique %2 à %3
+4000;580;Outil invalide pour cinématique %2%1 à %3
+4000;600;Type de robot configuré %1 pas disponible.
+4000;601;Pas de cinématique indiquée dans fichier de configuration MCU
+4000;602;Pas de timer spécifié pour MCU. Toutes les tâches MCU stoppées.
+4000;603;Impossible de trouver le timer MCU <%1>
+4000;604;Type d'axe pas valable <%1>
+4000;605;Pas de données de configuration trouvées pour axe <%1>
+4000;606;Type Frame configuré <%1> pas disponible
+4000;607;Absence d'inscriptions de configuration de l'axe masqué
+4000;608;Transvormateur inverse configuré sans transformateur d'avance dans le fichier de configurations de la cinématique.
+4000;609;Type de filtre configuré %1 pas disponible.
+4000;610;Le nombre indiqué %2 pour le filtre %1 ne correspond pas au nombre de coefficients filtres %3.
+4000;611;Les coefficients de filtre indiqués dépassent la longueur maximale autorisée (%1).
+4000;612;Une filtre %1 a besoin de %2 coefficients (disponibles : seulement %3)
+4000;613;Système de référence <%1> du système de référence configuré : %2 pas dans base de données
+4000;614;Le temps de prévue configuré (%1) dépasse le temps maxi autorisé (%2)
+4000;615;Mémoir Heap insuffisante pour l'enregistreur cyclique configuré (taille configurée : %1). taille par défaut utilisée (%2).
+4000;616;Mode axe configuréer '%1' pas disponible.
+4000;617;Durée de cycle configurée=%1 invalide pour MotionTimer.
+4000;618;Configuration invylide d'enchaînement externe axe <%1>
+4000;619;Type de capteur configuré '%1' pas assisté.
+4000;620;Matrice engrenage configurée ne peut pas être inversée.
+4000;650;Ordre de commande <%1> refusé
+4000;651;Ordre de commande <%1> appelé avec paramètre invalide.
+4000;652;Ordre de commande <%1> pas encore implémenté
+4000;653;Appel ordre de commande <%1> avec paramètre invalide <%2> = <%3>
+4000;654;McuSearchDbObj() pas implémenté pour type d'objet %1
+4000;655;Type de Frame pas valable : %1
+4000;656;Ordre de commande <%1> pas valable dans cette version.
+4000;657;"InitPathPos"" <%1> pas valable - Cinématique <%2> pas encore placée sur trajectoire <%3>."""
+4000;670;McuReleaseDbObj : Objet avec ID %1 déjà autorisé
+4000;671;Erreur lors de l'appel %1
+4000;672;Tentative d'appel d'objet oas compris dans base de données (adr. %1).
+4000;673;Impossible de copier rapport état fichier MCU de %1 vers %2
+4000;680;Appel fonction <%1> avec paramètre invalide <%2> = <%3>
+4000;681;Pour la fonction appelée <%1> la trajectoire pour le segment <%2> (ID : %3) est invalide
+4000;682;Impossible de calculer position trajectoire pour redémarrage du segment <%1> (ID : %2)
+4000;683;Écher de l'ajout de SegHdlData a échoué dans fonction <%1> dans liste MotionBuffer
+4000;684;Impossible de traiter ordre MotionBuffer
+4000;685;Annexion de segments de MotionBuffer (ID : %1) pas encore possible à la trajectoire d'exécution (ID : %2)
+4000;686;Impossible d'effacer le MotionBuffer de la liste ExecUnit.
+4000;687;<%1> impossible - %2 surveillances déjà actives (maxi %3)
+4000;688;Impossible d'annexer des degments de MotionBuffer (ID : %1)
+4000;689;Fonction de contrôle impossible à démarrer pour MotionBuffer (ID : %1)
+4000;690;Annexion de segments de MotionBuffer (ID : %1) pas encore possible à la trajectoire d'exécution (ID : %2)
+4000;691;Tentative d'annexer un segment à une trajectoire gelée (ID : %1)
+4000;692;Échec de lecture de NextSegSMemName (fonctionalité pas activée dans configuration)
+4000;693;Nombre de segments zéro autorisés (maxi : %2) dépassé lors de l'annexion à la trajectoire d'exécution (ID : %1)
+4000;694;Nombre d'axes prescrits (%1) ne concorde pas avec nombre d'axes de la cinématique (ID : %2)
+4000;695;Numéro de filtre incorrect (%1). Seulement deux filtres d'axes cascadés pour lesquels les numéros de filtre 1 et 2 sont prévus.
+4000;700;Message d'erreur interne
+4000;701;Tentative d'indiquer un nombre négatif d'axes dans la transformation robot
+4000;702;Trop d'axes (%1, maxi 8) indiqués dans la transformation robot
+4000;703;Type d'axe pas valable pour axe %1 dans transformation robot
+4000;704;Nombre de liens pas valable dans transformation robot
+4000;705;Paramètre DH pas initialisé pour transformation robot
+4000;706;Nombre pas valable d'axes (%1) dans vecteur d'axe pour transformation robot
+4000;707;Nombre pas valable de lignes (%1) de la matrice Jacobi dans transformation robot
+4000;708;Nombre pas valable de colonnes (%1) de la matrice Jacobi dans transformation robot
+4000;709;Mode robot pas valable dans transformation robot
+4000;710;Configuratin pas valable du mode robot dans transformation robot
+4000;711;Turn pas valable (%1) dans transformation robot
+4000;712;Nombre d'axes pas valable (%1)
+4000;713;D1 invalidee dans paramètres DH pour EcopaintTransform
+4000;714;Alpha 1 invalide dans paramètres DH pour EcopaintTransform
+4000;715;D2 invalide dans paramètres DH pour EcopaintTransform
+4000;716;A3 invalide dans paramètres DH pour EcopaintTransform
+4000;717;A4 invalide dans paramètres DH pour EcopaintTransform
+4000;718;A5 invalide dans paramètres DH pour EcopaintTransform
+4000;719;Alpha34 invalide dans paramètres DH pour EcopaintTransform
+4000;720;Nombre d'axes pas valable (%1)
+4000;721;D%1 invalide dans paramètres DH pour Transform
+4000;722;A%1 invalide dans paramètres DH pour Transform
+4000;723;Alpha%1 invalide dans paramètres DH pour Transform
+4000;724;Theta%1 invalide dans paramètres DH pour Transform
+4000;725;Impossible de calculer l'enchaînement des axes auxiliaires
+4000;726;Nombre d'axes de base (%1) pas valable dans vecteur transmission pour transformation robot
+4000;727;Nombre d'axes manuels (%1) pas valable dans vecteur transmission pour transformation robot
+4000;728;Impossiible d'identifier robot Scara avec paramètres DH indiqués
+4000;729;Transformation robot pour robot Scara pas implémentée
+4000;730;Impossible de calculer position TCP valable à partir de la position d'articulation
+4000;731;Pas de robot Semi-Scara disponible pour les paramètres DH indiqués
+4000;732;Mode de construction du robot SemiScara-robots pas encore implémenté
+4000;733;Cas spécial de changement de mode pour Wrist-Joint-Interpolation pas disponible dans cette cinématique.
+4000;734;La cinématique a au moins un axe redondant.
+4000;751;Pas de modèle robot dynamique disponible pour cinématique <%1>
+4000;752;Nombre d'axes erroné (%1 statt %2) indiqué pour le modèle robot dynamique (ID %3)
+4000;753;Masse pour axe %1 ne doit pas être négative
+4000;754;Couple d'inertie Jxx pour axe %1 ne doit pas être négatif
+4000;755;Couple d'inertie Jyy pour axe %1 ne doit pas être négatif
+4000;756;Couple d'inertie Jzz pour axe %1 ne doit pas être négatif
+4000;757;Bras levier à ressort R pour axe %1 ne doit pas être négatif
+4000;758;Bras levier à ressort L pour axe %1 ne doit pas être négatif
+4000;759;Rigidité de ressort pour axe %1 ne doit pas être négatvef
+4000;760;Le coefficient de friction statique pour l'entraînement de l'axe %1 ne doit pas être négatif
+4000;761;Le coefficient de friction visqueux pour l'entraînement de l'axe %1 ne doit pas être négatif
+4000;762;L'inertie d'entraînement pour l'entraînement de l'axe %1 ne doit pas être négative
+4000;763;La démultiplication pour l'entraînement de l'axe %1 ne doit pas être zéro
+4000;764;Le couple maxi pour l'entraînement de l'axe %1 doit être supérieur à zéro
+4000;765;Nombre d'axes erroné (%2 au lieu de %3) dans Shared Memory %1
+4000;766;Incohérence physique des paramètres d'inertie de l'axe %1
+4000;767;incohérence physique des paramètres d'inertie de l'outil %1
+4000;768;Masse pour outil %1 ne doit pas être négative
+4000;769;Couple d'inertie Jxx pour outil %1 ne doit pas être négatif
+4000;770;Couple d'inertie Jyy pour outil %1 ne doit pas être négatif
+4000;771;Couple d'inertie Jzz pour outil %1 ne doit pas être négatif
+4000;772;Les forces de palier ne peuvent être calculées que pour un axe (axe %1 sélectionné)
+4000;773;Le facteur de position pour l'entraînement de l'axe %1 ne doit pas être 0
+4000;800;Les paramètres de traçage ne peuvent pas être placés lorsque le traçage est activé
+4000;801;Le type de cadre pour le traçage ne doit être indiqué que dans l'angle Euler
+4000;802;Enregistrement de l'enregistreur de traçage démarré (N°seg. : %1, TrsfID : %2 %3)
+4000;803;Enregistrement de l'enregistreur de traçage stoppé (N°seg. : %1, TrsfID : %2 %3)
+4000;804;Message de statut enregistreur de traçage : Samples : %1, trop-plein : %2, TrsfID : %3
+4000;805;Message de statut enregistreur de traçage : trop-plein tampon (taille configurée : %1)
+4000;806;%1 enclenche enregistreur de traçage : N°seg. suivant : %2, TrackObj : %3
+4000;807;%1 coupe l'enregistreur de traçage : N°seg. suivant : %2, TrackObj : %3, Samples : %4, trop-plein : %5 impossible à affecter
+4000;810;Erreur de temps pour le signal de traçage
+4000;820;La somme (%2) de touts les coefficients de filtre FIR (%1) est différente de 1.
+4000;821;Coefficient filtre pas valable %1 = %2.
+4000;822;Affectation pas valable de (%1) filtre %2
+4000;850;Nombre AreaJobs invalide (exécuté : %1, compris dans Starep : %2)
+4000;851;Nombre PlaneJobs invalide (exécuté : %1, compris dans Starep : %2)
+4000;852;Erreur interne du test MCU : pas tous les jobs paramètres déclenchés (réel : %1, consigne : %2)
+4000;853;Nombre LimitJobs invalide (exécuté : %1, compris dans Starep : %2)
+4000;854;Job pas déclenché : %2 (ID %1) %3
+4000;900;%1.%2 Ligne %3 : axe %4 dominant
+4000;901;%1.%2 Ligne %3 : %4 dominant
+4000;902;%1.%2 Ligne %3 : Prelimiteur - %4%% de vitesse prog. (N°seg. %5)
+4000;903;%1.%2 Ligne %3%4 : limiteur géométrie - %5%% de vitesse prog. (N°seg. %6)
+4000;904;%1.%2 Ligne %3%4 : limiteur prévue - %5%% de vitesse prog. (N°seg. %6)
+4000;905;%1.%2 Ligne %3%4 : limiteur marche principale - %5%% de vitesse prog. (N°seg. %6)
+4000;906;%1.%2 Ligne %3%4 : limiteur axe individuel - divergence pos. : %5, Ori. divergence : %6 (N°seg. %7)
+4000;907;%1.%2 Ligne %3%4 : segment court - %5%% de vitesse prog. (N°seg. %6)
+4000;908;%1.%2 Ligne %3 : ordre de marche suivant arrive trop tard (N°seg. %4)
+4000;909;%1.%2 Ligne %3%4 : Géométrie pointue (limiteur de prévue) - %5%% de la vitesse prog. (N°seg. %6)
+4000;910;%1.%2 Ligne %3%4 : limiteur prévue (cart. dyn.) - %5%% de vitesse vitesse prog. (N°seg. %6)
+4000;911;%1.%2 Ligne %3 : segment zéro - 0%% de vitesse prog. (N°seg. %4)
+4000;950;Transfert d'un tampon Motion (ID : %1) interrompu - Erreur <McuAppendToPath>
+4000;951;<McuTerminateMotionBuffer> impossible - Transfert de tampon Motion (ID : %1) actif.
+4000;970;Tampon de prévue, état enregistreur : trop-plein du tampon enregistreur. taille configurée : %1
+4000;971;Impossible d'activer le limiteur de prévue de vitesse de bande car cinématique <%1> pas stoppée ou limiteur pas configuré.
+4000;972;Impossible de désactiver le limiteur de prévue de vitesse de bande car cinématique pas stoppée.
+4000;980;Vitesse inconnue
+4000;981;Accélération/couple inconnu
+4000;982;Vitesse entraînement %1
+4000;983;Accélération entraînement %1
+4000;984;Couple entraînement %1
+4000;985;Vitesse cart.
+4000;986;Vitesse cart.
+4000;987;Vitesse ori. cart.
+4000;988;Vitesse ori. cart.
+4000;990;%1 dépasse valeur limite, même sans progression de trajectoire à %2
+4000;991;L'entraînement %2 dépasse la limite d'accélération à l'endroit %1, même sans progression de trajectoire
+4000;992;L'entraînement %2 dépasse la limite de couple à l'endroit %1, même sans progression de trajectoire
+4000;993;À l'endroit %1 la limite d'accélération de la position cartésienne est dépassée même sans progression de trajectoire
+4000;994;À l'endroit %1 la limite d'accélération de l'orientation cartésienne est dépassée même sans progression de trajectoire
+4000;7000;Mouvement en dehors du fin de course interdit
+4000;7001;Joint %1 : position finale positive d'axe dépassée
+4000;7002;Joint %1 : position finale négative d'axe
+4000;7003;Position pas accessible
+4000;7004;Orientation pas accessible
+4000;7005;Position singulière
+4000;7006;Erreur interne lors du calcul de position
+4000;7007;Transformation inverse pas calculable
+4000;9000;Valeurs pas valables pour constructeur matrice
+4000;9001;Mémoire insuffisante pour construction matrice
+4000;9002;Mémoire insuffisante pour construction matrice
+4000;9003;Index pas valable pour l'accès à la matrice
+4000;9004;Affectation des matrices pas valable
+4000;9005;Addition de matrices pas valable
+4000;9006;Soustraction pas valable de matrices
+4000;9007;Impression pas valable avec matrices
+4000;9008;Multiplication pas valable vecteur/matrice
+4000;9009;Transposition invalide d'une matrice pas carrée
+4000;9010;Inversion d'une matrice impossible (pas de matrice carrée ou de limitation de taille)
+4000;9011;Inversion d'une matrice pas possible (matrice singulière)
+4000;9900;Ligne : %2  %1
+4000;9901;Ligne : %2  %1
+4000;9902;Erreur critique dans le fichier : %1 Ligne : %2
+4000;9903;Erreur fatale dans le fichier : %1 Ligne : %2
+4000;9904;Erreur MCU interne : objet avec ID %1 (%2) n'existe pas (%3)
+4000;9905;Objet avec adresse %1 n'existe pas
+4000;9906;Message MCU interne : fichier %1, Ligne %2
+4000;9907;indicateur pas valable dans module %1 Ligne %2
+4000;9908;Message interne : fichier %1, Ligne %2
+4000;9909;Blocage pas valable d'un objet base de données : %1 (ID %2)
+4000;9910;Autorisation pas valable d'un objet base de données : %1 (ID %2)
+4000;9911;Validation d'un blocage lecture inexistant. Objet : %1 (ID %2)
+4000;9912;Validation d'un blocage écriture inexistant. Objet : %1 (ID %2)
+4000;9913;Objet déjà bloqué : %1 (ID %2)
+4000;9914;Blocage d'un objet base de données inexistant
+4000;9915;Validation d'un objet base de données inexistant
+4000;9950;Message interne %1
+4000;9951;Tentative de se connecter sur un objet déjà autorisé (%1) ID %2 (%3)
+4000;9952;Essai de se déconnecter pour un objet invalide (%4) (adr.obj2 : %1, obj1 : %2 %3)
+4000;9953;Objet invalide (adr. %1) impossible à observer (%2)
+4000;9954;Effacement d'un objet pas encore utilisé (%1) ID : %2
+4000;9955;Valeurs cart. pour %1 : %2 %3 %4 %5 %6 %7
+4000;9956;Valeurs cart. : %1 %2 %3 %4
+4000;9957;%1  : %2
+4000;9958;Valeurs cart. de %1 [réf. : monde] : %2 %3 %4 %5 %6 %7
+4000;9959;Valeurs cart. de %1 [réf. : base de cin. %2] : %3 %4 %5 %6 %7 %8
+4000;9960;Arrêt décélération dans Seg %1, Param %2 (Ln%3) détecté (%4 updates)
+4000;9961;%1  : Un PCall '%2' a échoué (%3).
+4000;9962;StopMiss dans Seg %1, Param %2 (Z.%3) constaté (Seg %4, Param %5)
+4000;9963;StopUnreachable dans Seg %1, Param %2 (Ln%3) constaté (Seg %4, Param %5)
+4000;9964;%1 nécessitet %2 secondes à l'endroit %3 (valeur limite %4 secondes)
+4000;9965;"%8 couple entraînement dépasse limite de %1 %%, axe de base : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;9966;" %8 couple entraînement dépasse limite de %1 %%, axe manuel : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;9967;"%8 couple entraînement dépasse limite de %1 %%, axe auxiliaire : %2 ; Valeur  : %3, limite : %4, ordre de marche (%5) %6, paramètre %7"
+4000;9968;%3ms de l'erreur prédite pour job %2 (ID %1) proviennent d'une singularité.
+4000;9969;Échec d'interpolation pour cinématique %2%1 à l'endroit %3
+4000;9970;À cause d'une singularité, StopJoints est effectué à l'endroit %3 à la place de StopMove (cinématique %2%1)
+4000;9971;Force de réaction %2 dépasse la valeur limite à l'endroit %1, même sans progression de trajectoire
+4000;9972;L'entraînement %2 dépasse la limite de vitesse à l'endroit %1, même sans progression de trajectoire
+4000;9973;À l'endroit %1 la limite de vitesse de la position cartésienne est dépassée même sans progression de trajectoire
+4000;9974;À l'endroit %1 la limite de vitesse de l'orientation cartésienne est dépassée même sans progression de trajectoire
+4000;9975;Cinématique %1 (joint %2) : Défaut entraîné entraînement %3 dépasse valeur limite (%4).
+4001;0;Pas d'erreur présente
+4001;5;Fichier : '%1', Ligne : %2
+4001;10;%1  : fichier impossible à ouvrir : '%2' (%3)
+4001;13;%1  : écriture sur fichier, erreur : '%2' (%3)
+4001;16;%1  : lecture de fichier, erreur : '%2' (%3)
+4001;20;('%1') Appel UOS '%2'('%3') a échoué
+4001;30;Base de données MFB pleine (nombre d'élements : %1)
+4001;35;%1' : impossible de coller l'objet lors de l'actualisation (durée de cycle : %2 us)
+4001;40;%1' : configuration incorrecte
+4001;41;%1' : Index trop grand : %2 (maximum : %3)
+4001;42;%1  : valeur invalide %2 : %3
+4001;50;%1' : Initialisation défaillante
+4001;51;%1' : Configuration pas OK
+4001;55;%1' : Mapping défaillant (%2)
+4001;56;%1  : Point final '%2' déjà présent (%3)
+4001;57;%1' : Impossible de lire durée de cycle pour '%2' du système IO
+4001;58;%1  : durée de cycle déterminée (%3) invalide pour '%2'
+4001;60;%1' : point final '%2' non trouvé
+4001;61;%1' : Servo '%2' déjà connecté par '%3'
+4001;62;%1' : Connexion impossible avec Servo '%2'
+4001;63;%1  : Servo '%2' mode position incorrect (%3, attendu : %4)
+4001;64;%1  : mot statut Servo pas disponible (%2´)
+4001;65;%1' : Connexion impossible avec codeur '%2'
+4001;90;%1' : valeur limite dynamique aboutirait à un dépassement de la valeur AxisMemSize (%2). La suraccélération maxi (valeur limite application) est augmentée à %3.
+4001;100;%1' : référence/handle invalide ('%2' : %3)
+4001;101;%1' : numéro d'instance pas valable ('%2 :%3')
+4001;102;%1' : ordre pas autorisé ('%2')
+4001;103;'%1' : trop-plein du tampon d'ordres (%2)
+4001;104;'%1' : suite d'ordres pas valable
+4001;105;Impossible de traiter actuellement la demande. Le service est encore occupé avec la demande précédentet.
+4001;106;Objet ('%1') impossible à autoriser. Objet utilisé par %2 autre objet.
+4001;110;'%1' : Integer Over(Under-)flow ('%2' : %3)
+4001;111;%1' : Valeur virgule flottante trop gande/petite ('%2' : %3)
+4001;119;%1' : paramètre invalide ('%2' : %3)
+4001;120;%1' : valeur invalide pour vitesse ('%2' : %3)
+4001;121;%1' : valeur invalide pour accélération ('%2' : %3)
+4001;122;%1' : valeur invalide pour décélération ('%2' : %3)
+4001;123;%1' : valeur invalide pour suraccélération ('%2' : %3)
+4001;124;%1' : valeur invalide pour position ('%2' : %3)
+4001;125;%1' : valeur invalide pour direction ('%2' : %3)
+4001;126;%1' : type pas valable ('%2' : %3)
+4001;127;%1' : temps pas valable ('%2' : %3 [us])
+4001;128;%1' : dénominateur invalide ('%2' : %3)
+4001;150;%1' : vitesse (%2) supérieure à valeur maxi (%3). Suite avec valeur maxi
+4001;151;%1' : Accélération (%2) supérieure à valeur maxi (%3). Suite avec valeur maxi
+4001;152;%1' : décélération (%2) supérieure à valeur maxi (%3). Suite avec valeur maxi
+4001;153;%1' : suraccélération (%2) supérieure à valeur maxi (%3). Suite avec valeur maxi
+4001;156;%1' : décélération (%2) inférieure à valeur mini (%3). Suite avec valeur maxi
+4001;200;%1' : Erreur axe
+4001;201;%1' : ordre ('%2') impossible à exécuter à cause de statut axe actuel ('%3')
+4001;202;%1' : ordre impossible à exécuter, entraînement pas autorisé
+4001;203;%1' : Servo à l'état erreur
+4001;204;%1  : Servo pas prêt à démarrer
+4001;205;%1  : codeur à l'état erreur
+4001;210;%1' : position axe hors limites logicielles
+4001;211;%1' : axe stoppe à cause des limites logicielles
+4001;220;%1' : durée de cycle (%2us) différente de la durée de cycle de l'axe maître ('%3' : %4us)
+4001;221;La déclaration de '%1' en tant qu'esclave de '%2' génére un cercle
+4001;301;%1' : DIGCAM (%2) ià l'état erreur
+4001;302;%1' : paramétrage actif
+4001;350;Nombre maxi der tableaux de cames atteint (%1)
+4001;351;Le tableau de cames '%1' ne contient aucune désignation de version
+4001;352;Le tableau de cames '%1' contient une désignation de version pas valable (%2)
+4001;353;Le tableau de cames '%1' ne contient aucune désignation de date.
+4001;354;Le tableau de cames '%1' contient une désignation de donnée pas valable (%2)
+4001;355;Le tableau de cames '%1' ne contient pas l'inscription 'camtable :'
+4001;356;Le tableau de cames '%1' ne contient pas l'inscription 'crc :'
+4001;357;Le tableau de cames '%1' ne contient aucune somme de contrôle CRC
+4001;358;Le tableau de cames '%1' contient une somme de contrôle erronée CRC (%2)
+4001;359;Le tableau de cames '%1' ne contient aucune valeur
+4001;360;Le tableau de cames '%1' contient une inscription invalide (%2)
+4001;361;Le tableau de cames '%1' n'est pas strictement monotone (inscription : %2)
+4001;900;%1' : n° de paramètre (%2) pas assisté
+4001;901;%1' : type de paramètre pas valable (%2)
+4001;902;%1' : paramètre (%2) seulement lisible
+4001;903;%1' : paramètre (%2) ne pouvant être qu'écrit
+4001;904;%1' : le paramètre (%2) ne doit pas être modifié pendant le mouvement. L'ancienne valeur reste.
+4001;905;%1' : interruption de l'écriture de paramètre
+4001;906;%1' : à l'état activé, le paramètre (%2) ne doit pas être modifié
+4001;909;%1' : valeur invalide pour paramètre (%2 : %3). Suite avec ancienne valeur.
+4001;910;%1' : valeur invalide pour vitesse maxi (%2). Suite avec ancienne valeur.
+4001;911;%1' : valeur invalide pour accélération maxi (%2). Suite avec ancienne valeur.
+4001;912;%1' : valeur invalide pour décélération maxi (%2). Suite avec ancienne valeur.
+4001;913;%1' : valeur invalide pour suraccélération (%2) maxi. Suite avec ancienne valeur.
+4001;914;%1' : l'accélération maxi (%2) aboutirait à un dépassement de la valeur AxisMemSize. Suite avec ancienne valeur.
+4001;915;%1' : la décélération maxi (%2) aboutirait à un dépassement de la valeur AxisMemSize. Suite avec ancienne valeur.
+4001;916;%1' : la suraccélération maxi (%2) aboutirait à un dépassement de la valeur AxisMemSize. Suite avec ancienne valeur.
+4001;1000;Numéro d'erreur pas valable
+4050;90;Impossible de démarrer le processus de simulation
+4050;91;Impossible d'établir la connexion RPC avec le process de simulation
+4050;92;Erreur de connextion RPC
+4050;93;Connexion RPC pas établie avec process de simulation
+4050;94;Le fichier de configuration n'existe pas
+4050;100;Robot %1 non trouvé
+4050;101;Impossible d'initialiser l'instance de simulation pour robot %1
+4050;102;Instance de simulation pour robot %1 pas initialisée
+4050;103;Module de simulation MCS pas initialisé
+4050;104;Système d'erreur pas initialisé
+4050;110;Position de départ ne peut pas être atteinte par le robot %1
+4050;111;Position de départ du robot %1 supérieure à la limite positive de la valeur limite de l'axe (axe %2)
+4050;112;Position de départ du robot %1 inférieure à la limite négative de la valeur limite de l'axe (axe %2)
+4050;113;Mode de position invalide (robot %1)
+4050;114;Impossible au robot %1 d'exécuter le mouvement %2
+4050;115;Le robot %1 se trouve en état erreur et ne peut pas exécuter le mouvement %2
+4050;116;Fichier d'attente de mouvement du robot %1 pleine. Impossible d'ajouter le mouvement %2.
+4050;117;Impossible de lire le message de mouvement pour robot %1
+4050;118;Impossible de lire le message du système
+4050;120;Numéro de cadre %2 invalide (robot %1)
+4050;121;Numéro d'outil %2 invalide (robot %1)
+4050;122;Numéro dynamique %2 invalide (robot %1)
+4050;123;Numéro overlap %2 invalide (robot %1)
+4050;130;Cadre %2 pas défini (robot %1)
+4050;131;Outil %2 pas défini (robot %1)
+4050;132;Jeu de données dynamique %2 pas défini (robot %1)
+4050;133;Jeu de données de chevauchement %2 pas défini (robot %1)
+4050;140;Type de rampe pas valable dans le jeu de données dynamique %2 (robot %1)
+4050;141;Type de chevauchement pas valable dans le jeu de données dynamique %2 (robot %1)
+4050;142;Type d'interpolation d'orientation pas valable en mouvement %2 (robot %1)
+4050;143;Type de point pas valable (robot %1)
+4050;144;Type de mouvement pas valable en mouvement %2 (robot %1)
+4700;1;%1(%2,%3) : erreur interne (symbole inconnu) '%4'
+4700;2;%1(%2,%3) : erreur interne (symbole terminal)
+4700;3;%1(%2,%3) : erreur interne (pas de symbole terminal)
+4700;4;%1(%2,%3) : erreur interne (dépassement de capacité négatif de pile)
+4700;5;%1(%2,%3) : erreur interne (trop-plein pile)
+4700;6;%1(%2,%3) : erreur scanner interne
+4700;10;%1(%2,%3) : sauté '%4'
+4700;11;%1(%2,%3) : symbole invalide '%4'
+4700;12;%1(%2,%3) : attendu '%4'
+4700;13;%1(%2,%3) : fin inattendue de fichier
+4700;20;%1 non trouvé
+4700;21;%1(%2,%3) : fichier inclus '%4' non trouvé
+4700;22;%1(%2,%3) : trop-plein profondeur d'inclusion (maxi 10)
+4700;23;%1(%2,%3) : inscription '%4' existe, nouvelle valeur ignorée
+4700;24;%1(%2,%3) : inscription '%4' existe, écraser
+4700;25;%1(%2,%3) : base valeur integer pas valable (2#.., 16#..)
+4700;26;%1(%2,%3) : valeur integer pas valable
+4700;27;%1(%2,%3) : valeur réelle pas valable
+4700;28;%1(%2,%3) : nom '%4' trop long (31 caractères maxi)
+4700;29;%1(%2,%3) : inscription '%4' existe déjà dans fichier '%5'
+4700;30;%1(%2,%3) : inscription catalogue '%4' n'existe pas
+4700;31;%1(%2,%3) : chemin '%4' trop long
+4700;32;%1(%2,%3) : chemin catalogue incomplet '%4'
+5500;0;Actuellement pas d'erreur
+5500;1;Composante invalide
+5500;10;%1  : Impossible de trouver ou d'ouvrir le fichier indiqué '%2' (%3)
+5500;11;%1  : lors de l'écriture sur le fichier indiqué '%2' une erreur s'est produite
+5500;12;%1  : lors de la lecture du fichier indiqué '%2' une erreur s'est produite
+6024;1;%1  : liaison USB interrompue avec panneau OP750. Relancement nécessaire.
+6042;0;%1(%2) : Temps : %3.%4 :%5.%6 (%7) pas d'erreur
+6042;1;%1(%2) : Temps : %3.%4 :%5.%6 (%7) court-circuit de sortie
+6042;2;%1(%2) : Temps : %3.%4 :%5.%6 (%7) surveillance UCE : court-circuit sortie, déf. commande, déf. transistor
+6042;3;%1(%2) : Temps : %3.%4 :%5.%6 (%7) court-circuit à la terre d'une ou plusieurs phases de sortie
+6042;4;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Pignon de frein pas opérationnel dans AM
+6042;5;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Connexion interrompue entre modules d'alimentation et d'essieu par le système info matériel
+6042;6;%1(%2) : Temps : %3.%4 :%5.%6 (%7) absence phase réseau
+6042;7;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur de VM via système info matériel à cause de tension trop haute du circuit intermédiaire
+6042;8;%1(%2) : Temps : %3.%4 :%5.%6 (%7) divergence inadmissible entre vitesse consigne et vitesse réelle
+6042;9;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;10;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;11;%1(%2) : Temps : %3.%4 :%5.%6 (%7) température de AM a atteint/dépassé le seuil de coupure
+6042;12;%1(%2) : Temps : %3.%4 :%5.%6 (%7) pas de frein raccordé - sortie surchargée ou fréquence trop haute du cycle
+6042;13;%1(%2) : Temps : %3.%4 :%5.%6 (%7) tension d'alimentation du frein hors tolérance de +10/- 0 %
+6042;14;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur résolveur/évaluation résolveur
+6042;15;%1(%2) : Temps : %3.%4 :%5.%6 (%7) 01 : comparaison entre position raw et check-counter défaillante sur transmetteur Hiperface 02 : transmetteur pas trouvé dans liste de codes 32 : transmetteur envoie une erreur interne
+6042;16;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur lors de la mise en service
+6042;17;%1(%2) : Temps : %3.%4 :%5.%6 (%7) erreur interne ordinateur CPU
+6042;18;%1(%2) : Temps : %3.%4 :%5.%6 (%7) état pas valable dans le logiciel
+6042;19;%1(%2) : Temps : %3.%4 :%5.%6 (%7) données du processus pas plausibles
+6042;20;%1(%2) : Temps : %3.%4 :%5.%6 (%7) limite prescrite dépassée pour report d'erreur en mode écriture de courbes
+6042;21;%1(%2) : Temps : %3.%4 :%5.%6 (%7) limite prescrite dépassée pour report d'erreur en mode double entraînement Engel
+6042;22;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;23;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;24;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;25;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur d'accès à la mémoire de paramètres non volatile
+6042;26;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur par la borne d'entrée binaire
+6042;27;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Impossible de détecter les deux fins de course sur les bornes d'entrée programmées ou sur le mot pilote
+6042;28;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur timeout bus de terrain
+6042;29;%1(%2) : Temps : %3.%4 :%5.%6 (%7) fin de course matériel approché lors du positionnement.
+6042;30;%1(%2) : Temps : %3.%4 :%5.%6 (%7) entraînement pas immobilisé à l'intérieur du temps de décélération prescrit
+6042;31;%1(%2) : Temps : %3.%4 :%5.%6 (%7) déclenchement du capteur de surchauffe (TF/TH, KTY) de l'entraînement pour le disjoncteur moteur
+6042;32;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;33;%1(%2) : Temps : %3.%4 :%5.%6 (%7) module d'alimentation (VM) pas encore ou plus prêt
+6042;34;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;35;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;36;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Dépassement d'un écart maxi autorisé lors de la marche synchro
+6042;37;%1(%2) : Temps : %3.%4 :%5.%6 (%7) dépassement de temps d'un programmateur chien de garde interne
+6042;38;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur dans une fonction technologique
+6042;39;%1(%2) : Temps : %3.%4 :%5.%6 (%7) erreur survenue pendant la marche de référence
+6042;40;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Synchronisation avec une carte d'option impossible à exécuter correctement
+6042;41;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur 'Option'.
+6042;42;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Dépassement d'un écart maxi autorisé prescrit lors du positionnement
+6042;43;%1(%2) : Temps : %3.%4 :%5.%6 (%7) interruption survenue pendant la commande par une interface sérielle
+6042;44;%1(%2) : Temps : %3.%4 :%5.%6 (%7) variateur surchargé
+6042;45;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur lors de l'initialisation du système MDN (voir Sub-Error !)
+6042;46;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;47;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Communication interrompue par SBUS #1
+6042;48;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;49;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;50;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur tension alimentation 24V.
+6042;51;%1(%2) : Temps : %3.%4 :%5.%6 (%7) fin de course logiciel approché pendant le positionnement
+6042;52;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;53;%1(%2) : Temps : %3.%4 :%5.%6 (%7) une erreur CRC32 s'est produite lors du contrôle du code de programme dans la mémoire code ou dans le résolveur DSP
+6042;54;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;55;%1(%2) : Temps : %3.%4 :%5.%6 (%7) erreur de configuration FPGA pouvant également survenir en cas d'incohérences du Flash EEPROM section FPGA Data(Boot-Loader)
+6042;56;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur externe RAM S ou Burst
+6042;57;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur codeur TTL
+6042;58;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur dans évaluation codeur Sin-Cos
+6042;59;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur dans évaluation codeur Hiperface
+6042;60;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur lors du Flash de DSP.
+6042;61;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;62;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;63;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;64;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;65;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;66;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur configuration données process.
+6042;67;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Un Pdo d'entrée, dont le dépassement de temps n'est pas sur 0, qui n'est pas activé hors ligne et qui a déjà été reçu une fois, a dépassé son timeout
+6042;68;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Erreur de synchronisation externe, voir SubErr
+6042;69;%1(%2) : Temps : %3.%4 :%5.%6 (%7) la température a dépassé le seuil de préavertissement réglable
+6042;70;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur d'un appareil externe (0)
+6042;71;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur d'un appareil externe (1)
+6042;72;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur d'un appareil externe (2)
+6042;73;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur d'un appareil externe (3)
+6042;74;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur d'un appareil externe (4)
+6042;75;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur d'un appareil externe (5)
+6042;76;%1(%2) : Temps : %3.%4 :%5.%6 (%7) MoviPLC - Erreur.
+6042;77;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;78;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;79;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;80;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;81;%1(%2) : Temps : %3.%4 :%5.%6 (%7) le courant du circuit intermédiaire dans VM a dépassé la limite maxi autorisée de 260 %
+6042;82;%1(%2) : Temps : %3.%4 :%5.%6 (%7) la sollicitation de VM a atteint le seuil de préavertissement
+6042;83;%1(%2) : Temps : %3.%4 :%5.%6 (%7) la sollicitation de VM a atteint ou dépassé le seuil de coupure
+6042;84;%1(%2) : Temps : %3.%4 :%5.%6 (%7) message d'erreur dû au VM par le système info matériel. Frein pas opérationnel dans VM
+6042;85;%1(%2) : Temps : %3.%4 :%5.%6 (%7) température de VM proche du seuil de coupure
+6042;86;%1(%2) : Temps : %3.%4 :%5.%6 (%7) température de VM a atteint ou dépassé le seuil de coupure
+6042;87;%1(%2) : Temps : %3.%4 :%5.%6 (%7) la sollicitation de la résistance de freinage montée dans VM a atteint le pré-seuil d'avertissement
+6042;88;%1(%2) : Temps : %3.%4 :%5.%6 (%7) la sollicitation de la résistance de freinage montée dans VM a atteint ou dépassé le seuil de coupure
+6042;89;"%1(%2) : Temps : %3.%4 :%5.%6 (%7) au moins une des tensions d'alimentation manque dans VM ; pas de message d'erreur pour l'axe !!"
+6042;90;%1(%2) : Temps : %3.%4 :%5.%6 (%7) (voir code erreur VM)
+6042;91;"%1(%2) : Temps : %3.%4 :%5.%6 (%7) alimentation électronique 24 V inférieure à 17V ; pas de message d'erreur pour l'axe !!"
+6042;92;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;93;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;94;%1(%2) : Temps : %3.%4 :%5.%6 (%7) erreur survenue dans le bloc des données de configuration de l'appareil lors du contrôle dans la phase de remise à zéro
+6042;95;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;96;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;97;%1(%2) : Temps : %3.%4 :%5.%6 (%7) Un jeu de paramètres n'a pas pu être copié sans erreur
+6042;98;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;99;%1(%2) : Temps : %3.%4 :%5.%6 (%7) libre
+6042;200;%1  : durée de cycle erronée (%2ms)
+6042;201;%1  : transfert de paramètre impossible (pas de slot param. disponible), %2
+6042;203;%1  : Erreur lors de la lecture des données Pdo : %2 Pdo n° %3 Erreur n°
+6042;204;%1  : Erreur lors de l'écriture des données Pdo (Pdon°%2)
+6042;205;%1  : pas de handle valable pour ce Pdo (Pdon°%2)
+6042;209;%1  : Nombre d'axes configuré dépasse la somme maxi des axes possible.
+6042;210;%1  : paramètre '%2' manque dans fichier config.
+6042;212;%1  : Mvl Request (%2) signale une erreur : %3
+6042;214;%1  : Mvl Response (%2) signale une erreur :%3
+6042;216;%1  : erreur de configuration ActValPdo : %2 Pdo n° %3 Erreur n°
+6042;217;%1  : Trop-plein mémoire VarData (mémoire cible de l'utilisateur trop petite)
+6042;218;%1  : Mvl FwUpdate-Response signale une erreur :%2,%3
+6042;219;%1  : Phase de relancement de l'entraînement tourne en timeout : %2
+6042;220;%1  : Mvl FwUpdate-Request (%2) signale une erreur : %3
+6042;221;%1  : Mvl VarDataLock signale une erreur : %2
+6042;222;%1  : Mvl VarDataUnLock signale une erreur : %2
+6042;223;%1  : accès inconnu à VarData
+6042;224;%1  : Mvl FwUpdate-état signale une erreur :%2
+6042;225;%1  : Indicateur invalider dans tableau erreur SEW (%2)
+6042;250;%1  : inscription config. (pos.consigne ou posUnitsToIncrements) (%2) aboutit à un trop-plein
+6042;252;%1  : (MovAxi) info incorrecte ou absence pour mode positionnement dans fichier config., utilise transmetteur incrémentiel/relatif
+6042;253;%1  : (MovAxi) mode initial manquant ou non valable dans fichier config.
+6042;259;AXIS #%1 état serveur process invalide
+6042;261;%1  : inscription config. (Velocity ou velUnitsToSpeed) (%2) aboutit à un trop-plein
+6042;263;%1  : valeur invalide pour SetValMode :(%2)
+6042;264;%1  : Mailbox Overflow (%2)
+6042;265;%1  : état process invalide dans traitement VarData
+6042;267;Composante invalide
+6042;300;%1  : (MOVIDRIVE) adresse noeud invalide ou manquante fichier config.
+6042;302;%1  : (MOVIDRIVE) adresse bus S invalide (%2) dans fichier config.
+6042;303;%1  : (MOVIDRIVE) version pos I invalide (%2)
+6042;304;%1  : (MOVIDRIVE) durée de cycle erronée sur bus CAN (%2 ms)
+6042;305;%1  : (MOVIDRIVE) adresse logique (%2) déjà utilisée
+6042;306;%1  : (MOVIDRIVE) transfert de paramètre impossible (pas de slot param. disponible)
+6042;307;%1  : accès inconnu à VarData
+6042;308;%1  : Mvl VarDataLock, Erreur : %2
+6042;309;%1  : Mvl VarDataUnLock, Erreur : %2
+6042;350;%1  : (MOVIDRIVE) facteur de conversion de position invalable ou manquant dans fichier config., verwende %2
+6042;352;%1  : (MOVIDRIVE) mode initial manquant ou invalide dans fichier config.
+6042;353;%1  : (MOVIDRIVE) SINT32 Over(Under)-Flow (%2 ms)
+6042;354;%1  : (MOVIDRIVE) télégramme cyclique perdu (%2)
+6042;355;%1  : (MOVIDRIVE) panne du télégramme cyclique (%2)
+6042;356;%1  : (MOVIDRIVE) bit Ready repris (%2)
+6042;357;%1  : (MOVIDRIVE) fin de course positif atteint (%2)
+6042;358;%1  : (MOVIDRIVE) fin de course négatif atteint (%2)
+6042;359;%1  : (MOVIDRIVE) Time-Out lors de remise à zéro, ne répond à aucun message CAN (%2)
+6042;360;%1  : (MOVIDRIVE) Time-Out lors de Boot, pas opérationnel (%2)
+6042;362;%1  : (MOVIDRIVE) Bit niveau final autorisé a été repris (%2)
+6042;363;%1  : (MOVIDRIVE) SCom-ObjetId invalide (%2)
+6042;364;%1  : (MOVIDRIVE) SCom-symCode invalide (%2)
+6042;365;%1  : (MOVIDRIVE) SCom-Type invalide (%2)
+6042;366;%1  : (MOVIDRIVE) taille d'objet SCom invalide (%2)
+6042;368;%1  : erreur transfert individuel jeu de paramètres%2 (inx %3, class %4 addCode %5)
+6042;369;%1  : état jeu de paramètres écriture : nr=%2, wr=%3, err-high=%4, err-low=%5
+6042;370;%1  : état jeu de paramètres lecture : nr=%2, rd=%3, err-high=%4, err-low=%5
+6042;371;%1  : (MOVIDRIVE) télégramme erreur en Silentmode(errCode :%2)
+6042;500;%1  : Appel fonction UOS '%2'('%3') a échoué
+6042;501;%1  : état jeu paramètres écriture : r=%2,wr=%3,err-high=%4,err-low=%5
+6042;502;%1 :état jeu paramètres lecture : nr=%2, rd=%3, err-high=%4, err-low=%5
+6057;109;Composante désactivée
+6058;100;%1  : Transaction pas exécutée (%2)
+6058;101;%1  : échec d'effacement de projection avec message '%2'
+6058;102;%1  : ordre %2 avec erreur %3 a échoué
+6058;103;%1  : demande mémoire dans '%2' pas remplie
+6058;104;%1  : fichier '%2' non trouvé
+6058;105;%1  : fichier '%2' erroné
+6058;106;%1  : Erreur lors de la lecture du fichier '%2'
+6058;107;%1  : erreur appareil à la transmission du fichier '%2'
+6059;101;%1  : adresse station invalide. Configuré : %2, valable : [%3..%4]
+6059;102;%1  : longueur des données d'entrée invalide. Configuré : %2 octets, valable : [%3..%4] octets
+6059;103;%1  : longueur des données de sortie invalide. Configuré : %2 octets, valable : [%3..%4] octets
+6059;104;%1  : sonne de longueur de données d'entrée et de sortie invalide. Configuré : %2 octets, valable :[%3..%4] octets
+6059;105;%1  : temps de surveillance invalide. Configuré : %2 ms, valable : [%3..%4] ms
+6059;106;%1  : longueur tampon pour DP V1 Class1 transmission invalide. Configuré : %2 octets, valable : 0,[4..244] octets
+6059;107;%1  : longueur tampon pour DP V1 Class2 transmission invalide. Configuré : %2 octets, valable : 0,[4..244] octets
+6059;108;%1  : longueur des données de diagnostic externe invalide. Configuré : %2 octets, valable : [0..32] octets
+6059;109;%1  : ordre %2 interrompu avec code erreur %3
+6059;110;%1  : impossible de placer données diagnostic externe
+6059;111;%1  : impossible de reprendre les données diagnostic externe
+6059;112;%1  : erreur appareil %2-%3
+6059;113;Composante invalide
+6059;114;%1  : Inititalisation a échoué
+6062;1;inscription impossible à mémoriser dans protocole
+6062;2;Échec d'écriture sur Message-Queue pour protocole avec type %1
+6062;3;Protocole-Queue pour protocole avec type %1 plein
+6062;4;Protocole avec type %1 impossible à enregistrer dans le gestionnaire de protocoles
+6062;5;Fichier impossible à générer %1
+6062;6;Impossible d'écrire fichier %1 par le système de rapport (Handle : %2, taille d'élément : %3, nombre d'éléments : %4) 
+6062;7;Pas de mémoire disponible dans %1
+6062;8;Erreur lors de la lecture de fichier %1, Handle %2, Elementsize %3, Elementcount %4
+6062;9;Fichier impossible à écrire %1
+6062;10;Pas d'accès au fichier %1, Handle %2, pos fichier %3
+6062;11;Inscription dans protocole avec type %1 impossible à charger
+6062;12;Écriture impossible sur tampon message %1 à cause de trop-plein
+6062;13;Index pas valable lors de l'accès au fichier protocole
+6062;14;Erreur de syntaxe dans fichier .csv %1 sur position %2
+6062;15;Impossible d'ouvrir un Snaphshot
+6062;16;Les %1 prochains messages sont valide (ensuite, %2 des messages perdus par suite de trop-plein du tampon)
+6065;3600;%1  : Fonction pilote (%2) fournit un résultat négatif
+6065;3601;%1  : longueur pas valable des données d'entrée. Configuré : %3 octets - disponibles par le maître : %2 octets
+6065;3602;%1  : le maître met plus de données d'entrée à disposition que configurées. Configuré : %3 octets - disponibles par le maître : %2 octets
+6065;3603;%1  : longueur des données de sortie invalide. Configuré : %3 octets - attendu par le maître : %2 octets
+6065;3604;%1  : plus de données sortie configurées qu'attendues par le maître. Configuré : %3 octets - attendu par le maître : %2 octets
+6065;3605;%1  : Erreur sur carte bus
+6065;3606;%1  : Watchdog d'esclave PROFIBUS écoulé (détecté sur carte bus)
+6065;3607;%1  : Watchdog d'esclave PROFIBUS écoulé (détecté sur CPU)
+6065;3610;%1  : Update a échoué
+6065;3620;%1  : paramètre modifié
+6065;3621;%1  : configuration modifiée
+6065;3624;%1  : événement inconnu reçu (%2)
+6070;1;%1/%2/%3, %4 : pas de place en mémoire
+6070;10;%1, CAN-Id %2 : envoi a échoué
+6070;11;%1, CAN-Id %2 : réception a échoué
+6070;12;%1, trop-plein Fifo réception
+6070;13;%1, CAN-Id %2 : trop-plein de données
+6070;14;%1  : trop-plein Queue réception
+6071;1;Erreur à l'enregistrement de la fonction service '%3' [%1, %2]
+6071;2;Erreur en enlevant l'annexe d'une fonction service '%3' [%1, %2]
+6071;3;Reset déclenché après courte décélération
+6071;4;Répertoire à autoriser (%1) inexistant
+6071;5;Erreur dans nom chemin ou fichier (%1)
+6099;1;Appel Uos %1 a échoué : %2
+6099;2;Initialisation de %1 a échoué
+6099;3;Inscription configuration SMemAd %1 manque
+6099;4;Impossible de générer fichier SMemAd-backup %1.
+6099;5;Impossible de générer fichier SMemAd-backup %1.
+6099;10;Fichier SMemAd-backup %1 détruit (dode %2). démarre comme redémarrage.
+6099;20;Composante prête
+6116;1;Appareil %1 pas ouvert (%2)
+6116;2;Appareil %1 déjà ouvert
+6116;3;%1 (Valeur %2) pas soutenue
+6116;4;%1  : impossible de placer mode fast access
+6116;5;%1  : Open a échoué
+6135;1;%1  : affirmation Failed : %2
+6135;2;%1  : composante invalide.
+6135;3;%1  : composante déjà initialisée.
+6135;4;%1/%2 : Plus de place en mémoire disponible (%3).
+6135;5;%1/%2 : Erreur d'exécution de la méthode Uos '%3(%4)'
+6135;100;%1  : erreur d'exécution de la fonction pilote Low-Level '%2(%3)'
+6135;102;%1.AI :%2 : rupture capteur
+6135;103;%1.AI :%2 : rupture capteur supprimée
+6135;104;%1  : erreur EEPROM (carte pas calibrée)
+6135;105;%1  : autorisatin interrupt a échoué
+6135;106;%1  : référence : rupture capteur
+6135;107;%1  : référence : rupture capteur supprimée
+6135;110;%1.TI :%2 : rupture capteur
+6135;111;%1.TI :%2 : rupture capteur supprimée
+6135;112;%1  : Watchdog déclenché
+6135;113;%1  : violation durée de cycle Systick
+6135;114;%1  : erreur de système
+6135;115;%1  : Erreur chien de garde sur KBus
+6135;116;%1  : Chien de garde KBus n'a pas été activé
+6159;100;%1  : Fonction pilote (%2) fournit un résultat négatif
+6159;102;%1  : Ecoulement du Watchdog de l'appareil maître PROFIBUS
+6159;103;%1  : esclave avec adresse noeud (%2) configuré plusieurs fois (%3)
+6159;104;%1  : module avec Id %2 configuré plusieurs fois
+6159;105;%1  : module avec Id %2 manque dans projection maître
+6159;106;%1  : numéro de slot pas valable : %2 (valable : 0 .. 127)
+6159;107;%1  : longueur de données pas valable%2 : configuré %3 octets, inscrits dans données de projection %4 octets
+6159;108;%1  : esclave non trouvé dans données de projection
+6159;110;%1  : Update a échoué
+6159;210;%1  : %3 disposition invalide du module dans le slot %2
+6159;212;%1  : type de données de %2 différent dans configuration (type %3) et projection (type %4)
+6159;220;%1  : données diagnostic esclave : adresse esclave : %2
+6159;221;%1  : esclave avec adresse %2 %3
+6159;222;%1  : module %3 avec longueur données pas valable%2 : configuré %4 octets, inscrits dans données de projection %5 octets
+6159;223;%1  : octet code #%2 pas adapté à la configuration du module %3.
+6159;224;%1  : les derniers octets code %2 ne sont pas affectés au module.
+6159;225;%1  : pas assez d'octets code présents dans la projection
+6159;226;%1  : absence des données de configuration du module %2.
+6159;227;%1  : esclave avec adresse %2 signale alarme : (type d'alarme = %3, numéro de séquence = %4)
+6182;1;%1  : affirmation a échoué : %2
+6182;2;%1  : composante invalide.
+6182;3;%1  : composante déjà initialisée.
+6182;4;%1/%2 : plus de place présente en mémoire (%3).
+6182;5;%1/%2 : Appel fonction UOS '%3(%4)' a échoué.
+6182;6;%1  : client '%2' effacé en quittant la gestion clients.
+6183;1;%1  : affirmation a échoué : %2
+6183;2;%1  : composante invalide.
+6183;3;%1  : composante déjà initialisée.
+6183;4;%1/%2 : plus de place présente en mémoire (%3).
+6183;5;%1/%2 : Appel fonction UOS '%3(%4)' a échoué.
+6183;6;%1  : impossible d'enregistrer nouvelle interface de transport (permis %2).
+6183;7;%1  : impossible d'enregistrer MsgId %2 pour S%3 C%4.
+6195;1;Appareil %1 pas encore ouvert (%2)
+6195;2;Appareil %1 déjà ouvert
+6195;3;paramètre %1 (value %2) pas soutenue
+6195;4;Erreur de communication %1 pendant %2
+6200;1;Serveur système pas relié
+6200;2;Motherboardmonitor pas relié ou pas en marche
+6200;3;%1  : Valeur de nouveau dans la plage limite
+6200;4;%1  : panne de ventilateur (valeur actuelle : %2, seuil de coupure : %3 ) 
+6200;5;%1  : panne de ventilateur (valeur actuelle : %2, seuil avertissement : %3 )
+6200;6;%1  : Erreur éliminée sur ventilateur
+6200;7;%1  : seuil de coupure pour température atteint (valeur actuelle : %2, seuil de coupure : %3 ) 
+6200;8;%1  : seuil avertissement pour température atteint (valeur actuelle : %2, seuil avertissement : %3 ) 
+6200;9;%1  : état surchauffe éliminé
+6200;10;%1  : seuil de coupure pour tension atteint (valeur actuelle : %2, seuil de coupure : %3 ) 
+6200;11;%1  : seuil avertissement pour tension atteint (valeur actuelle : %2, seuil avertissement : %3 ) 
+6200;12;%1  : état erreur éliminé pour tension
+6200;13;%1  : avertissement général pour surveillance matériel (valeur actuelle %2%3) 
+6200;14;%1  : erreur générale pour surveillance matériel (valeur actuelle %2%3) 
+6200;15;%1  : état pas valable pour surveillance matériel (valeur actuelle %2) 
+6200;16;%1  : état pas valable pour surveillance matériel (valeur actuelle %2) 
+6200;17;Sys7Srv : PowerManagement - durée pour Shutdownprozess plus longue que maxi critical time
+6200;18;Sys7Srv : PowerManagement - durée maxi jusqu'à Shutdown plus longue que durée de vie accus
+6200;19;Sys7Srv : PowerManagement - panne de l'alimentation en tension - système marche en mode batterie
+6200;20;Sys7Srv : PowerManagement - pas d'accu branché
+6200;21;Sys7Srv : PowerManagement - surchauffe dans bloc alimentation
+6200;22;Sys7Srv : PowerManagement - panne de ventilateur avec bloc alimentation
+6200;23;Sys7Srv : PowerManagement - accu alimentation de sauvegarde secteur devrait être changé
+6200;24;Sys7Srv : PowerManagement - connexion interrompue avec bloc alimentation
+6200;25;Sys7Srv : PowerManagement - durée de coupure réglée trop courte pour traiter fichiers Command
+6200;26;Sys7Srv : PowerManagement - alimentation en tension de nouveau active
+6200;27;Sys7Srv : relancement système en cours
+6200;28;Sys7Srv : PC-reboot activé
+6200;29;Sys7Srv : Serveur système relié
+6200;30;Sys7Srv : Motherboard-Monitor relié
+6200;31;Sys7Srv : PowerManagement - Connexion avec bloc alimentation ou alimentation de sauvegarde secteur établie
+6200;32;Surveillance matériel pour '%1' : Consigne seuil de coupure mini > seuil d'avertissement mini
+6200;33;Surveillance matériel pour '%1' : consigne seuil de coupure mini manque 
+6200;34;Surveillance matériel pour '%1' : consigne seuil de coupure maxi < seuil d'avertissement maxi
+6200;35;Surveillance matériel pour '%1' : consigne seuil de coupure maxi manque 
+6200;36;Surveillance matériel pour '%1' : consigne limite de temps manque
+6200;37;Surveillance matériel pour '%1' : consigne seuil avertissement mini manque 
+6200;38;Surveillance matériel pour '%1' : consignhe seuil avertissement maxi manque 
+6200;39;Sys7Srv : accu raccordé au bloc d'alimentation
+6200;40;Sys7Srv : accu remplacé et refonctionne
+6200;41;Sys7Srv : ventilateur refonctionne avec bloc alimentation
+6200;42;Sys7Srv : température du bloc d'alimentation de nouveau normale
+6220;1;Pas possible d'installer serveur sur port TCP %1
+6242;1;IRT User0 (pièce %1) : StringI : %2, ParamI(h) : %3, ParamI(l) : %4, ParamII(h) : %5, ParamII(l) : %6 impossible à affecter
+6242;2;IRT User0 (pièce %1) : StringII : %2, ParamIII(h) : %3, ParamIII(l) : %4, ParamIV(h) : %5, ParamIV(l) : %6 impossible à affecter
+6242;3;IRT User0 (pièce %1) : Format : %2
+6242;4;Problème général dans IecSAlgo : %1 %2 %3
+6242;5;KMEM : impossible de générer le nombre d'octets (%1 octets)
+6242;6;KMEM : Avertissement  : IEC.Memory pas configuré ==> pas de mémoire réservée pour éléments dynamiques. Heap-Memory utilisé !
+6245;1;Composante bloquée
+6245;2;Transmission état a échoué
+6245;3;Fonction %1 pas présente
+6245;4;État indéfini du système %1
+6245;5;Erreur lors de la transmission de l'état %1
+6245;6;Impossible d'effectuer transmission état %1
+6245;7;Application démarrée
+6245;8;Application stoppée
+6245;9;Impossible d'exécuter transmission état %1, code erreur %2
+6252;1;%1  : capteur de référence pas valable (capteur externe actuel = %2)
+6252;2;%1  : capteur de référence pas valable éliminé (capteur externe actuel = %2)
+6252;3;%1  : référence : rupture capteur
+6252;4;%1  : référence : rupture capteur supprimée
+6252;5;%1  : erreur de système
+6252;6;%1  : violation de la durée de cycle
+6252;7;%1  : trop de modules configurés (maxi %2)
+6252;8;%1  : erreur de système sur modules analogiques
+6252;9;%1  : configuration erronée des entrées analogiques
+6252;10;%1  : configuration erronée des sorties analogiques
+6252;11;%1  : KBus Power Down actif
+6252;12;%1  : KBus Down actif
+6252;13;%1  : trop de modules sur le bus K
+6252;14;%1  : KBus maître Abort
+6252;15;%1  : limites PDO dépassées
+6252;16;%1  : module retiré pendant l'exploitation
+6252;17;%1  : câble SERR actif
+6252;18;%1  : module inconnu sur bus K
+6252;19;%1  : utilisation impossible du capteur de température type L
+6252;20;%1  : bus K conflit adresse appareil, type module = %2, adresse module = %3
+6252;21;%1  : Erreur chien de garde (watchdog)
+6252;22;%1  : Erreur KBUS
+6280;1;%1  : rxpdo %2 pas de données cycliques reçues
+6280;2;%1  : trop d'interrupts configurés, ignrorés : '%2'
+6280;3;%1  : trop de différences %2 configurées
+6280;4;%1  : nombre maxi de %2pdo's (%3) dépassé
+6280;5;%1  : %2. Error Code : 0x%3
+6280;6;%1  : Update de %2pdo trop importante (%3, maxi %4)
+6281;1;%1  : trop d'interfaces de communication (%2) demandées
+6281;2;%1  : échec de l'initialisation de l'intervace de communication %2  (taille des données d'entrée %3, taille des données de sortie %4)
+6281;3;%1  : interface de communication %2 déjà utilisée (%3)
+6281;4;%1  : longueur des données d'entrée (%2) différentes de la configuration (%3)
+6281;5;%1  : longueur des données de sortie (%2) différentes de la configuration (%3)
+6286;1;%1  : affirmation a échoué : %2
+6286;2;%1  : composante invalide.
+6286;3;%1  : composante déjà initialisée.
+6286;4;%1/%2 : plus de place présente en mémoire (%3).
+6286;5;%1/%2 : Appel fonction UOS '%3(%4)' a échoué.
+6294;1;%1  : composante invalide.
+6294;2;%1  : composante déjà initialisée.
+6338;1;Erreur d'accès écriture au fichier %2 (handle fichier : %1) - pas de mémoire libre sur le lecteur
+6338;2;Double adresse IP détectée : IP : %1, nom : %2, macID : %3
+6338;3;paramètre de configuration de réseau pas valable : %1
+6338;4;Mémoire pour lecteur %1 (taille : %2 Mo) pas disponible
+6338;5;Erreur lors de l'installation de Ramdisk %1 (taille : %2 Mo)
+6338;6;SMemAdInstanz impossible à générer (code erreur : %1)
+6338;7;Erreur lors de la génération de l'objet FastRetain
+6338;8;Erreur lors de la génération de la mémoire FastRetain - code erreur : %1  %2
+6338;9;Erreur lors de la lecture du fichier Cfg %1 
+6338;10;Inscription obligatoire dans catalogue %1 pas configurée 
+6338;11;Système lancé avec structure de dépose fichier standardisée
+6338;12;Système lancé avec structure de dépose fichier non standardisée
+6338;13;Pas toutes les inscriptions obligatoires configurées dans le catalogue - vérifier general.cfg
+6338;14;Initialisation du module '%1' a échoué
+6338;15;Fichier SMemAd-Backup %1 endommagé (code erreur : %2) - démarrage à froid exécuté
+6338;16;Erreur lors de la génération du fichier SMemAd-Backup %1
+6338;17;Erreur lors de l'ouverture/écriture du fichier SMemAd-Backup %1
+6338;18;Version de logiciel résident contenue dans fichier Cfg
+6338;19;Erreur lors de la lecture de general.cfg
+6338;20;Erreur lors de l'ouverture de l'interface sérielle '%1' pour sorties enregistreur
+6338;21;system.cfg ou general.cfg doit être présent
+6338;22;Le système démarre en mode Debug (mode 0x%1)
+6338;23;Erreur lors de la géneration de la classe de message du système
+6338;100;Heure du système modifitée (valeur avant modification [sec] :%1 [usec] :%2 valeur après modification [sec] :%3 [usec] :%4)
+6338;102;Arrêt système ([sec] : %1, [usec] : %2)
+6338;103;Démarrage système (version logiciel résident : %1 moment de démarrage [sec] : %2, [usec] : %3)
+6338;104;KNet-Busreset (Watchdog : %1 code fonction : %2 Externe : %3 Busbreak : %4 Busbreak1 : %5)
+6338;105;CompactFlash ajouté (CPU-ID : %1 appareil-Name : %2 Fabricant : %3 Description du modèle : %4 Serial : %5)
+6338;106;CompactFlash retiré (CPU-ID : %1 appareil-Name : %2 Fabricant : %3 Description du modèle : %4 Serial : %5)
+6338;107;CompactFlash détecté (CPU-ID : %1 appareil-Name : %2 Fabricant : %3 Description du modèle : %4 Serial : %5)
+6338;108;Valeur limite température CPU dépassée (%1 °C)
+6338;109;Fichier de configuration '%1' lu 
+6338;110;Tension batterie CMOS faible - changer batterie
+6338;111;Pas de tension batterie CMOS - remplacer la batterie
+6338;112;Ventilateur CPU défaillant - remplacer ventilateur
+6338;113;Vitesse ventilateur CPU trop faible - remplacer le ventilateur
+6338;114;Connexion au lecteur %1 a réussi
+6338;115;Échec de la connexion à l'imprimante %2 (raison : %1).
+6338;116;Connexion au lecteur %1a échoué. État  : %2 (Smb : %3, %4)
+6338;117;Connexion zum lecteur %1 coupée
+6338;118;SmbServer pas encore prêt à exécuter l'ordre Share
+6338;119;Lecteur/répertoire %1 autorisé en tant que %2, userlevel=%3, ret=%4
+6338;120;Ramdisk : %1 - %2 (%3)
+6338;121;Démarrage à chaud a échoué (%1)
+6338;122;CPU : %1 - exception système : %2
+6338;123;CPU : %1 - affirmation système dans ligne %2 module %3
+6338;124;L'inscription 'rootPath' ne doit pas être configurée : chemin par défaut %1 utilisé
+6338;125;Inscription 'système.applPath' configurée est ignorée : chemin par défaut %1 utilisé
+6338;126;Interdiction d'exploiter deux composants l'un après l'autre sans alimentation électrique
+6338;127;Appareil final Usb consomme trop de courant
+6338;128;Trop de composants Usb raccordés
+6338;129;Mémoire SRamdAd initialisée par <%1>
+6338;130;Licence matériel non trouvée
+6338;131;Schéma licence matériel pas soutenu.
+6338;132;Update de la licente matériel a échoué.
+6338;133;Impossible de lancer le service Portmap.
+6338;134;FPGA  du système trop obsolète
+6338;135;La température de la CPU a dépassé le seuil de coupure.  (%1 °C)
+6338;136;Impossible de modifié le layout du clavier.
+6338;137;Température CPU de nouveau dans la plage normale
+6338;138;La température de la CPU n'a de nouveau pas atteint le seuil de coupure
+6338;139;Le ventilateur refonctionne normalement
+6338;140;Pas d'accès à applPath : %1 possible
+6338;141;Échec de chargement du fichier Kvb
+6338;142;CPU : %1 - affirmation système dans ligne %2 module %3
+6338;143;CPU : %1 - exception système : %2
+6338;144;Une exception s'est produite dans le dernier passage.
+6338;145;Chemin application pas disponible : %1
+6632;1;Autre application déjà reliée avec Board numéro %1.
+6632;2;HlDgSrv: Échec de l'intégration au port serveur TCP  %1 (errorCode = %2)
+6653;1;%1  : Impossible d'ouvrir fichier Sercos3-FPGA '%2'
+6653;2;%1  : Échec actualisation de Sercos3-FPGA (code erreur %2)
+6653;3;%1  : Tentative de chargement de Sercos3-FPGA assisté
+6653;4;%1  : Actualisation des Sercos3-FPGA réussie
+6653;5;%1  : Couper et relancer la commande (Sercos3-FPGA actualisé)
+6653;6;%1  : relancer la commande (Sercos3-FPGA actualisé)
+6681;1;eDrvFx760_dummy
+6795;2;%1  : écriture du paramètre SERCOS %2 a échoué (%3, %4)
+6795;3;%1  : lecture de l'élément %2 du paramètre SERCOS %3 a échoué (%4)
+6795;53;%1  : entraînement pas prêt (état entraînement SERCOS 0x%2)
+6795;55;%1  : erreur SERCOS classe 1 : 0x%2 - %3
+6795;60;%1  : limite de temps lors de transfert d'état DRIVECOM %2
+6795;70;%1  : Commutation de phase SERCOS impossible, état incorrect des entraînements
+6795;151;%1  : SERCOS classe 2, avertissement : 0x%2 - %3
+6795;163;%1  : exécution de l'ordre SERCOS %2 a échoué (%3, %4)
+6795;168;%1  : paramètre SERCOS pas valable lors de la commutation dans la phase %2 : %3
+6795;169;%1  : entraînement pas prêt à enclencher (état entraînement SERCOS 0x%2)
+6795;170;%1  : entraînement pas opérationnel ou pas enclenché (état entraînement SERCOS 0x%2)
+6795;171;%1  : entraînement impossible à enclencher, puissance pas activée (état entraînement SERCOS 0x%2)
+6795;176;%1  : état jeu paramètres écriture :  nombre=%2, écrit=%3, erroné=%4
+6795;177;%1  : état jeu paramètres lire :  nombre=%2, lu=%3, erroné=%4
+6795;178;%1  : message ignorer pas assisté
+6795;179;%1  : état entraînement impossible à activer. Rapport état actif.
+6795;180;%1  : Paramètre SERCOS invalide après écriture d'un bloc de paramètres %2
+6795;181;%1  : échec de l'instruction utilisateur SERCOS %2 (%3)
+6795;182;%1  : échec de l'instruction utilisateur SERCOS %2 (code erreur instruction écrasé)
+6795;183;%1  : échec de l'instruction utilisateur SERCOS %2 (code erreur instruction inconnue %3)
+6873;1;Impossible d'enregistrer programme RPC %1
+6878;0;Initialisation du système
+6878;1;Initialisation de l'interrupt
+6878;2;Rechercher liaisons PCI
+6878;3;Rechercher liaisons KNet
+6878;4;Installer services système
+6878;5;Système opérationnel
+6878;6;Fonction actualisation en cours - ne pas couper
+6878;7;Actualisation terminée
+6878;8;Sauvegarde en cours - ne pas couper !
+6878;9;Fonction sauvegarde OK
+6878;10;Échec de la fonction sauvegarde
+6878;11;Restauration en cours - ne pas couper !
+6878;12;Fonction restauration réussie
+6878;13;Échec de la fonction restauration
+6878;14;Dépassement durée de marche au démarrage système ES
+6878;15;Configuration ES de Submaster pas présente
+6878;101;Erreur au chargement du système de durée de marche IEC
+6878;102;Erreur au chargement des fichiers Svl
+6878;103;Erreur au chargement de l'application IEC
+6878;104;Erreur au chargement des fichiers isl
+6878;105;Erreur au démarrage de l'application IEC
+6878;106;Erreur à l'arrêt de l'application IEC
+6878;107;Erreur au déchargement des fichiers isl
+6878;108;Erreur lors de la désinstallation de l'application IEC
+6878;109;Erreur au déchargement des fichiers svl
+6878;110;réservé, mais actuellement pas utilisé
+6878;111;réservé, mais actuellement pas utilisé
+6878;112;Application IEC pas correctement installée
+6878;113;réservé, mais actuellement pas utilisé
+6878;114;évaluation impossible car SysSm ne marche pas encore
+6878;201;réservé, mais actuellement pas utilisé
+6878;202;réservé, mais actuellement pas utilisé
+6878;203;Échec du chargement de TC
+6878;204;Échec du démarrage de TC
+6878;205;Échec du l'arrêt de TC
+6878;206;Échec du déchargement de TC
+6878;207;Échec du redémarrage de TC
+6878;208;Échec de l'interruption de TC
+6878;256;Aucune erreur présente
+6878;301;Impossible de démarrer serveur HMI
+6878;302;Impossible de stopper serveur HMI
+6878;303;Impossible de démarrer KVB
+6878;304;Impossible de stopper KVB
+6878;305;encore activé
+6878;401;Erreur au démarrage du système ES
+6878;402;Impossible d'activer le système ES
+6878;403;Échec de la modification de l'état ES
+6878;404;Impossible de stopper correctement le système ES
+6878;501;Erreur à l'écriture du rapport d'état
+6878;502;Échec de l'initialisation de la mémoire de données Retain
+6878;503;Échec du logiciel résident
+6878;601;réservé, mais actuellement pas utilisé
+6878;602;réservé, mais actuellement pas utilisé
+6878;603;réservé, mais actuellement pas utilisé
+6878;604;réservé, mais actuellement pas utilisé
+6878;605;encore activé
+6878;701;Présence d'erreurs de la classe de messages 3
+6878;901;Information licence absente ou invalide
+6878;902;Version de licence invalide
+6878;903;Licence composant absente ou invalide
+6927;1;%1  : nom station '%2' affecté (persistant = %3).
+6927;2;%1  : Type station '%2' affecté (persistant = %3).
+6927;3;%1  : Adresse IP %2/%3 affectée (gateway = %4, persistant = %5).
+6927;4;%1  : ES PROFINET pas raccordées.
+6927;5;%1  : ES PROFINET raccordées.
+6927;6;%1  : Chien de garde temps mort.
+6927;7;%1  : Réinitialiser les réglages d'usine.

@@ -1,0 +1,31 @@
+//$Brushblech
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_200  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V500  )
+  OVERLAP( NODEC50  )
+  //
+  PTP( VORPOS  )
+  //
+  //LOOP  3 DO
+  //
+  LIN( BRUSH_P1  )
+  SETBRUSH( GUN1 ,2 ,BRUSH_TP1 ,TR1  )
+  LIN( BRUSH_P2  )
+  GUN( GUN1 ,GunOn ,BRUSH_TP2 ,TR2  )
+  GUN( GUN1 ,GunOff ,BRUSH_TP3 ,TR3  )
+  LIN( BRUSH_P3  )
+  LIN( BRUSH_P4  )
+  LIN( BRUSH_P5  )
+  LIN( BRUSH_P6  )
+  LIN( BRUSH_P7  )
+  LIN( BRUSH_P8  )
+  //
+  //END_LOOP 
+  //
+  PTP( VORPOS  )
+  //
+RDESELECT("RP12")

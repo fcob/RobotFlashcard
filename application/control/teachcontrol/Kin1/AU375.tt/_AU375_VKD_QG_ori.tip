@@ -1,0 +1,50 @@
+//$Tetöfedél 2
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU37X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  OVERLAP( NODEC50  )
+  //
+  LIN( VKD1_P1  )
+  LIN( VKD1_P2  )
+  SETBRUSH( GUN1 ,75 ,VKD1_TP1 ,TR1  )
+  LIN( VKD1_P3  )
+  IF (VKD_I = TRUE) THEN
+    GUN( GUN1 ,GunOn ,VKD1_TP2 ,TR2  )
+  END_IF
+  LIN( VKD1_P4  )
+  LIN( VKD1_P5  )
+  LIN( VKD1_P6  )
+  SETBRUSH( GUN1 ,76 ,PO1 ,TRG1  )
+  LIN( VKD1_P7  )
+  LIN( VKD1_P8  )
+  LIN( VKD1_P9  )
+  LIN( VKD1_P10  )
+  LIN( VKD1_P11  )
+  LIN( VKD1_P12  )
+  LIN( VKD1_P13  )
+  LIN( VKD1_P14  )
+  LIN( VKD1_P15  )
+  LIN( VKD1_P16  )
+  LIN( VKD1_P17  )
+  LIN( VKD1_P18  )
+  SETBRUSH( GUN1 ,77 ,VKD1_TP3 ,TR3  )
+  LIN( VKD1_P19  )
+  LIN( VKD1_P20  )
+  LIN( VKD1_P21  )
+  LIN( VKD1_P22  )
+  LIN( VKD1_P23  )
+  LIN( VKD1_P24  )
+  LIN( VKD1_P25  )
+  LIN( VKD1_P26  )
+  LIN( VKD1_P27  )
+  IF (VKD_I = TRUE) THEN
+    GUN( GUN1 ,GunOff ,VKD1_TP4 ,TR4  )
+  END_IF
+  LIN( VKD1_P28  )
+  LIN( VKD1_P29  )
+  //
+RDESELECT("RP12")

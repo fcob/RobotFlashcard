@@ -1,0 +1,42 @@
+//$Csomagtértetö rendszámtábla alatt
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU33X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  OVERLAP( NODEC50  )
+  //
+  PTP( NT_SP_P1  )
+  //
+  SETBRUSH( GUN1 ,166 ,PO1 ,TRG1  )
+  LIN( NT_SP_P2  )
+  //
+  IF (SP_A=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P1 ,NT_SP_TR1  )
+  END_IF
+  LIN( PO3  )
+  LIN( NT_SP_P3  )
+  LIN( NT_SP_P4  )
+  LIN( NT_SP_P5  )
+  LIN( PO2  )
+  IF (SP_A = TRUE) THEN
+    GUN( GUN1 ,GunOff ,P2 ,NT_SP_TR2  )
+  END_IF
+  LIN( NT_SP_P6  )
+  SETBRUSH( GUN1 ,165 ,P3 ,NT_SP_TR3  )
+  LIN( NT_SP_P7  )
+  IF (HK_A = TRUE) THEN
+    GUN( GUN1 ,GunOn ,P4 ,NT_SP_TR4  )
+  END_IF
+  LIN( NT_SP_P8  )
+  LIN( NT_SP_P9  )
+  LIN( NT_SP_P10  )
+  IF (HK_A = TRUE) THEN
+    GUN( GUN1 ,GunOff ,P5 ,NT_SP_TR5  )
+  END_IF
+  LIN( NT_SP_P11  )
+  LIN( NT_SP_P12  )
+  //
+RDESELECT("RP12")

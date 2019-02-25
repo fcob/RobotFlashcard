@@ -1,0 +1,50 @@
+<VIEW>
+
+   <MASKDEF key="TeachView.mask.loggerMastering" textfile="userTx" permissiondef="userMenuPermission" rows="69" columns="40">                  
+      <!--  Headline -->
+      <LABEL key="LoggerMastering.label.name" col="3" row="2" cspan="5" halign="left" rspan="1"/>
+      <TEXTFIELD var="gRcuFocusedRobot.loggerMastering.sName" vartype="TT" enabled="false" col="10" row="2" cspan="25" halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 1 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[0].sText" vartype="TT" enabled="false" col="2"  row="10" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[0].sDate" vartype="TT" enabled="false" col="33" row="10" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 2 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[1].sText" vartype="TT" enabled="false" col="2"  row="16" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[1].sDate" vartype="TT" enabled="false" col="33" row="16" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 3 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[2].sText" vartype="TT" enabled="false" col="2"  row="22" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[2].sDate" vartype="TT" enabled="false" col="33" row="22" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 4 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[3].sText" vartype="TT" enabled="false" col="2"  row="28" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[3].sDate" vartype="TT" enabled="false" col="33" row="28" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 5 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[4].sText" vartype="TT" enabled="false" col="2"  row="34" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[4].sDate" vartype="TT" enabled="false" col="33" row="34" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 6 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[5].sText" vartype="TT" enabled="false" col="2"  row="40" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[5].sDate" vartype="TT" enabled="false" col="33" row="40" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 7 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[6].sText" vartype="TT" enabled="false" col="2"  row="46" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[6].sDate" vartype="TT" enabled="false" col="33" row="46" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 8 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[7].sText" vartype="TT" enabled="false" col="2"  row="52" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[7].sDate" vartype="TT" enabled="false" col="33" row="52" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 9 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[8].sText" vartype="TT" enabled="false" col="2"  row="58" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[8].sDate" vartype="TT" enabled="false" col="33" row="58" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+      <!--  Step 10 -->
+      <TEXTFIELD var="_system.RcuUserPage.LoggerMastering.yStepText[9].sText" vartype="TT" enabled="false" col="2"  row="64" cspan="30" halign="stretch" rspan="5" valign="stretch"/>
+      <TEXTFIELD  var="_system.RcuUserPage.LoggerMastering.yStepText[9].sDate" vartype="TT" enabled="false" col="33" row="64" cspan="7"  halign="stretch" rspan="5" valign="stretch"/>
+   </MASKDEF>
+   
+   <MENUDEF key="TeachView.mask.loggerMastering" textdef="userTx" imagefile="KvtMenuIcon" permissiondef="userMenuPermission">
+	<MENU>
+		<MENUITEM type="empty"/>
+		<MENUITEM key="LoggerMastering.menu.button_3" enabled="true" var="_system.RcuUserPage.LoggerMastering.bButtonUp" vartype="TT"/>
+		<MENUITEM type="empty"/>
+		<MENUITEM key="LoggerMastering.menu.button_4" enabled="true" var="_system.RcuUserPage.LoggerMastering.bButtonDown" vartype="TT"/>
+		<MENUITEM type="empty"/>
+		<MENUITEM key="LoggerMastering.menu.button_5" enabled="true" var="_system.RcuUserPage.LoggerMastering.bButtonShowStep" vartype="TT"/>
+	</MENU>
+   </MENUDEF>
+   
+</VIEW>

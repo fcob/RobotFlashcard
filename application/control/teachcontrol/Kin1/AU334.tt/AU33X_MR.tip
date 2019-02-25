@@ -1,0 +1,33 @@
+//$Motortér
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU33X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  OVERLAP( NODEC50  )
+  //
+  PTP( MR_P1  )
+  //
+  SETBRUSH( GUN1 ,4 ,PO1 ,TRG1  )
+  LIN( MR_P2  )
+  IF (KV_I=TRUE) OR (MH_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,MR_TP1 ,TR1  )
+  END_IF
+  LIN( MR_P3  )
+  LIN( MR_P4  )
+  LIN( MR_P5  )
+  LIN( MR_P6  )
+  LIN( MR_P7  )
+  SETBRUSH( GUN1 ,10 ,PO2 ,TRG2  )
+  LIN( MR_P711  )
+  LIN( MR_P71  )
+  IF (KV_I=TRUE) OR (MH_I=TRUE) THEN
+    LIN( PO3  )
+    GUN( GUN1 ,GunOff ,MR_TP2 ,TR2  )
+  END_IF
+  LIN( MR_P8  )
+  LIN( MR_P9  )
+  //
+RDESELECT("RP12")

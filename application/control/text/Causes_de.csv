@@ -1,0 +1,1340 @@
+Causes 1.09.0013
+1467;- Taskintervall konnte nicht ausgelesen werden%CrLf%- Baustein läuft in zu langsamer Task
+1468;Cfg-Parameter "Simulation" ist gesetzt
+1469;- Molch in Strecke 1 defekt%CrLf%- Druckluftversorgung unzureichend%CrLf%
+1470;Baustein hat versucht, sich am AB_CFG anzumelden. Dieser hat jedoch den Zugriff verweigert, weil%CrLf%- Maximale Anzahl IDs ueberschritten%CrLf%- Der Hochlauf bereits beendet ist und keine Anmeldung mehr moeglich ist
+1471;Es wurde versucht, die angegebene Datei zu löschen. Dies war jedoch nicht möglich.%CrLf%- Datei schreibgeschützt%CrLf%- Festplattenzugriff systembedingt verweigert
+1472;Es wurde versucht, die angegebene Datei zu verschieben. Dies war jedoch nicht möglich.%CrLf%- Zieldatei existiert noch %CrLf%- Zielpfad schreibgeschützt%CrLf%- Festplattenzugriff systembedingt verweigert
+1473;Beim Konvertieren einer Brush-INI-Datei wurde festgestellt, dass eine Brushgruppe mehrfach vorhanden ist. Somit kann ein Brush nicht eindeutig definiert werden. Ursachen: Fehler in der Visualisierung, Fehler während Download, Datei wurde manuell editiert.
+1474;Beim Konvertieren einer Brush-INI-Datei wurde festgestellt, dass eine Brushgruppe ausserhalb des gültigen Bereiches in der Datei vorhanden ist. Ursachen: Fehler in der Visualisierung, Fehler während Download, Datei wurde manuell editiert
+1475;Beim Konvertieren einer Brush-INI-Datei wurde festgestellt, dass der angegebene Parameter in der angegebenen Gruppe mehrfach vorhanden ist. Somit kann ein Brush nicht eindeutig definiert werden. Ursachen: Fehler in der Visualisierung, Fehler während Download, Datei wurde manuell editiert.
+1476;Beim Konvertieren einer Brush-INI-Datei wurde festgestellt, dass die angegebene Gruppe mehrfach vorhanden ist. Somit kann ein Brush nicht eindeutig definiert werden. Ursachen: Fehler in der Visualisierung, Fehler während Download, Datei manuell editiert.
+1477;Beim Konvertieren einer Brush-INI-Datei wurde festgestellt, dass der angegebene Parameter in der angegebenen Gruppe das falsche Datenformat hat. Ursachen: Fehler in der Visualisierung, Fehler während Download, Datei manuell editiert.
+1478;Beim Konvertieren einer Brush-INI-Datei wurde festgestellt, dass der angegebene Parameter in der angegebenen Gruppe fehlt. Ursachen: Fehler in der Visualisierung, Fehler während Download, Datei manuell editiert.
+1479;Beim Konvertieren einer Brush-INI-Datei wurde festgestellt, dass die angegebene Gruppe fehlt. Ursachen: Fehler in der Visualisierung, Fehler während Download, Datei manuell editiert.
+1480;Es wurde versucht, die angegebene Datei zu öffnen bzw. anzulegen. Dies war jedoch nicht möglich.%CrLf%- Zieldatei vorhanden, aber schreibgeschützt%CrLf%- Festplattenzugriff systembedingt verweigert
+1481;Es sollten Daten in das Brushfile geschrieben werden. Es wurden jedoch 0 Byte in die Datei geschrieben. Ursachen: Interner Fehler
+1482;Es wurde versucht, die angegebene Datei zu schliessen. Dies war jedoch nicht möglich.%CrLf%- Zieldatei reserviert%CrLf%- Festplattenzugriff systembedingt verweigert%CrLf%- Steuerungsinternes Problem
+1483;Es wurde versucht, das angegebene Verzeichnis zu erstellen. Dies war jedoch nicht moeglich.%CrLf%- Zielpfad reserviert%CrLf%- Festplattenzugriff systembedingt verweigert%CrLf%- Steuerungsinternes Problem
+1484;Es wurde versucht, die angegebene Datei zu öffnen. Dies war jedoch nicht möglich.%CrLf%- Zieldatei nicht vorhanden%CrLf%- Festplattenzugriff systembedingt verweigert
+1485;Es sollten Daten aus dem Brushfile gelesen werden. Es wurden jedoch 0 Byte gelesen. Ursachen: Interner Fehler, Brushdatei leer, ungültiger Inhalt in Brushdatei
+1486;Es wurde versucht, Brushdateien aus dem dynamischen Speicher zu entfernen (Karosse hat Zone verlassen, Nachwahl in Zone). Dabei ist ein Fehler aufgetreten. Datenkonsistenz ist somit nicht mehr gegeben. 
+1487;Beim Steuerungshochlauf werden je nach Parametrierung die Brushfiles überprüft. Dabei ist ein Fehler aufgetreten, der ein sinnvolles Betreiben der Anlage nicht ermöglicht. Dateninkonsistenz!
+1488;Es wurde n-mal (s. unter Max:) versucht, von der BCU eine Unit zu erhalten, um aus dem Stations-FIFO zu lesen (Semaphorentimeout). Die Unit wurde jedoch nie erteilt. Interner Steuerungsfehler.
+1489;Es wurde versucht, von der BCU eine Unit zu erhalten, um aus dem Stations-FIFO zu lesen (Semaphorenfehler). Dabei ist ein Fehler aufgetreten. Interner Steuerungsfehler.
+1490;Es wurde versucht, die von der BCU erhaltene Unit an diese zurückzugeben (Semaphorenfehler). Dabei ist ein Fehler aufgetreten. Interner Steuerungsfehler.
+1491;Es wurde versucht, eine ungültige Operation auszuführen. Steuerungsfehler, Programmierfehler, Fehler durch Debugging.
+1492;Es hat sich eine neue Karosse im Karossen-FIFO angemeldet. Es wurde versucht, für diese Karosse die Brushdaten zu laden. Dies ist fehlgeschlagen, weil im Brushspeicher kein Eintrag mehr verfügbar war. Alte Karossen wurden möglicherweise nicht erfolgreich gelöscht.
+1493;Es wurde versucht, Brushdateien in den dynamischen Speicher zu laden (Neue Karosse in Zone, Nachwahl in Zone). Dabei ist ein Fehler aufgetreten. Datenkonsistenz ist somit nicht mehr gegeben. 
+1494;Es wurde über das HMI ein Brushfile heruntergeladen. Die Pfad und/oder Dateiangabe des HMI stimmt jedoch nicht mit der Namenskonvention überein
+1495;Es wurde über das HMI ein Brushfile heruntergeladen. Bei der Überprüfung ist ein Fehler afgetreten und das Brushfile ungültig. Es kann nicht in der Steuerung aktualisiert werden.
+1496;Es wurde über das HMI ein Brushfile heruntergeladen. Beim erstellen des Zielverzeichnisses ist ein Fehler aufgetreten. Fehler beim Zugriff auf die Festplatte. Interner Systemfehler.
+1497;Es wurde über das HMI ein Brushfile heruntergeladen. Beim Umkopieren der INI-Datei bzw. der BIN-Datei in die Zielverzeichnisse ist ein Fehler aufgetreten. Fehler beim Zugriff auf die Festplatte. Interner Systemfehler.
+1498;Im angegebenen Brushfile ist eine ungültige Anzahl an Sollwerten enthalten. Ursachen: Datei zerstört, manuell editiert, von einem nicht zugehörigen Prozess kopiert.
+1499;Im angegebenen Brushfile fehlt der angegebene Sollwert. Ursachen: Datei zerstört, manuell editiert oder von einem nicht zugehörigen Prozess kopiert.
+1500;Es wurde versucht, über die Visualisierung eine Farbe nachzuwählen. Dies ist nur zulässig, wenn der Kanal gespült ist.
+1501;Es wurde versucht, eine Farbe nachzuwählen. Die gewünschte Farbnummer ist jedoch ungültig.
+1502;Es wurde versucht, eine Farbe nachzuwählen. Dies ist jedoch nicht möglich, weil der Kanal anderweitig belegt ist (z.B. Zeitprogramm aktiv).
+1503;Es wurde versucht eine Farbe nachzuwählen. Das gewünschte Ventil ist jedoch ungültig.
+1504;Im cfg-File ist eine ungültige Anzahl Ventile für den Kanal eingetragen.
+1505;Vom Teachprogramm wurde eine ungueltige Brushnummer vorgegeben. Fehler im Teachprogramm.
+1507;Es wurde versucht, zu viele Sollwerte in die angegebene Tabelle zu schreiben. Steuerungsinterener Fehler.
+1508;Es konnte zum angegebenen TeachIn Modul keine Brushdatei gefunden werden. Datei existiert nicht. Datei wurde nicht geladen.
+1509;Die gewünschte Brushdatei ist noch nicht in den Speicher geladen worden. Ladeschrittkette blockiert oder noch nicht fertig.
+1511;Bei einem Funktionsaufruf wurde eine ungültige Hauptkanalgruppe übergeben. Steuerungsinterner Fehler.
+1512;Es wurde versucht, den angegebenen Kanal zum Lackieren zu reservieren. Dieser Kanal ist jedoch bereits reserviert. Lackieren nicht möglich.
+1514;Fehler oder Lesefehler der Konfiguration
+1515;Fehler oder Lesefehler der Konfiguration
+1516;In der vorgegebenen Zeit konnt nicht auf die Daten der Fixpositions-Punkte zugegriffen werden
+1517;Im ProcessBuilder wurden mehr als je eine Position für Profilfrei/Abwahlposition konfiguriert
+1519;Steuerungsinternes Problem. Es wurde versucht die Anzahl der Roboterachsen zu ermittelt, der Zugriff auf diese Daten ist fehlgeschlagen
+1520;Die im ProcessBuilder konfigurierte Programmnummer ist nicht gueltig
+1521;Es sind nicht alle Fixpositionspunkte, die konfiguriert sind, in der Datei _globalvars enthalten
+1522;Genannter Punkt ist im falschen Koordinatensystem programmiert
+1523;Der genannte Punkt ist in der Datei _globalvars nicht enthalten.%CrLf%Es ist mehr als ein Punkt als unselect/bypass/home konfiguriert.%CrLf%Koordinaten des Punktes sind alle "Null".
+1524;Zum Lackieren müssen die lackierrelevanten Kanäle durch den Bausten AB_TriggerBrush reserviert werden. Die dazu benötigte Semaphore konnte jedoch nicht erhalten werden.
+1525;Zum Lackieren müssen die lackierrelevanten Kanäle durch den Bausten AB_TriggerBrush reserviert werden. Die dazu benötigte Semaphore konnte geholt werden, jedoch ist bei der Rückgabe ein Fehler aufgetreten.
+1526;Mit dem Setzten des ersten GUNON wurde versucht, die lackierrelevanten Kanäle zu reservieren. Dies ist jedoch nicht möglich, weil die Auftragsplanung die Kanäle als noch nicht "vorbereitet" gemeldet hat (PreparationDone=FALSE).
+1529;Es wurde versucht, mit dem Befehl GET_REFTO auf die angegebene Variable zu referenzieren. Dies ist fehlgeschlagen. Ursachen: Programmierfehler, steuerungsinternes Problem.
+1530;Beim Erzeugen der Brushreferenztabelle ist ein steuerungsinternes Problem aufgetreten. Daten sind inkonsistent.
+1531;Druck ist zu gering, um Initiator anzusteuern. 
+1532;- In Betriebsart Auto wird versucht, den Sollwert direkt vorzugeben.%CrLf%- In Betriebsart Hand wird versucht, ein Wert vorzugeben, ohne dass das Gerät von der Visu aus eingeschaltet ist.%CrLf%- In einer anderen Betriebsart darf das Gerät nicht angesteuert werden.
+1533;Es wurde versucht, ein dynamisches Spreicherelement anzulegen. Dabei ist ein Fehler aufgetreten.%CrLf%Ursache: Programmierfehler/ Steuerungsinternes Problem.
+1534;Es wurde versucht ein dynamisches Spreicherelement zu beschreiben. Dabei ist ein Fehler aufgetreten.%CrLf%Ursache: Programmierfehler / Steuerungsinternes Problem
+1535;Es wurde versucht ein dynamisches Spreicherelement auszulesen. Dabei ist ein Fehler aufgetreten.%CrLf%Ursache: Programmierfehler / Steuerungsinternes Problem
+1536;Zeitprogramm enthält falsche Daten oder Paintassignmenttabelle falsch
+1540;Mit dem Setzten des ersten GUNON wurde versucht die lackierrelevanten Kanäle zu reservieren. Dies ist jedoch nicht möglich, weil die Auftragsplanung die Kanäle als noch nicht "vorbereitet" gemeldet hat (Start Hauptkanal=FALSE)
+1541;Es wurde aus dem Teachprogramm ein SET_BRUSH gesetzt. Der gesetzte Brush kann jedoch noch nicht geschrieben werden, weil die erforderlichen Kanäle noch durch andere Vorgänge belegt sind (z.B. Spülen, Laden).
+1542;Beim Lesen des angegebenen Parameteres wurde festgestellt, dass dieser im falschen Format abgelegt ist.
+1543;Beim Zugriff auf ein lackierrelevantes Gerät wurde festgestellt, dass es eine falschen Datentyp besitzt. Erlaubt sind BOOL, INT, DINT, REAL.
+1544;Es wurde versucht, eine Farbe nachzuwählen, die eine ungültige Farbversorgungsgruppe enthält.
+1545;Es wurde versucht eine Farbe nachzuwählen, die keine Angaben zur Farbversorgungsgruppe enthält.
+1546;Beim Steuerungshochlauf wurde festgestellt das der angegebene Kanal des Farbwechslers nicht Mitglied in einem logischen Kanal ist. Dies ist jedoch Grundvoraussetzung.
+1547;Beim Steuerungshochlauf wurde festgestellt das der angegebene Kanal des Farbwechslers nicht Mitglied in einer Farbversorgungsgruppe ist. Dies ist jedoch Grundvoraussetzung.
+1548;In der Komponententabelle ist eine ungültige Komponentennummer eingetragen.
+1549;Im Zeitprogramm sind die Gerätesollwerte "SetQuantity" und "SetQuantityMultiK" gleichzeitig parametriert worden. Dies ist unzulässig.
+1550;Es wurde eine Farbe nachgewählt. Diese Farbe gehört jedoch nicht zu der Versorgungsgruppe zu der der Farbwechsler gehört
+1551;Es wurde eine Farbe für das Gesamtsystem nachgewählt. Diese ist jedoch keine Mischfarbe sondern nur eine Komponente.
+1552;Es wurde von Teachcontrol versucht einen Logger zu reservieren, jedoch sind alle verfügbaren Logger schon vergeben.
+1553;Der Dateipfad ist falsch oder misslungener Zugriff auf den Datenträger.
+1554;Es wurde versucht die angegebene Datei zu öffnen. Dies war jedoch nicht möglich.%CrLf%- Zieldatei nicht vorhanden%CrLf%- Festplattenzugriff systembedingt verweigert
+1555;Es wurde versucht die angegebene Datei  anzulegen. Dies war jedoch nicht möglich.%CrLf%- Zieldatei vorhanden aber schreibgeschützt%CrLf%- Festplattenzugriff systembedingt verweigert
+1556;Es wurde versucht die Daten einer Werkzeugeinheit an das ProgrammierHandGerät zu übergeben, dies ist misslungen.%CrLf%Steuerungsinternes Problem.
+1557;Falscher oder fehlender Konfigurationseintrag in [RC.BypassArea] fuer areaTyp. Es sind nur die Werte 1 fuer Arbeitsbereich und 2 fuer Sperrbereich erlaubt.
+1558;Falscher oder fehlender Konfigurationseintrag in [RC.BypassArea] fuer areaShape. Es sind nur die Werte 0 fuer Quader, 1 fuer Zylinder und 2 für Kugel moeglich.
+1559;Es existiert kein Konfigurationseintrag [RC.BypassArea]. Eine Überwachung des Bypass-Bereichs (profilfrei) mit einem Sperrbereich ist deshalb nicht möglich.
+1560;Es existiert kein Konfigurationseintrag [RC.Bypass.Size]. Eine Überwachung des Bypass-Bereichs (profilfrei) mit einem Sperrbereich ist deshalb nicht möglich.
+1561;Es existiert kein Konfigurationseintrag [RC.Bypass.Base]. Eine Überwachung des Bypass-Bereichs (profilfrei) mit einem Sperrbereich ist deshalb nicht möglich.
+1562;Der Aufruf der MCU-Funktion McuCreateArea war nicht erfolgreich. Der konfigurierte Bypass-Bereich konnte nicht angelegt werden. 
+1563;Die Ueberwachung des Arbeits-/sperrbereichs liefert nach dem Steuerungshochlauf inkonsistente Werte.
+1564;Der Aufruf der MCU-Funktion McuCreateJob war nicht erfolgreich. Der konfigurierte Bypass-Bereich kann nicht überwacht werden.
+1565;Der Aufruf der MCU-Funktion McuApplyJobTo war nicht erfolgreich. Der konfigurierte Bypass-Bereich kann nicht überwacht werden.
+1566;Der Aufruf der MCU-Funktion McuAreaCheckPoint war nicht erfolgreich. Der konfigurierte Bypass-Bereich kann unmittelbar nach dem Steuerungshochlauf nicht korrekt überwacht werden.
+1567;In der Konfiguration wurde kein Bypass-Bereich parametriert.
+1568;Fehlerhafte Einträge in [RC.KINEMATIC:n.Gripper.VectorX]
+1569;Der Aufruf der MCU-Funktion McuCreateGripper war nicht erfolgreich. Der konfigurierte Bypass-Bereich kann nicht überwacht werden.
+1570;Übertemperatur, Untertemperatur, Gerät defekt
+1571;Der zugeordnete Airflow existiert nicht
+1574;Beim Steuerungshochlauf melden die Geräte Variablen am SWO-Interface (für EcoScreen Softlog und Kemro.Scope) an. Dabei ist ein Interner Fehler aufgetreten.
+1575;Beim Steuerungshochlauf melden die Geräte Variablen am SWO-Interface (für EcoScreen Softlog und Kemro.Scope) an. Der Signalname ist jedoch zu lang. Es sind maximal 32 Zeichen zulässig.
+1576;Beim Steuerungshochlauf melden die Geräte Variablen am SWO-Interface (für EcoScreen Softlog und Kemro.Scope) an. Der Text für die Einheit ist jedoch zu lang. Es sind maximal 32 Zeichen zulässig.
+1577;Der Roboter wurde von der Software abgewählt und die Achsen kamen in der geforderten Zeit nicht zum Stillstand%CrLf%bzw. es waren noch Achslimiter aktiv.
+1578;Es wurde versucht, die Kommunikations-Phase des Sercosrings umzuschalten. Dies gelang nicht in der geforderten Zeit.%CrLf%Sercosring war noch nicht gestartet, bei Neustart der Steuerung.%CrLf%Es sind alle Antriebe des Sercosrings simuliert.
+1579;- Erdungsschalter konnte nicht schalten, Erdungsschalter ist defekt oder verschmutzt, 
+1580;Hochspannung ist aktiv.
+1581;Processbuilderfiles zueinander nicht kompatibel
+1583;Beim Steuerungshochlauf wurde versucht eine Verbindung zur angegebenen Profibus-Master-Karte herzustellen (Connect). Dies ist fehlgeschlagen. Ursachen: Master nicht verfuegbar, Master in der IoProfibusMaster.cfg umbenannt, Steuerungsinternes Problem.
+1584;Der angegebene Profibus-Slave hat ein Diagnosetelegramm gesendet.
+1585;Beim Lesen der Statusinformation von der Profibus-Master-Karte ist ein Fehler aufgetreten (GetMasterStatus). Ursachen: Master ausgefallen, Keine Verbindung zum Master, Steuerungsinternes Problem.
+1586;Es wurde ein Diagnosetelegramm von einem Profibus-Slave gesendet. Das Betriebssystem hat diesen Fehler an die Diagnosesoftware gemeldet, jedoch ist der Aufbau der Fehlermeldung falsch. Steuerungsinternes Problem.
+1587;Es wurde ein Diagnosetelegramm vom angegebenen Profibus-Slave gesendet. Beim Lesen des Telegramms (GetSlaveDiag) ist ein Fehler aufgetreten. Ursachen: Slave hat ungültiges Telegramm gesendet, Master hat Telegramm verloren, Steuerungsinternes Problem.
+1588;Es wurde während des Steuerungshochlaufs vom angegebenen Profibus-Slave ein Diagnosetelegramm gesendet. Die Initialisierung der Diagnosesoftware ist jedoch nicht beendet und die Meldung kann nicht ausgewertet werden.
+1589;Es wurde ein Diagnosetelegramm von einem Profibus-Slave gesendet. Beim Versuch den Fehlerpuffer auszulesen ist ein Fehler aufgetreten (GetError). Steuerungsinternes Problem.
+1590;Ein Profibus-Slave hat ein Diagnosetelegramm gesendet und ist gestoert.
+1591;Im angegebenen cfg-File sind mehr Gruppen vorhanden als zulaessig
+1592;Im angegebenen cfg-File sind mehr Parameter vorhanden als zulaessig
+1593;Im angegebenen cfg-File wurde ein Parameter gefunden, der jedoch nicht einer Gruppe zugeordnet ist
+1597;Für den Profibusmaster muss im Parameter FX760A:0/PBDP:0 ein Name angegeben sein. Dieser Name wird benötigt, um auf den Master zu mappen.
+1598;In der Steuerungskonfiguration ist kein Profibusmaster angegeben. 
+1599;Es wurde versucht, den Parametertyp zu lesen. Dabei ist ein Fehler aufgetreten
+1600;Es wurde versucht, den Parameter zu lesen. Dabei ist ein Fehler aufgetreten
+1601;Kann Antriebsparameter S-0-0030 nicht lesen.%CrLf%Antriebs-Firmware-Version ist der Steuerung nicht bekannt.
+1602;Der Versuch auf die Kinematik zuzugreifen ist fehlgeschlagen, Programmierfehler oder steuerungsinternes Problem.
+1603;In der Konfigurationsdatei "IoSercos.cfg" ist bei dem genannten Antrieb der "driverMode = 3" ausgewählt, was Simulation bedeutet.
+1604;Es wurde versucht ein Parameter des Antriebsregelgeraetes über Sercos zu lesen, dabei sind Fehler aufgetreten.%CrLf%Defekter Lichtwellenleiter oder anderer Antriebsfehler.
+1605;Roboter wurde nicht in Bremsentestposition gefahren.%CrLf%Bremsentestposition nicht konfiguriert.%CrLf%
+1606;Bremsentest wurde in den letzten 24 Stunden nicht ausgeführt.%CrLf%Hinweis für Anwender dass Bremsentest in X Stunden ausgeführt werden muss, %CrLf%sonst werden die Antriebe stillgesetzt.
+1607;Der Bremsentest muss nach spätestens 48 Stunden durchgeführt werden, dies ist erfolgt.
+1608;Anwender hat am PHG oder an EcoScreen die vorläufige Verfahrfreigabe erteilt.
+1609;Es wurde versucht ein Parameter an betreffendes Antriebsregelgerätes über Sercos zu schreiben, %CrLf%dabei sind Fehler aufgetreten.%CrLf%Defekter Lichtwellenleiter oder anderer Antriebsfehler.
+1610;Zu Beginn des Bremsentests war der betreffende Antrieb nicht zugeschaltet oder%CrLf%wurde während des Tests abgeschaltet.
+1611;Der Bremsentest konnte in vorgegebener Zeit nicht erfolgreich beendet werden.
+1612;An der angegebenen Achse trat ein Fehler in der genannten Phase des Bremsentests auf.
+1613;Der ATEX-Bremsentest wurde an angegebenem Antrieb erfolgreich ausgeführt.
+1614;Interner Steuerungsfehler (Division durch Null, Ungueltige Arrayzugriffe, etc)
+1615;Beim Öffnen bzw. Schliessen der Hauptnadel mit aktiviertem Feedback wird innerhalb der angegeben Zeit eine Rückmeldung erwartet. Ein Ausbleiben bzw. eine Verzögerung der Meldung kann folgende Ursachenhaben: Hauptnadel defekt, Initiator defekt, Hauptnadel verklebt, Steuerdruck zu gering
+1616;Die Hauptnadel war an- bzw. abgesteuert und das Hauptnadelfeedback wurde erkannt ist jedoch verloren gegangen. Ein Wegfallen der Meldung hat folgende Ursachen: Hauptnadel defekt, Initiator defekt, Hauptnadel verklebt.
+1617;Es wurde versucht die readbackvalues des Antriebs zu mappen, dies ist nicht gelungen.%CrLf%Steuerungsinternes Problem oder die Verwendung der readbackvalues ist nicht konfiguriert.
+1618;Es wurde versucht die actJointPosition des Antriebs zu mappen, dies ist nicht gelungen.%CrLf%Steuerungsinternes Problem.
+1619;Der Istwert der betreffenden Achse hat sich geändert ohne dass ein Sollwert vorgaben wurde. Derr Roboter wurde con einem anderen Gerät verschoben
+1620;Der betreffende Antriebe hat seine Stillstandsposition in vorgegebener Zeit nicht erreicht.
+1621;Fehler in der Konfiguration oder Konfigurationsdatei nicht vorhanden.
+1622;Der Motor oder das Steuerteil wurden getauscht.%CrLf%
+1623;An einem Antrieb wurde durch quittieren der Meldung UL ein ungültiger Standardparametersatz aktiviert.
+1624;Der Aufruf der MCU-Funktion McuCreateArea war nicht erfolgreich. Lesefehler der Daten aus der Datei _globalvars.ttp oder%CrLf%steuerungsinternes Problem.
+1625;Es wurde in den letzten 48 Stunden kein erfolgreicher Bremsentest ausgeführt.
+1626;Kein Speicherplatz auf Zieldatenträger.%CrLf%Steuerunginternes Problem.
+1627;Der Profibusslave befindet sich nicht im Status Datenaustausch. Ursachen: SPS kommuniziert nicht, falsche Slave Adresse, Drahtbruch zwischen SPS und EcoRPC, Steuerung ist nach Neustart noch nicht zur Kommunikation bereit. 
+1628;Beim Steuerungshochlauf wurde versucht eine Verbindung zur angegebenen Profibus-Slave-Karte herzustellen (Connect). Dies ist fehlgeschlagen. Ursachen: siehe Fehlercode
+1629;In der Steuerungskonfiguration ist kein Profibusslave angegeben. 
+1630;Für den Profibusslave muss im Parameter FX765A:0/PBDP:0/PBDPSLAVE:0 ein Name angegeben sein. Dieser Name wird benötigt, um auf den Slave zu mappen.
+1631;Es wurde über die Visualisierung das Messende der Funktion Förderer einmessen signalisiert. Zum Ausführen dieser Funktion muss der Förderer still stehen. Dies war nicht der Fall.
+1632;Es wurde über die Visualisierung die Funktion zum Einmessen des Förderers aktiviert. Dies ist jedoch nur erlaubt, wenn der Förderer steht.
+1635;Zwischen WAIT_CONVEYOR und TRACKING(On) hat sich das Objekt zu weit bewegt
+1636;Es konnten nicht alle Ein-Ausgänge des Feldbus-Slaves gemapped werden.%CrLf%Unterschiedliche Bezeichnung der Hardwareendpunkte im Kemromanager und RCU.%CrLf%Es wurden ein oder mehrere Ein-/Ausgänge im Kemromanager nicht angelegt.
+1637;Es konnten der genannten Hardwareendpunkt des Feldbus-Slaves nicht gemapped werden.%CrLf%Unterschiedliche Bezeichnung des Hardwareendpunktes im Kemromanager und RCU.%CrLf%Eingang wurde im Kemromanager nicht angelegt.
+1638;Es konnten nicht alle Ein- und Ausgänge des Feldbus-Slaves gemapped werden.%CrLf%Unterschiedliche Bezeichnung der Hardwareendpunkte im Kemromanager und RCU.%CrLf%Es wurden ein oder mehrere Ein-/ Ausgänge im Kemromanager nicht angelegt.
+1639;Es wurde ein Bremsenlösegerät eingesteckt.%CrLf%Mit eingestecktem Bremsenlösegerät ist es nicht möglich, die Antriebe zuzuschalten.
+1641;In der Konfiguration muss ein Wert für die Größe des Überwachungungsraumes in genannter Richtung %CrLf%konfiguriert werden. Bei eingestelltem Robotertypen muss eine Überwachung auf diese Koordinate erfolgen.
+1642;In der Konfiguration muss ein Wert für die Hilfsachse des genannten Überwachungsraumes konfiguriert werden. Bei diesem Robotertyp und bestehendem Einbauort muss die Hilfsachse überwacht werden.
+1643;Das Mappen der genannten Systemvariable ist nicht gelungen.%CrLf%Diese wird für die Kommunikation zwischen Bremsentest und Ecosreen benötigt.%CrLf%
+1644;Es konnten der genannten Hardwareendpunkt des Feldbus-Slaves nicht gemapped werden.%CrLf%Unterschiedliche Bezeichnung des Hardwareendpunktes im Kemromanager und RCU.%CrLf%Ein-/ Ausgang wurde im Kemromanager nicht angelegt.
+1645;Es wurde eine neue Fixposition mit dem ProcessBuilder generiert, die noch nicht geteacht wurde.%CrLf%Somit ist das Koordinatensystem des Fixpositionspunktes ungültig und die Fixposition kann nicht ausgewertet %CrLf%werden.
+1647;Das Bewegungsprogramm kann nach einem vorhergehenden Fehler nicht mehr fortgesetzt werden.
+1648;Die bei der IB festgelegte Abschaltdauer für die Hochspannung ist grösser als die TimeOut-Zeit
+1649;Die Fahrt in die Fixposition dauerte länger als die eingestellte TimeOut-Zeit im Zeitprogramm
+1650;Der Aufruf einer MCU-Systemfunktion ist fehlgeschlagen, Interner Steuerungsfehler.
+1651;Der Start des Bewegungsprogramms ist zu spät erfolgt, d.h. das Objekt befand sich beim Programmstart schon zu weit in der Kabine.
+1652;Das Makro GET_PAINTPOSITION setzt voraus, dass in der Steuerung die Eigenschaft 'Spaetest moegliches Anhaengen' aktiviert ist. Dann wird der Vorlauf angehalten und Verzweigungsbefehle erst so spät ausgeführt, daß dies gerade noch ohne einen Geschwindigkeitseinbruch möglich ist.
+1653;Beim Makro Get_PAINTPOSITION wurde ein ungültiger Wert für den Parameter GreaterSmaller eingetragen.
+1655;Beim Lackieren wird der Druck am angegebenen Sensor überwacht. Dieser hat die angegbene Grenze unterschritten. Ursachen hierfür können fehlender Farbversorgungsdruck, Schlauchbruch, defekter Farbdruckregler oder defekte Dosierpumpe sein.
+1656;Beim Lackieren wird der Druck am angegebenen Sensor überwacht. Dieser hat die angegbene Grenze überschritten. Ursachen hierfür können defekte Dosierpumpe, verstopfte Leitung oder Hauptnadel sein.
+1657;Leistungsschalter 4Q3 abgefallen
+1658;Sicherung 7F1, 7F3, 7F4, 7F5, 7F7 oder 7F8 abgefallen
+1659;Sicherung 6F4, 6F5, 6F7 oder 6F8 abgefallen
+1660;Leistungsschalter 6Q1 abgefallen
+1661;Leistungsschalter 24Q4 oder 60Q2 abgefallen
+1662;Das Makro GET setzt voraus, dass in der Steuerung die Eigenschaft 'Spätest mögliches Anhängen' aktiviert ist. Dann wird der Vorlauf angehalten und Verzweigungsbefehle erst so spät ausgeführt, dass dies gerade noch ohne einen Geschwindigkeitseinbruch möglich ist.
+1663;Mehrere Funktionsgruppen der Funktionsgruppenzuordnungstabelle sind als "Master" gekennzeichnet. Diese Bezeichnung muss jedoch eindeutig sein.
+1664;Keine Funktionsgruppe der Funktionsgruppenzuordnungstabelle wurde als "Master" gekennzeichnet.
+1665;Die intern maximal zulässige Anzahl an Funktionsgruppen wurde überschritten (Array-Size).
+1666;Beim Lesen des INI-Files ist ein Fehler aufgetreten. Der Parameter oder die Sektion konnten nicht gefunden werden.
+1667;Es wurde versucht die INI-Datei zu öffnen. Die Datei konnte nicht gefunden werden
+1668;Während autom. Kolbenmastern ist der Druck im Kolben auf einen über den angegebenen konfigurierten Wert angestiegen. Mögliche Ursachen : Ventile, die den  Abfluss des Mediums im Kolben ermöglichen sind nicht angesteuert oder schalten nicht
+1669;Das autom. Mastern wurde abgebrochen, da beim Zugriff auf den Antrieb über Sercos Fehler aufgetreten sind
+1670;Während der laufenden Sequenz für autom. Mastern hat sich der Kolbenauftrag geändert. Dies kann durch Fehler (Not-Aus etc.) hervorgerufen werden.
+1671;Nach  Abbruch des autom. Kolbenreferenzieren konnte der Originalwert des Antriebsparameter S-0-0092 nicht wiederhergestellt werden. Entweder war der aktuell gelesene Wert zu klein oder die Dezimalstellen (Wichtung) des Wertes konnten nicht ermittelt werden
+1672;Der Wert des Antriebsparameter P51 ist Null. Bitte Parameter prüfen 
+1673;Der Wert des Antriebsparameter S111 ist Null. Bitte Parameter prüfen 
+1674;Wert von S92 im Antrieb stimmt nicht mit konfiguriertem Wert (AxisMaxTorque) im process.cfg überein. %CrLf%Mögliche Ursachen : %CrLf%- Autom. Kolbenreferenzieren wurde abgebrochen und Originalwert des S92 konnte nicht in den Antrieb zurück geschrieben werden.%CrLf%- Falscher Wert im process.cfg
+1675;Entweder Kolben war noch nie referenziert oder beim autom. Referenzieren ist ein Fehler aufgetreten ( Überdruck, Abbruch, Fehler beim Ausführen von Sercoskommandos etc.)
+1676;Es wurde versucht, das Zeitprogramm zum autom. Kolbenreferenzieren manuell zu starten
+1677;Beim Starten des Referenziervorgangs darf der Druck im Kolben nicht größer als der angegebene konfigurierte Wert sein
+1678;- Timeoutzeit zu gering eingestellt ( 2 *  Kolben max. position in mm) ca. 440 sek.%CrLf%- Keine Antriebsfreigabe%CrLf%- Kein Leistung für Dosierantiebe
+1679;STL-Ventile nicht korrekt angeschlossen bzw. Druckluftversorgung unzureichend bzw. Druckschalter falsch eingestellt
+1680;STL-Ventile nicht korrekt angeschlossen
+1681;Druckluftversorgung unzureichend bzw. Druckschalter falsch eingestellt
+1682;- Turbine defekt%CrLf%- vorgegebene Drehzahl zu groß%CrLf%- Zeit nicht ausreichend
+1686;- Übertragungsfehler beim Kopieren übers Netzwerk%CrLf%- Download-Verzeichnis existiert nicht
+1687;- Die Endung der Farbmengentabellendatei ist nicht *.ini
+1688;- Das Format der Konfigurationsdatei fehlerhaft%CrLf%--Columns, Sections, Keywords falsch geschrieben
+1689;- Es wurden keine gültigen Farbmengen in der Farbmengentabelle gefunden.%CrLf%  (Um die Datenmengen gering zu halten werden nur Farbmengen grösser 0.0 auf der Steuerung gespeichert. Werte mit dem Defaulteintrag -1.0 werden nicht in die Farbmengendatenbank eingetragen)
+1690;Temperatur zu niedrig.
+1691;Temperatur zu hoch.
+1692;Beim Einschleifen der Bremse darf die Geschwindigkeit des Motors nicht zu groß sein, da sonst die Bremse beschädigt werden könnte. Die Geschwindigkeit wird im Teach Programm vorgegeben und ist zu groß.
+1693;- Dosierkolben fährt gegen ein geschlossenes System%CrLf%- Dynamikparameter der Kolbenbewegung zu groß%CrLf%- Schwergängigkeit der Mechanik
+1694;Die erforderliche Mindestgeschwindigkeit  zum Einzuschleifen der Motorhaltebremse wurde in vorgegebener Zeit nicht erreicht.
+1695;Der Aufruf der MCU-Funktion McuActivateArea war nicht erfolgreich. Der konfigurierte Arbeits-/Sperrbereich kann nicht überwacht werden.
+1696;Fehlerhafte Einträge in [RC.KINEMATIC:n.VirtualWall......]
+1697;Eintrag  [RC.KINEMATIC:n.VirtualWall.Blockx] fehlt in Konfiguration
+1698;Es konnte der genannte Hardware-Endpunkt nicht gemapped werden.%CrLf%Unterschiedliche Bezeichnung des Hardwareendpunktes im Kemromanager und RCU.%CrLf%Ein-Ausgang wurde im Kemromanager nicht angelegt.
+1699;- Der Initiator im Lackspeicher hat nicht angesprochen. %CrLf%- Druck in der Ringleitung zu gering.%CrLf%- Farbventil öffnet nicht. %CrLf%- Initiatoren am Lackspeicher defekt.%CrLf%- Kolben im Lackspeicher bewegt sich nicht. 
+1700;- Keine Farbe im Lackspeicher. %CrLf%- Hochdruck im Lackspeicher zu gering oder nicht vorhanden.   %CrLf%- Ringleitungsdruck zu gering oder nicht vorhanden. %CrLf%- Farbventil öffnet nicht korrekt. 
+1701;- Maximal moegliche Schaltzyklen erreicht. Bauteil kann nicht weiter verwendet werden.
+1702;- Warngrenze der Schaltzyklen erreicht. 
+1703;- Der Initiator im Isolationszylinder hat nicht angesprochen. %CrLf%- Beim Ausfahren kann die Luft nicht entweichen. %CrLf%- Ansteuerventile defekt. %CrLf%- Initiatoren am Isolationszylinder defekt oder verschoben.%CrLf%- Abstreifer im Isolationszylinder bewegt sich nicht. 
+1704;Ein Parameter der beim Initialisieren einer Prozessachse unbedingt benötigt wird, konnte im Katalog der Steuerung nicht gefunden werden.
+1705;Für die korrekte Berechnung des aktuellen Drehmoments einer Prozessachse müssen zwei Parameter in der Konfiguration der Steuerung (Sercos Teil) mit festgelegten Werten vorhanden sein. %CrLf%- torqueUnitsToDriveValue = 10.0%CrLf%- driveType = ecodrive
+1706;Der ServoName einer Prozessachse in der mfb Konfiguration konnte in der Steueurngskonfiguration (Sercos Teil) nicht gefunden werden. In beiden Konfigurationsdateien (motion.cfg und iosystem.cfg) muss der Name identisch sein.
+1707;- fehlende Drehzahlfreigabe%CrLf%- fehlende Hochspannungsfreigabe
+1708;Während des Mastervorgannges wurden die Antriebe abgeschaltet, loslassen des Zustimmtasters %CrLf%oder anderer Anntriebsfehler.
+1709;Beim Mastern der ganannten Achse hat der Verfahrweg (Masteringdelta) nicht ausgereicht um einen Fannkenwechsel des Sensorsignnals 0 -> 1 zu erkennen.
+1710;Für die Wegerfassung der Objekte im Tracking wird eine Zählerkarte eingesetzt die vom Drehgeber am Förderer die Impulse erfasst. Diese Karte ist ausgefallen und meldet den unter Info angegebenen Fehler.
+1711;Die Druckluft am Materialdruckregler hat die untere Warngrenze unterschritten.
+1712;Es wurde versucht ein dynamisches Spreicherelement zu löschen. Dabei ist ein Fehler aufgetreten.%CrLf%Ursache: Programmierfehler / Steuerungsinternes Problem
+1713;In der Datei "EcotalkVariables.ttp" kann der Anwender die Namen der Übergabeparameter für EcoTalk konfigurieren,%CrLf%der Wert des genannten Parameters wurde für diese Funktion auf ungültigen Wert geändert.
+1714;Für genannte Gruppe wurde ein falscher Auftrag in EcoTalk programmiert.%CrLf%Es sind nicht alle auswählbaren Aufträge für jede Gruppe möglich.%CrLf%
+1715;Für genannte Befehl wurde eine falsche Gruppe in EcoTalk programmiert.%CrLf%
+1716;Das Makro GET setzt voraus, dass in der Steuerung die Eigenschaft 'Spätest mögliches Anhängen' aktiviert ist. Dann wird der Vorlauf angehalten und Verzweigungsbefehle erst so spät ausgeführt, dass dies gerade noch ohne einen Geschwindigkeitseinbruch möglich ist
+1717;Es wurde versucht die aktuellen Achswerte in Motorwerte zu wandeln, dies gelang nicht.%CrLf%Ursache: Steuerungsinternes Problem
+1718;Beim Joggen hat die genannte Achse die Software Endlage erreicht.
+1719;Der Bezug zum Hardwareendpunkt "SERCOS" konnte nicht hergestellt werden. Der Sercosring hat in der Konfiguration keinen symbolischen Namen oder einen anderen als "SERCOS":%CrLf%[IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0]%CrLf%name = "SERCOS"
+1720;Statistikfifo konnte nicht abgearbeitet werden.
+1721;Nur ein gespülter Kanal darf mit Farbe gefüllt werden, da es sonst zu Verunreinigungen kommen kann.
+1722;- Der Initiator im Isolationszylinder hat nicht angesprochen. %CrLf%- Beim Fahren kann die Luft nicht entweichen. %CrLf%- Ansteuerventile defekt. %CrLf%- Initiatoren am Isolationszylinder defekt oder verschoben.%CrLf%- Abstreifer im Isolationszylinder bewegt sich nicht. 
+1723;Verriegelung eines Gerätes wurde mit dem Sollwert 'OmnitInterlocks' überbrückt. Bitte Vorsicht beim Verwenden des Gerätes. Fehlbedienung kann zu einem Schaden führen. 
+1724;Im cfg-File wurden die Inkremente/mm eingetragen. Hieraus wird ein maximal zulässiger Encodersprung berechnet. Der berechnete Encodersprung ist jedoch grösser, als der maximal zulässige Sprung.
+1725;Innerhalb eines Steuerungszyklus ist die Änderung des Istwerts des Inkrementalgebers oder der Geberkarte grösser als die zulässige Änderung.
+1726;Durch einen Ausfall des Inkremntalgebers oder der Geberkarte ist es zu einem unzulässigen Istwert gekommen. Die Glättung (Filter) des Istwertes kann nicht mehr gewährleistet werden.
+1727;Konfiguration der Overrides ist unterschiedlich zur Brushkonfiguration, z.B. Paintflow statt PaintFlow.%CrLf%
+1728;Override.def unvollständig
+1729;Die Anzahl der Sections ist steuerungsseitig limitiert.
+1730;Die Anzahl der Columns ist steuerungsseitig limitiert.
+1731;- Definitionsfile wurde geändert und das Modul für die "Prozentualen Aufschläge" in 3DOnSite nicht neu geladen%CrLf%- Override.ini wurde nicht mit 3DOnsite gespeichert
+1732;- Farbventil öffnet nicht%CrLf%- Keine Farbe am Farbventil angeschlossen%CrLf%- Druck im FD1 oder FD2 ist abgefallen%CrLf%- Druck in der Farbversorgung fällt unter 0,1 Bar
+1733;Im zur FU zugehörigen cfg-File muss für den Filter des Incrementalgebers eine Geschwindigkeit eingetragen werden. Dieser Wert wurde jedoch zu klein gewählt.
+1734;Bei der Berechnung der Hauptnadelschaltzeit werden mehrere Zeiten (Gelernte Zeit, Buslaufzeit, Lackflugzeit) herangezogen. Die errechnete Schaltzeit darf nicht grösser als die Prewanzeit und kleiner 0 sein.
+1735;Sektionsbezeichung konnte nicht gelesen werden.
+1736;Die Hauptnadel ist angesteuert und innerhalb der parametrierten Verzögerungszeit wurde kein CO2-Strahl erkannt, oder der CO2-Strahl wurde bei geöffneter Hauptnadel zu lange unterbrochen (flattern).
+1737;Trotz geschlossener Hauptnadel wurde ein CO2-Strahl erkannt.
+1738;Es wird mit einer ungültigen Signaladresse auf ein Device-Signal zugegriffen
+1739;Es wird versucht mit einem ungueltigen Signalnamen eine Signaladresse zu ermitteln.%CrLf%Steuerung wird aufgrund dieses schwerwiegenden Fehlers gestoppt!
+1740;- TeachControl-Laufzeitüberschreitung
+1741;Der an EcoScreen angemeldete Benutzer hat keine Berechtigung für den T2-Betrieb, diese Berechtigung hat nur unterwiesenes Fachpersonal.
+1742;- Die maximale Anzahl an schreibberechtigten Benutzern ist erreicht (maxLocalWriteSessions).%CrLf%- Systeminternes Problem.
+1743;Die Anmeldung des genannten Benutzers konnte in gegebener Zeit nicht erfolgreich ausgeführt werden.%CrLf%Steuerungsinternes Problem bei der Kommunikation mit TeachView.
+1744;In der Benutzerverwaltung ist für das von der Visualisierung gesetzte BenutzerLevel kein OPC-Masteruser konfiguriert.
+1745;Es wurde versucht den aktuellen Benutzer von TeachView abzumelden, dabei sind Fehler aufgetreten.%CrLf%Steuerungsinternes Problem.
+1746;Es wurde versucht mehr als ein Benutzer zeitgleich von Ecoscreen anzumelden.
+1748;Beim Kalibrierlauf wurde der angegebene Wert nicht erreicht.%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Verschleiss oder Saettigung Druckregler%CrLf%- Material-/ Chargen-Aenderung (große Abweichung der Viskositaet)
+1749;Der Roboter befindet sich nach Ablauf des TimeOuts nicht in der geforderten Position.
+1751;Es wurde ein neues Objekt eingebucht. Zum Laden der Brushes wird diese Information in einem FiFo abgelegt. Dieser Speicher ist jedoch komplett belegt. Es liegen zuviele Lade- oder Änderungsauftäge an und konnten nicht abgearbeitet werden, weil u.U. der Download eines Brushes nicht beendet wurde.
+1752;Es wurde ein neues Objekt zum Lackieren beauftragt, jedoch wurden für dieses Objekt keine Brushes geladen. Das zu lackierende Objekt wurde nicht im Karossenvorlauf angemeldet.
+1753;Die Groesse des Karossenspeichers vor bzw. in der Zone hat einen ungueltigen Wert. Zulaessig sind Werte zwischen 1 und 50
+1754;- Schlauchübergänge defekt%CrLf%- Molch Strecke 1 defekt%CrLf%- Schlauch Strecke 1 defekt
+1755;- Luft aus Ringleitung ins Dosiersystem eingedrungen%CrLf%- Pulsluftventil PL1 am Farbwechsler auf Dichtheit prüfen.
+1756;Die BCU hat dem TriggerBrush ein neues Objekt gesendet (aEvtRxNewBody) aber die Body-ID ist 0. Die ID muss aber ungleich 0 sein.
+1757;Die BCU hat dem TriggerBrush ein neues Objekt gesendet (aEvtRxNewBody) aber die Body-ID ist bereits im Speicher. Die Alte Karosse wurde evtl. nicht entalden oder die BCU sendet ein Objekt doppelt.
+1758;Die BCU hat dem TriggerBrush ein Objekt zur Nachwahl gesendet (aEvtRxBodyChanged) aber die Body-ID ist 0. Die ID muss aber ungleich 0 sein.
+1759;Die BCU hat dem TriggerBrush ein Objekt zur Nachwahl gesendet (aEvtRxBodyChanged) aber die Body-ID ist mehrfach im Speicher. Eine zuvor bearbeitet Karosse wurde evtl. nicht entalden.
+1760;Die BCU hat dem TriggerBrush ein Objekt zur Nachwahl gesendet (aEvtRxBodyChanged) aber die Body-ID ist nicht im Brushspeicher geladen.
+1761;- Visu wurde vom PHG über die Userpage 'Kanalübersicht', mit dem Hacken 'Write access. Eco Screen will %CrLf% be locked.' deaktiviert. %CrLf%
+1762;Eine Firmware-Task hängt nicht am vorgegebenen UpdTimer1.
+1763;Firmware und IEC laufen mit unterschiedlichen Zykluszeiten%CrLf%
+1764;- Spannungsverlust%CrLf%- beschädigte Pins an der Zählerkarte%CrLf%- EMV%CrLf% 
+1765;Steuerung wurde aufgrund eines schwerwiegenden Fehlers gestoppt!
+1766;Processbuilderkonfiguration fehlerhaft
+1767;Bei der Verarbeitung der Änderung von Betriebsarten oder Freigabevorgabe wurde der Timeout zur vollständigen Abarbeitung erreicht. Dies ist ein elementarer Software-Fehler. Software überprüfen lassen.
+1768;Das Zeitprogramm kann erst fortgesetzt werden, wenn der Roboter seine Konturfahrt beendet hat.
+1769;general.cfg passt nicht zur FgAssignment.ini Konfiguration
+1770;Die Kollisionserkennung hat ausgeloest
+1771;Für genannten Fahrzeugtyp konnten keine Profiledaten geladen werden.
+1772;Es konnte kein vorausliegender erreichbarer Punkt (Fördererwert > als aktueller Fördererwert) im Profil gefunden werden.%CrLf%Vermutlich Fehler bei der Parametrieung des Profils oder Förderer hat maximale Profileposition überschritten.
+1773;Es sind ungültige Daten im genannten Profil enthalten.%CrLf%Vermutlich Fehler bei der Parametrieung des Profils oder ungültige Datei.
+1774;Steuerungsinternes Problem oder Bedienfehler.%CrLf%Während laufendem Fahrprogramm wurden die Karossendaten gelöscht, vermutlich durch Ausführen des "ClearFifo" Kommandos.
+1775;Im genannten Profil wurde bei der Fahrt zu gennanntem Punkt die maximale Achsgeschwindigkeit überschritten.
+1776;Die Kollisionslichtschranke meldet dass sie verschmutzt ist.
+1777;Steuerungsinternes Problem, Programmierfehler oder Parametrierfehler.
+1778;Die in der Visualisierung eingetragen Refernzposition liegt ausserhalb der Endlage der Achse, wäre somit nicht anfahrbar.
+1779;Die Parametrierung der Ionisation ist unvollständig.
+1780;Nach dem Einschalten der Ionisation erfolgte keine Rückmeldung der Schütze.
+1781;Aufgrund einer Kollision ist die Walze in eine sichere Position gefahren, jedoch meldet die Kollisionserkennung immer noch eine Störung. Vermutlich wurde die Kollisionserkennung beschädigt oder ist gestört.
+1782;Für betreffende Achse wurde eine Zielposition ausserhalb des Verfahrbereichs vorgegeben.
+1783;Während der Bahnberechnung ist ein steuerungsinternes Problem aufgetreten. Aufgerufene Funktion "KCtrl" hat einen Fehler verursacht.
+1784;Es konnte für genannten Typ keine Profildaten geladen werden.%CrLf%- Taktabstand bei Geistbetrieb zu gering.%CrLf%- Fehlerhafte Profildatei.
+1785;Die Sicherheitssteuerung hat eine Sicherheitsverletzung erkannt. 
+1786;Von der Leittechnik wurde ein Feueralarm gesendet.
+1787;Die für den Anlagenbetrieb nötige Kabinenbelüftung ist gestört.
+1788;Die Fördertechnik hat einen sicherheitsrelevanten Fehler erkannt.
+1789;Nach dem Einschalten der Antriebe erfolgte keine Rückmeldung.
+1790;Nach dem Einschalten der Luftversorung erfolgte keine Druckaufbau.
+1791;Nach dem Einschalten der Ionisation erfolgte keine Rückmeldung.
+1792;Die Lichtschranke am Zoneneinlauf wurde unterbrochen.
+1793;Die Lichtschranke am Zonenauslauf wurde unterbrochen.
+1794;Alle automatischen Spülprogramme erfordern die Übergabe einer Spülprogrammgruppe oder eines Zeitprogrammnamens.
+1795;Der Parameter existiert nicht oder Parameter ist vom Typ Array.
+1796;Bei diesem Parameter existiert der angegebene Subindex  nicht. Das mit dem Subindex adressierte Element ist im SPC200 nicht konfiguriert worden (Programm nicht vorhanden, Achse nicht vorhanden, kein Startprogramm für diese Task festgelegt usw.)
+1797;Es wurde versucht, ein Doppelwort-Parameter mit einem Wort zu beschreiben. Das ist nicht zulaessig.
+1798;Es gibt keine Beschreibungselemente.
+1799;Abhaengig vom Parameter fehlt entweder das ENABLE-Signal (ENABLE=1), das Stopp-Signal (STOP=1) oder die Tasks sind nicht gestoppt (z. B. zum Schreiben einer Programmnummer).
+1800;Es muss vor dem Auslesen initialisiert werden durch Laden eines gueltigen Wertes mit WinPISA, dem Schreiben per PKW-Auftrag oder per NC-Programm.
+1801;Beim Aktivieren des Programmes wurde ein Checksummenfehler festgestellt. Hinweis: Der SPC200 meldet jetzt auch einen Fehler.
+1802;Fehler in der Ausschaltphase, beim Ausschalten des Systems wurden bestimmte Systemfunktionen (Power-Down-Funktionen) nicht durchgefuehrt. Eventuell ist die Versorgungsbaugruppe defekt.
+1803;Fehler bei der Ueberwachung der Versorgungsspannung waehrend des Betriebes, instabile Versorgungsspannung oder stark gestoerte Umgebung, eventuell ist die Versorgungsbaugruppe defekt.
+1804;Fehler bei der Überwachung des Speicherbereiches der Firmware (Speicherschutzverletzung), stark gestörte Umgebung oder Basisgerät defekt
+1805;Fehler bei der Überwachung des Speicherbereiches der Anwenderprogramme (Speicherschutzverletzung), stark gestörte Umgebung oder Basisgerät defekt
+1806;Fehler beim Zugriff auf Adaptionsdaten. Die Daten sind nicht initialisiert
+1807;Messsystem in der Endlage oder Messsystemkabel defekt oder AIF-Strang arbeitet nicht mehr%CrLf%
+1808;Fehler bei der Überwachung der Feldbus-Baugruppe (Profibus, Interbus, DeviceNet, CANopen...), Feldbus-Baugruppe ist nicht ansprechbar. Steckplatz im Basisgerät oder Feldbus-Baugruppe defekt oder Feldbus-Baugruppe nicht vollständig eingesteckt.
+1809;Konfigurierte Zuordnung eines lokalen EA-Bereichs zu dem angegebenen Feldbus-EA-Bereich im SPC200 ist nicht zulässig, da die lokale Baugruppe selbst nicht vorhanden ist, oder der Feldbus- EA- Bereich bereits belegt ist.
+1810;Das AIF x hat Unterspannung an der Lastspannung festgestellt. Das Ventil geht selbsttätig in Mittelstellung, die Achse wird nicht mehr geregelt.
+1811;Programmnr. bei L-Befehl ist mit Nummer des  aufrufenden Programms identisch
+1812;zulässige Verschachtelungstiefe bei L-Befehl überschritten
+1813;Direkte Sollwertvorgabe (M10) oder direkte Steuerung der Ventilspannung (M39) aktiv bei neuem Sollwert (NC-Befehl: G00, G01, G02, M10, M39)
+1814;NC-Befehl kann nicht ausgeführt werden. Entweder wird er durch die Firmware nicht unterstützt oder die Achsangabe ist ungültig.
+1815;Programmierter Ein- oder Ausgang steht nicht zur Verfügung. Ein-/Ausgangsadresse oder EA-Modul nicht vorhanden.
+1816;Der absolute Vorwahlwert (G25) im selektierten Register @n liegt nicht zwischen der letzten Sollposition oder der letzten Umschaltposition und der neuen Sollposition.
+1817;Die Sollwertvorgabe über Feldbus (M10, Kanal 5) kann nicht aktiviert werden, da keine Feldbuskarte vorhanden ist oder die verwendete Feldbuskarte diese Funktion nicht unterstützt.
+1818;Positionier-Timeout:%CrLf%Die Referenzposition bzw. die Position des letzten Fahrauftrages konnte nicht schnell genug erreicht werden (MC-Error)%CrLf%
+1819;Sollposition außerhalb der Software-Endlagen, der Positioniervorgang wird nicht gestartet
+1820;Unzulässiger Positionierauftrag bei positionsabhängiger Satzweiterschaltung (G25)
+1821;geforderte Geschwindigkeit ist nicht erreichbar
+1822;Fehler bei Vorberechnung der Reglerparameter (x10, x50, x90) oder Timeout (x20, X60, XA0)%CrLf%
+1823;Die Systemidentifikation wurde durch einen Stop abgebrochen. Der Stop kann vom Anwender oder durch einen Systemfehler ausgelöst worden sein.
+1824;Bei der Systemidentifikation wurden keine sinnvollen Parameter gefunden
+1825;Beim Wiederherstellen der Originalparametrierung ist ein Fehler aufgetreten
+1826;Beim Initialisieren des Identifikationsschrittes ist ein Fehler aufgetreten
+1827;NC-Befehl G00 nicht möglich, da noch keine dynamische Identifikationsfahrt durchgeführt wurde
+1828;Regler im SPC200 kann nicht initialisiert werden
+1829;Es ist für diese Achse bereits ein Auftrag aktiv (Positionierung, Identifikation ...). Ein neuer Auftrag kann nur angenommen werden nachdem der alte beendet wurde.
+1830;Inhalt eines Positionsregisters ist ungültig
+1831;Verletzung des Hubgrenzwertes (M40) bei M39
+1832;Systemidentifikation abgebrochen, da Freigabesignal fehlt 
+1833;Identifikationsdaten ungültig
+1834;Unzulässige Positioniergüteklasse
+1835;Regler ist inaktiv, da Freigabesignal für Erstinbetriebnahme oder nach Bewegungstest fehlt oder die Konfiguration fehlerhaft ist.%CrLf%Nur bei Schrittmotor-Achse:%CrLf%- Kein Ready-Signal von der Leistungsansteuerung%CrLf%
+1836;Befehl wird von diesem Achstyp nicht unterstützt:%CrLf%Bei pneumatischen Achsen: Befehl Referenzfahrt (G74)%CrLf%Bei elektrischen Achsen: Analogeingang aktivieren im Mode 0 und 1 (M10), Befehl M39%CrLf%
+1837;Referenzposition für diese Achse unbekannt
+1838;Verletzung der Softwareendlagen bei Befehl M39
+1839;Verletzung des Geschwindigkeitsgrenzwertes (M41) bei M39
+1840;Der angegebene Referenzfahrtmodus ist für diese Achse nicht zulässig.
+1841;Es wurde für die pneumatische Achse die Referenzfahrt im Modus 7 durchgeführt. Für den gewünschten Befehl ist aber der Modus 0, 5 oder 6 notwendig.
+1842;Parameter ausserhalb des zulässigen Bereichs
+1843;Fehler bei der digitalen Sollwertvorgabe über Feldbus.
+1844;Software-Endlage liegt außerhalb des möglichen Verfahrbereichs
+1845;Massenlast liegt außerhalb des zulässigen Bereichs
+1846;Verstärkungsfaktor unzulässig
+1847;Dämpfungsfaktor unzulässig
+1848;Filterfaktor unzulässig
+1849;Messsystemlänge ungültig oder Messwert außerhalb der eingestellten Zylinderlänge
+1850;Parametergrenze verletzt
+1851;Messsystemtyp unzulässig
+1852;zulässige Schrittfrequenz (Verfahrfrequenz) unterschritten (< 80 Hz) oder überschritten (> 40000 Hz)
+1853;Adaptionsdaten fehlerhaft
+1854;Syntaxfehler oder unzulässige Programmnummer eingegeben
+1855;Bei der Nutzung des Bedienfeldes:%CrLf% Unzulässige Programmnummer ausgewählt, Programm kann nicht angelegt werden, da schon vorhanden oder Programm kann nicht geöffnet werden, da nicht vorhanden. Kein freier Speicherplatz.%CrLf%Bei der Nutzung von WinPISA: Programm konnte nicht geladen werden. Nach dem Löschen des Fehlers wird der Speicher des SPC200 neu geordnet
+1856;Unzulässige Satznummer
+1857;Kein freier Speicherplatz für neues Programm
+1858;Prüfsummenfehler
+1859;Fehler beim Up-/Download mit WinPISA
+1860;Freigabesignal fehlt
+1861;System ist gestoppt, am Eingang STOP liegt 0-Signal an 
+1862;Startprogramm nicht vorhanden
+1863;Kommando in dieser Betriebsart nicht zulässig
+1864;Kommando bzw. Bedienfunktion bei aktivem NC-Programm unzulässig
+1865;Regler ist inaktiv, da Freigabesignal für Erstinbetriebnahme fehlt oder Konfiguration fehlerhaft ist%CrLf%Nur bei Schrittmotor-Achse: Kein Ready-Signal von der Leistungsansteuerung%CrLf%
+1866;Das NC-Programm enthält neue NC-Befehle und erweiterte NC-Syntax, die nicht vom dem Bedienfeld SPC200-MMI-1... unterstützt wird (siehe auch Kapitel NO TAG).
+1867;Bewegungstest kann nicht gestartet werden, weil der Eingang ENABLE 1-Signal liefert.
+1868;Ventilspannung kann nicht geändert werden, weil der Eingang ENABLE 0-Signal liefert
+1869;Bewegungstest wurde abgebrochen, weil ENABLE 0-Signal liefert.
+1870;Kompatibilitätsfehler zwischen WinPISA, MMI und der Betriebssystem-Version des SPC200. Ein im SPC200 vorhandenes Programm kann mit der verwendeten WinPISA nicht bearbeitet werden.
+1871;Kompatibilitätsfehler zwischen WinPISA und der Betriebssystem-Version des SPC200. Die Funktion Kalibrieren der Betriebssystem-Version 4.82 erfordert mindestens WinPISA 4.41. %CrLf%
+1872;Zuviele Tracevariablen definiert. Max sind 10 Tracevariablen je Achse zulässig.
+1873;Tracespeicher reserviert für andere Achse
+1874;Unbekannte Tracevariable definiert (definiert durch die Verwendung unterschiedlicher Firmware-Versiomnen)
+1875;Trace nicht konfiguriert.
+1876;In Konfiguration ist kein Geraet dem Lackieren zugeordnet
+1877;Fehler bei Operation mit HashMap.
+1878;Abfrage der Funktionsgruppenzuordnung nicht moeglich, da Zuordnung nicht gueltig.
+1879;Durch das Auftreten eines Fehler wurden Routinen abgebrochen.
+1880;Beim Arbeiten mit einem dyn. Array ist es zu diesem Fehler gekommen.
+1881;Bei der Operation mit einer Datei ist es zu dem Fehler gekommen
+1882;Beim Speichern der Lernwerte in einer Datei ist ein Fehler aufgetreten.
+1883;Beim Vergleich der allgemeinen Daten fuer das PushOut ist ein Unterschied zwischen den gespeicherten Daten aus der Datei und den aktuellen Typdaten aufgetreten.
+1884;Das uebergebene Geraet konnte nicht als PushOut-Geraet identifiziert werden.
+1885;Um das Volumen zu berechnen muss der Modulname an die Funktion uebergeben werden. Dies scheint fehlerhaft zu sein.
+1886;Diskrepanz bei der BodyID
+1887;Eine dyn. Struktur, in die Werte gespeichert werden soll, existiert nicht.
+1888;Sicherung 7F3 oder 7F4 abgefallen
+1889;Bei dem angegebenen Schreib- oder Lese-Zugriff ist ein Fehler aufgetreten.%CrLf%Fehlerhafte Parametrierung oder Uebertragungsfehler.
+1890;Bei Unterschreiten des als Parameter 1 eingestellten Wertes meldet die angegebene Zone Low-Alarm.%CrLf%Der Low-Alarm wird bei Sollwert = 0 nicht ueberwacht!
+1891;Bei Ueberschreiten des als Parameter 2 eingestellten Wertes meldet die angegebene Zone High-Alarm.%CrLf%Der High-Alarm wird auch bei Sollwert = 0 ueberwacht, um am Ausgang kurzgeschlossene Solid-State-Relais auch bei abgeschalteten Zonen sicher zu ueberwachen!
+1892;Die Heizstrom-Ueberwachung fuer die angegebene Zone hat ausgeloest.%CrLf%Entweder wird bei Ansteuerung kein Stromfluss erkannt oder es wird ein Stromfluss erkannt, obwohl keine Ansteuerung der Zone erfolgte.
+1893;Sobald der Istwert einer Zone um mehr als den als Parameter 3 eingestellten Wert vom Sollwert abweicht, meldet die angegebene Zone Abweichungsalarm (negativ = Unterschreitung, positiv = Ueberschreitung).
+1894;Der neue Sollwert einer Zone weicht um mehr als den als Parameter 3 eingestellten Wert vom vorherigen Sollwert ab.
+1895;Das Heizungs-Regelgeraet hat einen Fuehlerbruch bei der angegebenen Zone erkannt.%CrLf%Heizung oder Heizschlauch defekt. Fehler in Elektrik.
+1896;Das Heizungs-Regelgeraet hat einen Fuehlerschluss bei der angegebenen Zone erkannt. Es wird Heizleistung angefordert, aber es erfolgt kein Temperaturanstieg.%CrLf%Verpolte oder kurzgeschlossene Fuehler. Heizung oder Heizschlauch defekt. Fehler in Elektrik.%CrLf%Die Folge dieses Alarms ist ein Abschalten der Heizung!
+1897;Bei der internen Selbstoptimierung des Temperiergeraets ist ein Fehler aufgetreten.
+1898;Fuer genannten Schalter ist keine Kontrolle aktiv, jedoch meldet er keine Nullstellung an die Steuerung zurück.%CrLf%Falscher Schaltzustand (Signal 1, erwartet 0) oder (Signal 0, erwartet 1).%CrLf%
+1899;Der Sollwert fuer dieses Geraet liegt durch Multiplikation mit Override ausserhalb des gueltigen Bereichs.
+1900;Parameter [SOM].simulateEndpointMapping muss unter RTX auf 0 stehen (deaktiviert)
+1901;Beide genannten Eingaenge wurden von der SPS gesetzt, dies ist ein ungueltiger Zustand.
+1902;Es wurde die Motorhaltebremse extern geoeffnet.%CrLf%Mit geoeffneter Bremse ist es nicht moeglich die Antriebe zuzuschalten.
+1903;Das Makro SETTRACKINGMODE darf nur in Railtracking-Anlagen verwendet werden.
+1904;Es wurde versucht in einen bereits vollen Eingangsspeicher einen neuen Karossendatensatz zu schreiben
+1905;Von der Firmware wurde ein schwerer Fehler der Klasse 3 abgesetzt. Die Steuerung muss daraufhin gestoppt werden.
+1906;Die Steuerung erhält von der Stationsteuerung das Signal zum erneuten Anstarten des Programms während das Programm läuft
+1907;Eine Farbe in der MultK-Tabelle darf nicht aus zwei gleichen Komponenten bestehen
+1908;Es wird versucht ein Ventil zu öffnen, obwohl ein anderes der genannten Ventile geöffnet oder der Schlitten der Lineareinheit nicht angedockt ist. Dieses Ventil kann nur geöffnet werden, wenn die anderen Ventile geschlossen sind und die Lineareinheit angedockt ist.
+1909;Beim Vorgang an- oder abdocken ist ein Timeoutfehler aufgetreten. Die Lineareinheit hat also zu lange in einem Übergangszustand verharrt.
+1910;Der Geschwindigkeitswert ist nicht auf 100%. Dies führt zu einem groesseren Farbverbrauch der in einem Fehler beim PushOut resultieren kann.
+1911;Das eingestellte PushOutVolumen wurde ueberschritten
+1912;Beim Verlauf der Speicherroutine wurde ein Ueberelauf im dynamischen Speicherelement festgestellt.
+1913;Interner Zaehler für Trigger ist ausserhalb des Bereiches.
+1914;Betreffende Maschine sollte gestartet werden, jedoch war noch ein anderes Programm aktiv.%CrLf%Vermutlich zu geringer Taktabstand.
+1915;Die Foerdererfreigabe wurde vom Anwender per Schluesselschalter gebrueckt.
+1916;Es wurde ein Hauptnadelfeedback (FeedbackType im process.cfg) ausgewählt, zu dem im process.cfg kein Hardwareendpunkt angelegt wurde (FeedbackSensorOn,FeedbackSensorOff bei EcoGun, FeedbackSensor,FeedbackSensorFault bei EcoBell)
+1917;Beim Verarbeiten der angegebenen cfg-Datei ist ein Fehler aufgetreten. Ein Baustein hat das Lesen negativ quittiert.
+1918;Das konfigurierte Maß des ActionPointOffset in BCU.cfg liegt vor Zonenstart, dies ist real nicht moeglich.%CrLf%Fehler in der Konfiguration.
+1919;Die Steuerung wurde neu gestartet und es befindet sich eine Karosse in der Zone, deshalb kann der Foederer nicht zugeschaltet werden, Kollisionsgefahr.
+1920;Die aktuelle PaintPosition aus dem Befehl "WAIT_PAINTPOSITION" ist kleiner als die Vorangegangene, deshalb ist es nicht möglich an diesem Befehl die Hauptnadel automatisch zu schalten. Option switchGunAtWaitPaintPos aktiviert.
+1921;Funktion RcuResetMessage wird mit einer ungueltigen Meldungsklasse aufgerufen. Zulaessig sind nur Infos und Warnungen.
+1922;Der im mfb.cfg hinterlegte ServoName passt zu keinem konfigurierten Antrieb im sercosx.cfgr
+1923;Beim Zugriff auf ein Brushsollwert wurde festgestellt, dass es ein falscher Datentyp verwendet wurde. Erlaubt sind INT, DINT, REAL.
+1924;Beim Zugriff auf ein IdleBrushsollwert wurde festgestellt, dass es ein falscher Datentyp verwendet wurde. Erlaubt sind INT, DINT, REAL.
+1925;Es wurde in einem Sollwert für den genannten Brush eine REAL-Zahl verwendet. Erlaubt sind nur INT/DINT-Zahlen.
+1926;Aktuelle Achsposition weicht um mehr als der konfigurierte Wert von der Sollposition ab.
+1927;In der Typzuordnung ist zum entsprechenden Typen keine Projektname und/oder kein Name des Programms definiert
+1928;Bei der Berechnung der Ventilschaltzeit werden mehrere Zeiten (konfigurierte Zeit, Buslaufzeit, Lackflugzeit) herangezogen. Die errechnete Schaltzeit darf nicht grösser als die Prewarnzeit und kleiner 0 sein.
+1929;Das Quittieren von Meldungen ist nur aus der Funktionseinheit SCU erlaubt
+1930;Die Bezeichnung des ProfibusMaster in der Datei "profibusmaster.cfgr" muss eindeutig sein und name="ProfibusMaster" lauten.
+1931;Die Bezeichnung des ProfibusSlave in der Datei "profibusslave.cfgr" muss eindeutig sein und name="ProfibusSlave" lauten.
+1932;Es wurde versucht, den angegebenen Kanal zum Lackieren zu reservieren. Dieser Kanal hat jedoch nicht den Status Farbe. Lackieren nicht möglich.
+1933;Es wurde versucht genannte Handachse zu mastern, ohne dass beanstandete Achse in Referenzposition steht.%CrLf%Es müssen alle Handachsen in Folge gemastert werden. Achse 4  -->  5   -->  6. 
+1934;Die Zielposition fuer das automatische Mastern ergibt sich aus "aktueller Position" + "masteringdelta" aus der Roboterkonfiguration. Diese liegt jedoch ausserhalb der Achseendlage.
+1935;Betreffender Antrieb hat den mechanischen Achsendschalter betätigt.
+1936;Für die Freihalteluft ist ein Timeout parametriert nach dessen Ablauf die Freihalteluft automatisch abgeschaltet wird um den Luftverbrauch zu reduzieren.%CrLf%Falls im Process.cfg der Parameter [BlockingAir]ActiveTime vorhanden ist wird der dort hinterlegte Wert verwendet. Ist dieser Parameter nicht vorhanden wird die Freihalteluft nach 60min abgeschaltet.
+1937;Die Verduennerventile im Reinigungsgeraet dürfen nur geoeffnet werden wenn sich die Bell / Gun im Reinigungsgeraet befindet. Anderenfalls kann der Verduenner unkontrolliert in die Kabine spritzen.
+1938;Sensor Check fehlgeschlagen Kanal 1
+1939;Sensor Check fehlgeschlagen Kanal 2
+1940;Es wurden keine Absolutdaten mit RECEIVE(Vision, Data) eingelesen, bevor versucht wurde mit %CrLf%RECEIVE(VISION_REL, Data) Relativdaten einzulesen.
+1941;- Kollision des Applikators mit einem festen Gegenstand%CrLf%- Kabelbruch des Kollisionssensors%CrLf%- Mechanische Belastung übersteigt die Haltkraft des Kollisionsschutzes
+1942;Der Parameter numberOfPoint im  Makro BK_FINISH stimmt nicht mit der Zahl der Bahnpunkte bzw. Messpunkte der Bahn überein.
+1943;Die Punktnummer im Makro BK_CORR wurde schon verwendet.
+1944;Für den Profinetslave muss im Parameter FX775A:0/PNIO:0/PIOSLAVE:0 ein Name angegeben sein.
+1945;Kolbenwechsel im Teachprogramm gesetzt, obwohl der manuelle Kolbenwechsel nicht in der Process.cfg-Datei freigegeben ist.
+1946;Abwahl des angegebenen Kolbens, während dieser gerade im Status Lackieren war.
+1947;Es ist keine Kolbenfreigabe vorhanden.
+1948;Die parametrierte Mindestschaltzeit ist kleiner gleich der Vorwarnzeit. Als Mindestschaltzeit wird die Vorwarnzeit gesetzt.
+1949;Es wurden mehr Lackiermengen verwenden, wie als für den Vordruck lernbar definiert wurden.
+1950;In der Process.cfg wurde das automatische Vordrucklernen aktiviert und kein Drucksensor dazu angegeben. -> automatisches Vordrucklernen ausgeschaltet
+1951;Fehler im Teachprogramm. -> Möglicher Fehler beim Vordrucklernen
+1952;Die betreffende Lichtschranke meldet dass sie verschmutzt ist.
+1953;Benutzerinformation
+1954;Die angezeigten Ventile dürfen nicht gleichzeitig geöffnet werden
+1955;Lackierweg nicht geöffnet, oder keine Freigabe für Dosierantriebe von SPS
+1956;Gerät kann erst eingeschaltet werden wenn parametrierte Mindestdrehzahl erreicht wurde
+1957;Hauptnadel wurde in Visualisierung abgewählt
+1958;CO2-Kuehler defekt
+1959;Ventilverriegelung aktiv
+1960;Projektierungsfehler im Zeitprogramm
+1961;Es wird versucht die Lineareinheit abzudocken ohne vorher die Schnittstelle zu spülen
+1962;Schlitten nicht in Position
+1963;Schlitten soll angedockt werden. Das ist nicht möglich, da er nicht auf einer gültigen Position steht.
+1964;Luftversorgung ausgefallen und Lineareinheit steht unter Farbe
+1965;Betriebsbedingungen für Applikationsturm nicht gegeben
+1966;- Keine Netzwerkverbindung%CrLf%- Visualisierung nicht gestartet%CrLf%- Robotersteuerung laeuft nicht
+1967;Parameter der Schlauchkompensation nicht optimal eingestellt
+1968;Parametrierte Warnzeit ist abgelaufen
+1969;Parametrierte Alarmzeit ist abgelaufen
+1970;Ungueltige Parametrierung.
+1971;Projektierungsfehler in Robotersoftware.
+1972;- Keine Farbe mehr im angegebenen Sonderfarbsystem%CrLf%- Sonderfarbsystem wurde im Farbmischraum abgewählt
+1973;Manueller Eingriff
+1974;Achse ist nicht referenziert
+1975;Geschwindigkeitssollwert ist ausserhalb des gueltigen Bereichs
+1976;Druck im Dosierkolben zu hoch
+1977;Fehler im Zeitprogramm. 'OrderRun' und 'OrderMoveVolume' sind gleichzeitig gesetzt
+1978;Parameter im Konfigurationsfile nicht vorhanden
+1979;Fehler beim Zugriff auf den dynamischen Speicher.%CrLf%Steuerungsinternes Problem.
+1980;Strobesignale von SPS entsprechen nicht den Konventionen
+1981;Karosse kann nicht eingebucht werde (Karossendaten ungültig oder FiFo voll)
+1982;Es kann eine Karosse nicht im FiFo gefunden werden
+1983;FiFo ist voll, es kann keine weitere Karosse eingebucht werden
+1984;Type- oder Farbinformation nach Download ungueltig
+1985;Signalreferenz kann nicht ermittelt werden
+1986;Fehler beim Öffnen eines Zeitprogrammfile (Binärfile) 
+1988;Kontrollsummenfehler des Zeitprogrammfile (Binärfile)
+1989;Initialisierungsfehler bei Systemhochlauf
+1990;Zeitprogramm ist nicht passend zur Projektkonfiguration
+1991;Zeitprogramm nicht vorhanden
+1992;Version des Zeitprogramms kann nicht geladen werden
+1993;Zeitprogramm kann nicht gestartet werden, da eine benötigter Kanal belegt ist 
+1994;Name des Zeitprogramm zu lang
+1995;Infofile aller geladenen Zeitprogramme kann nicht geöffnet werden (eventuell schreibgeschützt)
+1996;Im Zeitprogramm sind Schritte auskommentiert
+1997;Im letzten Schritt des Zeitprogramms ist ein FixposGo-Signal aktiviert und das Programm soll mit der Starteigenschaft ' Signale am Endes nicht zurücksetzten' gestartet werden
+1998;Zeitprogramm Parametrieungsfehler
+1999;Zugriffsfehler auf Datei
+2000;Info, dass ein Zeitprogramm von SFC gestartet wurde
+2001;Schaltzeit des Gerätes ist größer als die Prewarntime. Damit kann die Schaltzeit des Gerätes nicht kompensiert werden
+2002;Farbzuschlag nicht definiert
+2003;Overridewert ungültig
+2004;Fehlerhafte Parametrieung der Farbzuordnung
+2005;Fehlerhafte Parametrieung der Farbwechselzuordnung
+2006;Fehlerhafte Parametrieung der Mehrkomponententabelle
+2007;Parametrieungsfehler der Typzuordnung
+2008;Die Degradeanforderung der Stations-SPS war nicht eindeutig. Die Steuerung konnte nicht in den Degrademode geschaltet werden.
+2009;Die Degradeanforderung der Stations-SPS war ausserhalb des im File BCU.cfg definierten Bereichs.
+2010;Es wurde eine Degradeanforderung von der Stations-SPS an Rpc gesendet. In Rpc ist der Wechsel in den Degrademode nicht freigegeben. Der Parameter EnableDegradeMode in der Sektion [DegradeMode] in der Datei BCU.cfg hat den Wert False.
+2011;Beim Wechsel in der Degrademode wurde in der Steuerung ein ungültiges Kommando erkannt. Der Wechsel in den Degrademode wurde nicht ausgeführt.
+2012;Es wurde versucht eine Fixpositionsfahrt aus einem Zeitprogramm zu starten während keine Antriebsfreigabe für die Roboterantriebe vorhanden war.
+2013;Die angeforderte Fixpositionsfahrt kann nicht gestartet werden, da die Nummer ausserhalb eines gültigen Bereichs liegt.
+2014;Es wurde versucht eine Fixpositionsfahrt in Betriebsart Hand über die Visulaisierung zu starten während keine Antriebsfreigabe für die Roboterantriebe vorhanden war.
+2015;Es wurde versucht während einer Motinguardsequenz eine Fixposition zu starten während keine Antriebsfreigabe für die Roboterantriebe vorhanden war.
+2016;Es wurde versucht während einer Bremsentestsequenz eine Fixpsotionsfahrt zu starten während keine Antriebsfreigabe für die Roboterantriebe vorhanden war.
+2017;Es wurde versucht während einer Diagnosefahrt eine Fixpsotionsfahrt zu starten während keine Antriebsfreigabe für die Roboterantriebe vorhanden war.
+2018;Die von SCU angeforderte Betriebsart Geist wurde nicht zurück gemeldet.
+2019;Es wurde von der Stations-SPS ein erneutes Signal Zonenstart empfangen, obwohl der aktuelle Skid/Warenträger noch nicht den Zonestartbereich verlassen hat.
+2020;Es wurde ein Signal Zonenstart von der Stations-SPS empfangen ohne verheriges Senden von Karossendaten.
+2021;Es wurde versucht ein Programm zu starten. Die Bewegungssteuerung hat innerhalb einer konfigurierbaren Zeit keine Rückmeldung: Motionactive oder Motionerror gegeben.
+2022;Es wurde versucht ein Konturprogramm zu starten und der Roboter war nicht in Grundstellung bzw. hat keine Grundstellung an BCU gemeldet.
+2023;Es wurde versucht ein Konturprogramm zu beauftragen obwohl die Robotersteuerung nicht in Betriebsart Automatik ist.
+2024;Die Fördererstopposition für den aktuellen Typ wurde überschritten bevor das Programm gestartet wurde. Ein Start des Programms für diese Karosse ist nicht mehr möglich.
+2026;Es wurde versucht ein Programm zu starten obwohl die Brushdateien nicht korrekt geladen wurden.
+2027;Der Wechsel in den Degrademode wird von der Bewegungssteuerung nicht quittiert. Die Steuerung hat nicht in den Degrademode gewechselt.
+2028;Es wurde versucht ein Konturprogramm vor Erreichen der Programmstartposition zu starten.
+2029;Es wurde versucht ein Programm durch das Kommando Programmabbruch abzubrechen. Die zulässige Zeit wurde überschritten.
+2030;Es wurde von der Stations-SPS das Signal Karosse einfördern empfangen obwohl der Stationsbetrieb Tracking parametriert ist.
+2031;Es wurde von der Stations-SPS das Signal Karosse in Position empfangen obwohl der Stationbetrieb Tarcking parametriert ist.
+2032;Es wurde von der Stations-SPS das Signal Karosse ausfördern empfangen obwohl der Stationsbetrieb Tracking parametriert ist.
+2033;Fehler bei Plausibilitätsprüfung, für die vorherige Karosse wurde kein Strobe "Start Vorbereitung" empfangen.
+2034;Es wurde versucht ein Karossendatensatz mit einer schon vorhandenen BodyID einzufügen. Interner Fehler.
+2035;Die Synchronisierung der Fördererposition in der Zone erfolgte zu spät.
+2036;Es wurde ein Synxchronisierungssignal von der Stations-SPS empfangen und kein Skid/Warenträger war in dem dafür vorgesehenen Bereich.
+2037;Es wurde ein Synxchronisierungssignal von der Stations-SPS empfangen und kein Skid/Warenträger war in der Zone.
+2038;Es wurde ein Synchronisierungssignal von der Stations-SPS empfangen, obwohl dafür keine Freigabe in BCU.cfg parametriert war.
+2039;Es wurde ein Synchronisierungssignal von der Stations-SPS empfangen obwohl das zugehörige Programm bereits läuft.
+2040;Es wurde eine Programmnummer von der Stations-SPS übergeben, die in der Typzuordnungstabelle nicht parametriert ist.
+2041;Es wurde die Typnummer: 0 von der Stations-SPS empfangen.
+2042;Es wurde eine Farbnummer von der Stations-SPS übergeben, für die in der Farbzuordnungstabelle die Ventilnummer nicht parametriert ist.
+2043;Es wurde eine Farbnummer von der Stations-SPS übergeben, für die in der Farbzuordnungstabelle die Farbgruppe nicht parametriert ist.
+2044;Es wurde die Farbnummer: 0 von der Stations-SPS empfangen.
+2045;Es konnte für die empfangene Typnummer kein Projektname in der Typzuordnungstabelle ermittelt werden.
+2046;Es konnte für die empfangene Farbummer kein externer Farbcode in der Farbzuordnungstabelle ermittelt werden.
+2047;Es konnte für die empfangene Farbnummer keine Komponentennummer aus der Mehrkomponententabelle ermittelt werden.
+2048;Es wurde eine Farbnummer von der Stations-SPS übergeben, für die in der Farbzuordnungstabelle die Farbgruppe nicht parametriert ist.
+2049;Es wurde eine Farbnummer von der Stations-SPS übergeben, für die in der Farbzuordnungstabelle das Mischungsverhältnis nicht parametriert ist.
+2050;Es wurde eine Farbnummer von der Stations-SPS übergeben, für die in der Mehrkomponententabelle eine unzulässige Anzahl von Komponenten ermittelt wurde.
+2051;Es konnte für die empfangene Typnummer keine Fördererstopposition aus der Typzuordnungstabelle ermittelt werden. 
+2052;Es konnte für die empfangene Farbnummer keine Supplygroupnummer aus der Farbzuordnungstabelle ermittelt werden. 
+2053;Es wurde für die empfangene Farbnummer ein unzulässiger Wert für die Supplygroupnummer aus der Farbzuordnungstabelle ermittelt.
+2054;Es wurde von der Stations-SPS die Farbnummer einer Sonderfarbe empfangen. Für derartige Farben muß die Ventilnummer zusätzlich übertragen werden. Die Ventilnummer besitzt keinen gültigen Wert. Die für Sonderfarben verfügbaren Ventile sind  in der Datei BCU.cfg parametriert.
+2055;Es wurde von der Stations-SPS die Farbnummer einer Sonderfarbe empfangen. Für derartige Farben muß die Ventilnummer zusätzlich übertragen werden. Die Ventilnummer besitzt den Wert 0.
+2056;Es wurde versucht eine Sonderfarbe in Simulation zu verwenden. Dies ist im derzeitigen Softwarestand nicht möglich.
+2057;Es konnte keine gültige Skidlänge aus der Typzuordnungstabelle ermittelt werden.
+2058;Der Sid / Warentraeger hat die Fördererstopposition erreicht und der Roboter befindet sich nicht in Vorposition.%CrLf%Die Vorbereitung des Roboters ist noch nicht beendet.%CrLf%Die Vorbereitung des Roboters ist beendet und das Konturprogramm wurde noch nicht gestartet.%CrLf%
+2059;Der Sid / Warentraeger hat die Fördererstopposition erreicht und die Vorbereitung des Roboters ist noch nicht beendet.
+2060;Der Skid / Warentraeger hat die Programmstartpsotion erreicht und die Stations-SPS gibt keine Freigabe zum Starten des Konturprogramms.
+2061;Der Skid / Warenträger hat die Foerdererstopposition überschritten. Der Roboter wurde nicht beauftragt. 
+2062;Das Konturprogramm konnte noch nicht gestartet werden, da die Brushdateien fuer die aktuelle Karosse nicht korrekt geladen wurden.
+2063;Es wurde der Strobe Start Vorbereitung von der Stations-SPS empfangen, obwohl dieser von der Steuerung nicht erwartet wird.
+2064;Es wurde der Strobe Start Hauptkanal von der Stations-SPS empfangen, obwohl dieser von der Steuerung nicht erwartet wurde.
+2065;Es wurde versucht ein Datensatz im Karossenspeicher mit Hilfe der BodyID zu finden und anschliessend zu löschen.%CrLf%Der Datensatz konnte nicht gefunden werden. Interner Steuerungsfehler.
+2066;Es wurde versucht ein Datensatz im Karossenspeicher mit Hilfe der BodyID zu löschen. An den Baustein wurde die BodyID %CrLf%mit Wert 0 übergeben. Interner Steuerungsfehler.
+2067;Es wurde versuche ein Datensatz mit Hilfe der BodyID im Karossenspeicher zu finden. Die BodyID war in diesem Speicher mehrfach vorhanden. Interner Steuerungsfehler.
+2068;Es wurde versucht einen Datensatz mit Hilfe der BodyID im Karossenspeicher zu finden. Der Datensatz konnte nicht gefunden werden.
+2069;Es wurde versucht die Fixposition InGunbox anzufahren, obwohl sich der Roboter nicht in der Position UeberGunbox befand
+2070;Es wurde versucht aus der Position InGunbox direkt nach Home zu fahren.
+2071;Es wurde versucht eine Fixpsoitionsfahrt zu starten während sich eine Karosse in der Zone befindet. In dieser Situation sind nur Fahrten nach Spülposition und Grundstellung möglich.
+2072;Es wurde versucht eine Fixposition ausser der Spuel- oder Grundstellung anzufahren. Das ist bei einer Karosse in der Zone nicht möglich.
+2073;Es wurde versucht von einer Fixposition in eine andere zu fahren ohne vorher zur Grundstellung zu fahren.
+2074;Es wurde versucht von Abovebox eine andere Fixposition anzufahren. Es sind nur die Fixpositionen InBox und Grundstellung möglich.
+2075;Es wurde versucht von Inbox eine andere Fixposition anzufahren. Es sind nur die Fixpositionen AboveBox und Grundstellung möglich.
+2076;Es wurde versucht von Inbox eine andere Fixposition anzufahren. Es ist nur die Fixpositionen AboveBox möglich.
+2077;Es wurde versucht in der Betriebsart T2 mit Material eine Fixposition aus einem Zeitprogramm heraus zu starten. Das ist aus Sicherheitsgründen nicht möglich.
+2078;Die Sterung hat nach Clear Fifo ein Reinitialisieren der Karossendaten bei der Stations-SPS angefordert. Es wurde kein Reinitialisieren durchgeführt. 
+2079;Bei Mehrkomponentenfarben darf in der Farbzuordnungstabelle beim Farbcode der gemischten Farbe keine Supplygroup - Nummer angegeben werden. Diese darf nur bei den Komponenten eingetragen werden. Wird die Supplygroup - Nummer auch bei der gemischten Farbe angegeben führt dass zu diesem Fehler.
+2080;Initialisierung der Pushoutfunktionen fehlgeschlagen.
+2081;Auf Grund eines Fehlers ist das Referenzieren fehlgeschlagen.
+2082;Verfahren nicht moeglich, so lange das Referenzieren nicht beendet ist.
+2083;1)Der Controller wurde noch nicht referenziert.%CrLf%2)Der Controller wurde bereits referenziert, aber beim Hochlauf war keine Busverbindung zum SPC200 vorhanden und es konnte so keine Referenzprüfung stattfinden.
+2084;Fehler beim Auslesen einer PushOut-Lerndatei.
+2085;Zeitueberschreitung beim Schreiben auf den Parameterkanal.
+2086;Der Ordercode ist ungueltig.
+2087;Kein Lesezugriff auf SPC200 Controller.%CrLf%- Bussystem nicht bereit.%CrLf%- Defekt am Controller
+2088;Ungueltige Zielposition.
+2089;Zeitueberschreitung Quittierung Fahrauftrag.
+2090;Zielposition wurde nicht in der geforderten Zeit erreicht.
+2091;Die zurueckgemeldete Position entspricht nicht der geforderten Position.
+2092;Der Parameter fuer das Toleranzfenster ist zu gross.
+2093;Der Controller meldet innerhalb der geforderten Zeit keine Betriebsbereitschaft.
+2094;Referenztabellen sind ungleich.
+2095;Der Controller ist nicht bereit.
+2096;Die externe Fahrfreigabe fehlt.
+2097;Referenzieren noch nicht abgeschlossen.
+2098;Ueberlauf Lernspeicher.
+2099;Ungueltige Ventilnummer.
+2100;Keine Freigabe.
+2101;Ungueltige Achsnummer.
+2102;Ungueltige Fehlerklasse.
+2103;Ungueltige Fehlernummer.
+2104;Ungueltige Zusatzinformation.
+2105;Parameter ist schreibgeschützt.
+2106;Untere oder obere Wertgrenze wurde ueberschritten.
+2107;Auftragskennung unzulaessig.
+2108;Das gewaehlte Programm ist bereits in Task A (B) aufgelegt und kann deshalb nicht in Task B (A) aufgelegt werden.
+2109;Unbekannter Fehler beim Zugriff auf den PKW.
+2110;Interner Systemfehler oder Systemspeicherfehler.
+2111;Ein anliegender Fehler konnte nicht quittiert werden.
+2112;Fehler am ersten Messsystem.
+2113;Fehler am zweiten Messsystem.
+2114;Fehler am ersten AIF.
+2115;Fehler am zweiten AIF.
+2116;Fehler am ersten CP-Modul.
+2117;Fehler am zweiten CP-Modul.
+2118;Fehler am AIF Strang.
+2119;Defekte bzw. unzulaessige Baugruppe auf dem angegebenen Steckplatz.
+2120;Istkonfiguration ungleich Sollkonfiguration.
+2121;Initialisierungsfehler.
+2122;Firmware von Basisgeraet und Subcontroller-Baugruppe sind nicht kompatibel.
+2123;Anwenderprogramm Nr %3 beschaedigt.
+2124;Positionsliste beschaedigt.
+2125;Konfigurationsdaten beschaedigt.
+2126;Systemdaten beschaedigt.
+2127;Dynamische Identifikationsdaten beschaedigt.
+2128;Statische Identifikationsdaten beschaedigt.
+2129;Fehlerhafte PROFIBUS-Konfigurationsdaten.
+2130;Fehlerhafte INTERBUS-Konfigurationsdaten.
+2131;Fehlerhafte CANBUS-Konfigurationsdaten.
+2132;Referenzposition ist ungueltig.
+2133;Kurzschluss an E und A oder Unterspannung an der Baugruppe.
+2134;Kurzschluss an E und A Baugruppe.
+2135;Lastspannung fuer Feldgeraete und Proportionalventil zu niedrig.
+2136;Fehler an Analogeingangs-Baugruppe
+2137;Fehler an der V.24 Schnittstelle
+2138;Fehler an Subcontroller-Baugruppe.
+2139;Fehler an Schrittmotor Baugruppe.
+2140;Ein CP-Modul eines AIF-Strangs hat Unterspannung an der Lastspannung festgestellt.
+2141;Startprogramm nicht vorhanden.
+2142;Unterprogramm nicht vorhanden.
+2143;NC-Satz ist nicht vorhanden.
+2144;Arithmetischer Ueberlauf bei einem Register.
+2145;NC-Satz: Satzueberlauf.
+2146;Wandlung fuer diesen Sollwert findet bereits statt.
+2147;Der programmierte Sollwerteingang ist nicht vorhanden.
+2148;Registerindex ist ungueltig.
+2149;Der Verschleisszaehler hat die Verschleissgrenze erreicht.
+2150;Der Verschleisszaehler hat die Warngrenze erreicht.
+2151;Sammelstoerung
+2152;Die Dynamikueberwachung hat angesprochen.
+2153;Der Anlaufstrom ist zu hoch.
+2154;Der Stromistwert ueberschreitet die Statikschwelle (I-Stat).
+2155;Spannungsistwert unterschreitet die Statikschwelle (U-Min).
+2156;Der Selbsttest ist fehlgeschlagen.
+2157;Es gab eine Zeitueberschreitung beim Ausfuehren des Selbsttests.
+2158;Der Istwert ist ausserhalb der Toleranz.
+2159;Der Geraetesollwert liegt ausserhalb des zulaessigen Bereichs.
+2160;Der Istwert naehert sich der Statikschwelle.
+2161;Hochspannung wurde ueber die Visu oder im process.cfg abgewaehlt.
+2162;Hardwarefehler am CO2-Sensor.
+2163;Die Hauptnadel meldet bereits -offen-.
+2164;Die Hauptnadel meldet bereits -geschlossen-.
+2165;Das Geraet hat die maximale Alarm Zykluszeit ueberschritten.
+2166;Das Geraet hat die minimale Alarm Zykluszeit unterschritten.
+2167;Die Statusueberwachung hat angesprochen. Molch ist nicht am Initiator angekommen.
+2168;Die Statusueberwachung hat angesprochen. Der Molch hat den Initiator nicht verlassen.
+2169;Loslaufueberwachung vom Molch angesprochen. Molch ist zu langsam losgelaufen.
+2170;In der parametrierten Zeit gab es nach dem Einschalten des Motors keine Rueckmeldung, dass der Motor laeuft.
+2171;Das Geraet wurde eingeschaltet, aber es gibt keine Ruechmeldung -ein-.
+2172;Der Initiator meldet eine Kollision.
+2173;Die angegebene Datei konnte nicht verschoben werden.
+2174;Zeitueberschreitung beim Verschieben der angegebenen Datei.
+2175;Die angegebene Datei kann nicht verschoben werden, da die Zieldatei bereits existiert.
+2176;Die angegebene Datei konnte nicht verschoben werden, da im Zielpfad nicht genug Speicherplatz vorhanden ist.
+2177;Es ist ein unbekannter Fehler beim Verschieben der angegebenen Datei aufgetreten.
+2178;Die uebergebene Konfigurations Datei konnte nicht kopiert werden.
+2179;Das angegebene Sercos-Kommando konnte nicht ausgefuehrt werden.
+2180;Das angegebene Sercos-Kommando konnte nicht geloescht werden.
+2181;Sercos-Kommandoausfuehrung war nicht erfolgreich.
+2182;Die berechnete Einschaltverzoegerung liegt ausserhalb des zulaessigen Bereichs.
+2183;Die berechnete Ausschaltverzoegerung liegt ausserhalb des zulaessigen Bereichs.
+2184;Der Druckwert am Materialdruckregler hat die obere Warngrenze überschritten.
+2185;Die Druckluftversorgung am Materialdruckregler hat die untere Alarmgrenze überschritten.
+2186;Die Druckluftdifferenz zwischen Soll- und Istdruck am Materialdruckregler hat die obere Alarmgrenze überschritten.
+2187;Der Materialdruck am Materialdruckregler hat die untere Warngrenze unterschritten.
+2188;Der Materialdruck am Materialdruckregler hat die obere Warngrenze überschritten.
+2189;Der Materialdruck am Materialdruckregler hat die untere Alarmgrenze unterschritten.
+2190;Die Materialdruckdifferenz zwischen Soll- und Istdruck am Materialdruckregler hat die obere Alarmgrenze überschritten.
+2191;Der Sollwert des Applikationsdrucks ist ausserhalb des parametrierten Bereichs.
+2192;Der in der Process.cfg-Datei angegebene Temperatursensor wurde im Projekt nicht gefunden.
+2194;Soll-Ist-Differenz der Materialtemperatur fehlerhaft.
+2195;Die Materialtemperatur ist ausserhalb des parametrierten Bereichs.
+2196;Differenz erreicht eingestellten Grenzwert.%CrLf%Stellgroesse wird abgeschaltet.
+2197;Ein oder mehrere Alarme wurden vom Temperiergeraet ausgeloest.
+2198;Das Temperiergerät meldet den angegebenen Alarm.
+2199;Motorschutzschalter hat ausgeloest.%CrLf%Falsches Drehfeld oder Phase fehlt.
+2200;Mindestniveau nicht erreicht.%CrLf%Befuellung aktiv.
+2201;Kein Durchfluss bzw. keine Stroemung im Temperiergeraet (nur bei Geraeten mit Stroemungsueberwachung).%CrLf%Absperr-Ventil bzw. Kugelhahn Vorlauf oder Ruecklauf geschlossen.
+2202;Vorlauftemperatur erreicht eingestellten Grenzwert.%CrLf%Stellgroesse wird abgeschaltet.%CrLf%-> Folge: Heizung schaltet ab.
+2203;Ruecklauftemperatur erreicht eingestellten Grenzwert.%CrLf%Stellgroesse wird abgeschaltet.
+2204;Filmtemperatur erreicht eingestellten Grenzwert.%CrLf%Stellgroesse wird abgeschaltet.%CrLf%-> Folge: Heizung schaltet ab.
+2205;Aktueller Regelfuehler defekt.%CrLf%Externer Temperaturfuehler aktiviert, jedoch nicht angeschlossen.
+2207;Bei der Ueberwachung von Ein- bzw. Umschaltbefehl an das Endgeraet oder den Teilnehmer und dessen Rueckmeldung ist eine Zeitueberschreitung aufgetreten. Soll- und Ist-Zustand sind nicht identisch.
+2208;Das Temperiergeraet befindet sich im Hand-Betrieb. Die Temperaturregelung kann so nicht von der Steuerung erfolgen.
+2209;Die angegebene Sicherung ist gefallen.
+2210;Es konnten nicht alle Zeitprogramme geladen werden.
+2211;Der angegebene Molch hat während dem Laden des zugehörigen Kolbens den Quellbahnhof verlassen.
+2212;Der in der Process.cfg-Datei angegebene Drucksensor wurde im Projekt nicht gefunden.
+2213;Der in der Process.cfg-Datei angegebene Durchflusssensor wurde im Projekt nicht gefunden.
+2214;Der geforderte Sollwert wird vom Prozess und der zugehörigen Kalibrier-Tabelle nicht abgedeckt.%CrLf%- falsche Kalibrier-Tabelle ausgewählt oder ungültigen Sollwert zugeordnet%CrLf%- Kalibrierung nicht oder nicht erfolgreich durchgeführt
+2215;Abweichung zwischen Soll- und Istposition
+2216;Alle Kanäle deaktiviert
+2217;Steuerungsinternes Problem.
+2218;Undichtheit im System
+2219;Flamme konnte innerhalb der konfigurierten Zeit nicht gezündet werden
+2220;Dockingunit konnte Zielposition nicht innerhalb der konfigurierten Zeit erreichen
+2221;Zerstäuber defekt lt. Meldung
+2222;Der Typ des Luftmengenreglers in der process.cfg wurde falsch parametriert.
+2223;Im Parameter "PressureSensorNameBehindPump" oder "PressureSensorNameBeforePump" der process.cfg wurde ein falscher Gerätename für den Drucksensor konfiguriert
+2224;Im Parameter "AssignedPumpName"  der process.cfg wurde ein falscher Gerätename für die Dosierpumpe konfiguriert
+2225;Im Parameter "PressureRecordingDelay"  der process.cfg wurde ein ungültiger Wert parametriert.
+2226;Im Parameter "InitialParamType"  der process.cfg wurde ein ungültiger Wert parametriert.
+2227;- Hardwarefehler (Drahtbruch)%CrLf%- Parametrierung fehlerhaft
+2228;Der Profinetslave befindet sich nicht im Status Datenaustausch. Ursachen: SPS kommuniziert nicht, falsche Slave Adresse, Drahtbruch zwischen SPS und EcoRPC, Steuerung ist nach Neustart noch nicht zur Kommunikation bereit. 
+2229;Meldung für interne Tests.
+2230;- Drahtbruch?
+2231;Kurzschluss der beiden Kontakte am Reinigungsgeraet.
+2232;Der Kippmechanismus ist durch einen Prozessvorgang belegt, z.B. Spülen. 
+2233;Die Schablone wurde eingeschaltet, aber es erfolgt keine Rueckmeldung, dass die Schablone dreht.%CrLf%- Veraenderte Pneumatik-Einstellungen%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Sensor fuer Drehueberwachung fehlerhaft%CrLf%- Fehler Luftantrieb und/ oder Schwergaengigkeit Schablone
+2234;Die angegebene obere Drehzahl-Grenze fuer die Schablone wurde ueberschritten.%CrLf%- Veraenderte Pneumatik-Einstellungen%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Sensor fuer Drehueberwachung fehlerhaft%CrLf%- Fehler Luftantrieb und/ oder Leichtgaengigkeit Schablone
+2235;Die angegebene untere Drehzahl-Grenze fuer die Schablone wurde unterschritten.%CrLf%- Veraenderte Pneumatik-Einstellungen%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Sensor fuer Drehueberwachung fehlerhaft%CrLf%- Fehler Luftantrieb und/ oder Schwergaengigkeit Schablone
+2236;Unerlaubtes Betreten des Sicherheitsbereiches.
+2237;Schlüsseltaster zur Überbrückung des Begehschutzes wurde zu lange betätigt.
+2238;Der Totmann-Taster am PHG wurde für eine längere Zeit nicht betätigt. Die Sicherheitsfreigabe wurde daher entzogen.
+2239;Schlüsseltaster zur Überbrückung der Verfahrenstechnik wurde zu lange betätigt.
+2240;Ein NotAus-Taster im Sicherheitsbereich wurde betätigt.
+2241;Ventilation- und/oder Auswaschung wurden abgeschaltet. Die Anlage wurde daher in einen sicheren Betriebszustand überführt.
+2242;Die Brandmeldezentrale meldet einen Feueralarm. Die Anlage wurde daher in einen sicheren Betriebszustand überführt.
+2243;Die Sicherheits-SPS hat einen sicherheitsrelevanten Fehler erkannt und daher die Gesamtfreigabe entzogen.
+2244;Der Teachbetrieb wurde aktiviert (Schlüsselschalter auf T1 oder T2), aber es wurde kein Roboter auf dem PHG angewählt.
+2245;Leistung für Bewegungsantriebe nicht zugeschaltet.
+2246;Leistung für Prozessantriebe nicht zugeschaltet.
+2247;Für das Objekt auf dem Datencheck-Initiator liegen keine Daten vor.
+2248;Die Fixierung der Karosse wurde während der Bearbeitung gelöst. Die Anlage wurde daraufhin sofort gestoppt.
+2249;Die Daten konnten nach der Bearbeitung nicht an die Kopfstation zurückgemeldet werden (Kommunikationsproblem).
+2250;Der Förderer läuft ohne Fördererfreigabe. Möglicherweise liegt ein Programmierfehler in der Fördertechnik-Steuerung vor, oder die Fördertechnik befindet sich im Handbetrieb.
+2251;Im Teachprogramm werden Makros verwendet, die in der Steuerung nicht verarbeitet werden können.
+2252;Konfigurationsfehler
+2253;Die Teachpunkte P1, P2 und P3 liegen auf einer Linie. Die Berechnung einer Ebene aus den drei Punkten ist nicht möglich.
+2254;Der genannte Punkt ist nicht im Objektkoordinatensystem geteacht worden (sondern in Achsen oder in Welt)
+2255;Die Teachpunkte P1, P2 und P3 liegen ungefaehr auf einer Linie. Die Berechnung der Ebene durch die drei Punkte ist schlecht konditioniert.
+2256;Das Makro wurde aufgerufen, obwohl der entsprechende Schritt in  CONFIG3D nicht ausgewählt wurde.
+2257;Das Makro wurde aufgerufen ohne vorher mit INIT3DOBJECT die Referenzwerte definiert zu haben.
+2258;Das erstgenannte Makro wurde aufgerufen, obwohl das zweitgenannte noch nicht erfolgreich ausgeführt worden ist.
+2259;Differenz zwischen der Messung an der Referenzkarosse und der Messung an der aktuellen Karosse ist groesser als der in [RC.KINEMATIC:0.ObjMeasure] Limit  parametrierte Grenzwert.
+2260;Auf der programmierten Bahn kommt kein Signal vom Abstandssensor
+2261;Statusmeldung vom VMT-BK-System
+2262;Kommunikationsproblem zwischen Steuerung und VMT-Rechner
+2263;BK_START mit diesem Modus nicht möglich. Reserviert fuer Erweiterungen.
+2264;Förderer ist nicht anlaufbereit.
+2265;Fördererstop mit externer Ursache (Fördertechnik-Freigabe ist vorhanden).
+2266;Während der Nachwahl ist es zu einer Zeitüberschreitung gekommen. Mögliche Ursachen:%CrLf%- Programmierfehler in SPS%CrLf%- Keine Quittierung von mindestens einer Robotersteuerung.
+2267;In den Daten-Fifos befindet sich mindestens ein ungültiger Datensatz. Mögliche Ursache:%CrLf%- Datensatz nicht in Typ- oder Farbzuordnungstabelle eingetragen
+2268;Station kann nicht gestartet werden, da die Hochspannung nicht auf dem Bedienpult aktiviert wurde (Schlüsseltaster)
+2269;Typdaten konnten in Typzuordnungstabelle nicht gefunden werden.
+2270;Farbdaten konnten in Farbzuordnungstabelle nicht gefunden werden.
+2271;Station kann nicht gestartet werden, da der Brenner nicht auf dem Bedienpult aktiviert wurde (Schlüsseltaster)
+2272;Die Sonderfarbversorgung stellt derzeit die gewünschte Farbe nicht bereit. Der Datensatz konnte daher nicht vollständig generiert werden.
+2273;Der Geistbetrieb darf nicht gestartet werden, solange sich eine reale Karosse in der Zone befindet (Kollisionsgefahr).
+2274;Start des Geistbetriebes ist nur möglich wenn:%CrLf%- Station in Automatik%CrLf%- Station gestartet
+2275;Zum Start des Geistbetriebes muss mindestens ein Geist-Datensatz angewählt sein.
+2276;Der Zoneneinlauf darf nicht freigegeben werden, solange der Geistbetrieb aktiv ist (Kollisionsgefahr).
+2277;Während des Geistbetriebes wurde ein reales Objekt in die Zone eingebucht. Dies ist nicht zulässig. Mögliche Ursachen:%CrLf%- Programmierfehler in der SPS%CrLf%- Programmierfehler in der Fördertechnik-Steuerung%CrLf%- Manueller Eingriff in die Fördertechnik.
+2278;Das Anfahren von Fixpositionen ist nur in der Betriebsart "Hand" zulässig.
+2279;Die gewünschte Fixpositionsfahrt ist derzeit nicht möglich (Kollisionsgefahr).
+2280;Fixpositionsfahrt nicht zulässig, da die Türöffner sich nicht in Grundstellung befinden (Kollisionsgefahr).
+2281;Fixpositionsfahrt nicht zulässig, da sich eine Karosse in der Station befindet (Kollisionsgefahr).
+2282;- Die Kommunikation zum Roboter ist gestört (Feldbus)%CrLf%- Die Robotersteuerung ist gestoppt.
+2283;Die Robotersteuerung hat die übertragenen Daten als "ungültig" quittiert.
+2284;Die Robotersteuerung hat die übertragenen Kamera-Verschiebewerte als "ungültig" quittiert.
+2285;Beim Zuschalten der Roboter-Antriebe kam es zu einer Zeitüberschreitung.
+2286;Die Hochspannung kann nicht zugeschaltet werden, da die Sicherheitsfreigabe fehlt.
+2287;Die maximale Standzeit des Materials ist erreicht, der Roboter muss dringend gespült werden.
+2288;Der Bediener hat versucht den Roboter ausserhalb des Abwahlbereiches abzuwählen. Dies ist nicht zulässig, da sonst Kollisionsgefahr mit dem Förderer / anderen Robotern besteht.
+2289;Der Förderer wurde aufgrund der fehlenden Fördererfreigabe des Roboters gestoppt.
+2290;Die Robotersteuerung hat einen Fehler festgestellt, die ein Fortsetzen der Applikation unmöglich macht.
+2291;Die Roboterstation hat aufgrund eines internen Fehlers alle Roboter der Station gestoppt (Fehlerklasse "StopStation").
+2292;Der Bediener hat versucht den Roboter anzuwählen. Dies ist derzeit aber nicht möglich, weil der Roboter deaktiviert wurde:%CrLf%- Notbetrieb aktiv%CrLf%- Robotersteuerung ausgeschaltet%CrLf%- Roboter in Wartungsbox%CrLf%- ...
+2293;Das Anwählen des Roboters ist nicht zulässig, da die anderen Roboter bereits ein Programm aktiv haben.
+2294;Der Roboter kann keine Fixpositionsfahrt durchführen, da die Antriebe derzeit keine Leistung haben.
+2295;Der Roboter kann die gewünschte Fixpositionsfahrt nicht durchführen, da dieser auf abgewählt ist.
+2296;Der Bediener hat versucht eine neue Fixpositionsfahrt zu starten, während noch eine andere aktiv war.
+2297;Der Stationsstart ist nur dann möglich, wenn sich alle Roboter in Grundstellung befinden.
+2298;Der Spül-Controller des Roboters meldet einen Fehler. Mögliche Ursachen:%CrLf%- Ausfall Luftversorgung%CrLf%- Leckage am Roboter / Gehäuse nicht geschlossen%CrLf%- Spülvorgang aktiv nach Spannungsausfall
+2299;Fehlende Quittierung des Fördertechniksignals vom Roboter. Interner Fehler.
+2300;Die Rückmeldung des Druckschalters für das Lösungsmittelventil des Zerstäuberreinigungsgerätes ist unplausibel. Deswegen kann entweder die%CrLf%- Hochspannung nicht zugeschaltet%CrLf%- oder das Zerstäuberreinigen nicht durchgeführt werden.
+2301;Der Bediener hat versucht die Antriebe des Roboters im Teachbetrieb zuzuschalten (Totmann-Taster) während der Roboter abgwählt ist.
+2302;Die von der Robotersteuerung zurückgemeldeten Statistik-Daten konnten nicht zugeordnet werden - BodyID unbekannt. Möglicherweise war das Objekt bereits aus dem Speicher der SPS gelöscht worden.
+2303;Bei der Übergabe der Daten an die Robotersteuerung kam es zu einer Zeitüberschreitung.
+2304;Die Soll-Betriebsart der Robotersteuerung stimmt nicht mit der Ist-Betriebsart überein - interner Fehler.
+2305;Zu große Abweichung der Durchflussmenge.%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Sensor fuer Durchfluss/ Messzelle fehlerhaft%CrLf%- Material-/ Chargen-Aenderung
+2307;Jeder ICC-Kanal liest beim Steuerungshochlauf seine Farbdaten aus der Farbtabelle. Die zu einem ICC-Kanal gehörenden Farbdaten werden durch die Vesorgungsgruppe gekennzeichnet. Die Farbtabelle enthält keinen Eintrag mit der zum ICC-Kanal gehörenden Versorgungsgruppe.
+2308;Programmierfehler oder steuerungsinternes Problem.
+2309;Antriebe sind nicht eingeschaltet oder irgendeine Achse ist nicht referenziert.
+2310;Im Teachprogram wird zweimal hintereinander das Makro TORQUEMONITOR mit dem Parameter StartLogging aufgerufen. Es kann nur eine Aufzeichnug gestartet werden.
+2311;Es wurde das Makro TORQUEMONITOR mit dem Parameter StopLogging aufgerufen und vorher wurde keine Aufzeichnung mit dem Makro TORQUEMONITOR und dem Parameter StartLogging getstartet.
+2312;Die Aufzeichnung wurde mit dem Makro TORQUEMONITOR( StartLogging ,Axis1  ) für z.B. Achse 1 gestartet und soll mit TORQUEMONITOR( StopLogging ,Axis2  ) für z.B. Achse 2 beendet werden. Da die gewählten Achsen unterschiedlich sind, würden die Ergebnisse in einer falschen Datei gespeichert.
+2313;Die Ergebnisdatei konnte von der Steuerung nicht geladen werden. Die Daten werden nicht in der Datenbank gespeichert.
+2314;Die Ergebnisdatei mit den Schichtdickenmesswerten konnte vom Meßgerät nicht geladen werden. Es werden keine Daten in der Datenbank gespeichert.
+2315;Die Ergebnisdatei von der Steuerung konnte nicht geladen werden. Es werden keine Daten in der Datenbank gespeichert.
+2316;Die Ergebnisdatei mit den Schichtdickenmesswerten vom Messgerät konnte nicht gelsen werden. Es ist ein Formatproblem aufgetreten.
+2317;Die Tokens zur Synchronisierung der Messdateien sind in den Messdateien von Steuerung und Messgerät sind unterschiedlich. Es werden keine Daten in der Datenbank gespeichert.
+2318;In den Messdateien von Steuerung und Messgerät sind die Anzahl der Messpunkte unterschiedlich. Die Anzahl der Messpunkte muß gleich sein. Die Dateien passen nicht zueinander oder es ist ein Fehler im Ablauf eingetreten. 
+2319;In der EcoScreen Parameter-Datenbank ist die Farbe oder der Typ nicht definiert oder es wurde ein falscher Farb- oder Typcode von der Leitsteuerung übertragen. 
+2320;Die Anzahl der Messpunkte im aktuell abgefahrenen Programm entspricht nicht der Anzahl der Messpunkte im Referenzprogramm. Die Anzahl und Koordinaten der Messpunkte werden beim erstmaligen Abfahren des Teachprogramms in der Datenbank gespeichert.
+2321;Die Schichtdicke liegt für die angegebene Anzahl an Messpunkten über dem oberen Grenzwert
+2322;Die Schichtdicke liegt für die angegebene Anzahl an Messpunkten unter dem unteren Grenzwert
+2323;Während der Messung sind Messfehler aufgetreten. Der Abstand Messgerät zu Karosse ist zu groß, die Geschwindigkeit im Teachprogramm ist zu groß, es existiert ein Fehler im Ablauf oder Fehler in der Konfiguration. 
+2324;Fehler im Ablauf. Eine Einzelmessung wurde gestartet, obwohl keine Messreihe gestartet wurde.
+2325;Fehler im Teachprogramm. Es wurde zweimal eine Messreihe mit  ACTIVATE_PAC( OneShot) gestartet.
+2326;Es soll eine Messreihe gestartet werden und das Messgerät ist nicht in der richtigen Betriebsart.
+2327;Es soll eine Messreihe gestartet werden, aber es ist keine Laserfreigabe von der SPS vorhanden.
+2328;Die Nummer der Farbgruppe ist außerhalb des Bereichs.
+2329;Konfigurationsfehler
+2330;Es sind zu viele Messpunkte im Teachprogramm definiert. Interne Feldgrenzen würden überschritten werden. Messdaten gehen verloren.
+2331;In der Konfiguration ist der Simulationsmodus aktiviert.
+2332;Fuer die gewaehlte Kombination aus Typ und Bahn existieren keine Korrekturwerte. Eine Applikationsfahrt ist nicht moeglich.
+2333;Es gibt keine Korrekturwerte fuer die PunktNr im Makro BK_CORR.
+2334;Das Erreichen eines Messpunktes wird an das BK-System durch das Setzen eines Bits auf der Schnittstelle signalisiert. Waehrend dieses Bit noch gesetzt ist, soll bereits der naechste Messpunkt signalisiert werden.
+2335;Die Korrekturwerte vom BK-System sind absolut groesser als die zulaessigen parametrierten Grenzwerte.
+2336;Funktion reserviert fuer Erweiterungen.
+2337;Das Teachprogramm verwendet zwischen BK_START und BK_FINISH Bahnpunkte in Achskoordinaten. Diese koennen nicht als Bahnpunkte an das BK-System uebertragen werden.
+2338;Vom BK-System wird ein Fehlerstatus gemeldet.
+2339;Der konfigurierte Dateiname ist ungueltig.
+2340;Die konfigurierte Schrittzahl ist ungueltig.
+2341;Bei der Plausibilitaetskontrolle wurde festgestellt, dass der konfigurierte Wert 1 groesser oder gleich Wert 2 ist.%CrLf%Dieses Werte-Verhaeltnis ist unzulaessig.
+2342;Nach der Regler-Aktivierung wurde im konfigurierbaren Ueberwachungzeitfenster kein Materialfluss festgestellt.%CrLf%- Sensor fuer Durchfluss/ Messzelle fehlerhaft
+2343;Beim Lesen von Daten aus der angegebenen Datei ist ein Fehler aufgetreten.%CrLf%- Token verloren%CrLf%- Datei leer oder mit ungueltigem Inhalt%CrLf%- Steuerungsinternes Problem
+2344;Beim Schreiben von Daten in die angegebenen Datei ist ein Fehler aufgetreten.%CrLf%- Token verloren%CrLf%- Zieldatei schreibgeschuetzt%CrLf%- Steuerungsinternes Problem
+2345;Auffangbehaelter voll und wurde nicht abgepumpt.
+2346;Zuendzyklus gestoert
+2347;Zuendautomatik gestoert
+2348;Luftdruck nach Regler gestoert
+2349;Kein gueltiger Anpassfaktor
+2350;Sollwert Luftmenge außerhalb Bereich
+2351;Druckluftversorgung nicht ok.
+2352;MFC Luft maximaler Grenzwert fuer Stellgroeße erreicht.
+2353;MFC Gas maximaler Grenzwert fuer Stellgroeße erreicht.
+2354;Klimageraet gestoert.%CrLf%Temperaturfehler.
+2355;Gaswarnanlage gestoert.
+2356;Ungueltige Sollwerte
+2357;Regler-Differenzdruck ueberschritten
+2358;MFC Regler Gas gestoert
+2359;Fehler Gasdruck Versorgung
+2360;Temperaturueberschreitung Mischer
+2361;Brenner / Schlauch gestoert
+2362;MFC Regler Luft gestoert
+2363;Fehler bei der Regler-Parametrierung.%CrLf%Steuerungsinternes Problem.
+2364;Waehrend der Analyse und Adaption der vorangegangenen Applikation erfolgte ein neuer Applikationsbeginn.%CrLf%Daten werden verworfen und nicht ausgewertet.
+2365;Der angegebene Unterkanal wurde nicht gefunden.
+2366;Es wurden zu viele Unterkanaele angelegt.%CrLf%Steuerungsinternes Problem.
+2367;Die zugeordnete Kanalgruppe wurde nicht gefunden.%CrLf%Steuerungsinternes Problem.
+2368;Die angegebene Hardware wurde im zugeordneten Unterkanal nicht gefunden.
+2369;Beim Applikationsstart oder "fliegenden Kolbenwechsel" ist kein vorbereiteter Unterkanal verfuegbar. Dadurch ist keine (unterbrechungsfreie) Applikation moeglich.%CrLf%- Fehler oder Zeitueberschreitung bei der Vorbereitung (Befuellen, Druckeinstellung)%CrLf%- Zu hohes Applikationsvolumen
+2370;Der angegebene Unterkanal kann nicht reserviert werden, da er bereits belegt ist.
+2371;Die angegebene obere Drehzahl-Grenze wurde ueberschritten.%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Sensorik fuer Drehueberwachung fehlerhaft%CrLf%- Fehler Ansteuerung
+2372;Die angegebene untere Drehzahl-Grenze wurde unterschritten.%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Sensorik fuer Drehueberwachung fehlerhaft%CrLf%- Fehler Ansteuerung
+2373;Der angegebene Sollwert unterschreitet den minimal zulaessigen Wert.
+2374;In der Leistungsstufe des Swirl-Reglers ist ein Fehler aufgetreten.%CrLf%Die Folge dieses Fehlers ist ein Abschalten des Reglers!
+2375;Im Swirl-Regler ist ein interner Fehler aufgetreten.%CrLf%Die Folge dieses Fehlers ist ein Abschalten des Reglers!
+2376;In der externen Spannungs-Versorgung ist eine Stoerung aufgetreten.%CrLf%Die Folge dieses Fehlers ist ein Abschalten des Reglers!
+2377;Bei der Versorgung des Logik-Moduls (24V) ist ein Fehler aufgetreten.%CrLf%Die Folge dieses Fehlers ist ein Abschalten des Reglers!
+2378;Alle HALL-Sensoren des Swirls stehen im Status 0.%CrLf%- Drahtbruch bei Sensorleitungen%CrLf%- Sensorik nicht mehr korrekt ausgerichtet%CrLf%- Interner Fehler
+2379;Alle HALL-Sensoren des Swirls stehen im Status 1.%CrLf%- Kurzschluss zwischen Sensorleitungen%CrLf%- Sensorik nicht mehr korrekt ausgerichtet%CrLf%- Interner Fehler
+2380;Der Swirl-Regler meldet einen Kurzschluss am angegebenen Sensor. Sensorik oder Zuleitungen fehlerhaft.%CrLf%Eventuell falsche Drehrichtung.
+2381;Der Swirl-Regler meldet einen Kabelbruch am angegebenen Sensor. Sensorik oder Zuleitungen fehlerhaft.%CrLf%Eventuell falsche Drehrichtung.
+2382;Die Swirl-Sensoren wurden in ungueltiger Reihenfolge durchlaufen.
+2383;Von der Swirl-Ansteuerung wurde eine allgemeine Stoerung gemeldet.
+2384;Es wurde ein Spannungsabfall in der Swirl-Ansteuerung erkannt (BrownOut).
+2385;Die Ueberwachung in der Swirl-Ansteuerung hat ausgeloest (WatchDog).
+2386;Die Ueberstrom-Abschaltung in der Swirl-Ansteuerung hat ausgeloest.
+2387;Die Ueberstrom-Reduzierung ist aktiv.%CrLf%- Schwergaengigkeit
+2388;Die Viskositaet liegt ausserhalb der angegebenen Grenze(n).%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Material-/ Chargen-Aenderung (große Abweichung der Viskositaet)
+2389;Kein Materialfluss waehrend der Adaption.
+2390;Ein unbekannter Fehlercode wurde vom Phototherm-Messgerät empfangen.
+2391;Der Schrittmotor des Choppers, das den Laser moduliert, wurde gestoppt. Die Mess-Software versucht, den Schrittmotor automatisch erneut zu starten. In den meisten Fällen ist diese Aktion ausreichend und das Messgerät misst wieder richtig.
+2393;Die Kalibrierdatei ist nicht auf dem Phototherm-Mess-PC im Verzeichnis c:\ps3\caldir1 vorhanden.
+2394;Das Ausgangssignal des Lasers, welches die korrekte Emission anzeigt, fehlt. Der Laser ist nicht betriebsbereit.
+2395;Ein anderes Programm hat die Datei gesperrt.
+2397;Die Empfangsamplitude ist zu gering für ein korrektes Messergebnis. Die Verstärkerstufe ist zu niedrig, der Laser ist ausgeschaltet, die Schichtdicke ist zu gering oder es liegt ein Kabel- oder Detektorfehler vor.
+2398;Signalamplitude ist zu groß für den Verstärker (außerhalb Bereich +- 15V). Dies führt zu einem nicht korrekten Messergebis. Mögliche Ursachen sind: Verstärkerstufe falsch eingestellt, Detektor defekt, starke Licht- oder Wärmequelle in der Umgebung) 
+2400;Beim Start der Mess-Software war der Testmodus aktiviert. In diesem Modus ist es nicht möglich den Laser einzuschalten oder reale Messungen durchzuführen. Der Modus dient zum Test der Software ohne Messgerät.
+2401;Spannung an der Stromversorgung des Detektors fehlt.
+2402;Spannung an Spannungsversorgung B fehlt
+2403;Spannung an Spannungsversorgung A fehlt
+2404;Spannung an Spannungsversorgung des Laser fehlt.
+2405;Spannung an 24V Spannungsversorgung der Relais fehlt.
+2406;Fehlerhafte Konfiguration
+2407;Messgerät ist nicht bereit oder es steht ein Fehler an.
+2408;Eine Messreihe wurde mit dem Makro ACTIVATE_PAC(DISABLE) gestoppt, aber es wurde vorher keine Messreihe gestartet
+2409;Falscher oder fehlender Konfigurationseintrag in [RC.KeyPattern] fuer ProgStart bzw. ProgStop
+2410;Nur ein Programm kann gestartet werden.
+2411;Antriebsfehler laesst sich ueber die Steuerung nicht quittieren.
+2412;Bei dem genannten Antrieb ist die Differenz zwischen Soll- und Istwert groesser als der parametrierte Maximalwert. 
+2413;Problem bei der Kommunikation zwischen Steuerung und Antriebsregelgeraet.
+2414;Das Mastern (Referenzieren) ist mit diesem Antriebsstatus nicht moeglich.
+2415;In der Konfiguration ist die Arbeitsraumüberwachung fuer das Joggen aktiviert ([RC.KINEMATIC:0]jogPointCheckArea =  1). Es sind jedoch keine Gripperpunkte definiert oder es ist keine Koordinatentransformation fuer diese Kinematik verfuegbar.
+2416;Solange nicht alle Achsen referenziert worden sind, kann nicht kartesisch verfahren werden. Joggen ist nur in Achskoordinaten erlaubt.
+2417;Es liegt ein Fehler der Antriebe vor, sie sind nicht eingeschaltet oder eine Achse ist nicht referenziert.
+2418;Es ist keine Koordinatentransformation fuer diese Kinematik verfuegbar
+2419;In der Konfiguration sind keine Gripperpunkte fuer die Arbeitsraumueberwachung definiert.
+2420;Es kann nur ein Teachprogramm mit einer Kinematik ausgefuehrt werden. Es wurde versucht ein Teachprogramm zu starten, obwohl ein anderes noch laeuft.
+2421;Im Teachbetrieb wurde während einer Bewegung die Zustimmtaste losgelassen.
+2422;Im Teachbetrieb wurde die Zustimmtaste nicht gedrueckt
+2423;Siehe Fehlertext
+2424;Im Automatikbetrieb wurde die Stop-Taste am PHG gedrueckt.
+2425;Beim goldenen Repos ist das Rueckwaertsfahren auf der Bahn fehlgeschlagen.
+2426;Einer oder mehrere Gripperpunkte befinden sich in einem Sperrbereich oder mindestens ein Gripperpunkt befindet sich nicht mehr im Arbeitsbereich.
+2427;Probleme mit der Kommunikation zur SPS. Entweder ist kein Betriebsartenbit gesetzt oder es sind mehrere gleichzeitig gesetzt.
+2428;Die Orientierungsinterpolation Z-Rotation ist nur bei Kinematiken mit allen 6 Freiheitsgraden moeglich.
+2429;Die Positionswerte eines Antriebs befinden sich ausserhalb der Genzwerte.
+2430;Es ist ein zu grosser Wert fuer den Parameter [MC.KINEMATIC:0]orderOfAxisFilter1 parametriert worden.
+2431;Rueckwaertsfahren ist nur auf einer Bahn, die bereits vorwaerts gefahren wurde, moeglich.
+2432;Der Triggerpunkt liegt nicht auf dem Bahnsegment (Bahn zwischen Punkt vor dem Trigger und Punkt nach dem Trigger), auf dem er definiert ist.
+2433;Die Ueberwachungsfunktion der Handler Sensorik hat erkannt, dass das Teil nicht gegriffen wurde.
+2434;Die Ueberwachungsfunktion der Handler Sensorik hat erkannt, dass das Teil verloren wurde.
+2435;Die Ueberwachungsfunktion der Handler Sensorik hat erkannt, dass das parametrierte Limit überschritten wurde.
+2436;Die Ueberwachungsfunktion der Handler Sensorik hat erkannt, dass das parametrierte Limit unterschritten wurde.
+2437;Steuerungs- oder Hardwarefehler.
+2438;Sensor nicht kalibriert.
+2439;Fehler im Teach Programm.
+2440;Die Ueberwachungsfunktion der Drehmomentueberwachung hat erkannt, dass das parametrierte Limit überschritten wurde.
+2441;Die Ueberwachungsfunktion der Drehmomentueberwachung hat erkannt, dass das parametrierte Limit unterschritten wurde.
+2442;Die Ueberwachungsfunktion der Drehmomentueberwachung hat erkannt, dass das Teil nicht gegriffen wurde.
+2443;Eine Ueberschreitung des parametrierten Drehmoments wurde zuvor festgestellt.
+2444;Der Sollwert fuer dieses Gerät liegt durch Multiplikation mit Override ausserhalb des gueltigen Bereichs.
+2445;Die Trigger haben im Ecotalk-Programm eine andere Reihenfolge als geometrisch auf dem Bahnsegment.
+2446;Die Berechnung einer Ebene durch den Triggerpunkt auf der Bewegungsbahn ist nicht moeglich.
+2447;Ein Trigger wurde von der MCU nicht signalisiert und deshalb nicht ausgefuehrt.
+2448;Bei Tracking duerfen keine Punkte in Weltkoordinaten verwendet werden, da dadurch das Tracking beendet wird.
+2449;Der Trigger liegt kurz vor oder hinter dem Bahnsegment. Das Schalten des Triggers erfolgt automatisch beim Segmentanfang bzw. beim Segmentende.
+2450;Der genannte Konfigurationseintrag ist nicht vorhanden. Es werden Defaultwerte verwendet.
+2451;Fuer diese Programmnummer gibt es in der Typliste kein zugehoeriges Projekt/Programm
+2452;Problem in der Kommunikation zwischen SPS und RC
+2453;Das Vision-System meldet diesen Fehler.
+2454;Es konnten nicht alle Ein- und Ausgänge des Feldbus-Masters gemapped werden.%CrLf%Unterschiedliche Bezeichnung der Hardwareendpunkte im Kemromanager und RCU.%CrLf%Es wurden ein oder mehrere Ein-/ Ausgänge im Kemromanager nicht angelegt.
+2455;Im Teachprogramm wird der Befehl SETPROCESSCOMMAND(eVisionTrigger, ...) verwendet, obwohl die Funktionalität "TriggeredPicture" in der Konfiguration nicht aktiviert ist.
+2457;Vom Gerät wurde ein unbekannter Fehlercode ausgegeben. Möglicherweise wurde ein Gerät mit neuerem Firmwarestand eingebaut.
+2458;Der HS-Generator hat eine unzulässig hohe Temperatur.
+2459;Defekt an HS-Generator, Controller oder einer Verbindungsleitung.
+2460;Kurzschluss bzw. Überschlag am HS-Kreis.
+2461;Defekt am Generator bzw. Kurzschluss in der Verbindungsleitung.
+2462;Der Wert Versorgungsspannung liegt außerhalb des zulässigen Bereichs.
+2463;Falscher Eintrag im Prozess.cfg
+2464;Es wurde ein ungültiger Sollwert vorgegeben, möglicherweise verursacht durch einen Override.
+2465;Defekter Sensor, Verbindungsleitung oder LWL
+2466;Versorgungsluftdruck zu gering
+2467;Abwichung Istwert - Sollwert
+2468;Hardwaredefekt
+2469;Signal zu Vision-Rechner ist noch gesetzt, wenn neues Triggersignal kommt
+2470;SETPROCESSCOMMAND(eVisionTrigger, ...)  im Teachprogramm soll ausgefuehrt werden, obwohl Messaufgabe noch nicht gestartet wurde.
+2471;Fehler in der Kommunikation zwischen Vision-Rechner und Steuerung
+2472;Vision-Rechner meldet einen Fehler. Ablauf kann nicht fortgesetzt werden.
+2473;Vision-Rechner ist nicht bereit fuer Messung
+2474;Die Nummer der Messaufgabe kann nicht an den Vision-Rechner uebergeben werden, weil ein Fehler ansteht.
+2475;Messprogramm am Vision-Rechner wurde nicht gestartet.
+2476;Vision-Rechner meldet einen Fehler oder es gibt Probleme in der Kommunikation zwischen Vision-Rechner und Steuerung
+2477;Die Spaltmasspruefung meldet, dass eine Applikation nicht moeglich ist.
+2478;Die Verschiebewerte sind ausserhalb der erlaubten Toleranz
+2479;Fuer diese Achse wurden keine Parameter zum Mastern konfiguriert.
+2480;Es ist noch ein Projekt geladen bzw. ein Teachprogramm ist noch nicht beendet.
+2481;Beim Mastern eines RS-Roboters wurde die Achse vor dem Start des Masterns nicht auf die Startmarkierung positioniert
+2482;Beim Mastern eines RS-Roboters werden die Signale des Mastertools nicht richtig erkannt.
+2483;Beim Mastern eines Duerr-Roboters wird kein Schaltsignal des Mastersensors gefunden
+2484;Im Teachprogramm wurde in OVERLAP ein Ueberschleiftyp verwendet, der nicht unterstuetzt wird. Makro OVERLAP wird ignoriert.
+2485;Im Teachprogramm werden Tracking-Makros verwendet, obwohl keine Tracking-Station konfiguriert ist.
+2486;Der Parameter [RC.KINEMATIC:0] delayRobotDrives wurde mit einem unzulaessigen negativen Wert parametriert.
+2487;Die Bahngeschwindigkeit ist bei geoeffneter Hauptnadel unter die im Makro TCP_SPEED_CHECK gesetzte Schwelle gefallen
+2488;Im Teachprogramm wird die Hauptnadel zweimal nacheinander geoeffnet.
+2489;Im Teachprogramm wird die Hauptnadel zweimal nacheinander geschlossen.
+2490;In [MC.KINEMATIC:0]name wurde ein anderer Robotername eingetragen als in der plantinfo der Prozess-Applikation
+2491;Das Makro SETTRACKINGMODE wurde zwischen TRACKING(On) und TRACKING(finished) verwendet, d.h. bei aktivem Tracking.
+2492;Die Lichtschranke wurde bei der programmierten Bewegung zum Zielpunkt nicht unterbrochen. Moegliche Ursachen:%CrLf%- Ausfuehrung des Teachprogramms im STEP-Mode%CrLf%- Bewegung falsch oder falsche Reihenfolge der Makros%CrLf%- Sensorsignal falsch
+2493;Parametrierte zulaessige Toleranz fuer das Tool ueberschritten
+2494;Bedienungen für das Öffnen des angegebenen Ventils nicht gegeben.
+2496;Es wurde versucht den Simulationmodus für den Gerätetreiber im laufenden Betrieb zu beenden.
+2497;- Der angeschlossene HS-Generator kann nicht an diesem Controller betrieben werden.%CrLf%- Hardwaredefekt
+2498;Der Steuerung wurde gemeldet dass die Versorgungsspannung des Schaltschranks gestoert ist.
+2499;Der Steuerung wurde gemeldet dass die Ethernetverbindung gestoert ist.
+2500;Das konfigurierte Maß des ActionPointOffset in BCU.cfg + Ueberhangmaß aus Typzuordungstabelle liegen vor Zonenstart, dies ist real nicht moeglich. Fehler in der Konfiguration.
+2501;Sicherung 3F1 ist gefallen.
+2502;Es wurde ein Datensatz empfangen, der keine gueltige Farbventilnummer enthaelt. In BCU.cfg ist ein Modus konfiguriert, der eine Farbventilnummer im Karossendatensatz benoetigt (Parameter UsePlcColorValve). 
+2503;Applikationsturm ist nicht in oberer Endlage
+2504;Ungueltige Parametrierung 
+2505;Es wurde ein unzulässiger Parameter übergeben.
+2506;Punkt muss eine Fixposition sein
+2507;Fuer genannte Karossentyp ist das angegebene Maß ungueltig.
+2508;- Bus-Verbindung zur Stations-SPS gestört.%CrLf%- RPC-Steuerung nicht betriebsbereit.%CrLf%- SPS-Steuerung nicht betriebsbereit.
+2509;Das angegebene Ventil wurde angesteuert und der angegebene Initiator wurde nach der parametrierten Zeit nicht belegt.
+2510;Das angegebene Ventil wurde nicht angesteuert und der angegebene Initiator war trotzdem nach einer parametrierten Zeit noch belegt.
+2511;Der zweite Foerderer soll synchronisiert werden jedoch befindet sich keine Karosse im konfigurierten Bereich.
+2512;Projektierungsfehler in Robotersoftware
+2513;Vorbereitung für folgende Karosse bereits gestartet
+2514;Übertemperatur oder Überspannung
+2515;Ein fehlerhaftes Programm wurde von 3DOnsite auf die Steuerung geladen.
+2516;Beim An-/Abdocken der Schablone ist ein Fehler aufgetreten.
+2517;Waehrend ein Objekt bearbeitet wird ist die Lackierfreigabe abgefallen (=FALSE).%CrLf%-Hochspannung nicht im Toleranzbereich%CrLf%-DRZ nicht im Toleranzbereich oder zu niedrig (<MinDrehzahl)%CrLf%-Luftmenge nicht im Toleranzbereich%CrLf%-Externe Freigabe nicht vorhanden
+2518;Mehrere Pumpenkupplungen sollten gleichzeitig geschalten werden.
+2519;Die Datei typelist.ini ist auf dem Datenträger nicht vorhanden
+2520;Unzulässiger Schaltzustand von HMI-Schnittstelle. Erlaubt sind 0 (= kein Sollwert von HMI), 1 (=andocken), 2 (=abdocken), 3 (=Reset, Sollwerte zurücksetzen)
+2521;Das Gerät erhält zeitgleich mehr als ein Ansteuersignal (R (= andocken), V (=abdocken), Reset(=nicht ansteuern). Dies ist nicht zulässig.
+2523;Ein Handler Modul wurde mehrfach definiert (SET_MODULE)
+2524;Kupplung arbeitet nicht korrekt
+2526;Der PC Porenerkennung meldet einen allgemeinen Fehler an die Robotersteuerung
+2527;Die Bahnregelung verursacht eine Abweichung von der programmierten Bahn, die groesser als der parametrierte zulaessige Wert in [RC.KINEMATIC:0.SmartRay] MaxCorrVal ist.
+2528;Bei der Suchfahrt meldet der Sensor, dass die Naht nicht mehr im Sichtbarkeitsbereich des Sensors ist.
+2529;Beim Start der Nahtprüfung ist die Naht schon im Sichtbarkeitsbereich des Sensors. Eventuell kann die Naht nicht vollstaendig geprueft werden.
+2530;Beim Ende der Nahtpruefung ist die Naht xxx noch im Sichtbarkeitsbereich des Sensors. Eventuell kann die Naht nicht vollstaendig geprueft werden.
+2531;Die Differenz zwischen den Sensorwerten zweier aufeinanderfolgender Steuerungstakte ueberschreitet den parametrierten Grenzwert.
+2532;Die interne Ueberwachung der reduzierten Bahngeschwindigkeit im T1-Betrieb hat eine Ueberschreitung festgestellt.
+2533;Die Stations-SPS meldet dass der Foerderer lauft, die Steuerung empfaengt jedoch keine Foerdererimpulse.
+2534;Benutzerverwaltung fuer TeachView ist der Datei AAd.dat nicht vollstaendig konfiguriert.
+2535;Beim prüfen des Tischstatus meldet die SPS mehr als einen Platz als nicht belegt.
+2536;Die von der SPS empfangene Lochnummer stimmt nicht mit der angeforderten Lochnummer überein.
+2537;Düse defekt
+2538;Das Abdocken des Werkzeuges konnte nicht durchgeführt werden
+2539;Das Andocken des Werkzeuges konnte nicht durchgeführt werden
+2540;Konfiguration Visualisierung stimmt nicht mit Konfiguration RPC ueberein.
+2542;Löschen einer Pushout-Lerndatei in der Betriebsart Automatik nicht möglich.
+2543;Warngrenze ist kleiner als Alarmgrenze bei Überwachung der unteren Grenzen, Parametrierung im file Process.cfg falsch.
+2544;Warngrenze ist groesser als Alarmgrenze bei Überwachung der oberen Grenzen, Parametrierung im file Process.cfg falsch.
+2545;Bremsentest/-einschleifen kann für Ex-geschützte Motoren nicht ausgeführt werden.
+2546;-Ungueltiger Eintrag in der Datei: EcotalkVariables.ttp%CrLf%-Fehler im EcoTalk-Programm
+2547;Fehler im EcoTalk-Programm: Es wurde ein neues Prozesskommando abgesetzt, bevor das vorhergehende Kommando abgearbeitet wurde.
+2548;Verdrahtungsfehler oder Hardwaredefekt.%CrLf%Kommunikationsstörung oder Busausfall.
+2549;Bei der Leckageüberwachung ist ein Fehler aufgetreten.
+2550;Der angegebene Initiator ist nicht belegt.
+2551;-Das EcoTalk-Kommando zum Abschalten der Hochspannung wurde nicht korrekt ausgefuehrt.
+2552;Die eingegebenen Werte sind größer als parametriert.
+2553;ungueltige Karossendaten von SPS
+2554;Der angegebene Leckageüberwachungssensor hat ein Problem festgestellt.
+2555;Während Motion active wurde versucht die Karossendaten in der Zone zu ändern
+2556;logischer Fehler im SPS-Interface 
+2557;Lerndaten ungültig oder Datei nicht vorhanden.
+2558;Für die Kolbenkompensation muss jedem Kolben ein Auslassventil zugeordnet werden. Fehler in der Konfiguration.
+2559;Für das Farbstoppventil gibt es die Zustände 0 (closed), 1(auto) und 2(open).
+2560;Das Gerät erhält gleichzeitig das Signal für Schaltzustand Automatik sowie Schaltzustand Open. Dies ist nicht zulässig.
+2562;Die Differenz zwischen den beiden Messmethoden (Antrieb und Bussystem) ist groesser als der parametrierte Wert [RC.KINEMATIC:0.ObjMeasure] .
+2563;-Messtaster hat nicht ausgeloest (Sensor schaltet nicht).%CrLf%-Differenz zum Referenzpunkt zu groß.%CrLf%-Differenz zwischen den Messmethoden zu groß.
+2564;Eine im STEP-Betrieb gefahrene Bahn kann nicht rueckwaerts abgefahren werden.
+2565;Es wurde ein Drehzahleinbruch über dem parametrierten Grenzwert der Turbine festgestellt. Vermutlich handelt es sich um eine Turbinenblockade.
+2566;Für die angegebene Brushnummer sind keine Sollwerte in der zugehörigen Brushtabelle parametriert.
+2567;- Motor der Rolle dreht nicht%CrLf%- Applikationsgeschwindigkeit zu hoch
+2568;- Kollision
+2569;Klebeband auf Oberseite der Rolle
+2570;Z-Ausgleich des SFA Werkzeug nicht in Arbeitsstellung
+2571;- Bandende
+2572;- Bandriss%CrLf%- Band nicht vollständig auf Karosse aufgetragen
+2573;Parameter prüfen
+2574;- Ansteuerung Reinigungsbürste nicht gesetzt%CrLf%- Bürste blockiert%CrLf%- Initiator zur Drehzahlerkennung defekt%CrLf%%CrLf%
+2575;- Ansteuerung des Schwenkbügels im Zeitprogramm fehlerhaft%CrLf%- Initiator zur Positionserkennung defekt
+2576;SCU wurde durch Konfiguration oder Automatik Intern aktiviert, jedoch besteht die Busslavekommunikation zur SPS immernoch. Dies ist ein unzulässiger Betriebszustand.
+2577;TrackingEndPosition ist nicht richtig parametriert
+2578;Die Achsposition der MCU unterscheidet sich von der Achspoosition des IO-Systems.%CrLf%Steuerungsinternes Fehlverhalten.
+2579;Die genannte Referenzdatei ist nur bei Antrieben "ohne" Absolutgeber notwendig, deshalb wurde diese Datei gelöscht.
+2580;Die Werte zur Simulation des Luftmengenreglers in der Datei Process.cfg sind nicht vorhanden oder wurden falsch parametriert.
+2581;Zeitprogramm Laden wurde gestartet obwohl der LCC noch nicht auf die korrekte Position positioniert wurde.
+2582;- Mit einem EcoTalk-Befehl wurde versucht auf die genannte Systemvariable zuzugreifen, dies ist nicht gelungen.
+2583;Es können nur genannte Anzahl von Systemvariablen in einem Projekt gesetzt werden. Es wurde jedoch versucht mehr als die genannte Anzahl zu setzen.
+2584;Der Roboter wurde angewählt, der Zerstäuber ist jedoch abgewählt
+2585;- Im Zeitprogramm wurde gleichzeitig die Geschwindigkeitsbits für Langsam und Schnell gesetzt
+2586;Roboter darf nicht verfahren werden, solange der Schwenkbuegel nicht in Mittelstellung ist,%CrLf%es besteht die Gefahr mechanischer Beschaedigung des Zerstaeubers.
+2587;Fuer den parametrierten Dehnungsmesstreifen ist der im EcoTalk-Befehl uebergebene Wert nicht gueltig.%CrLf%- Ungueltiger Wert im EcoTalk-Befehl%CrLf%- Falsche Parametrierung des Dehnungsmessstreifens.
+2588;In der Konfiguration des LCC-Layouts (PCUx.cfg) wurde ein ungültiger Typ verwendet.
+2590;Leckage Überwachung ist deaktiviert
+2591;Leckage aufgetreten
+2592;Die angegebenen Initiatoren haben den gleichen Zustand.
+2593;- SV_Statistics.def: Namen des Gerätes überprüfen, evtl. Schreibweise falsch
+2594;- Processbuilder: %CrLf%Prüfen ob das für die Erfassung parametrierte Gerät in einem Logischen Kanal liegt. Die Statistik kann nur Geräte in logischen Kanälen verarbeiten
+2595;- SV_StatisticDef: Parametrierung des Signalnamens prüfen, existiert das Signal, Schreibweise richtig ?
+2596;- Start der Statistik erfolgt über das MAkro WAIT_PROCESS_READY() im Teachprogramm. Fehlt dieses können keine Statistikdaten erfasst werden.
+2597;Ungueltige Konfiguation  [RC.KINEMATIC:x.Gripper] %CrLf%                                        nrOfVectors = 0%CrLf%Dieser Wert ist unzulaessig, wenn keine Gripper definiert werden kann die Steuerung keine Arbeitsraeume ueberwachen.
+2598;Im RCMP Schaltschrank wurde der Schalter auf "Internal Safety" gestellt. Ein Umschalten im laufenden Betrieb ist nicht möglich.
+2599;Im RCMP Schaltschrank wurde der Schalter auf "External Safety" gestellt. Ein Umschalten im laufenden Betrieb ist nicht möglich.
+2600;- Ein externer Stationshalt wurde von der SPS ausgelöst
+2601;Eines der beiden Initiatorenpaare meldet ein nicht eindeutiges Signal.%CrLf%z.B. linker Initiator belegt, der rechte Initiator jedoch nicht belegt.
+2603;Die vorgegebene maximale Temperatur an 4S1 /4S4 wird überschritten.%CrLf%Kühlung defekt oder Temperatur zu niedrig eingestellt
+2604;MainChannel nicht gespült
+2605;Es wurde versucht von der Fixposition BrushClean400 in eine andere Fixposition als FlushDry400 oder Home zu fahren
+2606;Es wurde versucht von der Fixposition FlushDry400 in eine andere Fixposition als FlushDry0 oder Home zu fahren
+2607;Es wurde versucht von der Fixposition FlushDry0 in eine andere Fixposition als Home zu fahren
+2608;Es wurde versucht von der Fixposition BrushClean0 in eine andere Fixposition als BrushClean400 oder Home zu fahren
+2609;Es wurde versucht von der Fixposition InBox in eine andere Fixposition als AboveBox, BrushClean0 oder Home zu fahren
+2610;Mit dem aktuell konfigurierten Verfahrweg ist es nicht möglich die Sensorsignale eindeutig auszuwerten.
+2611;Brushfile für den ausgewählten Type im Modus T2+Process kann nicht geladen werden
+2612;Mindestens ein Meßwert für eine der drei Verfahrrichtungen ist ungültig
+2613;Die Steuerung hat Fördererimpulse am Eingang der Zählerkarte erkannt. Der Parameter Conveyorexisting im file System.cfg ist nicht auf "True" gesetzt.
+2614;- Zerstäuber angewählt%CrLf%- Pneumatik ausgeschaltet%CrLf%- Betriebsart nicht HAND%CrLf%- Kanal bereits belegt (z.B. aktives Zeitprogramm)%CrLf%- Fehler
+2615;- Schlitten Stand beim Starten des automatischen Masterns nicht auf Masterposition%CrLf%- zu hohes Moment aufgetreten%CrLf%- zu lange Bewegung ohne auf das zu erwartende Hindernis zu treffen (z.B. weil nicht angedockt)
+2616;Das Aufräumen nach Neustart kann nicht ausgeführt werden, da das Bewegungsprogramm auf einem Kreissegment nicht fortgesetzt werden kann.
+2617;Das Aufräumen wurde gestartet, obwohl der Roboter keine Betriebsart Automatik hat bzw. die Antriebe nicht in Regelung sind.
+2618;Das Aufräumen wurde gestartet, obwohl das Aufräumen nicht parametriert und nicht freigegeben ist.
+2619;Aufräumen ist nicht möglich, da gleichzeitig von der SPS das Bit Start Prehoming gesetzt ist.
+2620;Aufräumen ist nicht möglich, da Prehoming noch läuft.
+2621;Aufräumen ist nicht möglich, da kein Teachprogramm unterbrochen wurde.
+2622;Aufräumen ist nicht möglich, da die Vorbereitung nicht erfolgreich war
+2623;Das vor dem Beenden der Steuerung aktive Projekt kann nicht geladen werden.
+2624;Von der SPS wurde das Bit Start Prehoming gesetzt obwohl das Aufräumen schon läuft.
+2625; Bremsluft zu niedrig eingestellt so dass der Bremsvorgang zu lange dauert, oder Drehzahlrückmeldung fehlerhaft.
+2626;Für die Versorgungsgruppe der ausgewählten Farbe sind keine Kanäle zum Lackieren vorhanden oder sie sind alle abgewählt.
+2627;Während die Pumpe läuft, darf nicht umgekuppelt werden
+2628;Der angegebene Typ wurde nicht referenziert.
+2629;Es wurde ein falscher Typ für die Art der Toleranzüberwachung angegeben.
+2630;Die applizierte Menge der angegebenen Naht liegt über der maximalen Toleranz.
+2631;Die applizierte Menge der angegebenen Naht liegt unter der minimalen Toleranz.
+2632;Die angegebene Referenzdatei ist fehlerhaft.
+2633;Fehler beim Umkopieren der angegebenen Referenzdatei.
+2634;Die angegebene Naht ist nicht referenziert.
+2635;Beim Reservieren des dynamischen Speichers für die angegebenen Karossendaten ist der angegebene Fehler aufgetreten.
+2636;Beim Schreiben der Referenzdaten ist den angegebenen dynamischen Speicher ist ein Fehler aufgetreten.
+2637;Die aktuellen "Override" Werte stimmen nicht mit den referenzierten Werten überein.
+2638;-Initiator defekt%CrLf%-Wackelkontakt%CrLf%
+2639;-Pumpenkupplung defekt%CrLf%-Initiator defekt%CrLf%-Kabelverbindung unterbrochen
+2640;In der Prozesskonfiguration wurde genanntes Geraet dem Schwenkbuegel zugeordnet, jedoch wurde beim Steuerungshochlauf dieses Geraet nicht gefunden.
+2641;Fehler beim Dateizugriff auf der Flash.
+2642;- Belastung zu gering%CrLf%- Falscher Datensatz ausgewaehlt
+2643;- Belastung zu hoch%CrLf%- Falscher Datensatz ausgewaehlt
+2644;Klimageraet meldet Stoerung oder Sicherung -4Q3 gefallen
+2645;Sicherung 7F1, 7F2, 7F3, 7F4, 7F5, 7F6, 7F7 oder 7F8 abgefallen
+2646;Leistungsschalter 24Q2, 24Q4 oder 24Q6 abgefallen
+2647;Sicherung gefallen
+2648;Initiator für geschlossene Schaltschranktuer erkennt Tuer nicht
+2649;Sicherung 8F1, 8F2, 8F3, 8F4, 8F5, 8F6, 8F7 oder 8F8 abgefallen
+2651;Die Bedienmode-Signale vom RCMP sind gleichzeitig gesetzt. Es darf nur eins von beiden gesetzt sein.
+2655;Es konnten nicht alle SV-Variablen gemappt werden. Unterschiedliche Bezeichnung der Hardwareendpunkte im IEC.
+2656;Der Totmann-Taster wurde nicht richtig betaetigt.
+2657;Die Spindel ist gebrochen
+2658;Das Teil, das vom Kamerasystem überwacht wird, ist nicht mehr in seiner programmierten Position.
+2661;Steuerungsinterner Fehler
+2662;Beim Starten eines Zeitprogramms wurde festgestellt, dass die zu verwendeten Unterkanäle falsche Farbinformationen hatten. (z.B. Farbcode, Mischungsverhältniss etc.)
+2663;Beim Starten eines Zeitprogramms wurde festgestellt, dass die verwendeten Unterkanäle nicht vorbereitet sind.
+2664;Das Signal 'BodyInPosition' ist inaktiv geworden, während ein Applikationsprogramm abgearbeitet wurde
+2665;Die Daten zur Verwaltung des Düsenwechslers sind ungültig.
+2666;Der Initiator des Düsenwechselplatz ist trotz ausgefahrenem Bolzen nicht belegt.
+2667;Im Teachprogramm war eine ungültige Hauptnadelnummer gesetzt.
+2668;Es wurde für die Sollwert SetPosition und SetVolume jeweils ein Wert vorgegeben. Dies ist unzulässig!
+2669;Das Einlernen der Druckwerte für die erweiterten Luftmengenregler Funktionen wurde gestartet
+2670;Eingriff des Benutzers in den Lernprozess des Luftmengenreglers.
+2671;Der Sollwert fuer dieses Geraet liegt durch Multiplikation mit Accuracy ausserhalb des gueltigen Bereichs.
+2672;Druck zum Erreichen des Sollwertes ist geringer als der gelernte Wert
+2673;Druck zum Erreichen des Sollwertes ist hoeher als der gelernte Wert
+2674;Der Parameter EnableContaminationCheck im Prozess.cfg wurde auf 1 gesetzt aber EnableReferenceCheck ist nicht aktiviert oder Wertetabelle besitzt ungueltige Eintraege. 
+2675;Gerät in der Datei nicht vorhanden
+2676;Ungueltige Referenzwerte
+2677;ReferenceCheck aktiviert aber Referenzwerte nicht gelernt und / oder ungueltig. 
+2678;Luftmengenregler arbeitet im Notbetrieb.
+2679;Falsch eingestellte Parameter in der Process.cfg
+2680;Schreiben der gelernten Werte abgeschlossen
+2681;Waehrend ein Objekt vermessen wird, ist die Laserfreigabe abgefallen (=FALSE).
+2682;- Das Gerät ist nicht betriebsbereit. (z.B. Hardware wurde nicht erkannt)%CrLf%- Bei der Initialisierung ist ein Fehler aufgetreten%CrLf%- Software (EcpRPC) und Firmware sind inkompatibel
+2683;Es wurde kein Platz zum Ablegen der Duese gefunden.
+2684;Es wurde keine Duese des gewuenschten Typs gefunden.
+2685;Der Initiator des Platzes der Duesenwechselstation ist nicht belegt.
+2686;Der Initiator des Platzes der Duesenwechselstation ist immer noch belegt.
+2687;Defekter Initiator, oder defekte Verkabelung am angegebenen Düsenwechselplatz.
+2688;Ventil der Duesenwechselstation defekt.
+2689;Die Software des Phototherm-PC's ist nicht bereit. Das Signal 'SoftwareReady' ist nicht gesetzt.%CrLf% %CrLf%
+2690;Es wurde über die Visualisierung die Funktion zum Einmessen des Förderers aktiviert, %CrLf%jedoch läuft der Förderer rückwärts. Deshalb wurde der Einmessvorgang abgebrochen.
+2691;DockingUnit nicht gespült
+2692;Für die Freihalteluft ist ein Timeout parametriert nach dessen Ablauf die Freihalteluft automatisch abgeschaltet wird um den Luftverbrauch zu reduzieren.%CrLf%Falls im Process.cfg der Parameter [BlockingAir]ActiveTime vorhanden ist wird der dort hinterlegte W
+2693;Es wurde eine neue Farbe ausgwählt, und der LCC im Anschluss nicht an das Ventil positioniert
+2694;Steuerung empfängt weder von Andock- noch vom Abdockschalter eine Rückmeldung.%CrLf%- Mechanischer Defekt%CrLf%- Signal wird nicht korrekt an Steuerung übertragen%CrLf%- Fehlerhafte Buskonfiguration
+2695;Schalterstellung ist bei dieser Ansteuerung nicht zulässig.
+2696;Für den EthernetIP Slave muss im Parameter FX775A:0/EIPS:0/EIPSLAVE:0 ein Name angegeben sein.
+2697;Der Profinetslave befindet sich nicht im Status Datenaustausch. Ursachen: SPS kommuniziert nicht, falsche Slave Adresse, Drahtbruch zwischen SPS und EcoRPC, Steuerung ist nach Neustart noch nicht zur Kommunikation bereit. 
+2698;Der EthernetIP Slave befindet sich nicht im Status Datenaustausch. Ursachen: SPS kommuniziert nicht, falsche Slave Adresse, Drahtbruch zwischen SPS und EcoRPC, Steuerung ist nach Neustart noch nicht zur Kommunikation bereit. 
+2699;- kein oder falsches Ventil wurde ausgewählt%CrLf%- Farbzuordnungstabelle falsch%CrLf%- CFG-Parameter für Farbventil falsch
+2700;- Beim Start der Entladung konnte kein Strom gemessen werden%CrLf%  (Evt. Entlader defekt oder keine Hochspannung am HS-Eingang vorhanden)%CrLf%- Interne Überprüfung hat einen HW-Fehler ergeben
+2701;- Der Cfg-Parameter "Enable" der Gruppe "Discharge" des Hochspannungsgeräts ist gesetzt, jedoch kann der Entlader nicht angesteuert werden
+2702;Ein für die Ausführung des Kommandos aus EcoTalk benötigtes Gerät ist in der Prozesskonfiguration nicht vorhanden.
+2703;Karossen folgen zu dicht aufeinander
+2704;Projektierungsfehler Prozessbuilder
+2705;Im EcoTalk-Programm werden SPLINE-Befehle verwendet, obwohl sie auf dieser Steuerung nicht zulässig sind.
+2706;Signale des Mastertools gestört
+2712;TimeoutReadPW
+2713;Timeout acknowledge strobe  "write Password"
+2714;Fehler bei Bewegungsfahrt beim automatischen Mastern
+2715;Bevor ein Handler ein Teil bewegt ist es zwingend erforderlich die aktuelle Teileposition mit SET_POSCODE(Delete) zu löschen. Damit wird sichergestellt dass kein anderer Roboter während des Vorgangs eine falsche Teileposition empfängt.
+2716;Die Korrekturwerte vom VMT-System sind absolut groesser als die zulaessigen parametrierten Grenzwerte.
+2717;Die beiden Positionen fuer die Toolvermessung lassen sich nicht durch eine Drehung um +90Grad um den Flansch ineinander überführen. Dies ist die Voraussetzung fuer die Vermessung duch VMT.
+2718;Der VMT-Rechner hat das Bit "Messung ungenau" gesetzt.
+2719;Für das Lernen der P_Ansteuerung wurde ein Ventil zum Öffnen des Lackierweges nicht gefunden. 
+2720;10 Sekunden nach dem Ende der Messung wurden noch nicht alle Korrekturwerte an die Steuerung uebertragen
+2722;Bei der Duesenvermessung hat das VMT-System ein Problem festgestellt. Moegliche Ursachen:%CrLf%Falsche oder fehlende Duese
+2723;Es wurde versucht den Status der Duese von Hand auf IO zu wechseln. Dabei war die Duese nicht fixiert.
+2724;Es erfolgte kein Druckabbau vor dem angegebenen HN-Wechsel.
+2725;Während des Druckabbaus wurde aus dem Teachprogramm ein GunTrigger gesetzt.
+2726;Falscher oder fehlender Konfigurationseintrag bei den angegebenen Daten.
+2727;Es ist keine relative Messung konfiguriert
+2728;Kein Multiobject bei den Visiondaten kofiguriert.
+2729;Die USV wird nicht mehr mit 24V versorgt, das heisst die Steuerung wird nur noch durch die USV gepuffert.
+2730;Bei der Adaption wurde festgestellt, dass sich die Materialeigenschaften extrem gegenüber der Kalibrierung geändert haben. 
+2731;Das Signal von der SPS kann nicht mehr empfangen werden. Kommunikation unterbrochen oder SPS gestoppt.
+2732;Der berechnete Offset der Biegekompensation liegt ausserhalb des festgelegten Limits.
+2743;Störung Gerät (Heizpatrone, Sensorik)
+2744;Sammelstörung des Antriebsregelgerät Bandantrieb
+2745;Das Lesen der Parameter für VendorID oder DeviceID ist fehlgeschlagen
+2746;Parameter für Firmware Version konnte nicht gelesen werden
+2747;Typenschild des Gerätes in der Firmwarekonfiguration nicht bekannt
+2748;Bei der Firmwareidentifikation der S3 Geräte ist ein Fehler aufgetreten%CrLf%- Parameter nicht lesbar aufgrund Busfehler%CrLf%- Gerät mit unbekanntem Typenschild bzw. Firmware gefunden
+2749;Datei ..\appldisk\application\control\config\S3_Firmware.cfg nicht vorhanden oder fehlerhaft
+2750;- Der Teilnehmer antwortet nicht.%CrLf%- Defekt des Teilnehmers.%CrLf%- Defekt oder Fehler in der elektrischen Verbindung des Teilnehmers.
+2751;- Es wurde eine Teilnehmeraddresse erkannt die nicht konfiguriert ist.%CrLf%- Es sind mehr Teilnehmer am Bus als konfiguriert sind.%CrLf%- Defekter Teilnehmer.
+2752;Es wurde ein Sercosteilnehmer am Bus erkannt obwohl dieser in der Konfiguration als simuliert eingetragen wurde,%CrLf%dies ist nicht zulässig.
+2753;Um die geänderten Einstellungen des Gerätes zu übernehmen ist ein Spannungsreset am Gerät notwendig.
+2754;Fehler beim Lesen der Netzwerkparameter
+2755;Fehler beim Schreiben der Netzwerkparameter.
+2756;Fehler beim Aktivieren der Netzwerkparameter.
+2757;Um den Sicherheitsanforderungen gerecht zu werden muss die Spannung zur Versorgung der Motorhaltebremsen innerhalb festgelegter Grenzen (24V +/-10%) liegen.%CrLf%Diese Spannung wird über einen Spannungsteiler auf den analogen Eingang des Antriebs gelegt und i
+2758;Der Name des Sercosteilnehmers unterscheidet sich zwischen Prozessconfiguratioon und Sercoskonfiguration, dies ist nicht zulässig.
+2759;Damit die Sercos-Geräte einen Fehlerzustand des Masters erkennen benötigen sie die Funktion SCP_Sync oder Watchdog%CrLf%Über diese Funktion werden bei einem Ausfall des Masters die Signalpegel des genannten Gerätes in einen definierten Zustand geschaltet. In 
+2760;Das Gerät ist nicht in der Buskonfiguration enthalten oder es wurde ein falscher Gerätename angegeben.
+2761;Der Parameter ist nicht im Gerät vorhanden.%CrLf%Die Kommunikation zum Gerät ist unterbrochen.%CrLf%Das Gerät reagiert nicht auf Servicekanalzugriffe
+2762;- Fehler der elektrischen Verbindung des Spannungsteilers.%CrLf%- Der Parameter P-0-0210 is nicht im zyklischen Datenkanal ( aux[3] ) konfiguriert.
+2763;Die Lichtschranke bleibt bei der programmierten Bewegung zum Zielpunkt unterbrochen. Moegliche Ursachen:%CrLf%- Ausfuehrung des Teachprogramms im STEP-Mode%CrLf%- Bewegung falsch oder falsche Reihenfolge der Makros%CrLf%- Sensorsignal falsch%CrLf%- Zielpunkt falsch geteacht
+2764;Genannter Parameter hat in der Konfiguration den Wert = 0, soll jedoch den Wert = 1 haben.%CrLf%Mit diesem Parameter wird die Applikation gestartet obwohl die Topologieprüfung nicht alle konfigurierten Geräte erkannt hat, damit ist es möglich Diagnosefunktion
+2765;Der Wert des Konfigurationsparameters entspricht nicht dem geforderten Wert.
+2766;Der Roboter hat eine NIO-Düse vom angegebenen Typ im Düsenwechsler abgelegt.
+2767;Die Lackierdrucküberwachung auf Min. oder Max. ist in einem Zeitprogramm aktiviert worden, jedoch ist die Überwachungsfunktion im Cfg-Editor für diesen Sensor nicht freigegeben 
+2768;Im Gerätenamen des Antriebs muss der Name der zugehörigen Maschine enthalten sein, dies ist nicht der Fall.
+2769;Um die Netzwerkadresse des Gerätes zu ändern muss der Sercosbus nach Phase 2 geschaltet werden.
+2770;- Druck nicht im Arbeitsbereich (zu hoch, zu niedrig)%CrLf%- Drahtbruch Sensorsignal%CrLf%- Schalter falsch parametriert
+2771;Überwachungsfunktion ist deaktiviert
+2772;Mastersensor defekt oder Problem bei Verkabelung oder falsche Parametrierung
+2773;Fuer diese Achse ist kein automatisches Mastern moeglich:%CrLf%- kein Dürr-Roboter%CrLf%- Handachse ohne Sensor
+2774;- Zuleitung des Mediums gestört. (Absperrventil, Kugelhahn, etc. geschlossen)%CrLf%- Parameter für Mindestdurchfluss zu groß gewählt
+2776;Es wurde kein Druckanstieg im Drehzahlregler beim Öffnen der Hauptnadel festgestellt. Vermutlich kein Glockenteller vorhanden.
+2777;Da die Drehzahlregler sowohl links- als auch rechtslaufende Turbinen unterstützen, muss der eingesetzte Turbinentyp im P-0003.0.12  parametriert werden. Da es aktuell nur rechtslaufende Turbinen gibt wird der Parameter geprüft ob rechtslaufend parametriert ist
+2778;Überwachung in PCUx.cfg deaktviert
+2779;keine Rückmeldung, dass Temperatur in Ordnung ist%CrLf%- Heizung defekt%CrLf%- Temperatursensor defekt%CrLf%- Schaltpunkte am Temperaturschalter falsch parametriert%CrLf%- Drahtbruch / Verdrahtungsfehler
+2780;Die 24V Versorgung der Steuerung und der USV ist ausgefallen und die Pufferzeit der USV überschritten.
+2781;Das Netzteil vom Temperiergeraet hat einen Fehler erkannt und einen Sammelalarm gemeldet:%CrLf%- Uebertemperatur im Netzteil%CrLf%- fehlende Last am Ausgang, hervorgerufen durch: Kabelbruch, nicht verbundenes Leistungskabel, Fehler in der Umschaltung fuer Heizen und Kuehlen (Schuetz- bzw. Relay-Schaltung) usw.%CrLf%- Fehler in der Netzteil-Ansteuerung
+2782;Der Uebertemperaturschutz ist aktiv und es erfolgte eine Abschaltung der Temperierung:%CrLf%- Thermoausloeser im Temperiergeraet (Uebertemperatur)%CrLf%- Kabelbruch zum Thermoausloeser%CrLf%- Sicherungsfall Spannungsversorgung Thermoausloeser%CrLf%- Temperatursensor im Temperiergeraet defekt (Folge: Fehler in der Regelung)%CrLf%- Regelkreiseinstellungen (Reglerparameter) fehlerhaft%CrLf%- Fehler im Netzteil oder in der Netzteil-Ansteuerung vom Temperiergeraet
+2783;Es ist ein zu grosser Wert fuer den Parameter [MC.KINEMATIC:0]timeConstantOfAxisFilter1_s parametriert worden.
+2784;Zu große Abweichung des Applikationsdrucks.%CrLf%- Grenzwerte fuer Ueberwachung nicht korrekt%CrLf%- Sensor fuer Druck fehlerhaft%CrLf%- Material-/ Chargen-Aenderung
+2785;Es sind mehrere Degrade Anforderungen gesetzt, für die unterschiedliche Roboter Conveyor Stoppositionen parametriert sind
+2786;Es sind mehrere Degrade Anforderungen gesetzt, für die unterschiedliche Roboter Startpositionen parametriert sind
+2787;Es sind mehrere Degrade Anforderungen gesetzt, für die unterschiedliche Robotertypen parametriert sind
+2788;Fehler beim Lesen der Systemzeit (P-0-0197)
+2789;Fehler beim Schreiben der Systemzeit (P-0-0197)
+2790;Beim Hochlauf des Sercos-Bussystems sind Fehler aufgetreten die den Hochlauf verhindert haben.%CrLf%Die Steuerung hat deswegen eine Neuinitialisierung des Sercos-Bussystems angestoßen.
+2791;Das EcoTalk-Projekt ist syntaktisch falsch und kann nicht uebersetzt werden.
+2792;In der Sercoskonfiguration ist "autoAddressing=2" konfiguriert.%CrLf%Dies ist nur für Inbetriebnahmezwecke (Soll/Istvergleich) mit KeStudio zulässig.
+2793;Für den genannten HW-Endpunkt konnte kein Sercos III Gerät ermittelt werden. Möglicherweise%CrLf%ist der HW-Endpunkt nicht in der Sercos III Konfiguration enthalten.
+2794;Die Zylinder des Haubenhalter sollen verfahren werden, jedoch sind nicht alle Haken in eingeklappter Stellung.%CrLf%Die Zylinder dürfen nur verfahren werden wenn alle Haken eingeklappt sind.
+2795;- Schlechte Luftversorgung%CrLf%- Mechanisch verklemmt%CrLf%- Fehlerhalfte Initatorrückmeldung
+2796;- Initiatorrückmeldung defekt%CrLf%- Störung der Luftversorgung%CrLf%- Mechanische Störung
+2797;Das Bewegen der Haken ist nur in ausgefahrenem Zustand erlaubt.
+2798;Aus dem Bewgungsprogramm wurde versucht den genannter Haken des Haubenhalters abzufragen.%CrLf%Dies ist nicht möglich da nur die genannte Anzahl freigegeben ist.
+2799;- Störung des Busteilnehmers%CrLf%- Allgmeine Busstörungen%CrLf%- Fehlerhalftes Initiatorsignal
+2800;Bei der automatischen Messzellenkalibrierung wurde festgestellt, dass der K-Faktor ausserhalb der parameterierten Toleranz liegt.
+2801;Keine Rueckmeldung dass Absaugung laeuft, B8
+2802;Der Kanalstatus des angegebenen Kanals ist falsch.
+2803;die sichere Position befindet sich vermutlich nicht im profilfreien Raum.
+2804;Die Geraete-Hardware ist defekt oder wurde bei der Initialisierung nicht korrekt erkannt. Die Anzahl der ausgelesenen Gruppen hat einen ungueltigen Wert.
+2805;In der Software ist mindestens eine Zone keinem Regelgeraet zugeordnet. Ein Betrieb dieser Zone(n) ist nicht moeglich. Der Hochlauf der Steuerung ist gestoppt.
+2806;Die angegebene Nummer ist mehreren Zonen zugewiesen. Diese Zonen-Nummer muss aber eindeutig sein und darf pro Regelgeraet nur einmal vergeben werden. Hierueber erfolgt die Zuordnung zu den Hardware-Anschluessen.
+2807;Die angegebene Zonen-Nummer wird von der Gereate-Hardware nicht unterstuetzt (Zone nicht verfuegbar).
+2808;Gerät in Parametrierungsdatei PCUx.cfg deaktiviert
+2809;Ausfall des PartDetect Signals oder PartDetect Fenster falsch parametriert
+2810;Position des PartDetect Initiators oder Parametrierung des PartDetect Fensters nicht korrekt
+2812;Bussystem noch nicht bereit.%CrLf%Defekt am SPC200 Controller.
+2813;Referenzen für zugeordnete Pumpe und Drucksensoren konnten bei der Initialisierung nicht festgelegt werden. Konfigurationsparameter für P-Control / Pig-Control nicht korrekt
+2814;- Triboluft zu niedrig eingestellt%CrLf%- Pulver fliess nicht aufgrund falsch eingestellter Förder und Totalluft%CrLf%- Kein Pulver im Behälter%CrLf%- Das Pulver besitzt nicht die geforderten aufladungseigenschaften
+2815;- Schlauch geknickt oder verstopft%CrLf%- Eingangsluftdruck zu niedrig%CrLf%- Injektor nicht angeschlossen%CrLf%- Solleinstellung kann vom System nicht erreicht werden
+2816;- Pistolenkabel ist unterbrochen%CrLf%- Pistole im laufenden Betrieb ausgesteckt
+2817;- Kaskade der angeschlossenen Pistole ist defekt%CrLf%- Pistolenkabel hat Kurzschluss
+2818;- Der Tribostrom hat den oberen Grenzwert von 12 uA überschritten, ATEX Richtlinien erlauben keine höheren Werte
+2819;- Die Pistole ist nicht angeschlossen%CrLf%- Pistolenkabel gebrochen%CrLf%- Kaskade in Pistole ist defekt
+2820;- Kurzschluss in Pistolenkabel%CrLf%- Kurzschluss in Pistole%CrLf%- Pistole nicht angeschlossen
+2821;Es strömt keine luft aus dem Steuergerät%CrLf%- Schlauch geknickt oder verstopft%CrLf%- Injektor nicht angeschlossen%CrLf%- keine Druckluftversorgung
+2822;Es ist der Modus taktbezogener Override aktiviert, jedoch konnte der Hardware-Endpunkt fuer den Applikationszaehler des SPS-Interface nicht zugeordnet werden
+2823;Motortyp unterscheidet sich von projektiertem Motortyp.
+2824;Messdatei ist von der Visualisierung nicht übernommen worden
+2825;Während der Messung sind Messfehler aufgetreten. Der Abstand Messgerät zu Karosse ist zu groß oder Die Geschwindigkeit im Teachprogramm ist zu groß oder Fehler im Ablauf oder Fehler in der Konfiguration. 
+2826;- Defekter Sensor, Verbindungsleitung, Lichtwellenleiter %CrLf%- Zerstäuberreflektor verschmutzt
+2827;Fehler in beteiligten Kanälen
+2828;Es soll ein Zeitprogramm zum Andrücken der Farbe gestartet werden.%CrLf%Da keine Farbe ausgewählt wurde wird der Start verhindert.
+2829;Referenzieren des Farbwechslers ist aktiv. Währenddessen darf kein anderes Zeitprogramm ausgeführt werden.
+2830;Projektverzeichnis nicht angelegt 
+2831;Teachprogramm-Datei nicht gefunden
+2832;Profibusteilnehmer Anybus X-Gateway oder CANopen zu Wagner EPG_S2 gestört
+2833;- Tausch eines FESTO EA Modules unter Spannung%CrLf%- Konfiguration der E/A Module am Gateway stimmt nicht mit dem realen Aufbau überein.%CrLf%- Neustart des Lokalbusses (CTEI) fehlgeschlagen.
+2834;Das angewälte Zeitprogramm zum laden des Zerstäubers enthält Signale für mehrere Komponenten (z.B. Stammlack und Härter). Die angewählte Farbe im Zerstäuber (Hauptkanal) ist jedoch eine 1-Komponenten Farbe
+2835;Eigenschaften von Farben/Komponenten wurden in Farbtabellen geändert und stimmen aktuell mit den Daten in den Prozesskanälen des Roboters nicht überein%CrLf%- Farbgruppe%CrLf%- Farbnummer%CrLf%- Farbcode%CrLf%- Mischungsverhältniss
+2836;In der Typzuordnungstabelle wurde für den genannten Typ kein Projekt. bzw. Programmname eingetragen
+2837;Beim Zugriff auf den angegebenen Pfad wurde festgestellt, dass dieser kein Verzeichnis, sondern eine Datei ist.
+2838;Beim Zugriff auf den angegebenen Pfad wurde festgestellt, dass dieser keine Datei, sondern ein Verzeichnis ist.
+2839;Die Prozess-Konfiguration ist fehlerhaft oder unvollständig. Dadurch ist die Funktion nicht verfügbar.
+2840;Beim Zugriff auf die Einstellungen in der angegebenen Datei ist ein Lesefehler aufgetreten. Die Steuerung kann somit nicht korrekt initialisiert werden.
+2841;Bei der Initialisierung konnte das angegebene Gerät nicht gefunden werden. Die Steuerung kann somit nicht korrekt initialisiert werden.%CrLf%- Gerät im System nicht vorhanden%CrLf%- Geräte-Name in der Prozess-Konfiguration falsch
+2842;Die Achse hat keine Lastspannung soll jedoch in Regelung gehen.
+2843;Am Relais der Heizung werden die Phase(n) des (Dreh)Stroms geprüft. Dabei wurde ein Fehler festgestellt. Mögliche Ursache sind Defekt an Heizpatrone, Verdrahtung, Relais, Heizung.
+2844;Mit dem letzten Sollwert wurde ein Ein-/Ausschaltvorgang des HS-Geräts ausgelöst. Dieser ist noch nicht abgeschlossen und es wird bereits ein neuer Sollwert angefordert. Das ist nicht möglich. Der neue Sollwert wird daher so lange verzögert, bis der Ein-/Ausschaltvorgang abgeschlossen ist. 
+2845;Sollwert liegt außerhalb des zulässigen Bereichs.
+2846;Der Baustein AB_IniFile akzeptiert für Section und Key maximal 80 Zeichen
+2847;An der Visualisierung wurde vom Anwender das Signal Profilfrei gebrückt ohne betreffende Maschine abzuwählen, dies ist nicht zulässig.
+2849;Der PushOut-Mechanismus vergleicht die aktuellen Trigger-/Brushnamen mit denen die zum Zeitpunkt des Lernvorgangs in der Lerndatei gespeichert wurden. Bei diesem Vergleich ist für den aktuellen Trigger ein Fehler aufgetreten.
+2850;HVOn an Controller ist gesetzt, aber Controller liefert kein Feedback-Signal HVOn%CrLf%Mögliche Ursachen:%CrLf%- HS-Controller ist gestört%CrLf%- Störung der Controller-Eingangs-Signale(HVOn, Ready,Interlock)  oder deren Verbindungsleitung
+2851;HVOn an Controller ist nicht  gesetzt, aber Controller liefert Feedback-Signal HVOn%CrLf%Mögliche Ursachen:%CrLf%- HS-Controller ist gestört%CrLf%- Störung der Controller-Eingangs-Signale(HVOn, Ready,Interlock)  oder deren Verbindungsleitung
+2852;Die Bedingungen für ein fehlerfreies Fortsetzen der Applikation nach einer Unterbrechung sind nicht mehr gegeben.%CrLf%Mögliche Ursachen sind Eingriffe in den Prozess in Betriebsart Hand wie das Schalten von bestimmten Geräten oder das Starten von Zeitprogrammen.
+2853;Der angegebene Drucksensor meldet immer noch einen Überdruck im System. Dieser Überdruck muss beseitigt werden bevor das Applizieren fortgesetzt werden kann
+2854;Im Prozess der Robotersteuerung wurde ein Überdruck erkannt, der das Einschalten des Dosierantriebs verhindert
+2855;Im EcoTalk-Programm werden SMOOTH-Befehle verwendet, obwohl sie bei dieser Steuerungsfirmwareversion nicht verfügbar sind.
+2856;Es sind Fehler aufgetreten die den Sercoshochlauf nicht zulassen.
+2857;Aus dem EcoTalk-Programm wurde versucht die Hochspannung abzuschalten, jedoch stehen vom Prozessteil die nötigen Informationen dafür nicht bereit
+2858;Es wurde der EcoTalk-Befehl um Handlingsaufträge einzulesen ausgeführt ohne die Hochspannung zuvor explizit auszuschalten. Dies ist nicht zulässig - Brandgefahr durch Hochspannungsüberschlag !
+2859;Es wurde der EcoTalk-Befehl "SET_PROCESS_STATE" um die Hochspannung freizugeben ausgeführt ohne den dafür vorgesehenen Handlingsaufträge anzuwenden. %CrLf%Dies ist nicht zulässig - Brandgefahr durch Hochspannungsüberschlag !
+2860;Es wurde der EcoTalk-Befehl "SET_PROCESS_STATE" um die Hochspannung freizugeben ausgeführt. %CrLf%Jedoch befindet sich der Roboter im Handlingsbetrieb. Es wird 'RECEIVE_ORDER' ausgeführt um Aufträge einzulesen. %CrLf%Dies ist nicht zulässig - Brandgefahr durch Hochspannungsüberschlag !
+2861;Anforderung HS-Aus aus Teachprogramm steht immer noch an (z.B. nach Programmabbruch)
+2862;Keine Rueckmeldung HS-Geraet, dass Hochspannung abgebaut.%CrLf%Evtl ist der Spannungs-Istwert  immer noch zu groß.
+2863;Keine Rueckmeldung von SPS, dass Hochspannung abgebaut
+2864;Die Haltekraft der Motorbremse ist nicht ausreichend.
+2865;- Anzahl der gefundenen Module entspricht nicht der Konfiguration%CrLf%- gefundene Modultypen entsprechen nicht der Konfiguration, z.b. AI statt AI-T%CrLf%- Reihenfolge der Module entspricht nicht der Konfiguration%CrLf%
+2866;Die Pumpenveschleissprüfung kann nur gestartet werden, wenn die Dosierpumpe gespült ist
+2867;Die Funktion ist in der Prozesskonfiguration nicht freigegeben
+2868;- Die Dosierpumpe ist zu sehr verschlissen um den geforderten Prüfdruck aufbauen zu können.%CrLf%- Zeitprogramm zur Leckageprüfung ist fehlerhaft und Leckage wurde nicht erkannt%CrLf%- Pumpenstrang wurde nicht korrekt mit Lösungsmittel befüllt.
+2869;Mit dem EcoTalk-Befehl "WAIT_MOTION_STATE(BodyFixation, True)" wird gewartet bis die Fixierung der Karosse geschlossen ist. Dies hat zwingend im profilfreien Bereich zu erfolgen, da sonst Kollisionsgefahr besteht.
+2870;Dieser Befehl muss zwingend synchron zum Hauptlauf des Teachprogramms ausgeführt werden, ansonsten wird er zu früh ausgeführt. Der Roboter ist noch nicht an der räumlichen Position an der der Befehl programmiert wurde.
+ 

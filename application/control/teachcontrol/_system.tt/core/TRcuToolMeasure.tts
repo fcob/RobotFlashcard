@@ -1,0 +1,1217 @@
+(*-----------------------------------------------------------------------------
+*    K2-System Robot Control Unit                                             *
+*                                                                             *
+*    Dürr Systems GmbH APT                                                    *
+*    Rosenstr. 39                                                             *
+*    74321 Bietigheim-Bissingen                                               *
+*    Germany                                                                  *
+*                                                                             *
+*    Copyright (C) 2007 Dürr Systems GmbH APT                                 *
+*    All rights reserved.                                                     *
+*                                                                             *
+*                                                                             *
+*    Date         12.12.2007                                                  *
+*    Author :     Bauder                                                      *
+*    E-Mail:      Manfred.Bauder@durr.com                                     *
+*                                                                             *
+*    Modul:       TRcuToolMeasure.tts                                         *
+*    Description:                                                             *
+*                                                                             *
+*-----------------------------------------------------------------------------
+*)
+
+//--------------------------------------------------------------------------------
+// Constant
+//--------------------------------------------------------------------------------
+CONSTANT GLOBAL
+   cgiRcuMaxGuns : DINT := 3;  // maximum number of guns
+END_CONSTANT
+
+CONSTANT PRIVATE
+   cMaxPoints : SINT := 2;  // maximum number of points
+   cPi        : REAL := 3.1415926535897932384626433832795;
+END_CONSTANT
+
+//--------------------------------------------------------------------------------
+// Types
+//--------------------------------------------------------------------------------
+TYPE GLOBAL USER
+   // Angabe, in welche Richtung gefahren wird. Z.B. wird bei X
+   // beim Ansprechen des Sensors die kartesische X-Position des 
+   // Nulltools (Flansch) als Schaltwert gespeichert
+   DIRECTION : (Xplus, Xminus, Yplus, Yminus, Zplus, Zminus);
+   // Angabe welche kartesische Position beim Ansprechen des Sensors gespeichert wird
+   COORD : (X1, X2, Y1, Y2, Z1, Z2);
+   
+   // Referenztool oder zu korrigierendes Tool
+   TOOLTYPE : (RefTool, CorrTool);
+   // Selektion der Düse ( 3 Düsen bei 3d gun möglich )
+   TOOLID : (Tool1, Tool2, Tool3);
+   
+   TOOLVALS : ARRAY[1..cgiRcuMaxGuns] OF POS;
+   
+   DELTAVALS : ARRAY[1..cgiRcuMaxGuns] OF REAL;
+
+   // Koordinaten (Welt), bei denen die Lichtschranke schaltet
+   // für die Tool-Richtungen
+   POS : STRUCT
+      X : REAL;
+      Y : REAL;
+      Z : REAL;
+      A : REAL;
+      B : REAL;
+      C : REAL;
+   END_STRUCT;
+END_TYPE
+
+TYPE PRIVATE
+
+  tPoint : STRUCT
+    rValX : REAL;
+    bXok  : BOOL;
+    rValY : REAL;
+    bYok  : BOOL;
+    rValZ : REAL;
+    bZok  : BOOL;
+  END_STRUCT;
+  
+  eMeasureDirs : (eDir_X_Y := 1, eDir_X_Z := 2, eDir_Y_Z := 3);  
+  
+  tLightBarData : STRUCT
+    teachInObject : MAPTO OBJECT; //reference to object from ecotalk
+    calcObject    : OBJECT;
+    oldObject     : OBJECT;
+    points        : ARRAY [cMaxPoints] OF tPoint;
+    point3        : TMcuVector3;
+    bDataOk       : BOOL;
+    bSaveData     : BOOL;
+    bClearData    : BOOL;
+    eMeasDirs     : eMeasureDirs;
+    bTestVis      : BOOL;
+  END_STRUCT;
+END_TYPE
+//--------------------------------------------------------------------------------
+// Variables
+//--------------------------------------------------------------------------------
+VAR
+   // Schaltwerte für das Referenztool
+   REF_VAL  : MAPTO TOOLVALS;
+   // Schaltwerte der aktuellen Messung
+   MESS_VAL : MAPTO TOOLVALS;
+   // Schaltwerte der letzten Messung
+   OLD_VAL  : MAPTO TOOLVALS;
+   bConfigured     : BOOL := TRUE;
+   //aktuelle messwerte der lichtschranke
+   mess_valUserPage    : ARRAY[1..cgiRcuMaxGuns] OF POS;
+   //referenz tool aus _globalvars für userpage
+   refToolUserPage     : ARRAY[1..cgiRcuMaxGuns] OF TOOL;
+   //korrigiertes tool aus _globalvars für userpage
+   corrToolUserPage    : ARRAY[1..cgiRcuMaxGuns] OF TOOL;
+   //delta bezogen auf Flange
+   deltaFlangeUserPage : ARRAY[1..cgiRcuMaxGuns] OF POS;
+   //delta bezogen auf TCP
+   deltaTCPUserPage    : ARRAY[1..cgiRcuMaxGuns] OF POS;
+   //messung ist ok
+   bMeasureOkUserPage  : BOOL;
+   rMaxToolAdj_X_Minus : ARRAY[1..cgiRcuMaxGuns] OF REAL;
+   rMaxToolAdj_X_Plus  : ARRAY[1..cgiRcuMaxGuns] OF REAL;
+   rMaxToolAdj_Y_Minus : ARRAY[1..cgiRcuMaxGuns] OF REAL;
+   rMaxToolAdj_Y_Plus  : ARRAY[1..cgiRcuMaxGuns] OF REAL;
+   rMaxToolAdj_Z_Minus : ARRAY[1..cgiRcuMaxGuns] OF REAL;
+   rMaxToolAdj_Z_Plus  : ARRAY[1..cgiRcuMaxGuns] OF REAL;
+  
+END_VAR
+
+
+VAR PRIVATE
+   sensor          : MAPTO BOOL;
+   invsensor       : BOOL;
+   myRobot         : MAPTO TRcuRobot;
+   bUseObjectCoord : BOOL;
+   bUseTcpCoord    : BOOL;
+  
+   // zu korrigierende Differenz zwischen aktueller Messung und Referenzmessung
+   deltaX : MAPTO DELTAVALS;
+   deltaY : MAPTO DELTAVALS;
+   deltaZ : MAPTO DELTAVALS;
+   
+   deltaXValid : ARRAY[1..cgiRcuMaxGuns] OF BOOL;
+   deltaYValid : ARRAY[1..cgiRcuMaxGuns] OF BOOL;
+   deltaZValid : ARRAY[1..cgiRcuMaxGuns] OF BOOL;
+   
+   lightBarData : tLightBarData;
+END_VAR
+ 
+VAR
+  bMeasureOk : BOOL SAVE;
+END_VAR
+
+// Wartet auf das Sensorsignal. Bei Erkennen des Sensorsignals wird gemaess
+// der gewählten Richtung die entsprechende kartesische Koordinate gespeichert
+ROUTINE ReceiveVal(ToolNr : TOOLID; currenttooltype : TOOLTYPE; worldmovingdirection : DIRECTION; tooldirection : DIRECTION) : BOOL
+VAR
+   sensor     : MAPTO BOOL;
+   posValue   : REAL;
+   b          : BOOL;
+   iToolIndex : INT;
+   tempDiff   : REAL;
+   actObjPos  : TMcuFrame;
+   // Vorzeichen der Bewegungsrichtungen
+   worldmovingdirectionSign : INT;
+   tooldirectionSign : INT;
+   bChgSensor : BOOL;
+   bSensorState1 : BOOL;
+   timeOut       : BOOL;
+END_VAR
+
+   IF NOT bConfigured THEN
+      myRobot.DebugPrint(eTraceVision,"++++++++ Aufruf von RECEIVEVAL: Toolvermessung nicht aktiviert");      
+      RETURN FALSE;
+   END_IF;
+   
+   ClearUserPageTools(ToolNr);
+   sensor := MAPX(cHW_mToolDetect[myRobot.kinListInx]);
+   IF NOT IS_MAPPED(sensor) THEN
+      RcuSetMessageOnce(TRcToolMeasure_ErrSensorNotMapp,myRobot.kinListInx, 1, 0, "TRcuToolMeasure.ReceiveVal", cHW_mToolDetect[myRobot.kinListInx]);
+      RETURN FALSE;
+   END_IF;
+   bChgSensor := IS_CHANGED(sensor);
+   WAIT MAIN_RUN OR bChgSensor; // Flanke positiv oder negativ
+   IF MAIN_RUN THEN
+      myRobot.DebugPrint(eTraceVision, "XXXX Aktuelles Tool kann nicht von Lichtschranke erfasst werden.!!!!");
+      RcuSetMessageOnce(TRcToolMeasure_ErrNotInSensor, myRobot.kinListInx, 1, 0, "TRcuToolMeasure.ReceiveVal");
+      iToolIndex := TOOLID(ToolNr)+1;
+      CASE tooldirection OF
+         Xplus, Xminus : deltaXValid[iToolIndex] := FALSE;  
+         Yplus, Yminus : deltaYValid[iToolIndex] := FALSE;  
+         Zplus, Zminus : deltaZValid[iToolIndex] := FALSE;  
+      END_CASE;
+      RETURN FALSE;
+   ELSE
+      bChgSensor := FALSE;
+      bSensorState1 := sensor;
+      myRobot.DebugPrint(eTraceVision, "XXXXXXSENSORSIGNAL gekommen!!!!,worldmovingdirection=" + STR(worldmovingdirection) + ",tooldirection=" + + STR(tooldirection));
+      iToolIndex := TOOLID(ToolNr)+1;
+          // Position des Flanschs wenn Lichtschranke auslöst
+      IF bUseObjectCoord THEN
+         myRobot.ActPosInObjectCoord(actObjPos);
+         CASE worldmovingdirection OF
+            Xplus, Xminus : posValue := actObjPos.mPos.mValues[0];
+            Yplus, Yminus : posValue := actObjPos.mPos.mValues[1];
+            Zplus, Zminus : posValue := actObjPos.mPos.mValues[2]; 
+         END_CASE;
+      ELSE
+         CASE worldmovingdirection OF
+            Xplus, Xminus : posValue := myRobot.readBackVals.mCartPos.mValues[0];
+            Yplus, Yminus : posValue := myRobot.readBackVals.mCartPos.mValues[1];
+            Zplus, Zminus : posValue := myRobot.readBackVals.mCartPos.mValues[2]; 
+         END_CASE;
+      END_IF;
+
+      CASE worldmovingdirection OF
+         Xplus,  Yplus,  Zplus  : worldmovingdirectionSign := 1;    
+         myRobot.DebugPrint(eTraceVision, "xxxxxxxxxxxxx worldmovingdirectionSign:+"); 
+         Xminus, Yminus, Zminus : worldmovingdirectionSign := -1;   
+         myRobot.DebugPrint(eTraceVision, "xxxxxxxxxxxxx worldmovingdirectionSign:-"); 
+      END_CASE;
+
+      CASE tooldirection OF
+         Xplus, Xminus : OLD_VAL[iToolIndex].X := MESS_VAL[iToolIndex].X;  
+                         MESS_VAL[iToolIndex].X := posValue; 
+                         mess_valUserPage[iToolIndex].X := posValue;
+                         deltaXValid[iToolIndex] := TRUE;
+                         myRobot.DebugPrint(eTraceVision, "xxx MESS_VAL[" + STR(iToolIndex) + "].X = " + STR(posValue)); 
+         Yplus, Yminus : OLD_VAL[iToolIndex].Y := MESS_VAL[iToolIndex].Y;  
+                         MESS_VAL[iToolIndex].Y := posValue; 
+                         mess_valUserPage[iToolIndex].Y := posValue;
+                         deltaYValid[iToolIndex] := TRUE;
+                         myRobot.DebugPrint(eTraceVision, "xxx MESS_VAL[" + STR(iToolIndex) + "].Y = " + STR(posValue)); 
+         Zplus, Zminus : OLD_VAL[iToolIndex].Z := MESS_VAL[iToolIndex].Z;  
+                         MESS_VAL[iToolIndex].Z := posValue; 
+                         mess_valUserPage[iToolIndex].Z := posValue;
+                         deltaZValid[iToolIndex] := TRUE;
+                         myRobot.DebugPrint(eTraceVision, "xxx MESS_VAL[" + STR(iToolIndex) + "].Z = " + STR(posValue)); 
+      END_CASE;
+
+     CASE tooldirection OF
+         Xplus,  Yplus,  Zplus  : tooldirectionSign := 1;  
+                                  myRobot.DebugPrint(eTraceVision, "xxxxxxxxxxxxx tooldirection:+");
+         Xminus, Yminus, Zminus : tooldirectionSign := -1; 
+                                  myRobot.DebugPrint(eTraceVision, "xxxxxxxxxxxxx tooldirection:-"); 
+      END_CASE;
+
+      IF currenttooltype = CorrTool THEN
+         IF (tooldirection = Xplus) OR (tooldirection = Xminus) THEN
+             tempDiff := worldmovingdirectionSign * tooldirectionSign * (MESS_VAL[iToolIndex].X - REF_VAL[iToolIndex].X);   
+             deltaX[iToolIndex] := tempDiff;
+         ELSIF (tooldirection = Yplus) OR (tooldirection = Yminus) THEN
+             tempDiff := worldmovingdirectionSign * tooldirectionSign * (MESS_VAL[iToolIndex].Y - REF_VAL[iToolIndex].Y);
+             deltaY[iToolIndex] := tempDiff;
+         ELSIF (tooldirection = Zplus) OR (tooldirection = Zminus) THEN    
+             tempDiff := worldmovingdirectionSign * tooldirectionSign * (MESS_VAL[iToolIndex].Z - REF_VAL[iToolIndex].Z);  
+             deltaZ[iToolIndex] := tempDiff;
+         END_IF;
+
+      END_IF;
+      
+      timeOut := FALSE; // Pruefung, ob Lichtschranke komplett ueberfahren
+      SysTimerSet(5000, timeOut);
+      WAIT bChgSensor OR timeOut;
+      IF bSensorState1 = sensor THEN
+         // Fehler wenn Bewegung auf Lichtschranke stoppt
+         RcuSetMessageOnce(TRcToolMeasure_ErrInSensor, myRobot.kinListInx, 1, 0, "TRcuToolMeasure.ReceiveVal");
+         iToolIndex := TOOLID(ToolNr)+1;
+         CASE tooldirection OF
+            Xplus, Xminus : deltaXValid[iToolIndex] := FALSE;  
+            Yplus, Yminus : deltaYValid[iToolIndex] := FALSE;  
+            Zplus, Zminus : deltaZValid[iToolIndex] := FALSE;  
+         END_CASE;
+         RETURN FALSE;
+      END_IF;
+      
+   END_IF;
+   SaveToolData();
+   WAIT MAIN_RUN;
+   RETURN TRUE;
+END_ROUTINE
+
+// Das TOOL corrTool ergibt sich aus dem TOOL refTool durch Subtraktion der Differenzen
+// von MESS_VAL und REF_VAL
+ROUTINE SaveTool(ToolNr : TOOLID; currenttooltype : TOOLTYPE; refTool : TOOL; corrTool : TOOL)
+VAR
+   b : BOOL;
+   iToolIndex : INT;
+   str : STRING;
+   deltaTCP    : TMcuVector3;
+   deltaFlange : TMcuVector3;
+   deltaAbs    : REAL;
+   deltaAbsSqr : REAL;
+   ToolTrafo   : TMcuFrame;
+END_VAR
+   
+   IF NOT bConfigured THEN
+      myRobot.DebugPrint(eTraceVision,"++++++++ Aufruf von SAVETOOL: Toolvermessung nicht aktiviert");      
+      RETURN;
+   END_IF;
+   
+   iToolIndex := TOOLID(ToolNr)+1;
+   
+   IF NOT deltaXValid[iToolIndex]  OR NOT deltaYValid[iToolIndex] OR NOT deltaZValid[iToolIndex] THEN
+      myRobot.DebugPrint(eTraceVision,"++++++++ Aufruf von SAVETOOL: Ungueltige Messwerte");
+      RcuSetMessageOnce(TRcToolMeasure_ErrNotAllValid, myRobot.kinListInx, 1, 0, "TRcuToolMeasure.SaveTool");
+      bMeasureOk := FALSE;
+      SaveToolData();
+      bMeasureOkUserPage := bMeasureOk;
+      RETURN;
+   END_IF;
+         
+   IF  currenttooltype = RefTool THEN
+       // Copy Position of light curtain
+       REF_VAL[iToolIndex].X := MESS_VAL[iToolIndex].X; 
+       REF_VAL[iToolIndex].Y := MESS_VAL[iToolIndex].Y; 
+       REF_VAL[iToolIndex].Z := MESS_VAL[iToolIndex].Z; 
+       REF_VAL[iToolIndex].A := MESS_VAL[iToolIndex].A; 
+       REF_VAL[iToolIndex].B := MESS_VAL[iToolIndex].B; 
+       REF_VAL[iToolIndex].C := MESS_VAL[iToolIndex].C; 
+ // Copy tooldata
+       corrTool.X_mm := refTool.X_mm;
+       corrTool.Y_mm := refTool.Y_mm;
+       corrTool.Z_mm := refTool.Z_mm;
+       corrTool.A_deg := refTool.A_deg;
+       corrTool.B_deg := refTool.B_deg;
+       corrTool.C_deg := refTool.C_deg;
+   ELSIF currenttooltype = CorrTool THEN
+      IF bUseTcpCoord THEN
+         ToolTrafo.mFrameTyp := eMcuFrameKardan;
+         ToolTrafo.mPos.mValues[0] := refTool.X_mm;
+         ToolTrafo.mPos.mValues[1] := refTool.Y_mm;
+         ToolTrafo.mPos.mValues[2] := refTool.Z_mm;
+         ToolTrafo.mOri.mValues[0] := refTool.A_deg;
+         ToolTrafo.mOri.mValues[1] := refTool.B_deg;
+         ToolTrafo.mOri.mValues[2] := refTool.C_deg;
+
+         deltaTCP.mValues[0] := deltaX[iToolIndex];
+         deltaTCP.mValues[1] := deltaY[iToolIndex];
+         deltaTCP.mValues[2] := deltaZ[iToolIndex];
+         myRobot.DebugPrint(eTraceVision, "deltaTCP.mValues[0] = "  + STR(deltaTCP.mValues[0]));
+         myRobot.DebugPrint(eTraceVision, "deltaTCP.mValues[1] = "  + STR(deltaTCP.mValues[1]));
+         myRobot.DebugPrint(eTraceVision, "deltaTCP.mValues[2] = "  + STR(deltaTCP.mValues[2]));
+
+         McuMultiplyFrameVector(deltaFlange, ToolTrafo,  deltaTCP);
+         
+         myRobot.DebugPrint(eTraceVision, "deltaFlange.mValues[0] = "  + STR(deltaFlange.mValues[0]));
+         myRobot.DebugPrint(eTraceVision, "deltaFlange.mValues[1] = "  + STR(deltaFlange.mValues[1]));
+         myRobot.DebugPrint(eTraceVision, "deltaFlange.mValues[2] = "  + STR(deltaFlange.mValues[2]));
+
+         b := TRUE;
+         IF deltaTCP.mValues[0] < rMaxToolAdj_X_Minus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaTCP.mValues[0])  + ") in X Richtung kleiner negative Grenze (" + STR(rMaxToolAdj_X_Minus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 1, 0, "TRcuToolMeasure.SaveTool", "X", STR(deltaTCP.mValues[0]));
+            b := FALSE;
+         END_IF;   
+         IF deltaTCP.mValues[0] >  rMaxToolAdj_X_Plus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaTCP.mValues[0])  + ") in X Richtung grösser positive Grenze (" + STR( rMaxToolAdj_X_Plus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 2, 0, "TRcuToolMeasure.SaveTool", "X", STR(deltaTCP.mValues[0]));
+            b := FALSE;
+         END_IF;   
+
+         IF deltaTCP.mValues[1] < rMaxToolAdj_Y_Minus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaTCP.mValues[1])  + ") in Y Richtung kleiner negative Grenze (" + STR(rMaxToolAdj_Y_Minus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 3, 0, "TRcuToolMeasure.SaveTool", "Y", STR(deltaTCP.mValues[1]));
+            b := FALSE;
+         END_IF;
+         IF deltaTCP.mValues[1] > rMaxToolAdj_Y_Plus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaTCP.mValues[1])  + ") in Y Richtung grösser positive Grenze (" + STR(rMaxToolAdj_Y_Plus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 4, 0, "TRcuToolMeasure.SaveTool", "Y", STR(deltaTCP.mValues[1]));
+            b := FALSE;
+         END_IF;
+         
+         IF deltaTCP.mValues[2] < rMaxToolAdj_Z_Minus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaTCP.mValues[2])  + ") in Z Richtung kleiner negative Grenze (" + STR(rMaxToolAdj_Z_Minus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 5, 0, "TRcuToolMeasure.SaveTool", "Z", STR(deltaTCP.mValues[2]));
+            b := FALSE;
+         END_IF;
+         IF deltaTCP.mValues[2] > rMaxToolAdj_Z_Plus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaTCP.mValues[2])  + ") in Z Richtung grösser positive Grenze (" + STR(rMaxToolAdj_Z_Plus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 6, 0, "TRcuToolMeasure.SaveTool", "Z", STR(deltaTCP.mValues[2]));
+            b := FALSE;
+         END_IF;
+
+         IF b THEN
+            bMeasureOk := TRUE;
+            corrTool.X_mm := refTool.X_mm - deltaFlange.mValues[0];
+            corrTool.Y_mm := refTool.Y_mm - deltaFlange.mValues[1];
+            corrTool.Z_mm := refTool.Z_mm - deltaFlange.mValues[2];
+         ELSE
+            bMeasureOk := FALSE;
+         END_IF;
+      ELSE
+         deltaTCP.mValues[0] := deltaX[iToolIndex];
+         deltaTCP.mValues[1] := deltaY[iToolIndex];
+         deltaTCP.mValues[2] := deltaZ[iToolIndex];
+         b := TRUE;
+         
+         IF deltaTCP.mValues[0] < rMaxToolAdj_X_Minus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaTCP.mValues[0])  + ") in X Richtung kleiner negative Grenze (" + STR(rMaxToolAdj_X_Minus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 7, 0, "TRcuToolMeasure.SaveTool", "X", STR(deltaTCP.mValues[0]));
+            b := FALSE;
+         END_IF;   
+         IF deltaX[iToolIndex] >  rMaxToolAdj_X_Plus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaX[iToolIndex])  + ") in X Richtung grösser positive Grenze (" + STR( rMaxToolAdj_X_Plus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 8, 0, "TRcuToolMeasure.SaveTool", "X", STR(deltaX[iToolIndex]));
+            b := FALSE;
+         END_IF;   
+
+         IF deltaY[iToolIndex] < rMaxToolAdj_Y_Minus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaY[iToolIndex])  + ") in Y Richtung kleiner negative Grenze (" + STR(rMaxToolAdj_Y_Minus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 9, 0, "TRcuToolMeasure.SaveTool", "Y", STR(deltaY[iToolIndex]));
+            b := FALSE;
+         END_IF;
+         IF deltaY[iToolIndex] > rMaxToolAdj_Y_Plus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaY[iToolIndex])  + ") in Y Richtung grösser positive Grenze (" + STR(rMaxToolAdj_Y_Plus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 10, 0, "TRcuToolMeasure.SaveTool", "Y", STR(deltaY[iToolIndex]));
+            b := FALSE;
+         END_IF;
+         
+         IF deltaZ[iToolIndex] < rMaxToolAdj_Z_Minus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaZ[iToolIndex])  + ") in Z Richtung kleiner negative Grenze (" + STR(rMaxToolAdj_Z_Minus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 11, 0, "TRcuToolMeasure.SaveTool", "Z", STR(deltaZ[iToolIndex]));
+            b := FALSE;
+         END_IF;
+         IF deltaZ[iToolIndex] > rMaxToolAdj_Z_Plus[iToolIndex] THEN
+            myRobot.DebugPrint(eTraceVision, "XXXX Toolverbiegung ("  + STR(deltaZ[iToolIndex])  + ") in Z Richtung grösser positive Grenze (" + STR(rMaxToolAdj_Z_Plus[iToolIndex]) + "). Düse muss getauscht werden.!!!!");
+            RcuSetMessageOnce(TRcToolMeasure_ErrMaxDeltaRched, myRobot.kinListInx, 12, 0, "TRcuToolMeasure.SaveTool", "Z", STR(deltaZ[iToolIndex]));
+            b := FALSE;
+         END_IF;
+
+         IF b THEN
+            bMeasureOk := TRUE;
+            corrTool.X_mm := refTool.X_mm - deltaX[iToolIndex];
+            corrTool.Y_mm := refTool.Y_mm - deltaY[iToolIndex];
+            corrTool.Z_mm := refTool.Z_mm - deltaZ[iToolIndex];
+         ELSE
+            bMeasureOk := FALSE;
+         END_IF;
+      END_IF;
+   END_IF;
+   SaveToolData();
+   str := refTool.GetInstancePathName();
+   b := WriteInitValues(str);
+   
+   str := corrTool.GetInstancePathName();
+   b := WriteInitValues(str);
+   
+   //copy tools from _globalvars for userpage
+   refToolUserPage[iToolIndex].X_mm   := refTool.X_mm;
+   refToolUserPage[iToolIndex].Y_mm   := refTool.Y_mm;
+   refToolUserPage[iToolIndex].Z_mm   := refTool.Z_mm;
+   refToolUserPage[iToolIndex].A_deg  := refTool.A_deg;
+   refToolUserPage[iToolIndex].B_deg  := refTool.B_deg;
+   refToolUserPage[iToolIndex].C_deg  := refTool.C_deg;
+   
+   corrToolUserPage[iToolIndex].X_mm  := corrTool.X_mm;
+   corrToolUserPage[iToolIndex].Y_mm  := corrTool.Y_mm;
+   corrToolUserPage[iToolIndex].Z_mm  := corrTool.Z_mm;
+   corrToolUserPage[iToolIndex].A_deg := corrTool.A_deg;
+   corrToolUserPage[iToolIndex].B_deg := corrTool.B_deg;
+   corrToolUserPage[iToolIndex].C_deg := corrTool.C_deg;
+   
+   deltaFlangeUserPage[iToolIndex].X  := deltaFlange.mValues[0];
+   deltaFlangeUserPage[iToolIndex].Y  := deltaFlange.mValues[1];
+   deltaFlangeUserPage[iToolIndex].Z  := deltaFlange.mValues[2];
+   
+   deltaTCPUserPage[iToolIndex].X     := deltaTCP.mValues[0];
+   deltaTCPUserPage[iToolIndex].Y     := deltaTCP.mValues[1];
+   deltaTCPUserPage[iToolIndex].Z     := deltaTCP.mValues[2];  
+   
+   bMeasureOkUserPage                 := bMeasureOk;
+
+END_ROUTINE
+
+// Das TOOL corrTool ergibt sich aus dem TOOL refTool durch Subtraktion der Differenzen
+// von MESS_VAL und REF_VAL
+ROUTINE SetTolerance(ToolNr : TOOLID; XMinus : REAL; XPlus : REAL; YMinus : REAL; YPlus : REAL; ZMinus : REAL; ZPlus : REAL)
+VAR
+   b : BOOL;
+   iToolIndex : INT;
+   str : STRING;
+   deltaTCP    : TMcuVector3;
+   deltaFlange : TMcuVector3;
+   deltaAbs    : REAL;
+   deltaAbsSqr : REAL;
+   ToolTrafo   : TMcuFrame;
+END_VAR
+
+   IF NOT bConfigured THEN
+      myRobot.DebugPrint(eTraceVision,"++++++++ Aufruf von SETTOLERANCE: Toolvermessung nicht aktiviert");      
+      RETURN;
+   END_IF;
+   
+   iToolIndex := TOOLID(ToolNr)+1;
+   
+   rMaxToolAdj_X_Plus[iToolIndex]  := XPlus;
+   rMaxToolAdj_X_Minus[iToolIndex] := XMinus;
+   rMaxToolAdj_Y_Plus[iToolIndex]  := YPlus;
+   rMaxToolAdj_Y_Minus[iToolIndex] := YMinus;
+   rMaxToolAdj_Z_Plus[iToolIndex]  := ZPlus;
+   rMaxToolAdj_Z_Minus[iToolIndex] := ZMinus;
+   
+    myRobot.DebugPrint(eTraceVision, "SETTOLERANCE ToolNr = "+STR(ToolNr)+" Werte = "+STR(XMinus)+STR(XPlus)+
+                       STR(YMinus)+STR(YPlus)+STR(ZMinus)+STR(ZPlus));
+END_ROUTINE
+
+
+//------------------------------------------------------------------------------------------------------------------
+// Wartet auf das Sensorsignal. Bei Erkennen des Sensorsignals wird gemaess
+// der gewählten Richtung die entsprechende kartesische Koordinate gespeichert
+//------------------------------------------------------------------------------------------------------------------
+ROUTINE Receive_ll_base(recordValue : COORD; object_LL : OBJECT)
+VAR
+   sensor     : MAPTO BOOL;
+   bChgSensor : BOOL;
+END_VAR 
+ 
+   sensor := MAPX(cHW_mToolDetect[myRobot.kinListInx]);
+   IF NOT IS_MAPPED(sensor) THEN
+      RcuSetMessageOnce(TRcToolMeasure_ErrSensorNotMapp,myRobot.kinListInx, 2, 0, "TRcuToolMeasure.Receive_ll_base", cHW_mToolDetect[myRobot.kinListInx]);
+      WAIT FALSE; //wait here until user has unload teachprog to prevent calculation with bad data
+   END_IF;
+   bChgSensor := IS_CHANGED(sensor);
+   
+   IF gbRcuSimulateStationPLC THEN
+      MAINRUN();
+   END_IF;
+   lightBarData.teachInObject := MAP(object_LL);
+   WAIT MAIN_RUN OR bChgSensor; // Flanke positiv oder negativ
+   IF MAIN_RUN AND NOT gbRcuSimulateStationPLC THEN
+      RcuSetMessageOnce(TRcToolMeasure_ErrNotInSensor, myRobot.kinListInx, 2, 0, "TRcuToolMeasure.Receive_ll_base");
+   ELSE
+      CASE recordValue OF
+         X1 : IF (lightBarData.eMeasDirs = eDir_Y_Z) THEN 
+                 RcuSetMessageOnce(TRcToolMeasure_ErrWrgDirNotCfg, myRobot.kinListInx, 1, 0, "TRcuToolMeasure.Receive_ll_base", "X1", "Y_Z");
+                 RETURN; 
+              END_IF;
+              lightBarData.points[0].rValX := myRobot.readBackVals.mCartPos.mValues[0];
+              lightBarData.points[0].bXok  := TRUE; 
+              IF (lightBarData.eMeasDirs = eDir_X_Y) THEN
+                 lightBarData.points[0].rValZ := myRobot.readBackVals.mCartPos.mValues[2];
+              ELSIF (lightBarData.eMeasDirs = eDir_X_Z) THEN
+                 lightBarData.points[0].rValY := myRobot.readBackVals.mCartPos.mValues[1];
+              END_IF;
+              myRobot.DebugPrint(eTraceVision, "Signal from lightbarrier for dir=X1 at pos=" + STR(lightBarData.points[0].rValX) + "mm");
+
+         X2 : IF (lightBarData.eMeasDirs = eDir_Y_Z) THEN 
+                 RcuSetMessageOnce(TRcToolMeasure_ErrWrgDirNotCfg, myRobot.kinListInx, 2, 0, "TRcuToolMeasure.Receive_ll_base", "X2", "Y_Z");
+                 RETURN; 
+              END_IF;
+              lightBarData.points[1].rValX := myRobot.readBackVals.mCartPos.mValues[0];
+              lightBarData.points[1].bXok  := TRUE; 
+              IF (lightBarData.eMeasDirs = eDir_X_Y) THEN
+                 lightBarData.points[1].rValZ := myRobot.readBackVals.mCartPos.mValues[2];
+              ELSIF (lightBarData.eMeasDirs = eDir_X_Z) THEN
+                 lightBarData.points[1].rValY := myRobot.readBackVals.mCartPos.mValues[1];
+              END_IF; 
+              myRobot.DebugPrint(eTraceVision, "Signal from lightbarrier for dir=X2 at pos=" + STR(lightBarData.points[1].rValX) + "mm");     
+
+         Y1 : IF (lightBarData.eMeasDirs = eDir_X_Z) THEN 
+                 RcuSetMessageOnce(TRcToolMeasure_ErrWrgDirNotCfg, myRobot.kinListInx, 3, 0, "TRcuToolMeasure.Receive_ll_base", "Y1", "X_Z");
+                 RETURN; 
+              END_IF;
+              lightBarData.points[0].rValY := myRobot.readBackVals.mCartPos.mValues[1];
+              lightBarData.points[0].bYok  := TRUE;  
+              IF (lightBarData.eMeasDirs = eDir_Y_Z) THEN
+                 lightBarData.points[0].rValX := myRobot.readBackVals.mCartPos.mValues[0];
+              END_IF;   
+              myRobot.DebugPrint(eTraceVision, "Signal from lightbarrier for dir=Y1 at pos=" + STR(lightBarData.points[0].rValY) + "mm");      
+
+         Y2 : IF (lightBarData.eMeasDirs = eDir_X_Z) THEN 
+                 RcuSetMessageOnce(TRcToolMeasure_ErrWrgDirNotCfg, myRobot.kinListInx, 4, 0, "TRcuToolMeasure.Receive_ll_base", "Y2", "X_Z");
+                 RETURN; 
+              END_IF;
+              lightBarData.points[1].rValY := myRobot.readBackVals.mCartPos.mValues[1];
+              lightBarData.points[1].bYok  := TRUE;  
+              IF (lightBarData.eMeasDirs = eDir_Y_Z) THEN
+                 lightBarData.points[1].rValX := myRobot.readBackVals.mCartPos.mValues[0];
+              END_IF;
+              myRobot.DebugPrint(eTraceVision, "Signal from lightbarrier for dir=Y2 at pos=" + STR(lightBarData.points[1].rValY) + "mm");
+
+         Z1 : IF (lightBarData.eMeasDirs = eDir_X_Y) THEN 
+                 RcuSetMessageOnce(TRcToolMeasure_ErrWrgDirNotCfg, myRobot.kinListInx, 5, 0, "TRcuToolMeasure.Receive_ll_base", "Z1", "X_Y");
+                 RETURN; 
+              END_IF;
+              lightBarData.points[0].rValZ :=myRobot.readBackVals.mCartPos.mValues[2];
+              lightBarData.points[0].bZok  := TRUE;  
+              myRobot.DebugPrint(eTraceVision, "Signal from lightbarrier for dir=Z1 at pos=" + STR(lightBarData.points[0].rValZ) + "mm");  
+
+         Z2 : IF (lightBarData.eMeasDirs = eDir_X_Y) THEN 
+                 RcuSetMessageOnce(TRcToolMeasure_ErrWrgDirNotCfg, myRobot.kinListInx, 6, 0, "TRcuToolMeasure.Receive_ll_base", "Z2", "X_Y");
+                 RETURN; 
+              END_IF;
+              lightBarData.points[1].rValZ := myRobot.readBackVals.mCartPos.mValues[2];
+              lightBarData.points[1].bZok  := TRUE;  
+              myRobot.DebugPrint(eTraceVision, "Signal from lightbarrier for dir=Z2 at pos=" + STR(lightBarData.points[1].rValZ) + "mm");
+       END_CASE;  
+   END_IF; //IF MAIN_RUN THEN
+   WAIT MAIN_RUN;
+END_ROUTINE
+
+
+//------------------------------------------------------------------------------------------------------------------
+// 
+//------------------------------------------------------------------------------------------------------------------
+ROUTINE ObserveLightBarData() PRIVATE       
+VAR
+   bChgData    : BOOL;
+   Z           : TMcuVector3;
+   Y           : TMcuVector3;
+   X           : TMcuVector3;
+   P1          : TMcuVector3;
+   P2          : TMcuVector3;
+   P3          : TMcuVector3;
+   H           : TMcuVector3;
+   Pos         : TMcuVector3;
+   Ori         : TMcuMatrix3;
+   object      : OBJECT;
+   iCntX       : SINT;
+   iCntY       : SINT;
+   iCntZ       : SINT;
+   i           : INT;
+END_VAR;   
+         
+   bChgData := IS_CHANGED(lightBarData);
+   WHILE TRUE DO
+      iCntX := 0;
+      iCntY := 0;
+      iCntZ := 0;
+      lightBarData.bDataOk := FALSE;
+      FOR i:=0 TO (cMaxPoints-1) DO
+         IF lightBarData.points[i].bXok THEN
+            iCntX := iCntX + 1;
+         END_IF;   
+         IF lightBarData.points[i].bYok THEN
+            iCntY := iCntY + 1;
+         END_IF;
+         IF lightBarData.points[i].bZok THEN
+            iCntZ := iCntZ + 1;
+         END_IF;
+      END_FOR;
+      IF ((iCntX=cMaxPoints) AND (iCntY=cMaxPoints)) OR ((iCntX=cMaxPoints) AND (iCntZ=cMaxPoints)) OR
+         ((iCntY=cMaxPoints) AND (iCntZ=cMaxPoints))  THEN
+         P1.mValues[0] := lightBarData.points[0].rValX; // first point lightbar
+         P1.mValues[1] := lightBarData.points[0].rValY;
+         P1.mValues[2] := lightBarData.points[0].rValZ;
+
+         P2.mValues[0] := lightBarData.points[1].rValX; // second point lightbar
+         P2.mValues[1] := lightBarData.points[1].rValY;
+         P2.mValues[2] := lightBarData.points[1].rValZ;
+
+         P3            := lightBarData.point3;          // 3rd point to define a plane
+
+         McuSubVector3(Z, P2, P1);
+         McuSubVector3(H, P3, P1);
+         McuCrossProductVec3(X, Z, H);
+         McuCrossProductVec3(Y, Z, X);
+
+         McuUnifyVec3(X,X);
+         McuUnifyVec3(Y,Y);
+         McuUnifyVec3(Z,Z);
+
+         Ori.mValues[0][0] := X.mValues[0];
+         Ori.mValues[1][0] := X.mValues[1];
+         Ori.mValues[2][0] := X.mValues[2];
+
+         Ori.mValues[0][1] := Y.mValues[0];
+         Ori.mValues[1][1] := Y.mValues[1];
+         Ori.mValues[2][1] := Y.mValues[2];
+
+         Ori.mValues[0][2] := Z.mValues[0];
+         Ori.mValues[1][2] := Z.mValues[1];
+         Ori.mValues[2][2] := Z.mValues[2];
+
+         Compute_tcp_kardan(Ori, Pos, 0, object);
+         myRobot.DebugPrint(eTraceVision, "orientation lightbar object:");
+         myRobot.DebugPrint(eTraceVision, " A = "+STR(object.A_deg) + " B = "+STR(object.B_deg)+" C = "+STR(object.C_deg));
+
+         //position X, Y, Z
+         lightBarData.calcObject.X_mm  := ((lightBarData.points[0].rValX - lightBarData.points[1].rValX) / 2) + lightBarData.points[1].rValX;
+         lightBarData.calcObject.Y_mm  := ((lightBarData.points[0].rValY - lightBarData.points[1].rValY) / 2) + lightBarData.points[1].rValY;
+         lightBarData.calcObject.Z_mm  := ((lightBarData.points[0].rValZ - lightBarData.points[1].rValZ) / 2) + lightBarData.points[1].rValZ;
+         //orientation A, B, C
+         lightBarData.calcObject.A_deg := object.A_deg;
+         lightBarData.calcObject.B_deg := object.B_deg;
+         lightBarData.calcObject.C_deg := object.C_deg;
+         //data valid 
+         lightBarData.bDataOk := TRUE;      
+      END_IF;
+
+      bChgData := FALSE;
+      WAIT bChgData;
+   END_WHILE;       
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------------------
+// 
+//------------------------------------------------------------------------------------------------------------------
+ROUTINE SaveLightBarData() PRIVATE
+ VAR 
+   bChgSave  : BOOL;
+   bChgClear : BOOL;
+   str       : STRING;
+   b         : BOOL;
+ END_VAR
+
+  bChgSave := IS_CHANGED(lightBarData.bSaveData);  
+  bChgClear := IS_CHANGED(lightBarData.bClearData);  
+  WHILE TRUE DO  
+     bChgSave  := FALSE;
+     bChgClear := FALSE;
+     WAIT bChgSave OR bChgClear;
+     IF lightBarData.bClearData THEN
+        ClearLightBarData();
+     ELSIF lightBarData.bSaveData AND lightBarData.bDataOk AND IS_MAPPED(lightBarData.teachInObject) THEN
+        lightBarData.oldObject     := lightBarData.teachInObject;
+        lightBarData.teachInObject := lightBarData.calcObject;
+
+        str := lightBarData.teachInObject.GetInstancePathName();
+        b := WriteInitValues(str);
+        myRobot.DebugPrint(eTraceVision, "New object for lightbarrier stored to " + str);;
+        
+        ClearLightBarData();
+     END_IF;  
+     lightBarData.bSaveData := FALSE;
+  END_WHILE;    
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------------------
+// 
+//------------------------------------------------------------------------------------------------------------------
+ROUTINE ClearLightBarData()
+ VAR
+  i : SINT;
+ END_VAR
+ 
+   FOR i:=0 TO (cMaxPoints-1) DO
+      lightBarData.points[i].rValX := 0.0;
+      lightBarData.points[i].bXok  := FALSE;
+      lightBarData.points[i].rValY := 0.0;
+      lightBarData.points[i].bYok  := FALSE;
+      lightBarData.points[i].rValZ := 0.0;
+      lightBarData.points[i].bZok  := FALSE;
+   END_FOR;
+   lightBarData.calcObject.X_mm  := 0.0;
+   lightBarData.calcObject.Y_mm  := 0.0;
+   lightBarData.calcObject.Z_mm  := 0.0;
+   lightBarData.calcObject.A_deg := 0.0;
+   lightBarData.calcObject.B_deg := 0.0;
+   lightBarData.calcObject.C_deg := 0.0;
+   myRobot.DebugPrint(eTraceVision, "lightbarrier data cleared");
+END_ROUTINE
+         
+//------------------------------------------------------------------------------------------------------------------
+// only used for debugprints
+//------------------------------------------------------------------------------------------------------------------
+ROUTINE ObserveSensor() PRIVATE
+VAR
+   bchgSensor : BOOL;
+   j          : SINT;
+END_VAR
+   
+  WAIT gbBootupFinished;
+  sensor := MAPX(cHW_mToolDetect[myRobot.kinListInx]);
+  IF NOT IS_MAPPED(sensor) THEN
+//     bConfigured := FALSE;
+     RETURN;
+  END_IF;
+  bchgSensor := IS_CHANGED(sensor);
+  WHILE TRUE DO
+   WAIT bchgSensor;
+   invsensor := NOT sensor;
+   bchgSensor := FALSE;
+	 IF sensor THEN
+	 	 myRobot.DebugPrint(eTraceVision, "-------- Toolkorrektur Lichtschranke gegangen --------");
+	 ELSE
+	 	 myRobot.DebugPrint(eTraceVision, "++++++++ Toolkorrektur Lichtschranke gekommen +++++++++");
+	 END_IF;
+  END_WHILE;
+
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------------------
+// Tool measurement OK to PLC
+//------------------------------------------------------------------------------------------------------------------
+ROUTINE ObserveMeasureOk() PRIVATE
+VAR
+   bchg : BOOL;
+END_VAR
+ 
+  WAIT gbBootupFinished;
+  bchg := IS_CHANGED(bMeasureOk);
+  WHILE TRUE DO
+     // IO_PB_Slave.SetBitPBS(rAdrOutToolMeasureOk, bMeasureOk); ??????
+     WAIT bchg;
+     bchg := FALSE;
+     IF bMeasureOk THEN
+     	  myRobot.DebugPrint(eTraceVision, "-------- Toolmeasurement Ok --------");
+     ELSE
+     	  myRobot.DebugPrint(eTraceVision, "++++++++ Toolmeasurement not Ok +++++++++");
+     END_IF;
+  END_WHILE;
+
+END_ROUTINE
+
+
+//------------------------------------------------------------------------------------------------------------------
+// clear the ref- and corrtool on userpage
+//------------------------------------------------------------------------------------------------------------------
+ROUTINE ClearUserPageTools(ToolNr : TOOLID) PRIVATE
+ VAR
+  iTool : SINT;
+ END_VAR
+  
+  iTool := TOOLID(ToolNr) + 1;
+  refToolUserPage[iTool].X_mm   := 0.0;
+  refToolUserPage[iTool].Y_mm   := 0.0;
+  refToolUserPage[iTool].Z_mm   := 0.0;
+  refToolUserPage[iTool].A_deg  := 0.0;
+  refToolUserPage[iTool].B_deg  := 0.0;
+  refToolUserPage[iTool].C_deg  := 0.0;
+  
+  corrToolUserPage[iTool].X_mm  := 0.0;
+  corrToolUserPage[iTool].Y_mm  := 0.0;
+  corrToolUserPage[iTool].Z_mm  := 0.0;
+  corrToolUserPage[iTool].A_deg := 0.0;
+  corrToolUserPage[iTool].B_deg := 0.0;
+  corrToolUserPage[iTool].C_deg := 0.0;
+  
+  deltaFlangeUserPage[iTool].X  := 0.0;
+  deltaFlangeUserPage[iTool].Y  := 0.0;
+  deltaFlangeUserPage[iTool].Z  := 0.0;
+  
+  deltaTCPUserPage[iTool].X     := 0.0;
+  deltaTCPUserPage[iTool].Y     := 0.0;
+  deltaTCPUserPage[iTool].Z     := 0.0; 
+  
+  IF (mess_valUserPage[iTool].X <> 0.0) AND (mess_valUserPage[iTool].Y <> 0.0) AND (mess_valUserPage[iTool].Z <> 0.0) THEN
+     mess_valUserPage[iTool].X := 0.0;
+     mess_valUserPage[iTool].Y := 0.0;
+     mess_valUserPage[iTool].Z := 0.0;
+  END_IF;
+  bMeasureOkUserPage             := FALSE; 
+END_ROUTINE 
+
+//------------------------------------------------------------------------------------------------------------------
+// read configuration from robotcontrol.cfg
+//------------------------------------------------------------------------------------------------------------------
+ROUTINE InitVars() : BOOL PRIVATE
+VAR
+  iCatalogHdl    : DINT;    // handle of the Configuration directory
+  j              : SINT;
+  i              : DINT;
+  r              : REAL;
+  iCatToolHdl    : DINT;    // handle of the Configuration directory
+END_VAR 
+  
+   //read robotcontrol.cfg
+   IF CatalogGetHandleRelative(myRobot.rcCatHdl, "ToolMeasure", iCatalogHdl) THEN
+      IF CatalogReadInt(iCatalogHdl, "Enable", i, FALSE) THEN
+         bConfigured := (i=1);
+      ELSE
+         bConfigured := FALSE;
+      END_IF;
+      IF bConfigured THEN
+         IF CatalogReadReal(iCatalogHdl, "MaxToolAdjustment_X", r, TRUE) THEN
+            // alle X für alle Tools setzen
+            rMaxToolAdj_X_Plus[1] := r;
+            rMaxToolAdj_X_Minus[1] := -r;
+            rMaxToolAdj_X_Plus[2] := r;
+            rMaxToolAdj_X_Minus[2] := -r;
+            rMaxToolAdj_X_Plus[3] := r;
+            rMaxToolAdj_X_Minus[3] := -r;
+            // Versuchen weitere Toleranzwerte zu lesen
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool1", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Minus", r, TRUE) THEN
+                  rMaxToolAdj_X_Minus[1] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Plus", r, TRUE) THEN
+                  rMaxToolAdj_X_Plus[1] := r;
+               END_IF;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool2", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Minus", r, TRUE) THEN
+                  rMaxToolAdj_X_Minus[2] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Plus", r, TRUE) THEN
+                  rMaxToolAdj_X_Plus[2] := r;
+               END_IF;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool3", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Minus", r, TRUE) THEN
+                  rMaxToolAdj_X_Minus[3] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Plus", r, TRUE) THEN
+                  rMaxToolAdj_X_Plus[3] := r;
+               END_IF;
+            END_IF;
+         ELSE
+            // Toleranzwerte X lesen
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool1", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Minus", r, FALSE) THEN
+                  rMaxToolAdj_X_Minus[1] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Plus", r, FALSE) THEN
+                  rMaxToolAdj_X_Plus[1] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 1, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_X.Tool1");
+               bConfigured := FALSE;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool2", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Minus", r, FALSE) THEN
+                  rMaxToolAdj_X_Minus[2] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Plus", r, FALSE) THEN
+                  rMaxToolAdj_X_Plus[2] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 2, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_X.Tool2");
+               bConfigured := FALSE;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool3", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Minus", r, FALSE) THEN
+                  rMaxToolAdj_X_Minus[3] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_X_Plus", r, FALSE) THEN
+                  rMaxToolAdj_X_Plus[3] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 3, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_X.Tool3");
+               bConfigured := FALSE;
+            END_IF;
+         END_IF;
+         IF CatalogReadReal(iCatalogHdl, "MaxToolAdjustment_Y", r, TRUE) THEN
+            // alle Y für alle Tools setzen
+            rMaxToolAdj_Y_Plus[1] := r;
+            rMaxToolAdj_Y_Minus[1] := -r;
+            rMaxToolAdj_Y_Plus[2] := r;
+            rMaxToolAdj_Y_Minus[2] := -r;
+            rMaxToolAdj_Y_Plus[3] := r;
+            rMaxToolAdj_Y_Minus[3] := -r;
+            // Versuchen weitere Toleranzwerte zu lesen
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool1", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Minus", r, TRUE) THEN
+                  rMaxToolAdj_Y_Minus[1] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Plus", r, TRUE) THEN
+                  rMaxToolAdj_Y_Plus[1] := r;
+               END_IF;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool2", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Minus", r, TRUE) THEN
+                  rMaxToolAdj_Y_Minus[2] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Plus", r, TRUE) THEN
+                  rMaxToolAdj_Y_Plus[2] := r;
+               END_IF;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool3", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Minus", r, TRUE) THEN
+                  rMaxToolAdj_Y_Minus[3] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Plus", r, TRUE) THEN
+                  rMaxToolAdj_Y_Plus[3] := r;
+               END_IF;
+            END_IF;
+         ELSE
+            // Toleranzwerte Y lesen
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool1", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Minus", r, FALSE) THEN
+                  rMaxToolAdj_Y_Minus[1] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Plus", r, FALSE) THEN
+                  rMaxToolAdj_Y_Plus[1] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 4, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_Y.Tool1");
+               bConfigured := FALSE;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool2", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Minus", r, FALSE) THEN
+                  rMaxToolAdj_Y_Minus[2] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Plus", r, FALSE) THEN
+                  rMaxToolAdj_Y_Plus[2] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 5, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_Y.Tool2");
+               bConfigured := FALSE;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool3", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Minus", r, FALSE) THEN
+                  rMaxToolAdj_Y_Minus[3] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Y_Plus", r, FALSE) THEN
+                  rMaxToolAdj_Y_Plus[3] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 6, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_Y.Tool3");
+               bConfigured := FALSE;
+            END_IF;
+         END_IF;
+         IF CatalogReadReal(iCatalogHdl, "MaxToolAdjustment_Z", r, TRUE) THEN
+            // alle Z für alle Tools setzen
+            rMaxToolAdj_Z_Plus[1] := r;
+            rMaxToolAdj_Z_Minus[1] := -r;
+            rMaxToolAdj_Z_Plus[2] := r;
+            rMaxToolAdj_Z_Minus[2] := -r;
+            rMaxToolAdj_Z_Plus[3] := r;
+            rMaxToolAdj_Z_Minus[3] := -r;
+            // Versuchen weitere Toleranzwerte zu lesen
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool1", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Minus", r, TRUE) THEN
+                  rMaxToolAdj_Z_Minus[1] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Plus", r, TRUE) THEN
+                  rMaxToolAdj_Z_Plus[1] := r;
+               END_IF;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool2", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Minus", r, TRUE) THEN
+                  rMaxToolAdj_Z_Minus[2] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Plus", r, TRUE) THEN
+                  rMaxToolAdj_Z_Plus[2] := r;
+               END_IF;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool3", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Minus", r, TRUE) THEN
+                  rMaxToolAdj_Z_Minus[3] := r;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Plus", r, TRUE) THEN
+                  rMaxToolAdj_Z_Plus[3] := r;
+               END_IF;
+            END_IF;
+         ELSE
+            // Toleranzwerte Z lesen
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool1", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Minus", r, FALSE) THEN
+                  rMaxToolAdj_Z_Minus[1] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Plus", r, FALSE) THEN
+                  rMaxToolAdj_Z_Plus[1] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 7, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_Z.Tool1");
+               bConfigured := FALSE;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool2", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Minus", r, FALSE) THEN
+                  rMaxToolAdj_Z_Minus[2] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Plus", r, FALSE) THEN
+                  rMaxToolAdj_Z_Plus[2] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 8, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_Z.Tool2");
+               bConfigured := FALSE;
+            END_IF;
+            IF CatalogGetHandleRelative(iCatalogHdl, "Tool3", iCatToolHdl) THEN
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Minus", r, FALSE) THEN
+                  rMaxToolAdj_Z_Minus[3] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+               IF CatalogReadReal(iCatToolHdl, "MaxToolAdj_Z_Plus", r, FALSE) THEN
+                  rMaxToolAdj_Z_Plus[3] := r;
+               ELSE
+                  bConfigured := FALSE;
+               END_IF;
+            ELSE
+               RcuSetMessageOnce(TRcToolMeasure_ErrConfig, myRobot.kinListInx, 9, 0, "TRcuToolMeasure.InitVars", "MaxToolAdjustment_Z.Tool3");
+               bConfigured := FALSE;
+            END_IF;
+         END_IF;
+         IF CatalogReadInt(iCatalogHdl, "UseObjectCoord", i, TRUE) THEN
+            bUseObjectCoord := (i=1);
+         ELSE
+            bUseObjectCoord := FALSE;
+         END_IF;
+         IF CatalogReadInt(iCatalogHdl, "UseTcpCoord", i, TRUE) THEN
+            bUseTcpCoord := (i=1);
+         ELSE
+            bUseTcpCoord := FALSE;
+         END_IF;
+         IF NOT CatalogReadIntRange(iCatalogHdl, "ObjectMeasureDirections", i, 1, 3, FALSE) THEN
+             bConfigured := FALSE;
+         ELSE
+            lightBarData.eMeasDirs := eMeasureDirs(i);
+         END_IF;
+         IF NOT CatalogReadReal(iCatalogHdl, "LightbarPoint3_X", lightBarData.point3.mValues[0], TRUE) THEN
+            lightBarData.point3.mValues[0] := 0.0; // default = world (0,0,0)
+         END_IF;
+         IF NOT CatalogReadReal(iCatalogHdl, "LightbarPoint3_Y", lightBarData.point3.mValues[1], TRUE) THEN
+            lightBarData.point3.mValues[1] := 0.0; // default = world (0,0,0)
+         END_IF;
+         IF NOT CatalogReadReal(iCatalogHdl, "LightbarPoint3_Z", lightBarData.point3.mValues[2], TRUE) THEN
+            lightBarData.point3.mValues[2] := 0.0; // default = world (0,0,0)
+         END_IF;
+
+      END_IF;   
+   ELSE
+      bConfigured := FALSE;
+   END_IF;
+
+   IF NOT bConfigured THEN
+      myRobot.DebugPrint(eTraceVision,"---------------------------------------");
+      myRobot.DebugPrint(eTraceVision,"----- Tool measurement deactivated ----");  
+      myRobot.DebugPrint(eTraceVision,"---------------------------------------");
+      RETURN FALSE;
+   END_IF;
+   
+   RETURN TRUE;
+END_ROUTINE
+
+
+ROUTINE Init(locRobot : TRcuRobot)
+   
+   myRobot := MAP(locRobot);
+   IF NOT IS_MAPPED(myRobot) THEN
+      RcuSetMessageOnce(TRcToolMeasure_ErrMappKin, myRobot.kinListInx, 1, 0, "TRcuToolMeasure.Init");
+      RETURN;
+   END_IF;
+   
+   REF_VAL    := MAP(DataToolREF[myRobot.kinListInx]);
+   MESS_VAL   := MAP(DataToolMESS[myRobot.kinListInx]);
+   OLD_VAL    := MAP(DataToolOLD[myRobot.kinListInx]);
+   deltaX     := MAP(DataTooldeltaX[myRobot.kinListInx]);
+   deltaY     := MAP(DataTooldeltaY[myRobot.kinListInx]);
+   deltaZ     := MAP(DataTooldeltaZ[myRobot.kinListInx]);
+
+
+   IF NOT InitVars() THEN
+      RETURN;
+   END_IF;
+   //only used for debugprints
+   //START ObserveSensor();
+
+   START ObserveMeasureOk();
+   START ObserveLightBarData();
+   START SaveLightBarData();
+   START SignalsToEPS() PRIO 3;
+   RETURN;
+  
+END_ROUTINE
+ 
+(******************************************************************************
+***   some bits to Ecopaint Screen *            *******************************
+******************************************************************************)
+ROUTINE SignalsToEPS() PRIVATE
+VAR
+   bEpsLightBar : MAPTO BOOL;
+   bEpsMeasureOk: MAPTO BOOL;
+   bMapOk       : BOOL;
+   bChg1        : BOOL;
+   bChg2        : BOOL;
+END_VAR   
+
+   bMapOk := TRUE;
+   bEpsLightBar  := MAPX(cSV_EPSOutToolMeasLightBar[myRobot.kinListInx]);
+   IF NOT IS_MAPPED(bEpsLightBar) THEN
+      bMapOk := FALSE;
+      RcuSetMessageOnce(TRcToolMeasure_ErrVarNotMapped, myRobot.kinListInx, 1, 0, "TRcuToolMeasure.SignalsToEPS", cSV_EPSOutToolMeasLightBar[myRobot.kinListInx]);
+   END_IF;
+   bEpsMeasureOk    := MAPX(cSV_EPSOutToolMeasureOk[myRobot.kinListInx]);
+   IF NOT IS_MAPPED(bEpsMeasureOk) THEN
+      bMapOk := FALSE;
+      RcuSetMessageOnce(TRcToolMeasure_ErrVarNotMapped, myRobot.kinListInx, 2, 0, "TRcuToolMeasure.SignalsToEPS", cSV_EPSOutToolMeasureOk[myRobot.kinListInx]);
+   END_IF;
+   IF NOT bMapOk THEN
+      PRINT("Visu für Toolvermessung läuft nicht!!");
+      RETURN;
+   END_IF;
+   
+   bChg1 := IS_CHANGED(sensor);
+   bChg2 := IS_CHANGED(bMeasureOk);
+   WHILE TRUE DO
+      bEpsLightBar  := sensor;
+      bEpsMeasureOk := bMeasureOk;
+      WAIT bChg1 OR bChg2;
+      bChg1 := FALSE;
+      bChg2 := FALSE;
+   END_WHILE;
+       
+END_ROUTINE
+
+
+

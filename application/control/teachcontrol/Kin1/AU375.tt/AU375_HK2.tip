@@ -1,0 +1,58 @@
+//$Csomagtér keret
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU37X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  OVERLAP( NODEC50  )
+  //
+  LIN( HK2_P1  )
+  SETBRUSH( GUN1 ,73 ,HK2_TP1 ,TR1  )
+  LIN( HK2_P2  )
+  IF (GL = TRUE) THEN
+    GUN( GUN1 ,GunOn ,HK2_TP2 ,TR2  )
+  END_IF
+  LIN( HK2_P3  )
+  LIN( HK2_P4  )
+  IF (GL = TRUE) THEN
+    GUN( GUN1 ,GunOff ,HK2_TP3 ,TR3  )
+  END_IF
+  LIN( HK2_P5  )
+  SETBRUSH( GUN1 ,71 ,HK2_TP4 ,TR4  )
+  LIN( HK2_P6  )
+  IF (KR_I = TRUE) OR (HK_I = TRUE) THEN
+    GUN( GUN1 ,GunOn ,HK2_TP5 ,TR5  )
+  END_IF
+  LIN( HK2_P7  )
+  LIN( HK2_P8  )
+  LIN( HK2_P9  )
+  LIN( HK2_P10  )
+  IF (KR_I = TRUE) OR (HK_I = TRUE) THEN
+    GUN( GUN1 ,GunOff ,HK2_TP6 ,TR6  )
+  END_IF
+  LIN( HK2_P11  )
+  SETBRUSH( GUN1 ,72 ,HK2_TP7 ,TR7  )
+  IF (KR_I = TRUE) THEN
+    GUN( GUN1 ,GunOn ,HK2_TP8 ,TR8  )
+  END_IF
+  LIN( HK2_P12  )
+  LIN( HK2_P13  )
+  LIN( HK2_P14  )
+  LIN( HK2_P15  )
+  SETBRUSH( GUN1 ,74 ,HK2_TP9 ,TR9  )
+  LIN( HK2_P16  )
+  IF (KR_I = TRUE) AND (GL = FALSE) THEN
+    GUN( GUN1 ,GunOff ,HK2_TP10 ,TR10  )
+  END_IF
+  LIN( HK2_P17  )
+  LIN( HK2_P18  )
+  IF (GL = TRUE) THEN
+    GUN( GUN1 ,GunOff ,HK2_TP11 ,TR11  )
+  END_IF
+  LIN( HK2_P19  )
+  LIN( HK2_P20  )
+  LIN( HK2_P21  )
+  //
+RDESELECT("RP12")

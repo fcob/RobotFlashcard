@@ -1,0 +1,178 @@
+//******************************************************************************
+// Configuration for SERCOS Drives
+//******************************************************************************
+
+//******************************************************************************
+// SERCOS
+//******************************************************************************
+name = "system.SERCOS"
+cycleTime = "UpdTimer1"
+traceWord = 7
+driverMode = 1              		// 1 ... Standardmode, 3 ... Testmode ohne Antriebsregler
+
+// Movement axes
+[DRVSERCOS:0]
+name = "Kin1.Drive1"
+address = 1
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 1
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 1000000.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:1]
+name = "Kin1.Drive2"
+address = 2
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 1
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 1000000.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:2]
+name = "Kin1.Drive3"
+address = 3
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 1
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 1000000.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:3]
+name = "Kin1.Drive4"
+address = 4
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 1
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 1000000.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:4]
+name = "Kin1.Drive5"
+address = 5
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 1
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 1000000.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:5]
+name = "Kin1.Drive6"
+address = 6
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 1
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 1000000.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:6]
+name = "Kin1.Drive7"
+address = 7
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 1
+posUnitsToIncrements = 10000.0
+velUnitsToIncrements = 1000.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:7]
+name = "PCU1.HW_axMDP91"
+address = 8
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 10
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 100.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:8]
+name = "PCU1.HW_axMDP92"
+address = 9
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 10
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 100.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:9]
+name = "PCU1.HW_axMDP93"
+address = 10
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 10
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 100.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"
+[DRVSERCOS:10]
+name = "PCU1.HW_axMDP94"
+address = 11
+driverMode = 1
+driveType = "ecodrive"
+traceWord = 7
+operatingMode = 7
+positionMode = 10
+posUnitsToIncrements = 1000000.0
+velUnitsToIncrements = 100.0
+torqueUnitsToDriveValue = 10.0
+velActValue = 1
+torqueActValue = 1
+addActValue0 = "S-0-0390"
+addActValue1 = "S-0-0144"

@@ -1,0 +1,39 @@
+<VIEW>
+   <MASKDEF key="TeachView.mask.HomingRetain2" textfile="userTx" permissiondef="userMenuPermission">           
+        <GROUP key="HomingRetain2.label.group" columns="40" rows="40" col="1" row="1" halign="stretch" valign="stretch">   
+      
+           <LABEL key="HomingRetain2.label.LineNr"    col="2"  row="2" cspan="6" halign="center"/> 
+      	   <LABEL key="HomingRetain2.label.ProgName"  col="10" row="2" cspan="6" halign="center"/> 
+      	   <LABEL key="HomingRetain2.label.ModName"   col="2" row="26" cspan="6" halign="center"/> 
+      	   <LABEL key="HomingRetain2.label.MainName"  col="2" row="30" cspan="6" halign="center"/> 
+      	   <LABEL key="HomingRetain2.label.HndlName"  col="2" row="34" cspan="6" halign="center"/> 
+     	
+           <NUMFIELD  var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.lineNrs[0]" vartype="TT" enabled="false" col="2" row="5" cspan="5"  halign="stretch" rspan="4"/>
+           <TEXTFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.progNames[0]" vartype="TT" enabled="false" col="8"  row="5" cspan="32" halign="stretch" rspan="4"/>
+
+           <NUMFIELD  var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.lineNrs[1]" vartype="TT" enabled="false" col="2" row="9" cspan="5"  halign="stretch" rspan="4"/>
+           <TEXTFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.progNames[1]" vartype="TT" enabled="false" col="8"  row="9" cspan="32" halign="stretch" rspan="4"/>
+
+           <NUMFIELD  var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.lineNrs[2]" vartype="TT" enabled="false" col="2" row="13" cspan="5"  halign="stretch" rspan="4"/>
+           <TEXTFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.progNames[2]" vartype="TT" enabled="false" col="8"  row="13" cspan="32" halign="stretch" rspan="4"/>
+
+           <NUMFIELD  var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.lineNrs[3]" vartype="TT" enabled="false" col="2" row="17" cspan="5"  halign="stretch" rspan="4"/>
+           <TEXTFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.progNames[3]" vartype="TT" enabled="false" col="8"  row="17" cspan="32" halign="stretch" rspan="4"/>
+
+           <NUMFIELD  var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.lineNrs[4]" vartype="TT" enabled="false" col="2" row="21" cspan="5"  halign="stretch" rspan="4"/>
+           <TEXTFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.callStack.progNames[4]" vartype="TT" enabled="false" col="8"  row="21" cspan="32" halign="stretch" rspan="4"/>
+
+           <TEXTFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.sActModuleName"   vartype="TT" enabled="false" col="10"  row="25" cspan="30" halign="stretch" rspan="4"/>
+           <TEXTFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.sHandlerMainProg" vartype="TT" enabled="false" col="10"  row="29" cspan="30" halign="stretch" rspan="4"/>
+           <TEXTFIELD var="_system.gRcuFocusedRobot.homing.TeachViewRetain.sHandlerModule"   vartype="TT" enabled="false" col="10"  row="33" cspan="30" halign="stretch" rspan="4"/>
+      	
+      	   <!--  User-Info -->
+      	   <LABEL key="HomingRetain2.label.source" var="_system.gRcuFocusedRobot.homing.iInfoRetain2" vartype="TT"
+      	          col="9" row="38" cspan="30" halign="left"/>
+      	
+      </GROUP>
+   </MASKDEF>
+   
+      
+</VIEW>
+

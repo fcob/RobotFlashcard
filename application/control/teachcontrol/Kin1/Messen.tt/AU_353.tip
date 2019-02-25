@@ -1,0 +1,22 @@
+//$Teached Point on the Body
+RSELECT("RP12")
+  //
+  SETTOOL( MESSPITZE  )
+  SETOBJECT(AU353)
+  //
+  LIN( MP_P2_1  )
+  LIN( MP_P2_2  )
+  //
+  LIN( MP_P3_1  )
+  LIN( MP_P3_2  )
+  //
+  LIN(MP_P4_1)
+  LIN(MP_P4_2)
+  //
+  LIN(MP_P6_1)
+  LIN(MP_P6_2)
+  //
+  LIN(MP_P8_1)
+  LIN(MP_P8_2)
+  //
+RDESELECT("RP12")

@@ -1,0 +1,13 @@
+//$Elöpozicio
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU37X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  //
+  PTP( VP  )
+  PTP( VP_P2  )
+  //
+RDESELECT("RP12")

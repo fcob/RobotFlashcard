@@ -1,0 +1,2062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--created by ProcessBuilder Version: 2.6.16.0-->
+<!--date: 24.05.2017-->
+<!--time: 14:16-->
+<!--user: VM_TA52_XP2E\Administrator-->
+<!--database: c:\control\control_audi_gyoer_2221_r\application\control\database\ecorpc_mcc2k.pb-->
+<!--computer: VM_TA52_XP2E-->
+<!--do not change this data directly in this view !!-->
+<View>
+  <!--########################################### CHANNELGROUP OVERVIEW ###########################################-->
+  <MASKDEF key="TeachView.mask.ChannelsOverview_FG1" textfile="userTx" permissiondef="userMenuPermission" height="2861">
+    <GROUP key="ChannelGroups - Overview" columns="10" col="1" row="1" halign="stretch" valign="stretch" left="20" top="20" rows="91">
+      <BUTTON key="TeachView.mask.SortByDevicesButton" col="7" row="1" halign="left" valign="stretch" maskkey="TeachView.mask.DevicetypesOverview_FG1" />
+      <BUTTON key="TeachView.mask.ChannelStatusButton" col="7" row="3" halign="left" valign="stretch" maskkey="Channels.ChannelStatus_FG1" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="1" halign="left" />
+      <BUTTON key=" AirSupply " col="2" row="1" halign="left" valign="stretch" maskkey="Channels.channelmask.AirSupply_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="1" halign="left" />
+      <LABEL key="" col="3" row="2" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="2" halign="left" />
+      <LABEL key="BLV1" col="4" row="2" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="3" halign="left" />
+      <LABEL key="YHV1" col="4" row="3" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="4" halign="left" />
+      <BUTTON key=" BellCleaner " col="2" row="4" halign="left" valign="stretch" maskkey="Channels.channelmask.BellCleaner_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="4" halign="left" />
+      <LABEL key="" col="3" row="5" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="5" halign="left" />
+      <LABEL key="BAV1" col="4" row="5" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="6" halign="left" />
+      <LABEL key="YAV1a" col="4" row="6" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="7" halign="left" />
+      <LABEL key="YAV1z" col="4" row="7" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="8" halign="left" />
+      <LABEL key="YBL34" col="4" row="8" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="9" halign="left" />
+      <LABEL key="YBL35" col="4" row="9" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="10" halign="left" />
+      <LABEL key="YV31" col="4" row="10" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="11" halign="left" />
+      <BUTTON key=" Hardener_a1 " col="2" row="11" halign="left" valign="stretch" maskkey="Channels.channelmask.Hardener_a1_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="11" halign="left" />
+      <LABEL key="" col="3" row="12" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="12" halign="left" />
+      <LABEL key="BDP92DRU" col="4" row="12" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="3" row="13" halign="left" />
+      <LABEL key="BDP92PA" col="4" row="13" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="3" row="14" halign="left" />
+      <LABEL key="BDP92PE" col="4" row="14" halign="left" />
+      <IMAGE file="Pump.gif" col="3" row="15" halign="left" />
+      <LABEL key="MDP92" col="4" row="15" halign="left" />
+      <IMAGE file="ColorValve.gif" col="3" row="16" halign="left" />
+      <LABEL key="YHa" col="4" row="16" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="17" halign="left" />
+      <LABEL key="YV1_Ha1" col="4" row="17" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="18" halign="left" />
+      <BUTTON key=" Hardener_b1 " col="2" row="18" halign="left" valign="stretch" maskkey="Channels.channelmask.Hardener_b1_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="18" halign="left" />
+      <LABEL key="" col="3" row="19" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="19" halign="left" />
+      <LABEL key="BDP94DRU" col="4" row="19" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="3" row="20" halign="left" />
+      <LABEL key="BDP94PA" col="4" row="20" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="3" row="21" halign="left" />
+      <LABEL key="BDP94PE" col="4" row="21" halign="left" />
+      <IMAGE file="Pump.gif" col="3" row="22" halign="left" />
+      <LABEL key="MDP94" col="4" row="22" halign="left" />
+      <IMAGE file="ColorValve.gif" col="3" row="23" halign="left" />
+      <LABEL key="YHb" col="4" row="23" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="24" halign="left" />
+      <LABEL key="YV1_Hb1" col="4" row="24" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="25" halign="left" />
+      <BUTTON key=" Hardener_b2 " col="2" row="25" halign="left" valign="stretch" maskkey="Channels.channelmask.Hardener_b2_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="25" halign="left" />
+      <LABEL key="" col="3" row="26" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="26" halign="left" />
+      <LABEL key="YFGV2_Hb1" col="4" row="26" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="27" halign="left" />
+      <LABEL key="YV2_Hb1" col="4" row="27" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="28" halign="left" />
+      <BUTTON key=" MainChannel " col="2" row="28" halign="left" valign="stretch" maskkey="Channels.channelmask.MainChannel_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="28" halign="left" />
+      <LABEL key="" col="3" row="29" halign="left" />
+      <IMAGE file="AirHeater.gif" col="3" row="29" halign="left" />
+      <LABEL key="AAH1" col="4" row="29" halign="left" />
+      <IMAGE file="HTUnit.gif" col="3" row="30" halign="left" />
+      <LABEL key="AHS1" col="4" row="30" halign="left" />
+      <IMAGE file="SwitchPLC.gif" col="3" row="31" halign="left" />
+      <LABEL key="APurgeDumpLine" col="4" row="31" halign="left" />
+      <IMAGE file="SwitchPLC.gif" col="3" row="32" halign="left" />
+      <LABEL key="ASafeHTOff" col="4" row="32" halign="left" />
+      <IMAGE file="AirFlow.gif" col="3" row="33" halign="left" />
+      <LABEL key="BLL1" col="4" row="33" halign="left" />
+      <IMAGE file="AirFlow.gif" col="3" row="34" halign="left" />
+      <LABEL key="BLL2" col="4" row="34" halign="left" />
+      <IMAGE file="AirFlow.gif" col="3" row="35" halign="left" />
+      <LABEL key="BML1" col="4" row="35" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="36" halign="left" />
+      <LABEL key="BMLD1" col="4" row="36" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="37" halign="left" />
+      <LABEL key="YMLL1" col="4" row="37" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="38" halign="left" />
+      <BUTTON key=" Mixture_a1 " col="2" row="38" halign="left" valign="stretch" maskkey="Channels.channelmask.Mixture_a1_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="38" halign="left" />
+      <LABEL key="" col="3" row="39" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="39" halign="left" />
+      <LABEL key="YFGV1_Ha" col="4" row="39" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="40" halign="left" />
+      <LABEL key="YFGV1_SLa" col="4" row="40" halign="left" />
+      <IMAGE file="Needle.gif" col="3" row="41" halign="left" />
+      <LABEL key="YHN1a" col="4" row="41" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="42" halign="left" />
+      <LABEL key="YPL2a" col="4" row="42" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="43" halign="left" />
+      <LABEL key="YV2a" col="4" row="43" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="44" halign="left" />
+      <BUTTON key=" Mixture_b1 " col="2" row="44" halign="left" valign="stretch" maskkey="Channels.channelmask.Mixture_b1_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="44" halign="left" />
+      <LABEL key="" col="3" row="45" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="45" halign="left" />
+      <LABEL key="YFGV1_Hb" col="4" row="45" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="46" halign="left" />
+      <LABEL key="YFGV1_SLb" col="4" row="46" halign="left" />
+      <IMAGE file="Needle.gif" col="3" row="47" halign="left" />
+      <LABEL key="YHN1b" col="4" row="47" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="48" halign="left" />
+      <LABEL key="YPL2b" col="4" row="48" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="49" halign="left" />
+      <LABEL key="YV2b" col="4" row="49" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="50" halign="left" />
+      <BUTTON key=" ShortPurge " col="2" row="50" halign="left" valign="stretch" maskkey="Channels.channelmask.ShortPurge_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="50" halign="left" />
+      <LABEL key="" col="3" row="51" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="51" halign="left" />
+      <LABEL key="YBL_KS1" col="4" row="51" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="52" halign="left" />
+      <LABEL key="YKS1" col="4" row="52" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="53" halign="left" />
+      <LABEL key="YKS2" col="4" row="53" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="54" halign="left" />
+      <LABEL key="YKSL1" col="4" row="54" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="55" halign="left" />
+      <BUTTON key=" StockPaint_a1 " col="2" row="55" halign="left" valign="stretch" maskkey="Channels.channelmask.StockPaint_a1_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="55" halign="left" />
+      <LABEL key="" col="3" row="56" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="56" halign="left" />
+      <LABEL key="BDP91DRU" col="4" row="56" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="3" row="57" halign="left" />
+      <LABEL key="BDP91PA" col="4" row="57" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="3" row="58" halign="left" />
+      <LABEL key="BDP91PE" col="4" row="58" halign="left" />
+      <IMAGE file="AirFlow.gif" col="3" row="59" halign="left" />
+      <LABEL key="BFDSa1" col="4" row="59" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="60" halign="left" />
+      <LABEL key="BFDSa1MB" col="4" row="60" halign="left" />
+      <IMAGE file="Pump.gif" col="3" row="61" halign="left" />
+      <LABEL key="MDP91" col="4" row="61" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="62" halign="left" />
+      <LABEL key="YBY1a" col="4" row="62" halign="left" />
+      <IMAGE file="ColorValve.gif" col="3" row="63" halign="left" />
+      <LABEL key="YSLa" col="4" row="63" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="64" halign="left" />
+      <LABEL key="YV1_SLa1" col="4" row="64" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="65" halign="left" />
+      <LABEL key="YV3a" col="4" row="65" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="66" halign="left" />
+      <BUTTON key=" StockPaint_b1 " col="2" row="66" halign="left" valign="stretch" maskkey="Channels.channelmask.StockPaint_b1_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="66" halign="left" />
+      <LABEL key="" col="3" row="67" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="67" halign="left" />
+      <LABEL key="BDP93DRU" col="4" row="67" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="3" row="68" halign="left" />
+      <LABEL key="BDP93PA" col="4" row="68" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="3" row="69" halign="left" />
+      <LABEL key="BDP93PE" col="4" row="69" halign="left" />
+      <IMAGE file="AirFlow.gif" col="3" row="70" halign="left" />
+      <LABEL key="BFDSb1" col="4" row="70" halign="left" />
+      <IMAGE file="Initiator.gif" col="3" row="71" halign="left" />
+      <LABEL key="BFDSb1MB" col="4" row="71" halign="left" />
+      <IMAGE file="Pump.gif" col="3" row="72" halign="left" />
+      <LABEL key="MDP93" col="4" row="72" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="73" halign="left" />
+      <LABEL key="YBY1b" col="4" row="73" halign="left" />
+      <IMAGE file="ColorValve.gif" col="3" row="74" halign="left" />
+      <LABEL key="YSLb" col="4" row="74" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="75" halign="left" />
+      <LABEL key="YV1_SLb1" col="4" row="75" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="76" halign="left" />
+      <LABEL key="YV3b" col="4" row="76" halign="left" />
+      <IMAGE file="ChannelGroup.gif" col="1" row="77" halign="left" />
+      <BUTTON key=" StockPaint_b2 " col="2" row="77" halign="left" valign="stretch" maskkey="Channels.channelmask.StockPaint_b2_FG1" />
+      <IMAGE file="Channel.gif" col="2" row="77" halign="left" />
+      <LABEL key="" col="3" row="78" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="78" halign="left" />
+      <LABEL key="YFGV2_SLb1" col="4" row="78" halign="left" />
+      <IMAGE file="Valve.gif" col="3" row="79" halign="left" />
+      <LABEL key="YV2_SLb1" col="4" row="79" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### AirSupply ###########################################-->
+  <MASKDEF key="Channels.channelmask.AirSupply_FG1" textfile="userTx" permissiondef="userMenuPermission" height="319">
+    <GROUP key="AirSupply" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="9">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="6" rspan="6" left="20" right="20">
+        <IMAGE file="Initiator.gif" col="1" row="1" halign="left" />
+        <LABEL key="BLV1" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[8].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="3" halign="left" />
+        <LABEL key="YHV1" col="2" row="3" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[14].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="4" halign="left" />
+        <LABEL key="ActValue" col="3" row="4" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="5" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[14].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="5" halign="left" />
+        <LABEL key="Interlock" col="3" row="5" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="6" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[14].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[14].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="6" halign="left" />
+        <LABEL key="Set" col="3" row="6" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### BellCleaner ###########################################-->
+  <MASKDEF key="Channels.channelmask.BellCleaner_FG1" textfile="userTx" permissiondef="userMenuPermission" height="815">
+    <GROUP key="BellCleaner" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="25">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="22" rspan="22" left="20" right="20">
+        <IMAGE file="Initiator.gif" col="1" row="1" halign="left" />
+        <LABEL key="BAV1" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[1].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="3" halign="left" />
+        <LABEL key="YAV1a" col="2" row="3" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[1].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="4" halign="left" />
+        <LABEL key="ActValue" col="3" row="4" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="5" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[1].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="5" halign="left" />
+        <LABEL key="Interlock" col="3" row="5" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="6" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[1].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="6" halign="left" />
+        <LABEL key="Set" col="3" row="6" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="7" halign="left" />
+        <LABEL key="YAV1z" col="2" row="7" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[2].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="8" halign="left" />
+        <LABEL key="ActValue" col="3" row="8" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="9" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[2].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="9" halign="left" />
+        <LABEL key="Interlock" col="3" row="9" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="10" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[2].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="10" halign="left" />
+        <LABEL key="Set" col="3" row="10" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="11" halign="left" />
+        <LABEL key="YBL34" col="2" row="11" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="12" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[4].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="12" halign="left" />
+        <LABEL key="ActValue" col="3" row="12" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="13" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[4].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="13" halign="left" />
+        <LABEL key="Interlock" col="3" row="13" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="14" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[4].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="14" halign="left" />
+        <LABEL key="Set" col="3" row="14" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="15" halign="left" />
+        <LABEL key="YBL35" col="2" row="15" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="16" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[5].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="16" halign="left" />
+        <LABEL key="ActValue" col="3" row="16" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="17" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[5].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="17" halign="left" />
+        <LABEL key="Interlock" col="3" row="17" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="18" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[5].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="18" halign="left" />
+        <LABEL key="Set" col="3" row="18" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="19" halign="left" />
+        <LABEL key="YV31" col="2" row="19" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="20" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[29].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="20" halign="left" />
+        <LABEL key="ActValue" col="3" row="20" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="21" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[29].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="21" halign="left" />
+        <LABEL key="Interlock" col="3" row="21" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="22" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[29].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[29].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="22" halign="left" />
+        <LABEL key="Set" col="3" row="22" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Hardener_a1 ###########################################-->
+  <MASKDEF key="Channels.channelmask.Hardener_a1_FG1" textfile="userTx" permissiondef="userMenuPermission" height="908">
+    <GROUP key="Hardener_a1" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="28">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="25" rspan="25" left="20" right="20">
+        <IMAGE file="Initiator.gif" col="1" row="1" halign="left" />
+        <LABEL key="BDP92DRU" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[3].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <IMAGE file="AnalogSensor.gif" col="1" row="3" halign="left" />
+        <LABEL key="BDP92PA" col="2" row="3" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[3].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+        <LABEL key="ActValue" col="3" row="4" halign="left" />
+        <IMAGE file="AnalogSensor.gif" col="1" row="5" halign="left" />
+        <LABEL key="BDP92PE" col="2" row="5" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[4].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <IMAGE file="Pump.gif" col="1" row="7" halign="left" />
+        <LABEL key="MDP92" col="2" row="7" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[2].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="8" halign="left" />
+        <LABEL key="ActQuantity [ml/min]" col="3" row="8" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="9" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[2].sOut.o_rActVolume" />
+        <IMAGE file="REAL_GET.gif" col="2" row="9" halign="left" />
+        <LABEL key="ActVolume" col="3" row="9" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="10" halign="left" />
+        <LABEL key="Interlock" col="3" row="10" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="11" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_mOmitInterlocks" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="11" halign="left" />
+        <LABEL key="Omit interlock" col="3" row="11" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="12" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="12" halign="left" />
+        <LABEL key="SetQuantity [0..360] ml/min" col="3" row="12" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="13" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_rSetVolume" />
+        <IMAGE file="REAL_SET.gif" col="2" row="13" halign="left" />
+        <LABEL key="SetVolume [0..5000] ml" col="3" row="13" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="14" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="14" halign="left" />
+        <LABEL key="Start move" col="3" row="14" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="15" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_mOrderMoveVolume" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="15" halign="left" />
+        <LABEL key="Start move volume" col="3" row="15" halign="left" />
+        <IMAGE file="ColorValve.gif" col="1" row="16" halign="left" />
+        <LABEL key="YHa" col="2" row="16" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="17" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mActive" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="17" halign="left" />
+        <LABEL key="ActValue" col="3" row="17" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="18" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[1].sIn.i_iCommissioningValeNo" />
+        <IMAGE file="INT_SET.gif" col="2" row="18" halign="left" />
+        <LABEL key="CommissioningValeNo" col="3" row="18" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="19" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="19" halign="left" />
+        <LABEL key="Interlock" col="3" row="19" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="20" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[1].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="20" halign="left" />
+        <LABEL key="Set" col="3" row="20" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="21" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_iValveNo" />
+        <IMAGE file="INT_GET.gif" col="2" row="21" halign="left" />
+        <LABEL key="ValveNo" col="3" row="21" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="22" halign="left" />
+        <LABEL key="YV1_Ha1" col="2" row="22" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="23" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[21].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="23" halign="left" />
+        <LABEL key="ActValue" col="3" row="23" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[21].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="24" halign="left" />
+        <LABEL key="Interlock" col="3" row="24" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="25" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[21].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[21].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="25" halign="left" />
+        <LABEL key="Set" col="3" row="25" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Hardener_b1 ###########################################-->
+  <MASKDEF key="Channels.channelmask.Hardener_b1_FG1" textfile="userTx" permissiondef="userMenuPermission" height="908">
+    <GROUP key="Hardener_b1" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="28">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="25" rspan="25" left="20" right="20">
+        <IMAGE file="Initiator.gif" col="1" row="1" halign="left" />
+        <LABEL key="BDP94DRU" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[5].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <IMAGE file="AnalogSensor.gif" col="1" row="3" halign="left" />
+        <LABEL key="BDP94PA" col="2" row="3" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[7].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+        <LABEL key="ActValue" col="3" row="4" halign="left" />
+        <IMAGE file="AnalogSensor.gif" col="1" row="5" halign="left" />
+        <LABEL key="BDP94PE" col="2" row="5" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[8].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <IMAGE file="Pump.gif" col="1" row="7" halign="left" />
+        <LABEL key="MDP94" col="2" row="7" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[4].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="8" halign="left" />
+        <LABEL key="ActQuantity [ml/min]" col="3" row="8" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="9" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[4].sOut.o_rActVolume" />
+        <IMAGE file="REAL_GET.gif" col="2" row="9" halign="left" />
+        <LABEL key="ActVolume" col="3" row="9" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="10" halign="left" />
+        <LABEL key="Interlock" col="3" row="10" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="11" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_mOmitInterlocks" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="11" halign="left" />
+        <LABEL key="Omit interlock" col="3" row="11" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="12" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="12" halign="left" />
+        <LABEL key="SetQuantity [0..360] ml/min" col="3" row="12" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="13" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_rSetVolume" />
+        <IMAGE file="REAL_SET.gif" col="2" row="13" halign="left" />
+        <LABEL key="SetVolume [0..5000] ml" col="3" row="13" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="14" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="14" halign="left" />
+        <LABEL key="Start move" col="3" row="14" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="15" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_mOrderMoveVolume" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="15" halign="left" />
+        <LABEL key="Start move volume" col="3" row="15" halign="left" />
+        <IMAGE file="ColorValve.gif" col="1" row="16" halign="left" />
+        <LABEL key="YHb" col="2" row="16" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="17" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mActive" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="17" halign="left" />
+        <LABEL key="ActValue" col="3" row="17" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="18" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[2].sIn.i_iCommissioningValeNo" />
+        <IMAGE file="INT_SET.gif" col="2" row="18" halign="left" />
+        <LABEL key="CommissioningValeNo" col="3" row="18" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="19" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="19" halign="left" />
+        <LABEL key="Interlock" col="3" row="19" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="20" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[2].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="20" halign="left" />
+        <LABEL key="Set" col="3" row="20" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="21" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_iValveNo" />
+        <IMAGE file="INT_GET.gif" col="2" row="21" halign="left" />
+        <LABEL key="ValveNo" col="3" row="21" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="22" halign="left" />
+        <LABEL key="YV1_Hb1" col="2" row="22" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="23" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[22].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="23" halign="left" />
+        <LABEL key="ActValue" col="3" row="23" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[22].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="24" halign="left" />
+        <LABEL key="Interlock" col="3" row="24" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="25" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[22].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[22].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="25" halign="left" />
+        <LABEL key="Set" col="3" row="25" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Hardener_b2 ###########################################-->
+  <MASKDEF key="Channels.channelmask.Hardener_b2_FG1" textfile="userTx" permissiondef="userMenuPermission" height="381">
+    <GROUP key="Hardener_b2" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="11">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="8" rspan="8" left="20" right="20">
+        <IMAGE file="Valve.gif" col="1" row="1" halign="left" />
+        <LABEL key="YFGV2_Hb1" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[12].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="3" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[12].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="3" halign="left" />
+        <LABEL key="Interlock" col="3" row="3" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="4" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[12].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[12].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="4" halign="left" />
+        <LABEL key="Set" col="3" row="4" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="5" halign="left" />
+        <LABEL key="YV2_Hb1" col="2" row="5" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[25].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="7" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[25].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="7" halign="left" />
+        <LABEL key="Interlock" col="3" row="7" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[25].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[25].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="8" halign="left" />
+        <LABEL key="Set" col="3" row="8" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### MainChannel ###########################################-->
+  <MASKDEF key="Channels.channelmask.MainChannel_FG1" textfile="userTx" permissiondef="userMenuPermission" height="1280">
+    <GROUP key="MainChannel" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="40">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="37" rspan="37" left="20" right="20">
+        <IMAGE file="AirHeater.gif" col="1" row="1" halign="left" />
+        <LABEL key="AAH1" col="2" row="1" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirHeater[1].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="Actual temp." col="3" row="2" halign="left" />
+        <IMAGE file="HTUnit.gif" col="1" row="3" halign="left" />
+        <LABEL key="AHS1" col="2" row="3" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_rActValueCurrent" />
+        <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+        <LABEL key="ActValueCurrent" col="3" row="4" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="5" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_rActValueVoltage" />
+        <IMAGE file="REAL_GET.gif" col="2" row="5" halign="left" />
+        <LABEL key="ActValueVoltage" col="3" row="5" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mOn" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="HTOn" col="3" row="6" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="7" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="7" halign="left" />
+        <LABEL key="Interlock" col="3" row="7" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tHTUnit[1].sIn.i_mReset" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="8" halign="left" />
+        <LABEL key="Reset" col="3" row="8" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="9" halign="left" enablevar="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tHTUnit[1].sIn.i_rReqValueManCurrent" />
+        <IMAGE file="REAL_SET.gif" col="2" row="9" halign="left" />
+        <LABEL key="SetValueCurrent [0-100 µA]" col="3" row="9" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="10" halign="left" enablevar="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tHTUnit[1].sIn.i_rReqValueManVoltage" />
+        <IMAGE file="REAL_SET.gif" col="2" row="10" halign="left" />
+        <LABEL key="SetValueVoltage [0-100 KV]" col="3" row="10" halign="left" />
+        <IMAGE file="SwitchPLC.gif" col="1" row="11" halign="left" />
+        <LABEL key="APurgeDumpLine" col="2" row="11" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="12" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tSwitchPLC[1].sOut.o_mOn" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="12" halign="left" />
+        <LABEL key="ActValue" col="3" row="12" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="13" halign="left" enablevar="PCU1.SV_PCU2PHG.tSwitchPLC[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tSwitchPLC[1].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="13" halign="left" />
+        <LABEL key="SetValue" col="3" row="13" halign="left" />
+        <IMAGE file="SwitchPLC.gif" col="1" row="14" halign="left" />
+        <LABEL key="ASafeHTOff" col="2" row="14" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="15" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tSwitchPLC[2].sOut.o_mOn" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="15" halign="left" />
+        <LABEL key="ActValue" col="3" row="15" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="16" halign="left" enablevar="PCU1.SV_PCU2PHG.tSwitchPLC[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tSwitchPLC[2].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="16" halign="left" />
+        <LABEL key="SetValue" col="3" row="16" halign="left" />
+        <IMAGE file="AirFlow.gif" col="1" row="17" halign="left" />
+        <LABEL key="BLL1" col="2" row="17" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="18" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[3].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="18" halign="left" />
+        <LABEL key="ActValue" col="3" row="18" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="19" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[3].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="19" halign="left" />
+        <LABEL key="Interlock" col="3" row="19" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="20" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[3].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="20" halign="left" />
+        <LABEL key="Set [0-1000 NL/min]" col="3" row="20" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="21" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[3].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="21" halign="left" />
+        <LABEL key="SetManualOn" col="3" row="21" halign="left" />
+        <IMAGE file="AirFlow.gif" col="1" row="22" halign="left" />
+        <LABEL key="BLL2" col="2" row="22" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="23" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[4].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="23" halign="left" />
+        <LABEL key="ActValue" col="3" row="23" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[4].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="24" halign="left" />
+        <LABEL key="Interlock" col="3" row="24" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="25" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[4].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="25" halign="left" />
+        <LABEL key="Set [0-1000 NL/min]" col="3" row="25" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="26" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[4].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="26" halign="left" />
+        <LABEL key="SetManualOn" col="3" row="26" halign="left" />
+        <IMAGE file="AirFlow.gif" col="1" row="27" halign="left" />
+        <LABEL key="BML1" col="2" row="27" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="28" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[5].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="28" halign="left" />
+        <LABEL key="ActVelocity [1/min]" col="3" row="28" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="29" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[5].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="29" halign="left" />
+        <LABEL key="Interlock" col="3" row="29" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="30" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[5].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="30" halign="left" />
+        <LABEL key="SetManualOn" col="3" row="30" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="31" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[5].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="31" halign="left" />
+        <LABEL key="SetVelocity [0-100000 1/min]" col="3" row="31" halign="left" />
+        <IMAGE file="Initiator.gif" col="1" row="32" halign="left" />
+        <LABEL key="BMLD1" col="2" row="32" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="33" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[9].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="33" halign="left" />
+        <LABEL key="ActValue" col="3" row="33" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="34" halign="left" />
+        <LABEL key="YMLL1" col="2" row="34" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="35" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[18].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="35" halign="left" />
+        <LABEL key="ActValue" col="3" row="35" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="36" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[18].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="36" halign="left" />
+        <LABEL key="Interlock" col="3" row="36" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="37" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[18].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[18].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="37" halign="left" />
+        <LABEL key="Set" col="3" row="37" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Mixture_a1 ###########################################-->
+  <MASKDEF key="Channels.channelmask.Mixture_a1_FG1" textfile="userTx" permissiondef="userMenuPermission" height="753">
+    <GROUP key="Mixture_a1" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="23">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="20" rspan="20" left="20" right="20">
+        <IMAGE file="Valve.gif" col="1" row="1" halign="left" />
+        <LABEL key="YFGV1_Ha" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[8].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="3" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[8].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="3" halign="left" />
+        <LABEL key="Interlock" col="3" row="3" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="4" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[8].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[8].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="4" halign="left" />
+        <LABEL key="Set" col="3" row="4" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="5" halign="left" />
+        <LABEL key="YFGV1_SLa" col="2" row="5" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[10].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="7" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[10].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="7" halign="left" />
+        <LABEL key="Interlock" col="3" row="7" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[10].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[10].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="8" halign="left" />
+        <LABEL key="Set" col="3" row="8" halign="left" />
+        <IMAGE file="Needle.gif" col="1" row="9" halign="left" />
+        <LABEL key="YHN1a" col="2" row="9" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_mOn" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="10" halign="left" />
+        <LABEL key="ActValue" col="3" row="10" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="11" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="11" halign="left" />
+        <LABEL key="Interlock" col="3" row="11" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="12" halign="left" enablevar="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tNeedle[1].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="12" halign="left" />
+        <LABEL key="Set" col="3" row="12" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="13" halign="left" />
+        <LABEL key="YPL2a" col="2" row="13" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="14" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[19].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="14" halign="left" />
+        <LABEL key="ActValue" col="3" row="14" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="15" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[19].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="15" halign="left" />
+        <LABEL key="Interlock" col="3" row="15" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="16" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[19].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[19].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="16" halign="left" />
+        <LABEL key="Set" col="3" row="16" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="17" halign="left" />
+        <LABEL key="YV2a" col="2" row="17" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="18" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[27].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="18" halign="left" />
+        <LABEL key="ActValue" col="3" row="18" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="19" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[27].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="19" halign="left" />
+        <LABEL key="Interlock" col="3" row="19" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="20" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[27].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[27].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="20" halign="left" />
+        <LABEL key="Set" col="3" row="20" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Mixture_b1 ###########################################-->
+  <MASKDEF key="Channels.channelmask.Mixture_b1_FG1" textfile="userTx" permissiondef="userMenuPermission" height="753">
+    <GROUP key="Mixture_b1" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="23">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="20" rspan="20" left="20" right="20">
+        <IMAGE file="Valve.gif" col="1" row="1" halign="left" />
+        <LABEL key="YFGV1_Hb" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[9].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="3" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[9].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="3" halign="left" />
+        <LABEL key="Interlock" col="3" row="3" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="4" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[9].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[9].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="4" halign="left" />
+        <LABEL key="Set" col="3" row="4" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="5" halign="left" />
+        <LABEL key="YFGV1_SLb" col="2" row="5" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[11].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="7" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[11].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="7" halign="left" />
+        <LABEL key="Interlock" col="3" row="7" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[11].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[11].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="8" halign="left" />
+        <LABEL key="Set" col="3" row="8" halign="left" />
+        <IMAGE file="Needle.gif" col="1" row="9" halign="left" />
+        <LABEL key="YHN1b" col="2" row="9" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_mOn" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="10" halign="left" />
+        <LABEL key="ActValue" col="3" row="10" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="11" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="11" halign="left" />
+        <LABEL key="Interlock" col="3" row="11" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="12" halign="left" enablevar="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tNeedle[2].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="12" halign="left" />
+        <LABEL key="Set" col="3" row="12" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="13" halign="left" />
+        <LABEL key="YPL2b" col="2" row="13" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="14" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[20].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="14" halign="left" />
+        <LABEL key="ActValue" col="3" row="14" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="15" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[20].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="15" halign="left" />
+        <LABEL key="Interlock" col="3" row="15" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="16" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[20].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[20].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="16" halign="left" />
+        <LABEL key="Set" col="3" row="16" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="17" halign="left" />
+        <LABEL key="YV2b" col="2" row="17" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="18" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[28].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="18" halign="left" />
+        <LABEL key="ActValue" col="3" row="18" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="19" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[28].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="19" halign="left" />
+        <LABEL key="Interlock" col="3" row="19" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="20" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[28].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[28].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="20" halign="left" />
+        <LABEL key="Set" col="3" row="20" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### ShortPurge ###########################################-->
+  <MASKDEF key="Channels.channelmask.ShortPurge_FG1" textfile="userTx" permissiondef="userMenuPermission" height="629">
+    <GROUP key="ShortPurge" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="19">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="16" rspan="16" left="20" right="20">
+        <IMAGE file="Valve.gif" col="1" row="1" halign="left" />
+        <LABEL key="YBL_KS1" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[3].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="3" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[3].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="3" halign="left" />
+        <LABEL key="Interlock" col="3" row="3" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="4" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[3].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="4" halign="left" />
+        <LABEL key="Set" col="3" row="4" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="5" halign="left" />
+        <LABEL key="YKS1" col="2" row="5" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[15].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="7" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[15].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="7" halign="left" />
+        <LABEL key="Interlock" col="3" row="7" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[15].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[15].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="8" halign="left" />
+        <LABEL key="Set" col="3" row="8" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="9" halign="left" />
+        <LABEL key="YKS2" col="2" row="9" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[16].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="10" halign="left" />
+        <LABEL key="ActValue" col="3" row="10" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="11" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[16].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="11" halign="left" />
+        <LABEL key="Interlock" col="3" row="11" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="12" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[16].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[16].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="12" halign="left" />
+        <LABEL key="Set" col="3" row="12" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="13" halign="left" />
+        <LABEL key="YKSL1" col="2" row="13" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="14" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[17].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="14" halign="left" />
+        <LABEL key="ActValue" col="3" row="14" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="15" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[17].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="15" halign="left" />
+        <LABEL key="Interlock" col="3" row="15" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="16" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[17].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[17].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="16" halign="left" />
+        <LABEL key="Set" col="3" row="16" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### StockPaint_a1 ###########################################-->
+  <MASKDEF key="Channels.channelmask.StockPaint_a1_FG1" textfile="userTx" permissiondef="userMenuPermission" height="1373">
+    <GROUP key="StockPaint_a1" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="43">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="40" rspan="40" left="20" right="20">
+        <IMAGE file="Initiator.gif" col="1" row="1" halign="left" />
+        <LABEL key="BDP91DRU" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[2].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <IMAGE file="AnalogSensor.gif" col="1" row="3" halign="left" />
+        <LABEL key="BDP91PA" col="2" row="3" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[1].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+        <LABEL key="ActValue" col="3" row="4" halign="left" />
+        <IMAGE file="AnalogSensor.gif" col="1" row="5" halign="left" />
+        <LABEL key="BDP91PE" col="2" row="5" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[2].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <IMAGE file="AirFlow.gif" col="1" row="7" halign="left" />
+        <LABEL key="BFDSa1" col="2" row="7" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[1].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="8" halign="left" />
+        <LABEL key="ActValue" col="3" row="8" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="9" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[1].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="9" halign="left" />
+        <LABEL key="Interlock" col="3" row="9" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="10" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[1].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="10" halign="left" />
+        <LABEL key="Set [0-10 bar]" col="3" row="10" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="11" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[1].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="11" halign="left" />
+        <LABEL key="SetManualOn" col="3" row="11" halign="left" />
+        <IMAGE file="Initiator.gif" col="1" row="12" halign="left" />
+        <LABEL key="BFDSa1MB" col="2" row="12" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="13" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[6].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="13" halign="left" />
+        <LABEL key="ActValue" col="3" row="13" halign="left" />
+        <IMAGE file="Pump.gif" col="1" row="14" halign="left" />
+        <LABEL key="MDP91" col="2" row="14" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="15" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[1].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="15" halign="left" />
+        <LABEL key="ActQuantity [ml/min]" col="3" row="15" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="16" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[1].sOut.o_rActVolume" />
+        <IMAGE file="REAL_GET.gif" col="2" row="16" halign="left" />
+        <LABEL key="ActVolume" col="3" row="16" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="17" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="17" halign="left" />
+        <LABEL key="Interlock" col="3" row="17" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="18" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_mOmitInterlocks" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="18" halign="left" />
+        <LABEL key="Omit interlock" col="3" row="18" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="19" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="19" halign="left" />
+        <LABEL key="SetQuantity [0..720] ml/min" col="3" row="19" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="20" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_rSetVolume" />
+        <IMAGE file="REAL_SET.gif" col="2" row="20" halign="left" />
+        <LABEL key="SetVolume [0..5000] ml" col="3" row="20" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="21" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="21" halign="left" />
+        <LABEL key="Start move" col="3" row="21" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="22" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_mOrderMoveVolume" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="22" halign="left" />
+        <LABEL key="Start move volume" col="3" row="22" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="23" halign="left" />
+        <LABEL key="YBY1a" col="2" row="23" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[6].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="24" halign="left" />
+        <LABEL key="ActValue" col="3" row="24" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="25" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[6].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="25" halign="left" />
+        <LABEL key="Interlock" col="3" row="25" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="26" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[6].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[6].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="26" halign="left" />
+        <LABEL key="Set" col="3" row="26" halign="left" />
+        <IMAGE file="ColorValve.gif" col="1" row="27" halign="left" />
+        <LABEL key="YSLa" col="2" row="27" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="28" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mActive" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="28" halign="left" />
+        <LABEL key="ActValue" col="3" row="28" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="29" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[5].sIn.i_iCommissioningValeNo" />
+        <IMAGE file="INT_SET.gif" col="2" row="29" halign="left" />
+        <LABEL key="CommissioningValeNo" col="3" row="29" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="30" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="30" halign="left" />
+        <LABEL key="Interlock" col="3" row="30" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="31" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[5].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="31" halign="left" />
+        <LABEL key="Set" col="3" row="31" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="32" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_iValveNo" />
+        <IMAGE file="INT_GET.gif" col="2" row="32" halign="left" />
+        <LABEL key="ValveNo" col="3" row="32" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="33" halign="left" />
+        <LABEL key="YV1_SLa1" col="2" row="33" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="34" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[23].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="34" halign="left" />
+        <LABEL key="ActValue" col="3" row="34" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="35" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[23].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="35" halign="left" />
+        <LABEL key="Interlock" col="3" row="35" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="36" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[23].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[23].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="36" halign="left" />
+        <LABEL key="Set" col="3" row="36" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="37" halign="left" />
+        <LABEL key="YV3a" col="2" row="37" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="38" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[30].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="38" halign="left" />
+        <LABEL key="ActValue" col="3" row="38" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="39" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[30].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="39" halign="left" />
+        <LABEL key="Interlock" col="3" row="39" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="40" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[30].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[30].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="40" halign="left" />
+        <LABEL key="Set" col="3" row="40" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### StockPaint_b1 ###########################################-->
+  <MASKDEF key="Channels.channelmask.StockPaint_b1_FG1" textfile="userTx" permissiondef="userMenuPermission" height="1373">
+    <GROUP key="StockPaint_b1" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="43">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="40" rspan="40" left="20" right="20">
+        <IMAGE file="Initiator.gif" col="1" row="1" halign="left" />
+        <LABEL key="BDP93DRU" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[4].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <IMAGE file="AnalogSensor.gif" col="1" row="3" halign="left" />
+        <LABEL key="BDP93PA" col="2" row="3" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[5].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+        <LABEL key="ActValue" col="3" row="4" halign="left" />
+        <IMAGE file="AnalogSensor.gif" col="1" row="5" halign="left" />
+        <LABEL key="BDP93PE" col="2" row="5" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[6].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <IMAGE file="AirFlow.gif" col="1" row="7" halign="left" />
+        <LABEL key="BFDSb1" col="2" row="7" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[2].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="8" halign="left" />
+        <LABEL key="ActValue" col="3" row="8" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="9" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[2].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="9" halign="left" />
+        <LABEL key="Interlock" col="3" row="9" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="10" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[2].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="10" halign="left" />
+        <LABEL key="Set [0-10 bar]" col="3" row="10" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="11" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[2].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="11" halign="left" />
+        <LABEL key="SetManualOn" col="3" row="11" halign="left" />
+        <IMAGE file="Initiator.gif" col="1" row="12" halign="left" />
+        <LABEL key="BFDSb1MB" col="2" row="12" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="13" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[7].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="13" halign="left" />
+        <LABEL key="ActValue" col="3" row="13" halign="left" />
+        <IMAGE file="Pump.gif" col="1" row="14" halign="left" />
+        <LABEL key="MDP93" col="2" row="14" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="15" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[3].sOut.o_rActValue" />
+        <IMAGE file="REAL_GET.gif" col="2" row="15" halign="left" />
+        <LABEL key="ActQuantity [ml/min]" col="3" row="15" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="16" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[3].sOut.o_rActVolume" />
+        <IMAGE file="REAL_GET.gif" col="2" row="16" halign="left" />
+        <LABEL key="ActVolume" col="3" row="16" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="17" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="17" halign="left" />
+        <LABEL key="Interlock" col="3" row="17" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="18" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_mOmitInterlocks" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="18" halign="left" />
+        <LABEL key="Omit interlock" col="3" row="18" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="19" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_rReqValueMan" />
+        <IMAGE file="REAL_SET.gif" col="2" row="19" halign="left" />
+        <LABEL key="SetQuantity [0..720] ml/min" col="3" row="19" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="20" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_rSetVolume" />
+        <IMAGE file="REAL_SET.gif" col="2" row="20" halign="left" />
+        <LABEL key="SetVolume [0..5000] ml" col="3" row="20" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="21" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_mOn" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="21" halign="left" />
+        <LABEL key="Start move" col="3" row="21" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="22" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_mOrderMoveVolume" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="22" halign="left" />
+        <LABEL key="Start move volume" col="3" row="22" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="23" halign="left" />
+        <LABEL key="YBY1b" col="2" row="23" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[7].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="24" halign="left" />
+        <LABEL key="ActValue" col="3" row="24" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="25" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[7].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="25" halign="left" />
+        <LABEL key="Interlock" col="3" row="25" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="26" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[7].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[7].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="26" halign="left" />
+        <LABEL key="Set" col="3" row="26" halign="left" />
+        <IMAGE file="ColorValve.gif" col="1" row="27" halign="left" />
+        <LABEL key="YSLb" col="2" row="27" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="28" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mActive" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="28" halign="left" />
+        <LABEL key="ActValue" col="3" row="28" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="29" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[6].sIn.i_iCommissioningValeNo" />
+        <IMAGE file="INT_SET.gif" col="2" row="29" halign="left" />
+        <LABEL key="CommissioningValeNo" col="3" row="29" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="30" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="30" halign="left" />
+        <LABEL key="Interlock" col="3" row="30" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="31" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[6].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="31" halign="left" />
+        <LABEL key="Set" col="3" row="31" halign="left" />
+        <NUMFIELD vartype="SV" col="8" row="32" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_iValveNo" />
+        <IMAGE file="INT_GET.gif" col="2" row="32" halign="left" />
+        <LABEL key="ValveNo" col="3" row="32" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="33" halign="left" />
+        <LABEL key="YV1_SLb1" col="2" row="33" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="34" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[24].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="34" halign="left" />
+        <LABEL key="ActValue" col="3" row="34" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="35" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[24].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="35" halign="left" />
+        <LABEL key="Interlock" col="3" row="35" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="36" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[24].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[24].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="36" halign="left" />
+        <LABEL key="Set" col="3" row="36" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="37" halign="left" />
+        <LABEL key="YV3b" col="2" row="37" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="38" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[31].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="38" halign="left" />
+        <LABEL key="ActValue" col="3" row="38" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="39" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[31].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="39" halign="left" />
+        <LABEL key="Interlock" col="3" row="39" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="40" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[31].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[31].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="40" halign="left" />
+        <LABEL key="Set" col="3" row="40" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### StockPaint_b2 ###########################################-->
+  <MASKDEF key="Channels.channelmask.StockPaint_b2_FG1" textfile="userTx" permissiondef="userMenuPermission" height="381">
+    <GROUP key="StockPaint_b2" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="11">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <GROUP key="" col="1" row="2" columns="10" halign="stretch" valign="stretch" cspan="10" rows="8" rspan="8" left="20" right="20">
+        <IMAGE file="Valve.gif" col="1" row="1" halign="left" />
+        <LABEL key="YFGV2_SLb1" col="2" row="1" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="2" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[13].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="2" halign="left" />
+        <LABEL key="ActValue" col="3" row="2" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="3" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[13].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="3" halign="left" />
+        <LABEL key="Interlock" col="3" row="3" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="4" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[13].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[13].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="4" halign="left" />
+        <LABEL key="Set" col="3" row="4" halign="left" />
+        <IMAGE file="Valve.gif" col="1" row="5" halign="left" />
+        <LABEL key="YV2_SLb1" col="2" row="5" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[26].sOut.o_mState" />
+        <IMAGE file="BOOL_GET.gif" col="2" row="6" halign="left" />
+        <LABEL key="ActValue" col="3" row="6" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="7" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[26].sOut.o_mInterlock" />
+        <IMAGE file="InterlockActive.gif" col="2" row="7" halign="left" />
+        <LABEL key="Interlock" col="3" row="7" halign="left" />
+        <CHECKBOX vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[26].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[26].sIn.i_mSet" />
+        <IMAGE file="BOOL_SET.gif" col="2" row="8" halign="left" />
+        <LABEL key="Set" col="3" row="8" halign="left" />
+      </GROUP>
+    </GROUP>
+  </MASKDEF>
+  <!--###########################################  DEVICES OVERVIEW  ###########################################-->
+  <MASKDEF key="TeachView.mask.DevicetypesOverview_FG1" textfile="userTx" permissiondef="userMenuPermission" height="2706">
+    <GROUP key="DeviceTypes - Overview" columns="10" col="1" row="1" halign="stretch" valign="stretch" left="20" top="20" rows="83">
+      <BUTTON key="TeachView.mask.SortByChannelgroupsButton" col="7" row="1" halign="left" valign="stretch" maskkey="TeachView.mask.ChannelsOverview_FG1" />
+      <BUTTON key=" AirFlow " col="2" row="1" halign="left" valign="stretch" maskkey="Channels.devicetypemask.AirFlow_FG1" />
+      <IMAGE file="AirFlow.gif" col="1" row="2" halign="left" />
+      <LABEL key="BFDSa1" col="3" row="2" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="3" halign="left" />
+      <LABEL key="BFDSb1" col="3" row="3" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="4" halign="left" />
+      <LABEL key="BLL1" col="3" row="4" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="5" halign="left" />
+      <LABEL key="BLL2" col="3" row="5" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="6" halign="left" />
+      <LABEL key="BML1" col="3" row="6" halign="left" />
+      <BUTTON key=" AirHeater " col="2" row="7" halign="left" valign="stretch" maskkey="Channels.devicetypemask.AirHeater_FG1" />
+      <IMAGE file="AirHeater.gif" col="1" row="8" halign="left" />
+      <LABEL key="AAH1" col="3" row="8" halign="left" />
+      <BUTTON key=" AnalogSensor " col="2" row="9" halign="left" valign="stretch" maskkey="Channels.devicetypemask.AnalogSensor_FG1" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="10" halign="left" />
+      <LABEL key="BDP91PA" col="3" row="10" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="11" halign="left" />
+      <LABEL key="BDP91PE" col="3" row="11" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="12" halign="left" />
+      <LABEL key="BDP92PA" col="3" row="12" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="13" halign="left" />
+      <LABEL key="BDP92PE" col="3" row="13" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="14" halign="left" />
+      <LABEL key="BDP93PA" col="3" row="14" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="15" halign="left" />
+      <LABEL key="BDP93PE" col="3" row="15" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="16" halign="left" />
+      <LABEL key="BDP94PA" col="3" row="16" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="17" halign="left" />
+      <LABEL key="BDP94PE" col="3" row="17" halign="left" />
+      <BUTTON key=" ColorValve " col="2" row="18" halign="left" valign="stretch" maskkey="Channels.devicetypemask.ColorValve_FG1" />
+      <IMAGE file="ColorValve.gif" col="1" row="19" halign="left" />
+      <LABEL key="YHa" col="3" row="19" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="20" halign="left" />
+      <LABEL key="YHb" col="3" row="20" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="21" halign="left" />
+      <LABEL key="YMultiKa" col="3" row="21" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="22" halign="left" />
+      <LABEL key="YMultiKb" col="3" row="22" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="23" halign="left" />
+      <LABEL key="YSLa" col="3" row="23" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="24" halign="left" />
+      <LABEL key="YSLb" col="3" row="24" halign="left" />
+      <BUTTON key=" HTUnit " col="2" row="25" halign="left" valign="stretch" maskkey="Channels.devicetypemask.HTUnit_FG1" />
+      <IMAGE file="HTUnit.gif" col="1" row="26" halign="left" />
+      <LABEL key="AHS1" col="3" row="26" halign="left" />
+      <BUTTON key=" Initiator " col="2" row="27" halign="left" valign="stretch" maskkey="Channels.devicetypemask.Initiator_FG1" />
+      <IMAGE file="Initiator.gif" col="1" row="28" halign="left" />
+      <LABEL key="BAV1" col="3" row="28" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="29" halign="left" />
+      <LABEL key="BDP91DRU" col="3" row="29" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="30" halign="left" />
+      <LABEL key="BDP92DRU" col="3" row="30" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="31" halign="left" />
+      <LABEL key="BDP93DRU" col="3" row="31" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="32" halign="left" />
+      <LABEL key="BDP94DRU" col="3" row="32" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="33" halign="left" />
+      <LABEL key="BFDSa1MB" col="3" row="33" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="34" halign="left" />
+      <LABEL key="BFDSb1MB" col="3" row="34" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="35" halign="left" />
+      <LABEL key="BLV1" col="3" row="35" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="36" halign="left" />
+      <LABEL key="BMLD1" col="3" row="36" halign="left" />
+      <BUTTON key=" ModesInterface " col="2" row="37" halign="left" valign="stretch" maskkey="Channels.devicetypemask.ModesInterface_FG1" />
+      <IMAGE file="ModesInterface.gif" col="1" row="38" halign="left" />
+      <LABEL key="AModesInterface" col="3" row="38" halign="left" />
+      <BUTTON key=" Needle " col="2" row="39" halign="left" valign="stretch" maskkey="Channels.devicetypemask.Needle_FG1" />
+      <IMAGE file="Needle.gif" col="1" row="40" halign="left" />
+      <LABEL key="YHN1a" col="3" row="40" halign="left" />
+      <IMAGE file="Needle.gif" col="1" row="41" halign="left" />
+      <LABEL key="YHN1b" col="3" row="41" halign="left" />
+      <BUTTON key=" PCU_Fixposition " col="2" row="42" halign="left" valign="stretch" maskkey="Channels.devicetypemask.PCU_Fixposition_FG1" />
+      <IMAGE file="PCU_Fixposition.gif" col="1" row="43" halign="left" />
+      <LABEL key="AFIXPOS" col="3" row="43" halign="left" />
+      <BUTTON key=" Pump " col="2" row="44" halign="left" valign="stretch" maskkey="Channels.devicetypemask.Pump_FG1" />
+      <IMAGE file="Pump.gif" col="1" row="45" halign="left" />
+      <LABEL key="MDP91" col="3" row="45" halign="left" />
+      <IMAGE file="Pump.gif" col="1" row="46" halign="left" />
+      <LABEL key="MDP92" col="3" row="46" halign="left" />
+      <IMAGE file="Pump.gif" col="1" row="47" halign="left" />
+      <LABEL key="MDP93" col="3" row="47" halign="left" />
+      <IMAGE file="Pump.gif" col="1" row="48" halign="left" />
+      <LABEL key="MDP94" col="3" row="48" halign="left" />
+      <BUTTON key=" SwitchPLC " col="2" row="49" halign="left" valign="stretch" maskkey="Channels.devicetypemask.SwitchPLC_FG1" />
+      <IMAGE file="SwitchPLC.gif" col="1" row="50" halign="left" />
+      <LABEL key="APurgeDumpLine" col="3" row="50" halign="left" />
+      <IMAGE file="SwitchPLC.gif" col="1" row="51" halign="left" />
+      <LABEL key="ASafeHTOff" col="3" row="51" halign="left" />
+      <BUTTON key=" Valve " col="2" row="52" halign="left" valign="stretch" maskkey="Channels.devicetypemask.Valve_FG1" />
+      <IMAGE file="Valve.gif" col="1" row="53" halign="left" />
+      <LABEL key="YAV1a" col="3" row="53" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="54" halign="left" />
+      <LABEL key="YAV1z" col="3" row="54" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="55" halign="left" />
+      <LABEL key="YBL_KS1" col="3" row="55" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="56" halign="left" />
+      <LABEL key="YBL34" col="3" row="56" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="57" halign="left" />
+      <LABEL key="YBL35" col="3" row="57" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="58" halign="left" />
+      <LABEL key="YBY1a" col="3" row="58" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="59" halign="left" />
+      <LABEL key="YBY1b" col="3" row="59" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="60" halign="left" />
+      <LABEL key="YFGV1_Ha" col="3" row="60" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="61" halign="left" />
+      <LABEL key="YFGV1_Hb" col="3" row="61" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="62" halign="left" />
+      <LABEL key="YFGV1_SLa" col="3" row="62" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="63" halign="left" />
+      <LABEL key="YFGV1_SLb" col="3" row="63" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="64" halign="left" />
+      <LABEL key="YFGV2_Hb1" col="3" row="64" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="65" halign="left" />
+      <LABEL key="YFGV2_SLb1" col="3" row="65" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="66" halign="left" />
+      <LABEL key="YHV1" col="3" row="66" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="67" halign="left" />
+      <LABEL key="YKS1" col="3" row="67" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="68" halign="left" />
+      <LABEL key="YKS2" col="3" row="68" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="69" halign="left" />
+      <LABEL key="YKSL1" col="3" row="69" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="70" halign="left" />
+      <LABEL key="YMLL1" col="3" row="70" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="71" halign="left" />
+      <LABEL key="YPL2a" col="3" row="71" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="72" halign="left" />
+      <LABEL key="YPL2b" col="3" row="72" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="73" halign="left" />
+      <LABEL key="YV1_Ha1" col="3" row="73" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="74" halign="left" />
+      <LABEL key="YV1_Hb1" col="3" row="74" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="75" halign="left" />
+      <LABEL key="YV1_SLa1" col="3" row="75" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="76" halign="left" />
+      <LABEL key="YV1_SLb1" col="3" row="76" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="77" halign="left" />
+      <LABEL key="YV2_Hb1" col="3" row="77" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="78" halign="left" />
+      <LABEL key="YV2_SLb1" col="3" row="78" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="79" halign="left" />
+      <LABEL key="YV2a" col="3" row="79" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="80" halign="left" />
+      <LABEL key="YV2b" col="3" row="80" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="81" halign="left" />
+      <LABEL key="YV31" col="3" row="81" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="82" halign="left" />
+      <LABEL key="YV3a" col="3" row="82" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="83" halign="left" />
+      <LABEL key="YV3b" col="3" row="83" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### AirFlow ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.AirFlow_FG1" textfile="userTx" permissiondef="userMenuPermission" height="970">
+    <GROUP key="AirFlow" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="27">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="3" halign="left" />
+      <LABEL key="BFDSa1" col="2" row="3" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[1].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActValue" col="3" row="4" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="5" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[1].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="5" halign="left" />
+      <LABEL key="Interlock" col="3" row="5" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="6" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[1].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="6" halign="left" />
+      <LABEL key="Set [0-10 bar]" col="3" row="6" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="7" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[1].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="7" halign="left" />
+      <LABEL key="SetManualOn" col="3" row="7" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="8" halign="left" />
+      <LABEL key="BFDSb1" col="2" row="8" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="9" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[2].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="9" halign="left" />
+      <LABEL key="ActValue" col="3" row="9" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[2].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="10" halign="left" />
+      <LABEL key="Interlock" col="3" row="10" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="11" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[2].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="11" halign="left" />
+      <LABEL key="Set [0-10 bar]" col="3" row="11" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="12" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[2].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="12" halign="left" />
+      <LABEL key="SetManualOn" col="3" row="12" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="13" halign="left" />
+      <LABEL key="BLL1" col="2" row="13" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="14" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[3].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="14" halign="left" />
+      <LABEL key="ActValue" col="3" row="14" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="15" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[3].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="15" halign="left" />
+      <LABEL key="Interlock" col="3" row="15" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="16" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[3].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="16" halign="left" />
+      <LABEL key="Set [0-1000 NL/min]" col="3" row="16" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="17" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[3].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="17" halign="left" />
+      <LABEL key="SetManualOn" col="3" row="17" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="18" halign="left" />
+      <LABEL key="BLL2" col="2" row="18" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="19" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[4].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="19" halign="left" />
+      <LABEL key="ActValue" col="3" row="19" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="20" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[4].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="20" halign="left" />
+      <LABEL key="Interlock" col="3" row="20" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="21" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[4].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="21" halign="left" />
+      <LABEL key="Set [0-1000 NL/min]" col="3" row="21" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="22" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[4].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="22" halign="left" />
+      <LABEL key="SetManualOn" col="3" row="22" halign="left" />
+      <IMAGE file="AirFlow.gif" col="1" row="23" halign="left" />
+      <LABEL key="BML1" col="2" row="23" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[5].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="24" halign="left" />
+      <LABEL key="ActVelocity [1/min]" col="3" row="24" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="25" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirFlow[5].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="25" halign="left" />
+      <LABEL key="Interlock" col="3" row="25" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="26" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[5].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="26" halign="left" />
+      <LABEL key="SetManualOn" col="3" row="26" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="27" halign="left" enablevar="PCU1.SV_PCU2PHG.tAirFlow[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tAirFlow[5].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="27" halign="left" />
+      <LABEL key="SetVelocity [0-100000 1/min]" col="3" row="27" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### AirHeater ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.AirHeater_FG1" textfile="userTx" permissiondef="userMenuPermission" height="257">
+    <GROUP key="AirHeater" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="4">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="AirHeater.gif" col="1" row="3" halign="left" />
+      <LABEL key="AAH1" col="2" row="3" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAirHeater[1].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="Actual temp." col="3" row="4" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### AnalogSensor ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.AnalogSensor_FG1" textfile="userTx" permissiondef="userMenuPermission" height="691">
+    <GROUP key="AnalogSensor" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="18">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="3" halign="left" />
+      <LABEL key="BDP91PA" col="2" row="3" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[1].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActValue" col="3" row="4" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="5" halign="left" />
+      <LABEL key="BDP91PE" col="2" row="5" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[2].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="6" halign="left" />
+      <LABEL key="ActValue" col="3" row="6" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="7" halign="left" />
+      <LABEL key="BDP92PA" col="2" row="7" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[3].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="8" halign="left" />
+      <LABEL key="ActValue" col="3" row="8" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="9" halign="left" />
+      <LABEL key="BDP92PE" col="2" row="9" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[4].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="10" halign="left" />
+      <LABEL key="ActValue" col="3" row="10" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="11" halign="left" />
+      <LABEL key="BDP93PA" col="2" row="11" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="12" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[5].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="12" halign="left" />
+      <LABEL key="ActValue" col="3" row="12" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="13" halign="left" />
+      <LABEL key="BDP93PE" col="2" row="13" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="14" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[6].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="14" halign="left" />
+      <LABEL key="ActValue" col="3" row="14" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="15" halign="left" />
+      <LABEL key="BDP94PA" col="2" row="15" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="16" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[7].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="16" halign="left" />
+      <LABEL key="ActValue" col="3" row="16" halign="left" />
+      <IMAGE file="AnalogSensor.gif" col="1" row="17" halign="left" />
+      <LABEL key="BDP94PE" col="2" row="17" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="18" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tAnalogSensor[8].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="18" halign="left" />
+      <LABEL key="ActValue" col="3" row="18" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### ColorValve ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.ColorValve_FG1" textfile="userTx" permissiondef="userMenuPermission" height="939">
+    <GROUP key="ColorValve" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="26">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="3" halign="left" />
+      <LABEL key="YHa" col="2" row="3" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mActive" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActValue" col="3" row="4" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="5" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[1].sIn.i_iCommissioningValeNo" />
+      <IMAGE file="INT_SET.gif" col="2" row="5" halign="left" />
+      <LABEL key="CommissioningValeNo" col="3" row="5" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="6" halign="left" />
+      <LABEL key="Interlock" col="3" row="6" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="7" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[1].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="7" halign="left" />
+      <LABEL key="Set" col="3" row="7" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_iValveNo" />
+      <IMAGE file="INT_GET.gif" col="2" row="8" halign="left" />
+      <LABEL key="ValveNo" col="3" row="8" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="9" halign="left" />
+      <LABEL key="YHb" col="2" row="9" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mActive" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="10" halign="left" />
+      <LABEL key="ActValue" col="3" row="10" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="11" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[2].sIn.i_iCommissioningValeNo" />
+      <IMAGE file="INT_SET.gif" col="2" row="11" halign="left" />
+      <LABEL key="CommissioningValeNo" col="3" row="11" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="12" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="12" halign="left" />
+      <LABEL key="Interlock" col="3" row="12" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="13" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[2].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="13" halign="left" />
+      <LABEL key="Set" col="3" row="13" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="14" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_iValveNo" />
+      <IMAGE file="INT_GET.gif" col="2" row="14" halign="left" />
+      <LABEL key="ValveNo" col="3" row="14" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="15" halign="left" />
+      <LABEL key="YSLa" col="2" row="15" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="16" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mActive" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="16" halign="left" />
+      <LABEL key="ActValue" col="3" row="16" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="17" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[5].sIn.i_iCommissioningValeNo" />
+      <IMAGE file="INT_SET.gif" col="2" row="17" halign="left" />
+      <LABEL key="CommissioningValeNo" col="3" row="17" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="18" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="18" halign="left" />
+      <LABEL key="Interlock" col="3" row="18" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="19" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[5].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="19" halign="left" />
+      <LABEL key="Set" col="3" row="19" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="20" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_iValveNo" />
+      <IMAGE file="INT_GET.gif" col="2" row="20" halign="left" />
+      <LABEL key="ValveNo" col="3" row="20" halign="left" />
+      <IMAGE file="ColorValve.gif" col="1" row="21" halign="left" />
+      <LABEL key="YSLb" col="2" row="21" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="22" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mActive" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="22" halign="left" />
+      <LABEL key="ActValue" col="3" row="22" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="23" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[6].sIn.i_iCommissioningValeNo" />
+      <IMAGE file="INT_SET.gif" col="2" row="23" halign="left" />
+      <LABEL key="CommissioningValeNo" col="3" row="23" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="24" halign="left" />
+      <LABEL key="Interlock" col="3" row="24" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="25" halign="left" enablevar="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[6].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="25" halign="left" />
+      <LABEL key="Set" col="3" row="25" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="26" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_iValveNo" />
+      <IMAGE file="INT_GET.gif" col="2" row="26" halign="left" />
+      <LABEL key="ValveNo" col="3" row="26" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### HTUnit ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.HTUnit_FG1" textfile="userTx" permissiondef="userMenuPermission" height="443">
+    <GROUP key="HTUnit" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="10">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="HTUnit.gif" col="1" row="3" halign="left" />
+      <LABEL key="AHS1" col="2" row="3" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_rActValueCurrent" />
+      <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActValueCurrent" col="3" row="4" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="5" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_rActValueVoltage" />
+      <IMAGE file="REAL_GET.gif" col="2" row="5" halign="left" />
+      <LABEL key="ActValueVoltage" col="3" row="5" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mOn" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="6" halign="left" />
+      <LABEL key="HTOn" col="3" row="6" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="7" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="7" halign="left" />
+      <LABEL key="Interlock" col="3" row="7" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tHTUnit[1].sIn.i_mReset" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="8" halign="left" />
+      <LABEL key="Reset" col="3" row="8" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="9" halign="left" enablevar="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tHTUnit[1].sIn.i_rReqValueManCurrent" />
+      <IMAGE file="REAL_SET.gif" col="2" row="9" halign="left" />
+      <LABEL key="SetValueCurrent [0-100 µA]" col="3" row="9" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="10" halign="left" enablevar="PCU1.SV_PCU2PHG.tHTUnit[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tHTUnit[1].sIn.i_rReqValueManVoltage" />
+      <IMAGE file="REAL_SET.gif" col="2" row="10" halign="left" />
+      <LABEL key="SetValueVoltage [0-100 KV]" col="3" row="10" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Initiator ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.Initiator_FG1" textfile="userTx" permissiondef="userMenuPermission" height="753">
+    <GROUP key="Initiator" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="20">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="3" halign="left" />
+      <LABEL key="BAV1" col="2" row="3" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[1].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActValue" col="3" row="4" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="5" halign="left" />
+      <LABEL key="BDP91DRU" col="2" row="5" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[2].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="6" halign="left" />
+      <LABEL key="ActValue" col="3" row="6" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="7" halign="left" />
+      <LABEL key="BDP92DRU" col="2" row="7" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[3].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="8" halign="left" />
+      <LABEL key="ActValue" col="3" row="8" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="9" halign="left" />
+      <LABEL key="BDP93DRU" col="2" row="9" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="10" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[4].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="10" halign="left" />
+      <LABEL key="ActValue" col="3" row="10" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="11" halign="left" />
+      <LABEL key="BDP94DRU" col="2" row="11" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="12" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[5].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="12" halign="left" />
+      <LABEL key="ActValue" col="3" row="12" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="13" halign="left" />
+      <LABEL key="BFDSa1MB" col="2" row="13" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="14" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[6].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="14" halign="left" />
+      <LABEL key="ActValue" col="3" row="14" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="15" halign="left" />
+      <LABEL key="BFDSb1MB" col="2" row="15" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="16" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[7].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="16" halign="left" />
+      <LABEL key="ActValue" col="3" row="16" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="17" halign="left" />
+      <LABEL key="BLV1" col="2" row="17" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="18" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[8].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="18" halign="left" />
+      <LABEL key="ActValue" col="3" row="18" halign="left" />
+      <IMAGE file="Initiator.gif" col="1" row="19" halign="left" />
+      <LABEL key="BMLD1" col="2" row="19" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="20" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tInitiator[9].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="20" halign="left" />
+      <LABEL key="ActValue" col="3" row="20" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### ModesInterface ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.ModesInterface_FG1" textfile="userTx" permissiondef="userMenuPermission" height="195">
+    <GROUP key="ModesInterface" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="2">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Needle ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.Needle_FG1" textfile="userTx" permissiondef="userMenuPermission" height="443">
+    <GROUP key="Needle" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="10">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="Needle.gif" col="1" row="3" halign="left" />
+      <LABEL key="YHN1a" col="2" row="3" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_mOn" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActValue" col="3" row="4" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="5" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="5" halign="left" />
+      <LABEL key="Interlock" col="3" row="5" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="6" halign="left" enablevar="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tNeedle[1].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="6" halign="left" />
+      <LABEL key="Set" col="3" row="6" halign="left" />
+      <IMAGE file="Needle.gif" col="1" row="7" halign="left" />
+      <LABEL key="YHN1b" col="2" row="7" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_mOn" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="8" halign="left" />
+      <LABEL key="ActValue" col="3" row="8" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="9" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="9" halign="left" />
+      <LABEL key="Interlock" col="3" row="9" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="10" halign="left" enablevar="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tNeedle[2].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="10" halign="left" />
+      <LABEL key="Set" col="3" row="10" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### PCU_Fixposition ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.PCU_Fixposition_FG1" textfile="userTx" permissiondef="userMenuPermission" height="195">
+    <GROUP key="PCU_Fixposition" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="2">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Pump ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.Pump_FG1" textfile="userTx" permissiondef="userMenuPermission" height="1311">
+    <GROUP key="Pump" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="38">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="Pump.gif" col="1" row="3" halign="left" />
+      <LABEL key="MDP91" col="2" row="3" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[1].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActQuantity [ml/min]" col="3" row="4" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="5" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[1].sOut.o_rActVolume" />
+      <IMAGE file="REAL_GET.gif" col="2" row="5" halign="left" />
+      <LABEL key="ActVolume" col="3" row="5" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="6" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="6" halign="left" />
+      <LABEL key="Interlock" col="3" row="6" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="7" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_mOmitInterlocks" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="7" halign="left" />
+      <LABEL key="Omit interlock" col="3" row="7" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="8" halign="left" />
+      <LABEL key="SetQuantity [0..720] ml/min" col="3" row="8" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="9" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_rSetVolume" />
+      <IMAGE file="REAL_SET.gif" col="2" row="9" halign="left" />
+      <LABEL key="SetVolume [0..5000] ml" col="3" row="9" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="10" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="10" halign="left" />
+      <LABEL key="Start move" col="3" row="10" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="11" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[1].sIn.i_mOrderMoveVolume" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="11" halign="left" />
+      <LABEL key="Start move volume" col="3" row="11" halign="left" />
+      <IMAGE file="Pump.gif" col="1" row="12" halign="left" />
+      <LABEL key="MDP92" col="2" row="12" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="13" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[2].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="13" halign="left" />
+      <LABEL key="ActQuantity [ml/min]" col="3" row="13" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="14" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[2].sOut.o_rActVolume" />
+      <IMAGE file="REAL_GET.gif" col="2" row="14" halign="left" />
+      <LABEL key="ActVolume" col="3" row="14" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="15" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="15" halign="left" />
+      <LABEL key="Interlock" col="3" row="15" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="16" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_mOmitInterlocks" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="16" halign="left" />
+      <LABEL key="Omit interlock" col="3" row="16" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="17" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="17" halign="left" />
+      <LABEL key="SetQuantity [0..360] ml/min" col="3" row="17" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="18" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_rSetVolume" />
+      <IMAGE file="REAL_SET.gif" col="2" row="18" halign="left" />
+      <LABEL key="SetVolume [0..5000] ml" col="3" row="18" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="19" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="19" halign="left" />
+      <LABEL key="Start move" col="3" row="19" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="20" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[2].sIn.i_mOrderMoveVolume" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="20" halign="left" />
+      <LABEL key="Start move volume" col="3" row="20" halign="left" />
+      <IMAGE file="Pump.gif" col="1" row="21" halign="left" />
+      <LABEL key="MDP93" col="2" row="21" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="22" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[3].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="22" halign="left" />
+      <LABEL key="ActQuantity [ml/min]" col="3" row="22" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="23" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[3].sOut.o_rActVolume" />
+      <IMAGE file="REAL_GET.gif" col="2" row="23" halign="left" />
+      <LABEL key="ActVolume" col="3" row="23" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="24" halign="left" />
+      <LABEL key="Interlock" col="3" row="24" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="25" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_mOmitInterlocks" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="25" halign="left" />
+      <LABEL key="Omit interlock" col="3" row="25" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="26" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="26" halign="left" />
+      <LABEL key="SetQuantity [0..720] ml/min" col="3" row="26" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="27" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_rSetVolume" />
+      <IMAGE file="REAL_SET.gif" col="2" row="27" halign="left" />
+      <LABEL key="SetVolume [0..5000] ml" col="3" row="27" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="28" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="28" halign="left" />
+      <LABEL key="Start move" col="3" row="28" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="29" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[3].sIn.i_mOrderMoveVolume" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="29" halign="left" />
+      <LABEL key="Start move volume" col="3" row="29" halign="left" />
+      <IMAGE file="Pump.gif" col="1" row="30" halign="left" />
+      <LABEL key="MDP94" col="2" row="30" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="31" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[4].sOut.o_rActValue" />
+      <IMAGE file="REAL_GET.gif" col="2" row="31" halign="left" />
+      <LABEL key="ActQuantity [ml/min]" col="3" row="31" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="32" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[4].sOut.o_rActVolume" />
+      <IMAGE file="REAL_GET.gif" col="2" row="32" halign="left" />
+      <LABEL key="ActVolume" col="3" row="32" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="33" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="33" halign="left" />
+      <LABEL key="Interlock" col="3" row="33" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="34" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_mOmitInterlocks" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="34" halign="left" />
+      <LABEL key="Omit interlock" col="3" row="34" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="35" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_rReqValueMan" />
+      <IMAGE file="REAL_SET.gif" col="2" row="35" halign="left" />
+      <LABEL key="SetQuantity [0..360] ml/min" col="3" row="35" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="36" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_rSetVolume" />
+      <IMAGE file="REAL_SET.gif" col="2" row="36" halign="left" />
+      <LABEL key="SetVolume [0..5000] ml" col="3" row="36" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="37" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="37" halign="left" />
+      <LABEL key="Start move" col="3" row="37" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="38" halign="left" enablevar="PCU1.SV_PCU2PHG.tPump[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tPump[4].sIn.i_mOrderMoveVolume" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="38" halign="left" />
+      <LABEL key="Start move volume" col="3" row="38" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### SwitchPLC ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.SwitchPLC_FG1" textfile="userTx" permissiondef="userMenuPermission" height="381">
+    <GROUP key="SwitchPLC" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="8">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="SwitchPLC.gif" col="1" row="3" halign="left" />
+      <LABEL key="APurgeDumpLine" col="2" row="3" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tSwitchPLC[1].sOut.o_mOn" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActValue" col="3" row="4" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="5" halign="left" enablevar="PCU1.SV_PCU2PHG.tSwitchPLC[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tSwitchPLC[1].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="5" halign="left" />
+      <LABEL key="SetValue" col="3" row="5" halign="left" />
+      <IMAGE file="SwitchPLC.gif" col="1" row="6" halign="left" />
+      <LABEL key="ASafeHTOff" col="2" row="6" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="7" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tSwitchPLC[2].sOut.o_mOn" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="7" halign="left" />
+      <LABEL key="ActValue" col="3" row="7" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="8" halign="left" enablevar="PCU1.SV_PCU2PHG.tSwitchPLC[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tSwitchPLC[2].sIn.i_mOn" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="8" halign="left" />
+      <LABEL key="SetValue" col="3" row="8" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### Valve ###########################################-->
+  <MASKDEF key="Channels.devicetypemask.Valve_FG1" textfile="userTx" permissiondef="userMenuPermission" height="4039">
+    <GROUP key="Valve" col="1" row="1" columns="10" halign="stretch" valign="stretch" left="20" rows="126">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access - EcoScreen will be locked!" col="2" row="1" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="3" halign="left" />
+      <LABEL key="YAV1a" col="2" row="3" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="4" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[1].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="4" halign="left" />
+      <LABEL key="ActValue" col="3" row="4" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="5" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[1].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="5" halign="left" />
+      <LABEL key="Interlock" col="3" row="5" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="6" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[1].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[1].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="6" halign="left" />
+      <LABEL key="Set" col="3" row="6" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="7" halign="left" />
+      <LABEL key="YAV1z" col="2" row="7" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="8" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[2].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="8" halign="left" />
+      <LABEL key="ActValue" col="3" row="8" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="9" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[2].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="9" halign="left" />
+      <LABEL key="Interlock" col="3" row="9" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="10" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[2].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[2].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="10" halign="left" />
+      <LABEL key="Set" col="3" row="10" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="11" halign="left" />
+      <LABEL key="YBL_KS1" col="2" row="11" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="12" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[3].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="12" halign="left" />
+      <LABEL key="ActValue" col="3" row="12" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="13" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[3].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="13" halign="left" />
+      <LABEL key="Interlock" col="3" row="13" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="14" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[3].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[3].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="14" halign="left" />
+      <LABEL key="Set" col="3" row="14" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="15" halign="left" />
+      <LABEL key="YBL34" col="2" row="15" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="16" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[4].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="16" halign="left" />
+      <LABEL key="ActValue" col="3" row="16" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="17" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[4].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="17" halign="left" />
+      <LABEL key="Interlock" col="3" row="17" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="18" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[4].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[4].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="18" halign="left" />
+      <LABEL key="Set" col="3" row="18" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="19" halign="left" />
+      <LABEL key="YBL35" col="2" row="19" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="20" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[5].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="20" halign="left" />
+      <LABEL key="ActValue" col="3" row="20" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="21" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[5].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="21" halign="left" />
+      <LABEL key="Interlock" col="3" row="21" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="22" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[5].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[5].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="22" halign="left" />
+      <LABEL key="Set" col="3" row="22" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="23" halign="left" />
+      <LABEL key="YBY1a" col="2" row="23" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="24" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[6].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="24" halign="left" />
+      <LABEL key="ActValue" col="3" row="24" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="25" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[6].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="25" halign="left" />
+      <LABEL key="Interlock" col="3" row="25" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="26" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[6].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[6].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="26" halign="left" />
+      <LABEL key="Set" col="3" row="26" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="27" halign="left" />
+      <LABEL key="YBY1b" col="2" row="27" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="28" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[7].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="28" halign="left" />
+      <LABEL key="ActValue" col="3" row="28" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="29" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[7].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="29" halign="left" />
+      <LABEL key="Interlock" col="3" row="29" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="30" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[7].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[7].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="30" halign="left" />
+      <LABEL key="Set" col="3" row="30" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="31" halign="left" />
+      <LABEL key="YFGV1_Ha" col="2" row="31" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="32" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[8].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="32" halign="left" />
+      <LABEL key="ActValue" col="3" row="32" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="33" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[8].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="33" halign="left" />
+      <LABEL key="Interlock" col="3" row="33" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="34" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[8].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[8].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="34" halign="left" />
+      <LABEL key="Set" col="3" row="34" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="35" halign="left" />
+      <LABEL key="YFGV1_Hb" col="2" row="35" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="36" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[9].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="36" halign="left" />
+      <LABEL key="ActValue" col="3" row="36" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="37" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[9].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="37" halign="left" />
+      <LABEL key="Interlock" col="3" row="37" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="38" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[9].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[9].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="38" halign="left" />
+      <LABEL key="Set" col="3" row="38" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="39" halign="left" />
+      <LABEL key="YFGV1_SLa" col="2" row="39" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="40" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[10].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="40" halign="left" />
+      <LABEL key="ActValue" col="3" row="40" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="41" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[10].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="41" halign="left" />
+      <LABEL key="Interlock" col="3" row="41" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="42" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[10].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[10].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="42" halign="left" />
+      <LABEL key="Set" col="3" row="42" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="43" halign="left" />
+      <LABEL key="YFGV1_SLb" col="2" row="43" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="44" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[11].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="44" halign="left" />
+      <LABEL key="ActValue" col="3" row="44" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="45" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[11].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="45" halign="left" />
+      <LABEL key="Interlock" col="3" row="45" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="46" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[11].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[11].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="46" halign="left" />
+      <LABEL key="Set" col="3" row="46" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="47" halign="left" />
+      <LABEL key="YFGV2_Hb1" col="2" row="47" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="48" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[12].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="48" halign="left" />
+      <LABEL key="ActValue" col="3" row="48" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="49" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[12].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="49" halign="left" />
+      <LABEL key="Interlock" col="3" row="49" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="50" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[12].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[12].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="50" halign="left" />
+      <LABEL key="Set" col="3" row="50" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="51" halign="left" />
+      <LABEL key="YFGV2_SLb1" col="2" row="51" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="52" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[13].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="52" halign="left" />
+      <LABEL key="ActValue" col="3" row="52" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="53" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[13].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="53" halign="left" />
+      <LABEL key="Interlock" col="3" row="53" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="54" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[13].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[13].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="54" halign="left" />
+      <LABEL key="Set" col="3" row="54" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="55" halign="left" />
+      <LABEL key="YHV1" col="2" row="55" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="56" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[14].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="56" halign="left" />
+      <LABEL key="ActValue" col="3" row="56" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="57" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[14].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="57" halign="left" />
+      <LABEL key="Interlock" col="3" row="57" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="58" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[14].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[14].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="58" halign="left" />
+      <LABEL key="Set" col="3" row="58" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="59" halign="left" />
+      <LABEL key="YKS1" col="2" row="59" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="60" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[15].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="60" halign="left" />
+      <LABEL key="ActValue" col="3" row="60" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="61" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[15].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="61" halign="left" />
+      <LABEL key="Interlock" col="3" row="61" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="62" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[15].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[15].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="62" halign="left" />
+      <LABEL key="Set" col="3" row="62" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="63" halign="left" />
+      <LABEL key="YKS2" col="2" row="63" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="64" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[16].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="64" halign="left" />
+      <LABEL key="ActValue" col="3" row="64" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="65" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[16].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="65" halign="left" />
+      <LABEL key="Interlock" col="3" row="65" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="66" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[16].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[16].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="66" halign="left" />
+      <LABEL key="Set" col="3" row="66" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="67" halign="left" />
+      <LABEL key="YKSL1" col="2" row="67" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="68" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[17].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="68" halign="left" />
+      <LABEL key="ActValue" col="3" row="68" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="69" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[17].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="69" halign="left" />
+      <LABEL key="Interlock" col="3" row="69" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="70" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[17].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[17].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="70" halign="left" />
+      <LABEL key="Set" col="3" row="70" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="71" halign="left" />
+      <LABEL key="YMLL1" col="2" row="71" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="72" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[18].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="72" halign="left" />
+      <LABEL key="ActValue" col="3" row="72" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="73" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[18].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="73" halign="left" />
+      <LABEL key="Interlock" col="3" row="73" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="74" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[18].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[18].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="74" halign="left" />
+      <LABEL key="Set" col="3" row="74" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="75" halign="left" />
+      <LABEL key="YPL2a" col="2" row="75" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="76" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[19].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="76" halign="left" />
+      <LABEL key="ActValue" col="3" row="76" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="77" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[19].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="77" halign="left" />
+      <LABEL key="Interlock" col="3" row="77" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="78" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[19].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[19].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="78" halign="left" />
+      <LABEL key="Set" col="3" row="78" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="79" halign="left" />
+      <LABEL key="YPL2b" col="2" row="79" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="80" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[20].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="80" halign="left" />
+      <LABEL key="ActValue" col="3" row="80" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="81" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[20].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="81" halign="left" />
+      <LABEL key="Interlock" col="3" row="81" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="82" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[20].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[20].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="82" halign="left" />
+      <LABEL key="Set" col="3" row="82" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="83" halign="left" />
+      <LABEL key="YV1_Ha1" col="2" row="83" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="84" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[21].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="84" halign="left" />
+      <LABEL key="ActValue" col="3" row="84" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="85" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[21].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="85" halign="left" />
+      <LABEL key="Interlock" col="3" row="85" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="86" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[21].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[21].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="86" halign="left" />
+      <LABEL key="Set" col="3" row="86" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="87" halign="left" />
+      <LABEL key="YV1_Hb1" col="2" row="87" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="88" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[22].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="88" halign="left" />
+      <LABEL key="ActValue" col="3" row="88" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="89" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[22].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="89" halign="left" />
+      <LABEL key="Interlock" col="3" row="89" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="90" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[22].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[22].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="90" halign="left" />
+      <LABEL key="Set" col="3" row="90" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="91" halign="left" />
+      <LABEL key="YV1_SLa1" col="2" row="91" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="92" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[23].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="92" halign="left" />
+      <LABEL key="ActValue" col="3" row="92" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="93" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[23].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="93" halign="left" />
+      <LABEL key="Interlock" col="3" row="93" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="94" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[23].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[23].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="94" halign="left" />
+      <LABEL key="Set" col="3" row="94" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="95" halign="left" />
+      <LABEL key="YV1_SLb1" col="2" row="95" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="96" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[24].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="96" halign="left" />
+      <LABEL key="ActValue" col="3" row="96" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="97" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[24].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="97" halign="left" />
+      <LABEL key="Interlock" col="3" row="97" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="98" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[24].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[24].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="98" halign="left" />
+      <LABEL key="Set" col="3" row="98" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="99" halign="left" />
+      <LABEL key="YV2_Hb1" col="2" row="99" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="100" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[25].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="100" halign="left" />
+      <LABEL key="ActValue" col="3" row="100" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="101" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[25].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="101" halign="left" />
+      <LABEL key="Interlock" col="3" row="101" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="102" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[25].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[25].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="102" halign="left" />
+      <LABEL key="Set" col="3" row="102" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="103" halign="left" />
+      <LABEL key="YV2_SLb1" col="2" row="103" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="104" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[26].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="104" halign="left" />
+      <LABEL key="ActValue" col="3" row="104" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="105" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[26].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="105" halign="left" />
+      <LABEL key="Interlock" col="3" row="105" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="106" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[26].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[26].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="106" halign="left" />
+      <LABEL key="Set" col="3" row="106" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="107" halign="left" />
+      <LABEL key="YV2a" col="2" row="107" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="108" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[27].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="108" halign="left" />
+      <LABEL key="ActValue" col="3" row="108" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="109" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[27].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="109" halign="left" />
+      <LABEL key="Interlock" col="3" row="109" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="110" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[27].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[27].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="110" halign="left" />
+      <LABEL key="Set" col="3" row="110" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="111" halign="left" />
+      <LABEL key="YV2b" col="2" row="111" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="112" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[28].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="112" halign="left" />
+      <LABEL key="ActValue" col="3" row="112" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="113" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[28].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="113" halign="left" />
+      <LABEL key="Interlock" col="3" row="113" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="114" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[28].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[28].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="114" halign="left" />
+      <LABEL key="Set" col="3" row="114" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="115" halign="left" />
+      <LABEL key="YV31" col="2" row="115" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="116" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[29].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="116" halign="left" />
+      <LABEL key="ActValue" col="3" row="116" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="117" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[29].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="117" halign="left" />
+      <LABEL key="Interlock" col="3" row="117" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="118" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[29].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[29].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="118" halign="left" />
+      <LABEL key="Set" col="3" row="118" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="119" halign="left" />
+      <LABEL key="YV3a" col="2" row="119" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="120" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[30].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="120" halign="left" />
+      <LABEL key="ActValue" col="3" row="120" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="121" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[30].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="121" halign="left" />
+      <LABEL key="Interlock" col="3" row="121" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="122" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[30].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[30].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="122" halign="left" />
+      <LABEL key="Set" col="3" row="122" halign="left" />
+      <IMAGE file="Valve.gif" col="1" row="123" halign="left" />
+      <LABEL key="YV3b" col="2" row="123" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="124" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[31].sOut.o_mState" />
+      <IMAGE file="BOOL_GET.gif" col="2" row="124" halign="left" />
+      <LABEL key="ActValue" col="3" row="124" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="125" halign="left" enabled="false" var="PCU1.SV_PCU2PHG.tValve[31].sOut.o_mInterlock" />
+      <IMAGE file="InterlockActive.gif" col="2" row="125" halign="left" />
+      <LABEL key="Interlock" col="3" row="125" halign="left" />
+      <CHECKBOX vartype="SV" col="8" row="126" halign="left" enablevar="PCU1.SV_PCU2PHG.tValve[31].sOut.o_mRelease" enablevartype="SV" var="PCU1.SV_PCU2PHG.tValve[31].sIn.i_mSet" />
+      <IMAGE file="BOOL_SET.gif" col="2" row="126" halign="left" />
+      <LABEL key="Set" col="3" row="126" halign="left" />
+    </GROUP>
+  </MASKDEF>
+  <!--###########################################  ChannelStatus  ###########################################-->
+  <MASKDEF key="Channels.ChannelStatus_FG1" textfile="userTx" permissiondef="userMenuPermission" height="567">
+    <GROUP key="ChannelStatus" columns="10" col="1" row="1" halign="stretch" valign="stretch" left="20" top="20" rows="14">
+      <LABEL key="TeachView.mask.ChannelStatusText" col="2" row="1" halign="left" />
+      <LABEL key="-----------------------------------------------------" col="2" row="2" halign="left" />
+      <IMAGE file="AtomStatus.gif" col="2" row="3" halign="left" />
+      <LABEL key="AirSupply" col="3" row="3" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="3" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[2].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="4" halign="left" />
+      <LABEL key="BellCleaner" col="3" row="4" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="4" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[12].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="5" halign="left" />
+      <LABEL key="Hardener_a1" col="3" row="5" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="5" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[5].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="6" halign="left" />
+      <LABEL key="Hardener_b1" col="3" row="6" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="6" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[8].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="7" halign="left" />
+      <LABEL key="Hardener_b2" col="3" row="7" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="7" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[14].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="8" halign="left" />
+      <LABEL key="MainChannel" col="3" row="8" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="8" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[1].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="9" halign="left" />
+      <LABEL key="Mixture_a1" col="3" row="9" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="9" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[6].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="10" halign="left" />
+      <LABEL key="Mixture_b1" col="3" row="10" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="10" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[9].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="11" halign="left" />
+      <LABEL key="ShortPurge" col="3" row="11" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="11" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[4].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="12" halign="left" />
+      <LABEL key="StockPaint_a1" col="3" row="12" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="12" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[3].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="13" halign="left" />
+      <LABEL key="StockPaint_b1" col="3" row="13" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="13" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[7].sOut.o_iChannelFunction" />
+      <IMAGE file="AtomStatus.gif" col="2" row="14" halign="left" />
+      <LABEL key="StockPaint_b2" col="3" row="14" halign="left" />
+      <NUMFIELD vartype="SV" col="8" row="14" halign="left" enablevar="false" enablevartype="SV" var="PCU1.SV_PCU2HMI.tChannel[10].sOut.o_iChannelFunction" />
+    </GROUP>
+  </MASKDEF>
+</View>

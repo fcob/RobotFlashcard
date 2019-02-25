@@ -1,0 +1,815 @@
+Action 1.09.0013
+1141;Steuerungslieferant kontaktieren.
+1142;Cfg-Parameter korrigieren
+1143;- Molch in Strecke 1 tauschen%CrLf%- Druckluftversorgung überprüfen%CrLf%
+1144;Die angegebene INI-Datei über den Explorer prüfen.
+1145;- Brushdatei in Visualisierung prüfen%CrLf%- Datei erneut runterladen%CrLf%- Datei löschen und neu anlegen
+1146;Die angegebene Datei ueber den Explorer pruefen. Verfuegbaren Speicher pruefen.
+1147;Den angegbenen Pfad über den Explorer prüfen.
+1148;Fehlermeldungen auswerten und angegebene Brushfiles löschen, angegebene Verzeichnisse freigeben, Festplatte überprüfen, Steuerung neu starten.
+1149;Einstellungen am HMI überprüfen, Brushile neu herunterladen.
+1150;Kanal spülen
+1151;Farbe erneut nachwählen. Schnittstelle prüfen. Vsualisierung überprüfen.
+1152;Warten bis Zeitprogramm beendet ist.
+1153;Teachprogramm kontrollieren und anpassen.
+1154;Datei für angegebenes Modul und Farbgruppe anlegen.
+1155;Quittieren und erneut starten. Wiederholt sich der Fehler, Karosse abbrechen und neu beauftragen.
+1156;Ueberpruefen der Konfiguration und Steuerung neu starten.
+1157;Überpruefen der Konfiguration und Steuerung neu starten.
+1158;Genannte Datei pruefen und Steuerung neu starten
+1159;Fixpositionspunkt überprüfen und Steuerung neu starten
+1160;Steuerung neu starten. Bei erneutem Auftreten Steuerungslieferanten kontaktieren.
+1161;Die im ProcessBuilder konfigurierte Programmnummer überprüfen und Steuerung neu starten
+1162;Überprüfen der der Datei _globalvars und Steuerung neu starten
+1163;Gennanten Punkt im geforderten Koordinatensystem programmieren und Steuerung neu starten
+1164;_globalvars und Konfiguration überprüfen, Steuerung neu starten
+1165;Warten, bis die Kanäle fertig vorbereitet sind. Sollte dies nicht geschehen, Karosse abbrechen und neu beauftragen.%CrLf%
+1166;Software mit EcoProcessBuilder neu exportieren und neu kompillieren.
+1167;- Überprüfen, ob Prozess eingeschaltet ist%CrLf%- Druckluftversorgung überprüfen
+1168;- In Betriebsart Hand: von der Visu aus Gerät einschalten.%CrLf%- In Betriebsart Auto: mit Hilfe eines Zeitprogramms Sollwert vorgeben.
+1169;Zeitprogramm überprüfen, Farbzuordnungstabelle prüfen
+1171;- Prozessablauf überprüfen%CrLf%- Teach-Programm überprüfen und SET_BRUSH und WAIT_PROCESS_READY richtig anordnen
+1172;PCA.DEF prüfen und ggf. anpassen, PCA.INI neu laden.
+1173;Parametrierung ueberpruefen und Code mit ProcessBuilder neu generieren, compilieren, Steuerung neu starten.
+1174;Farbzuordnungstabelle überprüfen und ggf. anpassen, neu herunterladen, neu nachwählen.
+1175;Konfiguration im ProcessBuilder ueberpruefen und Code neu generieren.
+1177;Quittieren, bei erneutem Auftreten Steuerungslieferanten kontaktieren.
+1178;Die angegebene Datei über den Explorer prüfen.
+1179;Parametrierung der Bypass-Überwachung kontrollieren: [RC.BypassArea], [RC.BypassArea.Base], [RC.BypassArea.Size] und die eingetragenen Werte. 
+1180;Parametrierung der Gripper überprüfen.%CrLf%
+1181;Temperatur am Regelgerät im Schaltschrank prüfen
+1182;Prozess.cfg prüfen, ob der richtige Airflow zugeordnet wurde:%CrLf%z.B.%CrLf%[PCUx\AirHeaters\AHeatx]%CrLf%linkedAirflow = 4,-,"QML"%CrLf%
+1183;Fehlermeldung quittieren und ggf. Funktion erneut ausführen mit stillstehenden Roboterachsen.
+1184;Weitere Antriebsfehler beachten, ggf. Funktion erneut ausführen.
+1185;Erdungsschalter ueberpruefen, bei Bedarf auswechseln oder reinigen.
+1186;Hochspannung deaktivieren.
+1187;Processbuilderfiles neu generieren
+1189;Angegeben Slave prüfen
+1191;Im kemro.manager für den Master FX760A:0/PBDP:0 einen Namen eintragen und Steuerung neu starten
+1192;Konfiguration überprüfen evtl. neu erstellen, Steuerung neu starten
+1193;Weitere Antriebsfehler beachten, ggf. Steuerungshersteller kontaktieren.
+1194;In der Konfigurationsdatei -IoSercos.cfg- den  -driverMode = 1-  setzen und Steuerung erneut starten.
+1195;Roboterposition prüfen.%CrLf%Konfiguration der Fixpositionen mit ProcessBuilder überprüfen.
+1196;Bremsentest ausführen.
+1197;Antrieb einschalten.
+1198;Regelgerät und Antrieb prüfen. Siehe dazu auch Sonderdokumentation "TBW 132"
+1199;1. Nach Handbetrieb umschalten und Hauptnadel sowie Feedback manuell prüfen%CrLf%2. Hauptnadel/Zerstäuber reinigen%CrLf%3. Verdrahtung und alle elektrischen Komponenten (Verstärker, LWL, Trennschaltverstärker überprüfen)%CrLf%4. Steuerluftdruck prüfen
+1200;Äußeren Einfluß beseitigen.
+1201;Roboter freifahren falls verklemmt.
+1202;Antrieb manuell refernzieren damit er wieder verfahren werden kann.%CrLf%Anschließend in seine Refernzposition bringen und dort automatisch/manuell referenzieren.
+1203;Original Parametersatz in den Antrieb laden.
+1204;Vorläufige Verfahrfreigabe an der Visualisierung betätigen und Bremsentest ausführen.
+1205;Speicherplatz auf Zieldatenträger schaffen, Fehlermeldung quittieren und Funktion erneut ausführen.
+1206;Kommunikation mit SPS überprüfen
+1207;Im kemro.manager für den Slave FX765A:0/PBDP:0/PBDPSLAVE:0 einen Namen eintragen und Steuerung neu starten
+1208;Förderer anhalten und Messung wiederholen
+1209;Förderer anhalten
+1211;Konfiguration mit Kemromgr prüfen und mit Schnittstellendokumentation abgleichen,%CrLf%anschließend Steuerung neu starten.
+1212;Bremsenlösegerät ausstecken.
+1213;Entsprechende Codestelle mit Debugger pruefen und Steuerung erneut starten.
+1214;In der Konfigurationsdatei Robotcontrol.cfg für genannte Richtung eine Größe des Überwachungsraumes konfigurieren%CrLf%und anschließend Steuerung neu starten. Nach erfolgtem Neustart die Rückmeldung des genannten Überwachungsraumes%CrLf%prüfen.
+1215;In der Konfigurationsdatei Robotcontrol.cfg für die Hilfsachse einen Wert des Überwachungsraumes konfigurieren%CrLf%und anschließend Steuerung neu starten. Nach erfolgtem Neustart die Rückmeldung des genannten Überwachungsraumes%CrLf%prüfen.
+1216;Schreibweise in _systemvars.ttp der RCU mit dem tatsächlichen Namen der Systemvariablen abgleichen.%CrLf%Anschließend Steuerung erneut starten.
+1217;Den genannten Fixpositionspunkt mit dem ProgrammierHandGerät an angemessener Stelle programmieren und%CrLf%das Projekt "global" schließen und neu laden.
+1219;Bedienereingriff erforderlich, um das aktuelle Programm zu beenden und den Roboter in Grundstellung zu fahren
+1220;TimeOut-Zeit für das Abschalten der Hochspannung erhöhen
+1221;TimeOut-Zeit für das Erreichen der Fixposition im Zeitprogramm erhöhen.%CrLf%
+1222;EcoTalk-Befehle zwischen WAIT_CONVEYOR und TRACKING(On) aus dem Programm entfernen.
+1223;Den Objektabstand vergrößern oder die Förderergeschwindigkeit verringern oder die Anweisungen vor dem WAIT_CONVEYOR-Befehl optimieren.
+1224;In der Konfigurationsdaten fuer das System muss der Eintrag [MC]needNextSegPreDelay auf einen positiven Wert gesetzt werden.
+1225;Einen gueltigen Parameterwert verwenden: GREATER, SMALLER, EQUAL
+1226;Angegebene Ursachen kontrollieren.
+1227;Sicherung überprüfen und wieder einschalten
+1228;Die Funktionsgruppenzuordnungstabelle "FgAssignment.ini" prüfen, ob genau eine Funktionsgruppe als "Master" definiert wurde.
+1230;Prüfen ob sich das Array vergrößern lässt (Konstante 'cFgArraySize' in Typfile 'tsFgAssignment')
+1231;Das Ini-File überprüfen:%CrLf%- Ist die gesuchte Sektion vorhanden? (auf Groß-/Kleinschreibung achten)%CrLf%- Ist der gesuchte Parameter in der Sektion vorhanden? (auf Groß-/Kleinschreibung achten)%CrLf%- Ist dem Parameter ein Wert zugewiesen?
+1232;Die angegebene INI-Datei über den Explorer prüfen.
+1233;Zeitprogramm "PistonMaster" überprüfen und gegebenenfalls Ventile ansteuern. Prüfen ob Ventile bei Handansteuerung schalten
+1234;Zustand Sercos prüfen und geg. erneut Mastern
+1235;Autom. Referenzieren erneut starten und darauf achten, dass während des Vorgangs keine weiteren Störungen auftreten 
+1236;Originalwert des Parameters S-0-0092 aus Datensicherung der Antriebsparameter für diesen Antrieb ermitteln und mit  Hilfe von DriveTop diesen Wert manuell setzen. 
+1237;- Antriebsparameter überprüfen, gegebenenfalls S92 im Antrieb auf Originalwert setzen und Kolben erneut mastern.%CrLf%- Parameter im process.cfg auf Wert im Antrieb anpassen und Kolben erneut mastern
+1238;Über die Serviceseite am PHG Dosierkolben referenzieren.
+1239;Zeitprogramm über "Stopp" oder "Stopp alle" abbrechen und über die Serviceseite das Referenzieren starten
+1240;Druck im Kolben manuell entlasten und Referenziervorgang erneut starten 
+1241;- Timeoutzeit des Eventschritts im Zeitprogramm 'PistonMaster' überprüfen%CrLf%- Prüfen ob Antriebsfreigabe und Leistung Dosierantriebe vorhanden ( Antriebsregeler Status 'AB' oder 'AF' ) 
+1242;Überprüfung der Schlauchanschlüsse bzw. Blindstopfen am Mehrfachstecker,%CrLf%Überprüfung der Druckluftversorgung für STL%CrLf%Überprüfung Druckschalter STL
+1243;Überprüfung der Schlauchanschlüsse am Mehrfachstecker
+1244;Überprüfung der Druckluftversorgung für Matrix%CrLf%Überprüfung Druckschalter MLL
+1245;- Turbine überprüfen%CrLf%- Solldrehzahl überprüfen%CrLf%- Zeitvorgabe überprüfen
+1248;- Netzwerkverbindung prüfen, kann vom 3DOnSite Rechner auf die Steuerung kopiert werden%CrLf%- Prüfen ob Downloadverzeichnis existiert
+1249;- Prüfen welcher Dateinamen vom 3DOnSite an die Steuerung übertragen wurde SV_StatisticDownload.i_zNewName
+1250;- Columns, Sections, Keywords in der 3DOnSite Konfiguration prüfen
+1251;- Prüfen ob in der Farbemengentabelle tatsächlich Werte ungleich -1.0 stehen.
+1252;Temperatur erhöhen bzw. Heizdauer verlängern.
+1253;Temperatur verringern bzw. Heizdauer verkürzen.
+1254;Geschwindigkeit reduzieren.
+1255;- Funktion von Ventilen u. Zylindern  prüfen, die ein Ausfließen des Mediums aus dem Dosierkolben ermöglichen %CrLf%- Parametrierung des max. zulässigen Moments überprüfen (process.cfg --> MaxTorque).%CrLf%- Dynamikparameter überprüfen%CrLf%- Mechanik falls möglich auf Schwergängigkeit überprüfen
+1256;- Geschwindigkeit auf PTP 5% erhöhen.%CrLf%- Beschleunigung erhöhen.
+1257;Parametrierung der Arbeits-/Sperrräume überprüfen.
+1258;Konfiguration mit Kemromgr prüfen und mit Schaltplan abgleichen,%CrLf%anschließend Steuereung neu starten.
+1259;- Druck in der Farbversorgung überprüfen.%CrLf%- Zum gewünschten Lack entsprechendes Farbventil überprüfen.%CrLf%- Initiatoren am Lackspeicher überprüfen. %CrLf%- Kolben im Lackspeicher überprüfen.  
+1260;- Überprüfen ob Farbe im Lackspeicher geladen ist.%CrLf%- Hochdruckversorgung für Lackspeicher überprüfen. %CrLf%- Ringleitungsdruck überprüfen. %CrLf%- Betreffendes Farbventil auf Funktion überprüfen. 
+1261;- Bauteil muss getauscht werden. 
+1262;- Bauteil in Kuerze auswechseln. 
+1263;- Zeitprogramm überprüfen, ob beim Ausfahren der Weg für die entweichende Luft frei ist. %CrLf%- Ansteuerventile für den entsprechenden Isolierzylinder überprüfen.%CrLf%- Initiatoren am Isolierzylinder überprüfen, auf Funktion und richtige Lage.%CrLf%- Abstreifen am Isolationszylinder überprüfen.    
+1264;Die aktuelle Konfiguration der Steuerung (Sercos Teil) prüfen und klären warum der benötigte Parameter nicht enthalten ist.
+1265;Klären weshalb ein oder beide Parameter mit unterschiedlichen Werten in die Konfiguration eingetragen wurden.
+1266;Klären welcher Eintrag der richtige ist und in beiden Konfigurationsdateien den selben Namen verwenden.
+1267;Prüfen ob Brushwerte oberhalb der Einschaltschwelle sind.
+1268;Mastervorgang ernenut starten, ggf. auf weitere Anntriebsfehler achten.%CrLf%z.B. Achsendschalter usw.
+1269;Verkabelung des Mastersennsors überprüfen, sicherstellen dass ein negative wie positive Rückmeldung des Signals erkannnt werden kann.%CrLf%Masteringdelta in der Konfiguration der genannten Achse vergrößern.
+1270;- STS_GATE_NOK: Zählerkarte tauschen oder Reset durch Unterbrechen der Spannungsversorgung durchführen.%CrLf%ACHTUNG: Unbedingt die Zelle in T1 aufräumen, da ein Wiederaufsetzten nach Reset oder Ausfall der Zählerkarte nicht möglich ist (Verlust der aktuellen Fördererposition) KOLLISIONSGEFAHR!
+1271;Genannten Parameter in der Datei "EcotalkVariables.ttp" auf gültigen Wert ändern und Steuerung neu starten.%CrLf%Der für diese Funktion gültige Wertebereich des Parameters ist aus dem Kommentar in der Datei zu entnehmen.
+1272;EcoTalk-Befehl nach EcoTalk-Doku berichtigen und Teachprogramm neu laden.
+1273;Betreffende Achse in den zulässigen Verfahrbereich bewegen.
+1274;Konfiguration prüfen und korrigieren, anschließend Steuerung neu starten.
+1275;Bitte informieren Sie ihren Steuerungslieferanten
+1276;Zeitprogramm beenden und Kanal vor erneutem Start spülen.
+1277;- Zeitprogramm überprüfen, ob beim Fahren der Weg für die entweichende Luft frei ist. %CrLf%- Ansteuerventile für den entsprechenden Isolierzylinder überprüfen.%CrLf%- Initiatoren am Isolierzylinder auf Funktion und richtige Lage überprüfen.%CrLf%- Abstreifen am Isolierzylinder überprüfen.
+1278;Das Gerät ohne überbrücken der Verriegelung bedienen. 
+1279;Den cfg-Parameter überprüfen. Übersetzung Förderer zum Drehgeber überprüfen (Zuviele Inkremente/mm). Auflösung der Zählerkarte reduzieren.
+1280;Die Steuerung wurde aus Sicherheitsgründen gestoppt. %CrLf%ACHTUNG: Die Steuerung neu starten und unbedingt die Zelle in T1 aufräumen, da ein Wiederaufsetzen nach Reset oder Ausfall der Zählerkarte nicht möglich ist (Verlust der aktuellen Fördererposition) KOLLISIONSGEFAHR!
+1281;Konfiguration der Override.def der der Brush.def angleichen, Gross/Kleinschreibung beachten.
+1282;Anzahl der Sections im 3DOnsite reduzieren
+1283;- Modul "Prozentuale Aufschläge" in 3DOnSite öffnen und abspeichern
+1284;- Farbventil auf Funktion überprüfen%CrLf%- Überprüfen ob die angewählte Farbe am Farbventil angeschlossen ist%CrLf%- Überprüfen ob die angewählte Farbe an die Farbversorgung angeschlossen ist %CrLf%- Druck in der Farbversorgung überprüfen%CrLf%- Druckversorgung vom FD1 und FD2 überprüfen %CrLf%
+1285;Im zur FU zugehörigen cfg-File die Parameter für den Fördererfilter (Conv_Vel_max, Conv_Acc_max) überprüfen und anpassen.
+1286;Die cfg-Parameter für die Buslaufzeit und die Lackflugzeit kontrollieren und ggf. anpassen, sowie die Hauptnadelschaltzeit (gelernt über Feedbacksignal) überprüfen.
+1287;Sektionsbezeichung korrigieren. z.B. auf Leerstellen prüfen:%CrLf%FALSCH:  [Section 1]%CrLf%RICHTIG: [Section1]
+1288;Datei für angegebenes Modul und Farbe anlegen.
+1289;Programmcode ueberpruefen
+1290;Es muß sich ein Benutzer mit Berechtigung für T2-Betrieb an EcoScreen anmelden.
+1291;- Versuchen den Benutzer erneut an- bzw. abzumelden.%CrLf%- Sollte das Problem erneut bestehen, den Rechner neu starten bzw. ViewServer neu starten.%CrLf%- Sollte das Problem weiterhin bestehen den Steuerungslieferanten kontaktieren.
+1292;Benutzerverwaltung prüfen und mit Konfiguration der Visualisierung abgleichen.
+1293;Überprüfen der EcoScreen konfiguration.
+1294;- Prüfen warum der Roboter die Position nicht erreicht hat
+1296;Geschwindigkeitsoverride am PHG prüfen, ggf. TimeOut-Zeit für das Fixpositionsfahrt erhöhen
+1297;Im Processbuilder die parametrierte Groesse  ueberpruefen und auf einen gueltigen Wert aendern. Steuerung neu starten.
+1298;- Schlauchübergänge prüfen mit Prüfdorn DN 7,25%CrLf%- Molch Strecke 1 tauschen%CrLf%- Schlauch Strecke 1 tauschen
+1299;- Ringleitung entlüften%CrLf%- Pulsluftventil am Farbwechsler tauschen%CrLf%- Reset-Ablauf für Dosierer starten um Luft zu entfernen
+1300;Fehlerhafte Karosse suchen, evtl. nachwählen.
+1301;- Bauteil sofort auswechseln, und Zyklen vom PHG aus oder von der Visu aus zurücksetzten. 
+1302;mit Hilfe des PHG auf der Userpage 'Kanalübersicht' die Auswahl 'Write access Eco Screen will %CrLf% be locked.' entfernen. %CrLf%
+1303;Prüfen ob alle Firmwaretask mit "UpdTimer1" konfiguriert sind%CrLf%- RC.driveControlTimerName%CrLf%- MC.timerNameUpd%CrLf%- TC.teachControlTimer%CrLf%- IO.ONBOARD.SLOTPCI:4.FX765A:1.PBDP:0.cycleTime%CrLf%- IO.ONBOARD.SLOTPCI:5.FX760A:2.PBDP:0.cycleTime%CrLf%- IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.cycleTime
+1304;Prüfen ob UpdTimer1 und die im ieccontrol.su angelegten Tasks SO_TaskHigh, SO_TaskMedium und SO_TaskProtocol_Medium mit der gleichen Zykluszeit parametriert sind
+1305;- Referenzieren der SolventCan über HMI-Interface
+1306;Roboterposition prüfen sowie kontrollieren ob noch andere Fehler anstehen
+1307;Setzen der Parameter in der general.cfg bzw. FgAssignment.ini
+1308;Walze freifahren, sollte keine Kollision aufgetreten sein ist das Seil oder Lichtschranke zu ueberpruefen
+1309;Mit 3DOnSite für genannten Typ Profil kontrollieren und neu speichern, ggf. Fehlermeldungen beachten
+1310;In der Visualisierung die Fifo-Übersicht kontrollieren ob zu bearbeitende Karosse noch im Fifo-Speicher vorhanden ist.%CrLf%Maschine abwählen und Karosse ausfördern.
+1311;Betreffende Fahrt langsamer programmieren.
+1312;Lichtschranke reinigen und Warnmeldung quittieren.
+1313;Eingetragene Refernzposition kontrollieren und korrigieren.%CrLf%Funktion erneut ausführen.
+1314;Mit 3DOnSite die Konfigurationsdatei kontrollieren, falls diese lesbar ist Steuerungshersteller kontaktieren.
+1315;Sicherheitsfreigaben für die Ionisation in der Visualisierung "PNOZ-Diagnose" kontrollieren.%CrLf%Sollte diese vorhanden sein, ist die Ionisation selbst zu prüfen.
+1316;Die Kollisionserkennung ist zu überprüfen.
+1317;Fehler quittieren und Achse im Handbetrieb vom Endschalter wegfahren.
+1318;Taktabstand kontrollieren.%CrLf%Profildatei mit 3DOnSite kontrollieren und erneut speichern.
+1319;Stoerung beseitigen.
+1320;Störungsursache bei der Leittechnik ermitteln.
+1321;Kabinenbelüftung prüfen, Fehler der Leittechnik-Steuerung beachten.
+1322;Störungsursache der Fördertechnik beseitigen und Fehler quittieren.
+1323;Sicherheitsfreigaben für die Antriebe in der Visualisierung "PNOZ-Diagnose" kontrollieren.%CrLf%Sollte diese vorhanden sein, sind externe Störungen zu prüfen.
+1324;Luftversorgung prüfen.
+1325;Ionisation prüfen%CrLf%Versorgungsspannung der Ionisation prüfen.
+1326;Unterbrechung der Lichtschranke beseitigen.
+1327;im PCUx.fu prüfen ob alle abxPurge.Cyclic mit korrekten Daten konfiguriert sind. Es muss entweder eine PCA-Gruppe oder ein Zeitprogrammname angegeben werden !
+1328;Bei wiederholtem Auftreten Basisgeraet austauschen
+1329;- Module bzw. Komponenten am AIF-Strang pruefen und ggf. austauschen%CrLf%- Betriebssystem-Version im SPC200 pruefen. Ist diese zulaessig für die eingesetzten Achsinterfaces?
+1330;Baugruppe austauschen bzw. entfernen
+1331;Konfiguration der internen Baugruppen und Strangbelegung pruefen bzw. korrigieren und SPC200 erneut einschalten bzw. Systemreset durchfuehren oder Istkonfiguration als Sollkonfiguration speichern (Menü SET CONFIGUR.) bzw. Projekt laden (mit WinPISA)%CrLf%
+1332;Schrittmotor-Indexer-, Subcontroller- oder Feldbus-Baugruppe pruefen und SPC200 erneut einschalten bzw. Systemreset durchfuehren
+1333;Servicefall, Firmware-Update durchführen lassen
+1334;Daten-Reset durchführen und Daten neu eingeben bzw. laden%CrLf%Bei wiederholtem Auftreten Basisgeraet pruefen und ggf. austauschen
+1335;System erneut Aus-/Einschalten, Hoehe und Stabilitaet der Versorgungsspannung ueberpruefen%CrLf%ggf. Versorgungsbaugruppe austauschen%CrLf%
+1336;System erneut Aus-/Einschalten, Hoehe und Stabilitaet der Versorgungsspannung ueberpruefen%CrLf%ggf. Versorgungsbaugruppe austauschen%CrLf%ggf. Stoerungen eliminieren%CrLf%
+1337;System erneut Aus-/Einschalten, Höhe und Stabilität der Versorgungsspannung überprüfen%CrLf%Datenreset durchführen%CrLf%ggf. Störungen eliminieren%CrLf%ggf. Basisgerät austauschen%CrLf%
+1338;System erneut Aus-/Einschalten, Höhe und Stabilität der Versorgungsspannung überprüfen%CrLf%Datenreset durchführen
+1339;- Module am AIF-Strang und Strangbelegung pruefen oder Messsystem aus Endlage bringen bzw. Messsystemkabel austauschen%CrLf%· AIF tauschen%CrLf%· Referenzfahrt wiederholen%CrLf%
+1340;Unterspannung bzw. Kurzschluss beseitigen
+1341;Unterspannung  am Betriebsspannungsanschluss (X2) beseitigen 
+1342;- Prüfen, ob die Feldbus-Baugruppe vollständig eingesteckt ist%CrLf%- Steckplatz prüfen, ggf anderen Steckplatz wählen%CrLf%- System erneut Aus-/Einschalten%CrLf%
+1343;Diagnose-Baugruppe und Bedienfeld bzw. Verbindung pruefen.
+1344;Baugruppe vollstaendig einstecken bzw. austauschen
+1345;Konfiguration korrigieren, siehe Beschreibung zur Feld-bus-Baugruppe oder im Konfigurationsmenü von WinPISA ab Version 4.41.
+1346;Lastspannung wieder anlegen und Fehler quittieren
+1347;Startprogrammnummer korrigieren bzw. Startprogramm laden/eingeben
+1348;NC-Satz korrigieren bzw. Programm laden/eingeben
+1349;NC-Satz korrigieren
+1350;NC-Satz korrigieren, direkte Sollwertvorgabe oder direkte Steuerung der Ventilspannung erst mit M12 beenden
+1351;NC-Programme mit dem Befehl M02 bzw. M30 abschließen
+1352;Achsangabe überprüfen, Firmware-Version überprüfen%CrLf%
+1353;Analoger Sollwerteingang muss mit M12 deaktiviert werden, bevor er erneut mit M10 aktiviert wird.
+1354;NC-Satz korrigieren,%CrLf%Ein- bzw. Ausgangsadresse korrigieren%CrLf%
+1355;Typ und Software-Version der Feldbuskarte prüfen, ggf. tauschen. %CrLf%Zulässig:%CrLf%-	SPC200-COM-PDP ab Version 2.0%CrLf%-	SPC200-COM-DN2%CrLf%-	SPC200-COM-CO2%CrLf%
+1356;Hindernis im Verfahrbereich beseitigen bzw. Versorgungsdruck prüfen oder Positionier-Timeout erhöhen bzw. Regler optimieren
+1357;NC-Satz, Positionsliste oder Software-Endlagen korrigieren 
+1358;NC-Satz bzw. Positionsliste korrigieren (siehe unter NC-Befehl "G25").
+1359;Maximalgeschwindigkeit oder Geschwindigkeitfaktor korrigieren
+1360;Regler-, Achs- und Applikationsdaten prüfen 
+1361;E/A-Ankopplung überprüfen, Fehlerstack (mit WinPisa) überprüfen und ggf. Fehlerursache beseitigen%CrLf%
+1362;Regler-, Achs- und Applikationsdaten prüfen  Randbedingungen überprüfen%CrLf%- Konstruktion schwingungsanfällig?%CrLf%- Versorgungsdruck stabil?%CrLf%- ist der Mitnehmer vom Messsystem richtig befestigt. usw.%CrLf%
+1363;dynamische Identifikationsfahrt durchführen
+1364;NC-Satz korrigieren bzw. vor Durchführung der Aktion System stoppen
+1365;Hubgrenzwert und Ventilstellwert beim Befehl M39 prüfen, ggf. NC-Satz korrigieren
+1366;Eingang ENABLE setzen und Identifikationsfahrt erneut starten
+1367;Systemidentifikation erneut durchführen
+1368;steigende Flanke auf Eingang ENABLE erzeugen oder Regler-, Achs- und Applikationsdaten prüfen%CrLf%Fehler am Schrittmotor-Controller korrigieren %CrLf%
+1369;Referenzfahrt durchführen
+1370;Softwareendlagen und Ventilstellwert beim Befehl M39 prüfen, ggf. NC-Programm korrigieren
+1371;Geschwindigkeitsgrenzwert und Ventilstellwert beim Befehl M39 prüfen, ggf. NC-Programm korrigieren
+1372;Befehl korrigieren, Referenzfahrtmodus in den Applikationsdaten prüfen, mit aktuell verwendetem vergleichen%CrLf%Zulässig:%CrLf%- Schrittmotorachse: %CrLf%Modi 0 bis 4%CrLf%- Pneum.  Achse : %CrLf%Modi 0, 5 bis 7%CrLf%
+1373;Vor dem betroffenen Befehl die Referenzfahrt im Modus 0, 5 oder 6 durchführen.%CrLf%Im Modus 7 sind nur zulässig: %CrLf%G01, G02 und M39, siehe auch Befehl G74%CrLf%
+1374;Die im Feldbusmaster (SPS) erzeugten Sollwerte überprüfen und ggf. an den zulässigen Verfahrbereich anpassen.%CrLf%Grenzwerte in den Applikationsdaten überprüfen, ggf. anpassen.%CrLf%
+1375;Parameter korrigieren
+1376;Auflösung überprüfen bzw. Maximalgeschwindigkeit korrigieren
+1377;Datenreset durchführen
+1378;Eingabe korrigieren
+1379;Eingabe korrigieren%CrLf%Wenn die max. Anzahl von NC-Sätzen noch nicht erreicht ist:%CrLf%- Programmänderung mit WinPISA durchführen, Speicher wird ggf. neu geordnet.%CrLf%- Nach Neuordnung des Speichers Programm erneut laden.
+1380;nicht benötigte Programm und NC-Sätze löschen
+1381;Servicefall
+1382;Verbindungskabel und Diagnose-Baugruppe prüfen, ggf. niedrigere Baudrate nutzen
+1383;1-Signal an Eingang ENABLE anlegen 
+1384;1-Signal an Eingang STOP anlegen
+1385;Nummer des Startprogramms korrigieren
+1386;Kommando nicht in der aktuellen Betriebsart nutzen oder Betriebsart ändern
+1387;System stoppen und Kommando bzw. Bedienfunktion erneut aufrufen
+1388;steigende Flanke auf Eingang ENABLE erzeugen oder Regler-, Achs- und Applikationsdaten prüfen%CrLf%- Fehler am Schrittmotor-Controller korrigieren%CrLf%
+1389;Verwenden Sie WinPISA ab Version 4.3, um derartige NC-Programme zu editieren
+1390;0-Signal an Eingang ENABLE anlegen
+1391;Neuste WinPISA verwenden. %CrLf%- ggf. alle Programme löschen und neu in den SPC200 laden.%CrLf%Hinweis: In der Download Area von Festo < festo.com> finden Sie die aktuelle WinPISA Version.%CrLf%
+1392;Neuste WinPISA verwenden, ggf. von der Download Area von Festo < festo.com>  herunterladen und damit die Kalibrierung durchführen. Messsystemlänge im Dialog "Achsdaten" anpassen.%CrLf%
+1393;Messwert-Konfiguration überprüfen.
+1394;Default-Messwertkonfiguration für alle Achsen herstellen. Danach wieder gewünschte Konfiguration angeben.
+1395;Systemreset durchführen.
+1396;Die Funktionsgruppenzuordnungstabelle "FgAssignment.ini" pruefen.
+1397;Geraete-Status (LED's) ueberpruefen. Geraete-Handbuch zur Fehleranalyse verwenden.%CrLf%Prozess-Parameter-Datei (Process.cfg) ueberpruefen und ggf. angegebenen Parameter korrigieren.%CrLf%Prozess-Parameter-Datei auf die Steuerung laden.%CrLf%Steuerung neu starten. Bei erneutem Auftreten Steuerungslieferant kontaktieren.
+1398;Geraete-Status (LED's) und Temperatur ueberpruefen. Geraete-Handbuch zur Fehleranalyse verwenden.%CrLf%Fehler beheben und anschliessend quittieren durch: kurzes Netz AUS/EIN oder Verändern bzw. erneutes Setzen des Sollwertes der gestoerten Zone (Aktivieren/Deaktivieren der Zone).
+1399;Geraete-Status (LED's) und Temperatur ueberpruefen. Geraete-Handbuch zur Fehleranalyse verwenden.%CrLf%Prozess-Parameter-Datei (Process.cfg) ueberpruefen und ggf. angegebenen Parameter korrigieren.%CrLf%Prozess-Parameter-Datei auf die Steuerung laden.
+1400;Schalter auf mechanische - u. elektrische Funktion puefen. 
+1401;Override oder Sollwert fuer dieses Geraet anpassen.
+1402;\\appldisk\application\control\config\localsystem.cfg öffnen und parameter [SOM].simulateEndpointMapping auf 0 setzen
+1403;SPS - Konfiguration prüfen.
+1404;Motorhaltebremse schließen.
+1405;Füllstand und Größe der Eingangsspeicher in Stations-SPS und Rpc prüfen
+1406;- Fehler am HMI und PHG prüfen%CrLf%- Steuerung neustarten%CrLf%- falls Fehler nicht gefunden wird Statusreport erstellen, Protokolle abziehen und zusammen mit der Applikation an   Steuerungslieferanten schicken%CrLf%
+1407;Die Anwahl in der Visualisierung wird durch das Signal Robot in Process von Rpc gesperrt. Verriegelung in SPS und Visualisierung prüfen.
+1408;Farbe in MultiK-Tabelle prüfen und Komponenten korrigieren
+1409;- Alle genannten Ventile schließen%CrLf%- (evtl. alle relevanten Schläuche spülen)%CrLf%- Lineareinheit andocken%CrLf%- Gewünschtes Ventil erneut öffnen%CrLf%
+1410;- Druckversorgung überprüfen%CrLf%- An- und Abdock-Ventile auf Druck und Verschleiß überprüfen%CrLf%- Druckschalter für An- und Abdock-Ventile überprüfen%CrLf%- Lineareinheit manuell in einen definierten Zustand fahren
+1411;Den Geschwindigkeitsoverride am KeTop wieder auf 100% stellen.
+1412;Quittieren und eventuell neu Lernen.
+1413;Zeitprogramm anpassen und Lackmenge in Rückführung reduzieren
+1414;- Maschine abwählen%CrLf%- Taktabstand prüfen
+1415;Nach dem Beseitigen der Stoerung Schalter wieder in Ausgangsstellung bringen.
+1416;Richtigen Feedbacktype auswählen, Hardwareendpunkt Angaben im process.cfg prüfen
+1417;Weitere Fehlertmeldungen auswerten um den Baustein zu identifizieren, der das cfg-Lesen negativ quittiert hat.
+1418;Konfiguration des ActionPointOffset des genannten Aktionspunktes in BCU.cfg korrigieren und Steuerung neustarten.
+1419;Alle Maschinen in Grundstellung fahren und Foerdererfreigabe einschalten.
+1420;Uebergebene Werte des Befehls "WAIT_PAINTPOSITION" im Bewegungsprogramm pruefen.
+1421;Fehlerklasse korrigieren oder Funktion RcuSetMessageOnce zum Absetzen der Meldung verwenden.
+1422;SercoName im Mfb.cfg mit Namen der Antriebe im sercosx.cfgr überprüfen.
+1423;Brushfile überprüfen, Parametrierung 3DOnSite überprüfen.
+1424;Durch Aenderung des Bewegungsprofils die Geschwindigkeit der betreffenden Achse reduzieren.
+1425;Zum entsprechenden Typen einen Projektnamen und/oder einen Programmnamen definieren und sicherstellen dass zu diesem ein Profil geteached ist
+1426;Die cfg-Parameter für die Buslaufzeit und die Lackflugzeit kontrollieren und ggf. anpassen, sowie die Ventilschaltzeit im process.cfg überprüfen.
+1427;Fehlermeldung sowie alle notwendigen Protokolle zur Fehleranalyse an Steuerungslieferanten schicken.
+1428;1. Kemro.Manager: Eigenschaften des Profibus Master, name="ProfibusMaster" setzen und Datei profibusmaster.cfgr umkopieren.%CrLf%%CrLf%2. appldisk\application\control\config\profibusmaster.cfgr: Parameter name="ProfibusMaster"  setzen.
+1429;1. Kemro.Manager: Eigenschaften des Profibus Slave, name="ProfibusSlave" setzen und Datei profibusslave.cfgr umkopieren.%CrLf%%CrLf%2. appldisk\application\control\config\profibusslave.cfgr: Parameter name="ProfibusSlave"  setzen.
+1430;Beanstandete Achse in Referenzposition fahren gegebenenfalls erneut mastern.
+1431;Startposition für das Mastern prüfen bzw. den Mastervorgang  auf Mastersensor starten.%CrLf%ggf. prüfen ob der konfigurierte Masterweg "masteringdelta" richtig konfiguriert ist.
+1432;Konfiguration der Achsendlage pruefen. Datei "MachineData.cfg", Parameter "minPos" der betreffenden Achse.%CrLf%Konfigurierten Werte mit Antriebsparameter S-0-0050 abgleichen.
+1433;Konfiguration der Achsendlage pruefen. Datei "MachineData.cfg", Parameter "maxPos" der betreffenden Achse.%CrLf%Konfigurierten Werte mit Antriebsparameter S-0-0049 abgleichen.
+1434;Zum Reaktivieren der Freihalteluft muss in eine andere Betriebsart gewechselt werden und im Anschluss wieder nach Reinigung geschaltet werden.
+1435;Roboter erst in Fixposition Inbox fahren und anschliessend die Verdünnerventile öffnen.
+1436;Schaltdistanz Sensor überprüfen
+1437;- Bewegungprogramm prüfen ob vor RECEIVE(VISION_REL, Data) die Absolutdaten mit RECEIVE(VISION, Data)%CrLf%  eingelesen wurden.%CrLf%- Bewegungsprogramm abbrechen, korrigieren und erneut starten.
+1438;- Roboter in Betriebsart T1 freifahren%CrLf%- Verkabelung auf Beschädigung prüfen%CrLf%- Roboterbewegung und Luftdruck des Kollisionsschutzes prüfen
+1439;Teachprogramm korrigieren, Steuerungshersteller kontaktieren oder in TRcuPaintChecker.tts die Konstante cMaxNoOfPoints erhöhen.
+1440;Entweder EcoTalk-Programm so ändern, daß die Messrichtung zu der Konfiguration passt, oder die Konfiguration ändern.
+1441;EcoTalk-Programm zwischen BK_START und BK_FINISH überprüfen, korrigieren und neu laden.
+1442;Im kemro.manager für den Slave FX775A:0/PNIO:0/PNIOSLAVE:0 einen Namen eintragen und Steuerung neu starten
+1443;Parametrierung in der 3DOnSite-Prozess-Konfiguration (Datei Process.cfg) ueberpruefen und ggf. anpassen.%CrLf%Teachprogramm ueberpruefen.
+1444;Fehler quittieren und bei der nächsten Abwahl darauf achten, dass der Kolben nicht der aktive Kolbven ist.
+1445;Mindestens einen Kolben an Visualisierung anwählen.
+1446;- Aktuelles Applikationsvolumen ueberpruefen%CrLf%- Vorbereitung ueberpruefen
+1447;Parametrierung in der 3DOnSite-Prozess-Konfiguration (Datei Process.cfg) ueberpruefen und ggf. anpassen.%CrLf%Das Lernen ausschalten, um die gelernten Werte zu löschen, und das Vordrucklernen neu zu starten.
+1448;Keine
+1449;Hauptnadel in Visualisierung anwählen
+1450;Benannte Geräte entsprechend der Verriegelung ansteuern
+1451;Schnittstelle spülen
+1452;Luftversorgung einschalten oder Schnittstelle spülen
+1453;Benannte Komponenten des Applikationsturms prüfen
+1454;- Netzwerkverbindung prüfen%CrLf%- Visualisierung neu starten%CrLf%- Robotersteuerung neu starten
+1455;Parameter für Schlauchkompensation korrigieren
+1456;Parameter korrigieren
+1457;Freigabe Sonderfarbsystem pruefen und ggf. aktuelle Bearbeitung abbrechen
+1458;Zeitprogramm korrigieren
+1459;Station löschen (Clear FiFo) und fortfahren. Bei erneutem Auftreten Steuerungsliferanten kontaktieren
+1460;Type- oder Farbinformation korrigieren und erneut Download durchführen
+1461;Zeitprogramm mit 3DOnsite überprüfen, ggf. neu erstellen
+1462;Gesamtprogrammablauf überprüfen, Eigenschaft des Zeitprogrammstart ändern
+1463;Hardware des Gerätes tauschen
+1464;Parameter NoOfDegradeModes in der Sektion [DegradeMode] im File BCU.cfg prüfen. Falls Parameter korrekt gewählt wurde Steuerungshersteller kontaktieren
+1465;Der Parameter EnableDegrademode in der Sektion [Degrade] in der Datei BCU.cfg ist auf True zu setzen. Es sind weitere Parameter im File BCU.cfg zu konfigurieren. Steuerungshersteller kontaktieren.
+1466;Voraussetzungen für die Antriebsfreigabe der Roboterantriebe prüfen. %CrLf%Quittieren, bei erneutem Auftreten Steuerungslieferanten kontaktieren.
+1467;Roboter über die Visualisierung oder Teachpanel in Bypassposition fahren und Geist erneut starten.
+1468;Parameter für Partdetect in Datei BCU.cfg prüfen. Parameter und Signalgeber in Stations-SPS prüfen. 
+1469;Parameter SKIDLENGTH in der Sektion [StationData] in der Datei BCU.cfg prüfen. Signalquelle der Stations-SPS prüfen.
+1470;Prüfen, ob sich das Steuerungsprogramm im Teachmode über PHG laden lässt.%CrLf%Parameter TIMEOUTMOTIONREL in Datei BCU.cfg prüfen.%CrLf%Wenn das Programm im Teachmode ladbar ist und der Fehler erneut auftritt Steuerungslieferanten kontaktieren.
+1471;Roboter über Visulaisierung oder PHG in Grundstellung fahren. Wenn der Roboter in Grundstellung ist und der Fehler%CrLf%erneut auftritt Steuerungslieferanten kontaktieren.
+1472;Quittieren, Fördererstopposition in der Typzuordnung und Programmstartposition in der Datei BCU.cfg prüfen.
+1473;Brushdateien für akuelle Kontur prüfen und gegebenenfalls durch Parametrieren über 3DOnsite oder Kopieren erstellen.
+1474;Interner Steuerungsfehler, Roboter abwählen und Steueruengshersteller kontaktieren.
+1475;Interner Fehler, Karossendaten in Rpc und SPS prüfen, gegenenfalls Rpc erneut starten damit Reinitialisieren der Karossenspeicher durchgeführt wird. Bei erneutem Auftreten Steuereungslieferant kontaktieren.
+1476;Parameter in der Sektion [PartDetect] in Datei BCU.cfg prüfen. Signalquelle in Stations-SPS prüfen. Bei erneutem Auftreten Steuerungshersteller kontaktieren.
+1477;Wenn kein Synchronisierungssignal empfangen werden soll müssen die Parameter in der Sektion [PartDetect] in der Datei BCU.cfg eingestellt werden. Soll ein Synchronisierungssignal empfangen werden, ist der Signalweg und die Parametrierung in der Stations-SPS zu prüfen.
+1478;Parametrierung in der Typzuordnungstabelle anpassen und Karossendatensatz nachwählen.
+1479;Parametrierung in der Stations-SPS prüfen und gegebenenfalls anpassen. Karossendaten nachwählen.
+1480;Parametrierung in der Farbzuordnungstabelle anpassen und Karossendatensatz nachwählen.
+1481;Parametrierung in der Mehrkomponententabelle anpassen und Karossendatensatz nachwählen.
+1482;Parametrierung der Mehrkomponententabelle prüfen. Paramtrierung der zulässigen Anzahl von Komponenten mittels Processbuilder prüfen. 
+1483;Parametrierung in der Typzuordnungstabelle prüfen und gegebenenfalls Download durchführen.
+1484;Parametreierung in der Datei BCU.cfg prüfen. Bei erneutem Auftreten Steuerungshersteller kontaktieren.
+1485;Der Datensatz von der Stations-SPS ist unvollständig. Parametrierung bzw. Datenfluß in der Stationssteuerung prüfen.
+1486;Wählen Sie in der Geistmaske eine Ringleitungsfarbe aus.
+1487;Parametrierung der Fördererstopposition in der Typzuordnungstabelle prüfen.%CrLf%Parametrierung der Programmstartposition in der Datei BCU.cfg prüfen.%CrLf%Zeitprogramme, die am Farbwechsel beteiligt sind prüfen.
+1488;Zeitprogramme, die am Farbwechsel beteiligt sind prüfen.
+1489;Freigabe in der Stations-SPS prüfen.
+1490;Quttieren, Foerdererstopposition in der Typzuordnungstabelle prüfen. Aktuelle Karosse kann nicht mehr lackiert werden.
+1492;Parametrierung in SPS und Rpc prüfen. Quittieren, bei erneutem Auftreten Steuerungslieferanten kontaktieren.
+1493;Bei Beauftragung ueber die Visualsierung: Roboter zuerst in die Position UeberGunbox fahren.%CrLf%Bei Beauftragung aus Zeitprogrammen bzw. aus Konturprogrammen: Zeitprogramme bzw. Teachprogramme ändern.
+1494;Es können nur Fixpositionfahrten nach Spül- u. Grundstellung ueber die Visualisierung gestartet werden.%CrLf%Quittieren.
+1495;Karosse aus der Zone ausfoerdern oder wenn keine Kollisionsgefahr besteht Fixposition ueber PHG starten.
+1496;Roboter in Gundstellung fahren. Anschliessend gewünschte Fixposition anfahren.
+1497;Quittieren, Roboter in Fixposition Inbox oder Grundstellung fahren.
+1498;Quittieren, Roboter in Fixposition Abovebox oder Grundstellung fahren.
+1499;Quittieren, Roboter in Fixposition Abovebox fahren.
+1500;Vorbereitung des Prozess in Betriebsart Hand durchführen. %CrLf%Wenn Vorbereitung in Betriebsart T2 notwendig ist, Fixposfahrten aus Zeitprogramm entfernen.
+1501;Fehler beseitigen und Referenzieren erneut starten.
+1502;Warten bis das Referenzieren beendet ist.
+1503;1) Controller referenzieren.%CrLf%2) Steuerung neu starten, um damit die Referenzprüfung zu wiederholen
+1504;Parameter anpassen.
+1505;Warten bis Referenzieren beendet ist.
+1506;Bauteil ersetzen und Verschleisszaehler zuruecksetzen.
+1507;Bauteil in Kuerze auswechseln und Verschleisszaehler zuruecksetzen.
+1508;Parametrierung pruefen und korrigieren.
+1509;Grund fuer die Kollision pruefen und beseitigen.
+1510;Gruende pruefen und beseitigen.
+1511;Proportionalventil überprüfen.
+1512;Materialdruckregler und Drucksensor prüfen.
+1513;Konfiguration (Soll-Wert, Toleranzen) ueberpruefen und ggf. korrigieren.%CrLf%Zirkulation starten.
+1514;Eingestellten Grenzwert ueberpruefen.
+1515;Einzel- bzw. Detail-Alarm ueberpruefen.
+1516;Motorschutzschalter pruefen und einschalten.%CrLf%Drehrichtung ueberpruefen und ggf. am Stecker umpolen.%CrLf%Phasen und Vorsicherungen pruefen.
+1517;Bei manueller Befuellung: Nachfuellen des Waermetraegers.%CrLf%Bei automatischer Befuellung: Kuehlwasserzufluss oeffnen und Befuellung abwarten.%CrLf%Bei automatischer Befuellung ist das Magnetventil Befuellung geoeffnet.
+1518;Mindeststroemung im Temperiergeraet nicht gegeben.%CrLf%Durchfluss pruefen (evtl. Schmutzfaenger reinigen).%CrLf%Absperr-Ventil bzw. Kugelhahn pruefen und ggf. oeffnen.
+1519;Waermeabfuhr am Verbraucher nicht gegeben.%CrLf%Eingestellten Grenzwert ueberpruefen.%CrLf%Heizung schaltet nach Abkuehlung um 1-2 °C wieder zu.
+1520;Durchfluss im Temperiergeraet pruefen.%CrLf%Zu geringe Waermeabfuhr am Erhitzer (evt. Kalkablagerungen auf dem Heizstab).%CrLf%Eingestellten Grenzwert ueberpruefen.%CrLf%Entriegelung durch Druecken der Taste <Enter> am Temperiergeraet
+1521;Konfiguration ueberpruefen und ggf. Stoerung beseitigen.
+1523;Anschluss und ggf. Hauptschalter am Endgeraet oder Teilnehmer ueberpruefen.%CrLf%Verriegelungen ueberpruefen.%CrLf%Steuerung neu starten. Bei erneutem Auftreten Steuerungslieferant kontaktieren.
+1524;Einstellung am Single-Gerät überprüfen. Die Kühlung ist durch einen Taster am Single-Gerät ein- bzw. ausschaltbar.
+1525;Kühlwassertank befüllen und Verschlauchung überprüfen.
+1526;In dem Prozessprotokoll kontrollieren, welche Zeitprogramme nicht geladen werden konnten und diese überarbeiten.
+1527;Keine. Ein Zeitprogramm zum Rückholen des angegebenen Molchs in den Quellbahnhof wird automatisch gestartet.
+1528;Sollwerte in Brush-Tabelle sowie Override-Faktoren überprüfen und ggf. anpassen.%CrLf%Prozess-Kalibrierung am Programmende durchführen und überprüfen.
+1529;Zeitprogramm erstellen
+1530;Mindestens einen Kanal pro Versorgungsgruppe aktivieren.
+1531;System auf Dichtheit prüfen
+1532;System kontrollieren
+1533;Kontrolle des Bauteils lt. Meldung
+1534;Parameter im process.cfg prüfen und korrigieren
+1535;Kurzschluss beheben
+1536;Pruefen, ob der Heizdraht zwischen den beiden Kontakten am Reinigungsgeraet in Ordnung ist.%CrLf%Gegebenenfalls neuen Draht einsetzen.
+1537;Zeitlichen Ablauf des Spülvorgangs und des Applikationsvorgangs prüfen, Makro zum Kippen im Teachprogramm an geeignete Stelle verschieben.
+1538;Parametrierung in der 3DOnSite-Prozess-Konfiguration (Datei Process.cfg) ueberpruefen und Steuerung neu starten.%CrLf%Bei erneutem Auftreten Code mit ProcessBuilder neu generieren, compilieren und Steuerung neu starten.%CrLf%Ggf. Steuerungslieferanten kontaktieren.
+1539;Sensor fuer Drehueberwachung ueberpruefen.%CrLf%Pneumatik ueberpruefen (keine oder zu geringe Luftzufuhr fuer Luftantrieb).%CrLf%Luftantrieb und/ oder Schablone auf Schwergaengigkeit ueberpruefen.%CrLf%Parametrierung in der 3DOnSite-Prozess-Konfiguration (Datei Process.cfg) ueberpruefen.
+1540;Sensor fuer Drehueberwachung ueberpruefen.%CrLf%Pneumatik ueberpruefen (zu hohe Luftzufuhr fuer Luftantrieb).%CrLf%Luftantrieb und/ oder Schablone auf Leichtgaengigkeit ueberpruefen.%CrLf%Parametrierung in der 3DOnSite-Prozess-Konfiguration (Datei Process.cfg) ueberpruefen.
+1541;Prüfen ob sich keine Personen innerhalb des Sicherheitsbereiches befinden. Fehler quittieren.
+1542;Schlüsseltaster erneut betätigen, ggf. Fehler quittieren.
+1543;Fehler quittieren. T2-Betriebsart erneut anwählen.
+1544;- Prüfen warum NotAus ausgelöst wurde.%CrLf%- Wenn keine Gefahr besteht, NotAus-Taster in OK-Stellung bringen, Fehler quittieren.
+1545;Der Fehler kann quittiert werden, wenn der externe Alarm nicht mehr besteht.
+1546;Detaillierte Fehlermeldungen lesen. Fehler quittieren.
+1547;Roboter auf PHG anwählen, dann Teachbetrieb mit Schlüsseltaster erneut aktivieren.
+1548;Leistung für Bewegungsantriebe zuschalten.
+1549;Leistung für Prozessantriebe zuschalten (Pneumatik EIN).
+1550;Daten über Nachwahl-Maske von Hand eintragen.
+1551;Karosse erneut fixieren, dann Fehler quittieren und Bearbeitung fortsetzen. Achtung: erhöhte Kollisionsgefahr.%CrLf%Alternativ die Roboter in Grundstellung bringen (z.B. in T1) und dann die Karosse ausfördern.
+1552;Station stoppen und Roboter abwählen um zu verhindern, dass Roboter gestartet werden und es dadurch zu Kollisionen kommt.
+1553;Entweder die Makros entfernen oder in der Konfiguration [RC.KINEMATIC:0.VMT_BK] die Bahnkorrektur parametrieren.
+1554;Entweder die Makros entfernen oder in der Konfiguration[RC.KINEMATIC:0.ObjMeasure] die 3D-Lagevermessung parametrieren.
+1555;Die Punkte so teachen, dass eine Ebene definiert wird
+1556;Punkt im Objektkoordinatensystem anlegen
+1557;Das Makro aus dem Teachprogramm entfernen oder den Schritt in CONFIG3D aktivieren.
+1558;Vor dem Aufruf des Makros im Teachprogramm das Makro INIT3DOBJECT aufrufen.
+1559;Ausführungsreihenfolge im Teachprogramm aendern.
+1560;Karosse kann aus Sicherheitsgruenden nicht weiter vermessen und appliziert werden. Programm abbrechen und Karosse ausfoerdern.
+1561;Ueberpruefen, ob der Sensor eingeschaltet und der Abstand zur Oberflaeche innerhalb des Schaltbereichs ist.
+1562;Überprüfung der Parametrierung am VMT-BK-System
+1563;Teachprogramm korrigieren und Programm neu starten
+1564;Fifo-Daten in SPS und allen Robotersteuerungen prüfen.%CrLf%Ggf. alle Daten ablöschen (ClearFifo).
+1565;Fehlerhaften Datensatz über Nachwahlfenster ermitteln und diesen umwählen (z.B. auf gültigen Typ oder Farbe bzw. auf "nicht applizieren").
+1566;Hochspannung auf dem Bedienpult zuschalten oder Hochspannung aller Roboter abwählen.
+1567;Typzuordnungstabelle überprüfen. Ggf. fehlenden Typ eintragen. Danach Daten per Nachwahl korrigieren.
+1568;Farbzuordnungstabelle überprüfen. Ggf. fehlende Farbe eintragen. Danach Daten per Nachwahl korrigieren.
+1569;Brenner auf dem Bedienpult zuschalten oder Brenner aller Roboter abwählen.
+1570;Warten bis Sonderfarbversorgung die Farbe bereitstellt, dann Datensatz über Nachwahl korrigieren.%CrLf%ODER: Datensatz auf "Nicht applizieren" umwählen.
+1571;Karosse aus Zone ausfördern. Falls es sich um einen fehlerhaften Zustand handeln sollte (es befindet sich keine Karosse in der Zone) die Daten ablöschen (ClearFifo).
+1572;Zoneneinlauf sperren.
+1573;Vor dem Entriegeln des Zonen-Einlaufes die Roboter in die Grundstellung bringen.
+1574;Station in Betriebsart Automatik starten.
+1575;Mindestens einen Geist-Datensatz anwählen.
+1576;Eingestellten Geist-Taktabstand überprüfen und ggf. korrigieren.
+1577;Geistbetrieb beenden, dann Zoneneinlauf freigeben.
+1578;Es handelt sich um einen nicht zulässigen Sonderfall. Die Zonendaten müssen daher abgelöscht werden (ClearFifo).
+1579;Roboter in die Ausliterposition bringen, dann Geistbetrieb starten.
+1580;Alle Handling-Roboter abwählen, dann Geistbetrieb starten.
+1581;Nach Betriebsart "Hand" umschalten.
+1582;Einen Roboter auf der Fixpositions-Maske auswählen.
+1583;Eine Zielposition auf der Fixpositions-Maske auswählen.
+1584;Position anderer Roboter prüfen. Ggf. geben weitere Fehlermeldungen Auskunft über den genauen Verriegelungs-Grund.
+1585;Zunächst Türöffner in Grundstellung bringen.
+1586;Prüfen ob Robotersteuerung läuft (Visu, PHG oder Remotedesktop)%CrLf%Ggf. Feldbus prüfen.
+1587;Detaillierte Fehlerinformation vom Roboter auswerten. Ggf. Daten per Nachwahl korrigieren.
+1588;Messung manuell starten. Kamerasystem prüfen.
+1589;Bremse prüfen.
+1590;Anlage in den Hand- oder Automatikbetrieb bringen und Antriebe zuschalten, damit Notspülen durchgeführt werden kann.
+1591;Roboter in den Abwahlbereich bringen.
+1592;Deaktivierung aufheben, dann Roboter wieder anwählen.
+1593;Warten bis die anderen Roboter die Bearbeitung abgeschlossen haben. Dann Roboter anwählen.
+1594;Prüfen ob Leistung zugeschaltet wurde. Detaillierte Fehlermeldungen lesen. Antrieb auf Fehler prüfen. Ggf. Steuerungslieferanten kontaktieren.
+1595;Roboter anwählen.
+1596;Fehler quittieren und warten, bis aktive Fixpositionsfahrt abgeschlossen ist. Ggf. Fixpositionfahrt abbrechen.
+1597;Roboter in Grundstellung bringen
+1598;Der Spülvorgang kann bis zu 5 Minuten dauern. Wenn sich der Fehler dann nicht quittieren lässt muss die Luftversorgung oder die Dichheit des Robotergehäuses geprüft werden.
+1599;Dateninhalt aller Roboter auf Plausibilität prüfen, ggf. Daten ablöschen (ClearFifo).%CrLf%Steuerungslieferant kontaktieren.
+1600;Rückmeldung des Druckschalters in Sicherheits-SPS prüfen.
+1601;Roboter auf Visualisierung anwählen.
+1602;In Farbtabelle für jeden ICC-Kanal Farbinformationen mit der richtigen Versorgungssgruppe eintragen.
+1603;Zustimmtaste drücken bzw. überprüfen, ob alle Achsen referenziert sind (Anzeige in PHG-Positionsmaske)
+1604;Teachprogramm korrigieren und vor dem 2. Start der Aufzeichnung vorhergehende Aufzeichnung stoppen.
+1605;Teachprogramm korrigieren und vorher die Aufzeichnung mit TORQUEMONITOR( StartLogging ,???  ) starten.
+1606;Teachprogrammm korrigieren und den Parameter Axis im Makro TORQUEMONITOR( StopLogging ,??? ) korrigieren.
+1607;Konfiguration des ES_PACDBImportRPC Servers auf dem EcoScreen-PC prüfen. Netzwerkverbindungen EcoScreen-PC und Steuerung überprüfen.
+1608;Konfiguration des ES_PACDBImportRPC Servers auf dem EcoScreen-PC prüfen. Netzwerkverbindungen EcoScreen-PC und Steuerung überprüfen.
+1609;Format der Ergebnisdatei auf der Steuerung überprüfen. Fehler quittieren und Programm neu starten. Falls der Fehler erneut auftritt, Steuerungslieferanten kontaktieren.
+1610;Format der Ergebnisdatei auf dem Messgerät überprüfen. Fehler quittieren und Programm neu starten. Falls der Fehler erneut auftritt, Steuerungslieferanten kontaktieren.
+1611;Steuerung und Messgerät neu starten und falls Fehler wieder auftritt, Steuerungslieferanten kontaktieren.
+1612;Farbe oder Typ in EcoScreen 3D-OnSite definieren und falls Fehler wieder auftritt, Steuerungslieferanten kontaktieren.
+1613;Nach Änderungen am Techprogramm, die die Anzahl und Koordinaten der Messpunkte beeinflussen (Änderung Vel, Trigger, Punkte) muß das Mess-Programm in EcoScreen im Dialog Messprogramm umbenannt werden.
+1614;Lackierparameter an vorhergehenden Stationen prüfen bzw. optimieren.
+1615;Teachprogramme, Lackierparameter der vorhergehenden Station prüfen. Karosse gesondert auf Lackierfehler prüfen.
+1616;Teachprogramm korrigieren oder falls der Fehler erneut auftritt, Steuerungslieferanten kontaktieren.
+1617;Teachprogramm korrigieren und Messreihe mit Makro ACTIVATE_PAC(Enable) and  ACTIVATE_PAC(OneShot) starten.
+1618;Teachprogramm korrigieren.
+1619;Messgerät freigeben und einschalten.
+1620;Messgerät einschalten und in EcoScreen freigeben
+1621;Farbzuordnung in EcoScreen korrigieren.
+1622;Falls reales Messgerät vorhanden ist, Konfiguration korrigieren.
+1623;Vor der Applikationsfahrt muss eine Messfahrt ausgefuehrt werden.
+1624;Teachprogramm ueberpruefen und/oder Messfahrt wiederholen. Teachprogramm neu starten.
+1625;Den raeumlichen und/oder zeitlichen Abstand zwischen der Messpunkten (BK_ACTION bzw. BK_ACTION_DIRECT) vergroessern und das Programm neu starten.
+1626;Die Karosse darf nicht appliziert werden.
+1627;Ueberpruefen des Status am BK-Rechner
+1628;Parametrierung in der 3DOnSite-Prozess-Konfiguration ueberpruefen und ggf. anpassen.
+1629;Auffangbehaelter entleeren.
+1630;Gueltigen Anpassfaktor eingeben
+1631;Parametrierung in der 3DOnSite-Prozess-Konfiguration (Datei Process.cfg) ueberpruefen und ggf. anpassen.%CrLf%Angegebene Hardware ueberpruefen.
+1632;Sollwert ueberpruefen und ggf. anpassen.
+1633;Swirl-Regler ueber RESET-Schalter zuruecksetzen.%CrLf%Elektrik ueberpruefen. Regler spannungslos machen.%CrLf%Steuerung neu starten. Bei erneutem Auftreten Steuerungslieferant kontaktieren.
+1634;Sensorik, Zuleitungen und ggf. Zaehlerkarten bzw. Swirl-Regler ueberpruefen, Parametrierung ueberpruefen.%CrLf%Stoerung beseitigen.
+1635;Datei prüfen oder mit Hilfe von PS3.exe neu erstellen. Die Kalibrierdatei muss in der letzten Spalte der Textdatei colorlst.da2  eingetragen werden.
+1636;Der Laser wird bei Überhitzung automatisch abgeschaltet. Kühlgerät (Durchfluß, Wasserstand, Temperatur) kontrollieren. Signale für Durchfluß, Wasserstand und Temperatur überprüfen. Wenn Kühlgerät ok ist, Laser poer Software neu starten. Wenn der Fehler weiterhin ansteht, kann die Stromversorgung oder der Laser defekt sein. Steuerungslieferanten kontaktieren.
+1637;Alle Programme, die auf diese Datei zugreifen, schließen. Fehler quittieren. Falls Fehler erneut auftritt, Steuerungslieferanten kontaktieren.
+1638;Verstärkerstufe überprüfen und ggf. erhöhen oder Laser einschalten oder Schichtdicke bzw. im Teachprogramm die Messpunkte überprüfen oder Kabel bzw. Detektor überprüfen oder Steuerungslieferanten kontaktieren. 
+1639;Verstärkerstufe kleiner einstellen oder Detektor überprüfen oder Umgebungsbedingungen (starke Licht- oder Wärmequelle) prüfen und ggf. ändern. Falls keine Abhilfe: Steuerungslieferanten/Phototerm kontaktieren.
+1640;Beenden der Mess-Software auf dem Phototherm-Mess-PC, Deaktivieren des Testmodes und Neustarten der Mess-Software
+1641;Kabelverbindungen zwischen Mess-PC und Lasereinheit überprüfen. Fehler quittieren und falls Fehler weiter ansteht, Steuerungslieferanten/Phototherm kontaktieren.
+1642;Messgerät aktivieren oder Fehler beseitigen.
+1643;Konfiguration korrigieren, z.B. ProgStart  = 31 bzw. ProgStop = 32 in der Datei c50Rcu.cfg
+1644;Ueberzaehlige Projekte abwaehlen.
+1645;Fehler quittieren am Antriebsregelgeraet
+1646;Quittieren, das Mastern wiederholen. Bei erneutem Auftreten des Fehlers Steuerungslieferanten kontaktieren.
+1647;Achsen referenzieren oder beim Joggen das Achskoordinatensystem auswaehlen.
+1648;Ueberpruefen, ob alle Achsen referenziert sind, Fehler quittieren und Zustimmtaste druecken.
+1649;Entweder nur in Achsen joggen oder Konfiguration prüfen und korrigieren, anschließend Steuereung neu starten.
+1650;Das laufende Teachprogramm beenden und erst dann ein neues starten.
+1651;Fehler quittieren
+1652; Fehler quittieren und Zustimmtaste druecken.
+1653;Quittieren und Programm fortsetzen
+1654;Programm abbrechen. Roboter in T1/T2 in die Homeposition fahren.
+1655;Bei gesetztem Konfiguartionseintrag [RC.KINEMATIC:0.VirtualWall] special = 1 den Roboter in der Betriebsart T1 in den zulaessigen Arbeitsbereich bewegen.
+1656;Positionswerte der Achsen ueberpruefen und mit der Stellung des Roboters vergleichen.
+1657;Triggerpunkt so verschieben, dass er geometrisch auf dem Bahnsegment liegt, Alternativ den Triggerbefehl im Teachprogramm auf ein anderes Bahnsegment verschieben.
+1658;Pruefen, ob das Teil gegriffen wurde. Falls ja, Parametrierung und ggf. Hardware der Sensorik pruefen.
+1659;Parametrierung pruefen.
+1660;Pruefen, ob das Teil verloren wurde. Falls nein, Parametrierung und ggf. Hardware der Sensorik pruefen.
+1661;Pruefen, ob Kollision vorliegt. Falls nein, Parametrierung und ggf. Hardware der Sensorik pruefen.
+1662;Projektierung ueberarbeiten.
+1663;Sensor kalibrieren.
+1664;Teach Programm ueberpruefen.
+1665;Pruefen, ob Kollision vorliegt. Falls nein, Parametrierung pruefen.
+1666;Pruefen, ob das Teil gegriffen wurde. Falls ja, Parametrierung pruefen.
+1667;Sichtpruefung durchfuehren, da zuvor eine Ueberschreitung des parametrierten Drehmoments festgestellt wurde.
+1668;Override oder Sollwert für dieses Geraet anpassen.
+1669;Die gewuenschte Reihenfolge entweder durch Umteachen der Triggerpunkte oder durch Umsortieren im Ecotalk-Programm herstellen.
+1670;Triggerpunkt und Bewegungsbahn ueberpruefen und eventuell umteachen.
+1671;Kartesische Verfahrbewegungen aus dem Teaqchprogramm entfernen
+1672;Entweder die Zahl der Trigger (GUN, SETBRUSH, SETPROCESSCOMMAND, ...) auf diesem Segment reduzieren oder das Bahnsegment durch einen zusaetzlichen Bahnpunkt so teilen, dass die Trigger auf die beiden neuen Segmente verteilt werden.
+1673;Entweder den Punkt in Objektkoordinaten teachen oder das Tracking vorher unterbrechen (TRACKING(Off)) oder beenden (TRACKING(finished))
+1674;Eintrag in der Typliste erstellen und in die Steuerung laden
+1675;Vergleich der Projekt- und Programmnamen in der Typliste mit den Projekt- und Programmnamen auf der Steuerung
+1676;Fehlermeldungen am Bedienrechner des Vision-Systems kontrollieren.
+1677;Konfiguration aendern und Steuerung neu starten oder Teachprogramm ueberarbeiten.
+1679;Gerätedokumentation prüfen.%CrLf%Eventuell Steuerungshersteller kontaktieren.
+1680;Für eine kühlere Umgebung sorgen, oder die Belastung verringern.
+1681;Verbindungsleitungen bzw. Hardware überprüfen und ggfs. austauschen.
+1682;Teachprogramm prüfen, ggfs Abtand Zerstäuber Karosse erhöhen.%CrLf%HS-Kabel überprüfen.
+1683;Spannungsversorgung überprüfen, ggfs. Netzteil einstellen.
+1684;Brushtabelle, Zeitprogramme bzw. Overrides prüfen.
+1685;Versorgungsluftdruck überprüfen.
+1686;Hardware prüfen, ggfs. austauschen
+1687;Den Abstand der Triggerpunkte für die Kommandos SETPROCESSCOMMAND(eVisionTrigger, ...)  im Teachprogramm vergroessern.
+1688;Im Teachprogramm Messprogramm starten (SET-Makro)
+1689;Vision-Rechner und Verbindungskabel ueberpruefen.
+1690;Am Vision-Rechner den Fehlerzustand ueberpruefen.
+1691;Karosse ohne Applikation ausfoerdern.
+1692;Projekt am PHG abwaehlen. Mastern erneut starten.
+1693;Die Achse auf die Markierung stellen und erneut mastern
+1694;Ueberpruefen, ob das Mastertool richtig aufgeschraubt wurde. Geschwindigkeit beim Mastern pruefen.
+1695;Teachprogramm optimieren, um die Limitereingriffe und damit ein Unterschreiten der Lackiergeschwindigkeit zu verhindern.
+1696;Tool wechseln
+1697;Nur bei Multipumpe: ChannelID ordnet den aktuellen Block mit Parametrierungen für die Pumpenschlupfkompensation  (im process.cfg) dem richtigen Kanal/Element der Multipumpe zu. Dabei sind nur die Werte 'a','b','c','d','e','f','g' erlaubt. Jedem Kanal/Element der Multipumpe darf nur ein Block mit Parametrierungen zugeordnet werden.
+1698;Ueberpruefen der Konfiguration und Steuerung neu starten
+1699;Steuerung neu starten, bei erneutem Auftreten Steuerungshersteller kontaktieren
+1700;Angegebene Komponenten überprüfen und anschließend erneut versuchen.
+1701;Konfiguration bzw. Gerätename prüfen und ggfs. korrigieren.
+1702;Versorungsspannung des betreffenden Schaltschranks prüfen und ggf. Stoerung beseitigen.
+1703;Betreffende Ethernetverbindung prüfen und ggf. Stoerung beseitigen.
+1704;Konfiguration des ActionPointOffset unter Berücksichtigung des Ueberhangsmaßes des genannten Aktionspunktes in BCU.cfg korrigieren und Steuerung neustarten.
+1705;Farbzuordnungstabelle bzw. Datenfluss in der Stationssteuerung prüfen
+1706;Applikationsturm in obere Endlage bewegen
+1707;Parameter korrigieren
+1708;Teachprogramm korrigieren
+1709;- Bus-Verbindung prüfen.%CrLf%- RPC-Steuerung neu starten.%CrLf%- SPS-Steuerung neu starten.
+1710;Parametrierung und Schablone prüfen.
+1711;Foerdererposition der Karosse kontrollieren bzw. Signalquelle prüfen
+1712;Zeitprogramm wird nach der folgenden Karosse ausgeführt
+1713;Netzteil überprüfen
+1714;Fehler mit 3DOnsite korrigieren und erneut downloaden.
+1715;Position der Schablone und Initiator kontrollieren.
+1716;Ansteuerung Kupplung in Hand(auf MMI) bzw. im Zeitprogramm prüfen.
+1717;Typzuordnung in 3donsite erstellen und speichern
+1718;Kommunikation zum HMI prüfen
+1719;Parametrierung im Zeitprogramm prüfen.
+1720;-EcoTalk-Programm korrigieren.%CrLf%-Datei EcotalkVariables.ttp korrigieren.
+1721;Kupplung prüfen: Software (Ansteuerung in Zeitprogramm / HAND), Verdrahtung, Mechanik
+1722;Am PC Porenerkennung (SmartRay) nach der Fehlerursache suchen
+1723;Die Suchfahrt umteachen
+1724;Teachprogramm anpassen. Der Start der Nahtpruefung muss auf der Bahn frueher erfolgen.
+1725;Teachprogramm anpassen. Das Ende der Nahtpruefung muss auf der Bahn spaeter erfolgen.
+1726;Teachprogramm beenden. Tritt der Fehler mehrfach auf, den Steuerungshersteller kontaktieren.
+1727;Entweder die Makros entfernen oder in der Konfiguration [RC.KINEMATIC:0.SmartRay] die SmartRay-Funktionalitaet parametrieren.
+1728;Hardware zur Messung und Uebertragung der Foerdererimpulse pruefen.
+1729;Vollstaendig konfigurierte AAd.dat aus Projektvorlage in genanntes Verzeichnis kopieren und Rechner neu starten.
+1730;Tisch prüfen.
+1731;Fehler im SPS Programm korrigieren
+1732;Den Werkzeugkopf reparieren
+1733;Werkzeug und Dockingeinrichtung pruefen. Werkzeug manuell an- oder abdocken
+1734;Konfiguration der Visualisierung pruefen und mit RPC abgleichen.
+1736;Wechseln der Betriebsart. Löschen wiederholen.
+1737;Ein SET_??? muss immer zuerst mit einem RECEIVE_??? beendet werden, bevor ein neues Kommando mit SET_??? an den Prozess gesetzt werden darf. Dabei ist die zeitliche Bearbeitung (MainRun, PreRun, Stopp) des Kommandos zu beachten.
+1739;System auf Leckage überprüfen.
+1740;Angegebenen Initiator pruefen.
+1741;-Pruefen ob das Kommando zum Abschalten der Hochspanung vor dem Ausfuehren des Zeitprogramms im EcoTalk-Programm aufgerufen wird.
+1742;Sicherstellen dass die Karossen im parametrierten Bereich positioniert wurde.%CrLf%Auf eventuelle Eingabefehler prüfen%CrLf%Grenzen in der Konfiguration anpassen.
+1743;- Prüfen, ob Leckage vorhanden ist und ggf. Problem beheben.%CrLf%- Leckagesensor auf Drahtbruch prüfen.
+1744;Position(en) neu lernen.
+1746;Begleitende Fehlermeldung auswerten.
+1747;Um bei nicht erfolgreicher Teilekontrolle rueckwaerts fahren zu können muss die Bahn vorwaerts im CONT-Betrieb gefahren werden.
+1748;Bitte wechseln Sie den Glockenteller sofort und die Turbine bei nächster Gelegenheit aus.
+1749;- Fehlende Sollwerte parametrieren und geänderte Brushtabelle herunterladen%CrLf%- Überwachung fehlender Brushsollwerte in Konfiguration deaktivieren
+1750;- Luftdruck Tänzerrolle überprüfen%CrLf%- Applikationsgeschwindigkeit prüfen%CrLf%- Motorbwegung prüfen
+1751;- Werkzeug freigefahren%CrLf%- Kollisionsschutz zurückklappen
+1752;Klebebandreste an Oberseite der Rolle entfernen
+1753;Bahnprogramm prüfen
+1754;Klebeband muss gewechselt werden
+1755;- bei Bandriss Band neu einführen%CrLf%- Applikationsbahn prüfen
+1756;Parameter korrigieren
+1757;- Zeitprogramm überprüfen%CrLf%- Prüfen ob Bürste blockiert%CrLf%- Initiator prüfen
+1758;- Zeitprogramm überprüfen%CrLf%- Initiator überprüfen
+1759;SCU deaktivieren oder Buskommunikation zur SPS unterbrechen.
+1760;Korrektur der TrackingEndPosition durchführen
+1761;Bitte löschen sie die Dateien kinX.driveX.ref aller Antriebe und starten sie anschließend Windows neu.
+1762;Simulationswerte in der Datei Process.cfg korregieren. 
+1763;Zeitprogramm abbrechen. LCC positionieren. Neu laden.
+1764;- Bitte überprüfen sie die Schreibweise der Variable im EcoTalk-Befehl.%CrLf%- Bitte überprüfen ob die Variable im EcoTalk-Befehl existiert.
+1765;Die Anzahl der zu setzenden Systemvariablen im Bewgungsprogramm prüfen und ggf. reduzieren.
+1766;Zerstäuber anwählen
+1767;Bitte überprüfen sie die Stellung des Schwenkbuegels, bzw. verfahren Sie diesen über die Visualisierung.%CrLf%Sollte der Schwenkbuegel in Mittelstellung sein, ist die elektrische Rückmeldung zu pruefen.
+1768;- Ausgewählten Verstaerkungswert im EcoTalk-Befehl pruefen.%CrLf%- Parametrierung des Dehnungsmessstreifens pruefen.
+1769;Konfiguration des LCC-Layouts im PCUx.cfg korrigieren.
+1771;Leckage Überwachung in PCUx.cfg aktivieren
+1772;Leckage beseitigen und Fehler quittieren
+1773;Ansteuerventile und angegebene Initiatoren ueberpruefen.
+1774;- SV_Statistics.def: Name des Gerätes korrigieren oder Parametrierung entfernen
+1775;- Processbuilder:%CrLf%Prozessstruktur entsprechend anpassen oder das Gerät aus der Parametrierung entfernen.
+1776;- SV_StatisticDef: Parametrierung des Signalnamens korrigieren
+1777;- Im Teachprogramm für diesen Type das Makro WAIT_PROCESS_READY() einfügen
+1778;Robotersteuerung neustarten um Automatik Intern zu aktivieren
+1779;Robotersteuerung neustarten um Automatik Extern zu aktivieren
+1780;- Anstehende Fehler am Bedienpult / SPS quittieren
+1781;Bitte prüfen sie den Schaltzustand der Initiatoren in der Stationübersicht der Visualisierung.%CrLf%Prüfen sie die Verkabelung bzw. den betreffenden Initiator.
+1783;Temperatureinstellungen überprüfen. Klimagerät überprüfen.
+1784;MainChannel spülen
+1785;Quittieren, Roboter nach FlushDry400  oder Home fahren
+1786;Quittieren, Roboter nach FlushDry0 oder Home fahren
+1787;Quittieren, Roboter nach Home fahren
+1788;Quittieren, Roboter nach BrushClean400 oder Home fahren
+1789;Quittieren, Roboter nach AboveBox, BrushClean0 oder Home fahren
+1790;Datei prüfen (Schreibschutz, Datei vorhanden, Orderstruktur vorhanden, ...)
+1791;Bitte korrigieren sie den konfigurierten Verfahrweg der genannten Achse.%CrLf%Parameter: masteringDelta%CrLf%Wert: Für Linearachsen muss ein Weg von >= 20mm konfiguriert werden.
+1792;- Umgebungstemperatur prüfen%CrLf%- gegebenenfalls Leistung reduzieren%CrLf%- Gerät austauschen
+1793;Brushfile korrigieren oder anlegen, bzw. anderen Typ für Modus T2+Process auswählen
+1794;Steuerungshersteller kontaktieren
+1795;Teachprogramm ändern, so dass gültige Meßfahrten für alle drei Richtungen vorliegen, oder Sensorsignal prüfen oder Tool auf Beschädigungen prüfen
+1796;Parameter Conveyorexisting im File System.cfg auf "True" setzen.
+1797;- Zerstäuber anwählen%CrLf%- Pneumatik einschalten%CrLf%- Zeitprogramme auf gleichem Kanal beenden%CrLf%- Betriebsart HAND einschalten
+1798;- Schlitten auf korrekte Masterposition schieben%CrLf%- prüfen, ob Cfg-Parameter korrekt eingestellt sind%CrLf%- prüfen, ob während des Automastern korrekt angedockt wird
+1799;Den Roboter mit dem PHG in der Betriebsart T1/T2 in die Grundstellung fahren.
+1800;Parametrierung für das Aufräumen überprüfen und korrigieren oder das Aufräumen in der SPS bzw. Visu sperren.
+1801;1. Bremsluftdruck einstellen%CrLf%2. Drehzahlrückmeldung überprüfen
+1802;- Kanal für die Versorgungsgruppe anwählen (nur in Betriebsart HAND möglich)%CrLf%- Auf andere Farbe umwählen%CrLf%- Zerstäuber abwählen -> Roboter lackiert diese Karosse nicht
+1803;Angegebenen Typ referenzieren.
+1804;Typ für die Toleranzüberwachung ändern.
+1805;Angegebene Naht überprüfen und gegebenenfalls neu referenzieren.
+1806;Referenzdatei nochmals in die Steuerung laden.
+1807;-Initiator pruefen%CrLf%-Kabelverbindungen pruefen
+1808;-Pumpenkupplung pruefen%CrLf%-Initiator pruefen%CrLf%-Kabelverbindungen pruefen
+1809;Prüfen ob Datei appldisk\application\control\RCUx\cfg\References.ini existiert und Zugriff darauf möglich ist.
+1810;- Stellung des Positionierers kontrollieren%CrLf%- korrekten Datensatz waehlen
+1811;- Stellung des Positionierers kontrollieren%CrLf%- korrekten Datensatz waehlen
+1812;- Versorgungsspannung pruefen%CrLf%- Luefter kontrollieren%CrLf%- Sicherung -4Q3 überprüfen und wieder einschalten
+1813;- Tuer schliessen%CrLf%- Initiator pruefen
+1814;Sicherung pruefen und gegebenenfalls ruecksetzen. %CrLf%Bei erneutem Auftreten Verkabelung auf mögliche Kurzschlüsse prüfen.
+1818;Conveyor Stoppositionen anpassen, bzw. Degradekonzept überarbeiten
+1819;Konfiguration im IEC pruefen und anschliessend Steuerung neu starten.
+1820;Den Totmann-Taster erneut druecken und die Eingabe wiederholen.
+1821;Verbindungsleitung zum Sensor ueberpruefen.%CrLf%Spindel ueberpruefen.
+1822;Das Teil wieder in seine programmierte Position bringen.
+1823;Das System einschließlich Unterkanälen spülen. Anschließend Farbe über den Hauptkanal neu anwählen.
+1824;Zuerst die verwendeten Unterkanäle vorbereiten.
+1825;Das Signal 'BodyInPosition' ist von der SPS entsprechend den Richtlinien des Interface bereitzustellen
+1826;Daten für Düsenwechsler über Visualisierung eingeben.
+1827;Initiator und Düsenwechselkopf prüfen. Ggf. Daten für den Düsenwechsler über die Visualisierung korrigieren.
+1828;Teachprogramm überprüfen und ggf. Daten für den Düsenwechsler über die Visualisierung korrigieren.
+1829;Zeitprogramm bzw. Schnittstelle zu HMI/PHG überprüfen.
+1830;Das Einlernen der Druckwerte für die erweiterten Luftmengenregler-Funktionen wurde gestartet
+1831;Lernen neu starten
+1832;Datei neu anlegen und Steuerung neu starten
+1833;Accuracy oder Sollwert fuer dieses Geraet anpassen.
+1834;Luftkappe / Lenkluftring auf korrekte Montage ueberpruefen. Alle Schläuche vom Luftmengenregler bis Luftkappe / Lenkluftring ueberpruefen. 
+1835;Luftkappe / Lenkluftring auf korrekte Montage und Verschmutzung ueberpruefen. Alle Schläuche vom Luftmengenregler bis Luftkappe / Lenkluftring ueberpruefen. 
+1836;Parameter EnableReferenceCheck im Prozess.cfg ( 3DOnSite ) aktivieren bzw. "Referenzwerte lernen" Starten.
+1837;Gerät anlegen
+1838;Luftkappe / Lenkluftring auf korrekte Montage ueberpruefen. Alle Schläuche vom Luftmengenregler bis Luftkappe / Lenkluftring ueberpruefen. Referenzwerte neu einlernen.
+1839;Referenzwerte neu einlernen oder RefereceCheck deaktivieren.
+1840;Abschalten des Notbetriebs im 3DOnSite
+1841;Deaktivieren des Emergency Mode oder abschalten von Contamination Check und der Accuracy.
+1842;Funktion kann genutzt werden
+1843;Deaktivieren des Emergency Mode oder Refrence einschalten
+1844;- Hardware überprüfen%CrLf%- Firmware überprüfen%CrLf%- Software überprüfen
+1845;Platz an der Duesenwechselstation frei machen oder Duese vom Roboter manuell abnehmen.
+1846;Duese des gewuenschten Typs in die Duesenwechselstation manuell einlegen.
+1847;- Initiator pruefen.%CrLf%- EcoTalk-Programm fuer das Ablegen der Duese pruefen.
+1848;- Initiator pruefen.%CrLf%- EcoTalk-Programm fuer das Aufnehmen der Duese pruefen.
+1849;Bitte prüfen sie diesen Wert in der Datei "services.cfg".
+1850;Initiator und Verkabelung überprüfen und ggf. tauschen.
+1851;Ventil der Duesenwechselstation ueberpruefen/reparieren.
+1852;Software am Phototherm-PC prüfen und ggf. neu starten oder Verkabelung zwischen Phototherm-PC und RPC prüfen..
+1853;Verkabelung des Förderers überprüfen und Einmessvorgang erneut starten.
+1854;DockingUnit spülen
+1855;LCC positionieren
+1856;In file ethernetipslave.cfgr there must be a name assigned for the slave in group EIPSLAVE:0 (e.g. name = "EIPSLAVE")
+1857;- Ventilauswahl prüfen%CrLf%- Farbzuordnungstabelle prüfen%CrLf%- CFG-Parameter für Farbventil prüfen
+1858;- Störung quittieren und in BA-Hand Hochspannung einschalten mit Sollwert ca. 60 kV%CrLf%Wenn Sollwert erreicht wurde Hochspannung über EcoScreen abwählen.%CrLf%Dieses Vorgehen leitet einen definierten Entladevorgang ein. Wenn daraufhin erneut ein Fehler gemeldet wird ist der Entlader wahrscheinlich defekt und muss ausgetauscht werden
+1859;- Verwendung des Entladers über CFg-Parameter abschalten.%CrLf%- Konfigurationsparameter "DeviceName" des Entladers überprüfen und ggf. anpassen.%CrLf%  Bei Änderung Steuerung neu starten.
+1860;- Das nicht ausführbare EcoTalk Kommando im Teach-Programm entfernen.%CrLf%- Das fehlende Gerät in der Prozesskonfiguration hinzufügen
+1861;Karossenabstand vergrößern
+1862;Signal 'PControlOn' mit Prozessbuilder als triggerrelevantes Signal definieren
+1863;SPLINE-Befehle aus dem EcoTalk-Programm entfernen oder SPLINE-Makros zulassen. Eintrag "[RC.KINEMATIC:0] enableSplineInterpolation = 1" in der RobotControl.cfg.
+1864;Lineareinheit auf gültige Position bringen:%CrLf%- Zeitprogramm Positionieren starten%CrLf%- ..%CrLf%
+1865;Montage des Mastersensors überprüfen%CrLf%Verkabelung überprüfen%CrLf%Mastertool tauschen%CrLf%System auf Verschmutzung überprüfen 
+1872;Bevor das Teil mit dem Handler bewegt wird muss der Befehl SET_POSCODE(Delete) ausgeführt werden.%CrLf%Bitte überprüfen sie das aktuelle EcoTalk-Programm.
+1873;Positionen fuer die Toolvermessung korrekt teachen
+1874;Ventilnamen in Parameter 'PaintRelevantValves' prüfen
+1875;Fehlerstatus am VMT-System ueberpruefen
+1876;Bolzen des Duesenwechselplatzes ausfahren und danach den Duesenstatus auf IO aendern.
+1877;Teachprogramm überprüfen (HN-Nummer im SETBRUSH-Makro, SETBRUSH zu nah an GunOn, ...). 
+1878;Teachprogramm überprüfen (SETBRUSH zu nah an GunOn). Prüfen ob der Druck aus mech. Gruenden nicht abgebaut werden konnte (z.B. defektes Ventil). 
+1879;Teachprogramm aendern oder relative Messung konfigurieren.
+1880;Teachprogramm aendern oder Multiobject konfigurieren.
+1881;Nach Spannungswiederkehr schaltet sich die Steuerung automatisch wieder ein.%CrLf%Gegebenenfalls ist ein Neustart der Steuerung notwendig wenn die SPS beim Steueurngsstart noch nicht bereit bzw. anstehende Fehlermeldungen nicht quittiert waren.
+1882;System neu kalibrieren.
+1883;- Gerät spannungslos machen%CrLf%- Spannung wiederherstellen%CrLf%- S3 Bus neu starten%CrLf%- Fehler quittieren
+1889;Hardware Heizung, Patrone, Verdrahtung, Relais prüfen
+1890;Fehler muss behoben und danach am Antriebsregler des Bandantriebs quittiert werden
+1891;Steuerung herunterfahren%CrLf%Spannungsreset am Gerät durchführen%CrLf%Steuerung neustarten
+1892;Steuerung herunterfahren%CrLf%Spannungsreset am Gerät durchführen%CrLf%Steuerung neustarten%CrLf%%CrLf%Bei erneutem Auftreten LogfileCollectorabzug an Steuerungslieferanten.%CrLf%--> Firmwareconfig prüfen%CrLf%
+1893;LogfileCollectorabzug an Steuerungslieferanten.%CrLf%--> Firmwarekonfiguration prüfen
+1894;Datei ..\appldisk\application\control\config\S3_Firmware.cfg aktualisieren und Steuerung neu starten
+1895;- Teilnehmer prüfen, ggf. Spannungsreset durchführen.%CrLf%- Elektrische Verbindungen (Reihenfolge, Steckerkontakt) prüfen.
+1896;- Busaufbau mit Konfiguration abgleichen.%CrLf%- Teilnehmer prüfen, ggf. Spannungsreset durchführen.
+1897;Spannungsversorgung der Motorhaltebremse prüfen und gegebenenfalls die Versorgungsspannung erhöhen.
+1898;Überprüfen der Sercoskonfiguration oder Steuerunglieferanten kontaktieren.
+1899;Verdrahtung und Hardware überprüfen.%CrLf%Status von übergordneten Modulen überprüfen.%CrLf%Kommunikation von Bus überprüfen. %CrLf%Gegebenenfalls Hardware bzw. Bus neu starten.%CrLf%Steuerung neu starten, gegebenenfalls Steuerungshersteller kontaktieren.
+1900;In der Gerätedokumentation prüfen, ob der Paramter existiert.%CrLf%Die Kommunikation überprüfen.%CrLf%Gerät neu starten.
+1901;- Elektrische Verbindung prüfen.%CrLf%- Antriebs-/Steuerungskonfiguration prüfen.
+1902;Düse bei nächster Gelegenheit ersetzen.
+1903;- Im Cfg-Editor von 3DOnSite die Lackierdrucküberwachung konfigurieren und freigeben%CrLf%- Verwendung der Lackierdrucküberwachung für den benannten Sensor im Zeitprogramm entfernen
+1904;- Druck prüfen (ggf. Entlasten)%CrLf%- Verkabelung Sensor prüfen%CrLf%- Parametrierung Schalter prüfen
+1905;Überwachung in PCUx.cfg aktivieren
+1906;Sensor, Verkabelung, Parametrierung pruefen
+1907;Teachprogramm aendern oder Parametrierung korrigieren.
+1909;Bitte prüfen Sie den Sitz des Glockentellers.
+1910;Parameter über Kestudio.Sercos3 korrigieren:%CrLf%- Öffnen des Projektes und verbinden mit der entsprechenden Steuerung%CrLf%- Öffnen der Parametrierseite für den Drehzahlregler%CrLf%- Im Reiter Online-Parameter die Parameter P-0003.0.12 und P-0002.0.2 eintragen%CrLf%- A
+1911;Überwachung in PCUx.cfg aktvieren
+1912;- Heizung prüfen%CrLf%- Temperatursensor prüfen%CrLf%- Schaltpunkte am Temperaturschalter prüfen%CrLf%- Verdrahtung prüfen
+1913;24V Versorgung der USV und der Steuerung prüfen.%CrLf%Nach Spannungswiederkehr startet die Steuerung automatisch neu.
+1914;Moegliche Ursache ermitteln und Stoerung beseitigen:%CrLf%- Netzteil auf Uebertemperatur pruefen: bei Uebertemperatur Temperatur des Schaltschrank pruefen, ggf. Netzteil tauschen%CrLf%- Leistungskabel und Steckverbindungen vom Netzteil bis zum Temperiergeraet pruefen%CrLf%- Umschaltung fuer Heizen und Kuehlen (Schuetz- bzw. Relay-Schaltung) auf Funktion pruefen%CrLf%- Netzteil-Ansteuerung (Analogwerte fuer Strom- bzw. Spannungsbetrieb) pruefen
+1915;Moegliche Ursache ermitteln und Stoerung beseitigen:%CrLf%- Temperiergeraet auf Uebertemperatur pruefen%CrLf%- Kabel und Steckverbindungen zum Thermoausloeser pruefen%CrLf%- Sicherung fuer Thermoausloeser pruefen%CrLf%- Temperatursensor im Temperiergeraet pruefen%CrLf%- Regelkreiseinstellungen (Reglerparameter) pruefen%CrLf%- Netzteil und Netzteil-Ansteuerung vom Temperiergeraet pruefen
+1916;-Hardware prüfen%CrLf%-Düsen reinigen
+1917;Prozesskomponenten überprüfen.%CrLf%
+1918;Conveyor Stoppositionen anpassen, bzw. Degradekonzept überarbeiten
+1919;RoboterStartpositionen anpassen, bzw. Degradekonzept überarbeiten
+1920;Robotertypen anpassen, bzw. Degradekonzept überarbeiten
+1921;Störung quittieren und abwarten ob Bussystem nach der Neuinistialisierung gestartet werden kann.%CrLf%Andernfalls weitere Meldungen beachten und Störung besteitigen.
+1922;Die Fehler im Projekt beseitigen.
+1923;Nach der Inbetriebnahme in der Sercoskonfiguration den Parameter "autoAddressing=3" setzen und Steuerung neustarten.
+1924;Sercos III Konfiguration, HW-Endpunktname prüfen
+1925;Alle Haken einklappen und anschließend Auftrag zum Verfahren des Zylinders erneut erteilen.
+1926;- Luftversorgung prüfen%CrLf%- Freigängigkeit prüfen%CrLf%- Initiatorrückmeldung prüfen
+1927;Haubenhalter in untere Position fahren und anschließend Auftrag zum Verfahren des Hakens erneut erteilen.
+1928;Bitte Übergabeparameter des RECEIVE-Befehls im Bewegungsprogramm prüfen, ggf. ändern.
+1929;- Weiter Störmeldungen beachten%CrLf%- Busdiagnose an Visualisierung öffnen (falls verfügbar)%CrLf%- Busteilnehmer prüfen.
+1930;Entweder die Makros entfernen oder in der Konfiguration [RC.KINEMATIC:0.DvdGluing] die Multigun-Funktionalitaet parametrieren.
+1931;- Parametrierung überprüfen%CrLf%- Messzelle neu kalibrieren
+1932;Überprüfung des Strömungswächter, Saugers bzw. Saugschlauch
+1933;Den Kanal durch Ausführen eines geeigneten Zeitprogramms auf den richtigen Status bringen.
+1934;- Sichere Position in Betriebsart Hand anfahren und an Visualisierung prüfen ob Profilfreischalter betätigt ist.%CrLf%- Sichere Position mit 3D-OnSite ggf. korrigieren.
+1935;- Ggf. die Geraete-Hardware ueberpruefen und/ oder ausgetauschen.%CrLf%- Reinitialisierung anstarten (Busneustart bei sercos III).%CrLf%- Steuerung neu starten. Bei erneutem Auftreten Steuerungslieferant kontaktieren.
+1936;Ursache für die Deaktivierung des Geräts/Funktion beheben und wieder aktivieren
+1937;Hardware des PartDetect Signal prüfen oder Parametrierung des PartDetect Fenters prüfen
+1938;Position des Partdetect Initiators prüfen, Parametrierung des PartDetect Fensters prüfen
+1940;Steuerung neu starten.%CrLf%Prüfen, ob beim Steuerungshochlauf die Busverbindung während Referenzprüfung schon aktiv ist.%CrLf%SPC200 Controller prüfen.
+1941;Prüfen, ob Bussystem aktiv.%CrLf%Falls Fehler beim Hochlauf, Steuerung neu starten.%CrLf%Prüfen, ob SPC200 Controller defekt.
+1942;Korrektur der Konfiguration für P-Control / Pig-Control
+1943;- Triboluft erhöhen%CrLf%- Förder- und Totalluft korrigieren%CrLf%- Pulverbehälter füllen%CrLf%- geeignetes Pulver verwenden
+1944;- Schläuche und Schlauchverlegung prüfen%CrLf%- Eingangsdruck > 6 bar gewährleisten%CrLf%- Injektor anschliessen%CrLf%- kleinere Sollwerte wählen
+1945;- Pistolenkabel überprüfen%CrLf%- Pistole überprüfen
+1946;- Pistole überprüfen und ggf. ersetzen%CrLf%- Pistolenkabel überprüfen und ggf. ersetzen
+1947;- Triboluft reduzieren%CrLf%- Pulvermenge reduzieren
+1948;- Pistole anschliessen%CrLf%- Pistolenkabel überprüfen und ggf. ersetzen%CrLf%- Pistole überprüfen und ggf. ersetzen
+1949;- Pistolenkabel überprüfen und ggf. ersetzen%CrLf%- Pistole überprüfen und ggf. ersetzen%CrLf%- Pistole anschließen
+1950;- Schlauchverlegung überprüfen%CrLf%- Luftversorgung zum Steuergerät überprüfen%CrLf%- Eingangsdruck > 6 bar sicherstellen%CrLf%- Injektor anschliessen
+1951;- Information des Applikationszaehlers durch SPS auf Interface bereitstellen%CrLf%- Hardware-Endpunkt mit Parameter 'ApplClockHWEndpoint' festlegen und Steuerung neu starten
+1952;Motortyp überprüfen.
+1953;-Netzwerkverbindung überprüfen%CrLf%-Topic Status vom OPCLink überprüfen%CrLf%-Paintchecker RPC Server verbindungsstatus überprüfen
+1954;Farbe auswählen und Zeitprogramm erneut starten
+1955;- Prüfen ob Prozess auf der Visualisierung freigegeben ist, gegebenfalls freigeben.%CrLf%- Prüfen ob Prozess eingeschaltet ist, gegebenenfalls einschalten (Pneumatik EIN).
+1956;- Prüfen ob Roboter auf der Visualisierung freigegeben ist, gegebenfalls freigeben.%CrLf%- Prüfen ob Antriebe eingeschaltet sind, gegebenenfalls einschalten.
+1957;- Prüfen ob bereits Zeitprogramme laufen und warten bis diese beendet wurden oder manuell stoppen%CrLf%- Zeitprogramm erneut starten
+1958;Projektverzeichnis anlegen
+1959;Programm erzeugen
+1960;Profibus bzw. CANopen Bus (Anybus X-Gateway zu Wagner EPG_S2) fehlerhaft%CrLf%- Anybus X-Gateway Spannungsversorgung prüfen%CrLf%- Wagner EPG_S2 Spannungsversorgung prüfen%CrLf%- Kabel CANopen-Bus nicht gesteckt%CrLf%- CANopen-Bus Abschlußwiderstand an Wagner EPG_S2 fehl
+1961;- Spannungsreset an genanntem Teilnehmer durchführen und anschließend Steuerung neustarten.%CrLf%- Konfiguration des Sercosbusses mit realem Aufbau abgleichen.
+1962;Angegebenen Pfad prüfen und ggf. die vorhandene Datei löschen.
+1963;Prozess-Konfiguration ueberpruefen und anpassen. Steuerung neu starten.%CrLf%Bei erneutem Auftreten Steuerungslieferanten kontaktieren.
+1964;Die angegebene Datei überprüfen und ggf. manuell löschen.
+1965;Die angegebene Datei überprüfen. Steuerung neu starten.%CrLf%Ggf. die Datei manuell löschen. Nach dem Neustart der Steuerung werden Standard-Einstellungen (Freigaben usw.) verwendet. Diese müssen überprüft werden.
+1966;- Signal 'PowerOnProcess' auf SPS-Schnittstelle muss gesetzt sein.%CrLf%- Prüfen ob Antriebsschuetze im RCMP ordnungsgemäß schalten
+1967;Heizpatrone, Verdrahtung, Relais, Heizung prüfen
+1968;physikalisch bedingte Lade/Entladezeiten berücksichtigen und zeitlichen Abstand zwischen den Brushes erhöhen.
+1969;Für Sollwert nur zulässigen Wert wählen.Auch Override prüfen.
+1970;Programmcode ändern, so das der Baustein AB_IniFile nicht mit Werten für Section und Key länger als 80 Zeichen aufgerufen wird 
+1971;Betreffende Maschine abwählen oder gebrücktes Profilfreisignal aufheben.
+1972;- Quittieren, um möglichen internen Controller-Fehler zurückzusetzen%CrLf%- Prüfung der Signale und deren Verbindungsleitungen zum HS-Controller
+1973;- Prüfung der Signale und deren Verbindungsleitungen zum HS-Controller%CrLf%- Überprüfen HS-Controller
+1974;In Betriebsart Hand schalten und dann:%CrLf%- Zeitprogramm aus Gruppe "Überdruck entlasten" starten um den Überdruck abzubauen%CrLf%- Entsprechende Komponente (nach Prozessschema) öffnen um den Überdruck abzubauen
+1975;SMOOTH-Befehle aus dem EcoTalk-Programm entfernen oder Steuerungsfirmware updaten.
+1976;- Sercosgeräte spannungslos schalten, wenn Geräte wieder hochgefahren sind den Sercosring neustarten.%CrLf%- Weitere Meldungen der Geräte beachten.%CrLf%- Spannungsversorgung bzw. Verkabelung der Geräte prüfen.
+1977;Interner Steuerungsfehler, Roboter abwählen und Steuerungshersteller kontaktieren
+1978;Es muss per EcoTalk-Befehl "SET_PROCESS_STATE" die Hochspannung explizit ausgeschaltet werden bevor der Befehl "RECEIVE_PARTORDER" ausgeführt wird
+1979;Es muss per EcoTalk-Befehl "RECEIVE_PARTORDER" der Auftrag um die Hochspannung freizugeben eingelesen werden bevor diese dann mit  "SET_PROCESS_STATE" freigegeben wird.
+1980;Bitte prüfen Sie die EcoTalk-Unterprogramme die durch Handlingsaufträge ausgeführt werden. %CrLf%In diesen Programmen darf der EcoTalk-Befehl "SET_PROCESS_STATE" um die Hochspannung freizugeben nicht verwendet werden.
+1981;Roboter nach Home fahren
+1982;Prüfen, ob Istwert tatsaechlich zu hoch (z.B. zunaechst ueber Visu)%CrLf%Ursache für zu hohe Spannung bzw. für nicht korrekte Ladung/Entladung ermitteln und beheben
+1983;- SPS-Programm pruefen%CrLf%- Schnittstelle zur SPS pruefen
+1984;Die Motorbremse muss eingeschliffen werden.
+1985;- Spannungsreset des Gerätes und Neustart der Steuerung%CrLf%- Diagnose über LED am Gateway und den Modulen%CrLf%  - Phoenix: Module haben am oberen Rand eine LED welche die Verbindung zum Gateway signalisiert.%CrLf%                   - Spannungsversorgung auf der Klemme prüfen%CrLf%                   - Verbindung des Modules zum Rückwandbus prüfen%CrLf%                   - Modul tauschen%CrLf%- FESTO: Module haben eine CTEI LED welche die Verbindung zum Gateway signalisiert.%CrLf%                - LED Aus:   Verkabelung, Brückenstecker prüfen ob diese richtig angezogen sind%CrLf%                                    Modul tauschen%CrLf%                - LED blinkt: Modultypen prüfen und Reihenfolge korrigieren%CrLf%%CrLf%Nach jeder Änderung am Gerät ist ein Spannungsreset und anschliessender Steuerungsneustart notwendig.%CrLf%
+1986;Dosierpumpe in Betriebsart Hand spülen
+1987;- System auf Leckage prüfen%CrLf%- Verschlissene Dosierpumpe austauschen.
+ 

@@ -1,0 +1,224 @@
+//$Csomagtér keret & Csomagtértetö
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU33X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  OVERLAP( NODEC50  )
+  //
+  PTP( HK_P1  )
+  //
+  LIN( HK_P2  )
+  SETBRUSH( GUN1 ,61 ,TP1 ,TR1  )
+  LIN( HK_P3  )
+  LIN( HK_P4  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP2 ,TR2  )
+  END_IF
+  LIN( HK_P5  )
+  LIN( HK_P6  )
+  LIN( HK_P7  )
+  LIN( HK_P8  )
+  LIN( HK_P9  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP3 ,TR3  )
+  END_IF
+  LIN( HK_P10  )
+  LIN( HK_P11  )
+  LIN( HK_P12  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP4 ,TR4  )
+  END_IF
+  LIN( HK_P13  )
+  SETBRUSH( GUN1 ,64 ,TP5 ,TR5  )
+  LIN( HK_P14  )
+  LIN( HK_P15  )
+  LIN( HK_P16  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP6 ,TR6  )
+  END_IF
+  LIN( HK_P17  )
+  SETBRUSH( GUN1 ,61 ,TP7 ,TR7  )
+  LIN( HK_P18  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP8 ,TR8  )
+  END_IF
+  LIN( HK_P19  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP9 ,TR9  )
+  END_IF
+  SETBRUSH( GUN1 ,45 ,TP10 ,TR10  )
+  LIN( HK_P20  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP11 ,TR11  )
+  END_IF
+  LIN( HK_P21  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP12 ,TR12  )
+  END_IF
+  LIN( HK_P22  )
+  SETBRUSH( GUN1 ,40 ,TP13 ,TR13  )
+  LIN( HK_P23  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP14 ,TR14  )
+  END_IF
+  SETBRUSH( GUN1 ,41 ,TP15 ,TR15  )
+  LIN( HK_P24  )
+  LIN( HK_P25  )
+  LIN( HK_P26  )
+  LIN( HK_P27  )
+  LIN( HK_P28  )
+  LIN( HK_P29  )
+  LIN( HK_P30  )
+  SETBRUSH( GUN1 ,36 ,TP16 ,TR16  )
+  LIN( HK_P31  )
+  LIN( HK_P32  )
+  LIN( HK_P33  )
+  LIN( HK_P34  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP17 ,TR17  )
+  END_IF
+  LIN( HK_P35  )
+  SETBRUSH( GUN1 ,51 ,TP18 ,TR18  )
+  IF (SP_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP19 ,TR19  )
+  END_IF
+  LIN( HK_P36  )
+  LIN( HK_P37  )
+  LIN( HK_P38  )
+  SETBRUSH( GUN1 ,54 ,TP20 ,TR20  )
+  LIN( HK_P39  )
+  SETBRUSH( GUN1 ,52 ,TP21 ,TR21  )
+  LIN( HK_P40  )
+  LIN( HK_P41  )
+  LIN( HK_P42  )
+  LIN( HK_P43  )
+  LIN( HK_P44  )
+  LIN( HK_P45  )
+  LIN( HK_P46  )
+  LIN( HK_P47  )
+  IF (SP_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP22 ,TR22  )
+  END_IF
+  LIN( HK_P48  )
+  SETBRUSH( GUN1 ,42 ,TP23 ,TR23  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP24 ,TR24  )
+  END_IF
+  LIN( HK_P49  )
+  LIN( HK_P50  )
+  LIN( HK_P51  )
+  LIN( HK_P52  )
+  LIN( HK_P53  )
+  LIN( HK_P54  )
+  LIN( HK_P55  )
+  LIN( HK_P56  )
+  LIN( HK_P57  )
+  SETBRUSH( GUN1 ,38 ,TP25 ,TR25  )
+  LIN( HK_P58  )
+  LIN( HK_P59  )
+  LIN( HK_P60  )
+  LIN( HK_P61  )
+  SETBRUSH( GUN1 ,37 ,TP26 ,TR26  )
+  LIN( HK_P62  )
+  LIN( HK_P63  )
+  LIN( HK_P64  )
+  LIN( HK_P65  )
+  LIN( HK_P66  )
+  LIN( HK_P67  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP27 ,TR27  )
+  END_IF
+  LIN( HK_P68  )
+  SETBRUSH( GUN1 ,39 ,TP28 ,TR28  )
+  LIN( HK_P69  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP29 ,TR29  )
+  END_IF
+  LIN( HK_P70  )
+  LIN( HK_P71  )
+  LIN( HK_P72  )
+  LIN( HK_P73  )
+  LIN( HK_P74  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP30 ,TR30  )
+  END_IF
+  SETBRUSH( GUN1 ,63 ,TP31 ,TR31  )
+  IF (KR_I=TRUE) THEN
+    LIN( HK_P75  )
+    GUN( GUN1 ,GunOn ,TP32 ,TR32  )
+  END_IF
+  LIN( HK_P76  )
+  LIN( HK_P77  )
+  IF (KR_I=FALSE) AND (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP33 ,TR33  )
+  END_IF
+  LIN( HK_P78  )
+  SETBRUSH( GUN1 ,73 ,TP34 ,TR34  )
+  LIN( HK_P79  )
+  LIN( HK_P80  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP35 ,TR35  )
+  END_IF
+  LIN( HK_P81  )
+  SETBRUSH( GUN1 ,62 ,TP36 ,TR36  )
+  LIN( HK_P82  )
+  IF (KR_I=TRUE) OR (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP37 ,TR37  )
+  END_IF
+  LIN( HK_P83  )
+  LIN( HK_P84  )
+  LIN( HK_P85  )
+  IF (KR_I=TRUE) OR (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP38 ,TR38  )
+  END_IF
+  LIN( HK_P86  )
+  LIN( HK_P87  )
+  IF (KR_I=TRUE) OR (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP39 ,TR39  )
+  END_IF
+  IF (KR_I=TRUE) OR (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP40 ,TR40  )
+  END_IF
+  LIN( HK_P88  )
+  SETBRUSH( GUN1 ,46 ,TP41 ,TR41  )
+  LIN( HK_P89  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP42 ,TR42  )
+  END_IF
+  LIN( HK_P90  )
+  LIN( HK_P91  )
+  LIN( HK_P92  )
+  SETBRUSH( GUN1 ,48 ,TP43 ,TR43  )
+  LIN( HK_P93  )
+  LIN( HK_P94  )
+  LIN( HK_P95  )
+  LIN( HK_P96  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP44 ,TR44  )
+  END_IF
+  SETBRUSH( GUN1 ,72 ,TP45 ,TR45  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP46 ,TR46  )
+  END_IF
+  LIN( HK_P97  )
+  LIN( HK_P98  )
+  LIN( HK_P99  )
+  SETBRUSH( GUN1 ,71 ,TP47 ,TR47  )
+  LIN( HK_P100  )
+  LIN( HK_P101  )
+  LIN( HK_P102  )
+  SETBRUSH( GUN1 ,63 ,TP48 ,TR48  )
+  IF (KR_I=FALSE) AND (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,TP49 ,TR49  )
+  END_IF
+  LIN( HK_P103  )
+  LIN( HK_P104  )
+  IF (KR_I=TRUE) OR (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,TP50 ,TR50  )
+  END_IF
+  LIN( HK_P105  )
+  //
+RDESELECT("RP12")

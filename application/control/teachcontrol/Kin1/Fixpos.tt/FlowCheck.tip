@@ -1,0 +1,13 @@
+RSELECT("RP12")
+  //
+  SETTOOL( TOOL_ZERO  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V200  )
+  //
+  PTP( RHOME  )
+  //
+  PTP( RFLOWCHECK  )
+  //
+RDESELECT("RP12")

@@ -1,0 +1,14 @@
+//$Referenz Position
+RSELECT("RP12")
+  //
+  SETTOOL( MESSPITZE  )
+  SETOBJECT( DEFBASENULL  )
+  //
+  //Vorposition
+  PTP(PREPOS)
+  //
+  //Referenzposition
+  LIN(REFPOS)
+  PTP(REFPOS_PTP)
+  //
+RDESELECT("RP12")

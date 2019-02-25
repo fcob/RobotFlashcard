@@ -1,0 +1,639 @@
+(*----------------------------------------------------------------------------*
+*   K2-System Robot Control Unit                                              *
+*                                                                             *
+*   Dürr Systems GmbH APT                                                     *
+*   Rosenstr. 39                                                              *
+*   74321 Bietigheim-Bissingen                                                *
+*   Germany                                                                   *
+*                                                                             *
+*   Copyright (C) 2005 Dürr Systems GmbH APT                                  *
+*   All rights reserved.                                                      *
+*                                                                             *
+*   Author :     Bitzer                                                       *
+*   E-Mail:      Sven.Bitzer@durr.com                                         *
+*                                                                             *
+*   Modul:       TRcuToolUnit.tts                                             *
+*   Description: Functions of one Handlertoolunit that manages it's           *
+*                sensors- and switches                                        *
+*-----------------------------------------------------------------------------*
+* 09.11.06 BIT: Added GetName() from SENSORVALUE to get name of the values
+*   
+*)  
+(******************************************************************************
+***  Variables ****************************************************************
+******************************************************************************)
+VAR 
+  sName               : STRING := "not active";   // Name of the unit from cfg
+  myKin               : MAPTO TRcuRobot;          //refernce to kinematic
+  bEnabled            : BOOL;                     // This unit is enabled
+  eType               : TRcuUnitType;
+  
+  iCountSwitch        : SINT;                     // If switches valid count em
+  ySwitch             : ARRAY [4] OF MAPTO TRcuSwitch;
+  iCountSensor        : SINT;                     // If sensors valid count em
+  Sensor              : MAPTO TRcuSensor;
+ 
+  //states
+  bInactive           : BOOL;
+  iInactive           : DINT;
+  bSetPartPresent     : BOOL;
+  bResetPart          : BOOL;
+  bSearchActive       : BOOL;
+  bPartShiftUsed      : BOOL;
+  bStoreValue         : BOOL;
+  bCancelValue        : BOOL;
+  ySelectedToStore    : ARRAY [cgiMaxSeachCycles] OF BOOL;
+  sHardwareString     : STRING;                   //strings for the teach pendant
+  UserInfo            : DINT;
+  LearnedPartVal      : MAPTO SENSORVALUE;      // local copy of the learned partvalues
+  bUpdateUserPage     : BOOL;
+  bStoreRelease       : BOOL;                   // release the storing fuction in manual
+  bStoreReleaseAuto   : BOOL;                   // release the storing fuction in auto
+  iForcedPartState    : DINT;                   // show forced partstate on teachview
+END_VAR
+
+//------------------------------------------------------------------------------------------------------
+//  check if positive edge of switch is detected for partcontrol
+//------------------------------------------------------------------------------------------------------
+ROUTINE GetPartPresentSwitch(bAppLateUsed : BOOL) : TRcuCheckState
+  VAR 
+    i               : SINT;
+    tmp  : BOOL;
+  END_VAR
+   
+   // A P P E N D  L A T E
+   IF bAppLateUsed THEN
+      tmp := FALSE;
+      FOR i:=0 TO (iCountSwitch-1) DO
+          IF ySwitch[i].bDoPartCheck THEN
+             tmp := TRUE;
+          END_IF;
+      END_FOR;
+      IF NOT tmp THEN       //already active?
+         RETURN ePartRedo;  //if not do it again in mainrun
+      ELSE
+         tmp := TRUE;
+         FOR i:=0 TO (iCountSwitch-1) DO
+             tmp := tmp AND ySwitch[i].bPartPresent;
+         END_FOR;
+         IF tmp THEN       //Part already present?
+            FOR i:=0 TO (iCountSwitch-1) DO
+                ySwitch[i].bDoPartCheck   := FALSE;
+            END_FOR;
+            bPartShiftUsed := FALSE;
+            RETURN ePartPresent;
+         ELSE   
+            RETURN ePartRedo;  //Part not present jet, do it again in mainrun
+         END_IF;
+      END_IF;   
+   END_IF;
+   // M A I N R U N
+   tmp := FALSE;
+   FOR i:=0 TO (iCountSwitch-1) DO
+       IF ySwitch[i].bDoPartCheck THEN
+          tmp := TRUE;
+       END_IF;
+   END_FOR;
+   IF NOT tmp THEN       //already active?
+      RcuSetMessageOnce(TRcuUnit_ErrPartCheckNActv, myKin.kinListInx, 3, instId, "TRcuUnit.GetPartPresentSwitch", sName);  
+      RETURN ePartError;
+   ELSE
+      //Part already present
+      tmp := TRUE;
+      FOR i:=0 TO (iCountSwitch-1) DO
+          tmp := tmp AND ySwitch[i].bPartPresent;
+          ySwitch[i].iSearchCounter := ySwitch[i].iSearchCounter + 1;
+      END_FOR;
+      IF tmp THEN       
+         FOR i:=0 TO (iCountSwitch-1) DO
+             ySwitch[i].bDoPartCheck   := FALSE;
+         END_FOR;
+         bPartShiftUsed := FALSE;
+         RETURN ePartPresent;
+      END_IF;
+      //Part isn't present and seachcounter is smaller than cycles given by TeachIn  
+      tmp := TRUE;
+      FOR i:=0 TO (iCountSwitch-1) DO
+          tmp := tmp AND (ySwitch[i].iSearchCounter <= ySwitch[i].iSeachCycles);  
+      END_FOR;
+      IF tmp THEN
+         //moved in step?
+         tmp := FALSE;
+         FOR i:=0 TO (iCountSwitch-1) DO
+             IF ySwitch[i].bMovedInStep THEN
+                tmp := TRUE;
+             END_IF;     
+         END_FOR;
+         IF tmp THEN
+            RcuSetMessageOnce(TRcuUnit_ErrNoBackMoveInStep, myKin.kinListInx, 2, instId, "TRcuUnit.GetPartPresentSwitch");
+            RETURN ePartError;
+         ELSE
+            RETURN ePartMoveBack;
+         END_IF;
+      END_IF;
+      //Part isn't present and seachcounter is bigger than cycles given by TeachIn
+      RETURN ePartNotPresent;
+   END_IF;
+  
+   RETURN ePartError; 
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------
+//  Start analysis of forcevalues for partcontrol
+//------------------------------------------------------------------------------------------------------
+ROUTINE GetPartPresentSensor(inVal : SENSORVALUE; bAppLateUsed : BOOL) : TRcuCheckState
+  VAR 
+    i    : SINT;
+    j    : SINT;
+    ret  : TRcuCheckState;
+  END_VAR
+ 
+  IF Sensor.bSuspend THEN
+     RETURN ePartPresent;
+  END_IF;
+  
+  // A P P E N D  L A T E
+  IF bAppLateUsed THEN
+     IF NOT Sensor.bDoPartCheck THEN          //already active?
+        RETURN ePartRedo;                     //if not do it again in mainrun
+     ELSE
+        //---------------------------------------------------------------------------------------------------------------
+        //Part is present or set present by HT and manual/auto learning isn't active
+        IF (((Sensor.bPartPresent AND NOT bResetPart) OR bSetPartPresent)
+                                      AND NOT Sensor.bLearnMan AND NOT Sensor.bLearnAuto) THEN
+           Sensor.bPartPresent := FALSE;
+           Sensor.bDoPartCheck := FALSE;
+           bPartShiftUsed      := FALSE;
+           FOR i:=0 TO (Sensor.iCountDirections-1) DO
+              Sensor.PartCheckBoundaries.Dir[i][0] := 0;  //delete limit
+              Sensor.PartCheckBoundaries.Dir[i][1] := 0;
+           END_FOR;
+           RETURN ePartPresent; //Part already present
+        ELSE   
+           RETURN ePartRedo;    //Part not present jet, do it again in mainrun
+        END_IF;
+     END_IF;
+  END_IF;
+  
+  // M A I N R U N
+  IF Sensor.bDoPartCheck THEN        //already active?
+     Sensor.iSearchCounter := Sensor.iSearchCounter + 1;
+     LearnedPartVal := MAP(inVal);
+     
+     //---------------------------------------------------------------------------------------------------------------
+     // manual/auto learning isn't active
+     IF NOT (Sensor.bLearnMan OR Sensor.bLearnAuto) THEN
+     
+        //part is present or set present by HMI
+        IF (Sensor.bPartPresent OR bSetPartPresent) AND (NOT bResetPart) THEN
+           Sensor.bPartPresent := FALSE;
+           Sensor.bDoPartCheck := FALSE;
+           bPartShiftUsed      := FALSE;
+           FOR i:=0 TO (Sensor.iCountDirections-1) DO
+              Sensor.PartCheckBoundaries.Dir[i][0] := 0;  //delete limit
+              Sensor.PartCheckBoundaries.Dir[i][1] := 0;
+           END_FOR;
+           ret := ePartPresent;
+        //part isn't present and seachcounter is smaller than cycles given by TeachIn   
+        ELSIF (Sensor.iSearchCounter <= Sensor.iSeachCycles) THEN
+           //robot moved in STEP --> McuCreatePathPosRelativeDyn calculates wrong values
+           IF Sensor.bMovedInStep THEN
+              RcuSetMessageOnce(TRcuUnit_ErrNoBackMoveInStep, myKin.kinListInx, 1, instId, "TRcuUnit.GetPartPresentSensor");
+              RETURN ePartError;
+           ELSE
+              ret := ePartMoveBack;
+           END_IF;
+        //part isn't present
+        ELSE
+           ret := ePartNotPresent;
+        END_IF;         
+     
+     //---------------------------------------------------------------------------------------------------------------
+     // manual learning active
+     ELSIF Sensor.bLearnMan THEN
+     
+        //seachcounter is bigger than cycles given by TeachIn
+        IF (Sensor.iSearchCounter > Sensor.iSeachCycles) THEN
+           bStoreValue   := FALSE;
+           FOR j:=0 TO cgiMaxSeachCycles - 1 DO
+              ySelectedToStore[j] := FALSE;
+           END_FOR;
+           bCancelValue         := FALSE;
+           bUserActivity        := FALSE;
+           bStoreRelease        := TRUE;
+           UserInfo             := 1;
+           RcuSetMessageOnce(TRcuUnit_WarChooseValueStore, myKin.kinListInx, 1, instId, "TRcuUnit.GetPartPresentSensor", sName);
+           ihdl := GetProgHdl(); 
+           IF (ihdl <> 0) THEN
+              IF NOT GetProjectName(ihdl, sProjectName) THEN
+                 bUserActivity := TRUE;
+                 RcuSetMessageOnce(TRcuUnit_ErrNoAccessTTeachPrj, myKin.kinListInx, 1, instId, "TRcuUnit.GetPartPresentSensor", sProjectName);
+              END_IF;
+           ELSE
+             bUserActivity := TRUE;
+             RcuSetMessageOnce(TRcuUnit_ErrNoAccessTTeachPrj, myKin.kinListInx, 2, instId, "TRcuUnit.GetPartPresentSensor", "");
+           END_IF;
+           WAIT bUserActivity;
+           bUserActivity         := FALSE;
+           Sensor.bDoPartCheck := FALSE;
+           FOR i:=0 TO (Sensor.iCountDirections-1) DO
+              Sensor.PartCheckBoundaries.Dir[i][0] := 0;  //delete limit
+              Sensor.PartCheckBoundaries.Dir[i][1] := 0;
+           END_FOR;
+           ret := ePartPresent;
+        //seachcounter is smaller than cycles given by TeachIn
+        ELSE
+           //robot moved in STEP --> McuCreatePathPosRelativeDyn calculates wrong values
+           IF Sensor.bMovedInStep THEN
+              RcuSetMessageOnce(TRcuUnit_ErrNoBackMoveInStep, myKin.kinListInx, 2, instId, "TRcuUnit.GetPartPresentSensor");
+              RETURN ePartError;
+           ELSE
+              ret := ePartMoveBack;
+           END_IF;
+        END_IF;
+        
+     //---------------------------------------------------------------------------------------------------------------
+     // auto learning active
+     ELSIF Sensor.bLearnAuto THEN
+     
+        //part is present and shift used - or seachcounter is bigger than cycles given by TeachIn
+        IF (Sensor.bPartPresent AND bPartShiftUsed) OR (Sensor.iSearchCounter > Sensor.iSeachCycles) THEN
+           Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].iLearnedBodies := Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].iLearnedBodies + 1;
+           IF (Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].iLearnedBodies >= cgiBodiesToLearn) THEN
+               Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].iLearnedBodies := 0;
+               Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].bLearnActive := FALSE;
+               Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].iLearnState  := 0;
+               bStoreReleaseAuto := TRUE;
+               bUserActivity     := FALSE;
+               ihdl := GetProgHdl(); 
+               IF (ihdl <> 0) THEN
+                  IF NOT GetProjectName(ihdl, sProjectName) THEN
+                     bUserActivity := TRUE;
+                     RcuSetMessageOnce(TRcuUnit_ErrNoAccessTTeachPrj, myKin.kinListInx, 3, instId, "TRcuUnit.GetPartPresentSensor", sProjectName);
+                  END_IF;
+               ELSE
+                 bUserActivity := TRUE;
+                 RcuSetMessageOnce(TRcuUnit_ErrNoAccessTTeachPrj, myKin.kinListInx, 4, instId, "TRcuUnit.GetPartPresentSensor", "");
+               END_IF;
+               UserInfo      := 2;
+               RcuSetMessageOnce(TRcuUnit_WarStoreOrCancel, myKin.kinListInx, 1, instId, "TRcuUnit.GetPartPresentSensor", sName);
+               WAIT bUserActivity;
+               bUserActivity         := FALSE;
+           END_IF;
+           Sensor.bAutoLearnRelease := FALSE;
+           Sensor.bLearnAuto        := FALSE;
+           IF (Sensor.bPartPresent OR bSetPartPresent OR bStoreValue) AND NOT bResetPart THEN
+              ret := ePartPresent;
+           ELSE
+              ret := ePartNotPresent;
+           END_IF;
+        ELSE
+           //robot moved in STEP --> McuCreatePathPosRelativeDyn calculates wrong values
+           IF Sensor.bMovedInStep THEN
+              RcuSetMessageOnce(TRcuUnit_ErrNoBackMoveInStep, myKin.kinListInx, 3, instId, "TRcuUnit.GetPartPresentSensor");
+              RETURN ePartError;
+           ELSE
+              ret := ePartMoveBack;
+           END_IF;
+        END_IF;
+     END_IF;
+     
+  ELSE
+     RcuSetMessageOnce(TRcuUnit_ErrPartCheckNActv, myKin.kinListInx, 1, instId, "TRcuUnit.GetPartPresentSensor", sName);
+     SetPart(FALSE);
+     ResetPart(FALSE);
+     RETURN ePartError;
+  END_IF;
+  
+  bStoreValue   := FALSE;
+  FOR j:=0 TO cgiMaxSeachCycles - 1 DO
+     ySelectedToStore[j] := FALSE;
+  END_FOR;
+  bCancelValue  := FALSE;
+  SetPart(FALSE);
+  ResetPart(FALSE);
+  
+  RETURN ret;
+  
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------
+//  Build the average value of the 5 Bodies and save 'em to teachprog
+//------------------------------------------------------------------------------------------------------
+ROUTINE BuildValueToStoreAuto() 
+ VAR
+   iBodyCount    : INT;
+   iAverageCount : ARRAY [4] OF INT;
+ END_VAR
+ 
+ WHILE TRUE DO
+   WAIT ((bStoreValue OR bCancelValue) AND bStoreReleaseAuto);
+    bStoreReleaseAuto := FALSE;
+    IF bStoreValue THEN                                                             
+       sPath := ("kin" + STR(myKin.kinListInx+1) + "." + sProjectName + "." + LearnedPartVal.GetName());      
+       iAverageCount[0] := 0;
+       iAverageCount[1] := 0;
+       iAverageCount[2] := 0;
+       iAverageCount[3] := 0;
+       LearnedPartVal.X_Pos := 0;
+       LearnedPartVal.X_Neg := 0;
+       LearnedPartVal.Y_Pos := 0;
+       LearnedPartVal.Y_Neg := 0;
+       
+       FOR iBodyCount := 0 TO (cgiBodiesToLearn - 1) DO
+           IF (Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[0][0] <> 0) THEN
+               iAverageCount[0] := iAverageCount[0] + 1;
+               LearnedPartVal.X_Pos := LearnedPartVal.X_Pos + Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[0][0];
+           END_IF;    
+           IF (Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[0][1] <> 0) THEN
+               iAverageCount[1] := iAverageCount[1] + 1;
+               LearnedPartVal.X_Neg := LearnedPartVal.X_Neg + Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[0][1];
+           END_IF;    
+           IF (Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[1][0] <> 0) THEN
+               iAverageCount[2] := iAverageCount[2] + 1;
+               LearnedPartVal.Y_Pos := LearnedPartVal.Y_Pos + Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[1][0];
+           END_IF;
+           IF (Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[1][1] <> 0) THEN
+               iAverageCount[3] := iAverageCount[3] + 1;
+               LearnedPartVal.Y_Neg := LearnedPartVal.Y_Neg + Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[1][1];
+           END_IF;    
+       END_FOR;
+       
+       IF (iAverageCount[0] > 0) THEN         //To avoid division by zero!!
+          LearnedPartVal.X_Pos := LearnedPartVal.X_Pos / iAverageCount[0];
+          //don't use values smaller than minvalue
+          IF LearnedPartVal.X_Pos < cMinValuePartPos THEN
+             LearnedPartVal.X_Pos := cMinValuePartPos;
+          END_IF;
+       ELSE
+          LearnedPartVal.X_Pos := cMinValuePartPos;
+       END_IF;
+       IF (iAverageCount[1] > 0) THEN
+          LearnedPartVal.X_Neg := LearnedPartVal.X_Neg / iAverageCount[1];
+          //don't use values smaller than minvalue
+          IF LearnedPartVal.X_Neg > cMinValuePartNeg THEN
+             LearnedPartVal.X_Neg := cMinValuePartNeg;
+          END_IF;
+       ELSE
+          LearnedPartVal.X_Neg := cMinValuePartNeg;
+       END_IF;
+       IF (iAverageCount[2] > 0) THEN
+          LearnedPartVal.Y_Pos := LearnedPartVal.Y_Pos / iAverageCount[2];
+          //don't use values smaller than minvalue
+          IF LearnedPartVal.Y_Pos < cMinValuePartPos THEN
+             LearnedPartVal.Y_Pos := cMinValuePartPos;
+          END_IF;
+       ELSE
+          LearnedPartVal.Y_Pos := cMinValuePartPos;
+       END_IF;
+       IF (iAverageCount[3] > 0) THEN
+          LearnedPartVal.Y_Neg := LearnedPartVal.Y_Neg / iAverageCount[3];
+          //don't use values smaller than minvalue
+          IF LearnedPartVal.Y_Neg > cMinValuePartNeg THEN
+             LearnedPartVal.Y_Neg := cMinValuePartNeg;
+          END_IF;
+       ELSE
+          LearnedPartVal.Y_Neg := cMinValuePartNeg;
+       END_IF;
+       IF WriteInitValues(sPath) THEN       //Write learned values as new init values
+          UserInfo      := 4;
+          RcuSetMessageOnce(TRcuUnit_WarLearnedValStored, myKin.kinListInx, 2, instId, "TRcuUnit.BuildValueToStoreAuto", " Dir1 " + STR(LearnedPartVal.X_Pos) + " " + STR(LearnedPartVal.X_Neg) +
+                           "  Dir2  " + STR(LearnedPartVal.Y_Pos) + " " + STR(LearnedPartVal.Y_Neg));
+       ELSE
+          UserInfo := 5;
+          RcuSetMessageOnce(TRcuUnit_ErrStOLearnValFail, myKin.kinListInx, 1, instId, "TRcuUnit.BuildValueToStoreAuto", sPath);
+       END_IF;
+    ELSE   //cancel value
+       UserInfo := 6;
+       RcuSetMessageOnce(TRcuUnit_WarLearnValuesCancel, myKin.kinListInx, 1, instId, "TRcuUnit.BuildValueToStoreAuto", sName);
+    END_IF;
+    FOR iBodyCount := 0 TO (cgiBodiesToLearn - 1) DO
+        Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[0][0] := 0;
+        Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[0][1] := 0;
+        Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[1][0] := 0;
+        Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].yPosValue[iBodyCount].yValue[1][1] := 0;
+    END_FOR;
+    Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].bLearnActive := FALSE;
+    Sensor.yAutoLearn[Sensor.iBody].yPosMoves[Sensor.iPosition].iLearnState  := 0;
+    Sensor.yAutoLearn[Sensor.iBody].iProgNr := 0;
+    Sensor.yAutoLearn[Sensor.iBody].sProjectName := "";
+    bUpdateUserPage       := TRUE;
+    bUserActivity         := TRUE;
+ END_WHILE;
+ 
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------
+//  write or delete the learned value to TeachIn
+//------------------------------------------------------------------------------------------------------
+ROUTINE WriteTeachInValues()
+  VAR 
+    j            : SINT;
+    bSelected    : BOOL;
+  END_VAR
+
+  WHILE TRUE DO
+    WAIT ((bStoreValue OR bCancelValue) AND bStoreRelease);
+    UserInfo := 7;
+    bStoreRelease := FALSE;
+    IF bStoreValue THEN
+       sPath := ("kin" + STR(myKin.kinListInx+1) + "." + sProjectName + "." + LearnedPartVal.GetName());            
+       FOR j:=0 TO (cgiMaxSeachCycles - 1) DO                          //find the user selected values
+          IF ySelectedToStore[j] THEN
+             bSelected := TRUE;
+             LearnedPartVal.X_Pos := Sensor.yManLearnedValues[j][0][0];
+             IF LearnedPartVal.X_Pos < cMinValuePartPos THEN
+                LearnedPartVal.X_Pos := cMinValuePartPos;
+                Sensor.yManLearnedValues[j][0][0] := cMinValuePartPos;
+             END_IF;
+             LearnedPartVal.X_Neg := Sensor.yManLearnedValues[j][0][1];
+             IF LearnedPartVal.X_Neg > cMinValuePartNeg THEN
+                LearnedPartVal.X_Neg := cMinValuePartNeg;
+                Sensor.yManLearnedValues[j][0][1] := cMinValuePartNeg;
+             END_IF;
+             LearnedPartVal.Y_Pos := Sensor.yManLearnedValues[j][1][0];
+             IF LearnedPartVal.Y_Pos < cMinValuePartPos THEN
+                LearnedPartVal.Y_Pos := cMinValuePartPos;
+                Sensor.yManLearnedValues[j][1][0] := cMinValuePartPos;
+             END_IF;
+             LearnedPartVal.Y_Neg := Sensor.yManLearnedValues[j][1][1];
+             IF LearnedPartVal.Y_Neg > cMinValuePartNeg THEN
+                LearnedPartVal.Y_Neg := cMinValuePartNeg;
+                Sensor.yManLearnedValues[j][1][1] := cMinValuePartNeg;
+             END_IF;
+             IF WriteInitValues(sPath) THEN       //Write learned values as new init values
+                UserInfo := 8;
+                RcuSetMessageOnce(TRcuUnit_WarLearnedValStored, myKin.kinListInx, 1, instId, "TRcuUnit.WriteTeachInValues", " Dir1 " + STR(Sensor.yManLearnedValues[j][0][0]) + " " + STR(Sensor.yManLearnedValues[j][0][1]) +
+                           "  Dir2  " + STR(Sensor.yManLearnedValues[j][1][0]) + STR(Sensor.yManLearnedValues[j][1][1]));
+             ELSE
+                UserInfo := 5;
+                RcuSetMessageOnce(TRcuUnit_ErrStOLearnValFail, myKin.kinListInx, 2, instId, "TRcuUnit.WriteTeachInValues", sPath);
+             END_IF;
+          END_IF;       
+       END_FOR;
+             
+       IF NOT bSelected THEN
+          UserInfo := 9;
+       END_IF;
+    ELSE                                                                   //values were delete by the user
+       UserInfo := 9;
+       RcuSetMessageOnce(TRcuUnit_WarLearnValuesCancel, myKin.kinListInx, 2, instId, "TRcuUnit.WriteTeachInValues", sName);
+    END_IF;       
+    
+    bUserActivity    := TRUE;
+    Sensor.bLearnMan := FALSE;
+    
+  END_WHILE;
+
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------
+//  stop all activ routines
+//------------------------------------------------------------------------------------------------------
+ROUTINE ResetStates()   
+  VAR
+   i         : SINT;
+ END_VAR
+ 
+  IF IS_MAPPED(Sensor) THEN
+    Sensor.bCalibrated    := FALSE;
+    Sensor.bGainSet       := FALSE;
+    Sensor.iGain          := cUndef;
+    Sensor.bPartPresent   := FALSE;
+    Sensor.bDoMaxCheck    := FALSE;
+    Sensor.bDoMinCheck    := FALSE;
+    Sensor.bDoPartCheck   := FALSE;
+    Sensor.bLearnMan      := FALSE;
+    Sensor.iSearchCounter := 1;
+    Sensor.iSeachCycles   := 0;
+  END_IF;
+  FOR i:=0 TO (iCountSwitch-1) DO
+       ySwitch[i].bDoMaxCheck    := FALSE;
+       ySwitch[i].bDoMinCheck    := FALSE;
+       ySwitch[i].bDoPartCheck   := FALSE;
+       ySwitch[i].bPartPresent   := FALSE;
+       ySwitch[i].iSearchCounter := 1;
+       ySwitch[i].iSeachCycles   := 0;
+  END_FOR;
+  bPartShiftUsed := FALSE;
+  bSearchActive := FALSE;
+  UserInfo      := 7;
+    
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------
+//  teach pendant sets unit active or inactive
+//------------------------------------------------------------------------------------------------------
+ROUTINE SetActive(inState : BOOL)
+ VAR
+  i : SINT;
+ END_VAR
+ 
+  IF inState THEN
+     bInactive  := FALSE;
+     iInactive  := 1;
+     IF IS_MAPPED(Sensor) THEN
+        Sensor.bDoMeasure := TRUE;
+     END_IF;
+  ELSE 
+     bInactive := TRUE;
+     iInactive := 0;
+     IF IS_MAPPED(Sensor) THEN
+        Sensor.bDoMeasure := FALSE;
+        Sensor.bDoMaxCheck := FALSE;
+        Sensor.bDoMinCheck := FALSE;
+        Sensor.bDoPartCheck := FALSE;
+     END_IF;
+     FOR i:=0 TO iCountSwitch-1 DO
+       IF IS_MAPPED(ySwitch[i]) THEN
+          ySwitch[i].bDoPartCheck   := FALSE;
+          ySwitch[i].bDoMaxCheck    := FALSE;
+          ySwitch[i].bDoMinCheck    := FALSE;
+          ySwitch[i].bDoIdleCheck   := FALSE;
+       END_IF;
+     END_FOR;
+     bPartShiftUsed    := FALSE;
+     bSetPartPresent  := FALSE;
+     bResetPart       := FALSE;
+     iForcedPartState := 0;
+  END_IF; 
+  
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------
+//   teach pendant sets part to unit
+//------------------------------------------------------------------------------------------------------
+ROUTINE SetPart(inState : BOOL)
+  IF inState THEN
+     bSetPartPresent  := TRUE;
+     bResetPart       := FALSE;
+     iForcedPartState := 1;
+  ELSE
+     bSetPartPresent  := FALSE;
+     iForcedPartState := 0;
+  END_IF;
+END_ROUTINE
+
+//------------------------------------------------------------------------------------------------------
+//   teach pendant resets part to unit
+//------------------------------------------------------------------------------------------------------
+ROUTINE ResetPart(inState : BOOL)
+  IF inState THEN
+     bResetPart       := TRUE;
+     bSetPartPresent  := FALSE;
+     iForcedPartState := 2;
+  ELSE
+     bResetPart       := FALSE;
+     iForcedPartState := 0;
+  END_IF;
+END_ROUTINE
+  
+//------------------------------------------------------------------------------------------------------
+//   print shift values to logger
+//------------------------------------------------------------------------------------------------------
+ROUTINE ShiftToLogger(shift : SSHIFT; sKind : STRING)
+ VAR
+  s : STRING := " saved -";
+  i : DINT;
+ END_VAR
+ 
+   s := sKind + s;
+   i := DINT(shift.X_mm);
+   s := s + " X=" + STR(i);
+   i := DINT(shift.Y_mm);
+   s := s + " Y=" + STR(i);
+   i := DINT(shift.Z_mm);
+   s := s + " Z=" + STR(i);
+   i := DINT(shift.A7_mm);
+   s := s + " A7=" + STR(i);
+   myKin.logger.SetLoggerStep(myKin.handler.iLoggerNumber, s); 
+END_ROUTINE  
+  
+//******************************************************************************
+// private
+CONSTANT PRIVATE
+   cMinValuePartPos  : SINT := 10;
+   cMinValuePartNeg  : SINT := -10;
+END_CONSTANT
+
+VAR PRIVATE
+  instId                : DINT;                   // instance identification number
+  bUserActivity         : BOOL;                   // flag for useractivity on the teach pendant
+  sProjectName          : STRING;                 // info from the current teachproject
+  sPath                 : STRING;
+  ihdl                  : DINT;
+END_VAR 
+      
+//------------------------------------------------------------------------------
+// map the kinematik of the handler
+//------------------------------------------------------------------------------
+ROUTINE MapKin(kin : TRcuRobot)
+  myKin := MAP(kin);
+END_ROUTINE
+
+//------------------------------------------------------------------------------
+//   systemroutine - controller bootup
+//------------------------------------------------------------------------------
+ROUTINE NEW()
+  instId        := RcuGetInstanceId(); //instance identification number (for alarms)
+END_ROUTINE

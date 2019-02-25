@@ -1,0 +1,27 @@
+[Information]
+User=PZB
+RevDate=Donnerstag, 25. Oktober 2001
+RevTime=16:09:59
+
+[Section1]
+SectionName=Brush
+Rows=250
+StationWide=1
+UsedColumn1=Column1
+
+[Column1]
+Key=Comment
+Header=Brush_Comment
+Type=String
+RangeMin=0
+RangeMax=20
+Factor=1
+Format=#
+Unit=
+Visible=1
+Width=1550
+DefaultValue=
+StationWide=1
+ReadOnly=0
+Misc=
+

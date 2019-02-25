@@ -1,0 +1,815 @@
+Action 1.09.0013
+1141;Get in contact with control supplier.
+1142;Correct Cfg parameter
+1143;- Exchange pig in route 1%CrLf%- Check compressed air supply%CrLf%
+1144;Check the indicated INI file in the Explorer.
+1145;- Check brush file in vision system%CrLf%- Download file again %CrLf%- delete file and create new
+1146;Check the indicated file in the Explorer. Check available memory.
+1147;Check the indicated path in the Explorer.
+1148;Evaluate error reports and delete indicated brush files, release indicated directories, check hard disk, restart control.
+1149;Check settings at the HMI, download brush file again.
+1150;Purge channel
+1151;Reselect color once again. Check interface. Check vision system.
+1152;Wait until time program has ended.
+1153;Check teach program and adapt.
+1154;Create file for indicated module and color group.
+1155;Acknowledge and restart. If the error is repeated, abort the car body and order again.
+1156;Check configuration and restart control.
+1157;Check configuration and restart control.
+1158;Check mentioned file and restart control
+1159;Check fixed position point and restart control.
+1160;Restart control. Contact control supplier if this should occur repeatedly.
+1161;Check the program number configured in the ProcessBuilder and restart control.
+1162;Check the file _globalvars and restart control.
+1163;Program mentioned point in the demanded coordinate system and restart control
+1164;Check _globalvars and configuration, restart control.
+1165;Wait until the channels have been readily prepared. If this should not happen, abort car body and order again.
+1166;Export software with EcoProcessBuilder again and compile again.
+1167;Check whether process is turned on %CrLf%- check compressed air supply 
+1168;- In manual mode: switch on device from the vision system. %CrLf%- In automatic mode: set required value with the aid of a time program.
+1169;Check time program, check paint assignment table 
+1171;- Check task execution %CrLf%- Check teach program and arrange SET_BRUSH and WAIT_PROCESS_READY correctly
+1172;Check PCA.DEF and adjust where appropriate, download PCA.INI again.
+1173;Check parameterization and generate code new with ProcessBuilder, compile, restart control.
+1174;Check color assignment table and adjust where appropriate, download again, reselect again.
+1175;Check configuration in ProcessBuilder and generate code again.
+1177;Acknowledge, in case of repeated occurrence, contact control supplier.
+1178;Check the indicated file in the Explorer.
+1179;Check parameterization of the bypass supervision: [RC.BypassArea], [RC.BypassArea.Base], [RC.BypassArea.Size] and the entered values. 
+1180;Check parameterization of the grippers.
+1181;Check temperature in the switch cabinet at the control element
+1182;Check Process.cfg whether the correct air flow was related:%CrLf%e.g.%CrLf%[PCUx\AirHeaters\AHeatx]%CrLf%linkedAirflow = 4,-,"QML"%CrLf%
+1183;Acknowledge error report and carry out function once again with inactive robot axes where appropriate.
+1184;Pay attention to further drive errors, carry out function again where appropriate.
+1185;Check earthing switch, exchange or clean if required.
+1186;Deactivate high tension.
+1187;Regenerate Processbuilder files 
+1189;Check indicated slave
+1191;In the kemro.manager, enter a name for the master FX760A:0/PBDP:0 and restart control
+1192;Check configuration, possibly recreate, restart control
+1193;Pay attention to further drive errors, contact controller manufacturer where appropriate.
+1194;In the configuration file -IoSercos.cfg- set the -driverMode = 1- and restart control.
+1195;Check robot position.%CrLf%Check configuration of the fixed positions with ProcessBuilder.
+1196;Carry out brake test.
+1197;Turn on drive.
+1198;Check control element and drive. For this, also refer to special documentation "TB 132"
+1199;1. Change over to manual operation and check main needle and feedback manually %CrLf%2. Clean main needle/atomizer %CrLf%3. Wire and all electric components (check amplifier, fiber optic light cable) %CrLf%4. Check control air pressure
+1200;Eliminate external influence
+1201;Relieve robot if jammed.
+1202;Reference drive manually so that it can be displaced again.%CrLf%Then bring into its reference position and reference automatically/manually there.
+1203;Load original parameter set into the drive.
+1204;Activate provisional traveling release at the vision system and carry out brake test.
+1205;Make storage space on target volume, acknowledge error report and carry out function once again.
+1206;Check communication with PLC
+1207;In the kemro.manager, enter a name for the slave FX765A:0/PBDP:0/PBDPSLAVE:0 and restart control
+1208;Stop conveyor and repeat measurement
+1209;Stop conveyor
+1211;Check configuration with Kemromgr and align with interface documentation,%CrLf%then restart control.
+1212;Unplug brake releasing device.
+1213;Check corresponding code place with debugger and restart control.
+1214;In the configuration file Robotcontrol.cfg, configure a size of the supervision space for mentioned direction%CrLf%and then restart control. After occurred restart, check the feedback of the mentioned supervision space.
+1215;In the configuration file Robotcontrol.cfg, configure a value of the supervision space for the auxiliary axis %CrLf%%CrLf%and then restart control. After occurred restart, check the feedback of the mentioned supervision space.
+1216;Align spelling in _systemvars.ttp of the RCU with the actual name of the system variable.%CrLf%Then restart control.
+1217;Program the mentioned fixed position point with the teach pendant at adequate place and %CrLf%close and reload the project "global".
+1219;Operator intervention necessary to end the current program and to move robot into home position
+1220;Increase TimeOut time for the disconnection of the high tension
+1221;Increase TimeOut time for the reaching of the fixed position in the time program.
+1222;Remove EcoTalk commands between WAIT_CONVEYOR and TRACKING(On) from the program.
+1223;Increase the object distance or reduce the conveyor speed or optimize the instructions before the WAIT_CONVEYOR command.
+1224;In the configuration data for the system, the entry [MC]needNextSegPreDelay must be set to a positive value.
+1225;Use a valid parameter value: GREATER, SMALLER, EQUAL
+1226;Check indicated causes.
+1227;Check fuse and turn back on
+1228;Check the functional group assignment table "FgAssignment.ini" whether exactly one functional group was defined as "a master".
+1230;Check whether the array can be extended (constant 'cFgArraySize' in type file 'tsFgAssignment')
+1231;Check the Ini file:%CrLf%- Is the searched section available? (pay attention to uppercase/lowercase)%CrLf%- Is the searched parameter available in the section? (pay attention to uppercase/lowercase)%CrLf%- Is a value assigned to the parameter?
+1232;Check the indicated INI file in the Explorer.
+1233;Check time program "PistonMaster" and activate valves where appropriate. Check whether valves switch if activated manually
+1234;Check Sercos state and master again if necessary
+1235;Restart automatic referencing and pay attention that no further troubles will occur during the process
+1236;Determine original value of the parameter S0-0092 from data protection of the drive parameters for this drive and setting this value manually with the aid of DriveTop. 
+1237;- Check drive parameters, set S92 in the drive to original value where appropriate and master piston once again.%CrLf%- Adapt parameters in the process.cfg to value in the drive and master piston once again 
+1238;On the service page at the teach pendant, reference dosing piston.
+1239;Abort time program by means of "Stop" or "Stop all" and start referencing on the service page
+1240;Relieve pressure in piston manually and restart referencing process 
+1241;- Check timeout time of the event step in the time program 'PistonMaster'%CrLf%- Check whether drive release and power of dosing drives are available (driver controller status 'AB' or 'AF')
+1242;Inspection of the hose connections and/or blind stuffing at the multipole connector,%CrLf%Inspection of the compressed air supply for control air STL%CrLf%Inspection of pressure switch control air STL
+1243;Inspection of the hose connections at the multipole connector
+1244;Inspection of the compressed air supply for matrix%CrLf%Inspection of pressure switch motor bearing air MLL
+1245;Check turbine %CrLf%- Check required value speed%CrLf%-Check time specification
+1248;- Check network connection, can be copied from the 3DOnSite computer to the controller%CrLf%- Check whether download directory exists
+1249;- Check which file name was transmitted to the control by the 3DOnSite SV_StatisticDownload.i_zNewName 
+1250;Check columns, sections, keywords in the 3DOnSite configuration
+1251;Check whether there are actually values not equal to -1.0 in the paint volume table.
+1252;Increase temperature and/or prolong heating duration.
+1253;Reduce temperature and/or reduce heating duration.
+1254;Reduce speed.
+1255;- Check function of valves & cylinders allowing an outflow of the medium from the dosing piston%CrLf%- Check parameterization of the max. permissible moment (process.cfg --> MaxTorque).%CrLf%- Check dynamics parameter %CrLf%- Check mechanics for sluggishn
+1256;- Increase speed to PTP 5%.%CrLf%- Increase acceleration.
+1257;Check parameterization of the work areas / blocking areas.
+1258;Check configuration with Kemromgr and align with circuit diagram, then restart control.
+1259;- Check pressure in the paint supply. %CrLf%- Check color valve corresponding to the wanted paint. %CrLf%- Check initiators at the paint memory. %CrLf%- Check piston in the paint memory.
+1260;- Check whether paint is loaded in the paint reservoir.%CrLf%- Check high pressure supply for paint reservoir.%CrLf%- Check ringpipe pressure.%CrLf%- Check concerned paint valve for function. 
+1261;Component must be exchanged.
+1262;Exchange component soon.
+1263;Check time program whether the way for the escaping air is free when extending.%CrLf% - Check control valves for the corresponding isolating cylinder.%CrLf%- Check initiators at the isolating cylinder for function and correct situation.%CrLf%- Check st
+1264;Check the current configuration of the control (Sercos part) and clarify why the required parameter is not contained.
+1265;Clarify why one or both parameters were entered into the configuration with different values.
+1266;Clarify which entry is the correct one and use the same name in both configuration files.
+1267;Check whether brush values are above the restoral threshold.
+1268;Start master process again, pay attention to further drive errors where appropriate.%CrLf%e.g. axis limit switch and so forth.
+1269;Check cabling of the master sensor. Ensure that negative and positive feedback of the signal is recognized.%CrLf%Increase mastering delta in the configuration of the mentioned axis.
+1270;- STS_GATE_NOK: Exchange counter card or reset by tension removal %CrLf%ATTENTION: Clear the cell in T1 by all means, since a restart after reset or loss of the counter card is not possible (loss of the current conveyor position) DANGER OF COLLISION!
+1271;Change mentioned parameter in the file "EcotalkVariables.ttp" to valid value and restart control.%CrLf%The range of values of the parameter valid for this function is to be taken from the comment in the file.
+1272;Correct EcoTalk command according to EcoTalk Doku and reload teach program.
+1273;Move corresponding axis into the permissible traveling range.
+1274;Check and correct configuration, then restart control.
+1275;Please inform your controller supplier
+1276;End time program and purge channel before restart.
+1277;- Check time program whether the way for the escaping air is free when extending.%CrLf%- Check control valves for the corresponding isolating cylinder.%CrLf%- Check initiators at the isolating cylinder for function and correct situation.%CrLf%- Check stri
+1278;Operate the device without bridging the interlock. 
+1279;Check the cfg parameter. Check transmission of conveyor to the encoder (too many increments/mm). Reduce resolution of the counter card.
+1280;The control was stopped for safety reasons. ATTENTION: Restart the control and clear the cell in T1 by all means since a path continuation is not possible after reset or loss of the counter card (loss of the current conveyor position)
+1281;Adjust configuration of the Override.def of the Brush.def, pay attention to uppercase/lowercase.
+1282;Reduce number of sections in 3DOnsite
+1283;- Open "Percent Overrides" module in 3DOnSite and save
+1284;- Check paint valve for function%CrLf%- Check whether the selected color at the color valve is connected %CrLf%- Check whether the selected color is connected to the paint supply %CrLf%- Check pressure in the paint supply %CrLf%- Check pressure supply of 
+1285;Check and adapt the parameters for the conveyor filter (Conv_Vel_max, Conv_Acc_max) in the cfg file corresponding to the FU.
+1286;Check the cfg parameter for the bus runtime and the paint distance delay and adjust where appropriate, also, check the main needle response time (learned by means of feedback signal).
+1287;Correct section designation, check e.g. for blank:%CrLf%WRONG:  [Section 1]%CrLf%CORRECT: [Section1]
+1288;Create file for indicated module and color.
+1289;Check program code
+1290;A user with authorization for T 2 mode must log in at EcoScreen.
+1291;Try to log the user in or off again. %CrLf%- If the problem should persist, restart the computer and/or restart ViewServer.%CrLf%- Should the problem should persist, contact the controller supplier.
+1292;Check user administration and align with configuration of the vision system.
+1293;Check the EcoScreen configuration.
+1294;Check why the robot did not reach the position
+1296;Check speed override at the teach pendant, increase TimeOut time for the fixed position ride where appropriate 
+1297;In the Processbuilder, check the parameterized size and change to a valid value. 
+1298;- Check hose transitions with test pin DN 7.25/ /- Exchange pig distance 1%CrLf%- Exchange hose distance 1
+1299;- Ventilate ringpipe %CrLf%- Exchange pulse air valve at the paint color changer %CrLf%- Start reset process for dosing device to remove air
+1300;Search for faulty car body, possibly reselect.
+1301;Exchange component immediately and reset cycles at the teach pendant or at the vision system.
+1302;- On the user page 'Channel overview' of the teach pendant, remove the tick 'Write access. Eco Screen will %CrLf% be locked.'
+1303;Check whether all firmware tasks with "UpdTimer1" are configured %CrLf%- RC.driveControlTimerName%CrLf%- MC. timerNameUpd%CrLf%- TC. teachControlTimer%CrLf%- IO.ONBOARD.SLOTPCI:4.FX765A:1.PBDP:0.cycleTime%CrLf%- IO.ONBOARD.SLOTPCI:5.FX760A:2.PBDP:0.cycleTime%CrLf%- IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.cycleTime
+1304;Check whether UpdTimer1 and the tasks SO_TaskHigh, SO_TaskMedium and SO_TaskProtocol_Medium created in the ieccontrol.su are parameterized with the same cycle time
+1305;Reference the SolventCan via HMI interface
+1306;Check robot position and check whether any other errors are still pending 
+1307;Set the parameters in the general.cfg and/or FgAssignment.ini
+1308;Relieve roller. If no collision should have occurred, check the rope or the light barrier.
+1309;For mentioned type, check profile with 3DOnSite and restore, observe error reports where appropriate
+1310;In the vision system, check the Fifo overview whether car body to be worked on is still available in the Fifo memory.%CrLf%Unselect machine and convey car body out.
+1311;Program concerned ride slower.
+1312;Clean light barrier and acknowledge warning message.
+1313;Check entered reference position and correct.%CrLf%Carry out function once again.
+1314;Check the configuration file with 3DOnSite. If this is readable, contact controller manufacturer. 
+1315;Check safety release for the ionization in the vision system "PNOZ diagnosis".%CrLf%If this should be available, the ionization itself has to be checked.
+1316;The collision detection must be checked.
+1317;Acknowledge error and move axis away from the limit switch in manual mode.
+1318;Check pitch%CrLf%Check profile file with 3DOnSite and save again.
+1319;Eliminate error.
+1320;Detect reason for error in the control system.
+1321;Check booth ventilation, observe error of the control system.
+1322;Eliminate reason for error of the conveyor equipment and acknowledge error.
+1323;Check safety release for the drives in the vision system "PNOZ diagnosis".%CrLf%If this should be available, external errors are to be checked.
+1324;Check air supply.
+1325;Check ionization%CrLf%Check supply voltage of the ionization.
+1326;Remove interruption of the light barrier.
+1327;In the PCUx.fu, check whether all abxPurge.Cyclic are configured with correct data. Either a PCA group or a time program name must be indicated!
+1328;Exchange basic device if this should occur repeatedly
+1329;- Check modules and/or components at the AIF string and exchange where appropriate %CrLf%- Check operating system version in SPC200. %CrLf%Is this permissible for the used axis interfaces?
+1330;Exchange and/or remove unit
+1331;Check and/or correct configuration of the internal units and string assignment and turn on SPC200 again and/or reset system or save actual configuration as required configuration (menu SET CONFIGUR.) and/or load project (with WinPISA)%CrLf%
+1332;Check stepping motor, indexer subcontroller or field bus units and turn on SPC200 again and/or reset system 
+1333;Service case, have firmware update carried out
+1334;Carry out data reset and enter or load data again%CrLf%Exchange basic device if this should occur repeatedly
+1335;Switch system off /on again, check level and stability of the supply voltage%CrLf%Exchange supply unit where appropriate
+1336;Switch system off /on again, check level and stability of the supply voltage%CrLf%Exchange supply unit where appropriate%CrLf%Eliminate faults where appropriate%CrLf%
+1337;Switch system off /on again, check level and stability of the supply voltage%CrLf%Carry out data reset Eliminate faults where appropriate%CrLf%Exchange basic device%CrLf%
+1338;Switch system off/on again, check level and stability of the supply voltage%CrLf%Reset data
+1339;- Check modules at the AIF string and string assignment or bring measuring system from end position and/or exchange measuring system cable%CrLf%Exchange AIF%CrLf%Repeat reference ride 
+1340;Eliminate undervoltage and/or short circuit
+1341;Eliminate undervoltage at the operating voltage connection (X2)
+1342;Check whether the field bus unit is completely plugged in %CrLf%- Check slot, if necessary select other slot%CrLf%- Switch system on/off again%CrLf%
+1343;Check diagnosis unit and control panel and/or connection
+1344;Completely plug in and/or exchange unit 
+1345;Correct configuration, see description to the field bus unit or in the configuration menu of WinPISA from version 4.41.
+1346;Supply load voltage again and acknowledge error
+1347;Correct start program number and/or load/enter start program
+1348;Correct NC record and/or load/enter program
+1349;Correct NC record
+1350;Correct NC record, only terminate direct required value specification or direct control of the valve tension with M12 
+1351;Finish NC programs with the command M02 and/or M30
+1352;Check axis specification, check firmware version
+1353;Analog required value input must be deactivated with M12 before it is reactivated with M10.
+1354;Correct NC record%CrLf%Correct input and/or output address%CrLf%
+1355;Check type and software version of the field bus card, exchange where appropriate. %CrLf%Permissible:%CrLf%-SPC200-COM-PDP from version 2.0%CrLf%-SPC200-COM-DN2%CrLf%-SPC200-COM-CO2%CrLf% 
+1356;Remove obstacle in the traveling area and/or check supply pressure or increase positioning timeout and/or optimize regulator
+1357;Correct NC record, position list or software ends
+1358;Correct NC record and/or position list (refer to NC command "G25").
+1359;Correct maximum speed or speed factor
+1360;Check regulator, axis and application data
+1361;Check I/O linking, check error stack (with WinPisa) and remove error cause where appropriate
+1362;Check regulator, axes and application data, check limiting conditions%CrLf%- Design susceptible to vibrations?%CrLf%- supply pressure stable?%CrLf%- Is the carrier of the measuring system correctly reinforced and so forth %CrLf%
+1363;Carry out dynamic identification ride
+1364;Correct NC record and/or stop system before carrying out the action
+1365;Check stroke limit value and valve adjusting value in the command M39, correct NC record where appropriate
+1366;Set ENABLE input and restart identification ride 
+1367;Carry out system identification once again
+1368;Generate increasing flank on input ENABLE or check regulator, axis and application data%CrLf%Correct error at the stepping motor controller%CrLf%
+1369;Carry out reference ride
+1370;Check software ends and correct valve value in the command M39, correct NC program where appropriate
+1371;Check speed limit value and correct valve value in the command M39, correct NC program where appropriate
+1372;Correct command, check reference ride mode in the application data, compare with currently used data %CrLf%Admissible:%CrLf%- stepping motor axis: %CrLf%modes 0 to 4/ /- Pneum. axis: %CrLf%modes 0, 5 to 7/ /
+1373;Before the concerned command, carry out the reference ride in the modes 0, 5 or 6. %CrLf%In mode 7 only: %CrLf%G01, G02 and M39 are permissible, also refer to command G 74%CrLf%
+1374;Check the required values created in the field bus master (PLC) and adapt to the permissible traveling area where appropriate.%CrLf%Check limit values in the application data, adjust where appropriate.%CrLf%
+1375;Correct parameter
+1376;Check resolution and/or correct maximum speed
+1377;Carry out data reset
+1378;Correct input
+1379;Correct input %CrLf%If the max. number of NC records is not reached yet: %CrLf%- Carry out program modification with WinPISA, memory is rearranged where appropriate. %CrLf%- After rearrangement of the memory, load program again.
+1380;Delete not required program and NC records 
+1381;Service case
+1382;Connect cable and check diagnosis unit, use lower baud rate where appropriate
+1383;Connect 1 signal to input ENABLE
+1384;Connect 1 signal to input STOP
+1385;Correct number of start program
+1386;Do not use command in the current operating mode or change operating mode
+1387;Stop system and call command and/or operating function once again
+1388;Generate increasing flank on input ENABLE or check regulator, axis and application data%CrLf% Correct error at the stepping motor controller%CrLf%
+1389;Use WinPISA from version 4.3 to edit such NC programs
+1390;Connect 0 signal to input ENABLE
+1391;Use newest WinPISA version.%CrLf%- Cancel all programs where appropriate and load again into the SPC200.%CrLf%Note: In the download area of Festo <festo.com> you will find the current WinPISA version.   
+1392;Use newest WinPISA version, download from the Festo download area <festo.com> where appropriate and carry out the calibration this way. Adjust measuring system length in dialog "Axis data".%CrLf%
+1393;Check measured value configuration.
+1394;Make default measured value configuration for all axes. After that, specify desired configuration again.
+1395;Carry out system reset.
+1396;Check the function group assignment table "FgAssignment.ini".
+1397;Check device status (LED's). use device manual for the error analysis. %CrLf% check process parameter file (Process.cfg) and start indicated parameter correction where appropriate.%CrLf% load process parameter file onto the control.%CrLf% Restart control. In case of repeated appearance, contact control supplier.
+1398;Check device status (LED's) and temperature. Use device manual for error analysis.%CrLf%Repair fault and then acknowledge by means of: short power supply OFF/ON or changing and/or renewed setting of the required value of the faulty zone (activation/deactivation of the zone).
+1399;Check device status (LED's) and temperature. %CrLf% check process parameter file (Process.cfg) and start indicated parameter correction where appropriate.%CrLf% load process parameter file onto the control.%CrLf% 
+1400;Check switch for mechanical and electric function.
+1401;Adjust override or required value for this device.
+1402;Open appldisk\application\control\config\localsystem.cfg and set parameter [SOM].simulateEndpointMapping to 0.
+1403;Check PLC configuration.
+1404;Close motor blocking brake.
+1405;Check filling level and size of the input buffers in station PLC and Rpc
+1406;- Check error at the HMI and teach pendant %CrLf%- restart control %CrLf%- if error is not found, prepare status report, remove protocols and send to control supplier together with the application%CrLf%
+1407;The selection in the vision system is blocked by the signal robot in process from Rpc. Lock in PLC and check visualization.
+1408;Check color/paint in MultiK table and correct components
+1409;- Close all mentioned valves%CrLf%- (purge all relevant hoses if necessary)%CrLf%- Dock linear unit%CrLf%- Reopen desired valve%CrLf%
+1410;- Check pressure supply%CrLf%- Check docking and undocking valves for pressure and wear%CrLf%- Check pressure switch for docking and undocking valves%CrLf%- Drive linear unit manually into a defined state
+1411;Reset the speed override to 100 % at the KeTop again.
+1412;Acknowledge and start new learning process if necessary.
+1413;Adjust time program and reduce paint volume in return line
+1414;- Deselect machine%CrLf%- Check pitch
+1415;Bring switch back into initial position after eliminating the error.
+1416;Select correct feedback type, check hardware endpoint specifications in the process.cfg 
+1417;Evaluate further error messages to identify the element that has acknowledged the cfg reading negatively.
+1418;Correct configuration of the ActionPointOffset of the mentioned action point in BCU.cfg and restart control.
+1419;Move all machines in home position and/or the switch for conveyor release must be activated.
+1420;Check handed over values of the command "WAIT_PAINTPOSITION" in the movement program.
+1421;Correct error class or use function RcuSetMessageOnce to issue the message.
+1422;Check SercosName in the Mfb.cfg with names of the drives in the sercosx.cfgr.
+1423;Check brush file, check 3DOnSite parameterization.
+1424;Reduce the speed of the concerned axis by changing the movement profile.
+1425;Define a project name and/or a program name for the corresponding type and ensure that a profile has been taught for this type number.
+1426;Check the cfg parameters for the bus runtime and the paint distance delay and adjust where appropriate, also, check the needle response time in the process.cfg.
+1427;Send error message as well as all necessary protocols for the error analysis to controller supplier.
+1428;1. Kemro.Manager: Properties of the profibus master, set name="ProfibusMaster" and recopy file profibusmaster.cfgr.%CrLf%%CrLf%2. Set appldisk\application\control\config\profibusmaster.cfgr: parameter name="ProfibusMaster".
+1429;1. Kemro.Manager: Properties of the profibus slave, set name="ProfibusSlave" and recopy file profibusslave.cfgr.%CrLf%%CrLf%2. Set appldisk\application\control\config\profibusslave.cfgr: parameter name="ProfibusSlave".
+1430;Move complained axis into reference position, master again where appropriate.
+1431;Check start position for the mastering and/or start the master process on master sensor.%CrLf%if necessary, check whether the configured master path "masteringdelta" is correctly configured.
+1432;Check configuration of the axis end position. File "MachineData.cfg", parameter "minPos" of the affected axis.%CrLf%Align configured values with drive parameter S-0-0050.
+1433;Check configuration of the axis end position. File "MachineData.cfg", parameter "maxPos" of the affected axis.%CrLf%Align configured values with drive parameter S0-0049.
+1434;To reactivate the blocking air, it is necessary to change into another operating mode and to then switch to cleaning again.
+1435;Move robot into fixed position inbox first and then open the solvent valves.
+1436;Check switching distance sensor
+1437;- Check movement program whether the absolute data were read in with RECEIVE(VISION, data) in front of RECEIVE(VISION_REL, data).%CrLf%- Abort movement program, correct and restart.
+1438;- Relieve robot in operating mode T1%CrLf%- Check cabling for damage%CrLf%- Check robot movement and air pressure of the collision protection 
+1439;Correct teach program, contact control manufacturer or increase the constant cMaxNoOfPoints to TRcuPaintChecker.tts.
+1440;Either change EcoTalk program so that the measuring direction matches the configuration or change the configuration.
+1441;Check, correct and reload EcoTalk program between BK_START and BK_FINISH.
+1442;In the kemro.manager, enter a name for the slave FX775A:0/PNIO:0/PNIOSLAVE:0 and restart control
+1443;Check parameterization in the 3DonSite process configuration (file process.cfg) and adjust where appropriate.%CrLf% Check teach program.
+1444;Acknowledge error and pay attention during the next deactivation that the piston is not the active piston.
+1445;Select at least one piston on vision system.
+1446;Check current application volume%CrLf%- Check preparation 
+1447;Check parameterization in the 3DOnSite process configuration (file Process.cfg) and adjust where appropriate.%CrLf%Turn off the learning where appropriate to delete the learned values and to restart the admission pressure learning. 
+1448;None
+1449;Selected main needle in vision system
+1450;Activate named devices according to the lock
+1451;Purge interface 
+1452;Turn on air supply or purge interface
+1453;Check named components of the application tower
+1454;- Check network link%CrLf%- Restart vision system%CrLf%- Restart robot controller
+1455;Correct parameters for hose compensation
+1456;Correct parameter
+1457;Check release of special color system and abort current processing where appropriate
+1458;Correct time program
+1459;Delete station (Clear FiFo) and continue. Contact control supplier in case of reappearance
+1460;Correct type or color information and carry out download once again
+1461;Check time program with 3DOnsite, create again where appropriate
+1462;Check total course of the program, change property of the time program start 
+1463;Exchange hardware of device
+1464;Check parameter NoOfDegradeModes in the section [DegradeMode] in the file BCU.cfg. If parameter was chosen correctly, contact controller manufacturer 
+1465;The parameter EnableDegradeMode in the section [Degrade] in the file BCU.cfg has to be set to True. Further parameters are to be configured in the file BCU.cfg. Contact controller manufacturer. 
+1466;Check requirements for the drive release of the robot drives. %CrLf%Acknowledge, in case of reappearance, contact controller supplier.
+1467;Move robot by means of the vision system or teach panel into bypass position and restart ghost.
+1468;Check parameter for Partdetect in file BCU.cfg. Check parameter and signaller in station PLC.
+1469;Check parameter SKIDLENGTH in the section [StationData] in the file BCU.cfg. Check signal source of the station PLC.
+1470;Check whether the controller program can be loaded in the teach mode by means of the teach pendant.%CrLf%Check parameter TIMEOUTMOTIONREL in file BCU.cfg. %CrLf%If the program can be loaded in the teach mode and if the error occurs again, contact control supplier.
+1471;Move robot by means of vision system or teach pendant into home position. If the robot is in home position and if the error %CrLf%occurs again, contact controller supplier.
+1472;Acknowledge, check conveyor stop position in the type assignment and check program start position in the file BCU.cfg.
+1473;Check brush files for current profile and create by parameterizing with 3DOnsite or copying where appropriate.
+1474;Internal control error, deselect robot and contact control manufacturer.
+1475;Internal error, check car body data in Rpc and PLC, start Rpc once again if necessary so that the car body memory is reinitialized. In case of reappearance, contact controller supplier.
+1476;Check parameter in the section [Partdetect] in file BCU.cfg. Check signal source in station PLC. In case of repeated appearance, contact control manufacturer.
+1477;If a synchronization signal is supposed to be received, the parameters in the section [PartDetect] in the file BCU.cfg must be set. If no synchronization signal is supposed to be received, the signal path and the parameterization in the station PLC have to be checked.
+1478;Adapt parameterization in the type assignment table and reselect car body data record.
+1479;Check parameterization in the station PLC and adjust where appropriate. Reselect car body data.
+1480;Adapt parameterization in the paint assignment table and reselect car body data record.
+1481;Adapt parameterization in the paint assignment table and reselect car body data record.
+1482;Check parameterization of the multi-component table. Check parameterization of the permissible number of components by means of Processbuilder.
+1483;Check parameterization in the type assignment table and carry out download where appropriate.
+1484;Check parameterization in the file BCU.cfg. Contact controller manufacturer in case of reappearance.
+1485;The data record of the station PLC is incomplete. Check parameterization and/or data flow in the station manager.
+1486;Select a ringpipe color in the ghost mask.
+1487;Check parameterization of the conveyor top position in the type assignment table.%CrLf%Check parameterization of the start of program position in the file BCU.cfg. %CrLf%Check time programs that are involved in the color change.
+1488;Check time programs that are involved in the color change.
+1489;Check release in the station PLC.
+1490;Acknowledge, check conveyor top position in the type assignment table. Current car body cannot be painted anymore.
+1492;Check parameterization in PLC and Rpc. Acknowledge, in case of reappearance, contact controller supplier.
+1493;In case of command via the vision system: move robot first into the position AboveGunbox.%CrLf%In case of command from time programs and/or from profile programs: change time programs and/or teach programs.
+1494;After purging & home position, only fixed position rides can be started at the vision system.%CrLf% Acknowledge.
+1495;Convey car body out of the zone or, if there is no collision danger, start fixed position above teach pendant.
+1496;Move robot into home position. Then approach desired fixed position.
+1497;Acknowledge, bring robot into fixed position Inbox or home position.
+1498;Acknowledge, bring robot into fixed position Abovebox or home position.
+1499;Acknowledge, bring robot into fixed position Abovebox.
+1500;Prepare process in manual mode. %CrLf%If preparation is necessary in operating mode T2, remove fixed position rides from time program.
+1501;Eliminate error and start referencing again.
+1502;Wait until referencing has ended.
+1503;1) Reference the controller.%CrLf%2) Restart the control system to repeat the reference test
+1504;Adjust parameters.
+1505;Wait until referencing has ended.
+1506;Exchange component and reset wear counter.
+1507;Exchange component soon and reset wear counter.
+1508;Check and correct parameterization
+1509;Check reason for the collision and eliminate.
+1510;Check reasons and remove.
+1511;Check relief valve
+1512;Check material pressure regulator and pressure sensor.
+1513;Check configuration (required value, tolerances) and correct.%CrLf%Start circulation where appropriate.
+1514;Check set limit value.
+1515;Check individual and/or detailed alarm.
+1516;Check and/or press motor overload switch.%CrLf% Check direction of rotation and change poles at the plug where appropriate.%CrLf%Phases and backup fuses.
+1517;In case of manual filling: refill heat carrier.%CrLf%In case of automatic filling: open cooling water influx and wait until filling is finished.%CrLf%In case of automatic filling, the magnetic valve is opened.
+1518;Minimum flow in the tempering device not available.%CrLf%Check flow (maybe clean dirt trap).%CrLf%Check flow blocking valve and/or ball valve and open where appropriate.
+1519;Heat dissipation at the consumer not available.%CrLf% Check set limit value.%CrLf%Heating turns back on after cooling by 1-2 ?C.
+1520;Check flow in the tempering device.%CrLf%Too small heat dissipation at the heater (possibly lime deposits on the heating rod).%CrLf%Check set limit value.%CrLf%Unlock by pressing the <Enter> key at the tempering device
+1521;Check configuration and eliminate error where appropriate.
+1523;Check connection and where appropriate main switch at the terminal equipment or participant.%CrLf%Check interlocks.%CrLf%Restart controller. Contact controller supplier in case of reappearance.
+1524;Check setting at the single device. The cooling can be switched on or off by means of a switch at the single device.
+1525;Fill cooling water tank and check hosing.
+1526;In the process record, control which time programs could not be loaded and rework these.
+1527;None. A time program to fetch back the indicated pig into the source station is started automatically.
+1528;Check required values in brush table as well as override factors and adjust where appropriate. %CrLf%Carry out and check process calibration at the end of program.
+1529;Prepare time program
+1530;Activate at least one channel per supply group.
+1531;Check system for tightness
+1532;Check system 
+1533;Check of the component according to message
+1534;Check and correct parameters in the process.cfg
+1535;Eliminate short circuit
+1536;Check whether the filament between the two contacts at the cleaning device in order is ok.%CrLf%Install new wire where appropriate.
+1537;Check time flow of the purging process and the application process, shift macro for the tilting in the teach program to suitable place.
+1538;Check parameterization in the 3DOnSite process configuration (file Process.cfg) and restart controller. %CrLf%In case reappearance, generate code with ProcessBuilder again, compile and restart controller.%CrLf%Where appropriate, contact controller supplier.
+1539;Check sensor for rotation monitoring.%CrLf% Check pneumatics (none or too small air supply for air drive). %CrLf% Check air drive and/or mask for sluggishness.%CrLf%Parameterization in the 3DOnSite process configuration (file Process.cfg).
+1540;Check sensor for rotation monitoring.%CrLf% Check pneumatics (too high air supply for air drive). %CrLf% Check air drive and/or mask for sluggishness.%CrLf% Check parameterization in the 3DOnSite process configuration (file Process.cfg).
+1541;Check whether any persons are inside the safe region. Acknowledge error.
+1542;Activate key switch once again, acknowledge error where appropriate.
+1543;Acknowledge fault  Reselect T2 mode.
+1544;- Verify why emergency off was released. %CrLf%- If there is no danger, bring emergency off button into OK position, acknowledge error.
+1545;The error can be acknowledged if the external alarm does not exist anymore.
+1546;Read detailed fault messages. Acknowledge fault.
+1547;Select robot on teach pendant, then reactivate teach mode with key switch.
+1548;Connect power for movement drives.
+1549;Connect power for process moves (pneumatics).
+1550;Enter data manually in reselection mask.
+1551;Fix car body again, then acknowledge error and continue processing. Attention: increased danger of collision.%CrLf%Alternatively, bring the robots into home position (e.g. in T1) and then convey the car body out.
+1552;Stop station and deselect robot to prevent that robots are started and collisions happen this way.
+1553;Either remove the macros or parameterize the path correction in the configuration [RC.KINEMATIC:0.VMT_BK].
+1554;Either remove the macros or parameterize the 3D situation measurement in the configuration [RC.KINEMATIC:0.ObjMeasure].
+1555;Reteach the points in such a way that a level is defined
+1556;Create point in the object coordinate system
+1557;Remove the macro from the teach program or activate the step in CONFIG3D.
+1558;Before calling the macro in the teach program, call the macro INIT3DOBJECT.
+1559;Change order of execution in the teach program.
+1560;Car body cannot be measured and applied any further for safety reasons. Abort program and convey car body out.
+1561;Check whether the sensor is turned on and the distance to the surface is within the switching area.
+1562;Inspection of the parameterization at the VMT-BK system
+1563;Correct teach program and restart program
+1564;Check Fifo data in PLC and all robot controllers.%CrLf%Where appropriate delete all data (ClearFifo).
+1565;Find faulty data record by means of reselection window and reselect (e.g. to valid type or color and/or to "do not apply").
+1566;Connect high tension on the control panel or deselect high tension of all robots.
+1567;Check type assignment table. Enter missing type where appropriate. After that, correct data by reselection.
+1568;Check paint assignment table. Enter missing paint/color where appropriate. After that, correct data by reselection.
+1569;Connect burner on the control panel or deselect burner of all robots.
+1570;Wait until special color supply provides the color, then correct data record by reselection.%CrLf%OR: reselect data record to " Do not apply".
+1571;Convey car body out of zone. If it should a faulty state (no car body in the zone) delete the data (ClearFifo).
+1572;Block zone inlet.
+1573;Before unlocking the zone inlet, bring the robots into the home position.
+1574;Start station in "Automatic" mode.
+1575;Select at least one ghost data record.
+1576;Check set ghost pitch and correct where appropriate.
+1577;End ghost mode, then clear zone inlet.
+1578;This is a not permissible special case. Therefore, the zone data must be deleted (ClearFifo).
+1579;Bring robot into the flow check position, then start ghost mode.
+1580;Deselect all handling robots, then start ghost mode.
+1581;Change over to manual mode.
+1582;Select a robot on the fixed position mask.
+1583;Select a target position on the fixed position mask.
+1584;Check position of other robots. Where appropriate, further error message give information about the precise locking reason.
+1585;First, bring door opener into home position.
+1586;Check whether robot controller is operating (vision system, teach pendant or remote desktop)%CrLf%Where appropriate, check field bus.
+1587;Evaluate detailed error information from the robot. Correct data by reselection where appropriate.
+1588;Start measurement manually. Check camera system.
+1589;Check brake
+1590;Bring installation into the manual or automatic mode and connect drives in such a way that emergency purging can be carried out.
+1591;Bring robot into the deselection area.
+1592;Cancel deactivation, then select robot again.
+1593;Wait until the other robots have finished the processing. Then select robot.
+1594;Check whether power has been connected. Read detailed fault messages. Check drive for errors. Contact control supplier where appropriate.
+1595;Select robot.
+1596;Acknowledge error and wait until active fixed position ride is finished. Abort fixed position ride where appropriate.
+1597;Bring robot into home position.
+1598;The purging may take up to 5 minutes. If the error cannot be acknowledged then, check the air supply or the tightness of the robot housing.
+1599;Check file content of all robots for plausibility, delete data where appropriate (ClearFifo). %CrLf% Contact control supplier.
+1600;Check feedback of the pressure switch in safety PLC.
+1601;Select robot in vision system
+1602;In paint/color table, enter color information with the correct supply group for every ICC channel.
+1603;Press acknowledge button and/or check whether all axes are referenced (display in teach pendant position mask)
+1604;Correct teach program and stop preceding recording before the 2nd start of the recording.
+1605;Correct teach program and start the recording with TORQUEMONITOR( StartLogging???  ) before. 
+1606;Correct teach program and correct the axis parameter in the macro TORQUEMONITOR( StopLogging??? ).
+1607;Check configuration of the ES_PACDBImportRPC server on the EcoScreen PC. Check network links of EcoScreen PC and controller.
+1608;Check configuration of the ES_PACDBImportRPC server on the EcoScreen PC. Check network links of EcoScreen PC and controller.
+1609;Check format of the result file on the controller. Acknowledge error and restart program. If the error occurs again, contact controller supplier.
+1610;Check format of the result file on the measuring instrument. Acknowledge error and restart program. If the error occurs once again, contact controller supplier.
+1611;Restart controller and measuring instrument and contact controller supplier in case of repeated occurrence.
+1612;Define color or type in EcoScreen 3D OnSite and contact controller supplier if error occurs again.
+1613;After changes in the teach program that influence the number and coordinates of the measurement points (Change Vel, triggers, points) the measuring program in EcoScreen in the dialog test program Rename must be renamed.
+1614;Check and/or optimize painting parameters at preceding stations.
+1615;Check teach programs, painting parameters of the preceding station. Check car body separately for painting errors.
+1616;Correct teach program or if the error occurs again, contact controller supplier.
+1617;Correct teach program or if the error occurs again, contact controller supplier.
+1618;Correct teaching program.
+1619;Release and turn on measuring instrument.
+1620;Turn on measuring instrument and release in EcoScreen
+1621;Correct color assignment in EcoScreen.
+1622;If real measuring instrument is available, correct configuration.
+1623;Before the application ride, a measuring ride must be carried out.
+1624;Check teach program and/or repeat measuring ride. Restart teach program.
+1625;Increase the spatial and/or chronological distance between the measurement points (BK_ACTION and/or BK_ACTION_DIRECT) and restart the program.
+1626;No application must be carried out on the car body.
+1627;Check the status at the BK computer
+1628;Check parameterization in the 3DonSite process configuration and adjust where appropriate.
+1629;Empty absorbing receptacle.
+1630;Enter valid adjusting factor
+1631;Check parameterization in the 3DonSite process configuration (file process.cfg) and adjust where appropriate.%CrLf% Check specified hardware.
+1632;Check required value and adjust where appropriate.
+1633;Reset Swirl regulator by means of reset switch.%CrLf% Check electrics. Switch regulator to idle.%CrLf%Restart controller. Contact controller supplier in case of reappearance.
+1634;Check sensors, inlets and where appropriate counter cards and/or Swirl regulator, check parameterization.%CrLf%Remove fault.
+1635;Check file or recreate with the aid of PS3.exe. The calibrating file must be entered in the last column of the text file colorlst.da2.
+1636;The laser is switched off automatically in case of overheating. Check cooling unit (flow, water level, temperature). Check signals for flow, water level and temperature. If cooling unit is ok, restart laser power by means of software. If the error is still pending, the current supply or the laser may be defective. Contact controller supplier.
+1637;Close all programs accessing this file. Acknowledge error. If error occurs again, contact controller supplier.
+1638;Check amplifier stage and increase where appropriate or turn on laser or check film thickness and/or the measurement points or cable in the teach program and/or check detector or contact controller supplier.
+1639;Set amplifier stage lower or check detector or check environmental conditions (strong light or heat sources) and change where appropriate. If no remedial measure: Contact controller supplier/Phototerm.
+1640;End the measuring software on the Phototherm measuring PC, deactivate the test mode and restart the measuring software
+1641;Check cable connections between measuring PC and laser unit. Acknowledge error and if error is still pending, contact controller supplier/Phototherm.
+1642;Activate measuring instrument or eliminate error.
+1643;Correct configuration, e.g. ProgStart = 31 and/or ProgStop = 32 in the file c50Rcu.cfg
+1644;Deselect surplus projects.
+1645;Acknowledge fault at drive control element.
+1646;Acknowledge, repeat mastering. Contact the controller supplier if the error should reappear.
+1647;Reference axes or select the axis coordinate system while jogging.
+1648;Check whether all axes are referenced, acknowledge error and press acknowledge button.
+1649;Either only jog in axes or check and correct configuration, then restart control.
+1650;End the running teach program and only then start a new one.
+1651;Acknowledge fault
+1652;Acknowledge fault and push acknowledge switch.
+1653;Acknowledge and continue program.
+1654;Abort program. Move robot into the home position in T1/T2.
+1655;With set configuration entry [RC.KINEMATIC:0.VirtualWall] special = 1 move the robot into the permissible field of action in T1 mode.
+1656;Check position value of the axes and compare with the position of the robot.
+1657;Displace trigger point in such a way that it lies geometrically on the rail segment. Alternatively, displace the trigger command in the teach programm to another path segment.
+1658;Check whether the part was gripped. If yes, check parameterization and where appropriate hardware of the sensors.
+1659;Check parameterization
+1660;Check whether the part was lost. If no, check parameterization and where appropriate hardware of the sensors.
+1661;Check whether there is a collision. If no, check parameterization and where appropriate hardware of the sensors.
+1662;Rework project planning.
+1663;Calibrate sensor.
+1664;Check teach program.
+1665;Check whether there is a collision. If no, check parameterization.
+1666;Check whether the part was gripped. If yes, check parameterization.
+1667;Check visually, because a transgression of the parameterized torque was found before.
+1668;Adjust override or required value for this device.
+1669;Create the wanted sequence either by reteaching the trigger points or by resorting in the Ecotalk program.
+1670;Check trigger point and movement path and possibly reteach.
+1671;Remove Cartesian traveling movements from the teach program
+1672;Either reduce the number of triggers (GUN, SETBRUSH, SETPROCESSCOMMAND...) on this segment or divide the rail segment by an additional rail point, so that the triggers are distributed on the two new segments.
+1673;Either teach the point in object coordinates or interrupt (TRACKING(Off)) or end (TRACKING(finished)) the tracking before
+1674;Create entry in the type list and load into the control 
+1675;Comparison of the project and program names in the type list with the project and program names on the control
+1676;Check error messages at the control processor of the vision system.
+1677;Change configuration and restart control or revise teach program.
+1679;Check device documentation.%CrLf%Possibly contact controller manufacturer.%CrLf%
+1680;Provide for cooler environment or reduce the load.
+1681;Check junctions and/or hardware and exchange where appropriate.
+1682;Check teach program, if necessary increase distance of atomizer car body.%CrLf%HT cable.
+1683;Check voltage supply, set power unit where appropriate.
+1684;Check brush table, time programs and/or overrides.
+1685;Check supply air pressure 
+1686;Check hardware, exchange if necessary
+1687;Increase the distance of the trigger points for the commands SETPROCESSCOMMAND(eVisionTrigger...)  in the teach program.
+1688;In the teach program, start measuring program (SET macro)
+1689;Check vision computer and connecting cable.
+1690;Check the error condition at the vision computer.
+1691;Convey car body out without application.
+1692;Deselect project at the teach pendant. Start mastering again.
+1693;Set the axis on the marking and master again.
+1694;Check whether the master tool was screwed on correctly. Check speed during mastering.
+1695;Optimize teach program to prevent the limiter interventions and thus a dropping of the painting speed.
+1696;Exchange tool
+1697;Only with Multipump: Channel ID assigns the current block with parameterizations to the correct channel/element of the multipump for the pump slip compensation (in the process.cfg). In this case, only the values 'a','b','c','d','e','f','g' are allowed. Only one block with parameterizations may be assigned to each channel/element of the multipump.
+1698;Check the configuration and restart controller
+1699;Restart control, in case of further occurrence, contact controller manufacturer.
+1700;Check indicated components and then attempt once again.
+1701;Check configuration and/or device name and correct where appropriate.
+1702;Check supply voltage of the affected switch cabinet and eliminate fault where appropriate.
+1703;Check affected Ethernet connection and eliminate fault where appropriate.
+1704;Verify configuration of the ActionPointOffset from BCU.cfg and take care about the overhang value. Restart controller afterwards.
+1705;Check the color definition table and the data flow in the controller.
+1706;Move application tower into upper end position
+1707;Check / correct the parameter.
+1708;Check / correct the teach program
+1709;* Check the bus connection.%CrLf%* Restart the RPC controller.%CrLf%* Restart the station PLC.
+1710;Check the parameterization and the gauge / positioning device.
+1711;Supervise conveyor position of car body and check signal source.
+1712;Time program will be executed after the following car body.
+1713;Check the power supply unit.
+1714;Correct the errors in 3DOnsite configuration and download again.
+1715;Check / control the position of the gauge / positioning device and the switch (Ini)
+1716;Check set value for coupling in HAND (on HMI) or in time program
+1717;Create the type definition table in 3DOnsite and download.
+1718;Check the communication to the HMI.
+1719;Check the parameterization in time program.
+1720;* Correct the EcoTalk program%CrLf%* Correct the EcotalkVariables.ttp file.
+1721;Check coupling: Software (activation / trigger in time program, manual mode), cabling / wiring or mechanical.
+1722;At the PC pore detection (SmartRay), search for the error cause 
+1723;Reteach the search ride 
+1724;Adapt teach program. The start of the seam check must occur earlier on the path.
+1725;Adapt teach program. The start of the seam check must occur later on the path.
+1726;End teach program. If the error occurs repeatedly, contact the control manufacturer.
+1727;Either remove the macros or parameterize the SmartRay functionality in the configuration [RC.KINEMATIC:0.SmartRay].
+1728;Check hardware for measurement and transfer of the conveyor pulses.
+1729;Copy completely configured AAd.dat from master project to mentioned folder and restart PC.
+1730;Check table.
+1731;Correct error in the PLC program
+1732;Repair the tool head
+1733;Check tool and docking equipment. Dock or undock tool manually
+1734;Adjust configuration of HMI with the configuration of the RPC.
+1736;Change operation mode. Repeat deletion.
+1737;A SET_??? must always be ended with a RECEIVE_??? first, before a new command may be set to the process with SET_???. Here, the chronological processing (MainRun, PreRun, stop) of the command must be observed.
+1739;Check system for leakage.
+1740;Check specified initiator.
+1741;Check whether the command for the shutdown of the high tension is called in the EcoTalk program before the time program is carried out.
+1742;* Ensure that the car bodies were positioned in the parameterized area.%CrLf%* Pay attention to typographical errors.%CrLf%* Adjust limits in the configuration.
+1743;Check whether there is any leakage and solve problem where appropriate. %CrLf% Check leakage sensor for wire breakage.
+1744;Learn position(s) again.
+1746;Evaluate concurrent error report.
+1747;To be able to go backwards in case of unsuccessful parts control, it must be possible to move forward on the path in CONT mode.
+1748;Please check the turbine and the proper fixing of the bell disk.
+1749;* Parameterize missing required values and download changed brush table %CrLf%* Deactivate monitoring of missing brush required values in configuration 
+1750;* Check air pressure dancer roller %CrLf%* Check application speed %CrLf%* Check motor movement
+1751;* Tool cleared %CrLf%* Fold back collision protection 
+1752;Remove adhesive tape residues at upperside of the roller
+1753;Check path program
+1754;Adhesive tape must be exchanged
+1755;* In case of tape break, reinsert type%CrLf%* Check application path
+1756;Correct parameter
+1757;- check time program%CrLf%- check if something blocks the brush%CrLf%- check initiator
+1758;- check time program%CrLf%- check initiator
+1759;Deactivate SCU or interrupt bus communication to the PLC.
+1760;Correct TrackingEndPosition
+1761;Please delete the files kinX.driveX.ref of all drives and then restart Windows.
+1762;Correct simulation values in the Process.cfg file.
+1763;Cancel time program. Position LCC. Reload%CrLf%
+1764;Please check the spelling of the variable in the EcoTalk command.%CrLf%- Please check whether the variable exists in the EcoTalk command.
+1765;Check the number of system variables to be set in the motion program and reduce where appropriate.
+1766;Select atomizer
+1767;Please check the position of the rotatable bracket and/or move this by means of the vision system.%CrLf%Should the rotatable bracket in center position, check the electric feedback.
+1768;Check selected reinforcing value in the EcoTalk command.%CrLf%Check parameterization the strain gauge.
+1769;Correct configuration of the LCC layout in the PCUx.cfg.
+1771;Activate leakage monitoring in PCUx.cfg
+1772;Eliminate leak and acknowledge error.
+1773;Check control valves and specified initiators.
+1774;SV_Statistics.def: Correct name of the device or remove parameterization
+1775; Adjust Processbuilder:%CrLf%process structure correspondingly or remove the device from the parameterization.
+1776;SV_StatisticDef: Correct parameterization of signal name
+1777;In the teach program, insert macro WAIT_PROCESS_READY() for this type
+1778;Restart robot controller to activate automatic internal
+1779;Restart robot controller to activate automatic external
+1780;Acknowledge pending errors at the control panel / PLC
+1781;Please check the switching condition of the initiators in the station overview of the vision system.%CrLf% check the wiring and/or the respective initiator.
+1783;Check temperature settings. Check air conditioning unit.
+1784;Purge main channel
+1785;Acknowledge, move robot to FlushDry400 or Home
+1786;Acknowledge, move robot to FlushDry0 or Home
+1787;Acknowledge, move robot to Home
+1788;Acknowledge, move robot to BrushClean400 or Home
+1789;Acknowledge, move robot to AboveBox, BrushClean0 or Home 
+1790;Check file (write protection, file available, order structure available...)
+1791;Please correct the configured traveling path of the specified axis.%CrLf%Parameter: masteringDelta%CrLf%Value: For linear axes, a path of >= 20mm must be configured.
+1792;Check ambient temperature %CrLf%- reduce output power where appropriate %CrLf% Exchange device 
+1793;Correct brush file or create and/or select other type for mode T2+process
+1794;Contact controller manufacturer.
+1795;Change teach program so that there are valid measuring rides for all three directions, or check sensor signal or check tool for damage
+1796;Set parameter Conveyorexisting in System.cfg file to "True".
+1797;- Select atomizer %CrLf%- turn on pneumatics %CrLf%- end time programs on same channel %CrLf% turn on manual mode
+1798;- Push skid on correct master position %CrLf% check whether Cfg parameters have been set correctly %CrLf% check whether docking has occured correctly during the automatic mastering
+1799;Move the robot into its home position in operating mode T1/T2 with the teach pendant.
+1800;Check parameterization for homing and correct or block homing in the PLC and/or vision system.
+1801;1. Set brake air pressure %CrLf%2. Check speed feedback
+1802;- Enable channel for supply group (only possible in manual mode)%CrLf%- Select different color%CrLf%- Unselect atomizer->robot does not paint this body
+1803;Reference indicated type.
+1804;Change type for tolerance monitoring.
+1805;Check indicated seam and reference again where appropriate.
+1806;Load reference file into controller again.
+1807;- Check initiator %CrLf% Check cable connections
+1808;- Check pump coupling %CrLf%- Check initiator %CrLf% Check cable connections
+1809;Check handed over values of the command "WAIT_PAINTPOSITION" in the movement program.
+1810;Move all machines in home position and/or the switch for conveyor release must be activated.
+1811;Move all machines in home position and/or the switch for conveyor release must be activated.
+1812;- Check supply voltage%CrLf%- Check cooling device%CrLf%- Check fan%CrLf%- Check fuse and turn back on
+1813;- Close door %CrLf%- Check initiator
+1814;Check fuse and reset where appropriate. %CrLf% Check cabling for possible short circuits if this occurs repeatedly.
+1818;Adapt conveyor stop positions or revise degrading concept
+1819;Check configuration in IEC and restart the robot control
+1820;Press the "dead-man switch" again and repeat the input
+1821;Check the connecting cable to the sensor%CrLf%Check the spindle
+1822;Bring the part back to its programmed position.
+1823;Purge the system including subchannels. Then select paint again via the primary channel.
+1824;First prepare the used subchannels.
+1825;The signal from the PLC 'BodyInPosition' according to the directives of the interface to provide
+1826;Enter data for nozzle changer in vision system.
+1827;Check initiator and nozzle change head. Correct data for the nozzle changer in vision system where appropriate.
+1828;Check teach program and correct data for the nozzle changer in vision system where appropriate.
+1829;Check time program and/or interface to HMI/teach pendant.
+1830;The teaching of the pressure values for the extended air volume regulator functions was started.
+1831;Restart teaching.
+1832;Create file new and restart controller
+1833;Adjust accuracy or required value for this device.
+1834;Check air cap / shaping air ring for correct assembly. Check all hoses from air volume regulator to air cap / shaping air ring. 
+1835;Check air cap / shaping air ring for correct assembly and soiling. Check all hoses from air volume regulator to air cap / shaping air ring. 
+1836;Activate parameter EnableReferenceCheck in process.cfg (3DOnSite) and/or start "Teach reference values".
+1837;Create device
+1838;Check air cap / shaping air ring for correct assembly. Check all hoses from air volume regulator to air cap / shaping air ring. Teach reference values again.
+1839;Teach reference values again or deactivate ReferenceCheck.
+1840;Shutdown of emergency operation in 3DOnSite
+1841;Switch off emergency mode or deactivate contamination check and accuracy of airflow.
+1842;Function can be used
+1843;Deactivation of the emergency mode or turn on reference
+1844;- Check hardware %CrLf%- Check firmware %CrLf%- Check software
+1845;Clear the way at the nozzle change station or remove nozzle manually from robot.
+1846;Insert nozzle of desired type into the nozzle change station manually.
+1847;- Check initiator. Check %CrLf%- EcoTalk program for the depositing of the nozzle.
+1848;- Check initiator. Check %CrLf%- EcoTalk program for the picking up of the nozzle.
+1849;Please check this value in file "services.cfg".
+1850;Check initiator and cabling and exchange where appropriate.
+1851;Check/repair valve of the nozzle exchange station.
+1852;Check or restart software on Phototherm-PC. Cehck signal cables between Phototherm-PC and RPC.
+1853;Check cabling of the conveyor and start calibrating procedure once again.
+1854;Purge DockingUnit
+1855;Position LCC
+1856;In the kemro.manager, enter a name for the slave FX775A:0/EIPIO:0/EIPSLAVE:0 and restart control
+1857;- Check valve selection %CrLf%- Check paint assignment table %CrLf%- Check CFG parameter for paint valve
+1858;- Acknowledge fault and turn on high tension in manual mode with required value approx. 60 kV %CrLf% When required value has been reached, deactivate high tension via EcoScreen. %CrLf% This procedure initiates a defined discharging process. If an error oc
+1859;- Switch off use of the discharger by means of Cfg parameters. %CrLf% Check configuration parameter "DeviceName" of the discharger and adjust where appropriate. Restart %CrLf% in case of controller change.
+1860;- Remove the EcoTalk command in the teach program that is not executable. %CrLf%- Add the missing device in the process configuration
+1861;Expand skid distance
+1862;Define signal 'PControlOn' with process builder as a trigger-relevant signal
+1863;Remove SPLIN commands from the EcoTalk program or allow SPLIN macros. Entry "[RC.KINEMATIC:0] enableSplineInterpolation = 1" in the RobotControl.cfg.
+1864;Bring linear unit into valid position:%CrLf%- Start positioning time program %CrLf%-.. 
+1865;Check installation of the mastering sensor%CrLf%Check wiring of the mastering sensor%CrLf%Change mastering sensor%CrLf%Check mastering system for contamination
+1872;Before the part is moved by a handler the command SET_POSCODE(Delete) has to executed. Please check current EcoTalk programm.
+1873;Teach positions for tool measurement correctly
+1874;Check valve names in parameter 'PaintRelevantValves'
+1875;Check error status at VMT system
+1876;Extend bolt of nozzle exchange place and then change the nozzle status to ok.
+1877;Check teach program (main needle number in SETBRUSH macro, SETBRUSH too close to GunOn...). 
+1878;Check teach program (SETBRUSH too close to GunOn). Check whether the pressure could not be removed for mechanical reasons (e.g. defective valve).
+1879;Change teach program or configure relative measurement.
+1880;Change teach program or configure Multiobject.
+1881;After voltage recovery, the control system restarts automatically.%CrLf%If necessary, a restart of the control system is necessary, if the SPC was not yet ready or pending error messages had not yet been acknowledged during the previous control system restart.
+1882;Recalibrate system.
+1883;- Remove all power from device.%CrLf%- Restore supply voltage.%CrLf%- Restart S3 bus.
+1889;Please check the heating cartridge, wiring, relays heating device hardware
+1890;Fault must be eliminated and then acknowledged at the drive controller of the conveyor drive system
+1891;Shutdown controller %CrLf%Powercycle device %CrLf%Restart controller
+1892;Shutdown controller %CrLf%Powercycle device %CrLf%Restart controller %CrLf%In case of repeated occurrence send a LogFileCollector report to the controller manufacturer
+1893;Send a LogFileCollector report to the controller manufacturer and check configuation of firmware
+1894;Update file ..\appldisk\application\control\config\S3_Firmware.cfg and restart controller.
+1895;- Check device, power cycle device. %CrLf%- Check the electrical connection (sequential arrangement, plugs).%CrLf%
+1896;- Compare bus installation with electrical drawing. %CrLf%- Check device and power cycle it if necessary.
+1897;Check voltage supply of motor holding brake and increase the supply voltage where appropriate.
+1898;Verify the sercos configuration or contact controller manufacturer.
+1899;* Check wiring and hardware.%CrLf%* Check status of superordinate modules.%CrLf%* Check communication of bus.%CrLf%* Restart hardware and/or bus if necessary.%CrLf%* Restart control, contact control manufacturer if necessary.
+1900;In the device documentation, check whether the parameter exists.%CrLf%Check the communication.%CrLf%Restart device.
+1901;- Check electrical connection and drive-/ controller configuration as well.
+1902;Replace nozzle on next occasion.
+1903;- Configure the painting pressure monitoring in the Cfg editor of 3DOnSite and release%CrLf%- Remove use of painting pressure monitoring for the named sensor in the time program 
+1904;- Check pressure (where appropriate discharge)%CrLf%- Check cabling sensor%CrLf%- Check parameterization switch
+1905;Activate monitoring in PCUx.cfg
+1906;Check sensor, cabling, parameterization
+1907;Change teach program or correct parameterization.
+1909;Please check the fit of the bell disk.
+1910;Correct parameters via Kestudio.Sercos3:%CrLf%- Open the project and connect the corresponding control system%CrLf%- Open the parameter input page for the speed controller%CrLf%- Enter the parameters P-0003.0.12 and P-0002.0.2%CrLf%- A in the online parameter flag
+1911;Activate monitoring in PCUx.cfg
+1912;- Check heating%CrLf%- Check temperature sensor%CrLf%- Check switch points at the temperature switch%CrLf%- Check wiring
+1913;24V supply of the UPS and the control system.%CrLf%After voltage recovery, the control system automatically restarts.
+1914;Determine reason and eliminate error:%CrLf%- Check power pack for excess temperature: in case of excess temperature, check control cabinet temperature, if necessary replace power pack%CrLf%- Check power cable and plug-in connections from power pack to the tempering unit%CrLf%- Check function of switch-over for heating and cooling (contactor or relay switching)%CrLf%- Power pack control (analogue values for current or voltage operation)
+1915;Determine possible causes and eliminate error:%CrLf%- Check tempering unit for excess temperature%CrLf%- Check cable and plug-in connections to the thermal overload relay%CrLf%- Check fuse for thermal overload relay%CrLf%- Check temperature sensor in the tempering unit%CrLf%- Control system settings (controller parameters)%CrLf%- Check power pack and power pack control of the tempering unit
+1916;-Check hardware %CrLf%-Clean nozzle
+1917;Check process components.%CrLf%
+1918;Change configuration of conveyor stop position, review degrade concept
+1919;Change configuration of robot start position, review degrade concept
+1920;Change configuration of robot type, review degrade concept
+1921;Quit error message and wait if bussystem is able startup after reinitialisation. Otherwise consider futher messages and clear errors.
+1922;Eliminate errors in the project.
+1923;After commissioning set parameter "autoAddressing=3" in sercosconfiguration and restart controller.
+1924;Sercos III configuration, check HW terminal point name
+1925;Fold in all catches and afterwards re-issue order to move cylinder.
+1926;- Check air supply %CrLf%- Check ease of movement%CrLf%- Check proximity switch feedback
+1927;Move hood catch into bottom position and afterwards re-issue order to move the catch.
+1928;Check transfer parameters of the RECEIVE command in the movement program, change if necessary.
+1929;- Continue to observe error messages%CrLf%- Open bus diagnosis on display system (if available)%CrLf%- Check bus device.
+1930;Either remove the macros or enter parameters for the multi-gun functionality in the configuration [RC.KINEMATIC:0.DvdGluing].
+1931;- Check input of parameters%CrLf%- Recalibrate gauge head
+1932;Check the flow guard, suction device or flexible suction tube
+1933;Bring the channel to the correct status by executing a suitable time program.
+1934;- Move to save position in mode manual and check at visualisation if profile free switch is signaled. %CrLf%- Reteach save psoition with 3D-OnSite is necesary.
+1935;- If necessary, check the equipment hardware and/or replace.%CrLf%- Start reinitialisation (bus restart at sercos III).%CrLf%- Restart control system. If the error occurs again, contact control system supplier.
+1936;Eliminate the cause for deactivation of the device/function and re-enable
+1937;Check hardware of the PartDetect signal or check input of parameters of PartDetect window.
+1938;Check position of the Partdetect approach switch, check input of parameters of PartDetect window
+1940;Restart control system.%CrLf%Check whether during control system run-up, the bus connection is already active during the reference test.%CrLf%Check SPC200 controller.
+1941;Check whether bus system is active.%CrLf%If error during run-up, restart control system.%CrLf%Check whether SPC200 controller is defective.
+1942;Correct the configuration of P-Control / Pig-Control
+1943;- increase tribo air%CrLf%- Correct value of conveying or total air%CrLf%- Fill up powder container%CrLf%- Use a suitable powder%CrLf%
+1944;- Check hoses and hose routing%CrLf%- Ensure inlet pressure > 6 bar%CrLf%- Connect injector%CrLf%- Choose smaller set values
+1945;- Check gun cable%CrLf%- Check gun
+1946;- Check gun and replace if necessary%CrLf%- Check gun cable and replace if necessary
+1947;- Reduce tribo air%CrLf%- Reduce amount of powder
+1948;- Connect gun%CrLf%- Check gun cable and replace if necessary%CrLf%- Check gun and replace if necessary
+1949;- Check gun cable and replace if necessary%CrLf%- Check gun and replace if necessary%CrLf%- Connect gun
+1950;- Check hose installation%CrLf%- Check air supply to control unit%CrLf%- Ensure inlet pressure > 6 bar%CrLf%- Connect injector
+1951;- Support information for application counter by plc on interface%CrLf%- Add hardware enpoint configured in parameter "ApplClockHWEndpoint" and resart the robot control
+1952;Check motor type.
+1953;-Check Network connection. Check OPCLink Topic state. Check Paintchecker RPC Server connection state
+1954;Select a valid color and restart the time program
+1955;- Check if "process" is enabled on the hmi, enable "process" if necessary%CrLf%- Check if "process" is switched on, switch on "process" if necessary
+1956;- Check if "robot" is enabled on the hmi, enable "robot" if necessary%CrLf%- Check if drives are switched on, switch on drives if necessary
+1957;- Check if time programs are still running and wait until they are finished or stop them manually.%CrLf%- Restart time program
+1958;Create project folder
+1959;Create missing program
+1960;Profibus or CANopen bus (Anybus X-gateway to Wagner EPG_S2) faulty%CrLf%- Check power supply of Anybus X-gateway%CrLf%- Check power supply of Wagner EPG_S2%CrLf%- Check cable and plug of CANopen bus%CrLf%- Termination resistance of CANopen bus on Wagner EPG_S2 device missing
+1961;- Power cycle mentioned device and restart RPC afterwards. - Compare configuration of Sercosbus with hardware installation.
+1962;Check the specified path, or delete the existing file.
+1963;Review and adapt process configuration. Restart the controller.%CrLf%If the error occurs again, contact control system supplier.
+1964;Check the specified file and delete manually if necessary.
+1965;Check the specified file. Restart the controller.%CrLf%Delete the file manually. After the restart of the controller default settings are used (releases, etc.)%CrLf%This must be checked.
+1966;- Signal 'PowerOnProcess' on interface to plc must be set.%CrLf%- Check if power contactor in the RCMP operates in normal conditions
+1967;Check the heating cartridge, wiring, relays, heating device
+1968;Consider the charging/discharging times and increase time interval between the brushes.
+1969;Use only permitted values as set values. Please also check the override settings
+1970;correct programmcode 
+1971;Deselect regurding machine or unbridge bypass signal.
+1972;- Quitt errors to reset possible internal controller failures%CrLf%- Check the wireing of the signals to the high tension controller
+1973;- Check the wireing of the signals to the high tension controller%CrLf%- Check the high tension controller
+1974;Switch in manual mode and then :%CrLf%- Start time program from group "Release overpressure" to relieve the pressure%CrLf%- Open the appropriate component (device) to relieve the pressure
+1975;Remove SMOOTH-path command from EcoTalk program or update the controler firmware
+1976;- Power cycle Sercosdevices, when devices have rebooted then restart Sercosring. - Please check further messages of devices. - Check power supply as well as wiring of the devices.
+1977;Internal control error, deselect robot and contact control manufacturer.
+1978;The high tension must be shut down with command "SET_PROCESS_STATE" before "RECEIVE_PARTORDER" is executed.
+1979;The EcoTalk command "RECEIVE_PARTORDER" has to be used to release the high tension before the high tension can be released by using the EcoTalk command "SET_PROCESS_STATE".
+1980;Pleas check the EcoTalk sub-programs whitch are used by handling tasks.%CrLf%In this sub-programs the EcoTalk command "SET_PROCESS_STATE" must not be used to release the high tension.
+1981;Drive robot to HOME-position
+1982;Check if actual value is really too high (e.g by using the HMI)%CrLf%Determine and correct the cause of excessive voltage / no correct discharge
+1983;- Check plc program%CrLf%- Check interface to plc
+1984;The motor brake must be grinded-in.
+1985;- Reset power supply of the device and restart the control%CrLf%- Start diagnosis by checking the LED at the gateway and on the modules%CrLf% - Phoenix: LED at the upper edge of the module indicating connection to the gateway%CrLf%    - Check power supply%CrLf%    - Check connection of the module at the back plane bus%CrLf%    - Exchange the module%CrLf%  - Festo: Modules have a CTEI LED indicating connection to the gateway%CrLf%    - LED off: Check wiring, connector, exchange the module%CrLf%    - LED blinking: Check module type and order%CrLf%A reset of the modules power supply as well as a reset of the robot controller is required after any change
+1986;Purge dosing pump in manual mode
+1987;- Check system for existing leackage%CrLf%- Replace worn dosing pump
+ 

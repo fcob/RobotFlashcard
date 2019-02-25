@@ -1,0 +1,7 @@
+RGRINDINA1 : POINT := (Axis, -65, 0, 0, 0, 0, 0, -2300, 0, 0)
+RGRINDINA2 : POINT := (Axis, -90, -20, 0, 0, 0, 0, -2300, 0, 0)
+RGRINDINA3 : POINT := (Axis, -90, 0, -20, 0, 0, 0, -2300, 0, 0)
+RGRINDINA4 : POINT := (Axis, -90, 0, 0, -20, 0, 0, -2300, 0, 0)
+RGRINDINA5 : POINT := (Axis, -90, 0, 0, 0, 45, 0, -2300, 0, 0)
+RGRINDINA6 : POINT := (Axis, -90, 0, 0, 0, 0, -45, -2300, 0, 0)
+RGRINDINA7 : POINT := (Axis, -90, 0, 0, 0, 0, 0, -2550, 0, 0)

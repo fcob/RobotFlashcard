@@ -1,0 +1,8 @@
+LIN_EINLAUF : POINT := (World, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+LIN_SEITE_LINKS : POINT := (World, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+LIN_BODEN : POINT := (World, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+LIN_FO_LINKS : POINT := (World, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+LIN_FO_RECHTS : POINT := (World, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+LIN_FO_OBEN : POINT := (World, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+LIN_AUSLAUF : POINT := (World, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+LIN_SEITE_RECHTS : POINT := (World, 0, 0, 0, 0, 0, 0, 0, 0, 0)

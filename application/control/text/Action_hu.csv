@@ -1,0 +1,815 @@
+Action 1.09.0013
+1141;A lineáris egységet vigye érvényes pozícióba:%CrLf%- Indítsa el a pozícionálás idõprogramot.
+1142;Korrigálja a Cfg-paramétert
+1143;- A leválasztót az 1. szakaszon cserélje le%CrLf%- Ellenõrizze a sûrített levegõ ellátást%CrLf%
+1144;A megadott INI-fájlt ellenõrizze az explorerrel.
+1145;- Ellenõrizze a szórófej fájlt a megjelenítésben%CrLf%- Töltse le újra a fájlt%CrLf%- Törölje a fájlt és újra helyezze el
+1146;A megadott fájlt ellenõrizze az explorerrel. Ellenõrizze a hozzáférhetõ tárolót.
+1147;A megadott elérési utat ellenõrizze az explorerrel.
+1148;Értékelje a hibaüzenetet és törölje a megadott szórófej fájlokat törölje, a megadott könyvtárakat engedélyezze, ellenõrizze a merevlemezt, indítsa újra a vezérlést.
+1149;Ellenõrizze a HMI beállításait, töltse le újra a szórófej fájlokat.
+1150;Öblítse ki a csatornát
+1151;Újból válassza ki a festéket. Ellenõrizze az interfészt. Ellenõrizze a megjelenítést.
+1152;Várjon, amíg az idõprogram befejezõdik.
+1153;Ellenõrizze és illessze a tanítóprogramot.
+1154;Helyezze el a fájlt az adott modulra és festékcsoportra.
+1155;Nyugtázza és indítsa újra. Ha a hiba megismétlõdik, szakítsa meg a karosszéria feldolgozást és indítsa újra.
+1156;Vizsgálja felül a konfigurációt és indítsa újra a vezérlést.
+1157;Vizsgálja felül a konfigurációt és indítsa újra a vezérlést.
+1158;Ellenõrizze a megnevezett fájlt és indítsa újra a vezérlést
+1159;Ellenõrizze a rögzített pozíciópontot és indítsa újra a vezérlést
+1160;Indítsa újra a vezérlést. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítóival.
+1161;A ProcessBuilder-ben konfigurált programszámot ellenõrizze és indítsa újra a vezérlést
+1162;Ellenõrizze a _globalvars fájlt és indítsa újra a vezérlést
+1163;Programozza a megnevezett pontot a kívánt koordinátarendszerben és indítsa 
+1164;Ellenõrizze a _globalvars fájlt és a konfigurációt és indítsa újra a vezérlést
+1165;Várjon, amíg a csatornák elõkészítése be nem fejezõdött. Ha ez nem történik meg, szakítsa meg a karosszéria feldolgozását és indítsa újra.
+1166;A szoftvert az EcoProcessBuilder-rel exportálja és kompilálja újra.
+1167;- Ellenõrizze, hogy a folyamatot bekapcsolta-e%CrLf%- Ellenõrizze a sûrített levegõ ellátást
+1168;- Kézi üzemmódban: a megjelenítésrõl kapcsolja be a készüléket.%CrLf%- Automatikus üzemmódban: Egy idõprogrammal adja meg az elõírt értéket.
+1169;Ellenõrizze az idõprogramot, ellenõrizze a festék hozzárendelési táblázatot
+1171;- Ellenõrizze a folyamat lefolyását%CrLf%- Ellenõrizze a tanítóprogramot és a SET_BRUSH valamint a WAIT_PROCESS_READY egységeket megfelelõen rendezze el
+1172;Ellenõrizze a PCA.DEF fájlt és szükség esetén illessze, a PCA.INI fájlt újonnan töltse le.
+1173;Ellenõrizze a paraméterezést és a ProcessBuilder-t generálja újra, kompilálja, indítsa újra a vezérlést.
+1174;Ellenõrizze a festék hozzárendelés táblázatot, szükség esetén illessze, újonnan töltse le, újra válassza ki.
+1175;Ellenõrizze a konfigurációt a ProcessBuilder-rel és generálja újra a kódot.
+1177;Nyugtázzon, ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítóival.
+1178;A megadott fájlt ellenõrizze az explorerrel.
+1179;Ellenõrizze az elkerülés-felügyelet paraméterezését: [RC.BypassArea], [RC.BypassArea.Base], [RC.BypassArea.Size] és a beírt értékeket. 
+1180;Ellenõrizze a megfogó paraméterezését.%CrLf%
+1181;Ellenõrizze a kapcsolószekrényben lévõ szabályozókészülék hõmérsékletét
+1182;Ellenõrizze a Process.cfg fájlt, hogy a megfelelõ légáramlást rendelte-e hozzá:%CrLf%pl.%CrLf%[PCUx\AirHeaters\AHeatx]%CrLf%linkedAirflow = 4,-,"QML"%CrLf%
+1183;Nyugtázza a hibaüzenetet és szükség esetén a funkciót ismét hajtsa végre álló robotkarokkal.
+1184;Ügyeljen a további meghajtás hibákra, szükség esetén újból hajtsa végre a funkciót.
+1185;Ellenõrizze a földelõkapcsolót, szükség esetén cserélje le vagy tisztítsa meg.
+1186;Kapcsolja ki a nagyfeszültséget.
+1187;Generálja újra a Processbuilder fájlokat
+1189;Ellenõrizze a megadott szolgát
+1191;A kemro.manager fájlban az FX760A:0/PBDP:0 mesterre írjon be egy nevet és indítsa újra a vezérlést
+1192;Ellenõrizze a konfigurációt, esetleg újra hozza létre, indítsa újra a vezérlést
+1193;Ügyeljen a további meghajtás hibákra, szükség esetén vegye fel a kapcsolatot a vezérlés gyártójával.
+1194;Az -IoSercos.cfg- konfigurációs fájlban állítsa be -driverMode = 1- értéket és indítsa újra a vezérlést.
+1195;Ellenõrizze a robot pozícióját.%CrLf%Ellenõrizze a rögzített pozíciók konfigurációját a ProcessBuilder-rel.
+1196;Végezze el az égõ-tesztet.
+1197;Kapcsolja be a meghajtást.
+1198;Ellenõrizze a szabályozókészüléket és a meghajtást. Ehhez lásd a "TBW 132" külön dokumentációt
+1199;1. Kézi üzem után kapcsoljon át és manuálisan ellenõrizze a fõtût és a visszacsatolást%CrLf%2. Tisztítsa meg a fõtût/porlasztót%CrLf%3. Ellenõrizze a huzalozást és minden elektromos alkatrészt (erõsítõ, LWL, leválasztó kapcsoló erõsítõje)%CrLf%4. Ellenõrizze a vezérlõlevegõ nyomását
+1200;
+1201;Ha a robot beragadt, mozgassa szabadon.
+1202;Végezze el manuálisan a meghajtás referenciahelyzetének beállítását, hogy újból mozgatni lehessen.%CrLf%Azután vigye referencia pozícióba és ott automatikusan/manuálisan végezze el a referencia beállítást.
+1203;Töltse be a meghajtóba az eredeti paraméterkészletet.
+1204;Mûködtesse a mozgatás meghajtás engedélyezését és végezze el a féktesztet.
+1205;Alakítson ki tárolóhelyet a cél-adattárolón, nyugtázza a hibaüzenetet és újból hajtsa végre a funkciót.
+1206;Ellenõrizze a kommunikációt az SPS-sel
+1207;A kemro.manager fájlban az FX765A:0/PBDP:0/PBDPSLAVE:0 szolgára írjon be egy nevet és indítsa újra a vezérlést
+1208;Állítsa meg a továbbítót és ismételje meg a mérést
+1209;Állítsa meg a továbbítót
+1211;Ellenõrizze a konfigurációt a Kemromgr programmal és az interfész dokumentációval egyenlítse ki,%CrLf%ezután indítsa újra a vezérlést.
+1212;Húzza ki a fékkioldó készüléket.
+1213;Hibakeresõvel ellenõrizze a megfelelõ kódhelyeket és indítsa újra a vezérlést.
+1214;A Robotcontrol.cfg konfigurációs fájlban a megnevezett irányra konfiguráljon egy felügyeleti tér nagyságot%CrLf%és ezután indítsa újra a vezérlést. Az újraindítás után ellenõrizze a megnevezett felügyeleti tér %CrLf%visszajelzését.
+1215;A Robotcontrol.cfg konfigurációs fájlban a segédtengelyre konfiguráljon egy felügyeleti tér értéket%CrLf%és ezután indítsa újra a vezérlést. Az újraindítás után ellenõrizze a megnevezett felügyeleti tér %CrLf%visszajelzését.
+1216;Az RCU _systemvars.ttp fájlját beírással egyenlítse ki a rendszerváltozók tényleges nevével.%CrLf%Ezután indítsa újra a vezérlést.
+1217;A megnevezett rögzített pozíció pontot a programozó kézi készülékkel a megfelelõ helyeken programozza és%CrLf%a "global" projektet zárja le és töltse be újra.
+1219;Kezelõi beavatkozásra van szükség ahhoz, hogy az aktuális programot befejezze és a robotot alapállásba vigye
+1220;Állítsa be a TimeOut-idõt a nagyfeszültség lekapcsolására
+1221;Állítsa be a TimeOut idõt a rögzített pozíció elérésére az idõprogramban.%CrLf%
+1222;Távolítsa el a WAIT_CONVEYOR és TRACKING(On) közötti EcoTalk parancsokat a programból.
+1223;Növelje az objektum távolságot, csökkentse a továbbítási sebességet vagy optimalizálja az utasításokat a WAIT_CONVEYOR-parancs elõtt.
+1224;A rendszer konfigurációs adataiban az [MC]needNextSegPreDelay értékére egy pozitív értéket állítson be.
+1225;Használjon egy érvényes paraméter értéket: NAGYOBB, KISEBB, EGYENLÕ
+1226;Ellenõrizze a megadott okokat.
+1227;Ellenõrizze a biztosítékot és újra kapcsolja be
+1228;Ellenõrizze az "FgAssignment.ini" funkciós csoport hozzárendelési táblázatot, hogy pontosan egy funkciós csoportot definiált-e "mesternek".
+1230;Ellenõrizze, hogy lehet-e a mátrixot növelni (konstans 'cFgArraySize' a 'tsFgAssignment' típus fájlban)
+1231;Ellenõrizze az Ini-fájlt:%CrLf%- Megtalálható a keresett szekció? (ügyeljen a nagy-/kisbetûkre)%CrLf%- Megtalálható a keresett paraméter a szekcióban? (ügyeljen a nagy-/kisbetûkre)%CrLf%- Rendelt a paraméterhez értéket?
+1232;A megadott INI-fájlt ellenõrizze az explorerrel.
+1233;Ellenõrizze a "PistonMaster" idõprogramot és az adott szelepeket vezérelje. Ellenõrizze, hogy a szelepek kézi vezérléssel kapcsolnak-e
+1234;Ellenõrizze a Sercos állapotát és szükség esetén újra állítsa be
+1235;Automata Indítsa újra a referenciamenetet és ügyeljen arra, hogy a folyamat során ne lépjen fel más üzemzavar
+1236;Az S-0-0092 paraméter eredeti értékét a meghajtóparaméterek adatmentésébõl határozza meg erre a hajtómûre és a DriveTop segítségével manuálisan helyezze el ezt az értéket. 
+1237;- Ellenõrizze a meghajtóparamétert, szükség esetén az S92 értékét helyezze a hajtómû eredeti értékére és a dugattyút újból állítsa be.%CrLf%- A process.cfg fájlban lévõ paramétert illessze és a dugattyút újból állítsa be
+1238;A PHG-n lévõ szervizhellyel állítsa be az adagolódugattyú referenciapozícióját.
+1239;Az idõprogramot a "Stop" vagy a "Stop alle" paranccsal szakítsa meg és a szervizoldalon végezze el a referencia beállítást
+1240;A dugattyúban a nyomást manuálisan szüntesse meg és újból indítsa el a referencia beállítást 
+1241;- Ellenõrizze a 'PistonMaster' idõprogramban a mûvelet idõtúllépési idejét%CrLf%- Ellenõrizze, hogy a meghajtás engedélyezése és az adagolóhajtás teljesítménye elegendõ-e (meghajtásszabályozó 'AB' vagy 'AF' státusza) 
+1242;Ellenõrizze a tömlõcsatlakozásokat, ill. a többszörös csatlakozók vakdugóit%CrLf%Ellenõrizze az STL sûrített levegõ ellátását%CrLf%Ellenõrizze az STL nyomáskapcsolót
+1243;Ellenõrizze a tömlõcsatlakozásokat és a többszörös csatlakozókat
+1244;Ellenõrizze a sûrített levegõ ellátást a mátrixra%CrLf%Ellenõrizze az MLL nyomáskapcsolót
+1245;- Ellenõrizze a turbinát%CrLf%- Ellenõrizze az elõírt fordulatszámot%CrLf%- Ellenõrizze a megadott idõt
+1248;- Ellenõrizze a hálózati csatlakozást, a 3DOnSite számítógéprõl a vezérlésre másolható%CrLf%- Ellenõrizze, hogy létezik-e a letöltés könyvtár
+1249;- Ellenõrizze, melyik adatnevet vitte át a 3DOnSite-ról a vezérlésre, SV_StatisticDownload.i_zNewName
+1250;- Ellenõrizze az oszlopokat, szakaszokat, kulcsszavakat a 3DOnSite konfigurációban
+1251;- Ellenõrizze, hogy a festékmennyiség-táblázatban valóban -1.0 értéktõl eltérõ mennyiség van.
+1252;Emelje a hõmérsékletet, ill. növelje a fûtési idõt.
+1253;Csökkentse a hõmérsékletet, ill. rövidítse a fûtési idõt.
+1254;Csökkentse a sebességet.
+1255;- Ellenõrizze a szelepek és hengerek mûködését, tegye lehetõvé a közeg kifolyását az adagolószivattyúból %CrLf%- Ellenõrizze a legnagyobb megengedett nyomatékok paraméterezését (process.cfg --> MaxTorque).%CrLf%- Ellenõrizze a dinamika paramétereket%CrLf%
+1256;- Növelje 5%-kal a sebességet a PTP-n.%CrLf%- Növelje a gyorsulást.
+1257;Ellenõrizze a munka-/lezárt terek paraméterezését.
+1258;Ellenõrizze a konfigurációt a Kemromgr programmal és a kapcsolási rajz alapján egyenlítse ki,%CrLf%ezután indítsa újra a vezérlést.
+1259;- Ellenõrizze a nyomást a festékellátó rendszerben.%CrLf%- Ellenõrizze a kívánt lakknak megfelelõ festékszelepet.%CrLf%- Ellenõrizze az iniciátorokat a lakktárolóban. %CrLf%- Ellenõrizze a dugattyúkat a lakktárolóban.  
+1260;- Ellenõrizze, hogy a festéket betöltötte-e a lakktárolóba.%CrLf%- Ellenõrizze a lakktároló nagynyomás-ellátását. %CrLf%- Ellenõrizze a körvezeték nyomását. %CrLf%- Ellenõrizze a vonatkozó festékszelep mûködését. 
+1261;Cserélje le az alkatrészt.
+1262;Az alkatrészt rövid idõn belül cserélje le.
+1263;- Ellenõrizze az idõprogramot, hogy a kimenetelnél van-e szabad út az eltávozó levegõ számára. %CrLf%- Ellenõrizze a megfelelõ szigetelõhenger vezérlõszelepét.%CrLf%- Ellenõrizze a szigetelõhenger iniciátorait, megfelelõ-e a mûködésük és a pozíciójuk.%CrL
+1264;Ellenõrizze a vezérlés (Sercos rész) aktuális konfigurációját és tisztázza, miért nem tartja a szükséges paramétereket.
+1265;Tisztázza, miért vitte be ez egyik vagy mindkét paramétert eltérõ értékkel a konfigurációba.
+1266;Tisztázza, melyik beírás helyes és mindkét konfigurációs fájlban használja ugyanazt a nevet.
+1267;Ellenõrizze, hogy a szórófej értékek a bekapcsolási küszöb felett vannak-e.
+1268;Újból indítsa el a beállítási folyamatot, adott esetben ügyeljen a további meghajtás hibákra.%CrLf%pl. tengely végálláskapcsoló stb.
+1269;Ellenõrizze a beállító érzékelõ kábelezését, gyõzõdjön meg arról, hogy felismeri a jel pozitív és negatív visszajelzését is.%CrLf%Növelje a megnevezett tengely konfigurációjában a beállítási eltérést (masteringdelta).
+1270;- STS_GATE_NOK: Cserélje le a számlálókártyát vagy állítsa a rendszert alaphelyzetbe a tápfeszültség kikapcsolásával.%CrLf%FIGYELEM: A T1-ben lévõ cellát ürítse ki, különben az alaphelyzet utáni visszaállítás vagy a számlálókártya kiesése nem történik meg
+1271;Az "EcotalkVariables.ttp" fájlban lévõ megnevezett paramétert módosítsa egy érvényes értékre és indítsa újra a vezérlést.%CrLf%A paraméter erre a funkcióra érvényes értéktartományát a fájlban lévõ kommentárban találja.
+1272;Az EcoTalk-Doku utáni EcoTalk parancsot helyesbítse és a tanulóprogramot újból töltse be.
+1273;A vonatkozó tengelyt a megengedett mozgatási tartományban mozgassa.
+1274;Ellenõrizze és korrigálja a konfigurációt, azután indítsa újra a vezérlést.
+1275;Értesítse a vezérlés beszállítóját
+1276;Fejezze be az idõprogramot és az újbóli indítás elõtt öblítse ki a csatornát.
+1277;- Ellenõrizze az idõprogramot, hogy a mozgásnál van-e szabad út az eltávozó levegõ számára. %CrLf%- Ellenõrizze a megfelelõ szigetelõhenger vezérlõszelepét.%CrLf%- Ellenõrizze a szigetelõhenger iniciátorait, megfelelõ-e a mûködésük és a pozíciójuk.%CrLf%-
+1278;A készüléket a reteszelés áthidalása nélkül kezelje. 
+1279;Ellenõrizze a cfg-paramétert. Ellenõrizze a továbbító és a forgás jeladó közötti áttételt (túl sok inkrementum/mm). Csökkentse a számlálókártya felbontását.
+1280;A vezérlést a rendszer biztonsági okokból leállította. %CrLf%FIGYELEM: A vezérlést indítsa újra és T1-ben lévõ cellát feltétlenül ürítse ki, mivel az alaphelyzet utáni visszaállítás vagy a számlálókártya kiesése nem történik meg (aktuális továbbítási pozíció elvesztése) ÜTKÖZÉSVESZÉLY!
+1281;A Brush.def fájl Override.def konfigurációját egyenlítse ki, ügyeljen a nagy-/kisbetûk írására.
+1282;Csökkentse a 3DOnsite szakaszainak számát
+1283;- A 3DOnSite-ban nyissa ki a "Százalékos növelések" modult és mentse
+1284;- Ellenõrizze a festékszelep mûködését%CrLf%- Ellenõrizze, hogy a kiválasztott festéket csatlakoztatta-e a festékszelephez%CrLf%- Ellenõrizze, hogy a kiválasztott festéket csatlakoztatta-e a festékellátáshoz %CrLf%- Ellenõrizze a nyomást a festékellátó re
+1285;Az FU-hoz tartozó cfg fájlban ellenõrizze és illessze a továbbítószûrõ paramétereit (Conv_Vel_max, Conv_Acc_max).
+1286;Ellenõrizze és szükség esetén illessze a busz futási idõ és a lakk repülési idõ cfg-paramétereit valamint ellenõrizze a fõtû kapcsolási idejét (amelyet a visszacsatolási jelbõl tanult).
+1287;Korrigálja a szakasz megnevezését. pl. üres helyek ellenõrzésére:%CrLf%HIBÁS:  [1. szakasz]%CrLf%HELYES: [1. szakasz]
+1288;Helyezze el a fájlt az adott modulra és festékre.
+1289;Ellenõrizze a programkódot
+1290;Egy T2-üzem jogosultsággal rendelkezõ felhasználó jelentkezzen be az EcoScreen-en.
+1291;- Próbálja meg a felhasználót ismét be-, ill. kijelentkeztetni.%CrLf%- Ha a probléma újból jelentkezne. indítsa újra a számítógépet, ill. a ViewServer-t.%CrLf%- Ha a probléma továbbra is fennáll, vegye fel a kapcsolatot a vezérlés szállítójával.
+1292;Ellenõrizze a felhasználókezelést és egyenlítse ki a megjelenítés konfigurációjával.
+1293;Ellenõrizze az EcoScreen konfigurációt.
+1294;Ellenõrizze, miért nem érte el a robot a pozíciót
+1296;Ellenõrizze a sebesség túlvezérlést a PHG-n, szükség esetén állítsa be a TimeOut-idõt a rögzített pozíció menetre
+1297;A Processbuilder-ben ellenõrizze a paraméterezett adatot és módosítsa egy érvényes értékre. Indítsa újra a vezérlést.
+1298;- Ellenõrizze a tömlõátmeneteket DN 7,25 vizsgálótüskével%CrLf%- A leválasztó 1. szakaszát cserélje le%CrLf%- A tömlõ 1. szakaszát cserélje le
+1299;- Légtelenítse a körvezetéket%CrLf%- A festékcserélõn lévõ impulzuslevegõ szelepet cserélje le%CrLf%- A levegõ eltávolításához indítsa el az adagoló alaphelyzetbe állítását
+1300;Keresse meg, ill. utólag válassza ki a hibás karosszériát.
+1301;az alkatrészt azonnal Cserélje le és A ciklust állítsa vissza A PHG-rõl vagy A megjelenítésrõl.
+1302;- A PHG 'Csatorna áttekintés felhasználói oldalán', jelölje ki az 'Írás hozzáférést'. Az Eco képernyõ %CrLf% lezárás' megszûnik'. %CrLf%
+1303;Ellenõrizze, hogy minden firmware feladat "UpdTimer1" konfigurációjú-e%CrLf%- RC.driveControlTimerName%CrLf%- MC.timerNameUpd%CrLf%- TC.teachControlTimer%CrLf%- IO.ONBOARD.SLOTPCI:4.FX765A:1.PBDP:0.cycleTime%CrLf%- IO.ONBOARD.SLOTPCI:5.FX760A:2.PBDP:0.cycleTime%CrLf%- IO.ONBOARD.SLOTPCI:2.FX780A:0.SERCOS:0.cycleTime
+1304;Ellenõrizze, hogy az UpdTimer1 és az ieccontrol.su fájlban megadott SO_TaskHigh, SO_TaskMedium és SO_TaskProtocol_Medium azonos ciklusidõ paramétert tartalmaz-e
+1305;Állítsa referencia helyzetbe a SolventCan-t a HMI-interfésszel
+1306;Ellenõrizze a robot pozícióját és ellenõrizze nincs-e más hiba
+1307;Állítsa be a paramétert a general.cfg, ill. FgAssignment.ini fájlban
+1308;A hengert mozgassa szabadon, ha nincs ütközés, ellenõrizze a kötelet vagy a fénysorompót
+1309;A 3DOnSite segítségével ellenõrizze a megnevezett típus profilt és mentse el újból, adott esetben vegye figyelembe a hibaüzeneteket
+1310;A megjelenítés Fifo-áttekintésében ellenõrizze, hogy a megmunkálni kívánt karosszéria még jelen van-e a Fifo-tárolóban.%CrLf%A gépet válassza le és a karosszériát szállítsa ki.
+1311;A vonatkozó mozgatást lassabbra programozza.
+1312;Tisztítsa meg a fénysorompót és a figyelmeztetést nyugtázza.
+1313;Ellenõrizze és korrigálja a beírt referenciapozíciót.%CrLf%A funkciót ismét hajtsa végre.
+1314;A 3DOnSite használatával ellenõrizze a konfigurációs fájlt, ha ez olvasható, vegye fel a kapcsolatot a vezérlés gyártójával.
+1315;Ellenõrizze az ionizáció biztonsági engedélyezését a megjelenítés "PNOZ-diagnózis" menüjében.%CrLf%Ha ez jelen van, ellenõrizze magát az ionizációt.
+1316;Ellenõrizze az ütközés felismerést.
+1317;Nyugtázza a hibát és a tengelyt kézi üzemben vigye el a végálláskapcsolótól.
+1318;Ellenõrizze az ütemtávolságot.%CrLf%Ellenõrizze a profilfájlt a 3DOnSite segítségével és mentse újból.
+1319;Hárítsa a el az üzemzavart.
+1320;A vezetéstechnikánál határozza meg az üzemzavar okát.
+1321;Ellenõrizze a fülke szellõzetést, vegye figyelembe a vezetéstechnika-vezérlés hibáját.
+1322;Hárítsa el a továbbítástechnika üzemzavarának okát és nyugtázza a hibát.
+1323;Ellenõrizze a meghajtások biztonsági engedélyezését a megjelenítés "PNOZ-diagnózis" menüjében.%CrLf%Ha ez jelen van, ellenõrizze a külsõ zavarokat.
+1324;Ellenõrizze a levegõellátást.
+1325;Ellenõrizze az ionizációt%CrLf%Ellenõrizze az ionizáció tápfeszültségét.
+1326;Hárítsa el a fénysorompók megszakítását.
+1327;A PCUx.fu fájlban ellenõrizze, hogy minden abxPurge.Cyclic megfelelõ adatokkal konfigurált-e. Adjon meg egy PCA-csoportot vagy egy idõprogramot!
+1328;Ha a hiba újból fellép, cserélje le az alapkészüléket
+1329;- Ellenõrizze az AIF-vonalon lévõ modulokat, ill. alkotóelemeket és szükség esetén cserélje le%CrLf%- Ellenõrizze az operációs rendszer verziót az SPC200-on. Engedélyezett ez az alkalmazott tengely-interfészre?
+1330;A részegységet cserélje le, ill. távolítsa el
+1331;Ellenõrizze, ill. korrigálja a belsõ részegységek és a vonalfoglaltság konfigurációját és kapcsolja be újra SPC200-at, ill. a rendszert vigye alaphelyzetbe vagy mentse a tényleges konfigurációt elõírt konfigurációként (SET CONFIGUR menü.), ill. töltse be a projektet (WinPISA használatával)%CrLf%
+1332;Ellenõrizze a léptetõmotor indexelõ-, alvezérlõ- vagy feldbusz részegységet és kapcsolja be újból az SPC200-at, ill. vigye alaphelyzetbe a rendszert
+1333;Szerviz, végezze el a firmware frissítését
+1334;Állítsa be az adatok alaphelyzetét és újból írja be, ill. töltse fel az adatokat%CrLf%Ha a hiba újból fellép, ellenõrizze az alapkészüléket és szükség esetén cserélje le
+1335;A rendszert újból kapcsolja ki és be, ellenõrizze a tápfeszültség nagyságát és stabilitását%CrLf%szükség esetén cserélje le a tápegységet%CrLf%
+1336;A rendszert újból kapcsolja ki és be, ellenõrizze a tápfeszültség nagyságát és stabilitását%CrLf%szükség esetén cserélje le a tápegységet%CrLf%szükség esetén szüntesse meg az üzemzavart%CrLf%
+1337;A rendszert újból kapcsolja ki és be, ellenõrizze a tápfeszültség nagyságát és stabilitását%CrLf%az adatokat állítsa alaphelyzetbe%CrLf%szükség esetén szüntesse meg az üzemzavart%CrLf%szükség esetén cserélje le az alapkészüléket%CrLf%
+1338;A rendszert újból kapcsolja ki és be, ellenõrizze a tápfeszültség nagyságát és stabilitását%CrLf%az adatokat állítsa alaphelyzetbe
+1339;- Ellenõrizze az AIF-vonalon lévõ modulokat és a vonal foglaltságát vagy a mérõrendszert vigye ki a végállásból, ill. cserélje le a mérõrendszer kábelét%CrLf%·az AIF vonalat cserélje le%CrLf%·ismételje meg a referencia menetet%CrLf%
+1340;Hárítsa el az alacsony feszültséget, ill. a rövidzárat
+1341;Az alacsony feszültséget az (X2) ütemi feszültség csatlakozásnál hárítsa el 
+1342;- Ellenõrizze, hogy minden feldbusz részegység teljesen csatlakoztatva van-e%CrLf%- Ellenõrizze a csatlakozóhelyet, szükség esetén válasszon másik csatlakozót%CrLf%- Kapcsolja a rendszert ki-/be%CrLf%
+1343;Ellenõrizze a diagnózis részegységet és a kezelõmezõt, ill. a csatlakozást.
+1344;A részegységet teljesen csatlakoztassa, ill. cserélje le
+1345;Korrigálja a konfigurációt, lásd a feldbusz részegység leírását vagy a 4.41. verziótól a WinPISA konfigurációs menüjét.
+1346;Tegye fel a terhelõ feszültséget és nyugtázza a hibát
+1347;Korrigálja a startprogram számát, ill töltse be / adja meg a startprogramot
+1348;Korrigálja az NC-készletet, ill. töltse be / adja meg a startprogramot
+1349;Korrigálja az NC-készlet
+1350;Korrigálja az NC-készletet, a közvetlen elõírt érték beírást vagy a szelepfeszültség közvetlen vezérlését elõször M12-vel fejezze be
+1351;Az NC-programot M02, ill. M30 paranccsal zárja le
+1352;Ellenõrizze a tengely megadását, ellenõrizze a firmware verziót%CrLf%
+1353;Az analóg elõírt érték bemenetet M12 paranccsal kapcsolja ki, mielõtt újból M10 paranccsal aktiválná.
+1354;Korrigálja az NC-készletet,%CrLf%Korrigálja a be-, ill. kimeneti címeket%CrLf%
+1355;Ellenõrizze a feldbusz kártya típusát és szoftververzióját, szükség esetén cserélje le. %CrLf%Megengedett:%CrLf%-	SPC200-COM-PDP a 2.0 verziótól%CrLf%-	SPC200-COM-DN2%CrLf%-	SPC200-COM-CO2%CrLf%
+1356;Hárítsa el a mozgatási tartományban lévõ akadályt, ill. ellenõrizze a tápnyomást, növelje a pozícionáló idõtúllépését, optimalizálja a szabályozót
+1357;Korrigálja az NC-készletet, a pozíciólistát vagy a szoftver véghelyzetet 
+1358;Korrigálja az NC készletet, ill. a pozíciólistát (lásd a "G25" NC-parancsnál).
+1359;Korrigálja a maximális sebességet, ill. a sebességtényezõt
+1360;Ellenõrizze a szabályozó-, a tengely- és az applikáció adatait 
+1361;Ellenõrizze az E/A-csatlakozást, ellenõrizze a hibatárat (WinPisa segítségével) és szükség esetén hárítsa el a hiba okát%CrLf%
+1362;Ellenõrizze a szabályozó-, a tengely- és az applikáció adatait, ellenõrizze a peremfeltételeket%CrLf%- A konstrukció hajlamos a rezgésre?%CrLf%- Stabil a tápnyomás?%CrLf%- a mérõrendszer menesztõjét megfelelõen rögzítette stb.%CrLf%
+1363;végezzen el egy dinamikus azonosító menetet
+1364;Korrigálja az NC-készletet ill. az akció végrehajtása elõtt állítsa le a rendszert
+1365;Az M39 parancsnál ellenõrizze a löket határértéket és a szelepbeállítás értékét, szükség esetén korrigálja az NC-készletet
+1366;Állítsa be a bemeneti ENABLE jelet és újból indítsa el az azonosító menetet
+1367;Újból végezze el a rendszerazonosítást
+1368;hozza létre a bemeneti ENABLE jel emelkedõ oldalát vagy ellenõrizze a szabályozó-, a tengely- és az applikáció adatait%CrLf%Korrigálja a léptetõmotor vezérlõ hibáját %CrLf%
+1369;Végezzen el egy referenciamenetet
+1370;Az M39 parancsnál ellenõrizze a szoftver véghelyzeteket és a szelepbeállítás értékét, szükség esetén korrigálja az NC-programot
+1371;Az M39 parancsnál ellenõrizze a sebesség határértékeket és a szelepbeállítás értékét, szükség esetén korrigálja az NC-programot
+1372;Korrigálja a parancsot, ellenõrizze az applikáció adataiban a referenciamenet módot, hasonlítsa össze az aktuálisan alkalmazott adatokkal%CrLf%Megengedett:%CrLf%- Léptetõmotor tengely: %CrLf%Modi 0 – 4%CrLf%- Pneum.  tengely: %CrLf%Modi 0, 5 – 7%CrLf%
+1373;A vonatkozó parancs elõtt végezze el a referenciamenetet a 0, 5 vagy 6 üzemmódban.%CrLf%7 üzemmódban csak: %CrLf%G01, G02 és M39 megengedett, lásd még a G74 parancsot%CrLf%
+1374;Ellenõrizze a feldbusz mesterben (SPS) szereplõ elõírt értékeket és szükség esetén illessze a megengedett mozgási tartományhoz.%CrLf%Ellenõrizze az applikációs adatokban szereplõ határértékeket, szükség esetén illessze.%CrLf%
+1375;Korrigálja a paramétert
+1376;Ellenõrizze a felbontást, ill. korrigálja a maximális sebességet
+1377;Állítsa az adatokat alaphelyzetbe
+1378;Korrigálja a beírást
+1379;Korrigálja a beírást%CrLf%Ha még nem érte el az NC-készletek maximális számát:%CrLf%- Módosítsa a programot a WinPISA használatával, Szükség esetén a tárolót újra rendezze el.%CrLf%- A tároló újbóli elrendezése után ismét töltse be a programot.
+1380;a szükségtelen programot és NC-készleteket törölje
+1381;Szerviz
+1382;Ellenõrizze a csatlakozókábelt és a diagnózis részegységet
+1383;Az ENABLE bemenetre helyezzen 1 jelet 
+1384;A STOP bemenetre helyezzen 1 jelet
+1385;Korrigálja az indítóprogram számát
+1386;A parancsot ne használja az aktuális üzemmódban vagy módosítsa az üzemmódot
+1387;Állítsa le a rendszert és újból hívja be a parancsot vagy a kezelõfunkciót
+1388;hozza létre a bemeneti ENABLE jel emelkedõ oldalát vagy ellenõrizze a szabályozó-, a tengely- és az applikáció adatait%CrLf%- Korrigálja a léptetõmotor vezérlõ hibáját%CrLf%
+1389;Az ilyen jellegû NC-programok szerkesztésére 4.3. verzió felett használja a WinPISA programot
+1390;Az ENABLE bemenetre helyezzen 0 jelet
+1391;Használja a legújabb WinPISA verziót. %CrLf%- szükség esetén töröljön minden programot és töltse az SPC200-ba.%CrLf%Megjegyzés: A Festo letöltési területén < festo.com> találja az aktuális WinPISA verziót.%CrLf%
+1392;Használja a legújabb WinPISA verziót, szükség esetén töltse le a Festo letöltési területérõl < festo.com>, és ezzel végezze el a kalibrálást. A mérõrendszer hosszát illessze a "Tengely adatok" párbeszédablakban.%CrLf%
+1393;Ellenõrizze a mért érték konfigurációt.
+1394;Minden tengelyre készítse el az alapértelmezett mért érték konfigurációt. Azután újból adja meg a kívánt konfigurációt.
+1395;Vigye a rendszert alapállapotba.
+1396;Ellenõrizze az "FgAssignment.ini" funkció hozzárendelés táblázatot.
+1397;Ellenõrizze a készülék státuszát ( a LED-eket). Hibaelemzésre használja a készülék kézikönyvét.%CrLf%Ellenõrizze a (Process.cfg) folyamatparaméter fájlt és szükség esetén a megadott paramétereket korrigálja.%CrLf%A folyamatparaméter fájlt töltse be a vezérlésbe.%CrLf%Indítsa újra a vezérlést. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítójával.
+1398;Ellenõrizze a készülék státuszát ( a LED-eket) és a hõmérsékletet. Hibaelemzésre használja a készülék gépkönyvét.%CrLf%A hibát hárítsa el és utána nyugtázza: rövid idõre kapcsolja KI/BE a hálózati feszültséget vagy módosítsa, ill. újra készítse el a hibás zóna elõírt értékeit (kapcsolja a zónát ki/be).
+1399;Ellenõrizze a készülék státuszát ( a LED-eket) és a hõmérsékletet. Hibaelemzésre használja a készülék kézikönyvét.%CrLf%Ellenõrizze a (Process.cfg) folyamatparaméter fájlt és szükség esetén a megadott paramétereket korrigálja.%CrLf%A folyamatparaméter fájlt töltse be a vezérlésbe.
+1400;Ellenõrizze a kapcsoló mechanikai és elektromos mûködését. 
+1401;Illessze a túlvezérlést vagy az elõírt értéket a készülékre.
+1402;\\appldisk\application\control\config\localsystem.cfg fájlt nyissa ki és a [SOM].simulateEndpointMapping paramétert állítsa 0-ra
+1403;Ellenõrizze az SPS konfigurációt.
+1404;Zárja le a motortartó féket.
+1405;Az SPS és Rpc állomáson ellenõrizze a bemeneti tároló feltöltési szintjét és méretét
+1406;- Ellenõrizze a hibát a HMI és PHG egységeken%CrLf%- Indítsa újra a vezérlést%CrLf%- ha nem talál hibát, státuszjelentés készül, a jegyzõkönyveket készítse el és az applikációval együtt küldje el a vezérlés szállítójának.%CrLf%
+1407;A kiválasztást a megjelenítésben az Rpc folyamatban lévõ robot jele lezárja. Ellenõrizze az SPS-ben és a megjelenítésben lévõ reteszelést.
+1408;Ellenõrizze a festéket a MultiK-táblázatban és korrigálja az alkotóelemeket
+1409;- Zárjon le minden megnevezett szelepet%CrLf%- (esetleg öblítsen ki minden fontos tömlõt)%CrLf%- Csatlakoztassa a lineáris egységez%CrLf%- Újból nyissa ki a kívánt szelepet%CrLf%
+1410;- Ellenõrizze a nyomásellátást%CrLf%- Ellenõrizze a csatlakozó és leválasztó szelepek nyomását és kopását%CrLf%- Ellenõrizze a csatlakozó és leválasztó szelepek nyomáskapcsolóit%CrLf%- A lineáris egységet kézzel vigye egy definiált állapotba
+1411;A KeTop-on a sebesség túlvezérlést állítsa vissza 100%-ra.
+1412;Nyugtázza és esetleg újra tanítsa be.
+1413;Illessze az idõprogramot és csökkentse a lakkmennyiséget a visszavezetésben
+1414;- Válassza le a gépet%CrLf%- Ellenõrizze az ütemtávolságot
+1415;Az üzemzavar elhárítása után a kapcsolót vigye vissza kiindulási állásba.
+1416;Válassza ki a megfelelõ visszajelzés típust, ellenõrizze a hardver végpont adatokat a process.cfg fájlban
+1417;Értékelje ki a további hibaüzeneteket, hogy azonosítsa azt a részegységet, amely a cfg-olvasást negatívan nyugtázta.
+1418;Az ActionPointOffset megnevezett akciópontjainak konfigurációját korrigálja a BCU.cfg fájlban és indítsa újra a vezérlést.
+1419;Minden gépet vigyen alapállapotba és/vagy mûködtesse a továbbítás engedélyezés kapcsolóját.
+1420;Ellenõrizze a "WAIT_PAINTPOSITION" parancs átvitt értékeit a mozgatóprogramban.
+1421;Korrigálja a hibaosztályt vagy használja az RcuSetMessageOnce funkciót az üzenet elhelyezésére.
+1422;Ellenõrizze a SercoName változót az Mfb.cfg fájlban a sercosx.cfgr fájlban lévõ meghajtás névvel együtt.
+1423;Ellenõrizze a szórófej fájlt, ellenõrizze a 3DOnSite egység paraméterezését.
+1424;A mozgásprofilok módosításával csökkentse az érintett tengely sebességét.
+1425;A megfelelõ típushoz definiáljon egy projektnevet és/vagy egy programnevet és gyõzõdjön meg arról, hogy ehhez a típusszámhoz betanított egy profilt
+1426;Ellenõrizze és szükség esetén illessze a busz futási idõ és a lakk repülési idõ cfg-paramétereit valamint ellenõrizze a szelep kapcsolási idejét.
+1427;Küldje el a vezérlés szállítójának a hibaüzenetet valamint a hibaelemzéshez szükséges összes jegyzõkönyvet.
+1428;1. Kemro.Manager: Adja meg a profibusz mester tulajdonságait, (név="ProfibusMaster") és a profibusmaster.cfgr fájlt másolja át.%CrLf%%CrLf%2. appldisk\application\control\config\profibusmaster.cfgr: Adja meg a paraméter nevet="ProfibusMaster".
+1429;1. Kemro.Manager: Adja meg a profibusz szolga tulajdonságait, (név="ProfibusSlave") és a profibusslave.cfgr fájlt másolja át.%CrLf%%CrLf%2. appldisk\application\control\config\profibusslave.cfgr: Adja meg a paraméter nevet="ProfibusSlave".
+1430;A kifogásolt tengelyt vigye referencia pozícióba, szükség esetén állítsa be újra.
+1431;Ellenõrizze a beállítás kiindulási pozícióját, ill. indítsa el a beállítási folyamatot a beállító érzékelõre.%CrLf%szükség esetén ellenõrizze, hogy a konfigurált beállítási út ("masteringdelta") konfigurációja megfelelõ-e.
+1432;Ellenõrizze a tengely véghelyzet konfigurációját. "MachineData.cfg" fájl, a vonatkozó tengely "minPos" paramétere.%CrLf%A konfigurált értékeket egyenlítse ki az S-0-0050 meghajtás paraméterrel.
+1433;Ellenõrizze a tengely véghelyzet konfigurációját. "MachineData.cfg" fájl, a vonatkozó tengely "maxPos" paramétere.%CrLf%A konfigurált értékeket egyenlítse ki az S-0-0049 meghajtás paraméterrel.
+1434;A tartólevegõ reaktiválásához váltson egy másik üzemmódra és a csatlakozásban ismét kapcsoljon tisztításra.
+1435;A robotot elõször vigye az Inbox rögzített pozícióba és utána nyissa ki a hígító szelepét.
+1436;Ellenõrizze az érzékelõ kapcsolási távolságát
+1437;- Ellenõrizze a mozgatóprogramot, hogy a RECEIVE(VISION_REL, Data) elé beolvasta-e a RECEIVE(VISION, Data)%CrLf% adatot.%CrLf%- Szakítsa meg a mozgatóprogramot, korrigálja és olvassa be újra.
+1438;- A robotot szabadon mozgassa T1 üzemmódban%CrLf%- Ellenõrizze, nem sérült-e a kábelezés%CrLf%- Ellenõrizze a robot mozgását és az ütközésvédelem levegõnyomását
+1439;Korrigálja a tanítóprogramot, vegye fel a kapcsolatot a vezérlés gyártójával vagy növelje a TRcuPaintChecker.tts fájlban a cMaxNoOfPoints állandót.
+1440;Módosítsa úgy az EcoTalk-programot, hogy a mérésirány illeszkedjen a konfigurációhoz vagy módosítsa a konfigurációt.
+1441;Ellenõrizze az EcoTalk-programot a BK_START és a BK_FINISH között, korrigálja és töltse be újra.
+1442;A kemro.manager fájlban az FX775A:0/PNIO:0/PNIOSLAVE:0 szolgára írjon be egy nevet és indítsa újra a vezérlést
+1443;Ellenõrizze a paraméterezést a 3DOnSite-folyamat konfigurációban (Process.cfg fájl) és szükség esetén illessze.%CrLf%Ellenõrizze a tanítóprogramot.
+1444;Nyugtázza a hibát és a következõ leválasztásnál ügyeljen arra, hogy a dugattyú ne az aktív dugattyú legyen.
+1445;A megjelenítésen válasszon ki legalább egy dugattyút.
+1446;- Ellenõrizze az aktuális applikációs térfogatot%CrLf%- Ellenõrizze az elõkészítést
+1447;Ellenõrizze a paraméterezést a 3DOnSite-folyamat konfigurációban (Process.cfg fájl) és szükség esetén illessze.%CrLf%Kapcsolja ki a tanítást, hogy törölje a megtanult értékeket és újraindítsa az elõnyomás tanítását.
+1448;Nincs
+1449;Válassza ki a fõtût a megjelenítésben
+1450;A megnevezett készüléket a reteszelésnek megfelelõen vezérelje
+1451;Öblítse ki a csatlakozási helyet
+1452;Kapcsolja be a levegõellátást vagy öblítse ki a csatlakozási helyet
+1453;Ellenõrizze az applikátortorony megnevezett alkotóelemeit
+1454;- Ellenõrizze a hálózati csatlakozást%CrLf%- Indítsa újra a megjelenítést%CrLf%- Indítsa újra a robotvezérlést
+1455;Korrigálja a tömlõkompenzáció paraméterét
+1456;Korrigálja a paramétert
+1457;Ellenõrizze a különleges festékrendszer engedélyezését és szükség esetén szakítsa meg az aktuális megmunkálást
+1458;Korrigálja az idõprogramot
+1459;Törölje az állomást (Clear FiFo) és folytassa. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítóival
+1460;Korrigálja a típus- és festékinformációt és végezzen újra letöltést
+1461;Az idoprogramot ellenorizze a 3DOnsite segítségével, szükség esetén újra hozza létre
+1462;Ellenõrizze a teljes programlefutást, módosítsa a idõprogram indítás tulajdonságát
+1463;Cserélje le a készülék hardverét
+1464;Ellenõrizze a NoOfDegradeModes paramétert a BCU.cfg fájl [DegradeMode] szakaszában. Ha megfelelõ paramétert választott, vegye fel a kapcsolatot a vezérlés gyártójával
+1465;Állítsa igaz értékre az EnableDegrademode paramétert a BCU.cfg fájl [Degrade] szakaszában. További paramétereket kell konfigurálni a BCU.cfg fájlban. Vegye fel a kapcsolatot a vezérlés gyártójával.
+1466;Ellenõrizze a robothajtás engedélyezésének feltételeit. %CrLf%Nyugtázza, ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítóival.
+1467;A robotot a megjelenítõn vagy a tanító panelen vigye megkerülõ helyzetbe és indítsa újra a szellem üzemet.
+1468;Ellenõrizze a BCU.cfg fájlban az alkatrész detektálás paraméterét. Ellenõrizze a paramétert és a jeladót az SPS állomáson. 
+1469;Ellenõrizze a SKIDLENGTH paramétert a BCU.cfg fájl [StationData] szakaszában. Ellenõrizze az SPS állomás jelforrását.
+1470;Ellenõrizze, tanító üzemmódban a vezérlõprogram betölthetõ-e a PHG-n át.%CrLf%Ellenõrizze a TIMEOUTMOTIONREL paramétert a BCU.cfg fájlban.%CrLf%Ha a program tanító üzemmódban betölthetõ és a hiba újból fellép, vegye fel a kapcsolatot a vezérlés szállítójával.
+1471;A robotot a megjelenítés vagy a PHG használatával vigye alaphelyzetbe. Ha a robotot alaphelyzetbe vitte és a hiba újból%CrLf%fellép, vegye fel a kapcsolatot a vezérlés szállítójával.
+1472;Nyugtázza, ellenõrizze a továbbító megállási pozícióját a típus hozzárendelésben és a programindítás pozícióját a BCU.cfg fájlban.
+1473;Ellenõrizze az aktuális kontúr szórófej fájljait és szükség esetén a 3donsite használatával vagy másolással hozza létre.
+1474;Belsõ vezérlési hiba, válassza le a robotot és vegye fel a kapcsolatot a vezérlés gyártójával.
+1475;Belsõ hiba, ellenõrizze a karosszéria adatokat az Rpc-ben és az SPS-ben, szükség esetén indítsa újra az Rpc-t, hogy végrehajtsa a karosszériatároló újrainicializálását. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítójával.
+1476;Ellenõrizze a paramétert a BCU.cfg fájl [PartDetect] szakaszában. Ellenõrizze a jelforrást az SPS állomáson. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés gyártójával.
+1477;Ha egy szinkronizáló jelet kell fogadni, állítsa be a BCU.cfg fájl [PartDetect] szakaszában a paramétereket. Ha nem kell szinkronizáló jelet fogadni, akkor ellenõrizze a jelutat és a paraméterezést %CrLf%az-SPS állomáson.
+1478;Illessze a paraméterezést a típus hozzárendelés táblázatban és válassza ki a karosszéria adatkészletet.
+1479;Ellenõrizze a paraméterezést az SPS állomáson és szükség esetén illessze. Válassza ki a karosszéria adatokat.
+1480;Illessze a paraméterezést a festék hozzárendelés táblázatban és válassza ki a karosszéria adatkészletet.
+1481;Illessze a paraméterezést a többkomponens táblázatban és válassza ki a karosszéria adatkészletet.
+1482;Ellenõrizze a többkomponens táblázat paraméterezését. A Processbuilder segítségével ellenõrizze a megengedett számú komponens paraméterezését. 
+1483;Ellenõrizze a paraméterezést a típus hozzárendelés táblázatban és szükség esetén végezze el a letöltést.
+1484;Ellenõrizze a paraméterezést a BCU.cfg fájlban. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés gyártójával.
+1485;Az SPS állomásról jövõ adatkészlet nem teljes. Ellenõrizze a paraméterezést, ill- az adatáramlást az állomásvezérlésen.f
+1486;A szellemmaszkban válasszon ki egy körvezeték festéket.
+1487;Ellenõrizze a típus hozzárendelés táblázatban a továbbító leállás paraméterezését.%CrLf%Ellenõrizze a programindítás pozíció paraméterezését a BCU.cfg fájlban.%CrLf%Ellenõrizze a festékcserében résztvevõ idõprogramokat.
+1488;Ellenõrizze a festékcserében résztvevõ idõprogramokat.
+1489;Ellenõrizze az SPS állomás engedélyezését.
+1490;Nyugtázza, ellenõrizze a továbbító leállási pozícióját a típus hozzárendelés táblázatban. Az aktuális karosszéria már nem lakkozható.
+1492;Ellenõrizze az SPS és az Rpc paraméterezését. Nyugtázzon, ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítóival.
+1493;Amikor a megjelenítésen keresztül adja a feladatot: A robotot elõször vigye az UeberGunbox pozícióba.%CrLf%Amikor idõprogramból vagy kontúrprogramból adja a feladatot: Módosítsa az idõprogramot, ill. a tanító programot.
+1494;Öblítés és alaphelyzet után a megjelenítésen csak rögzített pozíció menetek indíthatók.%CrLf%Nyugtázza.
+1495;A karosszériát vigye ki a zónából vagy, ha nincs ütközésveszély, indítsa a rögzített pozíciót a PHG használatával.
+1496;A robotot vigye alaphelyzetbe. Ezután vigye a kívánt rögzített pozícióba.
+1497;Nyugtázza, a robotot vigye az Inbox rögzített helyzetbe vagy alaphelyzetbe.
+1498;Nyugtázza, a robotot vigye az Abovebox rögzített helyzetbe vagy alaphelyzetbe.
+1499;Nyugtázza, a robotot vigye az Abovebox rögzített helyzetbe.
+1500;A folyamat elõkészítését kézi üzemmódban végezze. %CrLf%Ha az elõkészítést T2 üzemmódban kell elvégezni, távolítsa el az idõprogramból a rögzített pozíció menetet.
+1501;A hibát hárítsa el és indítsa újra a referenciamenetet.
+1502;Várjon, amíg a referencia beállítás befejezõdik.
+1503;Vezérlöt referenciálni.%CrLf%2) Vezérlés újbóli indítása, ezzel a referenciavizsgálatot megismételve.
+1504;Illessze a paramétert.
+1505;Várjon, amíg a referencia menet befejezõdik.
+1506;Cserélje le az alkatrészt és a kopásszámlálót állítsa vissza alapértékre.
+1507;Az alkatrészt rövid idõn belül cserélje le és a kopásszámlálót állítsa vissza alapértékre.
+1508;Ellenõrizze és korrigálja a paraméterezést.
+1509;Ellenõrizze az ütközés okát és hárítsa el.
+1510;Ellenõrizze az okát és hárítsa el.
+1511;Ellenõrizze a proporcionális szelepet.
+1512;Ellenõrizze az anyagnyomás szabályozót és a nyomásérzékelõt.
+1513;Ellenõrizze a konfigurációt (elõírt érték, tûrések) és szükség esetén korrigáljon.%CrLf%Indítsa el a cirkulációt.
+1514;Ellenõrizze a beállított határértéket.
+1515;Ellenõrizze az egyedi-, ill részriasztást.
+1516;Ellenõrizze, ill. nyomja meg a motorvédõ kapcsolót.%CrLf%Ellenõrizze a forgásirányt és szükség esetén a csatlakozódugón cserélje fel a pólusokat.%CrLf%Ellenõrizze a fázisokat és az elõbiztosítékokat.
+1517;Kézi feltöltésnél: Töltse fel a hõátvivõ folyadékot.%CrLf%Automatikus feltöltésnél: Nyissa ki a hûtõvíz befolyást és várja ki a feltöltõdést.%CrLf%Automatikus feltöltésnél a feltöltõ mágnesszelep kinyit.
+1518;Nincs megadva a legkisebb áramlás a temperáló készülékben.%CrLf%Ellenõrizze az átfolyást (esetleg tisztítsa meg a szennyfogót).%CrLf%Ellenõrizze a zárószelepet, ill. a golyóscsapot és szükség esetén nyissa ki.
+1519;Nincs megadva a fogyasztón lévõ hõelvezetés.%CrLf%Ellenõrizze a beállított határértéket.%CrLf%A fûtés visszakapcsol, miután a rendszer 1-2 °C-kal lehûlt.
+1520;Ellenõrizze az átfolyást a temperálókészülékben.%CrLf%Túl kevés a hõleadás a melegítõben (esetleg vízkõ lerakódás van a fûtõelemen).%CrLf%Ellenõrizze a beállított határértéket.%CrLf%Oldja ki a reteszelést a temperálókészüléken lévõ <Enter> gomb megnyomásával
+1521;Ellenõrizze a konfigurációt és szükség esetén hárítsa el az üzemzavart.
+1523;Ellenõrizze a csatlakozást és adott esetben a fõkapcsolót a végkészüléken vagy a résztvevõn.%CrLf%Ellenõrizze a reteszeléseket.%CrLf%Indítsa újra a vezérlést. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítójával.
+1524;Ellenõrizze az egyedi készülék beállítását. A hûtés az egyedi készüléken lévõ gombbal be-, ill. kikapcsolható.
+1525;Töltse fel a hûtõvíztartályt és ellenõrizze a tömlõket.
+1526;Ellenõrizze a folyamat jegyzõkönyvében, mely idõprogramok nem tölthetõk be és ezeket korrigálja.
+1527;Nincs. A megadott leválasztások visszahozására szolgáló egyik idõprogram a forráshelyén automatikusan elindul.
+1528;Ellenõrizze az elõírt értékeket a szórófej táblázatban és a túlvezérlés tényezõket, szükség esetén illessze.%CrLf%A program végén végezze el a folyamat kalibrálását és ellenõrizze.
+1529;Készítse el az idõprogramot
+1530;Ellátási csoportonként legalább egy csatornát aktiváljon.
+1531;Ellenõrizze a rendszer tömítettségét
+1532;Ellenõrizze a rendszert
+1533;Ellenõrizze az alkatrészt az üzenetnek megfelelõen
+1534;Ellenõrizze a paramétert a process.cfg fájlban és korrigálja
+1535;Hárítsa el a rövidzárat
+1536;Ellenõrizze, hogy a tisztítókészüléken lévõ fûtõhuzal a két kontaktus között rendben van-e.%CrLf%Szükség esetén helyezzen be új huzalt.
+1537;Ellenõrizze az öblítési- és az applikációs folyamat idõbeli lefutását, a billentésre szolgáló makrót a tanítóprogramban tolja el a megfelelõ helyre.
+1538;Ellenõrizze a paraméterezést a 3DOnSite-folyamat konfigurációban (Process.cfg fájl) és indítsa újra a vezérlést.%CrLf%Ha a hiba újra fellép, generálja újra a kódot a ProcessBuilder használatával, kompilálja és indítsa újra a vezérlést.%CrLf%Szükség esetén vegye fel a kapcsolatot a vezérlés szállítójával.
+1539;Ellenõrizze a forgásfelügyelet érzékelõjét.%CrLf%Ellenõrizze a pneumatikát (nincs vagy csekély a levegõbevezetés a levegõhajtáshoz).%CrLf%Ellenõrizze a levegõhajtást és a sablonokat, nem nehéz-e a mozgatásuk.%CrLf%Ellenõrizze a paraméterezést a 3DOnSite-folyamat konfigurációban (Process.cfg fájl).
+1540;Ellenõrizze a forgásfelügyelet érzékelõjét.%CrLf%Ellenõrizze a pneumatikát (túl nagy a levegõbevezetés a levegõhajtáshoz).%CrLf%Ellenõrizze a levegõhajtást és a sablonokat, könnyû-e a mozgatásuk.%CrLf%Ellenõrizze a paraméterezést a 3DOnSite-folyamat konfigurációban (Process.cfg fájl).
+1541;Ellenõrizze, nincs-e valaki a biztonsági területen belül. Nyugtázza a hibát.
+1542;Újra mûködtesse a kulcsos kapcsolót, szükség esetén nyugtázza a hibát.
+1543;Nyugtázza a hibát. Újból válassza a T2-üzemindítást.
+1544;- Ellenõrizze, miért kapcsolt a vészleállítás.%CrLf%- Ha nem áll fenn veszély, vigye a vészleállító kapcsolót OK állásba, nyugtázza a hibát.
+1545;A hiba akkor nyugtázható, ha a külsõ riasztás már nem áll fenn.
+1546;Olvassa el a részletes hibaüzenetet. Nyugtázza a hibát.
+1547;Válassza ki a robotot a PHG-re, azután a kulcsos kapcsolóval újra aktiválja a tanító üzemmódot.
+1548;Teljesítményt kapcsolt a mozgatás meghajtásához.
+1549;Kapcsoljon teljesítményt a folyamathajtásra (pneumatika BE).
+1550;Kézzel vigye be az adatokat a kiválasztó maszk használatával.
+1551;Újból rögzítse a karosszériát, azután nyugtázza a hibát és folytassa a megmunkálást. Figyelem: fokozott ütközésveszély.%CrLf%Esetleg a robotot vigye alaphelyzetbe (pl. T1-be) és utána vigye ki a karosszériát.
+1552;Állítsa le az állomást és a robotot válassza le annak érdekében, hogy megakadályozza a robot elindulását és ütközését.
+1553;Távolítsa el a makrót vagy a konfigurációban [RC.KINEMATIC:0.VMT_BK] paraméterezze a pályakorrekciót.
+1554;Távolítsa el a makrót vagy a konfigurációban [RC.KINEMATIC:0.ObjMeasure] paraméterezze a 3D-helyzetmérést.
+1555;A pontokat úgy változtassa, hogy egy síkot határozzanak meg
+1556;A pontot az objektum koordinátarendszerben helyezze el
+1557;A makrót távolítsa el a tanítóprogramból vagy aktiválja a lépést a CONFIG3D-ben.
+1558;Mielõtt a makrót behívja a tanítóprogramba, futtassa le az INIT3DOBJECT makrót.
+1559;Módosítsa a végrehajtás sorrendjét a tanítóprogramban.
+1560;A karosszéria biztonsági okokból tovább nem mérhetõ és applikálható. Szakítsa meg a programot és a karosszériát vigye ki.
+1561;Ellenõrizze, hogy az érzékelõ be van-e kapcsolva és a felülettõl való távolsága a kapcsolási tartományon belül van-e.
+1562;Ellenõrizze a paraméterezést a VMT-BK-rendszeren
+1563;Korrigálja a tanítóprogramot és indítsa újra
+1564;Ellenõrizze a Fifo-adatokat az SPS-en és minden robotvezérlésen.%CrLf%Szükség esetén töröljön minden adatot (ClearFifo).
+1565;A kiválasztó ablak használatával keresse meg a hibás adatkészletet és cserélje le (pl. érvényes típusra vagy festékre, ill. "nincs applikáció" lehetõségre).
+1566;Kapcsolja be a nagyfeszültséget a kezelõpulton vagy válassza le az összes robot nagyfeszültségét.
+1567;Ellenõrizze a típus hozzárendelés táblázatot. Szükség esetén vigye be a hiányzó típust. Ezután az adatokat utólagos kiválasztással korrigálja.
+1568;Ellenõrizze a festék hozzárendelés táblázatot. Szükség esetén vigye be a hiányzó festéket. Ezután az adatokat utólagos kiválasztással korrigálja.
+1569;Kapcsolja be az égõt a kezelõpulton vagy válassza le az összes robot égõjét.
+1570;Várjon, amíg a különleges festékellátás a festéket elõkészíti, azután az adatkészletet utólagos kiválasztással korrigálja.%CrLf%VAGY: Az adatkészletet váltsa a "nincs applikáció" lehetõségre.
+1571;A karosszériát vigye ki a zónából. Ha egy hibás állapotot kell kezelnie (nincs karosszéria a zónában) törölje az adatokat (ClearFifo).
+1572;Zárja le a zóna befutását.
+1573;A zóna befutás reteszelésének kioldása elõtt a robotot vigye alaphelyzetbe.
+1574;Az állomást automatikus üzemmódban indítsa.
+1575;Válasszon ki legalább egy szellem adatkészletet.
+1576;Ellenõrizze a szellem-ütemtávolságot és szükség esetén korrigálja.
+1577;Fejezze be a szellemüzemet és engedélyezze a zóna befutását.
+1578;Nem engedélyezett különleges esetrõl van szó. Ezért a zónaadatokat törölni kell (ClearFifo).
+1579;A robotot vigye kalibráló pozícióba, azután indítsa el a szellemüzemet.
+1580;Minden kezelõ robotot válasszon le, azután indítsa a szellemüzemet.
+1581;Kapcsoljon át "kézi" üzemmódra.
+1582;Válasszon ki egy robotot a rögzített pozíció maszkra.
+1583;Válasszon ki egy célpozíciót a rögzített pozíció maszkra.
+1584;Ellenõrizze a másik robot pozícióját. Adott esetben a további hibaüzenetek felvilágosítást adnak a reteszelés pontos okáról.
+1585;Elõször az ajtónyitót vigye alaphelyzetbe.
+1586;Ellenõrizze, hogy mûködik-e a robotvezérlés (megjelenítés, PHG vagy távoli számítógép)%CrLf%Szükség esetén ellenõrizze a feldbuszt.
+1587;Értékelje a robot részletes hibainformációját. Szükség esetén az adatokat utólagos kiválasztással korrigálja.
+1588;Kézzel indítsa a mérést. Ellenõrizze a kamerarendszert.
+1589;Ellenõrizze a féket.
+1590;Vigye a berendezést kézi- vagy automatikus üzembe és kapcsolja be a meghajtásokat, hogy el lehessen végezni a vészöblítéseket.
+1591;Vigye a robotot a leválasztási területre.
+1592;A lekapcsolást szüntesse meg, azután a robotot újból válassza ki.
+1593;Várjon, amíg a többi robot lezárta a megmunkálást. Azután válassza ki a robotot.
+1594;Ellenõrizze, hogy a teljesítményt bekapcsolta-e. Olvassa el a részletes hibaüzeneteket. Ellenõrizze, nem hibás-e a meghajtás. Szükség esetén vegye fel a kapcsolatot a vezérlés szállítójával.
+1595;Válassza ki a robotot.
+1596;Nyugtázza a hibát és várjon, amíg az aktív rögzített pozíció menet befejezõdik. Szükség esetén szakítsa meg a rögzített pozíció menetet.
+1597;Vigye a robotot alaphelyzetbe
+1598;Az öblítési folyamat 5 percig tarthat. Ha a hibát ezután nem lehet nyugtázni, ellenõrizze a levegõellátást vagy a robotház tömítettségét.
+1599;Ellenõrizze minden robot adattartamát, hogy hihetõ-e, szükség esetén törölje az adatokat (ClearFifo).%CrLf%Vegye fel a kapcsolatot a vezérlés szállítójával.
+1600;Ellenõrizze a nyomáskapcsoló visszajelzését a biztonsági-SPS-en.
+1601;Válassza ki a robotot a megjelenítõn.
+1602;A festéktáblázatban minden ICC-csatornára vigye be a festékinformációkat a megfelelõ ellátási csoporttal együtt.
+1603;Nyomja meg a jóváhagyó gombot, ill. ellenõrizze hogy megtörtént-e minden tengely referencia menete (kijelzés a PHG pozíció maszkján)
+1604;Korrigálja a tanítóprogramot és a feljegyzés 2. indítása elõtt állítsa le az elõzõ feljegyzést.
+1605;Korrigálja a tanítóprogramot és elõször a TORQUEMONITOR( StartLogging ,???) egységet indítsa.
+1606;Korrigálja a tanítóprogramot és a tengely paramétert a TORQUEMONITOR( StopLogging ,???) makróban korrigálja.
+1607;Ellenõrizze az ES_PACDBImportRPC szerver konfigurációját az EcoScreen-PC-n. Ellenõrizze az EcoScreen-PC és a vezérlés csatlakozását.
+1608;Ellenõrizze az ES_PACDBImportRPC szerver konfigurációját az EcoScreen-PC-n. Ellenõrizze az EcoScreen-PC és a vezérlés csatlakozását.
+1609;Ellenõrizze az eredményfájl formátumát a vezérlésen. Nyugtázza a hibát és indítsa újra a programot. Ha a hiba újra jelentkezik, vegye fel a kapcsolatot a vezérlés szállítójával.
+1610;Ellenõrizze az eredményfájl formátumát a mérõkészüléken. Nyugtázza a hibát és indítsa újra a programot. Ha a hiba újra jelentkezik, vegye fel a kapcsolatot a vezérlés szállítójával.
+1611;Indítsa újra a vezérlést és a mérõkészüléket és ha a hiba újból jelentkezik, vegye fel a kapcsolatot a vezérlés szállítójával.
+1612;Definiálja a festéket és a típust az EcoScreen 3D-OnSite egységen és ha a hiba újból jelentkezik, vegye fel a kapcsolatot a vezérlés szállítójával.
+1613;Ha a tanítóprogramban olyan módosítást hajtott végre, amelyek befolyásolják a mérési pontok számát és koordinátáját (sebesség, indítás, pontok) nevezze ár a mérési programot az EcoScreen mérési program párbeszédablakában.
+1614;Ellenõrizze, ill. optimalizálja az elõzõ állomások lakkozási paramétereit.
+1615;Tanítóprogram, ellenõrizze az elõzõ állomás lakkozási paramétereit. Külön ellenõrizze, nincs-e lakkozási hiba a karosszérián.
+1616;Korrigálja a tanítóprogramot, ha a hiba újra jelentkezik, vegye fel a kapcsolatot a vezérlés szállítójával.
+1617;Korrigálja a tanítóprogramot és indítsa el a mérési sort az ACTIVATE_PAC(Enable) és ACTIVATE_PAC(OneShot) makróval.
+1618;Korrigálja a tanítóprogramot.
+1619;Engedélyezze és kapcsolja be a mérõkészüléket.
+1620;Kapcsolja be a mérõkészüléket és az EcoScreen egységen engedélyezze
+1621;Korrigálja a festék hozzárendelést az EcoScreen egységen.
+1622;Ha valódi mérõkészülék van jelen, korrigálja a konfigurációt.
+1623;Az applikációs menet elõtt végezzen egy mérési menetet.
+1624;Ellenõrizze a tanítóprogramot és/vagy ismételje meg a mérési menetet. Indítsa újra a tanítóprogramot.
+1625;A (BK_ACTION ill. BK_ACTION_DIRECT) mérési pontok közötti térbeli és/vagy idõbeli távolságot növelje meg és indítsa újra a programot.
+1626;A karosszériát nem szabad applikálni.
+1627;Ellenõrizze a státuszt a BK-számítógépen
+1628;Ellenorizze a paraméterezést a 3DOnSite-folyamat konfigurációban és szükség esetén illessze.
+1629;Ürítse ki a felfogótartályt.
+1630;Adjon meg érvényes illesztési tényezõt
+1631;Ellenõrizze a paraméterezést a 3DOnSite-folyamat konfigurációban (Process.cfg fájl) és szükség esetén illessze.%CrLf%Ellenõrizze a megadott hardvert.
+1632;Ellenõrizze az elõírt értéket és szükség esetén illessze.
+1633;Az örvényszabályozót a RESET-kapcsolóval állítsa alaphelyzetbe.%CrLf%Ellenõrizze az elektromos elemeket. Feszültségmentesítse a szabályozót.%CrLf%Indítsa újra a vezérlést. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítójával.
+1634;Ellenõrizze az érzékelõrendszert, a vezetékeket és szükség esetén a számlálókártyát, ill. az örvényszabályozót, ellenõrizze a paraméterezést.%CrLf%Hárítsa el az üzemzavart.
+1635;Ellenõrizze a fájlt vagy a PS3.exe fájl segítségével készítse el újra. A kalibráló fájlt a colorlst.da2 szövegfájl utolsó oszlopába vigye be.
+1636;A lézer túlhevülés esetén automatikusan lekapcsol. Ellenõrizze a hûtõkészüléket (átfolyás, vízszint, hõmérséklet). Ellenõrizze az átfolyás, vízszint és hõmérséklet jeleit. Ha a hûtõkészülék rendben van, indítsa újra a lézert a szoftverrel. Ha a hiba továbbra is fennáll, az áramellátás vagy a lézer lehet hibás. Vegye fel a kapcsolatot a vezérlés szállítójával.
+1637;Zárjon le minden olyan programot, amely ehhez a fájlhoz hozzáfér. Nyugtázza a hibát. Ha a hiba újra jelentkezik, vegye fel a kapcsolatot a vezérlés szállítójával.
+1638;Ellenõrizze és szükség esetén növelje az erõsítõ fokozatot, kapcsolja be a lézert, ellenõrizze a rétegvastagságot, ill. a mérési pontokat a tanítóprogramban, ellenõrizze a kábelt, ill. a detektort, vegye fel a kapcsolatot a vezérlés szállítójával. 
+1639;Csökkentse az erõsítõ fokozatot, ellenõrizze a detektort, ellenõrizze, szükség esetén módosítsa a környezeti feltételeket (erõs fény- vagy hõforrás). Ha ez nem segít: Vegye fel a kapcsolatot a vezérlés szállítóival/a Phototerm céggel.
+1640;Fejezze be a méroszoftvert a Phototherm-méro-PC-n, kapcsolja ki a méro üzemmódot és indítsa újra a méroszoftvert
+1641;Ellenorizze a kábeles összeköttetést a méro-PC és a lézeregység között. Nyugtázza a hibát és ha az továbbra is fennáll, vegye fel a kapcsolatot a vezérlés szállítóival/a Phototherm céggel.
+1642;Aktiválja a mérõkészüléket vagy hárítsa el a hibát.
+1643;Korrigálja a konfigurációt, pl. ProgStart = 31, ill. ProgStop = 32 a c50Rcu.cfg fájlban
+1644;A felesleges projekteket válassza le.
+1645;A hibát nyugtázza a meghajtásszabályozó készüléken
+1646;Nyugtázza, ismételje meg a beállítást. Ha a hiba újra fellép, vegye fel a kapcsolatot a vezérlés szállítóival.
+1647;Végezze el a tengelyek referencia beállítását vagy a finombeállításnál válassza ki a tengelyek koordinátarendszerét.
+1648;Ellenõrizze, hogy minden tengely referencia beállítása megtörtént-e, nyugtázza a hibát és nyomja meg a jóváhagyó gombot.
+1649;Vagy csak a tengelyek finombeállítását végezze el, vagy ellenõrizze és korrigálja a konfigurációt, ezután indítsa újra a vezérlést.
+1650;Fejezze be a futó tanítóprogramot és csak azután indítsa el az újat.
+1651;Nyugtázza a hibát
+1652; Nyugtázza a hibát és nyomja meg a jóváhagyó gombot.
+1653;Nyugtázzon és folytassa a programot
+1654;Szakítsa meg a programot. A robotot T1/T2 üzemmódban vigye alaphelyzetbe.
+1655;Az [RC.KINEMATIC:0.VirtualWall] special = 1 konfiguráció beállításnál T1 üzemmódban vigye a robotot a megengedett munkaterületre.
+1656;Ellenõrizze a tengelyek pozíció értékeit és hasonlítsa össze a robot állásával.
+1657;A kapcsolási pontot tolja el úgy, hogy az geometriailag a pályaszegmensen legyen, esetleg a kapcsolási parancsot a tanítóprogramban tolja el egy másik pályaszegmensre.
+1658;Ellenõrizze, hogy az alkatrészt megfogta-e. Ha igen, ellenõrizze a paraméterezést és szükség esetén az érzékelõ hardverét.
+1659;Ellenõrizze a paraméterezést.
+1660;Ellenõrizze, hogy az alkatrészt elvesztette-e. Ha nem, ellenõrizze a paraméterezést és szükség esetén az érzékelõ hardverét.
+1661;Ellenõrizze, hogy van-e ütközés. Ha nem, ellenõrizze a paraméterezést és szükség esetén az érzékelõ hardverét.
+1662;Dolgozza át a tervet.
+1663;Kalibrálja az érzékelõt.
+1664;Ellenõrizze a tanítóprogramot.
+1665;Ellenõrizze, hogy van-e ütközés. Ha nem, ellenõrizze a paraméterezést.
+1666;Ellenõrizze, hogy az alkatrészt megfogta-e. Ha igen, ellenõrizze a paraméterezést.
+1667;Végezzen szemrevételezéses ellenõrzést, mivel elõtte megállapította a paraméterben szereplõ forgatónyomaték túllépését.
+1668;Illessze a túlvezérlést vagy az elõírt értéket a készülékre.
+1669;A kívánt sorrendet a triggerpontok újratanításával vagy az Ecotalk-programban végzett szortírozással hozza létre.
+1670;Ellenõrizze a triggerpontot és a mozgáspályát és esetleg tanítsa újra.
+1671;Távolítsa el a derékszögû mozgásokat a tanítóprogramból
+1672;Csökkentse a kapcsolások számát (GUN, SETBRUSH, SETPROCESSCOMMAND, ...) erre a szegmensre, vagy a pályaszegmenst úgy ossza fel egy kiegészítõ pályaponttal, hogy a kapcsolást mindkét új szegmensre elossza.
+1673;Adja meg a pontot a tárgykoordinátákban, szakítsa meg (TRACKING(Off)) vagy fejezze be (TRACKING(finished)) a követést
+1674;Hozza létre a beírást a típuslistában és töltse be a vezérlésbe
+1675;Hasonlítsa össze a típuslistában szereplõ projekt- és programneveket a vezérlésben lévõ projekt és programnevekkel
+1676;Ellenõrizze a megjelenítõ rendszer kezelõ számítógépén a hibaüzeneteket.
+1677;Módosítsa a konfigurációt és indítsa újra a vezérlést vagy dolgozza át a tanítóprogramot.
+1679;Ellenõrizze a készülék dokumentációját.%CrLf%Esetleg vegye fel a kapcsolatot a készülék gyártójával.
+1680;Gondoskodjon hûvösebb környezetrõl vagy csökkentse a terhelést.
+1681;Ellenõrizze az összekötõ vezetékeket, ill. a hardvert és szükség esetén cserélje le.
+1682;Ellenõrizze a tanítóprogramot, szükség esetén növelje a porlasztó és karosszéria közötti távolságot.%CrLf%Ellenõrizze a HS-kábelt.
+1683;Ellenõrizze a feszültségellátást, szükség esetén állítsa be a hálózati tápegységet.
+1684;Ellenõrizze a szórófej táblázatot, az idõprogramokat, ill. a túlvezérléseket.
+1685;Ellenõrizze a táplevegõ nyomását.
+1686;Ellenõrizze a hardvert, szükség esetén cserélje le
+1687;Növelje a kapcsolási pontok távolságát a SETPROCESSCOMMAND(eVisionTrigger, ...) parancs használatával a tanulóprogramban.
+1688;A tanítóprogramban indítsa el a mérõprogramot (SET-Makro)
+1689;Ellenõrizze a megjelenítõ számítógépet és az összekötõ kábelt.
+1690;A megjelenítõ számítógépen ellenõrizze a hibaállapotot.
+1691;Vigye ki a karosszériát applikáció nélkül.
+1692;A projektet a PHG-n válassza le. Indítsa újra a beállítást.
+1693;A tengelyt helyezze a jelölésre és újból állítsa be
+1694;Ellenõrizze, hogy a mesterszerszámot megfelelõen csavarozta-e fel. Ellenõrizze a beállításnál a sebességet.
+1695;Optimalizálja a tanítóprogramot, hogy megakadályozza a határoló befolyását és ezzel a lakkozási sebesség csökkenését.
+1696;Cseréljen szerszámot
+1697;Csak a multipumpánál: A csatornaazonosító elrendezi az aktuális blokkot a szivattyúcsúszás-kompenzáció paraméterezésével (a process.cfg fájlban) a multipumpa megfelelõ csatornájához/eleméhez. Ekkor csak az 'a','b','c','d','e','f','g' értékek megengedettek. A multipumpa minden csatornája/eleme csak egy paraméterekkel ellátott blokkhoz rendelhetõ.
+1698;Vizsgálja felül a konfigurációt és indítsa újra a vezérlést
+1699;Indítsa újra a vezérlést, a hiba újbóli fellépésekor vegye fel a kapcsolatot a vezérlés gyártójával
+1700;Ellenõrizze a megadott komponenseket és utána próbálja meg újra.
+1701;Ellenõrizze a konfigurációt, ill. a készüléknevet és szükség esetén korrigáljon.
+1702;Ellenõrizze a vonatkozó kapcsolószekrény tápfeszültségét és szükség esetén hárítsa el az üzemzavart.
+1703;Ellenõrizze a vonatkozó eternet összeköttetést és szükség esetén hárítsa el az üzemzavart.
+1704;Az ActionPointOffset megnevezett akciópontjainak konfigurációját a túllógás mértékének figyelembe vételével korrigálja a BCU.cfg fájlban és indítsa újra a vezérlést.
+1705;Ellenõrizze a festék hozzárendelés táblázatot, ill az adatáramlást az állomásvezérlésen
+1706;Az applikálótornyot vigye felsõ végállásba
+1707;Korrigálja a paramétert
+1708;Korrigálja a tanítóprogramot
+1709;- Ellenõrizze a busz összeköttetést.%CrLf%- Indítsa újra az RPC-vezérlést.%CrLf%- Indítsa újra az SPS-vezérlést.
+1710;Ellenõrizze a paraméterezést és a sablonokat.
+1711;Ellenõrizze a karosszéria továbbítási pozícióját, ill. a jelforrást
+1712;Az idõprogramot a következõ karosszéria után hajtja végre a rendszer
+1713;Ellenõrizze a hálózati tápegységet
+1714;A hibát a 3DOnsite egységgel korrigálja és újból töltse le.
+1715;Ellenõrizze a sablon és az iniciátor pozícióját.
+1716;Ellenõrizze a kuplung vezérlését kézi üzemmódban (az MMI-n), ill. az idõprogramban.
+1717;A 3donsite egységben készítse el a típus hozzárendelést és mentse el
+1718;Ellenõrizze a HMI kommunikációt
+1719;Ellenõrizze a paraméterezést az idõprogramban.
+1720;- Korrigálja az EcoTalk-programot.%CrLf%-Korrigálja az EcotalkVariables.ttp fájlt.
+1721;Ellenõrizze a kuplungot: szoftver (vezérlés idõprogramban / KÉZZEL) huzalozás, mechanika
+1722;Keresse meg a hiba okát a pórusfelismerõ (SmartRay) PC-n
+1723;Módosítsa a keresõmenet tanítását
+1724;Illessze a tanítóprogramot. A varratvizsgálat indítását a pályán korábban végezze el.
+1725;Illessze a tanítóprogramot. A varratvizsgálat befejezése a pályán késõbb legyen.
+1726;Fejezze be a tanítóprogramot. Ha a hiba többször elõfordul, vegye fel a kapcsolatot a vezérlés gyártójával.
+1727;Távolítsa el a makrót vagy a konfigurációban [RC.KINEMATIC:0.SmartRay] paraméterezze a SmarRay mûködését.
+1728;Ellenõrizze a továbbító impulzusok mérésére és átvitelére szolgáló hardvert.
+1729;A teljesen konfigurált AAd.dat fájlt a projekttárolóból másolja a megnevezett könyvtárba és indítsa újra a számítógépet
+1730;Ellenõrizze az asztalt.
+1731;Korrigálja a hibát az SPS-programban
+1732;Javítsa meg a szerszámfejet
+1733;Ellenõrizze a szerszámot és a csatlakoztató berendezést. A szerszámot kézzel csatlakoztassa vagy válassza le
+1734;Ellenõrizze a megjelenítés konfigurációját és egyenlítse ki az RPC-vel.
+1736;Váltson üzemmódot. Ismételje meg a törlést.
+1737;Egy SET_??? egységet mindig fejezzen be egy RECEIVE_??? egységgel, mielõtt behelyezne egy új SET_??? parancsot a folyamatba. Emellett ügyeljen a parancs idõbeli megmunkálására (MainRun, PreRun, Stopp).
+1739;Ellenõrizze, nem szivárog-e a rendszer.
+1740;Ellenõrizze a megadott iniciátort.
+1741;Ellenõrizze, hogy az idõprogram végrehajtása elõtt az EcoTalk-programban behívja-e a nagyfeszültség lekapcsolására szolgáló parancsot.
+1742;Gyõzõdjön meg arról, hogy a karosszériát a paraméterben szereplõ tartományba pozícionálta-e.%CrLf%Ügyeljen a léptetési hibára.%CrLf%Illessze a konfigurációban szereplõ határokat.
+1743;- Ellenõrizze, nincs-e szivárgás, szükség esetén hárítsa el a problémát.%CrLf%- Ellenõrizze, nincs-e huzalszakadás a szivárgásérzékelõnél.
+1744;Tanítsa be újra a pozíció(ka)t.
+1746;Értékelje a kísérõ hibaüzenetet.
+1747;Ahhoz, hogy a sikertelen alkatrész ellenõrzésnél vissza tudjon állni, a pályát vigye elõször CONT-üzembe.
+1748;Cserélje le a harangtányért azonnal és a turbinát a következõ lehetséges alkalommal.
+1749;- Adja meg a hiányzó elõírt értékek paramétereit és töltse le a módosított szórófej táblázatot%CrLf%- A konfigurációban kapcsolja ki a hiányzó szórófej elõírt értékek felügyeletét
+1750;- Ellenõrizze a lengõgörgõ levegõnyomását%CrLf%- Ellenõrizze az applikáció sebességét%CrLf%- Ellenõrizze a motor mozgását
+1751;- Szabadon mozgassa a szerszámot%CrLf%- Billentse vissza az ütközésvédelmet
+1752;Az orsó felsõ részérõl szedje le a ragasztószalag maradványokat
+1753;Ellenõrizze a pályaprogramot
+1754;Cserélje le a ragasztószalagot
+1755;- szalagszakadásnál újra vezesse be%CrLf%- Ellenõrizze az applikálószalagot
+1756;Korrigálja a paramétert
+1757;- Ellenõrizze az idõprogramot%CrLf%- Ellenõrizze, hogy a kefe blokkolt-e%CrLf%- Ellenõrizze az iniciátort
+1758;- Ellenõrizze az idõprogramot%CrLf%- Ellenõrizze az iniciátort
+1759;Kapcsolja ki az SCU-t vagy szakítsa meg a buszkommunikációt az SPS-hez.
+1760;Végezze el a TrackingEndPosition korrekcióját
+1761;Törölje minden meghajtás kinX.driveX.ref fájlját, azután indítsa újra a Windows operációs rendszert.
+1762;Korrigálja a Process.cfg fájlban a szimulációs értékeket. 
+1763;Szakítsa meg az idõprogramot. Pozícionálja az LCC-t. Töltse be újra.
+1764;- Ellenõrizze az EcoTalk-parancsban a változó beírási módját.%CrLf%- Ellenõrizze, hogy létezik-e a változó az EcoTalk parancsban.
+1765;Ellenõrizze és csökkentse az elhelyezni kívánt rendszerváltozók számát a mozgatóprogramban.
+1766;Válassza ki a porlasztót
+1767;Ellenõrizze a fordítókengyel állását, ill. mozgassa a megjelenítõ használatával.%CrLf%Ha a fordítókengyelnek középsõ állásban kell lenni, ellenõrizze az elektromos visszajelzést.
+1768;- Ellenõrizze a kiválasztott erõsítés értéket az EcoTalk-Befehl parancsban.%CrLf%- Ellenõrizze a nyúlásmérõ bélyegek paraméterezését.
+1769;Korrigálja az LCC-elrendezést a PCUx.cfg fájlban.
+1771;Aktiválja a szivárgásfelügyeletet PCUx.cfg fájlban
+1772;Hárítsa el a szivárgást és nyugtázza a hibát
+1773;Ellenõrizze a vezérlõszelepet és a megadott iniciátorokat.
+1774;SV_Statistics.def: Korrigálja a készülék nevét vagy távolítsa el a paraméterezést
+1775;- Processbuilder:%CrLf%Megfelelõen illessze a folyamatstruktúrát vagy a készüléket vegye ki a paraméterezésbõl.
+1776;SV_StatisticDef: Korrigálja a jelnév paraméterezését
+1777;A tanulóprogramban ehhez a típushoz fûzze hozzá a WAIT_PROCESS_READY() makrót
+1778;Indítsa újra a robotvezérlést, hogy aktiválja a belsõ automatikát
+1779;Indítsa újra a robotvezérlést, hogy aktiválja a külsõ automatikát
+1780;A fennálló hibát nyugtázza a kezelõpulton/SPS-en
+1781;Ellenõrizze az iniciátorok kapcsolási állapotát a megjelenítés állomásfelügyeletében.%CrLf%Ellenõrizze a kábelezést, ill. a vonatkozó iniciátort.
+1783;Ellenõrizze a hõmérséklet beállítását. Ellenõrizze a klímaberendezést.
+1784;Öblítse a MainChannel-t
+1785;Nyugtázza, a robotot vigye a FlushDry400 állásba vagy alaphelyzetbe
+1786;Nyugtázza, a robotot vigye a FlushDry0 állásba vagy alaphelyzetbe
+1787;Nyugtázza, a robotot vigye alaphelyzetbe
+1788;Nyugtázza, a robotot vigye a BrushClean400 állásba vagy alaphelyzetbe
+1789;Nyugtázza, a robotot vigye az AboveBox, BrushClean0 állásba vagy alaphelyzetbe
+1790;Ellenõrizze a fájlt (írásvédelem, fájl létezik, parancsszerkezet létezik, ...)
+1791;Korrigálja a megnevezett tengely konfigurált mozgási útját.%CrLf%Paraméter: masteringDelta%CrLf%Érték: Lineáris tengelyekre >= 20 mm-es utat kell konfigurálni.
+1792;- Ellenõrizze a környezeti hõmérsékletet%CrLf%- szükség esetén csökkentse a teljesítményt%CrLf%- Cserélje le a készüléket
+1793;Korrigálja vagy helyezze el a szórófej fájlokat, ill. válasszon ki más típust T2+folyamat üzemmódra
+1794;Vegye fel a kapcsolatot a vezérlés gyártójával
+1795;Módosítsa úgy a tanítóprogramot, hogy legyen mind a három irányban mérõmenet, ellenõrizze az érzékelõ jelét vagy ellenõrizze, nem sérült-e a szerszám
+1796;A Conveyorexisting paramétert a System.cfg fájlban állítsa "igaz" értékre.
+1797;- Válassza ki a porlasztót%CrLf%- Kapcsolja be a pneumatikát%CrLf%- Az idõprogram azonos csatornára végzõdjön%CrLf%- Kapcsolja be a KÉZI üzemmódot
+1798;- A szánt tolja megfelelõ beállítási pozícióba%CrLf%- ellenõrizze, hogy a Cfg-paraméter beállítása megfelelõ-e%CrLf%- ellenõrizze, hogy az automatikus beállításnál megfelelõ-e a csatlakoztatás
+1799;A robotot a PHG eszközzel a T1/T2 üzemmódban vigye alaphelyzetbe.
+1800;Ellenõrizze és korrigálja a rendrakás paraméterezését vagy zárja le a rendrakást az SPS, ill. megjelenítõ eszközben.
+1801;1. Állítsa be a féklevegõ nyomását%CrLf%2. Ellenõrizze a fordulatszám visszajelzést
+1802;- Válassza ki az ellátócsoport csatornáját (csak KÉZI üzemmódban lehet)%CrLf%- Váltson másik festékre%CrLf%- Szüntesse meg a porlasztó kiválasztását -> a robot ezt a karosszériát nem lakkozza
+1803;Végezze el az adott típus referencia beállítását.
+1804;Módosítsa a tûrésfelügyeletre megadott típust.
+1805;Ellenõrizze az adott varratot és szükség esetén végezze el a referencia beállítást.
+1806;Még egyszer töltse be a referenciafájlt a vezérlésbe.
+1807;-Ellenõrizze az iniciátort%CrLf%-Ellenõrizze a kábelcsatlakozásokat
+1808;-Ellenõrizze a szivattyú tengelykapcsolóját%CrLf%-Ellenõrizze az iniciátort%CrLf%-Ellenõrizze a kábelcsatlakozásokat
+1809;Ellenõrizze, hogy létezik-e és hozzáférhetõ-e az appldisk\application\control\RCUx\cfg\References.ini fájl.
+1810;- Ellenõrizze a pozícionáló állását%CrLf%- válasszon megfelelõ adatkészletet
+1811;- Ellenõrizze a pozícionáló állását%CrLf%- válasszon megfelelõ adatkészletet
+1812;- Ellenõrizze a tápfeszültséget%CrLf%- Ellenõrizze a ventilátort%CrLf%- Ellenõrizze a -4Q3 biztosítékot és kapcsolja vissza a gépet
+1813;- Zárja be az ajtót%CrLf%- Ellenõrizze az iniciátort
+1814;Ellenõrizze a biztosítékot és szükség esetén állítsa vissza. %CrLf%Ha a hiba újból fellép, ellenõrizze, nincs-e rövidzárlat a kábelekben.
+1818;
+1819;
+1820;
+1821;
+1822;Az alkatrészt vigye a programozott pozíciójába.
+1823;A rendszert az alcsatornákkal együtt öblítse ki. Ezután válassza újra a festéket a focsatornán keresztül.
+1824;Elõször készítse elõ az alkalmazott alcsatornákat.
+1825;A 'BodyInPosition' jelet az SPS-bõl az interfész irányelveinek megfelelõen készítse el
+1826;Írja be a fúvókacserélõ adatait a megjelenítésen keresztül írja be.
+1827;Ellenõrizze az iniciátort és a fúvókacserélõ fejet. Szükség esetén korrigálja a fúvókacserélõ adatait a megjelenítésen keresztül.
+1828;Ellenõrizze a tanítóprogramot, szükség esetén korrigálja a fúvókacserélõ adatait a megjelenítésen keresztül.
+1829;Ellenõrizze az idõprogramot, ill. a HMI/PHG felé az interfészt.
+1830;Elkezdõdött a bõvített levegõmennyiség szabályozó funkciók nyomásértékeinek betanulása
+1831;Indítsa újra a tanulást
+1832;Újból készítse el a fájlt és indítsa újra a vezérlést
+1833;Illessze a pontosságot vagy az elõírt értéket a készülékre.
+1834;Ellenõrizze, hogy megfelelõ-e a levegõcsappantyú / terelõlevegõ gyûrû felszerelése. Ellenõrizzen minden tömlõt a levegõmennyiség szabályozótól a levegõcsappantyúig / terelõlevegõ gyûrûig. 
+1835;Ellenõrizze, hogy megfelelõ-e a levegõcsappantyú / terelõlevegõ gyûrû felszerelése és nem szennyezett-e. Ellenõrizzen minden tömlõt a levegõmennyiség szabályozótól a levegõcsappantyúig / terelõlevegõ gyûrûig. 
+1836;Aktiválja EnableReferenceCheck paramétert a Prozess.cfg fájlban ( 3DOnSite ), ill. indítsa el a "referenciaértékek tanulása" folyamatot.
+1837;Készülék elhelyezése
+1838;Ellenõrizze, hogy megfelelõ-e a levegõcsappantyú / terelõlevegõ gyûrû felszerelése. Ellenõrizzen minden tömlõt a levegõmennyiség szabályozótól a levegõcsappantyúig / terelõlevegõ gyûrûig. Tanítsa be újból a referenciaértékeket.
+1839;Tanítsa be újból a referenciaértékeket vagy kapcsolja ki a RefereceCheck paramétert.
+1840;Vészüzem lekapcsolása a 3DOnSite oldalon
+1841;Állítsa le a vészüzem üzemmódot vagy kapcsolja le a szennyezés ellenõrzését és a pontosságot.
+1842;A funkció használható
+1843;Állítsa le a vészüzem üzemmódot vagy kapcsolja be a referenciát
+1844;- Felügyelt eszköz %CrLf%- Felügyelt firmware %CrLf% - Felügyelt szoftver
+1845;Tegye szabaddá a fúvókaváltó állomáson lévõ helyet, vagy válassza ki a fúvókát manuálisan
+1846;Manuálisan helyezze be a kívánt típusú fúvókát a fúvókaváltó állomásba.
+1847;- Felügyelt iniciátor.%CrLf%- EcoTalk-Program a fúvókák felügyeletének tárolásához.
+1848;- Felügyelt iniciátor.%CrLf%- EcoTalk-Program a fúvókák felügyeletének kiválasztásához.
+1849;Kérem, ellenõrizze a "services.cfg” állományban lévõ értékeket.
+1850;Ellenõrizze az iniciátort és kapcsolást, és cserélje ki a ggf.-et.
+1851;Ellenõrizze/javítsa meg a fúvókaváltó állomás szelepét.
+1852;Ellenõrizze a Phototherm-PC szoftverét, és indítson új ggf.-et vagy ellenõrizze a Phototherm-PC és RPC közötti kapcsolást.
+1853;Ellenõrizze a szállítók kapcsolását, és indítson új kalibrációs folyamatot.
+1854;DockingUnit öblítése
+1855;Pozícionálja az LCC-t
+1856;Az ethernetipslave.cfgr fájlban lennie kell egy az EIPSLAVE:0 (pl. név = "EIPSLAVE”) csoporthoz rendelt névnek.
+1857;- Szelepválasztás ellenõrizése%CrLf%- Festékrendelési táblázat ellenõrzése%CrLf%- CFG paraméter ellenõrizése a festékszelephez 
+1858;- Hiba nyugtázása és a BA-kézi magasfeszültségre kapcsolása kb. 60 kV%CrLf% elõírt értékkel  Amikor az elõírt érték elérte a nagyfeszültséget, akkor válassza ki a EcoScreenen. %CrLf% Ez az eljárás egy meghatározott kieresztési folyamatot alkalmaz. Ha ismé
+1859;- Kapcsolja a kieresztõket CFg paraméterre. %CrLf%- Ellenõrizze a kieresztõk "DeviceName” konfigurációs paraméterét és a ggf. megfelelõségét.%CrLf%  Módosítás esetén a vezérlés újraindul.
+1860;- Nincs végrehajtható EcoTalk Kommando a Teach-Programban. %CrLf%- A hibás készülék a folyamatkonfigurációban hozzáadásra került
+1861;Karosszériatávolság növelése
+1862;A folyamatépítõ 'PControlOn’ jele triggerjelként meghatározva
+1863;Az EcoTalk-Program SPLINE parancsa a SPLINE-Makrók eltávolítását hajtja végre. Bevitel "[RC.KINEMATIC:0] Spline interpoláció engedélyezése = 1" a RobotControl.cfg fájlban.
+1864;A lineáris egységet vigye érvényes pozícióba:%CrLf%- Indítsa el a pozícionálás idõprogramot %CrLf%-  ..%CrLf%
+1865;Ellenõrizze a fõszenzorok rögzítését%CrLf%Ellenõrizze a kapcsolást%CrLf%Cserélje ki a fõeszközt%CrLf%Ellenõrizze a szennyezõdés-eltávolító rendszert 
+1872;Mielõtt az alkatrész a kezelõhöz halad, futtassa le a SET_POSCODE(Delete) parancsot.%CrLf%Kérem, ellenõrizze az aktuális EcoTalk-Programot.
+1873;Tanítsa meg a mérõeszközöknek a pozíciókat
+1874;Ellenõrizze a 'PaintRelevantValves' paraméterben lévõ szelepnevet
+1875;Ellenõrizze a VMT-rendszer hibastátuszát
+1876;Szélesítse a fúvókaváltó-helyeket, majd módosítsa a fúvókastátuszt IO-ra.
+1877;Ellenõrizze a tanítási programot (HN-szám a  SETBRUSH-Makróban, SETBRUSH a GunOn szerint, ...). 
+1878;Ellenõrizze a tanítási programot (SETBRUSH a GunOn szerint). Ellenõrizze, hogy a nyomás a mech. szerinti-e Ha okok nem szûntethetõk meg (pl. hibás szelep). 
+1879;Módosítsa a tanítási programot vagy konfigurálja a kapcsolódó mérést.
+1880;Módosítsa a tanítási programot vagy konfigurálja a Multiobject egységet.
+1881;Feszültség visszatérés után a vezérlés autómatikusan bekapcsol.%CrLf%Adott esetben a vezérlés újraindítása szükségtelen,ha a PLC a vezérlö elindálásánál még nem üzemkész.bzw. az adott hibajelentések nem voltak nyugtázva.
+1882;Rendszert újbóli kalibrálása.
+1883;Készüléket feszültségmentesíteni %CrLf%-Feszültséget rákapcsolni%CrLf%-S3 Bus-t újraindítani%CrLf%-Hibát nyugtázni.
+1889;
+1890;Hiba megoldás után a szalaghajtás hajtásszabályzóját nyugtázni.
+1891;Vezérlés lefutása,leállítása%CrLf%Megvárni még a készülék lefut%CrLf%Vezérlést újraindítani.
+1892;Vezérlés lefutása,leállítása%CrLf%Megvárni még a készülék lefut%CrLf%Vezérlést újraindítani%CrLf%%CrLf%Ha ismét fellép a hiba a szállításvezérlöröl le kell tölteni a LogfileCollect-et.%CrLf%--> Firmwareconfig-ot megvizsgálni%CrLf%
+1893;Logfájlok letöltése a vezérlésröl.%CrLf%--> Firmwarekonfigurációt megvizsgálni.
+1894;Datei ..\appldisk\application\control\config\S3_Frimware.cfg aktualizálni és a vezérlést újraindítani.
+1895;Résztvevöket megvizsgálni,ggf.Feszültségmentesítés lefutását megvárni.%CrLf%-Elektromos csatlakozásokat(sorkövetés elve alapján, csatlakozók érintekezését)megvizsgálni.
+1896;Busfelépítést konfigurációval kiegyenlíteni..%CrLf%- Résztvevöket megvizsgálni, ggf. Feszültségtelenítést elvégezni.
+1897;Motortartó fék feszültségellátását megvizsgálni és adott esetben a feszültséget növelni.
+1898;Átvizsgálni a Sercoskonfigurációt vagy szállításvezérlövel kapcsolatba lépni.
+1899;Összeköttetéseket és Hardwereket megvizsgálni. %CrLf% fölérendelt Modul státuszokat megvizsgálni.%CrLf%Busz kommunikáció vizsgálata.%CrLf%Adott esetben Hardware buszt újrainítani.%CrLf%Vezérlést újraindítani,adott esetben a vezérlögyártóval felvenni a kapcsolatot.
+1900;Készülékdokumentációt megviszgálni,hogy a paraméterek egzisztálva vannak-e.%CrLf%Komunikációt átvizsgálni.%CrLf%Készüléket újraindítani.
+1901;Elektromos kapcsolatokat megvizsgálni.%CrLf%-Hajtás/Vezérléskonfigurációt megvizsgálni.
+1902;Fúvókát a következö alkalommal kicserélni.
+1903;Cfg-Editor a 3DOnSite-ban a lakkozó nyomás felügyeletét konfigurálni és engedélyezni%CrLf%-A lakkozó nyomás felügyeletét a megnevezett szenzorra az idöprogramban eltávolítani.
+1904;Nyomást megvizsgálni (ggf.nyomástalanítani)%CrLf%-Szenzor kábelét megvizsgálni%CrLf%-Paraméter kapcsolót megvizsgálni.
+1905;Felügyeletet a PCUx.cfg-ben aktiválni.
+1906;Szenzort,bekábelezést,paramétereket megvizsgálni.
+1907;Tanítóprogramot megváltoztatni vagy a paramétereket kijavítani.
+1909;Kérem vizsgálja meg a harangtányér helyzetét.
+1910;Paraméter a Kestudio.Sercos3 kijavítani:%CrLf%-Projektet megnyitni és az összeköttetést a megfelelö vezérléssel%CrLf%-Paraméter oldalon a fordulatszám szabályzót megnyitni%CrLf%Rostában a paraméterek online-paraméterét P-0003.0.12 és P-0002.0.2 megadni%CrLf%-A
+1911;Felügyeletet a PCUx.cfg-ben aktiválni.
+1912;Fütést megvizsgálni%CrLf%- Hömérséklet szenzort megvizsgálni%CrLf%- Kapcsolódási pontokat a hömérséklet kapcsolón megvizsgálni.%CrLf%- Kábeleket megvizsgálni.
+1913;USV 24V-os ellátását és a vezérlést megvizsgálni.%CrLf%Feszültség visszatérés után a vezérlés autómatikusan újraindul.
+1914;Lehetséges okokat megállapítani és a hibát megszüntetni.%CrLf%-hálózati részen túlmelegedést megvizsgálni:túlmelegés esetén a kapcsolószekrény-hömérsékletét megvizsgálni, ggf.Hálózati rész cseréje%CrLf%- Teljesítmény kábeleket és csatlakozókat a hálózati résztöl a klímaberendezésig megviszgálni.%CrLf%- ?tkapcsolás fütésre és hütésre (Védelem-, Relék) müködésre megvizsgálni.%CrLf%-Hálózati rész-megvezérlés(Analog áramértékeket, Feszültségüzem) megvizsgálni.
+1915;Lehetséges okokat megállapítani és a hibát megszüntetni.%CrLf%- Klímaberendezést melegedésre megvizsgálni%CrLf%- A termosztát kábeleket és csatlakozókat megvizsgálni%CrLf%- Termosztát biztosítékját megvizsgálni%VrLf%-Hömérséklet szenzort a klímaberendezésben megvizsgálni.%CrLf%- Szabályzókör beállításainak (Szabályzómaraméterek)megvizsgálni%CrLf%-Hálózati rész és hálózati rész-megvezérlés a klímaberendezéstöl megvizsgálni.
+1916;Hardware-t megvizsgálni%CrLf%-Fúvókákat megtisztítani.
+1917;Folyamatkomponenseket átvizsgálni.%CrLf%
+1918;Conveyor-t a stopp pozícióhoz hozzáigazítani, bzw. Degradekoncepciót átdolgozni
+1919;Robot startpozíciókat hozzáigazítani. Bzw. Degradekoncepciót átdolgozni
+1920;Robottípust hozzáigazítani. Bzw. Degradekoncepciót átdolgozni
+1921;Hibát nyugtázni és megvárni,hogy a buszrendszer az újrainstallálás után el tud-e indulni.%CrLf%Másesetben a további jelentésekre figyelni és a hibát megszüntetni.
+1922;A hibát a projektben megszüntetni.
+1923;Üzembevétel után a Sercos konfigurációban a paramétert "autoAddressing=3" beállítani és a vezérlést újraindítani.
+1924;Sercos III konfiguráció, HW-végpontneveket megvizsgálni.
+1925;Minden kampót beilleszteni és végül a Cilinderek eljárásának megbízását ismét megadni.
+1926;Levegöellátást megvizsgálni%CrLf%-Engedélyezését megvizsgálni%CrLf%-Iniciátor visszajelzését megvizsgálni.
+1927;Tetötartókat alsó pozícióba állítása és végül a kampók
+1928;Kérem a RECEIVE-parancs átadott paramétereit a mozgásprogramban megvizsgálni, ggf. megváltoztatni.
+1929;További hibajelentéskre figyelni%CrLf%- Busdiagnózist a Vizualizációban megnyitni (esetekben rendelkezésre áll)%CrLf%- Busrésztvevöket megvizsgálni.
+1930;Vagy a Makrót eltávolítani vagy a konfigurációban [RC.KINEMATIC:0.DvdGluing] a Multigun-müködését paraméterezni.
+1931;Paramétereket megvizsgálni%CrLf%- Méröcellákat újrakalibrálni.
+1932;?ramlásfigyelö vizsgálata, Elszívó bzw. Szívócsö
+1933;A csatornát egy megfelelö idöprogramon keresztül helyes státuszba helyezni.
+1934;Kézi üzemben biztos pozicóba juttatása és a vizualizációban megvizsgálni,hogy a profil engedélyezö kapcsoló aktív-e.%CrLf%- Biztos poziciót a 3D-Onsite-tal ggf. kijavítani. 
+1935;Ggf. a készülék hardware-es átvizsgálata és vagy cseréje.%CrLf%- Reinitializálás-t  elindítani (Bus-t újraindítani a Sercos III-on).%CrLf%- Vezérlést újraindítani. újbóli fellépésekor a szállításvezérlövel kapcsolatba lépni.
+1936;
+1937;PartDetect jelet hardware-sen megvizsgálni vagy a PartDetect ablak paramétereit megvizsgálni.
+1938;PartDetect jelet hardware-sen megvizsgálni, PartDetect ablak paramétereit megvizsgálni.
+1940;Vezérlés újraindítani.%CrLf%Megvizsgálni, hogy a buszkapcsolat vezérlés felfutásánál a referenciavizsgálat már aktív.%CrLf%SPC200 vezérlö hibásodás-e.
+1941;Megvizsgálni,hogy a Busrendszer aktív-e.%CrLf%Hiba esetén a felfutásnál, Vezérlést újraindítani.%CrLf%Megvizsgálni, hogy a SPC200 vezérlö meghibásodott-e.
+1942;
+1943;
+1944;
+1945;
+1946;
+1947;
+1948;
+1949;
+1950;
+1951;
+1952;
+1953;
+1954;
+1955;
+1956;
+1957;
+1958;
+1959;
+1960;
+1961;
+1962;
+1963;
+1964;
+1965;
+1966;
+1967;
+1968;
+1969;
+1970;
+1971;
+1972;
+1973;
+1974;
+1975;
+1976;
+1977;Belso vezérlési hiba, válassza le a robotot és vegye fel a kapcsolatot a vezérlés gyártójával.
+1978;
+1979;
+1980;
+1981;
+1982;
+1983;
+1984;
+1985;
+1986;
+1987;
+ 

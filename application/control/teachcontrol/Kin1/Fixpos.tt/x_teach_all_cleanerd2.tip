@@ -1,0 +1,80 @@
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_0  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V200  )
+  OVERLAP( NODEC50  )
+  //
+  //!!!!!!!!!!!!!!!!!!!!!!!!ATTENTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  //TEACH PROGRAM
+  //NOTHING MORE!!!
+  PRINTSTR( "only for teaching"  )
+  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  //
+  PTP( RHOME  )
+  //
+  //*************************************
+  //first point to teach. coordinate system "AXIS"
+  //teached with Teachtool (C/Ci=W17150014 / DC=W17150016 / EC=W17150023)
+  // OR
+  //lightly touch of radial sealing lip
+  LIN( RINBOX  )
+  //LIN(TEACH_RINBOX)
+  //*************************************
+  //
+  //**********IMPORTANT******************
+  //TCP "Z" -210mm & 30° rotated in TCP "c"
+  //to point "TEACH_RINBOX" position
+  PTP( RABOVEBOX  )
+  //
+  //**********IMPORTANT******************
+  //All Following Points were saved as:
+  //movement type "LIN"
+  // in
+  //coordinate system "AXIS"
+  //********************************************
+  //
+  //**********IMPORTANT******************
+  //Teach point "RPURGE" for different atomizer as followed:
+  //EcoBell3 C / Ci = TCP "Z" -25mm & 30° rotated in in TCP "c"
+  //to point "TEACH_RINBOX" position
+  //
+  //EcoBell3 EC & DC exterior painting = TCP "Z" -8mm & 30° rotated in in TCP "c"
+  //to point "TEACH_RINBOX" position
+  LIN( RPURGE  )
+  //*************************************
+  //
+  //*************************************
+  //additional +3mm in TCP "Z"
+  //from point "TEACH_RINOX"
+  LIN( RINBOX  )
+  //*************************************
+  //
+  VEL( VEL_GUNTURN  )
+  OVERLAP( OVERL_GUNTURN  )
+  //rotated 60° in TCP "c" accordingly to INBOX position
+  LIN( RGUNTURN  )
+  //
+  //same orientation as GunTurn position & TCP "Z" -110mm
+  //to point "TEACH_RINBOX" position
+  LIN( RTUBUSDRY  )
+  //
+  VEL( V400  )
+  OVERLAP( NODEC50  )
+  //TCP "Z" -210mm & 30° rotated in TCP "c"
+  //to point "TEACH_RINBOX" position
+  LIN( RABOVEBOX  )
+  //
+  //**********IMPORTANT******************
+  //Point "RLOAD" only for 2K necessary
+  //atomizer must be above funnel
+  //*************************************
+  LIN( RLOAD  )
+  //
+  LIN( RABOVEBOX  )
+  //
+  PTP( RHOME  )
+  //
+RDESELECT("RP12")

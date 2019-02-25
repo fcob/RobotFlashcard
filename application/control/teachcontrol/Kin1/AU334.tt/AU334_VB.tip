@@ -1,0 +1,53 @@
+//$Felsö törésvonal elöl & Motorháztetö
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU33X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  OVERLAP( NODEC50  )
+  //
+  PTP( VB_P1  )
+  //
+  SETBRUSH( GUN1 ,162 ,PO1 ,TRG1  )
+  LIN( VB_P2  )
+  IF (GL = TRUE) THEN
+    GUN( GUN1 ,GunOn ,VB_TP1 ,TR1  )
+  END_IF
+  LIN( VB_P3  )
+  LIN( VB_P4  )
+  IF (TV_A = TRUE) AND (GL = FALSE) THEN
+    GUN( GUN1 ,GunOn ,PO6 ,TRG6  )
+  END_IF
+  LIN( VB_P5  )
+  LIN( VB_P6  )
+  IF (TV_A=FALSE) AND (MH_A=TRUE) THEN
+    GUN( GUN1 ,GunOn ,PO7 ,TRG7  )
+  END_IF
+  LIN( VB_P7  )
+  IF (TV_A=TRUE) AND (MH_A=FALSE) THEN
+    GUN( GUN1 ,GunOff ,PO8 ,TRG8  )
+  END_IF
+  LIN( VB_P8  )
+  LIN( VB_P9  )
+  LIN( VB_P10  )
+  IF (MH_A = TRUE) THEN
+    GUN( GUN1 ,GunOff ,PO3 ,TRG3  )
+  END_IF
+  LIN( VB_P11  )
+  SETBRUSH( GUN1 ,161 ,PO2 ,TRG2  )
+  IF (MH_A = TRUE) THEN
+    GUN( GUN1 ,GunOn ,PO4 ,TRG4  )
+  END_IF
+  LIN( VB_P12  )
+  LIN( VB_P13  )
+  LIN( VB_P14  )
+  IF (MH_A = TRUE) THEN
+    GUN( GUN1 ,GunOff ,PO5 ,TRG5  )
+  END_IF
+  LIN( VB_P15  )
+  LIN( VB_P16  )
+  LIN( VB_P17  )
+  //
+RDESELECT("RP12")

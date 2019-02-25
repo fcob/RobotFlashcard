@@ -1,0 +1,18 @@
+//$Hauptprogramm Prozesseinstellung
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_200  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  SET( Collision1 ,High  )
+  RECEIVE( Collision1 ,High  )
+  //
+CALL home()
+//
+CALL trigger()
+//
+CALL home()
+//
+SET( Collision1 ,Low  )
+//
+RDESELECT("RP12")

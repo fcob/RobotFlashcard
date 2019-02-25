@@ -1,0 +1,254 @@
+S_MainChannel.BMLD1.ActValue|BMLD1 (Istwert)
+S_MainChannel.BMLD1.ActValue_Debounced|BMLD1 (entprellter Istwert)
+
+S_MainChannel.BLV1.ActValue|BLV1 (Istwert)
+S_MainChannel.BLV1.ActValue_Debounced|BLV1 (entprellter Istwert)
+
+S_MainChannel.BDP91PE.ActValue|Druck vor Pumpe (Istwert)
+S_MainChannel.BDP91PE.FreezeActValue|Druck vor Pumpe  Druck speichern
+S_MainChannel.BDP91PE.SetRange|Druck vor Pumpe  Toleranzbereich für Leckageprüfung
+S_MainChannel.BDP91PE.InRange|Druck vor Pumpe  Druck im Toleranzbereich
+S_MainChannel.BDP91PE.InZeroRange|Druck vor Pumpe  Druck innerhalb Null-Toleranz
+
+S_MainChannel.BDP91PA.ActValue|Druck nach Pumpe (Istwert)
+S_MainChannel.BDP91PA.FreezeActValue|Druck nach Pumpe Druck speichern
+S_MainChannel.BDP91PA.SetRange|Druck nach Pumpe Toleranzbereich für Leckageprüfung
+S_MainChannel.BDP91PA.InRange|Druck nach Pumpe Druck im Toleranzbereich
+S_MainChannel.BDP91PA.InZeroRange|Druck nach Pumpe Druck innerhalb Null-Toleranz
+
+S_MainChannel.BML1.Set|BML
+S_MainChannel.BML1.ActValue|BML (Istwert)
+S_MainChannel.BML1.ActPressure|BML (Druck)
+
+S_MainChannel.BFDS1.Set|BFDS
+S_MainChannel.BFDS1.ActValue|BFDS (Istwert)
+S_MainChannel.BFDS1.ActPressure|BFDS (Druck)
+
+S_MainChannel.YHL.Set|HL
+S_MainChannel.YHL.ActValue|HL (Istwert)
+S_MainChannel.YHL.ActPressure|HL (Druck)
+
+S_MainChannel.YZL.Set|ZL
+S_MainChannel.YZL.ActValue|ZL (Istwert)
+S_MainChannel.YZL.ActPressure|ZL (Druck)
+
+S_MainChannel.BLL1.Set|LL1
+S_MainChannel.BLL1.ActValue|LL1 (Istwert)
+S_MainChannel.BLL1.ActPressure|LL1 (Druck)
+
+S_MainChannel.BLL2.Set|LL2
+S_MainChannel.BLL2.ActValue|LL2 (Istwert)
+S_MainChannel.BLL2.ActPressure|LL2 (Druck)
+
+S_MainChannel.YHN1.Set|Hauptnadel
+S_MainChannel.YHN1.Q|Hauptnadel (Q) 
+S_MainChannel.YHN1.ActValue|Hauptnadel (Istwert)
+S_MainChannel.YHN1.TimeOn|Hauptnadel (Schaltzeit Öffnen) 
+S_MainChannel.YHN1.TimeOff|Hauptnadel (Schaltzeit Schließen)
+
+S_MainChannel.YF.Set|FF
+S_MainChannel.YF.Q|FF (Q) 
+S_MainChannel.YF.ActValue|FF (Istwert)
+S_MainChannel.YF.Release|FF (Freigabe)
+
+S_MainChannel.YPL1.Set|PL1 
+S_MainChannel.YPL1.Q|PL1 (Q) 
+S_MainChannel.YPL1.ActValue|PL1 (Istwert)
+S_MainChannel.YPL1.Release|PL1 (Freigabe)  
+
+S_MainChannel.YV3.Set|V3
+S_MainChannel.YV3.Q|V3 (Q) 
+S_MainChannel.YV3.ActValue|V3 (Istwert)
+S_MainChannel.YV3.Release|V3 (Freigabe)
+
+S_MainChannel.YBY1.Set|BY1
+S_MainChannel.YBY1.Q|BY1 (Q) 
+S_MainChannel.YBY1.ActValue|BY1 (Istwert)
+S_MainChannel.YBY1.Release|BY1 (Freigabe)
+
+S_MainChannel.YLV1PL1.Set|LV1PL1
+S_MainChannel.YLV1PL1.Q|LV1PL1(Q) 
+S_MainChannel.YLV1PL1.ActValue|LV1PL1 (Istwert)
+S_MainChannel.YLV1PL1.Release|LV1PL1 (Freigabe)
+
+S_MainChannel.YV3_RFV3.Set|V3_RFV3
+S_MainChannel.YV3_RFV3.Q|V3_RFV3(Q) 
+S_MainChannel.YV3_RFV3.ActValue|V3_RFV3 (Istwert)
+S_MainChannel.YV3_RFV3.Release|V3_RFV3 (Freigabe)
+
+S_MainChannel.YV1.Set|V1 
+S_MainChannel.YV1.Q|V1 (Q) 
+S_MainChannel.YV1.ActValue|V1 (Istwert)
+S_MainChannel.YV1.Release|V1 (Freigabe) 
+
+S_MainChannel.YMLL1.Set|MLL_OFF
+S_MainChannel.YMLL1.Q|MLL_OFF (Q)
+S_MainChannel.YMLL1.ActValue|MLL_OFF (Istwert)
+S_MainChannel.YMLL1.Release|MLL_OFF (Freigabe)
+
+S_MainChannel.AHS1.SetValueVoltage|Hochspannung (Sollwert U)
+S_MainChannel.AHS1.SetValueCurrent|Hochspannung (Sollwert I)
+S_MainChannel.AHS1.HTOn|Hochspannung (ein/aus)
+S_MainChannel.AHS1.DynObservationOff|Hochspannung (Dynamiküberwachung aus)
+S_MainChannel.AHS1.SetValueOp1|Hochspannung (Sollwert 1)
+S_MainChannel.AHS1.SetValueOp2|Hochspannung (Sollwert 2)
+S_MainChannel.AHS1.SetValueStat|Hochspannung (Sollwert Statik-Schwelle)
+S_MainChannel.AHS1.SetValueDyn|Hochspannung (Sollwert Dynamik-Schwelle)
+S_MainChannel.AHS1.ActValueVoltage|Hochspannung (Istwert Spannung)
+S_MainChannel.AHS1.ActValueCurrent|Hochspannung (Istwert Strom)
+
+S_MainChannel.AAH1.ActValue|Lufterhitzer Istwert
+S_MainChannel.AAH1.FreezeActValue|Lufterhitzer Temperatur speichern
+S_MainChannel.AAH1.InRange|Lufterhitzer innerhalb Toleranzbereich
+S_MainChannel.AAH1.InZeroRange|Lufterhitzer in Nulltoleranzbereich
+S_MainChannel.AAH1.SetRange|Lufterhitzer Toleranzbereich für Temperaturprüfung
+S_MainChannel.AAH1.ControlValue|Lufterhitzer ConrolValue
+
+S_MainChannel.AFIXPOS.AtHome|Fixpos in Grundposition
+S_MainChannel.AFIXPOS.AtMaintenance|Fixpos in Wartungsposition
+S_MainChannel.AFIXPOS.AtPurge|Fixpos in Spülposition
+S_MainChannel.AFIXPOS.AtAboveBox|Fixpos über Spülbox
+S_MainChannel.AFIXPOS.AtFlowCheck|Fixpos in Ausliterposition
+S_MainChannel.AFIXPOS.AtInBox|Fixpos in Spülbox
+S_MainChannel.AFIXPOS.GoHome|Fixpos fahre in Grundposition
+S_MainChannel.AFIXPOS.GoMaintenance|Fixpos fahre in Wartungsposition
+S_MainChannel.AFIXPOS.GoPurge|Fixpos fahre in Spülposition
+S_MainChannel.AFIXPOS.GoAboveBox|Fixpos Fahre über Spülbox
+S_MainChannel.AFIXPOS.GoFlowCheck|Fixpos Fahre in Ausliterposition
+S_MainChannel.AFIXPOS.GoInBox|Fixpos Fahre in Spülbox
+
+S_MainChannel.AModesInterface.GhostWithoutColor|Modus Geist ohne Farbe
+S_MainChannel.AModesInterface.GhostWithoutConveyor|Modus Geist ohne Förderer
+S_MainChannel.AModesInterface.GhostWithoutMotion|Modus Geist ohne Bewegung
+S_MainChannel.AModesInterface.MotionActive|Bewegung aktiv
+S_MainChannel.AModesInterface.Mode_Auto|Betriebsart Auto 
+S_MainChannel.AModesInterface.Mode_Ghost|Betriebsart Ghost 
+S_MainChannel.AModesInterface.Mode_Hand|Betriebsart Hand
+S_MainChannel.AModesInterface.Mode_Sleep|Betriebsart Sleep 
+
+S_MainChannel.ASafeHTOff.ActValue|SPS-Schnittstelle (Hochspannung ist geerdet)
+S_MainChannel.ASafeHTOff.Set|SPS-Schnittstelle (Hochspannungs-Abschaltung anfordern)
+
+S_MainChannel.MDP91.OrderMoveVolume|Pumpe 1 (Betriebsart Volumen fördern)
+S_MainChannel.MDP91.OrderRun|Pumpe 1 (Ein)
+S_MainChannel.MDP91.SetQuantity|Pumpe 1 (Lackmenge Soll)
+S_MainChannel.MDP91.SetQuantityMultiK|Pumpe 1 (Lackmenge Soll MultiK)
+S_MainChannel.MDP91.SetVolume|Pumpe 1 (Fördervolumen Soll)
+S_MainChannel.MDP91.ActQuantity|Pumpe 1 (Lackmenge Ist)
+S_MainChannel.MDP91.ActVolume|Pumpe 1 (Fördervolumen Ist)
+S_MainChannel.MDP91.StandStill|Pumpe 1 (Stillstand)
+S_MainChannel.MDP91.OmitInterlocks|Pumpe 1 (Überbrückung Verriegelung)
+S_MainChannel.MDP91.OrderAborted|Pumpe 1 (Auftrag abgebrochen)
+S_MainChannel.MDP91.OrderDone|Pumpe 1 fertig (Volumen)
+
+S_MainChannel.YLF1.Set|LF1
+S_MainChannel.YLF1.Q|LF1 (Q)
+S_MainChannel.YLF1.ActValue|LF1 (Istwert)
+S_MainChannel.YLF1.Release|LF1 (Freigabe)
+
+S_MainChannel.YLPO1.Set|LPO1
+S_MainChannel.YLPO1.Q|LPO1 (Q)
+S_MainChannel.YLPO1.ActValue|LPO1 (Istwert)
+S_MainChannel.YLPO1.Release|LPO1 (Freigabe)
+
+S_AirSupply.BLV1.ActValue|BLV1 (Istwert)
+S_AirSupply.BLV1.ActValue_Debounced|BLV1 (entprellter Istwert)
+
+S_AirSupply.YHV1.Set|HV1
+S_AirSupply.YHV1.Q|HV1 (Q)
+S_AirSupply.YHV1.ActValue|HV1 (Istwert)
+S_AirSupply.YHV1.Release|HV1 (Freigabe)
+
+S_ShortPurge.YKS1.Set|KS
+S_ShortPurge.YKS1.Q|KS (Q)
+S_ShortPurge.YKS1.ActValue|KS (Istwert)
+S_ShortPurge.YKS1.Release|KS (Freigabe)
+
+S_ShortPurge.YKSL1.Set|KSL
+S_ShortPurge.YKSL1.Q|KSL (Q)
+S_ShortPurge.YKSL1.ActValue|KSL (Istwert)
+S_ShortPurge.YKSL1.Release|KSL (Freigabe)
+
+S_ShortPurge.YKS_KSL1.Set|KS_KSL
+S_ShortPurge.YKS_KSL1.Q|KS_KSL (Q)
+S_ShortPurge.YKS_KSL1.ActValue|KS_KSL (Istwert)
+S_ShortPurge.YKS_KSL1.Release|KS_KSL (Freigabe)
+
+S_BlowAir.YBL1.Set|BL1
+S_BlowAir.YBL1.Q|BL1 (Q)
+S_BlowAir.YBL1.ActValue|BL1 (Istwert)
+S_BlowAir.YBL1.Release|BL1 (Freigabe)
+
+S_BlowAir.YBL2.Set|BL2
+S_BlowAir.YBL2.Q|BL2 (Q)
+S_BlowAir.YBL2.ActValue|BL2 (Istwert)
+S_BlowAir.YBL2.Release|BL2 (Freigabe)
+
+S_BlowAir.YRF1.Set|RF1
+S_BlowAir.YRF1.Q|RF1 (Q) 
+S_BlowAir.YRF1.ActValue|RF1 (Istwert)
+S_BlowAir.YRF1.Release|RF1 (Freigabe)
+
+S_BlowAir.YLRF2.Set|LRF2
+S_BlowAir.YLRF2.Q|LRF2 (Q) 
+S_BlowAir.YLRF2.ActValue|LRF2 (Istwert)
+S_BlowAir.YLRF2.Release|LRF2 (Freigabe)
+
+S_BlowAir.YRF2.Set|RF2
+S_BlowAir.YRF2.Q|RF2 (Q) 
+S_BlowAir.YRF2.ActValue|RF2 (Istwert)
+S_BlowAir.YRF2.Release|RF2 (Freigabe)
+
+S_BlowAir.YAV_RF2.Set|AV_RF2
+S_BlowAir.YAV_RF2.Q|AV_RF2 (Q)
+S_BlowAir.YAV_RF2.ActValue|AV_RF2 (Istwert)
+S_BlowAir.YAV_RF2.Release|AV_RF2 (Freigabe)
+
+S_BlowAir.YRF1.Set_Auto|RF1 (SetAuto) 
+S_BlowAir.YRF1.Set_Open|RF1 (SetOpen) 
+
+S_BellCleaner.YV31.Set|V31
+S_BellCleaner.YV32.Set|V32
+S_BellCleaner.YV33.Set|V33
+S_BellCleaner.YBL34.Set|BL34
+S_BellCleaner.YBL35.Set|BL35
+
+S_SolventSupply.YLV1.Set|LV1
+S_SolventSupply.YLV1.Q|LV1 (Q)
+S_SolventSupply.YLV1.ActValue|LV1 (Istwert)
+S_SolventSupply.YLV1.Release|LV1 (Freigabe)
+
+S_SolventSupply.YLPL1.Set|LPL1
+S_SolventSupply.YLPL1.Q|LPL1 (Q)
+S_SolventSupply.YLPL1.ActValue|LPL1 (Istwert)
+S_SolventSupply.YLPL1.Release|LPL1 (Freigabe)
+
+S_DockingUnit.YARZY1.Set_R|Schlitten andocken
+S_DockingUnit.YARZY1.Set_V|Schlitten abdocken
+S_DockingUnit.YARZY1.Q_R|Schlitten andocken (Q) 
+S_DockingUnit.YARZY1.Q_V|Schlitten abdocken (Q) 
+S_DockingUnit.YARZY1.ActValue_R|Schlitten andocken (Istwert)
+S_DockingUnit.YARZY1.ActValue_V|Schlitten abdocken (Istwert)
+S_DockingUnit.YARZY1.Reset|ARZY1 Rücksetzen
+
+S_DockingUnit.YF.Set|FF
+S_DockingUnit.YF.Q|FF (Q) 
+S_DockingUnit.YF.ActValue|FF (Istwert)
+S_DockingUnit.YF.Release|FF (Freigabe)
+
+S_DockingUnit.YLSV1.Set|LSV1
+S_DockingUnit.YLSV1.Q|LSV1 (Q) 
+S_DockingUnit.YLSV1.ActValue|LSV1 (Istwert)
+S_DockingUnit.YLSV1.Release|LSV1 (Freigabe)
+
+S_DockingUnit.ALAN1.MoveToNextValve|LAN1 (Schlitten verfahren)
+S_DockingUnit.ALAN1.ActValveReached|LAN1 (Zielposition erreicht)
+S_DockingUnit.ALAN1.ActValvePosition|LAN1 (Aktuelle Farventil-Nr.)
+S_DockingUnit.ALAN1.ActValveChannel|LAN1 (Farbventil-Nr. Kanal)
+S_DockingUnit.ALAN1.SetValvePosition|LAN1 (Zielposition)
+
+S_DockingUnit.BARZY1EV.ActValue|Schlitten abgedockt
+S_DockingUnit.BARZY1EV.ActValue_Debounced|Schlitten abgedockt (entprellter Istwert)
+
+S_DockingUnit.BARZY1ER.ActValue|Schlitten angedockt
+S_DockingUnit.BARZY1ER.ActValue_Debounced|Schlitten angedockt (entprellter Istwert)

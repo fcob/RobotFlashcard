@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--created by ProcessBuilder Version: 2.6.16.0-->
+<!--date: 24.05.2017-->
+<!--time: 14:17-->
+<!--user: VM_TA52_XP2E\Administrator-->
+<!--database: c:\control\control_audi_gyoer_2221_r\application\control\database\ecorpc_mcc2k.pb-->
+<!--computer: VM_TA52_XP2E-->
+<!--do not change this data directly in this view !!-->
+<View>
+  <!--########################################### Devices Types OVERVIEW ###########################################-->
+  <MASKDEF key="TeachView.mask.WearCountersOverview_FG1" textfile="userTx" permissiondef="userMenuPermission" height="18">
+    <GROUP key="WearCounters - Device Types Overview" columns="10" col="1" row="1" halign="stretch" valign="stretch" left="20" top="20" rows="18">
+      <!--########################################### ColorValve ###########################################-->
+      <IMAGE file="ColorValve.gif" col="1" row="1" halign="left" />
+      <BUTTON key=" ColorValve " col="2" row="1" halign="left" valign="stretch" maskkey="WearCounters.mask.ColorValve_FG1" />
+      <!--########################################### Needle ###########################################-->
+      <IMAGE file="Needle.gif" col="1" row="3" halign="left" />
+      <BUTTON key=" Needle " col="2" row="3" halign="left" valign="stretch" maskkey="WearCounters.mask.Needle_FG1" />
+      <!--########################################### SwitchPLC ###########################################-->
+      <IMAGE file="SwitchPLC.gif" col="1" row="5" halign="left" />
+      <BUTTON key=" SwitchPLC " col="2" row="5" halign="left" valign="stretch" maskkey="WearCounters.mask.SwitchPLC_FG1" />
+      <!--########################################### Valve ###########################################-->
+      <IMAGE file="Valve.gif" col="1" row="7" halign="left" />
+      <BUTTON key=" Valve " col="2" row="7" halign="left" valign="stretch" maskkey="WearCounters.mask.Valve_FG1" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### WEARCOUNTERS SwitchPLC ###########################################-->
+  <MASKDEF key="WearCounters.mask.SwitchPLC_FG1" titlekey="SwitchPLC" textfile="userTx" permissiondef="userMenuPermission" height="6">
+    <GROUP key="SwitchPLC" columns="40" col="1" row="1" halign="stretch" valign="stretch" left="20" rows="6">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access-" col="6" row="1" halign="left" />
+      <LABEL key="EcoScreen will be locked!" col="6" row="2" halign="left" />
+      <LABEL key="DeviceName" col="1" row="4" halign="left" cspan="16" />
+      <LABEL key="Cycles" col="18" row="4" halign="left" cspan="10" />
+      <LABEL key="State" col="29" row="4" halign="left" cspan="5" />
+      <LABEL key="Res" col="36" row="4" halign="left" cspan="3" />
+      <!--########################################### SwitchPLC APurgeDumpLine ###########################################-->
+      <LABEL key="APurgeDumpLine" col="1" row="5" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="5" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tSwitchPLC[1].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tSwitchPLC[1].sOut.o_iStateWearCounter" vartype="SV" col="29" row="5" halign="left" cspan="5" />
+      <CHECKBOX key="ResetAPurgeDumpLine" col="36" row="5" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tSwitchPLC[1].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tSwitchPLC[1].sIn.i_mResetWearCounter" />
+      <!--########################################### SwitchPLC ASafeHTOff ###########################################-->
+      <LABEL key="ASafeHTOff" col="1" row="6" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="6" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tSwitchPLC[2].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tSwitchPLC[2].sOut.o_iStateWearCounter" vartype="SV" col="29" row="6" halign="left" cspan="5" />
+      <CHECKBOX key="ResetASafeHTOff" col="36" row="6" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tSwitchPLC[2].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tSwitchPLC[2].sIn.i_mResetWearCounter" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### WEARCOUNTERS Valve ###########################################-->
+  <MASKDEF key="WearCounters.mask.Valve_FG1" titlekey="Valve" textfile="userTx" permissiondef="userMenuPermission" height="35">
+    <GROUP key="Valve" columns="40" col="1" row="1" halign="stretch" valign="stretch" left="20" rows="35">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access-" col="6" row="1" halign="left" />
+      <LABEL key="EcoScreen will be locked!" col="6" row="2" halign="left" />
+      <LABEL key="DeviceName" col="1" row="4" halign="left" cspan="16" />
+      <LABEL key="Cycles" col="18" row="4" halign="left" cspan="10" />
+      <LABEL key="State" col="29" row="4" halign="left" cspan="5" />
+      <LABEL key="Res" col="36" row="4" halign="left" cspan="3" />
+      <!--########################################### Valve YAV1a ###########################################-->
+      <LABEL key="YAV1a" col="1" row="5" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="5" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[1].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[1].sOut.o_iStateWearCounter" vartype="SV" col="29" row="5" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYAV1a" col="36" row="5" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[1].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[1].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YAV1z ###########################################-->
+      <LABEL key="YAV1z" col="1" row="6" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="6" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[2].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[2].sOut.o_iStateWearCounter" vartype="SV" col="29" row="6" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYAV1z" col="36" row="6" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[2].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[2].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YBL_KS1 ###########################################-->
+      <LABEL key="YBL_KS1" col="1" row="7" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="7" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[3].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[3].sOut.o_iStateWearCounter" vartype="SV" col="29" row="7" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYBL_KS1" col="36" row="7" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[3].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[3].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YBL34 ###########################################-->
+      <LABEL key="YBL34" col="1" row="8" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="8" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[4].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[4].sOut.o_iStateWearCounter" vartype="SV" col="29" row="8" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYBL34" col="36" row="8" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[4].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[4].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YBL35 ###########################################-->
+      <LABEL key="YBL35" col="1" row="9" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="9" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[5].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[5].sOut.o_iStateWearCounter" vartype="SV" col="29" row="9" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYBL35" col="36" row="9" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[5].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[5].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YBY1a ###########################################-->
+      <LABEL key="YBY1a" col="1" row="10" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="10" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[6].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[6].sOut.o_iStateWearCounter" vartype="SV" col="29" row="10" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYBY1a" col="36" row="10" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[6].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[6].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YBY1b ###########################################-->
+      <LABEL key="YBY1b" col="1" row="11" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="11" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[7].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[7].sOut.o_iStateWearCounter" vartype="SV" col="29" row="11" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYBY1b" col="36" row="11" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[7].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[7].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YFGV1_Ha ###########################################-->
+      <LABEL key="YFGV1_Ha" col="1" row="12" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="12" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[8].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[8].sOut.o_iStateWearCounter" vartype="SV" col="29" row="12" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYFGV1_Ha" col="36" row="12" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[8].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[8].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YFGV1_Hb ###########################################-->
+      <LABEL key="YFGV1_Hb" col="1" row="13" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="13" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[9].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[9].sOut.o_iStateWearCounter" vartype="SV" col="29" row="13" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYFGV1_Hb" col="36" row="13" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[9].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[9].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YFGV1_SLa ###########################################-->
+      <LABEL key="YFGV1_SLa" col="1" row="14" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="14" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[10].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[10].sOut.o_iStateWearCounter" vartype="SV" col="29" row="14" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYFGV1_SLa" col="36" row="14" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[10].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[10].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YFGV1_SLb ###########################################-->
+      <LABEL key="YFGV1_SLb" col="1" row="15" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="15" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[11].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[11].sOut.o_iStateWearCounter" vartype="SV" col="29" row="15" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYFGV1_SLb" col="36" row="15" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[11].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[11].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YFGV2_Hb1 ###########################################-->
+      <LABEL key="YFGV2_Hb1" col="1" row="16" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="16" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[12].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[12].sOut.o_iStateWearCounter" vartype="SV" col="29" row="16" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYFGV2_Hb1" col="36" row="16" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[12].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[12].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YFGV2_SLb1 ###########################################-->
+      <LABEL key="YFGV2_SLb1" col="1" row="17" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="17" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[13].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[13].sOut.o_iStateWearCounter" vartype="SV" col="29" row="17" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYFGV2_SLb1" col="36" row="17" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[13].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[13].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YHV1 ###########################################-->
+      <LABEL key="YHV1" col="1" row="18" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="18" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[14].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[14].sOut.o_iStateWearCounter" vartype="SV" col="29" row="18" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYHV1" col="36" row="18" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[14].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[14].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YKS1 ###########################################-->
+      <LABEL key="YKS1" col="1" row="19" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="19" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[15].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[15].sOut.o_iStateWearCounter" vartype="SV" col="29" row="19" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYKS1" col="36" row="19" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[15].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[15].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YKS2 ###########################################-->
+      <LABEL key="YKS2" col="1" row="20" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="20" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[16].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[16].sOut.o_iStateWearCounter" vartype="SV" col="29" row="20" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYKS2" col="36" row="20" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[16].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[16].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YKSL1 ###########################################-->
+      <LABEL key="YKSL1" col="1" row="21" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="21" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[17].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[17].sOut.o_iStateWearCounter" vartype="SV" col="29" row="21" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYKSL1" col="36" row="21" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[17].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[17].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YMLL1 ###########################################-->
+      <LABEL key="YMLL1" col="1" row="22" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="22" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[18].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[18].sOut.o_iStateWearCounter" vartype="SV" col="29" row="22" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYMLL1" col="36" row="22" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[18].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[18].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YPL2a ###########################################-->
+      <LABEL key="YPL2a" col="1" row="23" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="23" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[19].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[19].sOut.o_iStateWearCounter" vartype="SV" col="29" row="23" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYPL2a" col="36" row="23" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[19].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[19].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YPL2b ###########################################-->
+      <LABEL key="YPL2b" col="1" row="24" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="24" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[20].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[20].sOut.o_iStateWearCounter" vartype="SV" col="29" row="24" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYPL2b" col="36" row="24" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[20].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[20].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV1_Ha1 ###########################################-->
+      <LABEL key="YV1_Ha1" col="1" row="25" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="25" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[21].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[21].sOut.o_iStateWearCounter" vartype="SV" col="29" row="25" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV1_Ha1" col="36" row="25" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[21].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[21].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV1_Hb1 ###########################################-->
+      <LABEL key="YV1_Hb1" col="1" row="26" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="26" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[22].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[22].sOut.o_iStateWearCounter" vartype="SV" col="29" row="26" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV1_Hb1" col="36" row="26" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[22].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[22].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV1_SLa1 ###########################################-->
+      <LABEL key="YV1_SLa1" col="1" row="27" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="27" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[23].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[23].sOut.o_iStateWearCounter" vartype="SV" col="29" row="27" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV1_SLa1" col="36" row="27" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[23].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[23].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV1_SLb1 ###########################################-->
+      <LABEL key="YV1_SLb1" col="1" row="28" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="28" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[24].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[24].sOut.o_iStateWearCounter" vartype="SV" col="29" row="28" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV1_SLb1" col="36" row="28" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[24].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[24].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV2_Hb1 ###########################################-->
+      <LABEL key="YV2_Hb1" col="1" row="29" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="29" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[25].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[25].sOut.o_iStateWearCounter" vartype="SV" col="29" row="29" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV2_Hb1" col="36" row="29" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[25].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[25].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV2_SLb1 ###########################################-->
+      <LABEL key="YV2_SLb1" col="1" row="30" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="30" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[26].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[26].sOut.o_iStateWearCounter" vartype="SV" col="29" row="30" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV2_SLb1" col="36" row="30" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[26].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[26].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV2a ###########################################-->
+      <LABEL key="YV2a" col="1" row="31" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="31" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[27].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[27].sOut.o_iStateWearCounter" vartype="SV" col="29" row="31" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV2a" col="36" row="31" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[27].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[27].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV2b ###########################################-->
+      <LABEL key="YV2b" col="1" row="32" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="32" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[28].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[28].sOut.o_iStateWearCounter" vartype="SV" col="29" row="32" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV2b" col="36" row="32" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[28].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[28].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV31 ###########################################-->
+      <LABEL key="YV31" col="1" row="33" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="33" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[29].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[29].sOut.o_iStateWearCounter" vartype="SV" col="29" row="33" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV31" col="36" row="33" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[29].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[29].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV3a ###########################################-->
+      <LABEL key="YV3a" col="1" row="34" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="34" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[30].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[30].sOut.o_iStateWearCounter" vartype="SV" col="29" row="34" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV3a" col="36" row="34" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[30].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[30].sIn.i_mResetWearCounter" />
+      <!--########################################### Valve YV3b ###########################################-->
+      <LABEL key="YV3b" col="1" row="35" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="35" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tValve[31].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tValve[31].sOut.o_iStateWearCounter" vartype="SV" col="29" row="35" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYV3b" col="36" row="35" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tValve[31].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tValve[31].sIn.i_mResetWearCounter" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### WEARCOUNTERS ColorValve ###########################################-->
+  <MASKDEF key="WearCounters.mask.ColorValve_FG1" titlekey="ColorValve" textfile="userTx" permissiondef="userMenuPermission" height="10">
+    <GROUP key="ColorValve" columns="40" col="1" row="1" halign="stretch" valign="stretch" left="20" rows="10">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access-" col="6" row="1" halign="left" />
+      <LABEL key="EcoScreen will be locked!" col="6" row="2" halign="left" />
+      <LABEL key="DeviceName" col="1" row="4" halign="left" cspan="16" />
+      <LABEL key="Cycles" col="18" row="4" halign="left" cspan="10" />
+      <LABEL key="State" col="29" row="4" halign="left" cspan="5" />
+      <LABEL key="Res" col="36" row="4" halign="left" cspan="3" />
+      <!--########################################### ColorValve YHa ###########################################-->
+      <LABEL key="YHa" col="1" row="5" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="5" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_iStateWearCounter" vartype="SV" col="29" row="5" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYHa" col="36" row="5" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tColorValve[1].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[1].sIn.i_mResetWearCounter" />
+      <!--########################################### ColorValve YHb ###########################################-->
+      <LABEL key="YHb" col="1" row="6" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="6" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_iStateWearCounter" vartype="SV" col="29" row="6" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYHb" col="36" row="6" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tColorValve[2].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[2].sIn.i_mResetWearCounter" />
+      <!--########################################### ColorValve YMultiKa ###########################################-->
+      <LABEL key="YMultiKa" col="1" row="7" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="7" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[3].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tColorValve[3].sOut.o_iStateWearCounter" vartype="SV" col="29" row="7" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYMultiKa" col="36" row="7" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tColorValve[3].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[3].sIn.i_mResetWearCounter" />
+      <!--########################################### ColorValve YMultiKb ###########################################-->
+      <LABEL key="YMultiKb" col="1" row="8" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="8" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[4].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tColorValve[4].sOut.o_iStateWearCounter" vartype="SV" col="29" row="8" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYMultiKb" col="36" row="8" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tColorValve[4].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[4].sIn.i_mResetWearCounter" />
+      <!--########################################### ColorValve YSLa ###########################################-->
+      <LABEL key="YSLa" col="1" row="9" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="9" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_iStateWearCounter" vartype="SV" col="29" row="9" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYSLa" col="36" row="9" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tColorValve[5].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[5].sIn.i_mResetWearCounter" />
+      <!--########################################### ColorValve YSLb ###########################################-->
+      <LABEL key="YSLb" col="1" row="10" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="10" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_iStateWearCounter" vartype="SV" col="29" row="10" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYSLb" col="36" row="10" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tColorValve[6].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tColorValve[6].sIn.i_mResetWearCounter" />
+    </GROUP>
+  </MASKDEF>
+  <!--########################################### WEARCOUNTERS Needle ###########################################-->
+  <MASKDEF key="WearCounters.mask.Needle_FG1" titlekey="Needle" textfile="userTx" permissiondef="userMenuPermission" height="6">
+    <GROUP key="Needle" columns="40" col="1" row="1" halign="stretch" valign="stretch" left="20" rows="6">
+      <CHECKBOX vartype="SV" col="1" row="1" halign="left" enabled="true" var="PCU1.SV_PCU2HMI.mTeachviewControl" />
+      <LABEL key="Write access-" col="6" row="1" halign="left" />
+      <LABEL key="EcoScreen will be locked!" col="6" row="2" halign="left" />
+      <LABEL key="DeviceName" col="1" row="4" halign="left" cspan="16" />
+      <LABEL key="Cycles" col="18" row="4" halign="left" cspan="10" />
+      <LABEL key="State" col="29" row="4" halign="left" cspan="5" />
+      <LABEL key="Res" col="36" row="4" halign="left" cspan="3" />
+      <!--########################################### Needle YHN1a ###########################################-->
+      <LABEL key="YHN1a" col="1" row="5" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="5" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_iStateWearCounter" vartype="SV" col="29" row="5" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYHN1a" col="36" row="5" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tNeedle[1].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tNeedle[1].sIn.i_mResetWearCounter" />
+      <!--########################################### Needle YHN1b ###########################################-->
+      <LABEL key="YHN1b" col="1" row="6" halign="left" />
+      <NUMFIELD vartype="SV" col="18" row="6" halign="stretch" enabled="false" var="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_iWearCounter" cspan="10" />
+      <LABEL key="WearCounters.label.state" var="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_iStateWearCounter" vartype="SV" col="29" row="6" halign="left" cspan="5" />
+      <CHECKBOX key="ResetYHN1b" col="36" row="6" halign="left" enablevartype="SV" enablevar="PCU1.SV_PCU2PHG.tNeedle[2].sOut.o_mRelease" vartype="SV" var="PCU1.SV_PCU2PHG.tNeedle[2].sIn.i_mResetWearCounter" />
+    </GROUP>
+  </MASKDEF>
+</View>

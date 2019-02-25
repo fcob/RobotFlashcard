@@ -1,0 +1,76 @@
+<VIEW>
+	<MASKS>
+		<MASKDEF maskkey="TeachView.mask.drivemenu" textdef="userTx" permissiondef="userMenuPermission"
+		         width="572" columns="572" height="340" rows="340" top="1" bottom="1" left="1" right="1">
+		
+		        <!-- menu item 1 - mastering --> 
+		        <GROUP key="drivemenu.label.group0" col="1" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.mastern" file="AxisRef64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+						
+			<!-- menu item 2 - save drive parameters --> 
+			<GROUP key="drivemenu.label.group1" col="143" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.driveUpload" file="DriveUpload64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 3 - axis limits --> 
+			<GROUP key="drivemenu.label.group2" col="286" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.driveParam" file="DriveParam64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 4 - drive states --> 
+		        <GROUP key="drivemenu.label.group3" col="429" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.DriveUtil" file="DriveUtil64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+			
+			<!-- menu item 5 - brake check --> 
+		        <GROUP key="drivemenu.label.group4" col="1" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot.bUseATEXbrakeCheck" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.brakeCheck" file="BrakeCheck64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 6 - not used 
+			<GROUP key="drivemenu.label.group5" col="143" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 7 - not used
+			<GROUP key="drivemenu.label.group6" col="286" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+			
+			     menu item 8 - not used
+		        <GROUP key="drivemenu.label.group7" col="429" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.DriveUtil" file="DriveUtil64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+			
+			     menu item 9 - not used
+		        <GROUP key="drivemenu.label.group8" col="1" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 10 - not used
+			<GROUP key="drivemenu.label.group9" col="143" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 11 - not used
+			<GROUP key="drivemenu.label.group10" col="286" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 12 - not used
+		        <GROUP key="drivemenu.label.group11" col="429" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.DriveUtil" file="DriveUtil64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> -->
+			
+		</MASKDEF>
+	</MASKS>	
+</VIEW>

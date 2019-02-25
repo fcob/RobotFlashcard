@@ -1,0 +1,26 @@
+<VIEW>
+
+   <MASKDEF key="TeachView.mask.ConveyorRelRobotHand" textfile="userTx" permissiondef="userMenuPermission" rows="16" columns="40">                  
+      
+      <!--  Headline -->
+      <LABEL key="ConveyorRelRobHand.label" col="15" row="2" halign="stretch" valign="stretch" rspan="1" cspan="20"/>
+   
+   
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ZoneEmpty.Release"              vartype="SV" enabled="false" col="07"   row="06" cspan="3"/>
+      <LABEL    key="ZoneEmpty.label"                                                      vartype="SV"                 col="10"   row="06" cspan="6"  halign="stretch"/> 
+            
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.RobotInBypass.Release"          vartype="SV" enabled="false" col="16"   row="06" cspan="3"/>
+      <LABEL    key="RobotInBypass.label"                                                  vartype="SV"                 col="19"   row="06" cspan="6"  halign="stretch"/>
+               
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.RobotInHomePos.Release"         vartype="SV" enabled="false" col="26"   row="06" cspan="3"/>
+      <LABEL    key="RobotInHomePos.label"                                                 vartype="SV"                 col="29"   row="06" cspan="6"  halign="stretch"/>
+      
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_RobotHand.Release"      vartype="SV" enabled="false" col="18"  row="15" cspan="3"/>
+      <LABEL    key="RelRobotHand.label"                                                   vartype="SV"                 col="21"  row="15" cspan="15"  halign="stretch"/>
+        
+   
+   </MASKDEF>
+      
+   
+</VIEW>

@@ -1,0 +1,34 @@
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_0  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  //**************************************************************************************************
+  //check turn time: requirement between 2.5 > 3.0 sec.
+  VEL( VEL_GUNTURN  )
+  //special overlap for Vel control during turn
+  OVERLAP( OVERL_GUNTURN  )
+  //**************************************************************************************************
+  //
+  IF GET_BOOL_SYSTEMVAR(RCUx, "PosInBox", High) THEN
+    LIN( RGUNTURN  )
+    //
+  CALL ResetInterLocks()
+  SET_BOOL_SYSTEMVAR( RCUx ,"PosGunTurn" ,High ,NoResetAtProgEnd  )
+  //
+ELSIF GET_BOOL_SYSTEMVAR(RCUx, "PosAboveBox", High) THEN
+  VEL( V400  )
+  OVERLAP( NODEC50  )
+  //LIN( TUBUSDRY )
+  //
+  VEL( VEL_GUNTURN  )
+  //OVERLAP( OVERL_GUNTURN )
+  //LIN( RGUNTURN )
+  //
+CALL ResetInterLocks()
+SET_BOOL_SYSTEMVAR( RCUx ,"PosGunTurn" ,High ,NoResetAtProgEnd  )
+//
+END_IF
+//
+RDESELECT("RP12")

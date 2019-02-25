@@ -1,0 +1,39 @@
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_0  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V400  )
+  OVERLAP( NODEC50  )
+  //
+  IF NOT GET_BOOL_SYSTEMVAR(RCUx, "PosInBox", High) AND NOT GET_BOOL_SYSTEMVAR(RCUx, "PosGunTurn", High) THEN
+    //**************************************************************************************************
+    //ONLY necessary if Robot leaves Bypass Area
+    //during movement to Target Position
+    //PTP( RPREABOVEBOX )
+    //
+    //CALL ResetInterLocks()
+    //SET_BOOL_SYSTEMVAR( RCUx ,"PreAboveBox", High, NoResetAtProgEnd)
+    //
+    //**************************************************************************************************
+    //
+    PTP( RABOVEBOX  )
+    //
+  CALL ResetInterLocks()
+  SET_BOOL_SYSTEMVAR( RCUx ,"PosAboveBox" ,High ,NoResetAtProgEnd  )
+  //
+  LIN(RINBOX)
+  //
+CALL ResetInterLocks()
+SET_BOOL_SYSTEMVAR( RCUx ,"PosInBox" ,High ,NoResetAtProgEnd  )
+ELSE 
+VEL( VEL_GUNTURN  )
+//OVERLAP( OVERL_GUNTURN )
+LIN(RINBOX)
+//
+CALL ResetInterLocks()
+SET_BOOL_SYSTEMVAR( RCUx ,"PosInBox" ,High ,NoResetAtProgEnd  )
+END_IF
+//
+RDESELECT("RP12")

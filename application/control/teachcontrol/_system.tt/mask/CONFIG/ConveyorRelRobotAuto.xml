@@ -1,0 +1,56 @@
+<VIEW>
+
+   <MASKDEF key="TeachView.mask.ConveyorRelRobotAuto" textfile="userTx" permissiondef="userMenuPermission" rows="16" columns="40">                  
+      
+      <!--  Headline -->
+      <LABEL key="ConveyorRelRobAuto.label" col="15" row="2" halign="stretch" valign="stretch" rspan="1" cspan="20"/>
+      
+      
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_Process.Release"              vartype="SV" enabled="false" col="01"   row="06" cspan="3"/>
+      <LABEL    key="RelProcess.label"                                                           vartype="SV"                 col="04"   row="06" cspan="6"  halign="stretch"/> 
+       
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_Motion.Release"               vartype="SV" enabled="false" col="01"   row="08" cspan="3"/>
+      <LABEL    key="RelMotion.label"                                                            vartype="SV"                 col="04"   row="08" cspan="6"  halign="stretch"/>
+        
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_NoErrors.Release"             vartype="SV" enabled="false" col="01"   row="10" cspan="3"/>
+      <LABEL    key="RelNoErrors.label"                                                          vartype="SV"                 col="04"   row="10" cspan="6"  halign="stretch"/>
+       
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.RobotInBypass.Release"                vartype="SV" enabled="false" col="10"   row="06" cspan="3"/>
+      <LABEL    key="RobInBypass.label"                                                          vartype="SV"                 col="13"   row="06" cspan="6"  halign="stretch"/>
+       
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.FixposActive.Release"                 vartype="SV" enabled="false" col="10"   row="08" cspan="3"/>
+      <LABEL    key="FixposActive.label"                                                         vartype="SV"                 col="13"   row="08" cspan="6"  halign="stretch"/>
+        
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.MotionActive.Release"                 vartype="SV" enabled="false" col="10"   row="10" cspan="3"/>
+      <LABEL    key="MotionActive.label"                                                         vartype="SV"                 col="13"   row="10" cspan="6"  halign="stretch"/>
+      
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.RobotInBypass.Release"                vartype="SV" enabled="false" col="19"   row="06" cspan="3"/>
+      <LABEL    key="RobInBypass.label"                                                          vartype="SV"                 col="22"   row="06" cspan="6"  halign="stretch"/>
+       
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.NoReleaseRobot.Release"               vartype="SV" enabled="false" col="19"   row="08" cspan="3"/>
+      <LABEL    key="NoRelRobot.label"                                                           vartype="SV"                 col="22"   row="08" cspan="6"  halign="stretch"/>
+        
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.NoMotionActive.Release"               vartype="SV" enabled="false" col="28"   row="06" cspan="3"/>
+      <LABEL    key="NoMotionActive.label"                                                       vartype="SV"                 col="31"   row="06" cspan="6"  halign="stretch"/>
+       
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.RobotInBypass.Release"                vartype="SV" enabled="false" col="29"   row="08" cspan="3"/>
+      <LABEL    key="RobInBypass.label"                                                          vartype="SV"                 col="32"   row="08" cspan="6"  halign="stretch"/>
+        
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.GhostWithoutMotion.Release"           vartype="SV" enabled="false" col="29"   row="10" cspan="3"/>
+      <LABEL    key="GhostNoMotion.label"                                                        vartype="SV"                 col="32"   row="10" cspan="6"  halign="stretch"/>
+       
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_NoErrors.Release"             vartype="SV" enabled="false" col="28"   row="12" cspan="3"/>
+      <LABEL    key="RelNoErrors.label"                                                          vartype="SV"                 col="31"   row="12" cspan="6"  halign="stretch"/>
+     
+      
+      <CHECKBOX var="system.SV_System2HMI.sConveyorRelease.ConvRel_RobotAuto.Release"            vartype="SV" enabled="false" col="18"  row="15" cspan="3"/>
+      <LABEL    key="RelRobotAuto.label"                                                         vartype="SV"                 col="21"  row="15" cspan="15"  halign="stretch"/>
+    
+                 
+   </MASKDEF>
+         
+</VIEW>

@@ -1,0 +1,12 @@
+//$Köztes program
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU37X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  //
+  PTP( HOME_VKD_P1  )
+  //
+RDESELECT("RP12")

@@ -1,0 +1,282 @@
+[Miscellaneous]
+MaxFileVersion = 7
+
+[Groups]
+NumberOfGroups = 7
+1 = 1
+2 = 3
+3 = 10
+4 = 7
+5 = 4
+6 = 23
+7 = 24
+
+[Group_1]
+1N = A_LoadStockpaint
+1C = 
+1D = Stammlackladen über Trichter
+
+2N = B_LoadStockpaint
+2C = 
+2D = Load Stockpaint 34
+
+3N = B_LoadHardener
+3C = 
+3D = Laden Härter über Trichter
+
+4N = A_LoadStockpaint_HAND
+4C = 
+4D = Load Stockpaint 12
+
+5N = A_LoadHardener_HAND
+5C = 
+5D = Load Hardener 1
+
+6N = A_LoadHardener
+6C = 
+6D = Laden Härter über Trichter
+
+7N = A_LoadHardener_Test
+7C = 
+7D = Laden Härter über Trichter
+
+8N = A_LoadHardener01
+8C = 
+8D = Load Hardener 1
+
+9N = A_LoadHardener_CPF_WESA
+9C = 
+9D = Load Hardener 1
+
+10N = A_LoadStockpaint_CPF_WESA
+10C = 
+10D = Load Stockpaint 12
+
+11N = A_LoadStockpaint01
+11C = 
+11D = Load Stockpaint 12
+
+NumberOfTimeprograms = 11
+
+[Group_2]
+1N = A_PurgeHardener_HAND
+1C = 
+1D = Purge Hardener 1
+
+2N = A_PurgeStockpaint
+2C = 
+2D = Purge Stockpaint 12
+
+3N = B_PurgeStockpaint
+3C = 
+3D = Purge Stockpaint 34
+
+4N = A_PurgeHardener_Test
+4C = 
+4D = Härterspülen über Trichter
+
+5N = A_PurgeHardener
+5C = 
+5D = Härterspülen über Trichter
+
+6N = A_PurgeStockpaint_HAND
+6C = 
+6D = Purge Stockpaint 12
+
+7N = B_PurgeHardener
+7C = 
+7D = Härterspülen über Trichter
+
+8N = PurgeAll_Dummy
+8C = 
+8D = Purge Mix SL12 and H1
+
+9N = A_PurgeStockpaint_CPF_WESA
+9C = 
+9D = Purge Stockpaint 12
+
+10N = A_PurgeHardener_CPF_WESA
+10C = 
+10D = Purge Hardener 1
+
+NumberOfTimeprograms = 10
+
+[Group_3]
+1N = FlowCheck_H_SysA_100ml
+1C = 
+1D = 
+
+2N = FlowCheck_H_SysA_200ml
+2C = 
+2D = 
+
+3N = FlowCheck_H_SysA_300ml
+3C = 
+3D = 
+
+4N = FlowCheck_SL_SysA_600ml
+4C = 
+4D = 
+
+5N = FlowCheck_SL_SysA_100ml
+5C = 
+5D = 
+
+6N = FlowCheck_SL_SysA_300ml
+6C = 
+6D = 
+
+7N = FlowCheck_2K_SysB_600ml
+7C = 
+7D = 
+
+8N = FlowCheck_H_SysB_100ml
+8C = 
+8D = 
+
+9N = FlowCheck_H_SysB_200ml
+9C = 
+9D = 
+
+10N = FlowCheck_H_SysB_300ml
+10C = 
+10D = 
+
+11N = FlowCheck_2K_SysB_100ml
+11C = 
+11D = 
+
+12N = FlowCheck_2K_SysB_300ml
+12C = 
+12D = 
+
+13N = FlowCheck_SL_SysB_600ml
+13C = 
+13D = 
+
+14N = FlowCheck_2K_SysA_600ml
+14C = 
+14D = 
+
+15N = FlowCheck_SL_SysB_100ml
+15C = 
+15D = 
+
+16N = FlowCheck_SL_SysB_300ml
+16C = 
+16D = 
+
+17N = FlowCheck_2K_SysA_200ml
+17C = 
+17D = 
+
+18N = FlowCheck_2K_SysA_100ml
+18C = 
+18D = 
+
+19N = FlowCheck_2K_SysA_300ml
+19C = 
+19D = 
+
+NumberOfTimeprograms = 19
+
+[Group_4]
+1N = AtomizerClean
+1C = 
+1D = Zerstäuberreinigen im CleanerD2
+
+2N = AtomizerClean_00
+2C = 
+2D = Zerstäuberreinigen im CleanerD2
+
+3N = AtomizerClean_00_Auslitern_V31
+3C = 
+3D = Zerstäuberreinigen im CleanerD2
+
+NumberOfTimeprograms = 3
+
+[Group_5]
+1N = ShortPurge
+1C = 
+1D = Kurzspülen in Cleaner D2
+
+2N = ShortPurge_00_CPF_WESA
+2C = 
+2D = Short Purge
+
+3N = ShortPurge_ORG
+3C = 
+3D = Short Purge
+
+4N = ShortPurge01
+4C = 
+4D = Short Purge
+
+5N = AtomizerCleanAndShortPurge_00
+5C = 
+5D = Zerstäuberreinigen und Kürzspülen im Cleaner D2
+
+NumberOfTimeprograms = 5
+
+[Group_6]
+1N = B_Load_Mix
+1C = 
+1D = Zerstäuberladen über Trichter
+
+2N = A_Load_Mix01
+2C = 
+2D = Load mixed material SL12 and H1
+
+3N = A_Load_Mix
+3C = 
+3D = Zerstäuberladen über Trichter
+
+4N = A_Load_Mix_CPF_WESA
+4C = 
+4D = Load mixed material SL12 and H1
+
+5N = A_Load_Mix_HAND
+5C = 
+5D = Load mixed material SL12 and H1
+
+NumberOfTimeprograms = 5
+
+[Group_7]
+1N = A_PurgeMix
+1C = 
+1D = Zerstäuberspülen über Trichter
+
+2N = A_PottimePurge_CPF_WESA
+2C = 
+2D = Purge Mix SL12 and H1
+
+3N = B_AtomizerCleanAndPurge_00
+3C = 
+3D = Zerstäuber Reinigen und Spülen in Cleaner D2
+
+4N = B_PottimePurge
+4C = 
+4D = Purge Mix SL12 and H1
+
+5N = A_AtomizerCleanAndPurge_00
+5C = 
+5D = Zerstäuber Reinigen und Spülen in Cleaner D2
+
+6N = B_PurgeMix
+6C = 
+6D = Zerstäuberspülen über Trichter
+
+7N = A_PurgeMix_CPF_WESA
+7C = 
+7D = Purge Mix SL12 and H1
+
+8N = A_PottimePurge
+8C = 
+8D = Purge Mix SL12 and H1
+
+9N = A_PurgeMix_HAND
+9C = 
+9D = Purge Mix SL12 and H1
+
+NumberOfTimeprograms = 9
+

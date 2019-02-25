@@ -1,0 +1,31 @@
+RSELECT("RP12")
+  //
+  SETTOOL( TOOL_ZERO  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V200  )
+  OVERLAP( FINE_0  )
+  //
+  PTP( RHOME  )
+  PTP( RZERO  )
+  //Set variable InBrakePosition high
+  SET_BOOL_SYSTEMVAR( RCUx ,"GrindInBrakePos" ,High ,NoResetAtProgEnd  )
+  //
+  VEL( V50  )
+  PTP( RZERO  )
+  //
+  //Start BrakeTest A6
+  SET_MOTION_STATE( GrindBrake ,Joint6 ,MainRun  )
+  //
+  PTP( RGRINDINA6  )
+  //
+  VEL( V200  )
+  PTP( RZERO  )
+  //
+  //Set variable InBrakePosition low
+  SET_BOOL_SYSTEMVAR( RCUx ,"GrindInBrakePos" ,Low ,NoResetAtProgEnd  )
+  //
+  PTP( RHOME  )
+  //
+RDESELECT("RP12")

@@ -1,0 +1,1291 @@
+<VIEW>
+
+   <MASKDEF maskkey="TeachView.mask.paramUploadS3" textdef="userTx" permissiondef="userMenuPermission"
+		         columns="572" height="3400" rows="1360" top="1" bottom="1" left="1" right="1"> 
+            
+      <GROUP key="paramUploadS3.group.saveall" col="1" row="1" columns="572" rows="40" cspan="572" rspan="40" top="1" bottom="1" left="1" right="1">
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.mSaveAll" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     key="paramUploadS3.button.savealldev" col="25" row="4" cspan="130" rspan="30"/>
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.mSaveDrives" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     key="paramUploadS3.button.savealldrv" col="195" row="4" cspan="130" rspan="30"/>
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.mSaveIOs" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     key="paramUploadS3.button.saveallIO" col="365" row="4" cspan="130" rspan="30"/>
+      </GROUP>      
+
+
+      <GROUP key="paramUploadS3.group.savedrives" col="1" row="41" columns="572" rows="330" cspan="572" rspan="330" top="1" bottom="1" left="1" right="1">
+             <!-- Drive 1 -->
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].zName" vartype="SV" enabled="true" col="15" row="4" cspan="200" rspan="10" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].mShowDevice" visiblevartype="SV"/>        
+             <LABEL key="paramUploadS3.label.InSim" row="1" col="230" cspan="30" halign="stretch" rspan="5" valign="stretch"/>        
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].mShowDevice" visiblevartype="SV"
+	               col="233" row="6" cspan="40" rspan="8" halign="stretch" valign="stretch"/>             
+             <LABEL key="paramUploadS3.label.IsOptional" row="1" col="270" cspan="30" halign="stretch" rspan="5" valign="stretch"/>        
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].mShowDevice" visiblevartype="SV"
+	               col="273" row="6" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                     
+             <LABEL key="paramUploadS3.label.state" row="1" col="320" cspan="30" halign="stretch" rspan="5" valign="stretch"/>           
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].iState" vartype="SV" halign="left" col="330" row="3" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[1].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive1" col="400" row="5" cspan="100" rspan="9" halign="stretch" valign="stretch"/>     
+	             
+	     <!-- Drive 2 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].zName" vartype="SV" enabled="true" col="15" row="12" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].mShowDevice" visiblevartype="SV"
+	               col="233" row="16" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].mShowDevice" visiblevartype="SV"
+	               col="273" row="16" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].iState" vartype="SV" halign="left" col="330" row="13" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[2].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive2" col="400" row="16" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 3 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].zName" vartype="SV" enabled="true" col="15" row="22" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].mShowDevice" visiblevartype="SV"
+	               col="233" row="26" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].mShowDevice" visiblevartype="SV"
+	               col="273" row="26" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].iState" vartype="SV" halign="left" col="330" row="23" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[3].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive3" col="400" row="26" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 4 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].zName" vartype="SV" enabled="true" col="15" row="32" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].mShowDevice" visiblevartype="SV"
+	               col="233" row="36" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].mShowDevice" visiblevartype="SV"
+	               col="273" row="36" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].iState" vartype="SV" halign="left" col="330" row="33" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[4].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive4" col="400" row="36" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 5 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].zName" vartype="SV" enabled="true" col="15" row="42" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].mShowDevice" visiblevartype="SV"
+	               col="233" row="46" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].mShowDevice" visiblevartype="SV"
+	               col="273" row="46" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].iState" vartype="SV" halign="left" col="330" row="43" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[5].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive5" col="400" row="46" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 6 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].zName" vartype="SV" enabled="true" col="15" row="52" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].mShowDevice" visiblevartype="SV"
+	               col="233" row="56" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].mShowDevice" visiblevartype="SV"
+	               col="273" row="56" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].iState" vartype="SV" halign="left" col="330" row="53" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[6].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive6" col="400" row="56" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 7 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].zName" vartype="SV" enabled="true" col="15" row="62" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].mShowDevice" visiblevartype="SV"
+	               col="233" row="66" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].mShowDevice" visiblevartype="SV"
+	               col="273" row="66" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].iState" vartype="SV" halign="left" col="330" row="63" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[7].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive7" col="400" row="66" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 8 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].zName" vartype="SV" enabled="true" col="15" row="72" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].mShowDevice" visiblevartype="SV"
+	               col="233" row="76" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].mShowDevice" visiblevartype="SV"
+	               col="273" row="76" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].iState" vartype="SV" halign="left" col="330" row="73" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[8].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive8" col="400" row="76" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 9 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].zName" vartype="SV" enabled="true" col="15" row="82" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].mShowDevice" visiblevartype="SV"
+	               col="233" row="86" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].mShowDevice" visiblevartype="SV"
+	               col="273" row="86" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].iState" vartype="SV" halign="left" col="330" row="83" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[9].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive9" col="400" row="86" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 10 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].zName" vartype="SV" enabled="true" col="15" row="92" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].mShowDevice" visiblevartype="SV"
+	               col="233" row="96" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].mShowDevice" visiblevartype="SV"
+	               col="273" row="96" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].iState" vartype="SV" halign="left" col="330" row="93" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[10].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive10" col="400" row="96" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 11 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].zName" vartype="SV" enabled="true" col="15" row="102" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].mShowDevice" visiblevartype="SV"
+	               col="233" row="106" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].mShowDevice" visiblevartype="SV"
+	               col="273" row="106" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].iState" vartype="SV" halign="left" col="330" row="103" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[11].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive11" col="400" row="106" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 12 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].zName" vartype="SV" enabled="true" col="15" row="112" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].mShowDevice" visiblevartype="SV"
+	               col="233" row="116" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].mShowDevice" visiblevartype="SV"
+	               col="273" row="116" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].iState" vartype="SV" halign="left" col="330" row="113" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[12].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive12" col="400" row="116" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 13 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].zName" vartype="SV" enabled="true" col="15" row="122" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].mShowDevice" visiblevartype="SV"
+	               col="233" row="126" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].mShowDevice" visiblevartype="SV"
+	               col="273" row="126" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].iState" vartype="SV" halign="left" col="330" row="123" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[13].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive13" col="400" row="126" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 14 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].zName" vartype="SV" enabled="true" col="15" row="132" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].mShowDevice" visiblevartype="SV"
+	               col="233" row="136" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].mShowDevice" visiblevartype="SV"
+	               col="273" row="136" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].iState" vartype="SV" halign="left" col="330" row="133" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[14].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveDrive14" col="400" row="136" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 15 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].zName" vartype="SV" enabled="true" col="15" row="142" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].mShowDevice" visiblevartype="SV"
+	               col="233" row="146" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].mShowDevice" visiblevartype="SV"
+	               col="273" row="146" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].iState" vartype="SV" halign="left" col="330" row="143" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[15].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive15" col="400" row="146" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 16 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].zName" vartype="SV" enabled="true" col="15" row="152" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].mShowDevice" visiblevartype="SV"
+	               col="233" row="156" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].mShowDevice" visiblevartype="SV"
+	               col="273" row="156" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].iState" vartype="SV" halign="left" col="330" row="153" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[16].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive16" col="400" row="156" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 17 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].zName" vartype="SV" enabled="true" col="15" row="162" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].mShowDevice" visiblevartype="SV"
+	               col="233" row="166" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].mShowDevice" visiblevartype="SV"
+	               col="273" row="166" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].iState" vartype="SV" halign="left" col="330" row="163" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[17].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive17" col="400" row="166" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 18 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].zName" vartype="SV" enabled="true" col="15" row="172" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].mShowDevice" visiblevartype="SV"
+	               col="233" row="176" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].mShowDevice" visiblevartype="SV"
+	               col="273" row="176" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].iState" vartype="SV" halign="left" col="330" row="173" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[18].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive18" col="400" row="176" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 19 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].zName" vartype="SV" enabled="true" col="15" row="182" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].mShowDevice" visiblevartype="SV"
+	               col="233" row="186" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].mShowDevice" visiblevartype="SV"
+	               col="273" row="186" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].iState" vartype="SV" halign="left" col="330" row="183" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[19].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive19" col="400" row="186" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 20 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].zName" vartype="SV" enabled="true" col="15" row="192" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].mShowDevice" visiblevartype="SV"
+	               col="233" row="196" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].mShowDevice" visiblevartype="SV"
+	               col="273" row="196" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].iState" vartype="SV" halign="left" col="330" row="193" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[20].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive20" col="400" row="196" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 21 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].zName" vartype="SV" enabled="true" col="15" row="202" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].mShowDevice" visiblevartype="SV"
+	               col="233" row="206" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].mShowDevice" visiblevartype="SV"
+	               col="273" row="206" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].iState" vartype="SV" halign="left" col="330" row="203" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[21].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive21" col="400" row="206" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 22 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].zName" vartype="SV" enabled="true" col="15" row="212" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].mShowDevice" visiblevartype="SV"
+	               col="233" row="216" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].mShowDevice" visiblevartype="SV"
+	               col="273" row="216" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].iState" vartype="SV" halign="left" col="330" row="213" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[22].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive22" col="400" row="216" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 23 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].zName" vartype="SV" enabled="true" col="15" row="222" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].mShowDevice" visiblevartype="SV"
+	               col="233" row="226" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].mShowDevice" visiblevartype="SV"
+	               col="273" row="226" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].iState" vartype="SV" halign="left" col="330" row="223" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[23].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive23" col="400" row="226" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 24 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].zName" vartype="SV" enabled="true" col="15" row="232" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].mShowDevice" visiblevartype="SV"
+	               col="233" row="236" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].mShowDevice" visiblevartype="SV"
+	               col="273" row="236" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].iState" vartype="SV" halign="left" col="330" row="233" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[24].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive24" col="400" row="236" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 25 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].zName" vartype="SV" enabled="true" col="15" row="242" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].mShowDevice" visiblevartype="SV"
+	               col="233" row="246" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].mShowDevice" visiblevartype="SV"
+	               col="273" row="246" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].iState" vartype="SV" halign="left" col="330" row="243" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[25].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive25" col="400" row="246" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 26 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].zName" vartype="SV" enabled="true" col="15" row="252" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].mShowDevice" visiblevartype="SV"
+	               col="233" row="256" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].mShowDevice" visiblevartype="SV"
+	               col="273" row="256" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].iState" vartype="SV" halign="left" col="330" row="253" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[26].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive26" col="400" row="256" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 27 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].zName" vartype="SV" enabled="true" col="15" row="262" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].mShowDevice" visiblevartype="SV"
+	               col="233" row="266" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].mShowDevice" visiblevartype="SV"
+	               col="273" row="266" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].iState" vartype="SV" halign="left" col="330" row="263" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[27].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive27" col="400" row="266" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 28 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].zName" vartype="SV" enabled="true" col="15" row="272" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].mShowDevice" visiblevartype="SV"
+	               col="233" row="276" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].mShowDevice" visiblevartype="SV"
+	               col="273" row="276" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].iState" vartype="SV" halign="left" col="330" row="273" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[28].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive28" col="400" row="276" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 29 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].zName" vartype="SV" enabled="true" col="15" row="282" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].mShowDevice" visiblevartype="SV"
+	               col="233" row="286" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].mShowDevice" visiblevartype="SV"
+	               col="273" row="286" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].iState" vartype="SV" halign="left" col="330" row="283" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[29].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive29" col="400" row="286" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- Drive 30 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].zName" vartype="SV" enabled="true" col="15" row="292" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].mShowDevice" visiblevartype="SV"
+	               col="233" row="296" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].mShowDevice" visiblevartype="SV"
+	               col="273" row="296" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].iState" vartype="SV" halign="left" col="330" row="293" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yDrives[30].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveDrive30" col="400" row="296" cspan="100" rspan="9" halign="stretch" valign="stretch"/>      
+      </GROUP>
+
+      <GROUP key="paramUploadS3.group.saveIOs" col="1" row="371" columns="572" rows="450" cspan="572" rspan="450" top="1" bottom="1" left="1" right="1">
+             <!-- IO device 1 -->
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].zName" vartype="SV" enabled="true" col="15" row="4" cspan="200" rspan="10" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].mShowDevice" visiblevartype="SV"/>        
+             <LABEL key="paramUploadS3.label.InSim" row="1" col="230" cspan="30" halign="stretch" rspan="5" valign="stretch"/>        
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].mShowDevice" visiblevartype="SV"
+	               col="233" row="6" cspan="40" rspan="8" halign="stretch" valign="stretch"/>             
+             <LABEL key="paramUploadS3.label.IsOptional" row="1" col="270" cspan="30" halign="stretch" rspan="5" valign="stretch"/>        
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].mShowDevice" visiblevartype="SV"
+	               col="273" row="6" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                     
+             <LABEL key="paramUploadS3.label.state" row="1" col="320" cspan="30" halign="stretch" rspan="5" valign="stretch"/>           
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].iState" vartype="SV" halign="left" col="330" row="3" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[1].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev1" col="400" row="5" cspan="100" rspan="9" halign="stretch" valign="stretch"/>     
+	             
+	     <!-- IO device 2 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].zName" vartype="SV" enabled="true" col="15" row="12" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].mShowDevice" visiblevartype="SV"
+	               col="233" row="16" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].mShowDevice" visiblevartype="SV"
+	               col="273" row="16" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].iState" vartype="SV" halign="left" col="330" row="13" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[2].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev2" col="400" row="16" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 3 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].zName" vartype="SV" enabled="true" col="15" row="22" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].mShowDevice" visiblevartype="SV"
+	               col="233" row="26" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].mShowDevice" visiblevartype="SV"
+	               col="273" row="26" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].iState" vartype="SV" halign="left" col="330" row="23" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[3].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev3" col="400" row="26" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 4 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].zName" vartype="SV" enabled="true" col="15" row="32" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].mShowDevice" visiblevartype="SV"
+	               col="233" row="36" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].mShowDevice" visiblevartype="SV"
+	               col="273" row="36" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].iState" vartype="SV" halign="left" col="330" row="33" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[4].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev4" col="400" row="36" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 5 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].zName" vartype="SV" enabled="true" col="15" row="42" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].mShowDevice" visiblevartype="SV"
+	               col="233" row="46" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].mShowDevice" visiblevartype="SV"
+	               col="273" row="46" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].iState" vartype="SV" halign="left" col="330" row="43" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[5].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev5" col="400" row="46" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 6 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].zName" vartype="SV" enabled="true" col="15" row="52" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].mShowDevice" visiblevartype="SV"
+	               col="233" row="56" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].mShowDevice" visiblevartype="SV"
+	               col="273" row="56" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].iState" vartype="SV" halign="left" col="330" row="53" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[6].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev6" col="400" row="56" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 7 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].zName" vartype="SV" enabled="true" col="15" row="62" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].mShowDevice" visiblevartype="SV"
+	               col="233" row="66" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].mShowDevice" visiblevartype="SV"
+	               col="273" row="66" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].iState" vartype="SV" halign="left" col="330" row="63" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[7].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev7" col="400" row="66" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 8 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].zName" vartype="SV" enabled="true" col="15" row="72" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].mShowDevice" visiblevartype="SV"
+	               col="233" row="76" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].mShowDevice" visiblevartype="SV"
+	               col="273" row="76" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].iState" vartype="SV" halign="left" col="330" row="73" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[8].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev8" col="400" row="76" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 9 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].zName" vartype="SV" enabled="true" col="15" row="82" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].mShowDevice" visiblevartype="SV"
+	               col="233" row="86" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].mShowDevice" visiblevartype="SV"
+	               col="273" row="86" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].iState" vartype="SV" halign="left" col="330" row="83" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[9].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev9" col="400" row="86" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 10 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].zName" vartype="SV" enabled="true" col="15" row="92" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].mShowDevice" visiblevartype="SV"
+	               col="233" row="96" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].mShowDevice" visiblevartype="SV"
+	               col="273" row="96" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].iState" vartype="SV" halign="left" col="330" row="93" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[10].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev10" col="400" row="96" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 11 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].zName" vartype="SV" enabled="true" col="15" row="102" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].mShowDevice" visiblevartype="SV"
+	               col="233" row="106" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].mShowDevice" visiblevartype="SV"
+	               col="273" row="106" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].iState" vartype="SV" halign="left" col="330" row="103" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[11].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev11" col="400" row="106" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 12 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].zName" vartype="SV" enabled="true" col="15" row="112" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].mShowDevice" visiblevartype="SV"
+	               col="233" row="116" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].mShowDevice" visiblevartype="SV"
+	               col="273" row="116" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].iState" vartype="SV" halign="left" col="330" row="113" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[12].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev12" col="400" row="116" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 13 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].zName" vartype="SV" enabled="true" col="15" row="122" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].mShowDevice" visiblevartype="SV"
+	               col="233" row="126" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].mShowDevice" visiblevartype="SV"
+	               col="273" row="126" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].iState" vartype="SV" halign="left" col="330" row="123" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[13].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev13" col="400" row="126" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 14 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].zName" vartype="SV" enabled="true" col="15" row="132" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].mShowDevice" visiblevartype="SV"
+	               col="233" row="136" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].mShowDevice" visiblevartype="SV"
+	               col="273" row="136" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].iState" vartype="SV" halign="left" col="330" row="133" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV" 
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[14].mShowDevice" visiblevartype="SV"
+	             key="paramUploadS3.button.saveIOdev14" col="400" row="136" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 15 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].zName" vartype="SV" enabled="true" col="15" row="142" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].mShowDevice" visiblevartype="SV"
+	               col="233" row="146" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].mShowDevice" visiblevartype="SV"
+	               col="273" row="146" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].iState" vartype="SV" halign="left" col="330" row="143" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[15].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev15" col="400" row="146" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 16 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].zName" vartype="SV" enabled="true" col="15" row="152" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].mShowDevice" visiblevartype="SV"
+	               col="233" row="156" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].mShowDevice" visiblevartype="SV"
+	               col="273" row="156" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].iState" vartype="SV" halign="left" col="330" row="153" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[16].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev16" col="400" row="156" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 17 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].zName" vartype="SV" enabled="true" col="15" row="162" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].mShowDevice" visiblevartype="SV"
+	               col="233" row="166" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].mShowDevice" visiblevartype="SV"
+	               col="273" row="166" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].iState" vartype="SV" halign="left" col="330" row="163" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[17].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev17" col="400" row="166" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 18 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].zName" vartype="SV" enabled="true" col="15" row="172" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].mShowDevice" visiblevartype="SV"
+	               col="233" row="176" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].mShowDevice" visiblevartype="SV"
+	               col="273" row="176" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].iState" vartype="SV" halign="left" col="330" row="173" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[18].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev18" col="400" row="176" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 19 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].zName" vartype="SV" enabled="true" col="15" row="182" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].mShowDevice" visiblevartype="SV"
+	               col="233" row="186" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].mShowDevice" visiblevartype="SV"
+	               col="273" row="186" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].iState" vartype="SV" halign="left" col="330" row="183" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[19].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev19" col="400" row="186" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 20 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].zName" vartype="SV" enabled="true" col="15" row="192" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].mShowDevice" visiblevartype="SV"
+	               col="233" row="196" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].mShowDevice" visiblevartype="SV"
+	               col="273" row="196" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].iState" vartype="SV" halign="left" col="330" row="193" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[20].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev20" col="400" row="196" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 21 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].zName" vartype="SV" enabled="true" col="15" row="202" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].mShowDevice" visiblevartype="SV"
+	               col="233" row="206" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].mShowDevice" visiblevartype="SV"
+	               col="273" row="206" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].iState" vartype="SV" halign="left" col="330" row="203" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[21].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev21" col="400" row="206" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 22 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].zName" vartype="SV" enabled="true" col="15" row="212" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].mShowDevice" visiblevartype="SV"
+	               col="233" row="216" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].mShowDevice" visiblevartype="SV"
+	               col="273" row="216" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].iState" vartype="SV" halign="left" col="330" row="213" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[22].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev22" col="400" row="216" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 23 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].zName" vartype="SV" enabled="true" col="15" row="222" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].mShowDevice" visiblevartype="SV"
+	               col="233" row="226" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].mShowDevice" visiblevartype="SV"
+	               col="273" row="226" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].iState" vartype="SV" halign="left" col="330" row="223" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[23].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev23" col="400" row="226" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 24 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].zName" vartype="SV" enabled="true" col="15" row="232" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].mShowDevice" visiblevartype="SV"
+	               col="233" row="236" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].mShowDevice" visiblevartype="SV"
+	               col="273" row="236" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].iState" vartype="SV" halign="left" col="330" row="233" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[24].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev24" col="400" row="236" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 25 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].zName" vartype="SV" enabled="true" col="15" row="242" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].mShowDevice" visiblevartype="SV"
+	               col="233" row="246" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].mShowDevice" visiblevartype="SV"
+	               col="273" row="246" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].iState" vartype="SV" halign="left" col="330" row="243" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[25].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev25" col="400" row="246" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 26 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].zName" vartype="SV" enabled="true" col="15" row="252" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].mShowDevice" visiblevartype="SV"
+	               col="233" row="256" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].mShowDevice" visiblevartype="SV"
+	               col="273" row="256" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].iState" vartype="SV" halign="left" col="330" row="253" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[26].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev26" col="400" row="256" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 27 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].zName" vartype="SV" enabled="true" col="15" row="262" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].mShowDevice" visiblevartype="SV"
+	               col="233" row="266" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].mShowDevice" visiblevartype="SV"
+	               col="273" row="266" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].iState" vartype="SV" halign="left" col="330" row="263" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[27].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev27" col="400" row="266" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 28 -->            
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].zName" vartype="SV" enabled="true" col="15" row="272" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].mShowDevice" visiblevartype="SV"
+	               col="233" row="276" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].mShowDevice" visiblevartype="SV"
+	               col="273" row="276" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].iState" vartype="SV" halign="left" col="330" row="273" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[28].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev28" col="400" row="276" cspan="100" rspan="9" halign="stretch" valign="stretch"/>
+	             
+	     <!-- IO device 29             
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].zName" vartype="SV" enabled="true" col="15" row="282" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].mShowDevice" visiblevartype="SV"
+	               col="233" row="286" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].mShowDevice" visiblevartype="SV"
+	               col="273" row="286" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].iState" vartype="SV" halign="left" col="330" row="283" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[29].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev29" col="400" row="286" cspan="100" rspan="9" halign="stretch" valign="stretch"/> -->
+	             
+	     <!-- IO device 30             
+	     <TEXTFIELD var="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].zName" vartype="SV" enabled="true" col="15" row="292" cspan="200" rspan="15" halign="stretch"
+                        visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].mShowDevice" visiblevartype="SV"/>                
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].mIsSimulated" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].mShowDevice" visiblevartype="SV"
+	               col="233" row="296" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                 
+             <CHECKBOX var="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].mIsOptional" vartype="SV" enabled="false"
+                       visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].mShowDevice" visiblevartype="SV"
+	               col="273" row="296" cspan="40" rspan="8" halign="stretch" valign="stretch"/>                             
+             <VARSYMBOL var="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].iState" vartype="SV" halign="left" col="330" row="293" cspan="20" rspan="15"
+                  visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].mShowDevice" visiblevartype="SV">
+	          <SYMBOL value="0" file="Disc_Inactve.GIF"/>
+	          <SYMBOL value="1" file="Disc_Run.GIF"/>
+	          <SYMBOL value="2" file="Disc_Err.GIF"/>
+	          <SYMBOL value="3" file="Disc_Ok.GIF"/>
+	     </VARSYMBOL>                   
+             <BUTTON var="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].mDoUpload" vartype="SV" 
+                     enablevar="system.SV_S3ControlPanel.sDataParamSave.mReleaseInputs" enablevartype="SV"
+                     visiblevar="system.SV_S3ControlPanel.sDataParamSave.yIOs[30].mShowDevice" visiblevartype="SV" 
+	             key="paramUploadS3.button.saveIOdev30" col="400" row="296" cspan="100" rspan="9" halign="stretch" valign="stretch"/>  -->     
+      </GROUP>
+
+
+   </MASKDEF>
+</VIEW>

@@ -1,0 +1,13 @@
+//$Elöpozicio
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU33X  )
+  //
+  ACC( A3500  )
+  VEL( V700  )
+  OVERLAP( NODEC50  )
+  //
+  PTP( NT_SP_P12  )
+  //
+RDESELECT("RP12")

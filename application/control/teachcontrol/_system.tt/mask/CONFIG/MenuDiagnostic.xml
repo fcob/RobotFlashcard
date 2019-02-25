@@ -1,0 +1,75 @@
+<VIEW>
+	<MASKS>
+		<MASKDEF maskkey="TeachView.mask.Diagnosticmenu" textdef="userTx" permissiondef="userMenuPermission" 
+		         width="572" columns="572" height="340" rows="340" top="1" bottom="1" left="1" right="1">
+		
+		        <!-- menu item 1 - robot start condition -->
+	                <GROUP key="Diagnosticmenu.label.group0" col="1" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.RobotStart" file="Roboter.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+						
+			<!-- menu item 2 - diagnostic --> 
+			<GROUP key="Diagnosticmenu.label.group1" col="143" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.ConveyorRelease" file="Conveyor.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 3 - tracking  
+			<GROUP key="diagnosticmenu.label.group2" col="286" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gbIsTrackingStation" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.tracking" file="Tracking64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 4 - not used
+		        <GROUP key="diagnosticmenu.label.group3" col="429" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gbIsTrackingStation" visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.trackingBody" file="Fifo64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> -->
+			
+			<!-- menu item 5 - save sercos 3 parameters -->
+		        <GROUP key="Diagnosticmenu.label.group4" col="1" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="system.SV_S3ControlPanel.mSercos3Used" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.paramUploadS3" file="Sercos3Upload64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			<!-- menu item 6 - sercos 3 phase change-->
+			<GROUP key="Diagnosticmenu.label.group5" col="143" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="system.SV_S3ControlPanel.mSercos3Used" visiblevartype="SV">
+			       <BUTTON maskkey="TeachView.mask.S3_Functions" file="Sercos3PhaseChg64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+      <!-- menu item 7 - PControl 
+	                <GROUP key="Diagnosticmenu.label.group6" col="286" row="1" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.PControl" file="P_Control.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+
+		      menu item 8 - not used 
+		        <GROUP key="diagnosticmenu.label.group7" col="429" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2">
+			       <BUTTON maskkey="TeachView.mask.RobotStart" file="SFA64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+			
+			     menu item 9 - not used			
+		        <GROUP key="diagnosticmenu.label.group8" col="429" row="114" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               <BUTTON maskkey="TeachView.mask.logger" file="Logger64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> 
+						
+			     menu item 10 - not used
+			<GROUP key="diagnosticmenu.label.group9" col="143" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 11 - not used
+			<GROUP key="diagnosticmenu.label.group10" col="286" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+			       visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey=" " file=" .gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP>
+			
+			     menu item 12 - not used
+		        <GROUP key="diagnosticmenu.label.group11" col="429" row="228" columns="142" rows="113" cspan="142" rspan="113" top="2" bottom="2" left="2" right="2"
+		               visiblevar="_system.gRcuFocusedRobot. " visiblevartype="TT">
+			       <BUTTON maskkey="TeachView.mask.DriveUtil" file="DriveUtil64x64.gif" col="26" row="4" cspan="79" rspan="79"/>
+			</GROUP> -->
+			
+		</MASKDEF>
+	</MASKS>	
+</VIEW>

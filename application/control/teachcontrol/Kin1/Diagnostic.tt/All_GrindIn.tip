@@ -1,0 +1,30 @@
+RSELECT("RP12")
+  //
+  SETTOOL( TOOL_ZERO  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V200  )
+  OVERLAP( FINE_0  )
+  //
+  PTP( RHOME  )
+  PTP( RZERO  )
+  //
+  PTP(RGRINDINA1)
+  //
+  PTP(RGRINDINA2)
+  //
+  PTP(RGRINDINA3)
+  //
+  PTP(RGRINDINA4)
+  //
+  PTP(RGRINDINA5)
+  //
+  PTP(RGRINDINA6)
+  //
+  PTP(RGRINDINA7)
+  //
+  PTP( RZERO  )
+  PTP( RHOME  )
+  //
+RDESELECT("RP12")

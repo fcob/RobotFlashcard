@@ -1,0 +1,19 @@
+//--------------------------------------------------
+//Projekt: Audi - Gyoer
+//Station: 385 Klarlack Innen
+//Karossentyp: Audi A3 Cabriolet
+//Roboter: R12
+//$Stratégiai program AU375
+//--------------------------------------------------
+RSELECT("RP12")
+  //
+  //Abfrage Qualitaetsgruppe (Zusatzmodule:Motorhaube/Motorraum)
+  IF GET_VARIANT(Qualitaetsgruppe_1) OR GET_VARIANT(Qualitaetsgruppe_2) OR GET_VARIANT(Qualitaetsgruppe_3) THEN
+    //
+  CALL AU375_HP_R12_QG()
+ELSE 
+  //
+CALL AU375_HP_R12()
+END_IF
+//
+RDESELECT("RP12")

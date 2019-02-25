@@ -1,0 +1,28 @@
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_0  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  ACC( A3500  )
+  VEL( V200  )
+  //
+  //**************************************************************************************************
+  //ONLY necessary if Robot leaves Bypass Area
+  //during movement to Target Position
+  //PTP( RPREABOVEBOX )
+  //
+  //CALL ResetInterLocks()
+  //SET_BOOL_SYSTEMVAR(RCUx, "PreAboveBox", High, NoResetAtProgEnd)
+  //
+  //**************************************************************************************************
+  //
+  PTP( RHOME  )
+  //
+CALL ResetInterLocks()
+//
+//Set SystemVar "PosPurge" to high, for further actions
+SET_BOOL_SYSTEMVAR( RCUx ,"PosLoad" ,High ,NoResetAtProgEnd  )
+//
+PTP( RLOAD  )
+//
+RDESELECT("RP12")

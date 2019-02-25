@@ -1,0 +1,31 @@
+//$Measuring of Parallelism
+RSELECT("RP12")
+  //
+  SETTOOL( MESSPITZE  )
+  SETOBJECT( DEFBASENULL  )
+  //
+  //Für Umschlagsmessung inklusiver Überprüfung und
+  //angeben der Abweichung bei Prallelfahrt.
+  //
+  //Bei 6-Achsen über Fördererkante.
+  //
+  //Bei 7-Achsen Tool über Messpitze und A7 in Welt fahren
+  //Bei Abweichng größer 2mm Umschlag auf Rail und
+  //Werte in Const.RC eintragen.
+  //
+  //--ERSTER VERSUCH
+  PTP(NEGATIV_P1)
+  PTP(POSITIV_P1)
+  //
+  //--ZWEITER VERSUCH
+  PTP(NEGATIV_P2)
+  PTP(POSITIV_P2)
+  //
+  //--PARALLELITAET
+  //SETTOOL( SPITZE)
+  LIN( PARA_1  )
+  LIN( PARA_2  )
+  //
+  //--ABWEICHUNG max. 2MM IN Y.
+  //
+RDESELECT("RP12")

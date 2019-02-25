@@ -1,0 +1,40 @@
+//$Virtuelle Wand
+RSELECT("RP12")
+  //
+  SETTOOL( TOOL_ZERO  )
+  SETOBJECT( BASE_ZERO  )
+  //
+  //-------------------------------------------
+  //------ KabinenVermessung -------
+  //-------------------------------------------
+  //
+  //Messpunkt Einlauf
+  LIN( LIN_EINLAUF  )
+  //
+  //Messpunkt Auslauf
+  LIN( LIN_AUSLAUF  )
+  //
+  //Messpunkt Seite Links
+  LIN( LIN_SEITE_LINKS  )
+  //
+  //Messpunkt Seite Rechts
+  LIN( LIN_SEITE_RECHTS  )
+  //
+  //Messpunkt Boden
+  LIN( LIN_BODEN  )
+  //
+  //
+  //-------------------------------------------
+  //---- FoerdererVermessung -----
+  //-------------------------------------------
+  //
+  //Messpunkt Foerderer Links
+  LIN( LIN_FO_LINKS  )
+  //
+  //Messpunkt Foerderer Rechts
+  LIN( LIN_FO_RECHTS  )
+  //
+  //Messpunkt Foerderer Oben
+  LIN( LIN_FO_OBEN  )
+  //
+RDESELECT("RP12")

@@ -1,0 +1,429 @@
+(*----------------------------------------------------------------------------*
+*   K2-System Robot Control Unit                                              *
+*                                                                             *
+*   Dürr Systems GmbH APT                                                     *
+*   Rosenstr. 39                                                              *
+*   74321 Bietigheim-Bissingen                                                *
+*   Germany                                                                   *
+*                                                                             *
+*   Copyright (C) 2005 Dürr Systems GmbH APT                                  *
+*   All rights reserved.                                                      *
+*                                                                             *
+*   Author :     Bitzer                                                       *
+*   E-Mail:      Sven.Bitzer@durr.com                                         *
+*                                                                             *
+*   Modul:       TRcuLogger.tts                                               *
+*   Description: Cyclic loggers shown on teachview and written to files       *
+*-----------------------------------------------------------------------------*
+*   07.09.06 BIT: 
+*)
+(******************************************************************************
+***  Constant *****************************************************************
+******************************************************************************)
+CONSTANT GLOBAL
+  cMaxLoggers       : SINT   := 3;                               //Amount of loggers
+  cMaxLogSteps      : INT    := 50;                              //Amount of logsteps
+END_CONSTANT
+
+CONSTANT PRIVATE
+  cPathLogIndexFile : STRING := "c:\Control\protocol\log\";      //Path to index-files
+  cPathLogFile      : STRING := "c:\Control\protocol\log\";      //Path to log-files
+  cMaxLogFiles      : INT    := 5;                               //build X logfile before first one would be overwritten
+  cMaxSizePerFile   : DINT   := 1000000;                         //size of one log-file => 1MB
+  cCyleTime         : INT    := 100;                             //update time of a step every 100ms
+END_CONSTANT
+
+(******************************************************************************
+***  Types ********************************************************************
+******************************************************************************)
+TYPE PRIVATE
+   tLogField : STRUCT
+     sText   : STRING;
+     rTime   : REAL;
+     sTime   : STRING[12];
+     sDate   : STRING[11];
+   END_STRUCT;
+   
+   tFieldToFile : STRUCT
+     iLoggerNr : INT := -1;
+     iStepNr   : INT := -1;
+   END_STRUCT;
+   
+   tLogger   : STRUCT
+     sName               : STRING := "not active";
+     yLogSteps           : ARRAY [cMaxLogSteps] OF tLogField;
+     bInProgress         : BOOL;
+     bTimeOut            : BOOL;
+     iLogStep            : INT;
+     sOldLogText         : STRING;
+   END_STRUCT;  
+  
+END_TYPE
+
+(******************************************************************************
+***  Variables ****************************************************************
+******************************************************************************)
+VAR
+  bLoggingActive          : BOOL;
+  bCfgRead                : BOOL;
+  bFileWriteStarted       : BOOL;
+  iIndexStepToFile        : INT;
+  yStepToFile             : ARRAY [cMaxLogSteps] OF tFieldToFile;
+  bFileWriterBusy         : BOOL;
+  iUsedLoggers            : INT;
+  yLogger                 : ARRAY [cMaxLoggers] OF tLogger;
+  myRobot                 : MAPTO TRcuRobot;
+END_VAR
+
+(******************************************************************************
+*** Start one logger if free and get token (Token=0 no free logger) ***********
+******************************************************************************)
+ROUTINE ActivateLogger(sName : STRING; locKinematic : TRcuKinematic) : INT
+ VAR
+  j : DINT;
+ END_VAR
+   
+   myRobot := MAP(PaintRobot[locKinematic.kinListInx]);
+   
+   IF NOT bCfgRead THEN                        //read cfg-file only one time
+      IF CatalogReadInt(giRcBaseHdl, "activateLogging", j, TRUE) THEN
+         bLoggingActive := (j=1);
+      END_IF;
+      bCfgRead := TRUE;
+      IF bLoggingActive THEN
+         MkDir(cPathLogFile);
+      END_IF;
+   END_IF; 
+   IF (iUsedLoggers < cMaxLoggers) AND bLoggingActive THEN
+       IF NOT bFileWriteStarted THEN
+          START FileWriter();              //start writing loggers to files
+          bFileWriteStarted := TRUE;
+       END_IF;   
+       yLogger[iUsedLoggers].bInProgress := TRUE;
+       yLogger[iUsedLoggers].sName := sName;        //if logging active, not all used
+       START Logger(iUsedLoggers);                  //start endless loop for one logger
+       iUsedLoggers := iUsedLoggers + 1;
+       RETURN iUsedLoggers;
+   ELSIF NOT bLoggingActive  THEN                   //logging not active
+       RETURN 0;
+   ELSE
+      RcuSetMessageOnce(TRcuLogger_InfNoFreeToken, myRobot.kinListInx, 1, 0, "TRcuLogger.ActivateLogger");
+      RETURN 0;                                     //all loggers are used
+   END_IF;   
+END_ROUTINE  
+
+(******************************************************************************
+*** logger function (one logger) **********************************************
+******************************************************************************)
+ROUTINE Logger(iLogNumber : INT) PRIVATE
+ VAR
+   iMyNumber         : INT;      //local number of this logger
+   sFilePath         : STRING; 
+   iLen              : DINT;     //lenght of one line
+   I                 : DINT;     //counter
+   J                 : INT;
+   bChgStep          : BOOL;     //new logstep was added
+   bNewStep          : BOOL;     //new logstep is set
+   iActTime          : LINT;     //actual time
+   iStartTime        : LINT;     //start of a new step
+   sChr              : STRING;
+   sLogString        : STRING;
+   
+   iFigure           : DINT;
+   iTempStep         : INT;
+   iLastFileStep     : INT;
+ END_VAR
+ 
+ iMyNumber := iLogNumber;  
+ WAIT myRobot.initRobComplete;      //wait until the robotcofig is read
+ 
+ //--------- cyclic logger -----------------------------------------------------------------------------
+ bChgStep := IS_CHANGED(yLogger[iMyNumber].iLogStep);
+ yLogger[iMyNumber].bInProgress := FALSE;
+ WHILE TRUE DO
+    WAIT bChgStep OR yLogger[iMyNumber].bTimeOut;     //Wait until new logstep or steptime has changed
+    IF bChgStep THEN                                  //separate timeupdate or new step
+       bNewStep := TRUE; 
+       bChgStep := FALSE;
+    END_IF;             
+    yLogger[iMyNumber].bTimeOut := FALSE;
+    
+    SysTimerGetUs(iActTime);                                           //Get systemtime in µs
+    iActTime := iActTime / 10000;                                      //cascade it to xxx,xx sec
+    IF bNewStep THEN
+       iStartTime := iActTime;                                         //starting time of this step
+    END_IF;
+    
+    IF (yLogger[iMyNumber].iLogStep = 0) THEN
+       yLogger[iMyNumber].yLogSteps[cMaxLogSteps-1].rTime := (iActTime - iStartTime) / 100.0;
+    ELSE
+      yLogger[iMyNumber].yLogSteps[yLogger[iMyNumber].iLogStep-1].rTime := (iActTime - iStartTime) / 100.0;
+    END_IF;
+    SysTimerSet(cCyleTime, yLogger[iMyNumber].bTimeOut);
+    IF bNewStep THEN
+       FOR J := iLastFileStep TO (yLogger[iMyNumber].iLogStep - 1) DO
+           OrgStepsToFiles(iMyNumber, J); //a new entry, so write to file
+       END_FOR;
+       IF (iLastFileStep <= cMaxLogSteps-1) AND (iLastFileStep <> 0) AND (yLogger[iMyNumber].iLogStep = 0) THEN
+          FOR J := iLastFileStep TO (cMaxLogSteps-1) DO
+               OrgStepsToFiles(iMyNumber, J); //Overflow
+          END_FOR;
+          FOR J := 0 TO (yLogger[iMyNumber].iLogStep - 1) DO
+             OrgStepsToFiles(iMyNumber, J); //Overflow
+          END_FOR;
+       END_IF;
+       iLastFileStep := yLogger[iMyNumber].iLogStep;
+    END_IF;
+    bNewStep := FALSE;
+ END_WHILE;
+ 
+END_ROUTINE
+
+(******************************************************************************
+*** manage logsteps to file ***************************************************
+******************************************************************************)
+ROUTINE OrgStepsToFiles(iLoggerNr : INT; iStepNr : INT)
+  
+   WAIT NOT bFileWriterBusy;
+   yStepToFile[iIndexStepToFile].iLoggerNr := iLoggerNr;
+   yStepToFile[iIndexStepToFile].iStepNr   := iStepNr;
+   IF iIndexStepToFile >= (cMaxLogSteps-1) THEN
+      PRINT("LOG: Log step missed for file");
+   ELSE
+      iIndexStepToFile := iIndexStepToFile + 1;
+   END_IF;
+   
+END_ROUTINE
+
+(******************************************************************************
+*** write logger to file ******************************************************
+******************************************************************************)
+ROUTINE FileWriter() PRIVATE
+ VAR
+  sFilePath           : STRING;
+  sReadLine           : STRING;
+  iReadInt            : INT;
+  i                   : DINT;
+  iLen                : DINT;
+  sChr                : STRING;
+  iFigure             : DINT;
+  bTimeOut            : BOOL;
+  Index               : INT;
+  locStepToFile       : ARRAY [cMaxLogSteps] OF tFieldToFile;
+  bNewFile            : BOOL;
+  iCountFiles         : INT;
+  iFileHandle         : DINT;
+  iFilePos            : DINT;
+  sLogString          : STRING;
+ END_VAR
+ 
+  WAIT myRobot.initRobComplete;                //wait until the robotcofig is read
+  
+  //--------------- read the index-file -----------------------------------------------------------------------------
+  sFilePath := cPathLogIndexFile + "Kin" + STR(myRobot.kinListInx) + "_Index.txt";
+  iFileHandle := FileOpen(sFilePath, eFileModeReadOnly);            //open index-file
+  IF iFileHandle < 1 THEN                                           //File doesn't exist
+     iCountFiles := 1;                                                   //Create index-file
+     iFileHandle := FileOpen(sFilePath, eFileModeAppendCreate);   
+     IF iFileHandle < 1 THEN                                       //Couldn't create file
+        RcuSetMessageOnce(TRcuLogger_InfCreateIndexFile, myRobot.kinListInx, 1, 0, "TRcuLogger.Logger", sFilePath);
+     ELSE                                                                //Write default data to file
+        FileWriteLn(iFileHandle, "CountFiles=1");
+        StreamClose(iFileHandle);                                   //close the file
+    END_IF;
+    
+  ELSE  //Read data from index-file
+     WHILE FileReadLn(iFileHandle, sReadLine) DO                     //Read file until end
+        iLen   := StrLen(sReadLine);
+        IF (StrFind(sReadLine, "CountFiles=") <> 0) THEN                 //string existing in line?
+           iReadInt := 0;
+           REPEAT
+             i := i + 1;
+             sChr := StrMid(sReadLine, 1, i);
+           UNTIL (i > iLen - 1) OR (sChr = "=");                         //go to this position in line
+           REPEAT
+             i := i + 1;
+             sChr := StrMid(sReadLine, 1, i);                            //read the amount of files
+             IF ((ORD(sChr) >= ORD("0")) AND (ORD(sChr) <= ORD("9"))) THEN
+                iReadInt := iReadInt * 10;
+                iFigure := ORD(sChr) - ORD("0");
+                iReadInt := iReadInt + iFigure;
+             END_IF;
+           UNTIL (i > iLen - 1);       
+           iCountFiles := iReadInt;
+        END_IF;
+     END_WHILE;
+     StreamClose(iFileHandle);    //close the file
+  END_IF;   
+   
+  //--------- cyclic writing to log-file ----------------------------------------------------------------------------
+  WHILE TRUE DO
+     SysTimerSet(1000, bTimeOut);                                  //wait until 5 step collected or 1 sec  
+     WAIT (iIndexStepToFile > 10) OR bTimeOut;     
+  
+     IF iIndexStepToFile > 0  THEN                                 //check for new items
+        bFileWriterBusy := TRUE;                                   //block new entries
+        
+        Index := iIndexStepToFile - 1;                             //copy logger data
+        FOR i:=0 TO Index DO
+           locStepToFile[i] := yStepToFile[i];
+           yStepToFile[i].iLoggerNr := 0;
+           yStepToFile[i].iStepNr   := 0;
+        END_FOR;
+        iIndexStepToFile := 0;
+        bFileWriterBusy := FALSE;                                  //release new entries
+               
+        sFilePath := cPathLogFile + "Kin" + STR(myRobot.kinListInx) + "_Log_" + STR(iCountFiles) + ".txt";
+        
+        IF NOT bNewFile THEN                                       //there is space in file
+           iFileHandle := FileOpen(sFilePath, eFileModeAppend);    //append data to existing file
+           IF iFileHandle < 1 THEN                                 //Couldn't open file
+              RcuSetMessageOnce(TRcuLogger_InfLogFileNotOpen, myRobot.kinListInx, 1, 0, "TRcuLogger.FileWriter", sFilePath);
+              bNewFile := TRUE;                                    //so create a new on
+           END_IF;
+        END_IF;
+        
+        IF bNewFile THEN
+           bNewFile := FALSE;
+           iFileHandle := FileOpen(sFilePath, eFileModeReadWriteDelete);
+           IF iFileHandle < 1 THEN                                   //Couldn't create file
+             RcuSetMessageOnce(TRcuLogger_InfCreateLogFile, myRobot.kinListInx, 1, 0, "TRcuLogger.FileWriter", sFilePath);
+           END_IF;
+        END_IF;
+        
+        IF (iFileHandle > 0) THEN
+           FOR i:=0 TO Index DO
+              sLogString := yLogger[locStepToFile[i].iLoggerNr].yLogSteps[locStepToFile[i].iStepNr].sDate + "  " + 
+                            yLogger[locStepToFile[i].iLoggerNr].yLogSteps[locStepToFile[i].iStepNr].sTime + " - " + 
+                            "0:0:" + myRobot.robotName + ":" + yLogger[locStepToFile[i].iLoggerNr].sName + ":                                              ";
+                            sLogString := StrLeft(sLogString, 55);
+                            sLogString := sLogString + yLogger[locStepToFile[i].iLoggerNr].yLogSteps[locStepToFile[i].iStepNr].sText;                                                             
+              sChr := StrLeft(sLogString, 150);
+              FileWriteLn(iFileHandle, sChr);
+              iLen := iLen + 150;
+              WHILE iLen <= StrLen(sChr) DO 
+                    sChr := StrMid(sLogString, 118, iLen);
+                    sChr := "                               " + sChr;
+                    iLen := iLen + 118;
+              END_WHILE;
+           END_FOR;
+           iFilePos := FileGetPosition(iFileHandle);
+           StreamClose(iFileHandle);
+           IF(iFilePos >= cMaxSizePerFile) AND (iFilePos > 0) THEN        //check filesize
+              IF iCountFiles >= cMaxLogFiles THEN
+                 iCountFiles := 1;
+              ELSE   
+                 iCountFiles := iCountFiles + 1;
+              END_IF;   
+              sFilePath := cPathLogIndexFile + "Kin" + STR(myRobot.kinListInx) + "_Index.txt";
+              iFileHandle := FileOpen(sFilePath, eFileModeReadWriteDelete);
+              IF iFileHandle < 1 THEN                                       //Couldn't create file
+                 RcuSetMessageOnce(TRcuLogger_InfCreateIndexFile, myRobot.kinListInx, 1, 0, "TRcuLogger.Logger", sFilePath);
+              ELSE                                                        //write fileheader
+                 sLogString := "CountFiles=" + STR(iCountFiles);
+                 FileWriteLn(iFileHandle, sLogString);
+                 StreamClose(iFileHandle);
+                 bNewFile := TRUE;
+              END_IF;
+           END_IF;
+        END_IF;  
+     END_IF;     
+     bTimeOut := FALSE;  
+  END_WHILE;  
+  
+END_ROUTINE
+    
+(******************************************************************************
+*** insert next step into logger **********************************************
+******************************************************************************)
+ROUTINE SetLoggerStep (iLogNumber : INT; sText : STRING)
+ 
+  START DoLoggerStep (iLogNumber, sText);
+  
+END_ROUTINE
+
+(******************************************************************************
+*** insert next step into logger **********************************************
+******************************************************************************)
+ROUTINE DoLoggerStep (iLogNumber : INT; sText : STRING) PRIVATE
+ VAR
+   sLogText          : STRING;
+   sTime             : STRING;
+   iTime             : LINT;
+   sChr              : STRING;
+   str               : STRING[3];
+   I                 : DINT;
+   iLen              : DINT;
+ END_VAR  
+   
+  IF (iLogNumber < 1) OR NOT myRobot.initRobComplete THEN
+     RETURN;  //token not valid or init of robot is still running
+  END_IF;
+  
+  IF (sText = yLogger[iLogNumber - 1].sOldLogText) THEN  
+     RETURN;   //don't print the same string two times
+  ELSE
+     sLogText := sText;                            
+     yLogger[iLogNumber - 1].sOldLogText := sLogText;                       
+     WAIT NOT yLogger[iLogNumber - 1].bInProgress; //wait logger isn't used by others
+     yLogger[iLogNumber - 1].bInProgress := TRUE;  //block logger for others
+     
+     //enter log text
+     yLogger[iLogNumber - 1].yLogSteps[yLogger[iLogNumber - 1].iLogStep].sText := sLogText;
+     
+     //enter current systemtime
+     SysTimerGetUs(iTime);
+     SysTimerString(sTime, iTime);
+     sChr := "";
+     iLen   := StrLen(sTime); 
+     sTime := StrDelete(sTime, 4, 1);
+     //Day
+     sChr := sChr + StrMid(sTime, 2, 5) + ".";
+     //Month
+     str := StrMid(sTime, 3, 1) + ".";
+     CASE str OF
+      "Jan": sChr := sChr + "01.";
+      "Feb": sChr := sChr + "02.";
+      "Mar": sChr := sChr + "03.";
+      "Apr": sChr := sChr + "04.";
+      "May": sChr := sChr + "05.";
+      "Jun": sChr := sChr + "06.";
+      "Jul": sChr := sChr + "07.";
+      "Aug": sChr := sChr + "08.";
+      "Sep": sChr := sChr + "09.";
+      "Oct": sChr := sChr + "10.";
+      "Nov": sChr := sChr + "11.";
+      "Dec": sChr := sChr + "12.";
+     END_CASE;  
+     //Year
+     sChr := sChr + StrMid(sTime, 4, 17);
+     yLogger[iLogNumber - 1].yLogSteps[yLogger[iLogNumber - 1].iLogStep].sDate := sChr;
+     
+     sChr := "";
+     //hour:min:sec
+     sChr := sChr + StrMid(sTime, 8, 8) + ".";
+     //millisec
+     sChr := sChr + StrMid(sTime, 3, 22);
+     yLogger[iLogNumber - 1].yLogSteps[yLogger[iLogNumber - 1].iLogStep].sTime   := sChr;  
+     
+     //Delete next logfield
+     IF (yLogger[iLogNumber - 1].iLogStep < (cMaxLogSteps-2)) THEN
+        yLogger[iLogNumber - 1].yLogSteps[yLogger[iLogNumber - 1].iLogStep + 1].sText := "";
+        yLogger[iLogNumber - 1].yLogSteps[yLogger[iLogNumber - 1].iLogStep + 1].sTime := "";
+        yLogger[iLogNumber - 1].yLogSteps[yLogger[iLogNumber - 1].iLogStep + 1].rTime := 0.0;
+     ELSE
+        yLogger[iLogNumber - 1].yLogSteps[0].sText := "";
+        yLogger[iLogNumber - 1].yLogSteps[0].sTime := "";
+        yLogger[iLogNumber - 1].yLogSteps[0].rTime := 0.0;
+     END_IF;
+     
+     IF (yLogger[iLogNumber - 1].iLogStep = (cMaxLogSteps-1)) THEN
+        yLogger[iLogNumber - 1].iLogStep := 0;     //check array-index
+     ELSE
+        yLogger[iLogNumber - 1].iLogStep := yLogger[iLogNumber - 1].iLogStep + 1;
+     END_IF;
+     
+     yLogger[iLogNumber - 1].bInProgress := FALSE;  //release logger for others
+  END_IF;
+  
+END_ROUTINE

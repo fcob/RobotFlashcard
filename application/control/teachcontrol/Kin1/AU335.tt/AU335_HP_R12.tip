@@ -1,0 +1,196 @@
+//--------------------------------------------------
+//Projekt: Audi - Gyoer
+//Station: 385 Klarlack Innen
+//Karossentyp: Audi TT Roadster
+//Roboter: R12
+//$Föprogram
+//--------------------------------------------------
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU33X  )
+  //
+  //--------------------------------------------------
+  //Initialisierung
+  WAIT_PROCESS_READY( )
+  //
+  //Ruecksetzen Teilflaechenbits
+  GL :=FALSE
+  MH_I :=FALSE
+  MR_I :=FALSE
+  HK_I :=FALSE
+  KR_I :=FALSE
+  KV_I :=FALSE
+  TV_I :=FALSE
+  SP_I :=FALSE
+  MH_A :=FALSE
+  HK_A :=FALSE
+  KV_A :=FALSE
+  TV_A :=FALSE
+  SP_A :=FALSE
+  //
+  //Setzen Teilflaechenbits
+  IF GET_REPAIRTYPE(Teilflaechenlackierung) THEN
+    //
+    IF GET_REPAIRTYPE(IM_Motorhaube) THEN
+      MH_I :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(IM_Motorraum) THEN
+      MR_I :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(IM_Heckklappe) THEN
+      HK_I :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(IM_Kofferraum) THEN
+      KR_I :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(IL_vorne_Kotfluegel) THEN
+      KV_I :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(IL_vorne_Tuere) THEN
+      TV_I :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(IM_Spoiler) THEN
+      SP_I :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(AM_Motorhaube) THEN
+      MH_A :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(AM_Heckklappe) THEN
+      HK_A :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(AL_vorne_Kotfluegel) THEN
+      KV_A :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(AL_vorne_Tuere) THEN
+      TV_A :=TRUE
+    END_IF
+    IF GET_REPAIRTYPE(AM_Spoiler) THEN
+      SP_A :=TRUE
+    END_IF
+  ELSE 
+    //
+    GL :=TRUE
+    MH_I :=TRUE
+    MR_I :=TRUE
+    HK_I :=TRUE
+    KR_I :=TRUE
+    KV_I :=TRUE
+    TV_I :=TRUE
+    SP_I :=TRUE
+    MH_A :=TRUE
+    HK_A :=TRUE
+    KV_A :=TRUE
+    TV_A :=TRUE
+    SP_A :=TRUE
+  END_IF
+  //
+  //--------------------------------------------------
+  //Rücksetzen Kollisionsverriegelungen
+  SET( Collision1 ,Low  )
+  SET( Collision2 ,Low  )
+  //
+  //--------------------------------------------------
+  //Nichtbeauftragte Handler abloeschen und beenden
+  SET_ORDER( DO13 ,OhneTeil ,Loeschen  )
+  SET_ORDER( DO13 ,OhneTeil ,Beenden  )
+  //
+  //--------------------------------------------------
+  //
+CALL HOME()
+//
+IF (HK_I=TRUE) OR (KR_I=TRUE) OR (SP_I=TRUE) THEN
+  //Heckklappe ganz oeffnen
+  SET_ORDER( HO22 ,Heckklappe ,GanzAuf  )
+  //
+  //Setzen Kollisionsverriegelung zu R22
+  SET( Collision1 ,High  )
+  RECEIVE( Collision1 ,High  )
+  //Setzen Kollisionsverriegelung zu R13
+  SET( Collision2 ,High  )
+  RECEIVE( Collision2 ,High  )
+  //
+  //Vorposition
+CALL AU335_VP_R12()
+//
+END_IF
+//--------------------------------------------------------------------------------------------------
+//---------------------------------------- Heckklappe ----------------------------------------
+//--------------------------------------------------------------------------------------------------
+//Heckklappe lackieren
+IF (HK_I=TRUE) OR (KR_I=TRUE) OR (SP_I=TRUE) THEN
+  IF RECEIVE_HANDLERPOS(HO22, Heckklappe, GanzAuf) THEN
+    //
+  CALL AU335_HK()
+CALL AU335_ZP_HK_NT()
+//
+//Heckklappe ganz schliessen
+SET_ORDER( HO22 ,Heckklappe ,WartePos  )
+//
+//Ruecksetzen Kollisionsverriegelung zu R22
+SET( Collision1 ,Low  )
+//Ruecksetzen Kollisionsverriegelung zu R13
+SET( Collision2 ,Low  )
+//
+//
+//Vorlegen / Heckklappe Unten lackieren
+IF (HK_A=TRUE) OR (SP_A=TRUE) THEN
+  //
+  //Heckklappe ganz schliessen
+  SET_ORDER( HO22 ,Heckklappe ,WartePos  )
+  //
+  IF RECEIVE_HANDLERPOS(HO22, Heckklappe, WartePos) THEN
+    //
+  CALL AU335_NT()
+  //
+  //Ruecksetzen Kollisionsverriegelung zu R22
+  SET( Collision1 ,Low  )
+  //Ruecksetzen Kollisionsverriegelung zu R13
+  SET( Collision2 ,Low  )
+  //
+END_IF
+END_IF
+ELSIF  (HK_A=TRUE) OR (SP_A=TRUE) THEN
+//
+//Heckklappe ganz schliessen
+SET_ORDER( HO22 ,Heckklappe ,WartePos  )
+//
+IF RECEIVE_HANDLERPOS(HO22, Heckklappe, WartePos) THEN
+  //
+CALL AU335_ZP_VP_NT_R12()
+CALL AU335_NT()
+//
+//Ruecksetzen Kollisionsverriegelung zu R22
+SET( Collision1 ,Low  )
+//Ruecksetzen Kollisionsverriegelung zu R13
+SET( Collision2 ,Low  )
+//
+END_IF
+END_IF
+ELSIF  (HK_A=TRUE) OR (SP_A=TRUE) THEN
+//
+//Heckklappe ganz schliessen
+SET_ORDER( HO22 ,Heckklappe ,WartePos  )
+//
+IF RECEIVE_HANDLERPOS(HO22, Heckklappe, WartePos) THEN
+  //
+CALL AU335_ZP_VP_NT_R12()
+CALL AU335_NT()
+//
+//Ruecksetzen Kollisionsverriegelung zu R22
+SET( Collision1 ,Low  )
+//Ruecksetzen Kollisionsverriegelung zu R13
+SET( Collision2 ,Low  )
+//
+END_IF
+END_IF
+//--------------------------------------------------------------------------------------------------
+//Beauftragung abloeschen und beenden
+SET_ORDER( HO22 ,OhneTeil ,Loeschen  )
+SET_ORDER( HO22 ,OhneTeil ,Beenden  )
+//--------------------------------------------------------------------------------------------------
+//
+//
+CALL HOME()
+//
+RDESELECT("RP12")

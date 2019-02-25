@@ -1,0 +1,312 @@
+TYPE GLOBAL USER
+
+//-----------------------------------------------------------------------------
+// Symbolic-names for the macro "GET_DEGRADE_MODE"
+// maximum 16 Robots allowed
+//-----------------------------------------------------------------------------
+DEGRADEROB : (
+
+  Robot11               :=  1,
+  Robot21               :=  2,
+  Robot12               :=  3,
+  Robot22               :=  4,
+  DoorOpener11          :=  5,
+  DoorOpener21          :=  6,
+  DoorOpener12          :=  7,
+  DoorOpener22          :=  8,
+  HoodOpener21          :=  9,
+  HoodOpener12          :=  10);
+  
+//-----------------------------------------------------------------------------
+// Symbolic-names for the macro "GET_VARIANT"
+// maximum 32 Variants allowed
+// 2012-02-09 : now 64 Variants are possible
+//-----------------------------------------------------------------------------
+VARIANT : (
+
+  Schiebedach        :=  1,
+  S_Modell           :=  2,
+  RS_Modell          :=  3,
+  Allrad             :=  4,
+  Rechtslenker       :=  5,
+  USA                :=  6,
+  SuedKorea          :=  7,
+  TT_Roadster        :=  8,
+  Zweiter_Tankdeckel  :=  9,
+  Reserve_Option_10  := 10,
+  Reserve_Option_11  := 11,
+  Reserve_Option_12  := 12,
+  Reserve_Option_13  := 13,
+  Reserve_Option_14  := 14,
+  Reserve_Option_15  := 15,
+  Reserve_Option_16  := 16,
+  Qualitaetsgruppe_1 := 17,
+  Qualitaetsgruppe_2 := 18,
+  Qualitaetsgruppe_3 := 19,
+  Reserve_Option_20  := 20,
+  Reserve_Option_21  := 21,
+  Reserve_Option_22  := 22,
+  Reserve_Option_23  := 23,
+  Reserve_Option_24  := 24,
+  Reserve_Option_25  := 25,
+  Reserve_Option_26  := 26,
+  Reserve_Option_27  := 27,
+  Reserve_Option_28  := 28,
+  Reserve_Option_29  := 29,
+  Reserve_Option_30  := 30,
+  Reserve_Option_31  := 31,
+  Reserve_Option_32  := 32);
+
+//-----------------------------------------------------------------------------
+// Symbolic-names for the macro "GET_REPAITTYPE"
+// maximum 32 Repairtypes allowed (Type 0 = No repairtype is set)
+// IL - Innen Links		AL - Auﬂen Links
+// IM - Innen Mitte		AM - Auﬂen Mitte
+// IR - Innen Rechts		AR - Auﬂen Rechts
+//-----------------------------------------------------------------------------
+REPAIRTYPE : (
+
+  NoRepair           											:=  0,
+  IL_vorne_Einstiegsrahmen_innen   			  :=  1,
+  IL_vorne_Tuerblatt_innen									:=  2,
+  IL_hinten_Einstiegsrahmen_innen         :=  3,
+  IL_hinten_Tuerblatt_innen          			:=  4,
+  IL_Reserve05           									:=  5,
+  IL_Reserve06          									:=  6,
+  IL_Reserve07           									:=  7,
+  IL_Reserve08           									:=  8,
+  IL_Reserve09           									:=  9,
+  IL_Reserve10           									:= 10,
+  IL_Reserve11           									:= 11,
+  IL_Reserve12           									:= 12,
+  IL_Reserve13           									:= 13,
+  IL_Reserve14           									:= 14,
+  IL_Reserve15           									:= 15,
+  IL_Reserve16           									:= 16,
+  IM_Motorraum_innen     									:= 17,
+  IM_Motorhaube_innen    									:= 18,
+  IM_Armaturenbrett		  									:= 19,
+  IM_Hutablage_oben_innen									:= 20,
+  IM_Hutablage_innen_unten								:= 21,
+  IM_Kofferaum_innen     									:= 22,
+  IM_Reserve23           									:= 23,
+  IM_Reserve24           									:= 24,
+  IM_Reserve25           									:= 25,
+  IM_Reserve26           									:= 26,
+  IM_Reserve27           									:= 27,
+  IM_Reserve28           									:= 28,
+  IM_Reserve29           									:= 29,
+  IM_Reserve30           									:= 30,
+  IM_Reserve31           									:= 31,
+  IM_Reserve32           									:= 32 );
+
+//-----------------------------------------------------------------------------
+// Symbolic-names for the macro "SET / RECEIVE"
+// maximum 16 Collisonbits + Vision allowed      
+//-----------------------------------------------------------------------------
+IONAME : (
+
+  Collision1                    := 1,  
+  Collision2                    := 2,
+  Collision3                    := 3,
+  Collision4                    := 4,
+  Collision5                    := 5,
+  Collision6                    := 6,
+  Collision7                    := 7,
+  Collision8                    := 8,
+  Collision9                    := 9,
+  Collision10                   := 10,
+  Collision11                   := 11,
+  Collision12                   := 12,
+  Collision13                   := 13,
+  Collision14                   := 14,
+  Collision15                   := 15,
+  Collision16                   := 16,
+  VISION                        := 17);
+(*
+  VISION_REL                    := 18,
+  CamPos                        := 19,  // TriggeredPicture = 0 and TypeOfCameraSystem = 2, MultiTriggerForOneTask = 1
+  LastCamPos                    := 20,  // TriggeredPicture = 0 and TypeOfCameraSystem = 2, MultiTriggerForOneTask = 1
+  NextCamPos                    := 21,  // TriggeredPicture = 0 and TypeOfCameraSystem = 2, MultiTriggerForOneTask = 1
+  VisionDataAbs1                := 22,  // MultiObject = 1  Absolute                   
+  VisionDataAbs2                := 23,  // MultiObject = 1  Absolute
+  VisionDataAbs3                := 24,  // MultiObject = 1  Absolute
+  VisionDataAbs4                := 25,  // MultiObject = 1  Absolute
+  VisionDataAbs5                := 26,  // MultiObject = 1  Absolute
+  VisionDataAbs6                := 27,  // MultiObject = 1  Absolute
+  VisionDataAbs7                := 28,  // MultiObject = 1  Absolute
+  VisionDataAbs8                := 29,  // MultiObject = 1  Absolute
+  VisionDataRel1                := 30,  // MultiObject = 1  Relative
+  VisionDataRel2                := 31,  // MultiObject = 1  Relative
+  VisionDataRel3                := 32,  // MultiObject = 1  Relative
+  VisionDataRel4                := 33,  // MultiObject = 1  Relative
+  VisionDataRel5                := 34,  // MultiObject = 1  Relative
+  VisionDataRel6                := 35,  // MultiObject = 1  Relative
+  VisionDataRel7                := 36,  // MultiObject = 1  Relative
+  VisionDataRel8                := 37,  // MultiObject = 1  Relative
+  ResetVisionDataAbs            := 53,  // Delete vision frame absolute
+  ResetVisionDataRel            := 54); // Delete vision frame relative
+*)  
+  
+//-----------------------------------------------------------------------------
+// Symbolic-names for Handler-macro - Type "ROBOT"
+// maximum 7 Robots allowed
+//-----------------------------------------------------------------------------
+ROBOT : (
+     
+   NotUsed        := 0,                   
+   R11            := 1,
+   R12            := 2,
+   R21            := 3,
+   R22            := 4,
+   R31            := 5,
+   R32            := 6);
+     
+//-----------------------------------------------------------------------------
+// Symbolic-names for Handler-macro - Type "HANDLER"
+// maximum 4 Handlers allowed
+//-----------------------------------------------------------------------------
+HANDLER : (
+
+   HO22       := 0,
+   NotUsed1   := 1,
+   DO13       := 2,
+   HO13       := 3 );
+
+//-----------------------------------------------------------------------------
+// Symbolic-names for Handler-macro - Type "PART"
+// maximum 5 Parts allowed
+//-----------------------------------------------------------------------------
+PART : ( 
+
+   OhneTeil          := 0,
+   Heckklappe        := 1,
+   Verdeckkastendeckel        := 2,
+   TuerVorn          := 3,
+   Motorhaube        := 4 );
+
+//-----------------------------------------------------------------------------
+// Symbolic-names for Handler-macro - Type "POSITION"
+// maximum 7 Positions allowed
+//-----------------------------------------------------------------------------
+POSITION : (
+
+   Loeschen        := -2,
+   Beenden         := -1,
+   WartePos        :=  0,
+   HalbAuf         :=  1,
+   GanzAuf         :=  2,
+   HalbZu          :=  3,
+   GanzZu          :=  4,
+   HomePos         :=  5 );
+   
+//-----------------------------------------------------------------------------
+// Symbolic-names for macros SET_PLC_ORDER and RECEIVE_PLC_STATE
+//-----------------------------------------------------------------------------   
+PLCORDER : ( 
+               M002_Load_UnlockFixingUnit        :=2,
+               M003_Load_IPTinWorkpos            :=3,   // Input table
+               M004_Load_GripperOn               :=4,
+               M005_Load_SetVisionTask1          :=5,
+               M006_Load_LockIPT                 :=6,
+               M007_Load_UnlockIPT               :=7,
+               M008_Load_SetVisionTask_TCP       :=8,
+               M009_Load_GripperOnStep2          :=9,
+               M010_Check_AirShield              :=10,
+               M011_Check_TransportSafety        :=11,
+               M012_Check_RoofConvCameraInHome   :=12,
+
+               M019_Unload_IPTinWorkpos          :=19,   // Input table
+               M020_Unload_VaccumOffStartBlow    :=20,
+               M021_Unload_Step2                 :=21,
+               M024_Unload_StopBlow              :=24,
+               M025_Unload_MoveCSToHomePos       :=25,
+
+               M033_CLHandling_CLEnabled         :=33,
+               M034_CLHandling_AppOk             :=34,
+               M035_CLHandling_GoShow            :=35,
+
+               M051_Glue_ActivateBeadCheck       :=51,
+               M052_Glue_DeactivateBeadCheck     :=52,
+               M053_Glue_BeadCheckState          :=53,
+               M054_Glue_BeadCheckEnabled        :=54,
+               M055_Glue_GoShow                  :=55,
+               M056_Glue_VisionAssemblyEnabled   :=56,
+
+               M065_Assembly_BodyInPos           :=65,
+               M066_Assembly_SetVisionTask2      :=66,
+               M068_Assembly_VaccumOffStartBlow  :=68,
+               M069_Assembly_Step2               :=69,
+               M072_Assembly_StopBlow            :=72,
+               M074_Assembly_SetVisionTask3      :=74,
+               M076_Assembly_GetGlassOutOfCar    :=76,
+
+               M084_Show_WaitPrimer              :=84,
+               M085_Show_WaitGlue                :=85,
+
+               M099_Output_OPTinWorkpos          :=99,
+               M100_Output_VaccumOffStartBlow    :=100,
+               M104_Output_StopBlow              :=104,
+               M105_Output_LockOPT               :=105,
+               M106_Output_UnlockOPT             :=106,
+
+               M128_CLProc_FeltPresentCheck       :=128,
+               M129_CLProc_FeltAttemptsExceeded   :=129,
+               M130_CLProc_FeltCycleExceeded      :=130,
+               M131_CLProc_Wet_Felt               :=131,
+               M132_CLProc_Humidity_OK            :=132,
+               M133_CLProc_HandlingRob_inCL_Pos   :=133,
+               M134_CLProc_RemoveFelt             :=134,
+
+               M137_CLProc_FeltPresentService     :=137,
+               M138_CLProc_FeltPresentGripper     :=138,
+               M139_CLProc_FeltHumiAttempts       :=139,
+
+               M231_Vision_CheckCamera1           :=231,
+               M232_Vision_CheckCamera2           :=232,
+               M233_Vision_CheckCamera3           :=233,
+               M234_Vision_CheckCamera4           :=234,
+               M235_Vision_CheckCamera5           :=235,
+               M236_Vision_CheckCamera6           :=236,
+               M237_Vision_CheckCamera7           :=237);
+
+//-----------------------------------------------------------------------------
+// Symbolic-names for SETPROCESSCOMMAND
+// 0  - 19   Process commands (IEC)
+// 20 - 39   PLC interface (names can be modified by engineering)
+// 40 - 99   misc          (names can be modified by engineering)
+// 100 - 119 vision system (do not modify these names!!!)
+//-----------------------------------------------------------------------------   
+COMMAND    : (EndOfBody            :=0, 
+              DoSoftPurge          :=1, 
+              TurningMaskOn        :=2, 
+              TurningMaskOff       :=3, 
+              BlowingAirOn         :=4,
+              BlowingAirOff        :=5,
+              
+              GluingPrimerGunOn    :=20,
+              GluingPrimerGunOff   :=21,
+              PLCTriger2On         :=22,
+              PLCTriger2Off        :=23,
+              PLCTriger3On         :=24,
+              PLCTriger3Off        :=25,
+              GluingPrimerPumpOn   :=26,
+              GluingPrimerPumpOff  :=27,
+              
+              BeadCheckOn          :=40,
+              BeadCheckOff         :=41,
+
+              // Vision system
+              VisionTrigger        :=101,
+              LastVisionTrigger    :=102);
+
+//-----------------------------------------------------------------------------
+// Symbolic-names for SET_PROCESS_ORDER and RECEIVE_PROCESS_STATE
+// for command-interface to process
+// Do not use command "xyz := 0"
+//-----------------------------------------------------------------------------   
+ProcessOrder  : (                           
+              RunTimeprogSequence  :=1001 //Automatic Sequence to pause painting and start timeprogram
+);
+
+END_TYPE

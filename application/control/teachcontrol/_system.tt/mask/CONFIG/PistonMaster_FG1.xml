@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--created by ProcessBuilder Version: 2.6.16.0-->
+<!--date: 24.05.2017-->
+<!--time: 14:17-->
+<!--user: VM_TA52_XP2E\Administrator-->
+<!--database: c:\control\control_audi_gyoer_2221_r\application\control\database\ecorpc_mcc2k.pb-->
+<!--computer: VM_TA52_XP2E-->
+<!--do not change this data directly in this view !!-->
+<View>
+  <!--########################################### Piston Mastering ###########################################-->
+  <MASKDEF key="TeachView.mask.PistonMaster_FG1" textfile="userTx" permissiondef="userMenuPermission" height="381">
+    <GROUP key="PistonMaster.label.group1" columns="40" rows="12" col="1" row="1" rspan="20" halign="stretch" valign="stretch" />
+  </MASKDEF>
+</View>

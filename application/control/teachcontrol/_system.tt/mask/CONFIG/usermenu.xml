@@ -1,0 +1,19 @@
+<MASKS>
+   <MENUDEF key="KvtTeachViewController" textfile="userTx" permissionfile="userMenuPermission">
+	<MENU>
+            <SUBMENU key="Main.menu.menuUser1">
+               <MENUITEM key="TeachView.mask.motionmenu"/>
+               <MENUITEM key="TeachView.mask.drivemenu"/>
+               <MENUITEM key="TeachView.mask.visionmenu"      visiblevar="_system.RcuUserPage.Vision.bShowMenu"        visiblevartype="TT"/>
+               <MENUITEM key="TeachView.mask.processmenu"     visiblevar="system.SV_sTeachViewMask.mMenuVisible"       visiblevartype="SV"/>
+               <MENUITEM key="TeachView.mask.SCUmenu"         visiblevar="system.SV_sGeneralSystemCfg.mActiveSCU"      visiblevartype="SV"/>
+	       <MENUITEM key="TeachView.mask.Diagnosticmenu"/>
+               <MENUITEM key="TeachView.mask.homingmenu"      visiblevar="_system.gRcuFocusedRobot.homing.bEnableHoming"         visiblevartype="TT"/>
+	    </SUBMENU>
+	    
+	    <SUBMENU key="Main.menu.menuPosition">
+		<MENUITEM key="TeachView.mask.jointPos"/>
+	    </SUBMENU>
+	</MENU>
+   </MENUDEF>
+</MASKS>

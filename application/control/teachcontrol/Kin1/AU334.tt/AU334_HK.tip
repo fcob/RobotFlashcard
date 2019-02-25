@@ -1,0 +1,211 @@
+//$Csomagtér keret & Csomagtértetö
+RSELECT("RP12")
+  //
+  SETTOOL( ECOBELL3_DC_170  )
+  SETOBJECT( AU33X  )
+  //
+  ACC( A3500  )
+  VEL( V650  )
+  OVERLAP( NODEC50  )
+  //
+  PTP( P1  )
+  //
+  VEL( V500  )
+  LIN( P2  )
+  SETBRUSH( GUN1 ,7 ,P3 ,TR1  )
+  LIN( P4  )
+  //IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+  //GUN(GUN1, GunOn, P2, HK_TR2)
+  //END_IF
+  //LIN(HK_P4)
+  //IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+  //GUN(GUN1, GunOff, P3, HK_TR3)
+  //END_IF
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P5 ,TR2  )
+  END_IF
+  LIN( P6  )
+  LIN( P7  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P8 ,TR3  )
+  END_IF
+  LIN( P9  )
+  SETBRUSH( GUN1 ,61 ,P10 ,TR4  )
+  VEL( V650  )
+  LIN( P11  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P12 ,TR5  )
+  END_IF
+  LIN( P13  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P14 ,TR6  )
+  END_IF
+  LIN( P15  )
+  LIN( P16  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P17 ,TR7  )
+  END_IF
+  LIN( P18  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+  END_IF
+  LIN( P19  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P20 ,TR8  )
+  END_IF
+  LIN( P21  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+  END_IF
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P22 ,TR9  )
+  END_IF
+  LIN( P23  )
+  SETBRUSH( GUN1 ,45 ,P24 ,TR10  )
+  LIN( P25  )
+  SETBRUSH( GUN1 ,41 ,P26 ,TR11  )
+  LIN( P27  )
+  LIN( P28  )
+  LIN( P29  )
+  VEL( V500  )
+  LIN( P30  )
+  SETBRUSH( GUN1 ,39 ,P31 ,TR12  )
+  LIN( P32  )
+  LIN( P33  )
+  LIN( P34  )
+  VEL( V650  )
+  LIN( P35  )
+  LIN( P36  )
+  LIN( P37  )
+  LIN( P38  )
+  SETBRUSH( GUN1 ,40 ,P39 ,TR13  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P40 ,TR14  )
+  END_IF
+  LIN( P41  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P42 ,TR15  )
+  END_IF
+  LIN( P43  )
+  LIN( P44  )
+  VEL( V500  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P45 ,TR16  )
+  END_IF
+  SETBRUSH( GUN1 ,51 ,P46 ,TR17  )
+  IF (SP_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P47 ,TR18  )
+  END_IF
+  LIN( P48  )
+  LIN( P49  )
+  LIN( P50  )
+  SETBRUSH( GUN1 ,54 ,P51 ,TR19  )
+  LIN( P52  )
+  SETBRUSH( GUN1 ,52 ,PO1 ,TRG1  )
+  LIN( P53  )
+  LIN( P55  )
+  LIN( P56  )
+  LIN( P57  )
+  LIN( P58  )
+  IF (SP_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P59 ,TR21  )
+  END_IF
+  LIN( P60  )
+  SETBRUSH( GUN1 ,53 ,P61 ,TR22  )
+  LIN( P62  )
+  IF (SP_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P63 ,TR23  )
+  END_IF
+  LIN( P64  )
+  LIN( P65  )
+  LIN( P66  )
+  IF (SP_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P67 ,TR24  )
+  END_IF
+  LIN( P68  )
+  VEL( V650  )
+  SETBRUSH( GUN1 ,47 ,P69 ,TR25  )
+  LIN( P70  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P71 ,TR26  )
+  END_IF
+  LIN( P72  )
+  LIN( P73  )
+  LIN( P74  )
+  LIN( P75  )
+  LIN( P76  )
+  SETBRUSH( GUN1 ,42 ,P77 ,TR27  )
+  LIN( P78  )
+  LIN( P79  )
+  LIN( P80  )
+  LIN( P81  )
+  LIN( P82  )
+  IF (HK_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P83 ,TR28  )
+  END_IF
+  SETBRUSH( GUN1 ,63 ,P84 ,TR29  )
+  LIN( P85  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P86 ,TR30  )
+  END_IF
+  LIN( P87  )
+  LIN( P88  )
+  LIN( P89  )
+  LIN( P90  )
+  LIN( P91  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P92 ,TR31  )
+  END_IF
+  LIN( P93  )
+  SETBRUSH( GUN1 ,62 ,P94 ,TR32  )
+  LIN( P95  )
+  LIN( P96  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P97 ,TR33  )
+  END_IF
+  LIN( P98  )
+  LIN( P99  )
+  LIN( P100  )
+  LIN( P101  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P102 ,TR34  )
+  END_IF
+  LIN( P103  )
+  SETBRUSH( GUN1 ,48 ,P104 ,TR35  )
+  LIN( P105  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P106 ,TR36  )
+  END_IF
+  LIN( P107  )
+  LIN( P108  )
+  LIN( P109  )
+  SETBRUSH( GUN1 ,46 ,P110 ,TR37  )
+  LIN( P111  )
+  LIN( P112  )
+  LIN( P113  )
+  LIN( P114  )
+  SETBRUSH( GUN1 ,72 ,P115 ,TR38  )
+  LIN( P116  )
+  LIN( P117  )
+  LIN( P118  )
+  SETBRUSH( GUN1 ,71 ,P119 ,TR39  )
+  LIN( P120  )
+  LIN( P121  )
+  IF (HK_I=TRUE) OR (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P122 ,TR40  )
+  END_IF
+  LIN( P123  )
+  SETBRUSH( GUN1 ,73 ,P124 ,TR41  )
+  LIN( P125  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOn ,P126 ,TR42  )
+  END_IF
+  LIN( P127  )
+  VEL( V500  )
+  LIN( P128  )
+  LIN( P129  )
+  IF (KR_I=TRUE) THEN
+    GUN( GUN1 ,GunOff ,P130 ,TR43  )
+  END_IF
+  LIN( P131  )
+  //
+  //
+RDESELECT("RP12")
